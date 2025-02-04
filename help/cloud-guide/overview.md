@@ -2,7 +2,7 @@
 title: クラウドインフラストラクチャー上のCommerce
 description: クラウドインフラストラクチャー上でCommerceを構築、デプロイ、管理する方法について説明します。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 2cd0f97b89b3a87b40ac36655304b2c1cd11b4b1
+source-git-commit: 10818a862fbba14bdfb3de1e6107d745104e4791
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -61,3 +61,4 @@ ht-degree: 0%
 - [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
 
 - [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
+
