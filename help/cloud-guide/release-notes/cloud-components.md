@@ -2,9 +2,10 @@
 title: Commerceのクラウドコンポーネント
 description: クラウドコンポーネントパッケージの最新の改善点のリストを確認します。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.0 {#latest}
+## v1.1.1 {#latest}
+
+
+リリース日：2025 年 2 月 6 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13148	 - -->
+- ![ 修正アイコン ](../../assets/fix.svg)**キャッシュウォームアップの修正** - キャッシュウォームアップ中のカテゴリ URL の問題を修正しました。<!-- MCLOUD-12454 - -->
+
+
+## v1.1.0
 
 リリース日：2024 年 10 月 7 日（PT）
 

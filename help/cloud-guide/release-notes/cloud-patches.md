@@ -2,10 +2,11 @@
 title: Commerceのクラウドパッチ
 description: クラウドパッチパッケージの最新の改善点のリストを確認します。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2025-02-06T00:00:00Z
+exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2326'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,16 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+
+リリース日：2025 年 2 月 6 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13149	 - -->
+
+
+
+## v1.1.2
 
 リリース日：2024 年 11 月 5 日（PT）
 

@@ -3,10 +3,11 @@ title: Cloud Docker パッケージ
 description: Cloud Docker パッケージの最新の改善点のリストを確認します。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-10-07T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+last-substantial-update: 2025-02-06T00:00:00Z
+exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
+source-git-commit: 7f62dbc7db9924abfe304b46ed62d9577471386d
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3697'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.0 {#latest}
+## v1.4.1 {#latest}
+
+リリース日：2025 年 2 月 6 日（PT）
+
+- ![new icon](../../assets/new.svg) **PHP 8.4**—PHP 8.4 のサポートを追加しました。
+
+
+## v1.4.0
 
 リリース日：2024 年 10 月 7 日（PT）
 
