@@ -1,13 +1,13 @@
 ---
-source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
+source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 # ece-tools
 
-**バージョン**:2002.2.0
+**バージョン**:2002.2.1
 
 このリファレンスには、`ece-tools` のコマンド ライン ツールで使用できる 34 のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `ece-tools list` コマンドを使用して自動生成されます。
@@ -453,7 +453,7 @@ ece-tools build:transfer
 ece-tools cloud:config:create <configuration>
 ```
 
-指定されたビルド、デプロイ、およびデプロイ後の変数設定で `.magento.env.yaml` ファイルを作成します。 既存の `.magento,.env.yaml` ファイルを上書きします。
+指定されたビルド、デプロイ、およびデプロイ後の変数設定で `.magento.env.yaml` ファイルを作成します。 既存の `.magento.env.yaml` ファイルを上書きします。
 
 ### 引数
 
