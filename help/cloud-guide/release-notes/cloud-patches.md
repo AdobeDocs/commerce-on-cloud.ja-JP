@@ -4,9 +4,9 @@ description: クラウドパッチパッケージの最新の改善点のリス�
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-02-06T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -29,14 +29,17 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.3 {#latest}
+## v1.1.4 {#latest}
 
+リリース日：2025 年 2 月 13 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.7 への追加されたパッチ** – この更新パッチ [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+
+## v1.1.3
 
 リリース日：2025 年 2 月 6 日（PT）
 
 - ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13149	 - -->
-
-
 
 ## v1.1.2
 
@@ -126,7 +129,7 @@ Adobe Commerce 2.4.5 の重要なパッチ：
 
 - **Braintree支払いを使用した注文に関する問題** – このパッチは、管理者が新しい注文や再注文を行うのを妨げる重要な問題を解決します。<!-- MCLOUD-9137 -->
 
-[Braintree支払いが有効な場合、管理者が注文の作成/並べ替えを行うことができない ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html) を参照してください。
+[Braintree支払いが有効な場合、管理者が注文の作成や並べ替えができない ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html) を参照してください。
 
 ## v1.0.17
 
@@ -142,7 +145,7 @@ Adobe Commerce 2.3.3-p1 以降のバージョン用の重要なパッチ：
 
 認証されていないリモートコードの実行を引き起こす **重大** な脆弱性を解決するためにパッチを更新しました。<!-- MCLOUD-8479 -->
 
-[Adobeセキュリティ速報 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html) を参照してください。
+[Adobe セキュリティ速報 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html) を参照してください。
 
 ## v1.0.15
 
@@ -159,7 +162,7 @@ Adobe Commerce 2.3.3-p1 以降のバージョン用の重要なパッチ：
 
 認証されていないリモートコードが実行される **重大** な）脆弱性を解決するためのパッチを追加しました。<!-- MCLOUD-8461 -->
 
-[Adobeセキュリティ速報 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html) を参照してください。
+[Adobe セキュリティ速報 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html) を参照してください。
 
 ## v1.0.13
 
@@ -216,7 +219,7 @@ Adobe Commerce 2.4.3 および 2.3.7-p1 の重要なパッチ：
 
 - **Adobe Commerce 2.3.0 から 2.3.5、2.4.0 用の Redis パッチ** - レベル 2 キャッシュを実装する際のカテゴリへの製品追加をサポートするために、Redis パッチを更新しました。<!--MCLOUD-6659-->
 
-- **Braintree VBE パッチ** – 管理者がBraintree処理レポートを表示しようとした際にエラーが発生した問題を修正します。<!--MCLOUD-6684-->
+- **Braintree VBE パッチ** – 管理者がBraintree和解報告書を表示しようとした際にエラーが発生した問題を修正します。<!--MCLOUD-6684-->
 
 - 現在、`ece-patches apply` コマンドは、Unix `patch` コマンドを使用して、ホストシステムで Git が使用できない場合にパッチを適用します。<!--MCLOUD-7069-->
 
@@ -261,9 +264,9 @@ Adobe Commerce 2.4.3 および 2.3.7-p1 の重要なパッチ：
 
 - **サイト・パフォーマンスの向上**:`Magento\Framework\App\DeploymentConfig\Reader::load` 機能のパフォーマンスに関する問題を修正します。この機能は、サイトのパフォーマンスに影響を及ぼすロード時間が定期的に長くなるという問題を解決します。<!--MCLOUD-5650-->
 
-- 支払方法パッチのパッチ割当を更新し、支払ベース・パッケージ（magento/magento2-base）ではなくMagentoモジュールをターゲットにして、支払モジュールが存在する場合にのみ支払パッチが適用されるようにしました。<!--MCLOUD-5666-->
+- 支払方法パッチのパッチ割当を更新し、支払モジュールが存在する場合にのみ支払パッチが適用されるように、Magentoベース・パッケージ（magento/magento2-base）のかわりに支払モジュールをターゲットにします。<!--MCLOUD-5666-->
 
-- Magento Open Source.<!--MCLOUD-5701--> との互換性を保つためにパッチを更新しました。
+- Magento Open Source.<!--MCLOUD-5701--> との互換性を確保するためのパッチを更新しました。
 
 ## v1.0.3
 
@@ -293,7 +296,7 @@ Adobe Commerce 2.4.3 および 2.3.7-p1 の重要なパッチ：
 
 リリース日：2020 年 2 月 6 日（PT）
 
-magento/magento-cloud-patches v1.0.1 リリースのMagento Open Sourceダウンロードページからすべてのソフトウェア 2.x パッチを取り込みました。 以前にプロジェクトにパッチをコピーした場合は、競合を避けるために削除します。
+magento/magento-cloud-patches v1.0.1 リリースのソフトウェアダウンロードページからすべてのMagento Open Source 2.x パッチを取り込みました。 以前にプロジェクトにパッチをコピーした場合は、競合を避けるために削除します。
 
 このリリースには、次のパッチと重要な修正が含まれています。
 
@@ -303,9 +306,9 @@ magento/magento-cloud-patches v1.0.1 リリースのMagento Open Sourceダウン
 
    - `cron_schedule` テーブル内のデータの更新中にデッドロックを回避するための _retry_ 操作を追加します。
 
-- **Magento Open Source 2.x で利用可能なすべてのパッチを含めるように `magento/magento-cloud-patches` を更新** - ソフトウェアのダウンロードページで利用可能なすべてのMagento Open Source 2.x パッチを含めるように magento/magento-cloud-patches パッケージを更新しました。 以前にクラウドインフラストラクチャプロジェクト上のAdobe CommerceにMagento Open Sourceパッチをコピーした場合は、競合を避けるために削除します。<!--MAGECLOUD-4606-->
+- **Magento Open Source 2.x で使用可能なすべてのパッチを含めるように `magento/magento-cloud-patches` を更新** - ソフトウェアのダウンロードページで使用可能なすべてのMagento Open Source 2.x パッチを含めるように magento/magento-cloud-patches パッケージを更新しました。 Magento Open Sourceのパッチをクラウドインフラストラクチャプロジェクト上のAdobe Commerceに以前にコピーした場合は、競合を避けるために削除します。<!--MAGECLOUD-4606-->
 
-- **Elasticsearchカタログのページネーションの修正** - magento/magento-cloud-patches v1.0 で提供されたElasticsearchカタログのページネーションパッチを、より効果的な修正に置き換えました。<!--MAGECLOUD-4847-->
+- **Elasticsearch カタログのページネーションの修正** - magento/magento-cloud-patches v1.0 で提供されているElasticsearch カタログのページネーションパッチを、より効果的な修正に置き換えました。<!--MAGECLOUD-4847-->
 
 - **ページビルダーパッチ** - Commerce 1.0.0 用の Cloud Patches では、ページビルダーの既知のリモートコード実行（RCE）の脆弱性に対処するため、ページビルダーパッチをバンドルしました。初期修正はAdobe Commerce 2.3.3 に基づいています。問題を修正するための複数の最適化を含む、Adobe Commerce 2.3.4.に基づくより安定した実装で、これらのパッチを更新しました。<!--MAGECLOUD-4884-->
 
