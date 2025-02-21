@@ -2,9 +2,10 @@
 title: バックアップ管理
 description: クラウドインフラストラクチャプロジェクト上のAdobe Commerceのバックアップを手動で作成および復元する方法について説明します。
 feature: Cloud, Paas, Snapshots, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
+source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -14,6 +15,10 @@ ht-degree: 0%
 アクティブなスターター環境の手動バックアップは、[!DNL Cloud Console] の [**[!UICONTROL Backup]**] ボタンを使用するか、`magento-cloud snapshot:create` コマンドを使用して、いつでも実行できます。
 
 バックアップまたは _スナップショット_ は、実行中のサービス（MySQL データベース）のすべての永続的なデータと、マウントされたボリューム（var、pub/media、app/etc）に保存されたすべてのファイルを含む、環境データの完全なバックアップです。 コードは Git ベースのリポジトリに既に保存されているので、スナップショットにはコードが含まれていま _ん_。 スナップショットのコピーはダウンロードできません。
+
+>[!WARNING]
+>
+>バックアップには通常、マウントされたディレクトリ（`pub/media` などのパブリック web ディレクトリを含む）の内容が含まれていますが、バックアップ出力ファイルを `pub/media` や `pub/static` などのパブリック web ディレクトリに移動しないでください。
 
 バックアップ/スナップショット機能は、ステージング環境および実稼動環境には適用 **されません**。これらの環境は、デフォルトで災害復旧用の通常のバックアップを受け取ります。 詳細は、「[Pro バックアップと障害回復 ](../architecture/pro-architecture.md#backup-and-disaster-recovery)」を参照してください。 ステージング環境および実稼動環境での自動ライブバックアップとは異なり、バックアップは自動 **ではありません**。 バックアップを手動で作成する _、または Starter または Pro の統合環境のバックアップを定期的に作成する cron ジョブをセットアップするのは_ ユーザーの責任です。
 
