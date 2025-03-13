@@ -2,9 +2,10 @@
 title: プロプロジェクトワークフロー
 description: Pro 開発ワークフローとデプロイメントワークフローの使用方法を説明します。
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ Pro プロジェクトには、グローバル `master` ブランチを持つ単
 
 ## 開発ワークフロー
 
-統合環境は、クラウドインフラストラクチャコード上のAdobe Commerceを含んだ、単一のベース `integration` ブランチを提供します。 アクティブな環境ブランチを 1 つ追加で作成できます。 これにより、最大 2 つのアクティブなブランチを、Platform as a Service （PaaS）コンテナにデプロイできます。 非アクティブな環境の数に制限はありません。
+統合環境は、クラウドインフラストラクチャコード上のAdobe Commerceを含んだ、単一のベース `integration` ブランチを提供します。 アクティブな環境ブランチを 1 つ追加で作成できます。 これにより、最大 2 つのアクティブなブランチを、Platform as a Service （PaaS）コンテナにデプロイできます。 非アクティブな環境の数に制限はありませんが、非アクティブな環境が多いほど、Cloud Console の読み込みに時間がかかります。
 
 {{enhanced-integration-envs}}
 
