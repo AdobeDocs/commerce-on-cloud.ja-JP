@@ -4,16 +4,17 @@ description: クラウドインフラストラクチャプロジェクト上のA
 role: Developer
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
+source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
 # リモート環境への安全な接続
 
-Secure Shell （SSH）は、リモートサーバーおよびシステムに安全にログインするために使用される共通プロトコルです。 SSH を使用してリモート環境にアクセスし、Adobe Commerce アプリケーションを管理してリモート環境ログにアクセスできます。 Adobeでは、SSH 公開鍵を使用したセキュア FTP （sFTP）接続のみをサポートしています。 FTP 接続はサポートされていません。
+Secure Shell （SSH）は、リモートサーバーおよびシステムに安全にログインするために使用される共通プロトコルです。 SSH を使用してリモート環境にアクセスし、Adobe Commerce アプリケーションを管理してリモート環境ログにアクセスできます。 Adobeは、SSH 公開鍵を使用したセキュア FTP （sFTP）接続のみをサポートしています。 FTP 接続はサポートされていません。
 
 ## SSH キーペアの生成
 
@@ -28,7 +29,7 @@ Secure Shell （SSH）は、リモートサーバーおよびシステムに安�
 
 ## SSH 公開鍵をアカウントに追加
 
-クラウドインフラストラクチャアカウント上のAdobe Commerceに SSH 公開鍵を追加した後、アカウント上のすべてのアクティブな環境を再デプロイして鍵をインストールします。
+クラウドインフラストラクチャアカウント上でAdobe Commerceに SSH 公開鍵を追加または更新したら、アカウントに [ すべてのアクティブな環境を再デプロイ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) して鍵をインストールします。
 
 Cloud CLI または [!DNL Cloud Console] のいずれかの方法を使用して、アカウントに SSH キーを追加できます。
 
