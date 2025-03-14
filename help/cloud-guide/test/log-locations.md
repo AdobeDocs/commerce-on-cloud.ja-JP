@@ -2,7 +2,8 @@
 title: ログの表示と管理
 description: クラウドインフラストラクチャで使用できるログファイルのタイプと、それらのログファイルの場所について説明します。
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -111,7 +112,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->クラウド環境を設定する場合、ビルドアクションとデプロイアクション用に [ ログベースのSlackとメール通知 ](../environment/set-up-notifications.md) を設定できます。
+>クラウドを設定する際に、ビルドおよびデプロイアクション用の [ ログベースのSlackおよびメール通知 ](../environment/set-up-notifications.md) を設定できます。
 
 次のログは、すべてのクラウドプロジェクトで共通の場所を持ちます。
 
@@ -208,13 +209,13 @@ type: warning
 
 | ログファイル | Pro ステージング | 実稼動環境に対応 |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **ログをデプロイ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg/deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/deploy.log` |
-| **デプロイ後のログ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **Cron ログ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg/cron.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/cron.log` |
-| **Nginx アクセス ログ** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Nginx エラーログ** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **PHP アクセスログ** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **PHP FPM ログ** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **ログをデプロイ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **デプロイ後のログ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **Cron ログ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/cron.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/cron.log` |
+| **Nginx アクセス ログ** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Nginx エラーログ** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **PHP アクセスログ** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **PHP FPM ログ** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### アーカイブしたログファイル
 
@@ -234,13 +235,13 @@ type: warning
 
 各サービスは個別のコンテナで実行されるので、サービスログは統合環境では使用できません。 クラウドインフラストラクチャー上のAdobe Commerceを使用すると、統合環境内の web サーバーコンテナにのみアクセスできます。 次のサービスログの場所は、実稼動環境およびステージング環境用です。
 
-- **Redis ログ**: `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
+- **Redis ログ**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Elasticsearch ログ**: `/var/log/elasticsearch/elasticsearch.log`
 - **Java ガベージコレクションログ**:`/var/log/elasticsearch/gc.log`
 - **メール ログ**: `/var/log/mail.log`
 - **MySQL エラーログ**: `/var/log/mysql/mysql-error.log`
 - **MySQL 低速ログ**: `/var/log/mysql/mysql-slow.log`
-- **RabbitMQ ログ**: `/var/log/rabbitmq/rabbit@host1.log`
+- **RabbitMQ ログ**:`/var/log/rabbitmq/rabbit@host1.log`
 
 サービス・ログは、ログ・タイプに応じて異なる期間にわたってアーカイブおよび保存されます。 例えば、MySQL ログの有効期間が最短で、7 日後に削除されます。
 
