@@ -2,9 +2,10 @@
 title: PHP 設定
 description: クラウドインフラストラクチャーにおけるCommerce アプリケーション設定に最適な PHP 設定について説明します。
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ realpath_cache_ttl = 7200
 
 ### カスタム PHP 設定の確認
 
-`php.ini` の変更をクラウド環境にプッシュしたら、カスタム PHP 設定が環境に追加されたことを確認できます。 例えば、SSH を使用してリモート環境にログインし、次のような方法でファイルを表示します。
+`php.ini` の変更をクラウド環境にプッシュしたら、カスタム PHP 設定が環境に追加されたことを確認できます。 例えば、SSH を使用してリモート環境にログインし、PHP の設定情報を表示し、`register_argc_argv` ディレクティブをフィルタリングします。
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+サンプル出力：
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
