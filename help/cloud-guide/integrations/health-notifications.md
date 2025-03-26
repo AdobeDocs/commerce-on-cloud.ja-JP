@@ -2,9 +2,10 @@
 title: 正常性通知
 description: クラウドインフラストラクチャプロジェクト上のAdobe Commerceでディスク容量の使用状況に関するSlack、メール、PagerDuty 通知を設定する方法について説明します。
 feature: Cloud, Observability, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
+source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -29,9 +30,9 @@ ht-degree: 0%
 magento-cloud integration:add --type health.email --from-address you@example.com --recipients them@example.com --recipients others@example.com
 ```
 
-## Slackチャネルの通知
+## Slack チャネルの通知
 
-Slackは、ボットと呼ばれるインタラクティブアプリを使用してチャットルームでメッセージを投稿する外部サービスです。 Slackでヘルス通知を受け取るには、Slackグループのカスタム [ ボットユーザー ](https://api.slack.com/bot-users) を作成する必要があります。 チャネルまたはチャネルのボットユーザーを設定したら、Integration から提供される [ ボットトークン ](https://api.slack.com/docs/token-types#bot) を保存して、Slackを登録します。 次の例では、ヘルス通知をSlackチャネルに登録します。
+Slackは、ボットと呼ばれるインタラクティブアプリを使用してチャットルームでメッセージを投稿する外部サービスです。 Slackでヘルス通知を受け取るには、Slack グループのカスタム [ ボットユーザー ](https://api.slack.com/bot-users) を作成する必要があります。 チャネル（複数可）のボットユーザーを設定したら、Slackから提供される [ ボットトークン ](https://api.slack.com/docs/token-types#bot) を保存し、統合を登録します。 次の例では、ヘルス通知をSlack チャネルに登録します。
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'
@@ -44,3 +45,13 @@ PagerDuty は、オンコールチームメンバーに重要な問題を通知�
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY
 ```
+
+## ログ管理
+
+使用可能なディスク領域を増やすには、環境からログファイルを切り捨てるか削除します。 ログローテーションが有効な場合は、まずログのバックアップコピーをダウンロードしてから削除します。
+
+```bash
+rm -rf some-log-file.log.gz
+```
+
+または、個々のログファイルを切り捨ててサイズを小さくすることもできます。 ログファイルのトランケートの詳細な例については、ビデオチュートリアルのログファイルのトランケート {target="_blank"} を参照してください。
