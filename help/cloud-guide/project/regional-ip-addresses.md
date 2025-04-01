@@ -1,16 +1,17 @@
 ---
 title: 地域の IP アドレス
 description: 統合環境のクラウドインフラストラクチャー上でAdobe Commerceが使用する、AWSおよび Azure リージョンの IP アドレスのリストを参照してください。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1137f5cf-4879-46d7-878c-bf47de7a0e34
+source-git-commit: f2214dd56625847132298892635c7cf738c3d71f
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
 # 地域の IP アドレス
 
-次の表に、クラウドインフラストラクチャ [Integration Environments](../architecture/pro-architecture.md#integration-environment) でAdobe Commerceが使用する受信および送信 IP アドレスを示します。 これらの IP アドレスは安定していますが、変更される可能性があります。 Adobeは、IP アドレスの変更を行う前に、お客様に通知します。
+次の表に、クラウドインフラストラクチャ [Integration Environments](../architecture/pro-architecture.md#integration-environment) でAdobe Commerceが使用する受信および送信 IP アドレスを示します。 これらの IP アドレスは安定していますが、変更される可能性があります。 IP アドレスを変更する前に、Adobeは顧客に通知します。
 
 統合環境を指定する構文は次のとおりです。
 
@@ -22,7 +23,9 @@ ht-degree: 0%
 - **プロジェクト ID** = 13 文字のプロジェクト ID
 - **地域** = AWSまたは Azure の地域名
 
-`ping` コマンドを使用して、受信 IP アドレスを取得できます。
+`ping` または `dig` コマンドを使用して、受信 IP アドレスを取得できます。
+
+**Ping**
 
 ```bash
 ping integration-abcd123-abcd78910.us-3.magentosite.cloud
@@ -35,6 +38,18 @@ PING integration-abcd123-abcd78910.us-3.magentosite.cloud (34.210.133.187): 56 d
 Request timeout for icmp_seq 0
 Request timeout for icmp_seq 1
 Request timeout for icmp_seq 2
+```
+
+**掘る**
+
+```bash
+dig +short integration-abcd123-abcd78910.us-3.magentosite.cloud
+```
+
+応答のサンプル
+
+```bash
+34.210.133.187
 ```
 
 SSH 接続の発信をブロックする企業のファイアウォールがある場合は、受信 IP アドレスを許可リストに追加できます。
