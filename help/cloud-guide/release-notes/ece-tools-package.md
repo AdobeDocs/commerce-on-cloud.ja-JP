@@ -2,11 +2,11 @@
 title: ECE-Tools リリースノート
 description: ECE-Tools パッケージの最新の改善点のリストを確認してください。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-03T00:00:00Z
+last-substantial-update: 2024-04-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
+source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3065'
 ht-degree: 0%
 
 ---
@@ -30,17 +30,17 @@ ht-degree: 0%
 
 ## v2002.2.2 {#latest}
 
-リリース日：2025 年 4 月 3 日（PT）
+リリース日：2025 年 4 月 7 日（PT）
 
-- ![ 新規アイコン ](../../assets/new.svg)**Valkey** - Redis に代わる新しいサービス（Valkey）のサポートを追加しました。<!-- MCLOUD-13455	 - -->
-- ![fix icon](../../assets/fix.svg)**Opensearch2 for 2.4.4/2.4.5**—Adobe Commerce バージョン 2.4.4/2.4.5で `opensearch2` のサポートが追加されました。<!-- MCLOUD-13493	 - -->
+- ![ 新規アイコン ](../../assets/new.svg)**Valkey** - Redis に代わる新しいサービス（Valkey）のサポートを追加しました。&lt;!— MCLOUD-13455 —>
+- ![fix icon](../../assets/fix.svg)**Opensearch2 for 2.4.4/2.4.5**—Adobe Commerce バージョン 2.4.4/2.4.5で `opensearch2` のサポートが追加されました。 &lt;!— MCLOUD-13493 —>
 
 ## v2002.2.1
 
 リリース日：2024 年 2 月 6 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13145	 - -->
-- ![ 修正アイコン ](../../assets/fix.svg)**Opensearch のバリデーター** – 間違ったバージョンのサービスに関して誤解を招くメッセージを生成したバリデーターを修正しました。<!-- MCLOUD-13184	 - -->
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13145     - -->
+- ![ 修正アイコン ](../../assets/fix.svg)**Opensearch のバリデーター** – 間違ったバージョンのサービスに関して誤解を招くメッセージを生成したバリデーターを修正しました。&lt;!— MCLOUD-13184 —>
 
 
 ## v2002.2.0
