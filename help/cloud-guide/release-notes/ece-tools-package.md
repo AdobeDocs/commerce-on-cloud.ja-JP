@@ -2,11 +2,11 @@
 title: ECE-Tools リリースノート
 description: ECE-Tools パッケージの最新の改善点のリストを確認してください。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-02-06T00:00:00Z
+last-substantial-update: 2024-04-03T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3059'
 ht-degree: 0%
 
 ---
@@ -28,8 +28,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.1 {#latest}
+## v2002.2.2 {#latest}
 
+リリース日：2025 年 4 月 3 日（PT）
+
+- ![ 新規アイコン ](../../assets/new.svg)**Valkey** - Redis に代わる新しいサービス（Valkey）のサポートを追加しました。<!-- MCLOUD-13455	 - -->
+- ![fix icon](../../assets/fix.svg)**Opensearch2 for 2.4.4/2.4.5**—Adobe Commerce バージョン 2.4.4/2.4.5で `opensearch2` のサポートが追加されました。<!-- MCLOUD-13493	 - -->
+
+## v2002.2.1
 
 リリース日：2024 年 2 月 6 日（PT）
 
@@ -44,14 +50,14 @@ ht-degree: 0%
 - ![ 新しいアイコン ](../../assets/new.svg)**MariaDB 11.4**- MariaDB 11.4 のサポートを追加しました。
 - ![ 修正アイコン ](../../assets/fix.svg)**リファクタリングされたコード** – 古い PHP バージョン 7.4、7.3、7.2 および関連ライブラリのサポートを削除しました。<!-- MCLOUD-9278 -->
 - ![ 修正アイコン ](../../assets/fix.svg)**アップグレードされた Monolog バージョン** Monolog 3.6.<!-- MCLOUD-12855 --> のサポートが追加されました
-- ![fix icon](../../assets/fix.svg)**RabbitMQ、MariaDB、PHP のバリデーター** – 誤ったバージョンのサービスに関して誤解を招くようなメッセージを表示していたバリデーターを修正しました。
+- ![ 修正アイコン ](../../assets/fix.svg)**RabbitMQ、MariaDB、PHP のバリデーター** – 誤ったバージョンのサービスに関して誤解を招くようなメッセージを表示していたバリデーターを修正しました。
 
 ## v2002.1.19
 
 リリース日：2024 年 5 月 21 日（PT）
 
 - ![new icon](../../assets/new.svg) **Lua**—CACHE_CONFIGURATION に useLua オプションを追加しました。
-- ![fix icon](../../assets/fix.svg)**バリデーター** – 新しいバージョンの Redis とRabbitMQのバリデーターを更新しました。
+- ![ 修正アイコン ](../../assets/fix.svg)**バリデーター** – 新しいバージョンの Redis と RabbitMQ のバリデーターを更新しました。
 
 ## v2002.1.18
 
@@ -64,7 +70,7 @@ ht-degree: 0%
 
 リリース日：2024 年 1 月 16 日（PT）
 
-- ![fix icon](../../assets/fix.svg)**Elasticsearchと OpenSearch のバリデーター** - LiveSearch が有効な場合に検索サービスをインストールすると誤解を招くメッセージが表示されるバリデーターを修正しました。<!-- MCLOUD-10167 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**Elasticsearchおよび OpenSearch のバリデーター** - LiveSearch が有効な場合に、検索サービスをインストールする際に誤解を招くメッセージが表示されるバリデーターを修正しました。<!-- MCLOUD-10167 -->
 - ![ 修正アイコン ](../../assets/fix.svg) **配置警告** – 空でないフォルダに関する配置警告が発生する問題を修正しました。<!-- MCLOUD-8958 -->
 
 ## v2002.1.16
@@ -79,7 +85,7 @@ ht-degree: 0%
 
 - ![ 修正アイコン ](../../assets/fix.svg)**エラーコード** - エラーコードのスキーマとエラーコードドキュメントジェネレーターを更新しました。
 - ![ 修正アイコン ](../../assets/fix.svg)**カスタム Redis モデルのバリデーター** – カスタム Redis バックエンドモデルのバリデーターを更新しました。 [ キャッシュ設定の例を参照 ](../environment/variables-deploy.md#cache_configuration)。
-- ![ 修正アイコン ](../../assets/fix.svg)**RabbitMQのバリデーター**- RabbitMQ 3.11 のサポートが追加されました
+- ![ 修正アイコン ](../../assets/fix.svg)**RabbitMQ のバリデーター**-RabbitMQ 3.11 のサポートを追加
 - ![ 修正アイコン ](../../assets/fix.svg) **間違ったリンクを修正** – お知らせメールテンプレートのオンボーディングドキュメントへの間違ったリンクを修正しました。
 
 ## v2002.1.14
@@ -94,7 +100,7 @@ ht-degree: 0%
 
 リリース日：2022 年 10 月 27 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**Adobe I/O Events for Adobe Commerceのサポートを追加**。 拡張機能の開発者は、[Adobe I/O Events](https://developer.adobe.com/events/docs/) フレームワークを使用して、クラウドインスタンスから [AdobeのApp Builder](https://developer.adobe.com/app-builder/docs/overview/) 用に作成されたアプリケーションにCommerce イベント情報を送信できるようになりました。 Adobe CommerceのAdobe I/O Eventsはパートナープレビュー版です。<!-- CEXT-932 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Adobe I/O Events for Adobe Commerceのサポートを追加**。 拡張機能の開発者は、[Adobe I/O Events](https://developer.adobe.com/events/docs/) フレームワークを使用して、クラウドインスタンスから [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/) 用に作成されたアプリケーションにCommerce イベント情報を送信できるようになりました。 Adobe CommerceのAdobe I/O Eventsはパートナープレビュー版です。<!-- CEXT-932 -->
 - ![ 新しいアイコン ](../../assets/new.svg)**OPcache 設定のバリデーター** – 除外されたパスの OPcache 設定を確認するバリデーターを追加しました。<!-- MCLOUD-9485 -->
 - ![ 修正アイコン ](../../assets/fix.svg)**GraphQL キャッシュ設定の問題を修正** - ECE-Tools は、`app/etc/env.php` ファイルの `cache` 設定にGraphQL `id_salt` 値を保持するようになりました。<!-- MCLOUD-9486 -->
 
@@ -159,13 +165,13 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)**Redis 認証資格情報** - デプロイフェーズで `relationships` プロパティから Redis 認証資格情報を読み取る機能が追加されました。<!--MCLOUD-7694-->
 
-- ![ 新規アイコン ](../../assets/new.svg) **Elasticsearch認証資格情報** - デプロイフェーズで `relationships` プロパティからElasticsearch認証資格情報を読み取る機能が追加されました。<!--MCLOUD-7695-->
+- ![ 新しいアイコン ](../../assets/new.svg) **Elasticsearch認証資格情報** - デプロイフェーズで `relationships` プロパティからElasticsearch認証資格情報を読み取る機能が追加されました。<!--MCLOUD-7695-->
 
 - ![ 新しいアイコン ](../../assets/new.svg)**専用セッションストレージサービス** - セッションストレージの 2 つ目のオプションとして `redis-session` を追加しました。 `redis-session` サービスを使用してセッション情報を保存し、キャッシュに `redis` サービスを使用して、パフォーマンスを向上させることができます。<!--MCLOUD-7698-->
 
 - ![ 新しいアイコン ](../../assets/new.svg)**非推奨（廃止予定）の SPLIT_DB メッセージ** - Adobe Commerce 2.4.2 の非推奨（廃止予定）の `SPLIT_DB` オプションと、Adobe Commerce 2.5.0 での削除に関するバリデーターの警告と重要なメッセージを追加しました。<!--MCLOUD-7806-->
 
-- ![ 修正アイコン ](../../assets/fix.svg) **関係からのElasticsearchバージョン** - サービスバリデーターを修正して、Cloud Docker および統合環境の `relationships` プロパティから正しいバージョンのElasticsearchを取得しました。<!--MCLOUD-7572-->
+- ![ 修正アイコン ](../../assets/fix.svg) **関係からのElasticsearch バージョン** - サービスバリデーターを修正して、Cloud Docker および統合環境の `relationships` プロパティから正しいバージョンのElasticsearchを取得しました。<!--MCLOUD-7572-->
 
 - ![ 修正アイコン ](../../assets/fix.svg)**柔軟な Redis ポート検証**—`server` URL からカスタムキャッシュ接続のポートを検証できるようになりました。 例えば、`server: 'tcp://rfs-store-simple-page-cache:26379'` のようにポート番号をサーバー URL に追加できます。 これは、`port` オプションがない、または間違っている場合の検証エラーを防ぐのに役立ちます。<!--MCLOUD-7722-->
 
@@ -217,13 +223,13 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg) 検索エンジンの検証が追加され、Cloud Infrastructure 2.4 以降のAdobe Commerceに対して `elasticsearch` が設定されていることを確認できるようになりました。 検証に失敗した場合、デプロイメントは停止され、問題の修正を示唆する重要なエラーメッセージが表示されます。 [ 重大なエラー、デプロイステージ ](../dev-tools/error-reference.md#deploy-stage) を参照してください。<!--MCLOUD-6937-->
 
-- ![ 新しいアイコン ](../../assets/new.svg)ElasticsearchサービスのバージョンとAdobe Commerceのバージョンの間のElasticsearchを確認するための互換性検証が追加されました。<!--MCLOUD-7193-->
+- ![ 新規アイコン ](../../assets/new.svg) Elasticsearch サービスのバージョンとAdobe Commerceのバージョンの間の互換性を確認するためのElasticsearch検証が追加されました。<!--MCLOUD-7193-->
 
-- ![ 新規アイコン ](../../assets/new.svg) Adobe Commerce Elasticsearchモジュールと互換性のあるElasticsearchのバージョンを示すために、Elasticsearch互換性エラーメッセージを更新しました。 お使いのバージョンのAdobe Commerceで使用されているElasticsearchモジュールと互換性を持たせるために、エラーメッセージに、クラウドインフラストラクチャにインストールする具体的なElasticsearchバージョンが表示されるようになりました。 [ 警告エラー、ステージのデプロイ ](../dev-tools/error-reference.md#deploy-stage-1) を参照してください <!--MCLOUD-6698-->。
+- ![ 新規アイコン ](../../assets/new.svg) Adobe Commerce Elasticsearch モジュールと互換性のあるElasticsearchのバージョンを示すように、Elasticsearch互換性エラーメッセージを更新しました。 お使いのバージョンのElasticsearchで使用されるElasticsearch モジュールと互換性を持たせるために、エラーメッセージに、クラウドインフラストラクチャにインストールする特定のAdobe Commerce バージョンが表示されるようになりました。 [ 警告エラー、ステージのデプロイ ](../dev-tools/error-reference.md#deploy-stage-1) を参照してください <!--MCLOUD-6698-->。
 
 - ![ 新規アイコン ](../../assets/new.svg) 無効な `MAGE_MODE` 環境変数の設定に対する警告エラー `2026` と `2027` を追加しました。 有効な値は `production` のみです。 この修正前は、読み取り専用ファイルに書き込もうとした場合に後でエラーが発生するように、`MAGE_MODE` を配置エラーなしで `developer` に設定できました。 [ 警告エラー ](../dev-tools/error-reference.md#warning-errors) を参照してください <!--MCLOUD-6708-->。
 
-- ![ 修正アイコン ](../../assets/fix.svg)Redis、RabbitMQおよび MySQL サービスの検証を修正して、これらのバージョンがAdobe Commerceのバージョンと互換性があることを確認しました。 これらのサービスの有効なバージョンが `cloud.log`.<!--MCLOUD-7098--> に書き込まれるようになりました。
+- ![fix icon](../../assets/fix.svg)Redis、RabbitMQ および MySQL サービスの検証を修正し、これらのバージョンがAdobe Commerceのバージョンと互換性があることを確認しました。 これらのサービスの有効なバージョンが `cloud.log`.<!--MCLOUD-7098--> に書き込まれるようになりました。
 
 - ![ 修正アイコン ](../../assets/fix.svg) キャッシュのウォームアップ中に送信リクエストの同時リクエスト制限を含むように `cloud.log` を更新しました。 この値は、デプロイ後の変数 [WARM_UP_CONCURRENCY](../environment/variables-post-deploy.md#warm_up_concurrency) で設定され <!--MCLOUD-5563--> す。
 
@@ -253,7 +259,7 @@ ht-degree: 0%
 
    - エラーコード 102 - `env.php` ファイルが書き込み可能でない場合に発生する問題に対する追加チェックを追加しました <!--MCLOUD-6221-->
 
-- ![new icon](../../assets/new.svg) **QUALITY_ENVIRONMENT** PATCH変数を追加し、デプロイメントプロセス中に適用する 1 つ以上のクオリティパッチを指定しました。 [ ビルド変数 ](../environment/variables-build.md#quality_patches) を参照してください。<!--MCLOUD-6375-->
+- ![ 新規アイコン ](../../assets/new.svg) **QUALITY_PATCHES** 環境変数を追加し、デプロイメントプロセス中に適用する 1 つ以上の品質向上パッチを指定しました。 [ ビルド変数 ](../environment/variables-build.md#quality_patches) を参照してください。<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -293,7 +299,7 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)**検証の改善**—
 
-   - ![ 新しいアイコン ](../../assets/new.svg) **Elasticsearch 7.x の互換性チェック** - Elasticsearch 7.x のElasticsearchの互換性チェックの検証を更新しました。<!--MCLOUD-5542-->
+   - ![ 新しいアイコン ](../../assets/new.svg) **Elasticsearch 7.x 互換性チェック** - Elasticsearch 7.x ソフトウェア互換性チェックのElasticsearch検証を更新しました。<!--MCLOUD-5542-->
 
    - ![ 新しいアイコン ](../../assets/new.svg)**更新されたサービスバージョンと EOL 検証チェック** – インストールされているサービスバージョンをAdobe Commerce 2.4 と照合するように検証を更新しました。要件 <!--MCLOUD-6144-->
 
@@ -357,11 +363,11 @@ ht-degree: 0%
 
    - ![ 新規アイコン ](../../assets/new.svg)PHP 7.3.<!--MAGECLOUD-4022--> のサポートを追加
 
-   - ![ 新規アイコン ](../../assets/new.svg)RabbitMQ 3.8.<!--MAGECLOUD-4674--> がサポートされるようになりました
+   - ![ 新しいアイコン ](../../assets/new.svg)RabbitMQ 3.8.<!--MAGECLOUD-4674--> のサポートを追加
 
    - ![ 新規アイコン ](../../assets/new.svg) 各サービスの EOL 日付に対してインストール済みのサービスバージョンを確認する検証が追加されました。 現在は、サービスのバージョンが提供終了（EOL）日から 3 か月以内の場合は通知が届き、提供終了（EOL）日が過去の場合は警告が届きます。<!--MAGECLOUD-4076-->
 
-   - ![ 修正アイコン ](../../assets/fix.svg)Elasticsearch設定の問題を修正して、すべての環境で正しいElasticsearchが設定されるようにしました。<!--MAGECLOUD-4474-->
+   - ![ 修正アイコン ](../../assets/fix.svg)Elasticsearch設定の問題を修正して、すべての環境でElasticsearchが正しく設定されるようにしました。<!--MAGECLOUD-4474-->
 
 >[!NOTE]
 >

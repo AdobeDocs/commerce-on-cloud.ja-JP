@@ -3,11 +3,11 @@ title: Cloud Docker パッケージ
 description: Cloud Docker パッケージの最新の改善点のリストを確認します。
 feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-03T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 7f62dbc7db9924abfe304b46ed62d9577471386d
+source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
 workflow-type: tm+mt
-source-wordcount: '3697'
+source-wordcount: '3710'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,14 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.1 {#latest}
+## v1.4.2 {#latest}
+
+リリース日：2025 年 4 月 3 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg) **PHP 8.4**—8.4 および `php-fpm` 8.4 の画像 `php-cli` 追加されました。
+
+
+## v1.4.1
 
 リリース日：2025 年 2 月 6 日（PT）
 
@@ -81,7 +88,7 @@ ht-degree: 0%
 
 リリース日：2022 年 3 月 31 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**追加されたElasticsearch 7.10 の画像**<!-- MCLOUD-8548 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Elasticsearch 7.10 の画像を追加**<!-- MCLOUD-8548 -->
 
 ## v1.3.1
 
@@ -146,12 +153,12 @@ ht-degree: 0%
   ./vendor/bin/ece-docker build:compose --custom-registry=my-registry.example.com
   ```
 
-- ![ 新しいアイコン ](../../assets/new.svg)**古いElasticsearchのバージョンを削除** - Elasticsearchのバージョン 1.7 および 2.4 をElasticsearchのイメージから削除しました。<!--MCLOUD-7504-->
+- ![ 新規アイコン ](../../assets/new.svg)**古いElasticsearch バージョンを削除** - Elasticsearch バージョン 1.7 および 2.4 をElasticsearch イメージから削除しました。<!--MCLOUD-7504-->
 - ![ 新規アイコン ](../../assets/new.svg)**NGINX 証明書の自動生成** - NGINX イメージから既存の証明書を削除しました。 NGINX 証明書は、セキュリティを向上させるために、新しいデプロイメントのたびに自動生成されるようになりました。<!--MCLOUD-7396-->
 - ![fix icon](../../assets/fix.svg) **Enabled`opcache.validate_timestamps`** – 開発者モードでデフォルトで `opcache.validate_timestamps` PHP 設定を有効にします。 この設定を有効にすると、Docker でファイルシステムに対する変更が認識されない問題が修正されました。<!--MCLOUD-7466-->
 - ![fix icon](../../assets/fix.svg) **Fixed`build:custom:compose`** – ビルド処理中にファイルを上書きできない場合にエラーをスローする `build:custom:compose` コマンドを修正しました。 エラーをスローすると、間違 `docker-compose up` たファイルを使用している可能性のある状況を防ぐことができます。<!--MCLOUD-7457-->
 - ![ 修正アイコン ](../../assets/fix.svg)**修正 `--sync_engine="native"` オプション** – 実稼動モード（`--mode="production"`）で、`--sync_engine="native"` オプションを使用しても `docker.composer.yml` ファイル内のローカルフォルダーのエントリが作成されない問題を修正しました。<!--MCLOUD-7254-->
-- ![fix icon](../../assets/fix.svg)**Fixed service version validation errors** - [!DNL RabbitMQ]、Elasticsearch、およびその他のサービスのサービスバージョンを `MAGENTO_CLOUD_RELATIONSHIP` 変数の `type` プロパティに追加しました。 これらのバージョンを `relationships` 変数に追加すると、デプロイフェーズで発生した検証エラーが修正されました。<!--MCLOUD-7572-->
+- ![ 修正アイコン ](../../assets/fix.svg)**修正されたサービスバージョン検証エラー** - [!DNL RabbitMQ]、Elasticsearch、その他のサービスのサービスバージョンを `MAGENTO_CLOUD_RELATIONSHIP` 変数の `type` プロパティに追加しました。 これらのバージョンを `relationships` 変数に追加すると、デプロイフェーズで発生した検証エラーが修正されました。<!--MCLOUD-7572-->
 
 ## v1.2.1
 
@@ -172,7 +179,7 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)**NGINX メモリ消費** - TLS および Web サービスに対する NGINX プロセスによって消費されるメモリを削減しました。<!--MCLOUD-7259-->
 
-- ![ 新規アイコン ](../../assets/new.svg) **Blackfire** - Cloud Docker イメージで、デフォルトでBlackfireの PHP 拡張機能を無効にします。
+- ![ 新規アイコン ](../../assets/new.svg) **Blackfire** - Cloud Docker イメージで、Blackfire PHP 拡張機能をデフォルトで無効にしました。
 
 - ![fix icon](../../assets/fix.svg) **PHP-FPM container**—`WEB_PORT` を `80` から `8080` に変更することにより、PHP-FPM コンテナのヘルスチェックを修正しました。<!--MCLOUD-7232-->
 
@@ -190,13 +197,13 @@ ht-degree: 0%
 
    - ![ 修正アイコン ](../../assets/fix.svg)**データベースコンテナ** - ヘルスチェックコマンドに必要なデータベースパスワードを追加することで、データベースコンテナのヘルスチェックを修正しました。<!--MCLOUD-7122-->
 
-   - ![ 新規アイコン ](../../assets/new.svg) **Elasticsearchコンテナ**
+   - ![ 新規アイコン ](../../assets/new.svg) **Elasticsearch コンテナ**
 
-      - 今後のAdobe Commerce リリースとの互換性のために、Elasticsearch 7.9 がサポートされるようになりました。<!--MCLOUD-7190-->
+      - 今後のElasticsearch リリースとの互換性のために、Adobe Commerce 7.9 がサポートされるようになりました。<!--MCLOUD-7190-->
 
-      - **Elasticsearchプラグイン設定** - `services.yaml` ファイルのElasticsearchプラグイン設定情報を使用して、Cloud Docker for Commerce環境用の `docker-compose.yaml` ファイルを生成できるようになりました。 [Elasticsearchプラグイン ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-plugins).<!--MCLOUD-2789--> を参照
+      - **Elasticsearch プラグイン設定** - `services.yaml` ファイルからElasticsearch プラグイン設定情報を使用して、Commerce環境用の Cloud Docker の `docker-compose.yaml` ファイルを生成できるようになりました。 [Elasticsearch プラグイン ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-plugins).<!--MCLOUD-2789--> を参照
 
-      - **Elasticsearchプラグインのサポート** - `analysis-icu`、`analysis-phonetic`、`analysis-stempel` および `analysis-nori` のElasticsearchプラグインのサポートが追加されました。 `analysis-icu` プラグインと `analysis-phonetic` プラグインがデフォルトでインストールされます。 必要に応じて、`analysis-stempel` と `analysis-nori` プラグインを追加または削除できます。<!--MCLOUD-2789-->
+      - **Elasticsearch プラグインのサポート** - Elasticsearch プラグイン `analysis-icu`、`analysis-phonetic`、`analysis-stempel`、`analysis-nori` のサポートを追加しました。 `analysis-icu` プラグインと `analysis-phonetic` プラグインがデフォルトでインストールされます。 必要に応じて、`analysis-stempel` と `analysis-nori` プラグインを追加または削除できます。<!--MCLOUD-2789-->
 
    - ![ 新しいアイコン ](../../assets/new.svg)**CLI コンテナ**
 
@@ -218,7 +225,7 @@ ht-degree: 0%
 
    - **MailHog 構成**：次の `ece-docker build:compose` コマンド・オプションを使用して、MailHog を無効にし、ポートを指定できるようになりました。`--no-mailhog`、`--mailhog-http-port`、`--mailhog-smtp-port`。 [ メールの設定 ](https://developer.adobe.com/commerce/cloud-tools/docker/configure/#set-up-email) を参照してください。<!--MCLOUD-6898, MCLOUD-6660-->
 
-   - Cloud Docker for Commerce 1.2.0 以降では、Adobeで各パッチバージョンの Docker イメージが提供されるようになり、Docker configuration generator は、最新のバージョンを使用する代わりに、指定されたパッチバージョンで Docker 設定を作成します。 以前は、Docker Configuration Generator は、以前のバージョンでビルドされたCommerce環境用の Cloud Docker を破損する可能性がある最新のパッチバージョンを使用して設定をビルドしていました。<!--MCLOUD-7093-->
+   - Cloud Docker for Commerce 1.2.0 以降では、Adobeは、各パッチバージョンの Docker イメージを提供するようになりました。Docker configuration generator は、最新のバージョンを使用する代わりに、指定されたパッチバージョンで Docker 設定を作成します。 以前は、Docker Configuration Generator は、以前のバージョンでビルドされたCommerce環境用の Cloud Docker を破損する可能性がある最新のパッチバージョンを使用して設定をビルドしていました。<!--MCLOUD-7093-->
 
    - **カスタムの Cloud Docker 設定でカスタムの画像とバージョンを指定** - カスタム Docker コンポーズ設定ファイル（`docker-compose.yaml`）を生成する際に、カスタムの画像とバージョンを指定するオプションを追加して `build:custom:compose` コマンドを更新しました。 [ カスタム Docker Compose 設定の作成 ](https://developer.adobe.com/commerce/cloud-tools/docker/configure/custom-docker-compose/) を参照してください。<!--MCLOUD-7089-->
 
@@ -263,7 +270,7 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)**Adobe CommerceとMagento Open Sourceのデプロイメントのサポート** - Cloud Docker for Commerceを使用して、クラウドインフラストラクチャ上のAdobe Commerceでホストされていないプロジェクトのローカル開発環境をデプロイできるようになりました。<!--MCLOUD-5667-->
 
-- ![ 新しいアイコン ](../../assets/new.svg) **Blackfire.io のサポート** - [ 拡張機能.ioBlackfire](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire/) を使用して自動パフォーマンステストを実行できるようになりました。 [Zilker Technology の Adarsh Manickam による修正 ](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
+- ![ 新しいアイコン ](../../assets/new.svg) **Blackfire.io のサポート** - [Blackfire.io 拡張機能 ](https://developer.adobe.com/commerce/cloud-tools/docker/test/blackfire/) を使用して自動パフォーマンステストを実行できるようになりました。 [Zilker Technology の Adarsh Manickam による修正 ](https://github.com/magento/magento-cloud-docker/pull/202)<!--MCLOUD-5857-->
 
 - ![ 新しいアイコン ](../../assets/new.svg)**コンテナの更新**
 
@@ -287,13 +294,13 @@ ht-degree: 0%
 
    - ![ 修正アイコン ](../../assets/fix.svg)**Node.js** - セキュリティを強化するために、デフォルトの Node.js バージョンをバージョン 8 からバージョン 10 に更新しました。 Node.js バージョン 8 は非推奨で、バグ修正やセキュリティパッチによる更新はなくなりました。 [Zilker Technology の Mohan Elamurugan が提供した修正 ](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
 
-   - ![ 新規アイコン ](../../assets/new.svg) **Elasticsearch**
+   - ![ 新しいアイコン ](../../assets/new.svg) **Elasticsearch**
 
       - Elasticsearch 6.8、7.2、7.5、7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860--> がサポートされるようになりました。
 
-      - Docker コンポーズ設定ファイルを生成する際に ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)[Elasticsearchコンテナ設定をカスタマイズする機能が追加されました。<!--MCLOUD-3059-->
+      - Docker コンポーズ設定ファイルを生成する際に ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)[Elasticsearch コンテナ設定をカスタマイズする機能が追加されました。<!--MCLOUD-3059-->
 
-      - Docker Compose 設定ファイルを生成するためのサービス設定オプションに `--no-es` オプションを追加しました。 Elasticsearchコンテナのインストールをスキップし、代わりに MySQL 検索を使用する場合は、このオプションを使用します。 このオプションは、Adobe Commerce バージョン 2.3.5 以前でのみサポートされています。<!--MCLOUD-3766-->
+      - Docker Compose 設定ファイルを生成するためのサービス設定オプションに `--no-es` オプションを追加しました。 Elasticsearch コンテナのインストールをスキップして MySQL 検索を使用する場合は、このオプションを使用します。 このオプションは、Adobe Commerce バージョン 2.3.5 以前でのみサポートされています。<!--MCLOUD-3766-->
 
    - ![ 新しいアイコン ](../../assets/new.svg)**FPM-XDEBUG コンテナ**—Cloud Docker 環境で PHP をデバッグするために Xdebug をインストールして設定するサービス設定オプションを追加しました。 [Xdebug の設定 ](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/) を参照してください <!--MCLOUD-4098-->。
 
@@ -316,8 +323,8 @@ ht-degree: 0%
 | Redis キャッシュのクリア | `bin/magento-docker flush-redis` |
 | Varnish キャッシュのクリア | `bin/magento-docker flush-varnish` |
 | 既定の Varnish インストールをスキップする | `.vendor/bin/ece-docker build:compose --no-varnish`<!--MCLOUD-2634--> |
-| [Elasticsearchオプションのカスタマイズ ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container) | `.vendor/bin/ece-docker build:compose --es-env-var`<!--MCLOUD-3059--> |
-| [Elasticsearch設定を削除 ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container) | `.vendor/bin/ece-docker build:compose --no-es`<!--MCLOUD-3766--> |
+| [Elasticsearch オプションのカスタマイズ ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container) | `.vendor/bin/ece-docker build:compose --es-env-var`<!--MCLOUD-3059--> |
+| [Elasticsearch設定の削除 ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container) | `.vendor/bin/ece-docker build:compose --no-es`<!--MCLOUD-3766--> |
 | MySQL バージョン 5.6 または 5.7 で DB コンテナを設定する | `./vendor/bin/ece-docker build:compose --db <mysql-version-number> --db-image mysql`<!--MCLOUD-5691--> |
 | カスタムベース URL を指定 | `./vendor/bin/ece-docker build:compose --host=<hostname> --port=<port-number>`<!--MCLOUD-3063--> |
 | [Xdebug 設定用のコンテナの追加 ](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/) | `.vendor/bin/ece-docker build:compose --mode developer --sync-engine native --with-xdebug`<!--MCLOUD-4098--> |
@@ -328,7 +335,7 @@ ht-degree: 0%
 
 - ![ 修正アイコン ](../../assets/fix.svg) 複数の Docker 環境を使用する際に発生することがあったボリューム競合エラーを修正しました。 [Zilker Technology の G Arvind による修正 ](https://github.com/magento/magento-cloud-docker/pull/168)。
 
-- ![fix icon](../../assets/fix.svg) 設定にBlackfire.io が含まれている場合、`ece-docker build:compose` コマンドが失敗する問題を修正しました。 [Zilker Technology の G Arvind 氏により修正が提出されました ](https://github.com/magento/magento-cloud-docker/pull/199). <!--MCLOUD-5797-->
+- ![fix icon](../../assets/fix.svg) 設定にBlackfire.io が含まれている場合に、`ece-docker build:compose` コマンドが失敗する問題を修正しました。 [Zilker Technology の G Arvind 氏により修正が提出されました ](https://github.com/magento/magento-cloud-docker/pull/199). <!--MCLOUD-5797-->
 
 - ![fix icon](../../assets/fix.svg) Cloud Docker for Commerceを使用して複数のパッケージをインストールする際に発生するメモリ不足エラーを防ぐために、PHP CLI イメージ設定を更新しました。 [Zilker Technology の Mohan Elamurugan による修正 ](https://github.com/magento/magento-cloud-docker/pull/197)。*<!--MCLOUD-5818-->
 
@@ -360,7 +367,7 @@ ht-degree: 0%
 
       - ![ 新しいアイコン ](../../assets/new.svg)**自動生成された NGINX 証明書** - Docker 設定ファイルに、Web コンテナ用に NGINX 証明書を自動生成するための設定が含まれるようになりました。<!--MAGECLOUD-4258-->
 
-   - ![new icon](../../assets/new.svg)**New Selenium container**—Selenium Functional Testing Framework （MFTF）を使用したAdobe Commerce アプリケーションテストをサポートするために、[container](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#selenium-container) をMagentoしました。<!--MAGECLOUD-4040-->
+   - ![ 新規アイコン ](../../assets/new.svg)**新規 Selenium コンテナ** - Magento Functional Testing Framework （MFTF）を使用したAdobe Commerce アプリケーションテストをサポートするために、[Selenium コンテナ ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#selenium-container) が追加されました。<!--MAGECLOUD-4040-->
 
    - ![ 新しいアイコン ](../../assets/new.svg) **[!DNL RabbitMQ]バージョンのサポート** - [!DNL RabbitMQ] コンテナ設定を更新して、[!DNL RabbitMQ] バージョン 3.8.<!--MAGECLOUD-4674--> をサポートするようになりました
 
@@ -416,4 +423,4 @@ ht-degree: 0%
 
    - ![ 新規アイコン ](../../assets/new.svg) ローカル Docker 開発環境のデプロイメントプロセスに検証を追加し、クラウド環境設定にデータベースの復号化に必要な暗号化キーが含まれていることを確認しました。 これで、環境設定で暗号化キーの値が指定されていない場合、ログにエラーメッセージが表示されるようになりました。<!--MAGECLOUD-4423-->
 
-   - ![ 新規アイコン ](../../assets/new.svg) ビルドおよびデプロイ処理を続行する前にサービスの準備が整っていることを確認するために、Elasticsearchサービスにコンテナヘルスチェックを追加しました。 ヘルスチェックがエラーを返した場合、コンテナは自動的に再起動します。<!--MAGECLOUD-4456-->
+   - ![ 新規アイコン ](../../assets/new.svg) Elasticsearch サービスにコンテナヘルスチェックを追加して、ビルドおよびデプロイ処理を続行する前にサービスの準備が整っていることを確認しました。 ヘルスチェックがエラーを返した場合、コンテナは自動的に再起動します。<!--MAGECLOUD-4456-->
