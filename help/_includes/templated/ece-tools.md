@@ -1,5 +1,5 @@
 ---
-source-git-commit: 6a686858394e65dfbb665bb76332ee13348dad7e
+source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**バージョン**:2002.2.1
+**Version**: 2002.2.2
 
 このリファレンスには、`ece-tools` のコマンド ライン ツールで使用できる 34 のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `ece-tools list` コマンドを使用して自動生成されます。
@@ -388,7 +388,7 @@ ece-tools run <scenario>...
 ece-tools backup:list
 ```
 
-バックアップ ファイルの一覧を表示します。
+Shows the list of backup files.
 
 ### オプション
 
@@ -409,7 +409,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 #### `--force`, `-f`
 
-バックアップの復元中に既存のファイルを上書き
+Overwrite existing files during restoring a backup
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -508,7 +508,7 @@ ece-tools cloud:config:validate
 ece-tools config:dumpdump
 ```
 
-静的コンテンツのデプロイメントのダンプ設定です。
+Dump configuration for static content deployment.
 
 ### オプション
 
@@ -521,7 +521,7 @@ ece-tools config:dumpdump
 ece-tools cron:disable
 ```
 
-すべてのMagento cron プロセスを無効にして、実行中のすべてのプロセスを終了します。
+すべてのMagento cron プロセスを無効にし、実行中のすべてのプロセスを終了します。
 
 ### オプション
 
@@ -534,7 +534,7 @@ ece-tools cron:disable
 ece-tools cron:enable
 ```
 
-MagentoCron プロセスを有効にします。
+Magento cron プロセスを有効にします。
 
 ### オプション
 
@@ -593,7 +593,7 @@ schema.error.yaml ファイルからdist/error-codes.md ファイルを生成し
 ece-tools dev:git:update-composer
 ```
 
-Git からデプロイメント用に Composer を更新しました。
+Updates composer for deployment from git.
 
 ### オプション
 
@@ -606,13 +606,13 @@ Git からデプロイメント用に Composer を更新しました。
 ece-tools env:config:show [<variable>...]
 ```
 
-エンコードされたクラウド設定環境変数を表示します。
+Display encoded cloud configuration environment variables.
 
 ### 引数
 
 #### `variable`
 
-表示する環境変数、可能なオプション：サービス、ルート、変数
+Environment variables to display, possible options: services,routes,variables
 
 - デフォルト：`[]`
 - 配列
@@ -634,7 +634,7 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 #### `error-code`
 
-エラーコード（渡されなかった場合） コマンドは、前回のデプロイメントからのすべてのエラーに関する情報を表示します
+Error code, if not passed command display info about all errors from the last deployment
 
 ### オプション
 
@@ -667,7 +667,7 @@ ece-tools module:refresh
 ece-tools schema:generate
 ```
 
-スキーマ *.dist ファイルを生成します。
+Generates the schema *.dist file.
 
 ### オプション
 
@@ -693,7 +693,7 @@ ece-tools wizard:ideal-state
 ece-tools wizard:master-slave
 ```
 
-マスター/スレーブ構成を確認します。
+Verifies master-slave configuration.
 
 ### オプション
 
@@ -706,7 +706,7 @@ ece-tools wizard:master-slave
 ece-tools wizard:scd-on-build
 ```
 
-ビルド設定時に SCD を検証します。
+Verifies SCD on build configuration.
 
 ### オプション
 
