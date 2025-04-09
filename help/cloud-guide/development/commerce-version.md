@@ -2,7 +2,8 @@
 title: Commerceのバージョンのアップグレード
 description: クラウドインフラストラクチャプロジェクトでAdobe Commerceのバージョンをアップグレードする方法を説明します。
 feature: Cloud, Upgrade
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -15,7 +16,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 プロジェクトの設定に応じて、アップグレードタスクには次のものが含まれる場合があります。
 
-- 新しいAdobe Commerce バージョンとの互換性を確保するために、MariaDB （MySQL）、OpenSearch、RabbitMQ、Redis などの更新サービスを提供しています。
+- MariaDB(MySQL)、OpenSearch、RabbitMQ、Redis などのサービスを更新して、Adobe Systems Commerce の新しいバージョンとの互換性を確保します。
 - 古い構成管理ファイルを変換します。
 - フックと環境変数の新しい設定で `.magento.app.yaml` ファイルを更新します。
 - サードパーティの拡張機能をサポートされている最新バージョンにアップグレードします。
@@ -42,9 +43,9 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 ## 設定管理
 
-2.1.4 以降や 2.2.x 以降など、Adobe Commerceの以前のバージョンでは、Configuration Management に `config.local.php` ファイルを使用していました。 Adobe Commerce バージョン 2.2.0 以降では、`config.local.php` ファイルと同じように機能する `config.php` ファイルを使用しますが、有効なモジュールの一覧や追加の設定オプションなど、設定の種類が異なります。
+2.1.4 以降から 2.2.x 以降など、以前のバージョンの Adobe Systems Commerce では、構成管理に `config.local.php` ファイルを使用していました。 Adobe Systems Commerce バージョン 2.2.0 以降では、`config.local.php` ファイルとまったく同じように機能する `config.php` ファイルを使用しますが、有効なモジュールのリストと追加の構成オプションを含むさまざまな構成設定があります。
 
-古いバージョンからアップグレードする場合は、新しい `config.php` ファイルを使用するように `config.local.php` ファイルを移行する必要があります。 次の手順を使用して、設定ファイルをバックアップし、作成します。
+古いバージョンからアップグレードする場合は、新しい `config.php` ファイルを使用するように `config.local.php` ファイルを移行する必要があります。構成ファイルをバックアップして作成するには、次の手順を使用します。
 
 **一時 `config.php` ファイルを作成するには**:
 
@@ -64,7 +65,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 ### Zend Framework Composer の依存関係の検証
 
-2.2.x から **2.3.x 以降にアップグレードする場合は** Zend フレームワークの依存関係が `composer.json` ファイルの `autoload` プロパティに追加され、Lamina をサポートしていることを確認してください。 このプラグインは、Laminas プロジェクトに移行された Zend フレームワークの新しい要件をサポートします。 [2}MagentoDevBlog} の ](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)Zend フレームワークの Laminas プロジェクトへの移行 _を参照してください。_
+2.2.x から **2.3.x 以降にアップグレードする場合は** Zend フレームワークの依存関係が `composer.json` ファイルの `autoload` プロパティに追加され、Lamina をサポートしていることを確認してください。 このプラグインは、Laminas プロジェクトに移行された Zend フレームワークの新しい要件をサポートします。 [2}Magento DevBlog} の ](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)Zend フレームワークの Laminas プロジェクトへの移行 _を参照してください。_
 
 **`auto-load:psr-4` 設定を確認するには**:
 
@@ -74,7 +75,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 1. `composer.json` ファイルをテキストエディターで開きます。
 
-1. Zend プラグインマネージャーを実装してコントローラの依存関係を確認するには、`autoload:psr-4` の節を参照してください。
+1. Zend プラグイン マネージャ実装コントローラの依存関係については、 `autoload:psr-4` の節を確認してください。
 
    ```json
     "autoload": {
@@ -87,9 +88,9 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
    }
    ```
 
-1. Zend 依存関係がない場合は、`composer.json` ファイルを更新します。
+1. Zend の依存関係がない場合は、 `composer.json` ファイルを更新してください。
 
-   - `autoload:psr-4` セクションに次の行を追加します。
+   - 次の行を `autoload:psr-4` セクションに追加します。
 
      ```json
      "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
@@ -123,7 +124,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 ### .magento.app.yaml
 
-[.magento.app.yaml](../application/configure-app-yaml.md) ファイルに含まれる値は、インストールしたバージョンで必ず確認してください。これは、アプリケーションのビルド方法や、クラウドインフラストラクチャへのデプロイ方法を制御しているからです。 次の例はバージョン 2.4.7 で、Composer 2.7.2 を使用します。`build: flavor:` プロパティは Composer 2.x には使用されません。[Composer 2 のインストールと使用 ](../application/properties.md#installing-and-using-composer-2) を参照してください。
+[.magento.app.yaml](../application/configure-app-yaml.md) ファイルに含まれる値は、インストールしたバージョンで必ず確認してください。これは、アプリケーションのビルド方法や、クラウドインフラストラクチャへのデプロイ方法を制御しているからです。 次の例はバージョン 2.4.8 で、Composer 2.8.4 を使用します。`build: flavor:` プロパティは Composer 2.x には使用されません。[Composer 2 のインストールと使用 ](../application/properties.md#installing-and-using-composer-2) を参照してください。
 
 **`.magento.app.yaml` ファイルを更新するには**:
 
@@ -134,13 +135,13 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 1. PHP オプションを更新します。
 
    ```yaml
-   type: php:8.3
+   type: php:8.4
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.7.2'
+           composer/composer: '2.8.4'
    ```
 
 1. `hooks` プロパティ `build` および `deploy` コマンドを変更します。
@@ -188,7 +189,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 ### composer.json
 
-アップグレードする前に必ず `composer.json` ファイルの依存関係がAdobe Commerceのバージョンと互換性があることを確認してください。
+アップグレードする前に、 `composer.json` ファイル内の依存関係が Adobe Systems Commerce バージョンと互換性があることを必ず確認してください。
 
 **Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを更新するには**:
 
@@ -260,13 +261,13 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
    vendor/bin/ece-tools db-dump
    ```
 
-   ダンプ操作では、リモート・プロジェクト・ディレクトリに `dump-<timestamp>.sql.gz` アーカイブ・ファイルが作成されます。 [ データベースのバックアップ ](../storage/database-dump.md) を参照してください。
+   dump 操作では、リモートプロジェクトディレクトリに `dump-<timestamp>.sql.gz` アーカイブファイルが作成されます。 「 [データベースの戻る](../storage/database-dump.md)」を参照してください。
 
 ## アプリケーションのアップグレード
 
-アプリケーションをアップグレードする前に、最新のソフトウェアバージョン要件の [ サービスバージョン ](../services/services-yaml.md#service-versions) 情報を確認してください。
+アプリケーションをアップグレードする前に、最新のソフトウェアバージョン要件の [サービスバージョン](../services/services-yaml.md#service-versions) 情報を確認してください。
 
-**アプリケーションのバージョンをアップグレードするには**:
+**アプリケーション バージョンをアップグレードするには**:
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
@@ -319,7 +320,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 1. デプロイメントが完了するまで待ちます。
 
-1. SSH を使用してログインし、バージョンを確認して、統合環境、ステージング環境、実稼動環境でアップグレードを検証します。
+1. 統合、ステージング、または実稼働環境で、SSH を使用してログインし、バージョンを確認し、アップグレードを確認します。
 
    ```bash
    php bin/magento --version
@@ -355,7 +356,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
    git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
    ```
 
-   これにより、モジュールリストと設定を含む、更新された `/app/etc/config.php` ファイルが生成されます。
+   これにより、モジュールリストと構成設定を含む更新された `/app/etc/config.php` ファイルが生成されます。
 
 >[!WARNING]
 >
@@ -363,7 +364,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 ### アップグレード拡張機能
 
-Marketplace または他の会社のサイトでサードパーティの拡張機能およびモジュールページを確認し、クラウドインフラストラクチャでのAdobe CommerceおよびAdobe Commerceのサポートを検証します。 サードパーティの拡張機能とモジュールをアップグレードする必要がある場合、Adobeでは、拡張機能を無効にした新しい統合ブランチで作業することをお勧めします。
+Marketplace または他の会社のサイトでサードパーティの拡張機能およびモジュールページを確認し、クラウドインフラストラクチャでのAdobe CommerceおよびAdobe Commerceのサポートを検証します。 サードパーティの拡張機能およびモジュールをアップグレードする必要がある場合、Adobeでは、拡張機能を無効にした新しい統合ブランチで作業することをお勧めします。
 
 **拡張機能を検証してアップグレードするには**:
 
@@ -377,11 +378,11 @@ Marketplace または他の会社のサイトでサードパーティの拡張�
 
 1. 拡張機能を有効にしてテストします。
 
-1. コードの変更を追加、コミットし、リモートにプッシュします。
+1. 追加、コミットし、コードの変更をリモートにプッシュします。
 
-1. 統合環境でにプッシュしてテストします。
+1. 統合環境にプッシュしてテストします。
 
-1. ステージング環境にプッシュして、実稼動前の環境でテストします。
+1. ステージング環境にプッシュして、実稼働前環境にテストします。
 
 Adobeでは、アップグレードした拡張機能をサイト起動プロセスに含め _実稼動環境_ 以前）をアップグレードすることを強くお勧めします。
 

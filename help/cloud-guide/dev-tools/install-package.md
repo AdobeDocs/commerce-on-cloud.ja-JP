@@ -2,7 +2,8 @@
 title: ECE-Tools を使用するようにプロジェクトをアップグレード
 description: クラウドインフラストラクチャプロジェクトのAdobe Commerceをアップグレードして、ECE-Tools パッケージを使用し、最新の修正点および機能を活用する方法について説明します。
 feature: Cloud, Install
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 164c47e4-c871-41a3-b268-581d426e7a7f
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -43,11 +44,11 @@ Adobe Commerce `2.3.5-p2` をインストールする場合は、`current_versio
 
 最新のメタパッケージ制約は、[`magento-cloud` のテンプレートで常に見つけることができ ](https://github.com/magento/magento-cloud/blob/master/composer.json) す。
 
-次の例では、クラウドインフラストラクチャメタパッケージ上のAdobe Commerceを、現在のバージョン 2.4.7 以上、次のバージョン 2.4.8 以下の任意のバージョンに制限します。
+次の例では、クラウドインフラストラクチャメタパッケージ上のAdobe Commerceを、現在のバージョン 2.4.8 以上、次のバージョン 2.4.9 以下の任意のバージョンに制限します。
 
 ```json
 "require": {
-    "magento/magento-cloud-metapackage": ">=2.4.7 <2.4.8"
+    "magento/magento-cloud-metapackage": ">=2.4.8 <2.4.9"
 },
 ```
 
@@ -60,7 +61,7 @@ Adobe Commerce `2.3.5-p2` をインストールする場合は、`current_versio
 1. `composer.json` ファイルの `magento/magento-cloud-metapackage` バージョン制約を更新します。
 
    ```bash
-   composer require "magento/magento-cloud-metapackage":">=2.4.7 <2.4.8" --no-update
+   composer require "magento/magento-cloud-metapackage":">=2.4.8 <2.4.9" --no-update
    ```
 
 1. メタパッケージを更新します。

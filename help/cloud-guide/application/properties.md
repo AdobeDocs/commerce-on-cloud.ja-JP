@@ -2,7 +2,8 @@
 title: プロパティ
 description: クラウドインフラストラクチャにビルドおよびデプロイする  [!DNL Commerce]  アプリケーションを設定する際には、プロパティリストを参照として使用します。
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -25,7 +26,7 @@ ht-degree: 0%
 | [`name`](#name) | アプリケーション名を定義 | `mymagento` | はい |
 | [`relationships`](#relationships) | マップサービス | サービス：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | 不可 |
 | [`runtime`](#runtime) | Runtime プロパティには、[!DNL Commerce] アプリケーションで必要な拡張機能が含まれています。 | 拡張機能：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | はい |
-| [`type`](#type-and-build) | ベースコンテナ画像の設定 | `php:8.3` | はい |
+| [`type`](#type-and-build) | ベース コンテナ イメージ設定 | `php:8.3` | はい |
 | [`variables`](variables-property.md) | 特定のCommerce バージョンに環境変数を適用する | — | 不可 |
 | [`web`](web-property.md) | 外部リクエストの処理 | — | はい |
 | [`workers`](workers-property.md) | 外部リクエストの処理 | — | はい（web プロパティを使用していない場合） |
@@ -54,7 +55,7 @@ type: php:<version>
 
 ```yaml
 # The toolstack used to build the application.
-type: php:8.3
+type: php:8.4
 build:
     flavor: none
 
@@ -204,9 +205,9 @@ mounts:
 
 - `admin` – 設定を変更し、環境内でアクションを実行できます。_contributor_ および _viewer_ 権限があります。
 - `contributor` - コードをこの環境にプッシュし、環境から分岐できます。_ビューア_ 権限があります。
-- `viewer` – 環境のみを表示できます。
+- `viewer`- 環境のみを表示できます。
 
-デフォルトのユーザーの役割は `contributor` で、_viewer_ 権限のみを持つユーザーからの SSH アクセスを制限しています。 ユーザーの役割を `viewer` に変更して、_viewer_ 権限のみを持つユーザーに対して SSH アクセスを許可できます。
+デフォルトのユーザー役割は `contributor` で、 _閲覧者_ 権限のみを持つユーザーからの SSH アクセスが制限されます。 ユーザーの役割を `viewer` に変更して、_viewer_ 権限のみを持つユーザーに対して SSH アクセスを許可できます。
 
 ```yaml
 access:
