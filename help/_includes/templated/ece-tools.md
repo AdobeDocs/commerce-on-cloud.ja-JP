@@ -1,5 +1,5 @@
 ---
-source-git-commit: 9fbcca6f545276e7afedcdb6e6061a87dd8f2dd9
+source-git-commit: 713008d26d05f05e3e39e33c0d0df766f4dbe0b0
 workflow-type: tm+mt
 source-wordcount: '921'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**Version**: 2002.2.2
+**バージョン**:2002.2.3
 
 このリファレンスには、`ece-tools` のコマンド ライン ツールで使用できる 34 のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `ece-tools list` コマンドを使用して自動生成されます。
@@ -388,7 +388,7 @@ ece-tools run <scenario>...
 ece-tools backup:list
 ```
 
-Shows the list of backup files.
+バックアップ ファイルの一覧を表示します。
 
 ### オプション
 
@@ -409,7 +409,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 #### `--force`, `-f`
 
-Overwrite existing files during restoring a backup
+バックアップの復元中に既存のファイルを上書き
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -508,7 +508,7 @@ ece-tools cloud:config:validate
 ece-tools config:dumpdump
 ```
 
-Dump configuration for static content deployment.
+静的コンテンツのデプロイメントのダンプ設定です。
 
 ### オプション
 
@@ -593,7 +593,7 @@ schema.error.yaml ファイルからdist/error-codes.md ファイルを生成し
 ece-tools dev:git:update-composer
 ```
 
-Updates composer for deployment from git.
+Git からデプロイメント用に Composer を更新しました。
 
 ### オプション
 
@@ -606,13 +606,13 @@ Updates composer for deployment from git.
 ece-tools env:config:show [<variable>...]
 ```
 
-Display encoded cloud configuration environment variables.
+エンコードされたクラウド設定環境変数を表示します。
 
 ### 引数
 
 #### `variable`
 
-Environment variables to display, possible options: services,routes,variables
+表示する環境変数、可能なオプション：サービス、ルート、変数
 
 - デフォルト：`[]`
 - 配列
@@ -634,7 +634,7 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 #### `error-code`
 
-Error code, if not passed command display info about all errors from the last deployment
+エラーコード（渡されなかった場合） コマンドは、前回のデプロイメントからのすべてのエラーに関する情報を表示します
 
 ### オプション
 
@@ -667,7 +667,7 @@ ece-tools module:refresh
 ece-tools schema:generate
 ```
 
-Generates the schema *.dist file.
+スキーマ *.dist ファイルを生成します。
 
 ### オプション
 
@@ -693,7 +693,7 @@ ece-tools wizard:ideal-state
 ece-tools wizard:master-slave
 ```
 
-Verifies master-slave configuration.
+マスター/スレーブ構成を確認します。
 
 ### オプション
 
@@ -706,7 +706,7 @@ Verifies master-slave configuration.
 ece-tools wizard:scd-on-build
 ```
 
-Verifies SCD on build configuration.
+ビルド設定時に SCD を検証します。
 
 ### オプション
 
