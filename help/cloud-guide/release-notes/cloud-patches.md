@@ -2,11 +2,11 @@
 title: Commerceのクラウドパッチ
 description: クラウドパッチパッケージの最新の改善点のリストを確認します。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-02-06T00:00:00Z
+last-substantial-update: 2025-04-15T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
+source-git-commit: cebf68dfc1722a055a6217fa50552116d216d579
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2372'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.4 {#latest}
+## v1.1.5 {#latest}
+
+リリース日：2025 年 4 月 15 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**B2B 1.5.2 の追加されたパッチ**—B2B モジュール 1.5.2 および MariaDB 10.6 を使用した ACP2E-3833 の問題を修正しました <!-- MCLOUD-13605	-->
+
+## v1.1.4
 
 リリース日：2025 年 2 月 13 日（PT）
 
