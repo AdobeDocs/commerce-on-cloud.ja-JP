@@ -2,11 +2,11 @@
 title: ECE-Tools リリースノート
 description: ECE-Tools パッケージの最新の改善点のリストを確認してください。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-09T00:00:00Z
+last-substantial-update: 2024-04-24T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 933e0c1b8bfbafeb6a477ec7bba7dcf7667dc6ec
+source-git-commit: dff5792f310382eb97c9595da08faac90e602126
 workflow-type: tm+mt
-source-wordcount: '3092'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,18 @@ ht-degree: 0%
 
 リリースノートには次のものが含まれます。
 
-- ![新しいアイコン](../../assets/new.svg) 新規機能
-- ![修正アイコン](../../assets/fix.svg) 修正点および改善点
+- ![ 新しいアイコン ](../../assets/new.svg) 新機能
+- ![ 修正アイコン ](../../assets/fix.svg) 修正点および改善点
 
 <!--Add release notes below-->
 
-## v2002.2.3 {#latest}
+## v2002.2.4 {#latest}
+
+リリース日：2025 年 4 月 24 日（PT）
+
+- ![ 修正アイコン ](../../assets/fix.svg)**2.4.4/2.4.5の Opensearch2** - Adobe Commerce バージョン 2.4.4/2.4.5での `opensearch2` のサポートに関連する問題を修正しました。<!-- MCLOUD-13607 -->
+
+## v2002.2.3
 
 リリース日：2025 年 4 月 9 日（PT）
 
@@ -119,8 +125,8 @@ ht-degree: 0%
 
 リリース日：2022 年 9 月 13 日（PT）
 
-- ![new icon](../../assets/new.svg) **Enable`synchronous_replication`**—ECE-Tools は、`MYSQL_USE_SLAVE_CONNECTION` が有効な場合に `app/etc/env.php` ファイルの `synchronous_replication=>true` を設定します。 この設定は、Commerce 2.4.6+ にのみ影響します。 [変数のデプロイ](../environment/variables-deploy.md#mysql_use_slave_connection)の`MYSQL_USE_SLAVE_CONNECTION`変数の説明を参照してください。<!-- MCLOUD-9142 -->
-- ![新しい icon](../../assets/new.svg) **OpenSearch** — 次の Adobe Systems Commerce リリース 2.4.6 の `opensearch` エンジンを設定および設定する機能を追加しました。OpenSearch サービスの [設定 アップを参照してください](../services/opensearch.md)。<!-- MCLOUD-9236 -->
+- ![new icon](../../assets/new.svg) **Enable`synchronous_replication`**—ECE-Tools は、`MYSQL_USE_SLAVE_CONNECTION` が有効な場合に `app/etc/env.php` ファイルの `synchronous_replication=>true` を設定します。 この設定は、Commerce 2.4.6 以降にのみ影響します。 [ 変数のデプロイ ](../environment/variables-deploy.md#mysql_use_slave_connection) の `MYSQL_USE_SLAVE_CONNECTION` 変数の説明を参照してください。<!-- MCLOUD-9142 -->
+- ![ 新規アイコン ](../../assets/new.svg)**OpenSearch** – 次回のAdobe Commerce リリース 2.4.6 用に `opensearch` エンジンを設定および設定する機能が追加されました。[OpenSearch サービスの設定 ](../services/opensearch.md) を参照してください <!-- MCLOUD-9236 -->。
 
 ## v2002.1.11
 
@@ -168,7 +174,7 @@ ht-degree: 0%
 
 - ![fix icon](../../assets/fix.svg) **`symphony/console`** のコンポーザー要件の更新 – `symphony/console` パッケージの ECE-Tools `composer.json` バージョン要件を更新し、`di:compile` コマンドが次のエラーで失敗する問題を修正しました。`Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
-- ![修正アイコン](../../assets/fix.svg) サポート終了のソフトウェアチェック(`eol.yaml`)を更新し、Elasticsearch 7.9.x が含まれるようになりました。<!--MCLOUD-7938-->
+- ![fix icon](../../assets/fix.svg) 提供終了のソフトウェアチェック（`eol.yaml`）が更新され、Elasticsearch 7.9.x が含まれるようになりました。<!--MCLOUD-7938-->
 
 ## v2002.1.6
 
@@ -220,11 +226,11 @@ ht-degree: 0%
 
 ## v2002.1.3
 
-リリース日: 2020 年 11 月 9 日
+リリース日：2020 年 11 月 9 日（PT）
 
 **インフラストラクチャの更新**—
 
-- ![新しいアイコン](../../assets/new.svg) ビルドステージでスタティック内容がデプロイに設定されている場合の読み取り専用 `pub/static` ディレクトリのECEツールサポートを追加しました。<!--MC-37699-->
+- ![ 新規アイコン ](../../assets/new.svg) ビルドステージで静的コンテンツがデプロイされるように設定されている場合に、読み取り専用の `pub/static` ディレクトリが ECE ツールでサポートされるようになりました。<!--MC-37699-->
 
 - ![ 新しいアイコン ](../../assets/new.svg) 今後のAdobe Commerce リリースとの互換性のために、Elasticsearch 7.9 および Redis 6 のサポートを追加。<!--MCLOUD-7191-->
 
@@ -264,13 +270,13 @@ ht-degree: 0%
 
 - ![ 新規アイコン ](../../assets/new.svg) ビルド、デプロイ、デプロイ後処理にエラーチェックを追加し、既存のチェックを改善しました。
 
-   - エラー コード 2026 - ビルド フェーズ中に生成されたデータをマウントされたディレクトリに復元失敗
+   - エラーコード 2026 - ビルドフェーズで生成された一部のデータを、マウントされたディレクトリに復元できませんでした
 
-   - エラー コード 3004:バックアップ ファイルを作成できない
+   - エラーコード 3004 - バックアップファイルを作成できない
 
-   - エラー コード 102 - `env.php` ファイルが書き込み可能でない場合に発生する問題のチェックを追加しました。 <!--MCLOUD-6221-->
+   - エラーコード 102 - `env.php` ファイルが書き込み可能でない場合に発生する問題に対する追加チェックを追加しました <!--MCLOUD-6221-->
 
-- ![ 新規アイコン ](../../assets/new.svg) **QUALITY_PATCHES** 環境変数を追加し、デプロイメントプロセス中に適用する 1 つ以上の品質向上パッチを指定しました。 [ビルド変数](../environment/variables-build.md#quality_patches)を参照してください。<!--MCLOUD-6375-->
+- ![ 新規アイコン ](../../assets/new.svg) **QUALITY_PATCHES** 環境変数を追加し、デプロイメントプロセス中に適用する 1 つ以上の品質向上パッチを指定しました。 [ ビルド変数 ](../environment/variables-build.md#quality_patches) を参照してください。<!--MCLOUD-6375-->
 
 ## v2002.1.1
 
@@ -331,17 +337,17 @@ ht-degree: 0%
      commit the updated composer.json and composer.lock files.
      ```
 
-     [Zend フレームワークの依存関係を確認する](../development/commerce-version.md#verify-zend-framework-composer-dependencies)を参照してください。<!--MCLOUD-4094-->
+     [Zend フレームワークの依存関係の検証 ](../development/commerce-version.md#verify-zend-framework-composer-dependencies) を参照してください <!--MCLOUD-4094-->。
 
-   - ![新しいアイコン](../../assets/new.svg) **`env.php`ファイルとデータの検証を追加しました** - インストールおよびアップグレード プロセス中に`env.php` ファイルとデータのチェックを追加しました。<!--MCLOUD-5991-->
+   - ![ 新規アイコン ](../../assets/new.svg)**ファイルおよびデータの検証 `env.php` 追加** - インストールおよびアップグレードプロセス中に `env.php` ファイルおよびデータのチェックを追加しました。<!--MCLOUD-5991-->
 
-      - `env.php` ファイルがインストールに存在せず、`crypt/key`値が `.magento.app.yaml` ファイルで指定されていない場合、デプロイメントは以下の通知で失敗します。
+      - `env.php` ファイルがインストールに存在せず、`crypt/key` の値が `.magento.app.yaml` ファイルで指定されていない場合、デプロイメントは次の通知で失敗します。
 
         ```text
         The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
         ```
 
-      - インストールに `env.php` ファイルが含まれていない場合、または構成にキャッシュ・タイプが 1 つしか含まれていない場合は、アップグレード・プロセス中に `cron:enable` コマンドが実行され、すべての `cache_types`でファイルがリストアされます。 次の通知がログに追加されます。
+      - インストールに `env.php` ファイルが含まれていない場合、または構成にキャッシュ タイプが 1 つしか含まれていない場合は、アップグレード プロセス中に `cron:enable` コマンドが実行され、すべての `cache_types` を使用してファイルがリストアされます。 次の通知がログに追加されます。
 
         ```text
         Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
@@ -394,9 +400,9 @@ ht-degree: 0%
 
    - ![ 修正アイコン ](../../assets/fix.svg)Elastic Suite 設定プロセスの問題を修正して、`_merge` オプションを使用せずに `ELASTICSUITE_CONFIGURATION` デプロイ変数を設定した場合に、デフォルト設定が期待どおりに上書きされるようにしました。<!--MAGECLOUD-4388-->
 
-- ![新しいアイコン](../../assets/new.svg) **CLI コマンドの更新**—
+- ![ 新しいアイコン ](../../assets/new.svg)**CLI コマンドの更新**—
 
-   - ![新しいアイコン](../../assets/new.svg) **新規cron コマンド** - `cron:disable` コマンドと `cron:enable` コマンドを使用して、クラウドインフラストラクチャー 環境 の Adobe Systems Commerce で cron 処理を手動で管理できるようになりました。 disable コマンドを使用して、すべてのアクティブな cron プロセスを停止し、すべての cron ジョブを無効にします。 準備ができたら、enable コマンドを使用して cron ジョブを再度有効にします。 [cron ジョブの無効化 ](../application/crons-property.md#disable-cron-jobs) を参照してください。
+   - ![ 新規アイコン ](../../assets/new.svg)**新規 cron コマンド** - `cron:disable` および `cron:enable` コマンドを使用して、クラウドインフラストラクチャ環境のAdobe Commerceで cron 処理を手動で管理できるようになりました。 disable コマンドを使用して、アクティブな cron プロセスをすべて停止し、すべての cron ジョブを無効にします。 準備が整ったら enable コマンドを使用して、cron ジョブを再度有効にします。 [cron ジョブの無効化 ](../application/crons-property.md#disable-cron-jobs) を参照してください。
 
    - ![ 新しいアイコン ](../../assets/new.svg)**エラー・レポート作成機能の向上** - ECE ツールの処理中に発生する CLI コマンドのエラーに関するログ作成機能が向上しました。<!--MAGECLOUD-4849-->
 
