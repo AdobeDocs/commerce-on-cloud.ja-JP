@@ -2,9 +2,10 @@
 title: キャッシュ設定のカスタマイズ
 description: Fastly サービスのセットアップが完了した後に、キャッシュ設定を確認しカスタマイズする方法を説明します。
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 
 ステージング環境と実稼動環境で Fastly サービスを設定およびテストした後は、キャッシュ設定を確認し、カスタマイズします。 例えば、設定を更新して、TLS が HTTP 要求を Fastly にリダイレクトするように強制する、パージ設定を更新する、開発時にサイトをパスワードで保護するために基本認証を有効にするなどを行うことができます。
 
-次の節では、キャッシュ設定の概要と設定方法について説明します。 使用可能な設定オプションについて詳しくは、[Fastly CDN Magento2 モジュール ](https://github.com/fastly/fastly-magento2/tree/master/Documentation) ドキュメントを参照してください。
+次の節では、キャッシュ設定の概要と設定方法について説明します。 使用可能な設定オプションについて詳しくは、[Fastly CDN Module for Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation) ドキュメントを参照してください。
 
 ## TLS を強制
 
-Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2 _用 [Fastly CDN モジュール ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) ドキュメントの Fastly_ Force TLS ガイドを参照してください。
+Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2 _ドキュメントの_ Fastly CDN モジュール ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly [Force TLS ガイド）を参照してください。
 
 >[!NOTE]
 >
@@ -30,6 +31,8 @@ Fastly サービス設定では、管理者への HTTPS リクエストに対し
 3 分を超える一括アクションを完了するには、_管理パスのタイムアウト_ 値_を変更して 503 エラーを防ぎます。
 
 >[!NOTE]
+>
+>**ストア**/**設定**/**詳細**/**管理者**/**管理者のベース URL** の **カスタム管理パス** フィールドにカスタム管理パスエンドポイントを指定した場合は、その環境の [ADMIN_URL 変数 ](../environment/variables-admin.md#change-the-admin-url) を同じ値に設定する必要もあります。 設定が異なる場合、タイムアウトは機能しません。
 >
 >Fastly UI で管理者以外の Fastly タイムアウトパラメーターを拡張するには、[ 長いジョブのタイムアウトを増やす ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md) を参照してください。
 
@@ -51,7 +54,7 @@ Fastly は、`app/etc/env.php` 設定ファイルから VCL ファイルを生�
 
 ## パージオプションを設定
 
-Fastly では、Magentoカテゴリ、商品アセット、コンテンツをパージするオプションなど、複数のタイプのパージオプションを商品キャッシュ管理ページで提供しています。 有効にすると、Fastly はこれらのキャッシュを自動的にパージするイベントを監視します。 パージオプションを無効にした場合は、キャッシュ管理ページで更新を完了した後に、Fastly キャッシュを手動でパージできます。
+Fastly では、Magento Cache Management ページに、商品カテゴリ、商品アセット、コンテンツをパージするオプションなど、複数のタイプのパージオプションを提供しています。 有効にすると、Fastly はこれらのキャッシュを自動的にパージするイベントを監視します。 パージオプションを無効にした場合は、キャッシュ管理ページで更新を完了した後に、Fastly キャッシュを手動でパージできます。
 
 パージのオプションには次のものがあります。
 
@@ -218,4 +221,4 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
    メンテナンスモードを有効にすると、`maint_allowlist` ACL の IP アドレスからのリクエストを除くすべてのトラフィックがブロックされます。 `maint_allowlist` を更新して、ACL の IP アドレスを変更できます。
 
-   設定手順について詳しくは、Fastly CDN for Maintenance 2 モジュールドキュメントの [Magentoモードガイド ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) を参照してください。
+   設定手順について詳しくは、Fastly CDN for Magento 2 モジュールドキュメントの [ メンテナンスモードガイド ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) を参照してください。
