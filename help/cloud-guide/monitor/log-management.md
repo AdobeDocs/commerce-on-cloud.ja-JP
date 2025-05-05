@@ -56,4 +56,4 @@ New Relic ログアプリケーションを使用して、集計ログデータ�
 >
 >_保存済みのビュー_ ドロップダウンからクエリビューを保存できます。 「**[!UICONTROL Create new]**」をクリックし、名前を入力してオプションを選択し、「**[!UICONTROL Save view]**」をクリックします。
 >
->[4}New Relic ドキュメント ](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) サイトの [ ログ管理の基本を学ぶ ](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/) および {New Relic query language の概要 _を参照してください。_
+>[4&rbrace;New Relic ドキュメント ](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) サイトの [ ログ管理の基本を学ぶ ](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/) および &lbrace;New Relic query language の概要 _を参照してください。_

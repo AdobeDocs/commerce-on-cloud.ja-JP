@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020 年 6 月 5 日（PT）より前にプロビジョニングされたプロジェクトには、複数の小規模な統合環境がありました。 テストおよび開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストします。 詳しくは、_Adobe Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) の [Integration Environment リクエスト_ を参照してください。
+>2020 年 6 月 5 日（PT）より前にプロビジョニングされたプロジェクトには、複数の小規模な統合環境がありました。 テストおよび開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストします。 詳しくは、_Adobe Commerce ヘルプセンター [&#128279;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) の Integration Environment リクエスト_ を参照してください。
 
 ## 結合オプション {#merge-options}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 「`_merge`」オプションを次のいずれかに設定します。
 
-- `true` – 設定済みのサービス値を環境変数の値とマージ **** マージ）します。
+- `true` – 設定済みのサービス値を環境変数の値とマージ **&#x200B;**&#x200B;マージ）します。
 - `false` – 環境変数値を使用して設定されたサービス値を **上書き** します。
 
 ## プライベートリポジトリ {#private-repository}
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->一部の **Pro プロジェクト** では、`routes.yaml` ファイルのルート設定と `.magento.app.yaml` ファイルの cron 設定を更新するために、サポートチケットが必要です。 Adobe環境で YAML 設定ファイルを更新およびテストしたあと、変更内容をステージング環境にデプロイすることをお勧めします。 再デプロイ後に変更がステージングサイトに適用されず、関連するエラーメッセージがログに存在しない場合は、**必須**[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、試みた設定変更に関する説明が表示されます。 更新された YAML 設定ファイルをチケットに含めます。
+>一部の **Pro プロジェクト** では、`routes.yaml` ファイルのルート設定と `.magento.app.yaml` ファイルの cron 設定を更新するために、サポートチケットが必要です。 Adobe環境で YAML 設定ファイルを更新およびテストしたあと、変更内容をステージング環境にデプロイすることをお勧めします。 再デプロイ後に変更がステージングサイトに適用されず、関連するエラーメッセージがログに存在しない場合は、**必須**&#x200B;[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、試みた設定変更に関する説明が表示されます。 更新された YAML 設定ファイルをチケットに含めます。
 
 ## プロサービスサポート {#pro-update-service}
 
@@ -106,7 +106,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->スタックしたデプロイメントのヘルプについては、_Adobe Commerce ヘルプセンターの {0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)Commerce デプロイメントのトラブルシューティングツール_ を参照してください。[
+>スタックしたデプロイメントのヘルプについては、_Adobe Commerce ヘルプセンターの &lbrace;0[&#128279;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)Commerce デプロイメントのトラブルシューティングツール_ を参照してください。
 
 ## ECE-Tools のアップデート {#ece-tools-package}
 

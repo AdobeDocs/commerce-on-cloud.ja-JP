@@ -23,7 +23,7 @@ ht-degree: 0%
 
 **Commerce Marketplaceからモジュールの Composer 名を取得するには**:
 
-1. コンポーネントの購入に使用したユーザー名とパスワードを使用して ](https://marketplace.magento.com)[Commerce Marketplaceにログインします。
+1. コンポーネントの購入に使用したユーザー名とパスワードを使用して [&#128279;](https://marketplace.magento.com)Commerce Marketplaceにログインします。
 
 1. 右上隅でユーザー名をクリックし、「**マイプロファイル**」を選択します。
 

@@ -63,7 +63,7 @@ ht-degree: 0%
 
    ![Fastly バイパス VCL スニペットの作成 ](/help/assets/cdn/fastly-create-bypass-snippet.png)
 
-1. ページのリロード後、「**Fastly 設定 *セクションの**Fastly に VCL をアップロード* をクリックします。
+1. ページのリロード後、「**Fastly 設定 *セクションの**&#x200B;Fastly に VCL をアップロード* をクリックします。
 
 1. アップロードが完了したら、ページ上部の通知に従ってキャッシュを更新します。
 

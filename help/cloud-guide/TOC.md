@@ -67,7 +67,7 @@ ht-degree: 7%
    + [認証キー](development/authentication-keys.md)
    + [CLI ブランチ管理](development/cli-branches.md)
    + [安全な接続](development/secure-connections.md)
-   + {#deploy} のデプロイ
+   + のデプロイ{#deploy}
       + [デプロイメントプロセス](deploy/process.md)
       + [最適化](deploy/optimization.md)
       + [ベストプラクティス](deploy/best-practices.md)
@@ -145,7 +145,7 @@ ht-degree: 7%
       + [エラーページとメンテナンスページのカスタマイズ](cdn/fastly-custom-response.md)
    + [Web アプリケーションファイアウォール](cdn/fastly-waf-service.md)
    + [画像の最適化](cdn/fastly-image-optimization.md)
-   + VCL {#custom-vcl-snippets} を使用したカスタマイズ
+   + VCL を使用したカスタマイズ {#custom-vcl-snippets}
       + [基本を学ぶ](cdn/fastly-vcl-custom-snippets.md)
       + [CMS バックエンドへのリクエストの再ルーティング](cdn/fastly-vcl-wordpress.md)
       + [リファラルスパムをブロック](cdn/fastly-vcl-badreferer.md)
@@ -163,16 +163,16 @@ ht-degree: 7%
    + [サイトマップ・検索エンジンロボット](store/robots-sitemap.md)
    + [PayPal の支払い方法](store/paypal.md)
    + [設定管理](store/store-settings.md)
-+ サイト {#launch} を起動
++ サイト を起動 {#launch}
    + [概要](launch/overview.md)
    + [Launch チェックリスト](launch/checklist.md)
    + [ローンチ手順](launch/steps.md)
-+ サイト {#monitor} の監視
++ サイト の監視 {#monitor}
    + [パフォーマンス](monitor/performance.md)
    + New Relic サービス {#new-relic}
       + [New Relicの概要](monitor/new-relic-service.md)
       + [アカウントとユーザーの管理](monitor/account-management.md)
-      + パフォーマンス {#investigate} の調査
+      + パフォーマンス の調査 {#investigate}
          + [ポリシー、アラート、ワークフロー](monitor/investigate-performance.md)
          + [データ取り込み](monitor/ingest-data.md)
          + [デプロイメントの追跡](monitor/track-deployments.md)

@@ -81,7 +81,7 @@ ht-degree: 0%
 
    - [SSH](../development/secure-connections.md) を使用して、実稼動環境の 3 つのノードすべてに接続できることを確認します。
 
-   - インデクサーが _スケジュールに従って更新_ に設定されていることを確認します。 _拡張機能開発者ガイド ](https://developer.adobe.com/commerce/php/development/components/indexing/) の [ インデックスモード_ を参照してください。
+   - インデクサーが _スケジュールに従って更新_ に設定されていることを確認します。 _拡張機能開発者ガイド [&#128279;](https://developer.adobe.com/commerce/php/development/components/indexing/) の  インデックスモード_ を参照してください。
 
    - 実稼動コードで環境固有の変数を更新し、サービスの可用性と互換性を確認し、その他の必要な設定変更を行って、環境を準備します。
 

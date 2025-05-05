@@ -68,7 +68,7 @@ Composer は、プロジェクトに必要なライブラリおよび依存関�
 
 Cloud Docker for Commerce ツールを使用して、クラウドインフラストラクチャ上のAdobe Commerceの実稼動環境およびローカル開発環境をエミュレートできます。 Cloud Docker for Commerceでは、PHP と Composer をローカルにインストールする必要はありません。
 
-- Adobe Developer サイトでの ](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)0}Cloud Docker とのローカル開発[
+- Adobe Developer サイトでの [&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)0&rbrace;Cloud Docker とのローカル開発
 - [Docker アーキテクチャと一般的なコマンド](../dev-tools/cloud-docker.md)
 - [Cloud Docker リリースノート](../release-notes/cloud-docker.md)
 

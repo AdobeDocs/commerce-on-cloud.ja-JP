@@ -101,7 +101,7 @@ ht-degree: 0%
 
      >[!WARNING]
      >
-     >Adobe Commerce on cloud infrastructure のお客様がAdobe Commerce 2.3.2 にアップグレードする前に ](https://support.magento.com/hc/en-us/articles/360000913794#submit-ticket)Adobe Commerce サポートチケットを送信 [ して、プロ実稼動環境とステージング環境の libsona パッケージをアップグレードする必要があります。現在、スターター環境をAdobe Commerce 2.3.2 にアップグレードすることはできません。
+     >Adobe Commerce on cloud infrastructure のお客様がAdobe Commerce 2.3.2 にアップグレードする前に [&#128279;](https://support.magento.com/hc/en-us/articles/360000913794#submit-ticket)Adobe Commerce サポートチケットを送信  して、プロ実稼動環境とステージング環境の libsona パッケージをアップグレードする必要があります。現在、スターター環境をAdobe Commerce 2.3.2 にアップグレードすることはできません。
 
    - ![fix icon](../../assets/fix.svg) すべての Docker イメージに `analysis-icu` プラグインと `analysis-phonetic` Elasticsearchプラグインを追加しました。<!-- MAGECLOUD-3446 -->
 
@@ -289,7 +289,7 @@ ht-degree: 0%
 
 - ![ 修正アイコン ](../../assets/fix.svg) 設定した場合に、デプロイ後のフェーズの開始が妨げられる cron プロセスに関する問題を修正しました。 これで、デプロイ後のフックを有効にした場合、デプロイ後のフェーズの開始時に、cron プロセスが再び有効になります。<!-- MAGECLOUD-2862 -->
 
-- ![fix icon](../../assets/fix.svg) カスタムデータベース設定を指定した場合に、Adobe Commerceを正常にインストールできない問題を修正しました。 以前は、[DATABASE_CONFIGURATIONMAGENTO変数 ](../environment/variables-deploy.md#database_configuration) でカスタマイズされた接続情報を指定した場合でも ](../environment/variables-cloud.md) インストールプロセスは [ENVIRONMENT_CLOUD_RELATIONSHIP 変数のデータベース設定を使用していました。<!--MAGECLOUD-2736-->
+- ![fix icon](../../assets/fix.svg) カスタムデータベース設定を指定した場合に、Adobe Commerceを正常にインストールできない問題を修正しました。 以前は、[DATABASE_CONFIGURATIONMAGENTO変数 ](../environment/variables-deploy.md#database_configuration) でカスタマイズされた接続情報を指定した場合でも [&#128279;](../environment/variables-cloud.md) インストールプロセスは ENVIRONMENT_CLOUD_RELATIONSHIP 変数のデータベース設定を使用していました。<!--MAGECLOUD-2736-->
 
 - ![ 修正アイコン ](../../assets/fix.svg)`config:dump` コマンドを修正して、`config.php` ファイルの `system` セクションに各 web サイトのロケールが含まれるようにしました。<!--MAGECLOUD-2740-->
 

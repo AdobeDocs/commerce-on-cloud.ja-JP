@@ -65,7 +65,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 ### Zend Framework Composer の依存関係の検証
 
-2.2.x から **2.3.x 以降にアップグレードする場合は** Zend フレームワークの依存関係が `composer.json` ファイルの `autoload` プロパティに追加され、Lamina をサポートしていることを確認してください。 このプラグインは、Laminas プロジェクトに移行された Zend フレームワークの新しい要件をサポートします。 [2}Magento DevBlog} の ](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)Zend フレームワークの Laminas プロジェクトへの移行 _を参照してください。_
+2.2.x から **2.3.x 以降にアップグレードする場合は** Zend フレームワークの依存関係が `composer.json` ファイルの `autoload` プロパティに追加され、Lamina をサポートしていることを確認してください。 このプラグインは、Laminas プロジェクトに移行された Zend フレームワークの新しい要件をサポートします。 [2&rbrace;Magento DevBlog&rbrace; の ](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)Zend フレームワークの Laminas プロジェクトへの移行 _を参照してください。_
 
 **`auto-load:psr-4` 設定を確認するには**:
 

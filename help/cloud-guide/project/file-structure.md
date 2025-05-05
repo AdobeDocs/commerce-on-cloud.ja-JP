@@ -80,7 +80,7 @@ git add <path/filename> -f
    }
    ```
 
-1. 基本テンプレート用に設計された `.gitignore` ファイルを追加します。 例えば、バージョン 2.2.6 テンプレートの `.gitignore` ファイルが必要な場合は、バージョン 2.2.6](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) ファイルの [.gitignore を参照として使用します。
+1. 基本テンプレート用に設計された `.gitignore` ファイルを追加します。 例えば、バージョン 2.2.6 テンプレートの `.gitignore` ファイルが必要な場合は、バージョン 2.2.6[&#128279;](https://github.com/magento/magento-cloud/blob/2.2.6/.gitignore) ファイルの .gitignore を参照として使用します。
 
 1. Git キャッシュをクリアします。
 

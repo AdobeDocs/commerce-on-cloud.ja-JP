@@ -39,7 +39,7 @@ ht-degree: 0%
 
 **[!DNL Cloud Console]** を使用して変数を設定するには：
 
-1. _[!DNL Cloud Console]_で、プロジェクトナビゲーションの右側にある「設定」アイコンをクリックします。
+1. _[!DNL Cloud Console]_&#x200B;で、プロジェクトナビゲーションの右側にある「設定」アイコンをクリックします。
 
    ![ プロジェクトの設定 ](../../assets/icon-configure.png){width="36"}
 

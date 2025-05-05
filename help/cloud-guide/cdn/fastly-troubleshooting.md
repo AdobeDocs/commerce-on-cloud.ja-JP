@@ -258,7 +258,7 @@ Fastly VCL がアップロードされていない場合（`Fastly-Magento-VCL-U
 
 `X-Cache` ヘッダーが `MISS, MISS` で、`HIT` が含まれていない場合は、`curl` コマンドを再度実行し、ページが最近キャッシュからパージされていないことを確認してください。
 
-同じ結果が得られる場合は、[`curl` のコマンドを使用し ](#check-live-site-through-fastly)[response ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
+同じ結果が得られる場合は、[`curl` のコマンドを使用し ](#check-live-site-through-fastly) [response ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
 
 - `Pragma` is `cache`
 - `X-Magento-Tags` が存在する
@@ -284,7 +284,7 @@ Fastly VCL がアップロードされていない場合（`Fastly-Magento-VCL-U
 
    - 一度に 1 つの拡張機能を有効にし、設定を保存して、Adobe Commerce キャッシュをフラッシュします。
 
-   - [`curl` のコマンドを実行して ](#check-live-site-through-fastly)[ 応答ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
+   - [`curl` のコマンドを実行して ](#check-live-site-through-fastly) [ 応答ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
 
    各拡張機能に対して、このプロセスを繰り返します。 Fastly 応答ヘッダーが表示されなくなった場合は、Fastly で問題を引き起こしている拡張機能を特定しました。
 

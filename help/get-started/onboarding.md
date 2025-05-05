@@ -48,7 +48,7 @@ Adobeがクラウドインフラストラクチャサブスクリプションで
 >
 > 新しい [!DNL Cloud Console] を開き、プロジェクトと環境のアクティビティを表示します。
 >
->**次の手順**: [Cl[!DNL ]Oud コンソールにログイン ](cloud-console.md)
+>**次の手順**: [ClOud コンソールにログイン ](cloud-console.md)
 
 <!-- link definitions -->
 

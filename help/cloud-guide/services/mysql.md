@@ -13,7 +13,7 @@ ht-degree: 1%
 
 `mysql` サービスは、[MariaDB](https://mariadb.com/) バージョン 10.2 から 10.4 に基づいて永続的なデータストレージを提供し、[XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) ストレージエンジンをサポートし、MySQL 5.6 と 5.7 の機能を再実装しました。
 
-MariaDB 10.4 でのインデックス再作成は、他の MariaDB または MySQL バージョンに比べて時間がかかります。 『 _パフォーマンスのベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers) ガイドの [ インデクサー_ を参照してください。
+MariaDB 10.4 でのインデックス再作成は、他の MariaDB または MySQL バージョンに比べて時間がかかります。 『 _パフォーマンスのベストプラクティス [&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers) ガイドの  インデクサー_ を参照してください。
 
 >[!WARNING]
 >

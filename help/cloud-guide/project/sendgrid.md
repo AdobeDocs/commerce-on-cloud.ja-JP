@@ -28,7 +28,7 @@ SendGrid SMTP プロキシは、受信メールを受信するための汎用的
 
 Cloud Console またはコマンドラインから、各環境の送信メールを有効または無効にすることができます。
 
-デフォルトでは、実稼動環境およびステージング環境では、送信メールが有効になっています。 ただし、[ コマンドライン ](outgoing-emails.md#enable-emails-in-the-cli)[!UICONTROL Outgoing emails] たは [Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console) を使用して `enable_smtp` プロパティを設定するまで、環境設定で無効と表示される場合があります。 統合およびステージング環境で送信メールを有効にして、クラウドプロジェクトのユーザーに対して二要素認証またはパスワードリセットのメールを送信できます。 [ テスト用メールの設定 ](outgoing-emails.md) を参照してください。
+デフォルトでは、実稼動環境およびステージング環境では、送信メールが有効になっています。 ただし、[ コマンドライン ](outgoing-emails.md#enable-emails-in-the-cli) [!UICONTROL Outgoing emails] たは [Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console) を使用して `enable_smtp` プロパティを設定するまで、環境設定で無効と表示される場合があります。 統合およびステージング環境で送信メールを有効にして、クラウドプロジェクトのユーザーに対して二要素認証またはパスワードリセットのメールを送信できます。 [ テスト用メールの設定 ](outgoing-emails.md) を参照してください。
 
 実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
 
@@ -62,7 +62,7 @@ SendGrid が実稼動環境またはステージング環境からユーザー�
 
 >[!TIP]
 >
->必ず **[!UICONTROLSトラストメールアドレス]** を適切なドメインで設定してくださ **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 ドメイン認証は、送信者のメールアドレスに対して実行されます。 デフォルト設定（`example.com`）が設定されている場合、`example.com` からのメールは Sendgrid によってブロックされます。
+>必ず **[!UICONTROL Sトラストメールアドレス]** を適切なドメインで設定してくださ **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 ドメイン認証は、送信者のメールアドレスに対して実行されます。 デフォルト設定（`example.com`）が設定されている場合、`example.com` からのメールは Sendgrid によってブロックされます。
 
 **ドメイン認証を有効にするには**:
 
@@ -117,7 +117,7 @@ dig CNAME s2._domainkey.domain_name
 
 トランザクションメールしきい値は、非実稼動環境から 1 か月に 12,000 通のメールなど、特定の期間内に Pro 環境から送信できるトランザクションメールメッセージの数を参照します。 しきい値は、スパムの送信と、メールの評判を損なう可能性のあるメールの送信を防ぐように設計されています。
 
-送信者評判スコアが 95% を超える限り、実稼動環境で送信できるメールの数にハードリミットはありません。 評判は、バウンスメールまたは却下されたメールの数と、DNS ベースのスパムレジストリによってドメインが潜在的なスパムソースとしてフラグ設定されているかどうかによって影響を受けます。 [2}Commerce サポートナレッジベース ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) の「Adobe Commerceで SendGrid のクレジットを超えてもメールが送信されない _を参照してください。_
+送信者評判スコアが 95% を超える限り、実稼動環境で送信できるメールの数にハードリミットはありません。 評判は、バウンスメールまたは却下されたメールの数と、DNS ベースのスパムレジストリによってドメインが潜在的なスパムソースとしてフラグ設定されているかどうかによって影響を受けます。 [2&rbrace;Commerce サポートナレッジベース ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) の「Adobe Commerceで SendGrid のクレジットを超えてもメールが送信されない _を参照してください。_
 
 **最大クレジットを超えたかどうかを確認するには**:
 

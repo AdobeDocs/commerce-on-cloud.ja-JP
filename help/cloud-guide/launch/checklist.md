@@ -90,7 +90,7 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：管理者からベース URL を更新することもできます。 [2}Adobe Commerce ストアと購入エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) の {URL のストア _を参照してください。_
+   **注意**：管理者からベース URL を更新することもできます。 [2&rbrace;Adobe Commerce ストアと購入エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) の &lbrace;URL のストア _を参照してください。_
 
 1. サイトが更新されるまで数分待ちます。
 

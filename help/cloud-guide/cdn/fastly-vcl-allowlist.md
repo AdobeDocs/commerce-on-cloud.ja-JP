@@ -36,7 +36,7 @@ Edge ACL は、サイトへのアクセスを管理するための IP アドレ�
 
 1. **ストア**/設定/**設定**/**詳細**/**システム** をクリックします。
 
-1. **フルページキャッシュ**/**Fastly 設定**/**4}Edge ACL} を展開します。**
+1. **フルページキャッシュ**/**Fastly 設定**/**4&rbrace;Edge ACL&rbrace; を展開します。**
 
 1. ACL コンテナを作成します。
 
@@ -90,7 +90,7 @@ Edge ACL は、サイトへのアクセスを管理するための IP アドレ�
 
 環境のコードを確認して更新した後、次のいずれかの方法を使用して、カスタム VCL スニペットを Fastly サービス設定に追加します。
 
-- [ カスタム VCL スニペットを管理者から追加します ](#add-the-custom-vcl-snippet)。 管理者にアクセスできる場合は、この方法をお勧めします。 （Magento 2 バージョン 1.2.58](fastly-configuration.md#upgrade) 以降には [Fastly CDN モジュールが必要です）。
+- [ カスタム VCL スニペットを管理者から追加します ](#add-the-custom-vcl-snippet)。 管理者にアクセスできる場合は、この方法をお勧めします。 （Magento 2 バージョン 1.2.58[&#128279;](fastly-configuration.md#upgrade) 以降には Fastly CDN モジュールが必要です）。
 
 - JSON コードの例をファイル（例：`allowlist.json`）に保存して、[Fastly API を使用してアップロード ](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api) します。 管理者にアクセスできない場合は、この方法を使用します。
 

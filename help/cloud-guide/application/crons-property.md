@@ -15,7 +15,7 @@ Adobe Commerceは、`crons` プロパティを使用して、繰り返しアク�
 
 Adobeでは、`crons` を [ ファイルシステムのオーナー ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) として実行することをお勧めします。 `crons` を `root` または Web サーバーユーザーとして実行 _ない_ でください。
 
-この設定は、複数のデフォルト cron ジョブを持つAdobe Commerceのオンプレミスデプロイメントとは異なります。 _設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html) の [cron ジョブの設定_ を参照してください。
+この設定は、複数のデフォルト cron ジョブを持つAdobe Commerceのオンプレミスデプロイメントとは異なります。 _設定ガイド [&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html) の cron ジョブの設定_ を参照してください。
 
 ## cron ジョブの設定
 

@@ -146,7 +146,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. _アクセス_ ビューで、「**[!UICONTROL Add]**」をクリックします。
 
-1. _[!UICONTROL Add User]_フォームに入力します。
+1. _[!UICONTROL Add User]_&#x200B;フォームに入力します。
 
    - ユーザーのメールアドレスを入力します。
 

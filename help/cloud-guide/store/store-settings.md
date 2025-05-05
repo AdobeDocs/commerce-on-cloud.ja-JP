@@ -36,7 +36,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->パイプラインデプロイメントのオーバーライドスキームについて詳しくは、[](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html) 設定ガイド _設定の管理_ を参照してください。
+>パイプラインデプロイメントのオーバーライドスキームについて詳しくは、[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html) 設定ガイド _設定の管理_ を参照してください。
 
 同じ設定が複数の場所で設定されている場合、アプリケーションは次の設定階層に基づいて、環境に適用する値を決定します。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ### 機密データ
 
-`bin/magento app:config:dump` コマンドを使用すると、機密性の高い設定がすべて `app/etc/env.php` ファイルに書き出されます。 CLI コマンドを使用して機密性の高い値を設定できます：`bin/magento config:sensitive:set`。 [2}Commerce PHP Extensions](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/) ガイドの {Sensitive and environment-specific settings _を参照して、コンフィギュレーション設定を機密またはシステム固有として指定する方法を確認してください。_
+`bin/magento app:config:dump` コマンドを使用すると、機密性の高い設定がすべて `app/etc/env.php` ファイルに書き出されます。 CLI コマンドを使用して機密性の高い値を設定できます：`bin/magento config:sensitive:set`。 [2&rbrace;Commerce PHP Extensions](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/) ガイドの &lbrace;Sensitive and environment-specific settings _を参照して、コンフィギュレーション設定を機密またはシステム固有として指定する方法を確認してください。_
 
 _設定ガイド_ の [ 機密またはシステム固有の設定 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html) のリストを参照してください。
 

@@ -158,7 +158,7 @@ sFTP の設定時には、SSH アクセス環境のコマンドから次の情�
 **Pro ステージング環境および実稼動環境** の場合、環境に SSH アクセスできない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、sFTP アクセスおよび特定のフォルダー（`pub/media` など）にアクセスするためのマウントポイントをリクエストする必要があります。
 
 >[!NOTE]
->ステージング環境および実稼動環境で、sFTP 接続が **クラウドプロジェクトに追加**[ する必要がない _汎用_ ユーザー用の場合は、](../project/user-access.md) 公開 **キーを添付した [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)** する必要があります。 **秘密の SSH キーを入力しないでください。**
+>ステージング環境および実稼動環境で、sFTP 接続が **クラウドプロジェクトに追加**&#x200B;[ する必要がない _汎用_ ユーザー用の場合は、](../project/user-access.md) 公開 **キーを添付した [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)** する必要があります。 **秘密の SSH キーを入力しないでください。**
 
 ## SSH トンネリング
 

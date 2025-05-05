@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->クラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、`routes.yaml` ファイルに多数の非正規表現リダイレクトや書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが 32 KB 以上の場合は、非正規表現のリダイレクトと書き換えを Fastly にオフロードします。 [2}Adobe Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html) の Nginx （ルート）ではなく Fastly への非正規表現リダイレクトのオフロード _を参照してください。_
+>クラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、`routes.yaml` ファイルに多数の非正規表現リダイレクトや書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが 32 KB 以上の場合は、非正規表現のリダイレクトと書き換えを Fastly にオフロードします。 [2&rbrace;Adobe Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html) の Nginx （ルート）ではなく Fastly への非正規表現リダイレクトのオフロード _を参照してください。_
 
 ## ルート全体リダイレクト
 

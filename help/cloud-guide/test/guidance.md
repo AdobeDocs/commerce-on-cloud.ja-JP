@@ -16,7 +16,7 @@ ht-degree: 0%
 
 開発中は、クラウドインフラストラクチャプロジェクト上のAdobe Commerceでエンドツーエンドの機能テストを実行することが重要です。 Docker 環境で機能テストを実行する方法については、次のガイダンスを参照してください。
 
-- **アプリケーションテスト** - Cloud Docker 環境でのアプリケーションテストには ](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)2}Magento機能テストフレームワーク（MFTF）を使用します。[
+- **アプリケーションテスト** - Cloud Docker 環境でのアプリケーションテストには [&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)2&rbrace;Magento機能テストフレームワーク（MFTF）を使用します。
 
 - **コードテスト** - クラウドパッケージリポジトリへの投稿を目的としたコードを検証するには、[PHP 用 Codeception テストフレームワーク ](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/) を使用します。
 

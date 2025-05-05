@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [Message Queue Framework （MQF） ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) は、[ モジュール ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
 
-MQF は、メッセージの送受信に使用できるスケーラブルなプラットフォームを提供するメッセージング ブローカーとして ](https://www.rabbitmq.com/)0}RabbitMQ} を使用します。 [また、未配信メッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ] は、Advanced Message Queuing Protocol （AMQP） 0.9.1 仕様に基づいています。
+MQF は、メッセージの送受信に使用できるスケーラブルなプラットフォームを提供するメッセージング ブローカーとして [&#128279;](https://www.rabbitmq.com/)0&rbrace;RabbitMQ&rbrace; を使用します。 また、未配信メッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ] は、Advanced Message Queuing Protocol （AMQP） 0.9.1 仕様に基づいています。
 
 >[!WARNING]
 >

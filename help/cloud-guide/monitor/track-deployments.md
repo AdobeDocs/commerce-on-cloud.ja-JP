@@ -15,13 +15,13 @@ ht-degree: 0%
 
 New Relic _変更を追跡_ 機能を有効にすると、クラウドインフラストラクチャプロジェクト上のCommerceのデプロイメントイベントを監視できます。
 
-Deployments データ収集は、CPU、メモリ、応答時間など、デプロイメントの変更が全体的なパフォーマンスに与える影響を分析するのに役立ちます。 [2}New Relic ドキュメント ](https://docs.newrelic.com/docs/change-tracking/change-tracking-graphql/) の NerdGraph を使用した変更のトラッキング _を参照してください。_
+Deployments データ収集は、CPU、メモリ、応答時間など、デプロイメントの変更が全体的なパフォーマンスに与える影響を分析するのに役立ちます。 [2&rbrace;New Relic ドキュメント ](https://docs.newrelic.com/docs/change-tracking/change-tracking-graphql/) の NerdGraph を使用した変更のトラッキング _を参照してください。_
 
 >[!PREREQUISITES]
 >
 >- `NR_API_URL`:New Relic API エンドポイント（この場合は NerdGraph API URL `https://api.newrelic.com/graphql`）
->- `NR_API_KEY`: ユーザーキーを作成します。_New Relic](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys) ドキュメントの [New Relic API キー_ を参照してください。
->- `NR_APP_GUID`:New Relicにデータをレポートするエンティティには、一意の ID （GUID）があります。 例えば、ステージング環境でを有効にするには、New Relicの _ステージングエンティティ GUID_ を使用してステージング環境をクラウド変数に `NR_APP_GUID` 定します。 [4}New Relic _ドキュメントの [New Relic エンティティについて学ぶ ](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/) および ](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)NerdGraph チュートリアル：エンティティデータを表示する } を参照してください。_
+>- `NR_API_KEY`: ユーザーキーを作成します。_New Relic[&#128279;](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys) ドキュメントの New Relic API キー_ を参照してください。
+>- `NR_APP_GUID`:New Relicにデータをレポートするエンティティには、一意の ID （GUID）があります。 例えば、ステージング環境でを有効にするには、New Relicの _ステージングエンティティ GUID_ を使用してステージング環境をクラウド変数に `NR_APP_GUID` 定します。 [&#128279;](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)4&rbrace;New Relic _ドキュメントの [New Relic エンティティについて学ぶ ](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/) および NerdGraph チュートリアル：エンティティデータを表示する &rbrace; を参照してください。_
 
 ## デプロイメントの追跡を有効にする
 

@@ -123,7 +123,7 @@ Adobeでは、`master` から `staging` というブランチを作成するこ�
 
 - [OpenSearch](../services/opensearch.md)
 
-ステージング環境と実稼動環境では、CDN とキャッシュに Fastly を使用します。 最新バージョンの Fastly CDN 拡張機能は、プロジェクトの初期プロビジョニング時にインストールされます。 拡張機能をアップグレードすると、最新のバグ修正と改善を取得できます。 [Magento 2 用 Fastly CDN モジュール ](https://github.com/fastly/fastly-magento2) を参照してください。 また、パフォーマンス監視のために ](../monitor/account-management.md)0}New Relic} にアクセスできます。[
+ステージング環境と実稼動環境では、CDN とキャッシュに Fastly を使用します。 最新バージョンの Fastly CDN 拡張機能は、プロジェクトの初期プロビジョニング時にインストールされます。 拡張機能をアップグレードすると、最新のバグ修正と改善を取得できます。 [Magento 2 用 Fastly CDN モジュール ](https://github.com/fastly/fastly-magento2) を参照してください。 また、パフォーマンス監視のために [&#128279;](../monitor/account-management.md)0&rbrace;New Relic&rbrace; にアクセスできます。
 
 次のファイルを使用して、実装環境で使用するソフトウェアバージョンを設定します。
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->PrivateLink は、データベースやファイル転送などの非 HTTP （S）統合用の接続を保護するのに最適です。 アプリケーションをAdobe Commerce API と統合する場合は、「Adobe Developer App Builderの API メッシュ ](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/) の [AdobeAPI メッシュを作成する方法 _を参照してください_。
+>PrivateLink は、データベースやファイル転送などの非 HTTP （S）統合用の接続を保護するのに最適です。 アプリケーションをAdobe Commerce API と統合する場合は、「Adobe Developer App Builderの API メッシュ [&#128279;](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/) の AdobeAPI メッシュを作成する方法 _を参照してください_。
 
 ## 機能とサポート
 
@@ -118,7 +118,7 @@ PrivateLink の有効化に必要な次のデータを収集します。
 
 1. **Adobe** が接続リクエストを承認します。
 
-1. 接続リクエストの承認後、VPCとAdobe VPCの間の **お客様**[ 接続を検証 ](#test-vpc-endpoint-service-connection) します。
+1. 接続リクエストの承認後、VPCとAdobe VPCの間の **お客様**&#x200B;[ 接続を検証 ](#test-vpc-endpoint-service-connection) します。
 
 1. 双方向接続を有効にするための追加手順：
 
