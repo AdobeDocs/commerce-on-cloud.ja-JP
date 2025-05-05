@@ -78,7 +78,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Pro ステージング環境および Pro 実稼動環境では、固定ファイル名のログファイルに対して、自動ログローテーション、圧縮、削除が有効になります。 各ログ ファイル タイプには、回転パターンと有効期間があります。
 >環境のログのローテーションと圧縮ログの存続期間について詳しくは、`/etc/logrotate.conf` と `/etc/logrotate.d/<various>` を参照してください。
->ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
+>ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
 
 >[!TIP]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス ](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) を参照してください。
+ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス ](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja) を参照してください。
 
 ## アプリケーションログ
 

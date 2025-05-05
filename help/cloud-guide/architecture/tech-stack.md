@@ -17,7 +17,7 @@ ht-degree: 0%
 
 1. [**クラウドインフラストラクチャー**](pro-architecture.md)：クラウドインフラストラクチャー上のAdobe Commerce Pro プロジェクトのインフラストラクチャ as a Service （IaaS）基盤として、Amazon Web Services（AWS）またはMicrosoft Azure を選択します。
 
-   Adobeでは、仮想コンピューティングリソース（vCPU）の使用状況を定期的に分析し、リソースを自動的に割り当てて、長期使用を最適化し、vCPU の 1 日の最大許容量を超えるリスクを軽減します。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて [ 一時的なアップサイズをリクエスト ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html) する必要があります。
+   Adobeでは、仮想コンピューティングリソース（vCPU）の使用状況を定期的に分析し、リソースを自動的に割り当てて、長期使用を最適化し、vCPU の 1 日の最大許容量を超えるリスクを軽減します。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて [ 一時的なアップサイズをリクエスト ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ja) する必要があります。
 
 1. [**サービスとしてのプラットフォーム**](cloud-architecture.md)：クラウドインフラストラクチャプロジェクト上の各Adobe Commerceは、サービスを開発、テスト、統合するためのサービスとしてのプラットフォーム（PaaS）統合環境を提供します。
 1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce on cloud infrastructure は、PHP、MySQL （MariaDB）、Redis、[!DNL RabbitMQ]、およびサポートされている検索エンジン技術を含む、プロビジョニング済みのインフラストラクチャを提供します。

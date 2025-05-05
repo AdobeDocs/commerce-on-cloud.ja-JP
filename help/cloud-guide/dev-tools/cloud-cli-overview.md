@@ -16,12 +16,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >これはローカルツールであり、この方法を使用してクラウド環境（読み取り専用）にインストールすることはできません。 **デプロイメントワークフロー** を通じて、クラウド環境にモジュールのみをインストールできます
->- [Pro デプロイメントワークフロー ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [ スターターデプロイメントのワークフロー ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Pro デプロイメントワークフロー ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [ スターターデプロイメントのワークフロー ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **`magento-cloud` CLI をインストールするには**:
 
-1. _ローカルワークステーション_ で、クラウドプロジェクトを複製するディレクトリと、[ ファイルシステムの所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) が _書き込み_ アクセス権を持つディレクトリに変更します。
+1. _ローカルワークステーション_ で、クラウドプロジェクトを複製するディレクトリと、[ ファイルシステムの所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) が _書き込み_ アクセス権を持つディレクトリに変更します。
 
 1. `magento-cloud` CLI をインストールします。
 
@@ -134,7 +134,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
-1. [ ファイルシステム所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) に切り替えます。
+1. [ ファイルシステム所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) に切り替えます。
 
 1. プロジェクトにログインします。
 

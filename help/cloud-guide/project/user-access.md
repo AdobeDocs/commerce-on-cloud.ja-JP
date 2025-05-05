@@ -231,7 +231,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >TFA のアカウントへのアクセス権を失い、復旧コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポート チケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して TFA アプリケーションをリセットする必要があります。
+     >TFA のアカウントへのアクセス権を失い、復旧コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポート チケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して TFA アプリケーションをリセットする必要があります。
 
 1. TFA 設定が完了したら、「**保存**」をクリックしてアカウントを更新します。
 

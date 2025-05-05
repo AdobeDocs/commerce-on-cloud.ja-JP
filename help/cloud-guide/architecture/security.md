@@ -66,9 +66,9 @@ Adobeでは、セキュリティの脆弱性に関してコアアプリケーシ
 - OWASPZAP
 - andSqlMap
 
-すべてのコードベースは、これらのツールで隔週でスキャンされます。 お客様には、ダイレクトメール、アプリケーション内の通知、および [ セキュリティセンター ](https://helpx.adobe.com/security.html) を通じて、セキュリティパッチが通知されます。
+すべてのコードベースは、これらのツールで隔週でスキャンされます。 お客様には、ダイレクトメール、アプリケーション内の通知、および [ セキュリティセンター ](https://helpx.adobe.com/jp/security.html) を通じて、セキュリティパッチが通知されます。
 
-お客様は、PCI ガイドラインに従って、リリース後 30 日以内に、これらのパッチをカスタマイズされたアプリケーションに適用する必要があります。 また、Adobeでは [ セキュリティスキャンツール ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) を提供しています。このツールを使用すると、マーチャントはサイトを定期的に監視し、既知のセキュリティリスク、マルウェアおよび不正アクセスに関する更新を受け取ることができます。 セキュリティスキャンツールは無料のサービスで、あらゆるバージョンのAdobe Commerceで実行できます。
+お客様は、PCI ガイドラインに従って、リリース後 30 日以内に、これらのパッチをカスタマイズされたアプリケーションに適用する必要があります。 また、Adobeでは [ セキュリティスキャンツール ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-scan) を提供しています。このツールを使用すると、マーチャントはサイトを定期的に監視し、既知のセキュリティリスク、マルウェアおよび不正アクセスに関する更新を受け取ることができます。 セキュリティスキャンツールは無料のサービスで、あらゆるバージョンのAdobe Commerceで実行できます。
 
 セキュリティ研究者が脆弱性を特定して報告することを奨励するために、Adobe Commerceには、内部テストに加えて [ バグバウンティプログラム ](https://hackerone.com/magento) があります。 さらに、必要に応じて、顧客が独自にレビューするために、アプリケーションの完全なソースコードを提供します。
 
@@ -108,7 +108,7 @@ GDPR では、収集された個人を特定できる情報（名前、人種、
 
 >[!NOTE]
 >
->このページでは、GDPR で考慮すべき事項の一般的な概要を説明します。 Adobe Commerceでの個人情報の保存方法について詳しくは、_[セキュリティおよびコンプライアンスガイド ](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_ を参照してください。 自社のビジネスが法的義務にどのように準拠すべきかを判断するには、法務担当者に問い合わせるか、[ 公式テキスト ](https://eur-lex.europa.eu/eli/reg/2016/679/oj) を参照してください。
+>このページでは、GDPR で考慮すべき事項の一般的な概要を説明します。 Adobe Commerceでの個人情報の保存方法について詳しくは、_[セキュリティおよびコンプライアンスガイド ](https://experienceleague.adobe.com/ja/docs/commerce-operations/security-and-compliance/overview)_ を参照してください。 自社のビジネスが法的義務にどのように準拠すべきかを判断するには、法務担当者に問い合わせるか、[ 公式テキスト ](https://eur-lex.europa.eu/eli/reg/2016/679/oj) を参照してください。
 
 ## バックアップ
 

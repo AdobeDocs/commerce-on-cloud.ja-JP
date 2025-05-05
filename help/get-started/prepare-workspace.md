@@ -27,7 +27,7 @@ Commerceを初めて使用する場合でも、クラウドインフラストラ
 
 - **Adobe Commerce暗号化キー**
 
-  既存のシステムのみをインポートする場合は、データベースのアクセスとデータを保護するために使用する暗号化キーを取得します。 このキーについて詳しくは、[ 暗号化キーに関する問題の解決 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html) を参照してください。
+  既存のシステムのみをインポートする場合は、データベースのアクセスとデータを保護するために使用する暗号化キーを取得します。 このキーについて詳しくは、[ 暗号化キーに関する問題の解決 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=ja) を参照してください。
 
 ## デベロッパーツール
 

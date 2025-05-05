@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->クラウドプロジェクトでは、MFA はデフォルトでは有効になっていません。 Adobe Commerce on cloud infrastructure プロジェクトのアカウント所有者は、有効にするために [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。 MFA が有効な場合、プロジェクト環境に SSH でアクセスするには、すべてのユーザーがAdobe Commerce on cloud infrastructure アカウントで二要素認証（TFA）を有効にする必要があります。
+>クラウドプロジェクトでは、MFA はデフォルトでは有効になっていません。 Adobe Commerce on cloud infrastructure プロジェクトのアカウント所有者は、有効にするために [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。 MFA が有効な場合、プロジェクト環境に SSH でアクセスするには、すべてのユーザーがAdobe Commerce on cloud infrastructure アカウントで二要素認証（TFA）を有効にする必要があります。
 
 ## SSH アクセス用の証明書
 

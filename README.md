@@ -9,8 +9,8 @@ ht-degree: 0%
 
 このサイトには、クラウドインフラストラクチャー上のCommerceに関する最新の開発者向けドキュメントが含まれています。
 
-- [ クラウドインフラストラクチャー上のCommerceガイド ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
-- クラウドインフラストラクチャー上での [Commerceの概要 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
+- [ クラウドインフラストラクチャー上のCommerceガイド ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ja)
+- クラウドインフラストラクチャー上での [Commerceの概要 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ja)
 
 ## Adobe オープン Source行動規範
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ### 軽微な変更
 
-軽微な更新を行う場合は、記事を開いて **編集** リンクをクリックすると、記事の GitHub ソースが表示されます。 GitHub UI を使用して更新を行います。 一般的な [Adobeドキュメントのコントリビューターガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) を参照してください。
+軽微な更新を行う場合は、記事を開いて **編集** リンクをクリックすると、記事の GitHub ソースが表示されます。 GitHub UI を使用して更新を行います。 一般的な [Adobeドキュメントのコントリビューターガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja) を参照してください。
 
 このリポジトリのドキュメントおよびコード例について投稿者が送信した軽微な修正や説明は、Adobeの利用規約の対象となります。
 
@@ -35,7 +35,7 @@ Adobeプロダクトチームのテクニカルライター、プログラムマ
 
 コミュニティのコントリビューターは、基本的な編集を行う場合は GitHub UI を使用し、大きな変更を加える場合はリポジトリをフォークします。
 
-詳しくは、[Adobeドキュメント投稿者ガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) を参照してください。
+詳しくは、[Adobeドキュメント投稿者ガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja) を参照してください。
 
 ## Markdown
 

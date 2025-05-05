@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ## 拡張機能のインストール
 
-Adobeでは、実装に拡張機能を追加する際に、開発ブランチで作業することをお勧めします。 拡張機能をインストールすると、拡張機能名（`<VendorName>_<ComponentName>`）が [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html) ファイルに自動的に挿入されます。 ファイルを直接編集する必要はありません。
+Adobeでは、実装に拡張機能を追加する際に、開発ブランチで作業することをお勧めします。 拡張機能をインストールすると、拡張機能名（`<VendorName>_<ComponentName>`）が [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=ja) ファイルに自動的に挿入されます。 ファイルを直接編集する必要はありません。
 
 **拡張機能をインストールするには**:
 
@@ -155,7 +155,7 @@ Composer を使用して拡張機能を追加すると、デプロイメント �
 
 ## 拡張機能のアップグレード
 
-続行する前に、拡張機能の Composer 名とバージョンが必要です。 また、拡張機能がプロジェクトおよびAdobe Commerceのバージョンと互換性があることを確認します。 特に、開始する前に [ 必要な PHP のバージョンを確認してください ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)。
+続行する前に、拡張機能の Composer 名とバージョンが必要です。 また、拡張機能がプロジェクトおよびAdobe Commerceのバージョンと互換性があることを確認します。 特に、開始する前に [ 必要な PHP のバージョンを確認してください ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)。
 
 **拡張機能を更新するには**:
 
@@ -189,4 +189,4 @@ Composer を使用して拡張機能を追加すると、デプロイメント �
    git push origin <branch-names>
    ```
 
-エラーが発生した場合は、[ コンポーネントの障害からの回復 ](../deploy/recover-failed-deployment.md) を参照してください。 Adobe Commerceでの拡張機能の使用について詳しくは、『 _管理者ガイド_ 』の [ 拡張機能 ](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html) を参照してください。
+エラーが発生した場合は、[ コンポーネントの障害からの回復 ](../deploy/recover-failed-deployment.md) を参照してください。 Adobe Commerceでの拡張機能の使用について詳しくは、『 _管理者ガイド_ 』の [ 拡張機能 ](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=ja) を参照してください。

@@ -131,7 +131,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->プロ実稼動環境およびステージング環境の場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズは特定の間隔でのみ増加するので、現在のディスク容量の使用状況に応じて、サポートはディスク容量の割り当てを最小 10 GB 増やすことをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配分することはできません。 ファイルストレージ領域を追加するには、MySQL に割り当てるディスク領域を減らします。
+>プロ実稼動環境およびステージング環境の場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズは特定の間隔でのみ増加するので、現在のディスク容量の使用状況に応じて、サポートはディスク容量の割り当てを最小 10 GB 増やすことをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配分することはできません。 ファイルストレージ領域を追加するには、MySQL に割り当てるディスク領域を減らします。
 
 ### アプリケーションのディスク容量
 
@@ -187,7 +187,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク容量の監視
 
-Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスクスペースやその他のパフォーマンスインジケーターを監視できます。 詳しくは、[ 管理アラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。 詳しいガイダンスについては、[ データベースパフォーマンスの問題を解決するためのベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html) を参照してください。
+Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスクスペースやその他のパフォーマンスインジケーターを監視できます。 詳しくは、[ 管理アラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。 詳しいガイダンスについては、[ データベースパフォーマンスの問題を解決するためのベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ja) を参照してください。
 
 ## スペースが残っていません
 

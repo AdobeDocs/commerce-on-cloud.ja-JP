@@ -264,6 +264,6 @@ Elastic Suite を設定する際に、`ELASTICSUITE_CONFIGURATION` のデプロ�
 
 Elasticsearchの問題のトラブルシューティングについては、以下のAdobe Commerce サポートの記事を参照してください。
 
-- [Elasticsearch 5 が設定されましたが、「Fielddata が無効です…」エラーで検索ページが読み込まれません ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html)
+- [Elasticsearch 5 が設定されましたが、「Fielddata が無効です…」エラーで検索ページが読み込まれません ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=ja)
 - [Adobe CommerceのElasticsearchのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch インデックスの状態は `yellow` または `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html) です
+- [Elasticsearch インデックスの状態は `yellow` または `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=ja) です

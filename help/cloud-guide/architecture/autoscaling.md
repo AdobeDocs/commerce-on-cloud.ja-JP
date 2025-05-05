@@ -58,14 +58,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## 自動スケーリングを有効にする
 
-クラウドインフラストラクチャプロジェクトでAdobe Commerceの自動スケーリングを有効または無効にするには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) します。 チケットで次の理由を選択します。
+クラウドインフラストラクチャプロジェクトでAdobe Commerceの自動スケーリングを有効または無効にするには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) します。 チケットで次の理由を選択します。
 
 - **問い合わせ理由**：インフラストラクチャ変更リクエスト
 - **Adobe Commerce インフラストラクチャへの問い合わせ理由**：その他のインフラストラクチャの変更リクエスト
 
 >[!IMPORTANT]
 >
->自動スケーリング機能は、予期しないイベントをキャプチャします。 Adobe自動スケーリングが有効になっている場合でも、今後のイベントを想定している場合は、引き続き [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) することをお勧めします。
+>自動スケーリング機能は、予期しないイベントをキャプチャします。 Adobe自動スケーリングが有効になっている場合でも、今後のイベントを想定している場合は、引き続き [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) することをお勧めします。
 
 ### 負荷テスト
 

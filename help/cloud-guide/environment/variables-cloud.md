@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[[!DNL Cloud Console]](../project/overview.md) を使用して環境変数を [ 設定を上書き ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) に追加するには、次の例のように、変数名の前に `env:` を付ける必要があります。
+>[[!DNL Cloud Console]](../project/overview.md) を使用して環境変数を [ 設定を上書き ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=ja) に追加するには、次の例のように、変数名の前に `env:` を付ける必要があります。
 >
 >![ 環境変数の例 ](../../assets/set-env-variable-ui.png)
 

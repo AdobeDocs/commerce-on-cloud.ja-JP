@@ -35,7 +35,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->ストアビューをサイトベース URL に追加する場合、複数のディレクトリを作成する必要はありません。 _設定ガイド_ の [ ベース URL へのストアコードの追加 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) を参照してください。
+>ストアビューをサイトベース URL に追加する場合、複数のディレクトリを作成する必要はありません。 _設定ガイド_ の [ ベース URL へのストアコードの追加 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ja) を参照してください。
 
 ## ドメインの追加
 
@@ -45,11 +45,11 @@ https://store.com/second/
 
 - ステージングおよび実稼動用
 
-  新しいドメインを Fastly に追加する、[ ドメインの管理 ](../cdn/fastly-custom-cache-configuration.md#manage-domains) を参照する、またはサポートチケットを開いてサポートをリクエストします。 また、クラスターに追加する新しいドメインをリクエストするには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
+  新しいドメインを Fastly に追加する、[ ドメインの管理 ](../cdn/fastly-custom-cache-configuration.md#manage-domains) を参照する、またはサポートチケットを開いてサポートをリクエストします。 また、クラスターに追加する新しいドメインをリクエストするには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
 
 - スターター実稼動用のみ
 
-  新しいドメインを Fastly に追加する方法については、[ ドメインの管理 ](../cdn/fastly-custom-cache-configuration.md#manage-domains) または [Adobe Commerce サポートチケットの送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を参照してください。 さらに、次の手順で新しいドメインを **ドメイン** タブに追加する必要があり [!DNL Cloud Console] す。`https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  新しいドメインを Fastly に追加する方法については、[ ドメインの管理 ](../cdn/fastly-custom-cache-configuration.md#manage-domains) または [Adobe Commerce サポートチケットの送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を参照してください。 さらに、次の手順で新しいドメインを **ドメイン** タブに追加する必要があり [!DNL Cloud Console] す。`https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## ローカルインストールの設定
 
@@ -212,7 +212,7 @@ routes 設定で URL の処理方法を定義する場合、`.magento.app.yaml` 
 
 ### Web サイト、ストア、ストアビューの設定
 
-_管理 UI_ で、Adobe Commerce **Web サイト**、**ストア**、**ストアビュー** を設定します。 [ 設定ガイド _の「管理者での複数の web サイト、ストア、ストア表示の設定 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) を参照してください_。
+_管理 UI_ で、Adobe Commerce **Web サイト**、**ストア**、**ストアビュー** を設定します。 [ 設定ガイド _の「管理者での複数の web サイト、ストア、ストア表示の設定 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ja) を参照してください_。
 
 ローカルインストールを設定する際には、管理者が web サイト、ストア、ストアビューと同じ名前とコードを使用することが重要です。 これらの値は、`magento-vars.php` ファイルを更新する際に必要になります。
 
@@ -352,4 +352,4 @@ Adobeでは、実稼動環境にプッシュする前に、ステージング環
 
 <!-- link definitions -->
 
-[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html
+[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=ja

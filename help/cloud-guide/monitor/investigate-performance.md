@@ -30,7 +30,7 @@ _APM とサービス_ ページで、「**概要**」を選択して、アプリ
 
 >[!TIP]
 >
->このデータを使用してアプリケーションのパフォーマンスの問題をトラブルシューティングする方法について詳しくは、_Adobe Commerce ヘルプセンター [ 「New Relicを使用したパフォーマンスのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html)」を参照してください_
+>このデータを使用してアプリケーションのパフォーマンスの問題をトラブルシューティングする方法について詳しくは、_Adobe Commerce ヘルプセンター [ 「New Relicを使用したパフォーマンスのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=ja)」を参照してください_
 
 ## 管理されたアラートによるパフォーマンスの監視
 
@@ -46,7 +46,7 @@ Adobeでは、パフォーマンス指標を追跡するための _Adobe Commerc
 | MariaDB クエリの読み込み | NRI | プロ |
 | Redis メモリ | NRI | プロ |
 
-サイトインフラストラクチャまたはアプリケーションの状態がアラートしきい値をトリガーすると、New Relicからアラート通知が送信されるので、問題にプロアクティブに対処できます。 アラートしきい値の詳細と、アラートをトリガーした問題を解決するためのトラブルシューティング手順については、_Adobe Commerce ヘルプセンター_ にある [Adobe Commerceの管理アラート ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) を参照してください。
+サイトインフラストラクチャまたはアプリケーションの状態がアラートしきい値をトリガーすると、New Relicからアラート通知が送信されるので、問題にプロアクティブに対処できます。 アラートしきい値の詳細と、アラートをトリガーした問題を解決するためのトラブルシューティング手順については、_Adobe Commerce ヘルプセンター_ にある [Adobe Commerceの管理アラート ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=ja) を参照してください。
 
 >[!TIP]
 >
@@ -76,7 +76,7 @@ Adobeでは、パフォーマンス指標を追跡するための _Adobe Commerc
 
      >[!NOTE]
      >
-     >_Adobe Commerceの管理アラート_ ポリシーを使用できない場合は、_Adobe Commerce ヘルプセンター [ の ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html)Adobe Commerceの管理アラート_ を参照してください。
+     >_Adobe Commerceの管理アラート_ ポリシーを使用できない場合は、_Adobe Commerce ヘルプセンター [ の ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=ja)Adobe Commerceの管理アラート_ を参照してください。
 
 1. 「**[!UICONTROL Alert conditions]**」タブをクリックして、ポリシーで定義されたアラート条件を確認します。
 

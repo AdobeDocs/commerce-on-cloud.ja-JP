@@ -167,7 +167,7 @@ TLS 経由ですべてのページを提供します。 この設定では、次
       upstream: "mymagento:http"
   ```
 
-- ステージング環境と実稼動環境の場合は、管理 UI から「[Fastly で TLS を強制 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html)」オプションを有効にします。 このオプションを使用すると、Fastly は HTTPS へのリダイレクトを処理するので、`routes.yaml` 設定を更新する必要はありません。
+- ステージング環境と実稼動環境の場合は、管理 UI から「[Fastly で TLS を強制 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ja)」オプションを有効にします。 このオプションを使用すると、Fastly は HTTPS へのリダイレクトを処理するので、`routes.yaml` 設定を更新する必要はありません。
 
 ## ルートオプション
 

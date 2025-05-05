@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.x のリリースでは、新しい [ フック設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html) 形式が追加されました。 `ece-tools` 2002.0.x リリースのレガシー形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
+>`ece-tools` 2002.1.x のリリースでは、新しい [ フック設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ja) 形式が追加されました。 `ece-tools` 2002.0.x リリースのレガシー形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
 
 ## シナリオ手順のレビュー
 

@@ -21,7 +21,7 @@ _ビルド_ フェーズでは、設定ファイルで定義されているサ�
 
 ## ![ デプロイフェーズ ](../../assets/status-deploy.png) デプロイフェーズ
 
-_デプロイ_ フェーズでは、受信リクエストを一時的に保持し、サイトを [ メンテナンスモード ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html) に移行します。 デプロイフェーズでは、新しいコンテナを使用し、ファイルシステムをマウントした後、ネットワーク接続を開き、`.magento.app.yaml` ファイルの `relationships` セクションで定義されているサービスをアクティベートし、`.magento.app.yaml` ファイルで定義されているデプロイフックを実行します。 `.magento.app.yaml` ファイルで定義されているディレクトリを除き、すべてが _読み取り専用_ です。 デフォルトでは、[`mounts` プロパティには ](../application/properties.md#mounts) 次のディレクトリが含まれています。
+_デプロイ_ フェーズでは、受信リクエストを一時的に保持し、サイトを [ メンテナンスモード ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=ja) に移行します。 デプロイフェーズでは、新しいコンテナを使用し、ファイルシステムをマウントした後、ネットワーク接続を開き、`.magento.app.yaml` ファイルの `relationships` セクションで定義されているサービスをアクティベートし、`.magento.app.yaml` ファイルで定義されているデプロイフックを実行します。 `.magento.app.yaml` ファイルで定義されているディレクトリを除き、すべてが _読み取り専用_ です。 デフォルトでは、[`mounts` プロパティには ](../application/properties.md#mounts) 次のディレクトリが含まれています。
 
 - `app/etc` - `env.php` と `config.php` の構成ファイルが含まれます
 - `pub/media` – 製品やカテゴリなど、すべてのメディア・データが含まれます

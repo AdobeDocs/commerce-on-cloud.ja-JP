@@ -13,7 +13,7 @@ ht-degree: 1%
 
 `mysql` サービスは、[MariaDB](https://mariadb.com/) バージョン 10.2 から 10.4 に基づいて永続的なデータストレージを提供し、[XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) ストレージエンジンをサポートし、MySQL 5.6 と 5.7 の機能を再実装しました。
 
-MariaDB 10.4 でのインデックス再作成は、他の MariaDB または MySQL バージョンに比べて時間がかかります。 『 _パフォーマンスのベストプラクティス [&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers) ガイドの  インデクサー_ を参照してください。
+MariaDB 10.4 でのインデックス再作成は、他の MariaDB または MySQL バージョンに比べて時間がかかります。 『 _パフォーマンスのベストプラクティス [&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=ja#indexers) ガイドの  インデクサー_ を参照してください。
 
 >[!WARNING]
 >
@@ -72,7 +72,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-上記の例の `properties` は、（『 パフォーマンスのベストプラクティスガイドで推奨 [ に従って、デフォルトの `optimizer` 設定を変更し ](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers) す。
+上記の例の `properties` は、（『 パフォーマンスのベストプラクティスガイドで推奨 [ に従って、デフォルトの `optimizer` 設定を変更し ](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=ja#indexers) す。
 
 **MariaDB 設定オプション**:
 
@@ -88,7 +88,7 @@ mysql:
 
 オプションとして、`main` データベースへのアクセス権が異なる複数のユーザーを設定できます。
 
-デフォルトでは、データベースへの管理者アクセス権を持つ `mysql` という名前のエンドポイントが 1 つあります。 複数のデータベースユーザーを設定するには、`services.yaml` ファイルに複数のエンドポイントを定義し、`.magento.app.yaml` ファイルで関係を宣言する必要があります。 ステージング環境および実稼動環境がプロの場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、追加のユーザーをリクエストします。
+デフォルトでは、データベースへの管理者アクセス権を持つ `mysql` という名前のエンドポイントが 1 つあります。 複数のデータベースユーザーを設定するには、`services.yaml` ファイルに複数のエンドポイントを定義し、`.magento.app.yaml` ファイルで関係を宣言する必要があります。 ステージング環境および実稼動環境がプロの場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、追加のユーザーをリクエストします。
 
 ネストされた配列を使用して、特定のユーザーアクセスのエンドポイントを定義します。 各エンドポイントは、1 つ以上のスキーマ（データベース）へのアクセスと、それぞれに対する異なるレベルの権限を指定できます。
 
@@ -212,13 +212,13 @@ MariaDB データベースに直接アクセスするには、SSH を使用し�
 >
 >この機能は、実稼動環境およびステージングクラスターでのみ使用できます。
 
-場合によっては、データベースのパフォーマンスを向上させたり、データベース ロックの問題を解決するために、セカンダリ データベースに接続する必要があります。 この設定が必要な場合は、`"port" : 3304` を使用して接続を確立します。 [ 実装のベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html) ガイドの _MySQL スレーブ接続を設定するためのベストプラクティス_ トピックを参照してください。
+場合によっては、データベースのパフォーマンスを向上させたり、データベース ロックの問題を解決するために、セカンダリ データベースに接続する必要があります。 この設定が必要な場合は、`"port" : 3304` を使用して接続を確立します。 [ 実装のベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html?lang=ja) ガイドの _MySQL スレーブ接続を設定するためのベストプラクティス_ トピックを参照してください。
 
 ## トラブルシューティング
 
 MySQL の問題のトラブルシューティングについては、次のAdobe Commerce サポートの記事を参照してください。
 
-- [ 低速のクエリの確認と MySQL の処理 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html)
-- [ クラウドにデータベースダンプを作成する ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html)
-- [ データ移行ツールのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
-- [Adobe Commerceのアップグレード：動的テーブル 2.2.x へのコンパクト、2.3.x から 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html)
+- [ 低速のクエリの確認と MySQL の処理 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=ja)
+- [ クラウドにデータベースダンプを作成する ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=ja)
+- [ データ移行ツールのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=ja)
+- [Adobe Commerceのアップグレード：動的テーブル 2.2.x へのコンパクト、2.3.x から 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=ja)

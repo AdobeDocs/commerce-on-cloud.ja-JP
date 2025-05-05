@@ -181,7 +181,7 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
 - スタータープロジェクトの場合は、プロジェクトの「[!UICONTROL Domains]」タブで「プロジェクト URL」に移動して [!DNL Cloud Console] ロジェクト URL を追加します。
 
-- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
+- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
 
 **管理者から Fastly ドメイン設定を管理するには**:
 

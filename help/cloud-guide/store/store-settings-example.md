@@ -56,7 +56,7 @@ _静的ファイル最適化_ とは、JavaScriptとカスケードスタイル�
    ![ ロケールの変更 ](../../assets/locale-options.png)
 
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[ キャッシュをフラッシュ ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) します。
+1. プロンプトが表示されたら、[ キャッシュをフラッシュ ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management) します。
 1. 管理者からログアウトします。
 
 ## 値をエクスポートし、config.php をローカルシステムに転送します。
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 右側のウィンドウで、「**JavaScript設定**」を展開します。
 1. **JavaScript ファイルを結合** リストで、「はい **をクリックし** す。
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[ キャッシュをフラッシュ ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) します。
+1. プロンプトが表示されたら、[ キャッシュをフラッシュ ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management) します。
 1. 管理者からログアウトします。
 
 dump コマンドを再度実行すると、新しい設定がファイルに追加されます。

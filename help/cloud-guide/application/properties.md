@@ -140,7 +140,7 @@ disk: 5120
 
 >[!NOTE]
 >
->ステージング環境および実稼動環境をプロ環境にする場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、アプリケーションの `mounts` 定と `disk` 定を更新する必要があります。 チケットを送信する際には、必要な設定変更を指定し、`.magento.app.yaml` ファイルの更新バージョンを含めます。
+>ステージング環境および実稼動環境をプロ環境にする場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、アプリケーションの `mounts` 定と `disk` 定を更新する必要があります。 チケットを送信する際には、必要な設定変更を指定し、`.magento.app.yaml` ファイルの更新バージョンを含めます。
 >
 >ステージング環境または実稼動環境で一時的にディスクストレージを増やすことはできません。このプロセスを元に戻すことはできません。
 
@@ -191,7 +191,7 @@ mounts:
 
 >[!NOTE]
 >
->ステージング環境および実稼動環境をプロ環境にする場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、アプリケーションの `mounts` 定と `disk` 定を更新する必要があります。 チケットを送信する際には、必要な設定変更を指定し、`.magento.app.yaml` ファイルの更新バージョンを含めます。
+>ステージング環境および実稼動環境をプロ環境にする場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、アプリケーションの `mounts` 定と `disk` 定を更新する必要があります。 チケットを送信する際には、必要な設定変更を指定し、`.magento.app.yaml` ファイルの更新バージョンを含めます。
 
 マウント web を [`web`](web-property.md) の場所のブロックに追加すると、そのマウント web にアクセスできるようになります。
 

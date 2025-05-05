@@ -74,7 +74,7 @@ Edge ACL は、サイトへのアクセスを管理するための IP アドレ�
 }
 ```
 
-この例では [ カスタムスニペットの作成 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) の前に、値を確認して、変更が必要かどうかを判断してください。 次に、各値をそれぞれのフィールドに入力します（例えば、「タイプ」フィールドに `type` を入力 `content`、「コンテンツ」フィールドに入力します）。
+この例では [ カスタムスニペットの作成 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=ja#add-the-custom-vcl-snippet) の前に、値を確認して、変更が必要かどうかを判断してください。 次に、各値をそれぞれのフィールドに入力します（例えば、「タイプ」フィールドに `type` を入力 `content`、「コンテンツ」フィールドに入力します）。
 
 - `name` — VCL スニペットの名前。 この例の場合は `allowlist` です。
 

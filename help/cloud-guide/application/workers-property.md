@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ワーカーは、Pro ステージング環境および実稼動環境でのみ使用できます。 Pro 統合およびスターター環境は、[CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner) 変数の使用を選択できます。
 
-ステージング環境または実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、次の情報を含めます。
+ステージング環境または実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、次の情報を含めます。
 
 - プロジェクト ID
 - 環境 ID

@@ -31,7 +31,7 @@ Adobeがクラウドプロジェクト環境にCommerceをプロビジョニン�
 
 複数または一意のドメインに関する詳細なガイダンスについては、_クラウドインフラストラクチャー上のCommerce_ ガイドの [ 複数の web サイトまたはストアの設定 ](../cloud-guide/store/multiple-sites.md) を参照してください。
 
-Adobe Commerce サイトで使用されているのと同じ apex およびサブドメインをリンクする既存の Fastly アカウントがある場合は、[ 複数の Fastly アカウントと割り当てられたドメイン ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} を参照してください。
+Adobe Commerce サイトで使用されているのと同じ apex およびサブドメインをリンクする既存の Fastly アカウントがある場合は、[ 複数の Fastly アカウントと割り当てられたドメイン ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} を参照してください。
 
 ## トランザクションメールドメイン
 

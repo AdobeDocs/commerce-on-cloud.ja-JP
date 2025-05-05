@@ -171,7 +171,7 @@ mysql:
 
 ## サービスのバージョン
 
-クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされテストされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 特定のAdobe CommerceおよびMagento Open SourceリリースでAdobeでテストされたサードパーティ製ソフトウェアの依存関係のリストについては、『 _インストール_ ガイドの [ システム要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) を参照してください。
+クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされテストされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 特定のAdobe CommerceおよびMagento Open SourceリリースでAdobeでテストされたサードパーティ製ソフトウェアの依存関係のリストについては、『 _インストール_ ガイドの [ システム要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) を参照してください。
 
 ### ソフトウェアの EOL チェック
 

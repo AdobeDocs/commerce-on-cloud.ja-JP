@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP 設定
 
-`.magento.app.yaml` ファイルで実行する [PHP のバージョン ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) を選択できます。
+`.magento.app.yaml` ファイルで実行する [PHP のバージョン ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) を選択できます。
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->推奨される PHP 設定の一覧については、_インストールガイド_ の [ 必要な PHP 設定 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) を参照してください。
+>推奨される PHP 設定の一覧については、_インストールガイド_ の [ 必要な PHP 設定 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ja) を参照してください。
 
 ### カスタム PHP 設定の確認
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP のモジュール要件は、Adobe Commerceのバージョンに関連付けられています。 [PHP の要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) を参照してください。
+PHP のモジュール要件は、Adobe Commerceのバージョンに関連付けられています。 [PHP の要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ja) を参照してください。
 
 ### 拡張機能のサポート
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 [SourceGuardian ドキュメントの 3.5 節 ](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf) を参照してください。 _PDFへのリンクです_。
 
-[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、これらの PHP 拡張機能をすべての実稼動環境および Pro ステージング環境にインストールする際のヘルプが表示されます。 更新した `.magento/services.yaml` ファイル、更新した PHP バージョン `.magento.app.yaml` 含むファイル、および追加の PHP 拡張子を含めます。 実稼動環境に変更を加える場合は、少なくとも 48 時間は通知する必要があります。 クラウドインフラストラクチャチームがプロジェクトを更新するまで、最大 48 時間かかる場合があります。
+[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) すると、これらの PHP 拡張機能をすべての実稼動環境および Pro ステージング環境にインストールする際のヘルプが表示されます。 更新した `.magento/services.yaml` ファイル、更新した PHP バージョン `.magento.app.yaml` 含むファイル、および追加の PHP 拡張子を含めます。 実稼動環境に変更を加える場合は、少なくとも 48 時間は通知する必要があります。 クラウドインフラストラクチャチームがプロジェクトを更新するまで、最大 48 時間かかる場合があります。
 
 >[!WARNING]
 >

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 |          | スターター | プロ |
 | -------- | --------------------| ------------------ |
-| 主な機能 | <ul><li>[ すべてのAdobe Commerce機能 ](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal オンボーディングツール</li><li>[Commerce レポート ](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[ すべてのAdobe Commerce機能 ](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>PayPal オンボーディングツール</li><li>[Commerce レポート ](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B モジュール ](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| 主な機能 | <ul><li>[ すべてのAdobe Commerce機能 ](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ja)</li><li>PayPal オンボーディングツール</li><li>[Commerce レポート ](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[ すべてのAdobe Commerce機能 ](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ja)</li><li>PayPal オンボーディングツール</li><li>[Commerce レポート ](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B モジュール ](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
 | インフラストラクチャとデプロイメント | <ul><li>ユーザー数に制限のない継続的なクラウド統合ツール</li><li>Fastly コンテンツ配信ネットワーク（CDN）、画像の最適化（IO）および寛大な帯域幅許可によるセキュリティの追加。 Web Application Firewall （WAF）サービスは、実稼動環境でのみ使用できます。</li><li>[New Relic](../monitor/new-relic-service.md)3 つのブランチでの APM （パフォーマンスモニタリング）:`master` および 2 つの任意の環境 <br>Platform as a service （PaaS）の実稼働、ステージングおよび開発環境（合計 4 つのアクティブな環境）がAdobe Commerce用に最適化されています</li><li>エグレスフィルタリング（アウトバウンドファイアウォール）</li></ul> | <ul><li>ユーザー数に制限のない継続的なクラウド統合ツール</li><li>Fastly コンテンツ配信ネットワーク（CDN）、画像の最適化（IO）および寛大な帯域幅許可によるセキュリティの追加。 Web Application Firewall （WAF）サービスは、実稼動環境でのみ使用できます。</li><li>[New Relic](../monitor/new-relic-service.md) 実稼動環境のインフラストラクチャ + ステージング環境と実稼動環境の APM （パフォーマンスモニタリング）。 Adobe Commerce ポリシーの [Managed Alerts policy](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) は、サイトのパフォーマンスに影響を与えるアプリケーションとインフラストラクチャの問題をプロアクティブに通知する監視のベストプラクティスを実装します。</li><li>Adobe Commerce向けに最適化された Platform as a service [PaaS）ベースの統合開発 ](pro-architecture.md#integration-environment) 環境（合計 2 つのアクティブな環境）</li><li>サービスとしてのインフラストラクチャ（IaaS）：ステージング環境および実稼動環境用の専用の仮想インフラストラクチャ</li></ul> |
 | 高可用性インフラストラクチャ | | [ 高可用性アーキテクチャ ](pro-architecture.md#redundant-hardware) 基盤となるサービスとしてのインフラストラクチャ（IaaS）に 3 サーバをセットアップし、エンタープライズクラスの信頼性と可用性を提供 |
 | 専用ハードウェア | | 基盤となるサービスとしてのインフラストラクチャ（IaaS）に分離された専用ハードウェアにより、より高いレベルの信頼性と可用性を提供 |
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->推奨バージョンについては、『 _インストレーション ガイド_ の [ システム要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) を参照してください。
+>推奨バージョンについては、『 _インストレーション ガイド_ の [ システム要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) を参照してください。
 
 Fastly CDN モジュールは、ステージング環境と実稼動環境で CDN およびキャッシュサービスに使用されます。 詳しくは、[Fastly サービスの設定 ](../cdn/fastly.md) を参照してください。
 

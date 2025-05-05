@@ -27,7 +27,7 @@ ht-degree: 0%
 
    - ![ 新規アイコン ](../../assets/new.svg)`ece-tools` パッケージの `composer.json` ファイルを更新して、`magento/magento-cloud-patches` v1.0.0 パッケージの依存関係を追加しました。
 
-   - ![ 修正アイコン ](../../assets/fix.svg) バージョン 2.3.2-p2 以降のセキュリティ専用リリースにパッチセットを適用すると、`ece-tools` のパッチ適用プロセスが中断する問題を修正しました。 この問題は、[ セキュリティのみのパッチ ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/overview) に採用された新しいバージョン管理スキームによって導入されました <!--MAGECLOUD-4661-->
+   - ![ 修正アイコン ](../../assets/fix.svg) バージョン 2.3.2-p2 以降のセキュリティ専用リリースにパッチセットを適用すると、`ece-tools` のパッチ適用プロセスが中断する問題を修正しました。 この問題は、[ セキュリティのみのパッチ ](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/notes/security-patches/overview) に採用された新しいバージョン管理スキームによって導入されました <!--MAGECLOUD-4661-->
 
 - ![ 修正アイコン ](../../assets/fix.svg)**パッチと重要な修正**-`ece-tools` バージョン 2002.0.22 でクラウド環境を更新し、次のパッチと重要な修正を適用します。 これらのパッチは、`magento/magento-cloud-patches` v1.0.0 パッケージに含まれています。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)RabitMQ バージョン 3.8.<!-- MAGECLOUD-4674--> のサポートを追加
 
-- ![ 新しいアイコン ](../../assets/new.svg) 新しいAdobe Commerce 2.3.3 および 2.2.10 リリースでサポートされているバージョンを反映するように、サービス互換性のインタラクティブな検証を更新しました。 推奨バージョンについては、『 _インストレーション ガイド_ の [ システム要件 ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) を参照してください。<!-- MAGECLOUD-4018 -->
+- ![ 新しいアイコン ](../../assets/new.svg) 新しいAdobe Commerce 2.3.3 および 2.2.10 リリースでサポートされているバージョンを反映するように、サービス互換性のインタラクティブな検証を更新しました。 推奨バージョンについては、『 _インストレーション ガイド_ の [ システム要件 ](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements) を参照してください。<!-- MAGECLOUD-4018 -->
 
 - ![ 修正アイコン ](../../assets/fix.svg) デプロイフェーズの cron ジョブ管理プロセスが、この問題がエラーではないことを明確にするために、既に完了した cron ジョブを停止しようとすると返されるログメッセージを改善しました。 ログレベルが `INFO` から `DEBUG`.<!-- MAGECLOUD-3653--> に変更されました
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
    - ![ 新規アイコン ](../../assets/new.svg)Docker 環境の `ece-tools` パッケージを使用して機能テストを実行できるようになりました。 [ アプリケーションテスト ](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/) を参照してください <!-- MAGECLOUD-3129/3684 -->。
 
-   - ![ 新規アイコン ](../../assets/new.svg) `.magento.app.yaml` ファイルを使用した PHP モジュールの設定をサポートするようになりました。 `.magento.app.yaml` ファイルで指定された [PHP Extensions](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) は、Docker PHP コンテナで使用できます。<!-- MAGECLOUD-3357 -->
+   - ![ 新規アイコン ](../../assets/new.svg) `.magento.app.yaml` ファイルを使用した PHP モジュールの設定をサポートするようになりました。 `.magento.app.yaml` ファイルで指定された [PHP Extensions](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) は、Docker PHP コンテナで使用できます。<!-- MAGECLOUD-3357 -->
 
    - ![ 新規アイコン ](../../assets/new.svg) Docker コマンドラインエクスペリエンスを向上させるための新しいコマンドが追加されました。 詳しくは、Docker リファレンスの [`bin/magento-docker` の節を参照してください ](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 - ![ 修正アイコン ](../../assets/fix.svg) ベース URL がデータベースに存在しない場合に、デプロイメントが失敗する問題を修正しました。<!-- MAGECLOUD-3075 -->
 
-- ![ 新規アイコン ](../../assets/new.svg) 新しい **`env:config:show`コマンド** を、環境サービス、ルート、変数を表示する `ece-tools` パッケージに追加しました。 [ サービス、ルート、変数 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables) を参照してください。 [Vladimir Kerkhoff が提供した機能 ](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
+- ![ 新規アイコン ](../../assets/new.svg) 新しい **`env:config:show`コマンド** を、環境サービス、ルート、変数を表示する `ece-tools` パッケージに追加しました。 [ サービス、ルート、変数 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/package-overview#services-routes-and-variables) を参照してください。 [Vladimir Kerkhoff が提供した機能 ](https://github.com/magento/ece-tools/pull/486).<!-- MAGECLOUD-3451 -->
 
 - ![ 修正アイコン ](../../assets/fix.svg) シェルリファクタリング後に開発された `ece-tools` でAdobe Commerce 2.2.6 以前をインストールしようとすると、重大なエラーが発生する問題を修正しました。<!-- MAGECLOUD-3665 -->
 
@@ -143,7 +143,7 @@ ht-degree: 0%
 
 - ![ 新規アイコン ](../../assets/new.svg)**Docker のアップデート**—
 
-   - ![ 新規アイコン ](../../assets/new.svg)Docker 環境で、.magento.app.yaml ファイルの [cron プロパティで定義された cron 設定がサポートされるようになりました ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->
+   - ![ 新規アイコン ](../../assets/new.svg)Docker 環境で、.magento.app.yaml ファイルの [cron プロパティで定義された cron 設定がサポートされるようになりました ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property).<!-- MAGECLOUD-3150 -->
 
    - ![ 新しいアイコン ](../../assets/new.svg)**新しい Docker コンテナ** - HTTPS での Varnish SSL 終了を容易にするために [TLS 終了プロキシコンテナ ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#varnish-container) を追加しました。<!-- MAGECLOUD-2890 -->
 
@@ -151,7 +151,7 @@ ht-degree: 0%
 
    - ![ 新規アイコン ](../../assets/new.svg)**Docker ビルドモード** - Docker 環境を [ 実稼動モードまたは開発者モード ](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode) で起動するように選択できるようになりました。 開発者モードは、完全な書き込み可能なファイルシステム権限を持つアクティブ開発をサポートします。<!-- MAGECLOUD-3152/3511 -->
 
-   - ![ 修正アイコン ](../../assets/fix.svg) 使用できないサービスに対してキャッシュが設定されている場合、Docker デプロイが `Name or service not known` エラーで失敗する問題を修正しました。 [`.magento/services.yaml` ファイルからサービスを削除できるようになりました ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。 Docker 設定ジェネレーターが、`docker/config.php.dist` ファイルのサービスを自動的に更新します。<!-- MAGECLOUD-3369 -->
+   - ![ 修正アイコン ](../../assets/fix.svg) 使用できないサービスに対してキャッシュが設定されている場合、Docker デプロイが `Name or service not known` エラーで失敗する問題を修正しました。 [`.magento/services.yaml` ファイルからサービスを削除できるようになりました ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)。 Docker 設定ジェネレーターが、`docker/config.php.dist` ファイルのサービスを自動的に更新します。<!-- MAGECLOUD-3369 -->
 
    - ![ 新規アイコン ](../../assets/new.svg) サービスの互換性のインタラクティブな検証を追加しました。 これで、要求されたサービスがAdobe Commerceのバージョンまたは他のサービスと互換性がない場合、_インタラクティブモード_ からメッセージが表示され、続行するかどうかを選択するように求められます。 Docker で使用可能な [ サービスバージョン ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#service-containers) を参照してください。 CICD の目的でインタラクティビティをスキップするには、`-n` オプションを使用します。<!-- MAGECLOUD-3251 -->
 
@@ -215,15 +215,15 @@ ht-degree: 0%
 
    - `docker-compose.yml` ファイルを生成する際の web サービスの権限の問題を修正しました。<!-- MAGECLOUD-2883 -->
 
-- ![ 新規アイコン ](../../assets/new.svg)**アップグレードの改善** - Adobe Commerce v2.3 にアップグレードする前に、`composer.json` ファイルの `autoload` プロパティに必要な設定変更が含まれていることを確認する検証が追加されました。[ アップグレードバージョン ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version).<!-- MAGECLOUD-2392 --> を参照してください。
+- ![ 新規アイコン ](../../assets/new.svg)**アップグレードの改善** - Adobe Commerce v2.3 にアップグレードする前に、`composer.json` ファイルの `autoload` プロパティに必要な設定変更が含まれていることを確認する検証が追加されました。[ アップグレードバージョン ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version).<!-- MAGECLOUD-2392 --> を参照してください。
 
-- ![ 新しいアイコン ](../../assets/new.svg) 静的コンテンツをデプロイする際の圧縮プロセスには、ネイティブで生成またはカスタマイズされたすべてのアセットが含まれるようになり、[`build:transfer` の節の最初のビルドフェーズで行われます ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)。 以前は、圧縮プロセスは、静的アセットのカスタム圧縮とバンドルを適用する前に行われていました。 [Tryzens Limited の Rafael Garcia Lepper 氏により修正が提出されました ](https://github.com/magento/ece-tools/pull/413).<!-- MAGECLOUD-3104 -->
+- ![ 新しいアイコン ](../../assets/new.svg) 静的コンテンツをデプロイする際の圧縮プロセスには、ネイティブで生成またはカスタマイズされたすべてのアセットが含まれるようになり、[`build:transfer` の節の最初のビルドフェーズで行われます ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)。 以前は、圧縮プロセスは、静的アセットのカスタム圧縮とバンドルを適用する前に行われていました。 [Tryzens Limited の Rafael Garcia Lepper 氏により修正が提出されました ](https://github.com/magento/ece-tools/pull/413).<!-- MAGECLOUD-3104 -->
 
 - ![ 修正アイコン ](../../assets/fix.svg) 追加のデータベースとサービスの関係を設定した直後に、デプロイメント中に発生したデータベース接続エラーを修正しました。 また、この修正は、Starter のCommerce レポートの設定プロセス中に発生した問題に対処します。 スターターの場合、このアップグレードは、Commerce レポートを使用する場合に「必須」です。<!-- MAGECLOUD-3035 -->
 
 - ![ 修正アイコン ](../../assets/fix.svg) データベース設定の検証の問題が修正され、デプロイプロセスが失敗しました。<!-- MAGECLOUD-3003 -->
 
-- ![fix icon](../../assets/fix.svg) [PHP 定数 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) で使用する適切なバージョンの `symfony/yaml` パッケージで制約を更新しました。 3.2 より前の `symfony/yaml` パッケージ バージョンを使用している場合、定数の解析は機能しません。[Vladimir Kerkhoff によって送信された修正 ](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
+- ![fix icon](../../assets/fix.svg) [PHP 定数 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) で使用する適切なバージョンの `symfony/yaml` パッケージで制約を更新しました。 3.2 より前の `symfony/yaml` パッケージ バージョンを使用している場合、定数の解析は機能しません。[Vladimir Kerkhoff によって送信された修正 ](https://github.com/magento/ece-tools/pull/404).<!-- MAGECLOUD-2956 -->
 
 - ![ 新しいアイコン ](../../assets/new.svg)**環境設定チェック**—PHP のバージョンをチェックし、最新の推奨バージョンを使用していない場合にユーザーに警告する検証を追加しました。<!--MAGECLOUD-2903-->
 
@@ -257,7 +257,7 @@ ht-degree: 0%
 
    - **管理変数**—<!-- MAGECLOUD-2573/MAGECLOUD-2848 -->
 
-      - 環境変数を使用して管理者ユーザーの資格情報を管理する際のセキュリティが向上しました。 ADMIN_EMAIL、ADMIN_USERNAME および ADMIN_PASSWORD 環境変数を、アップグレード中に管理者の資格情報を上書きするために使用できなくなりました。 管理パネルにアクセスできない場合は、_パスワードを忘れた場合_ 機能または `admin:user:create` CLI コマンドを使用して、新しい管理ユーザーを作成します。 詳しくは [ 管理パネルへのアクセス ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/onboarding#admin) を参照してください。
+      - 環境変数を使用して管理者ユーザーの資格情報を管理する際のセキュリティが向上しました。 ADMIN_EMAIL、ADMIN_USERNAME および ADMIN_PASSWORD 環境変数を、アップグレード中に管理者の資格情報を上書きするために使用できなくなりました。 管理パネルにアクセスできない場合は、_パスワードを忘れた場合_ 機能または `admin:user:create` CLI コマンドを使用して、新しい管理ユーザーを作成します。 詳しくは [ 管理パネルへのアクセス ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/start/onboarding#admin) を参照してください。
 
       - パッチのアップグレードまたは適用時に、ADMIN_EMAIL は不要になりました。
 
@@ -279,7 +279,7 @@ ht-degree: 0%
 
       - Redis 3.2 および 4.0<!-- MAGECLOUD-2886 -->
 
-- ![ 新しいアイコン ](../../assets/new.svg)**PHP 定数を使用して設定**—[PHP 定数 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) のサポートを `.magento.env.yaml` 設定ファイルに追加しました。<!-- MAGECLOUD- 2575 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 定数を使用して設定**—[PHP 定数 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml#php-constants) のサポートを `.magento.env.yaml` 設定ファイルに追加しました。<!-- MAGECLOUD- 2575 -->
 
 - ![new icon](../../assets/new.svg)**New environment variable**：デフォルトでは、実稼動環境でのみGoogle Analyticsが有効になっています。 [ENABLE_GOOGLE_ANALYTICS](../environment/variables-deploy.md#enable_google_analytics) 環境変数を使用して、ステージング環境および統合環境でGoogle Analyticsを有効にできます <!--MAGECLOUD-2879-->
 
@@ -343,13 +343,13 @@ ht-degree: 0%
 
    - これで、Cloud Docker [ データベースコンテナ ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#database-container) を使用する際に DB ダンプ機能が利用できるようになりました。 また、`docker/mnt` ディレクトリを使用して、ホストマシンとコンテナ間で [ ファイルを共有 ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/#sharing-data-between-host-machine-and-container) できます <!-- MAGECLOUD-2577 -->。
 
-   - **ワニス サービスのサポート** - Docker コンテナに自動的にデプロイされるワニス画像を追加しました。 デプロイメント後、Adobe Commerceのベストプラクティスに従って、Varnish を手動で設定できます。 [ ワニスの設定と使用 ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish) を参照してください。&lt;!—MAGECLOUD—2358—>
+   - **ワニス サービスのサポート** - Docker コンテナに自動的にデプロイされるワニス画像を追加しました。 デプロイメント後、Adobe Commerceのベストプラクティスに従って、Varnish を手動で設定できます。 [ ワニスの設定と使用 ](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish) を参照してください。&lt;!—MAGECLOUD—2358—>
 
    - 安全なサイトアクセス - Adobe Commerce ストアと管理パネルにアクセスするための SSL サポートが追加されました。&lt;!—MAGECLOUD—2360—>
 
-- ![ 修正アイコン ](../../assets/fix.svg) **クラウドインフラストラクチャー上のAdobe Commerce拡張機能のサポートの改善** - クラウドインフラストラクチャー上のAdobe Commerce[composer.json ファイル ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/overview) の guzzlehttp/guzzle パッケージの最小バージョン要件をバージョン 6.2 にダウングレードして、`ece-tools` パッケージがより多くの拡張機能と互換性を持つようにしました。<!--MAGECLOUD-2205-->
+- ![ 修正アイコン ](../../assets/fix.svg) **クラウドインフラストラクチャー上のAdobe Commerce拡張機能のサポートの改善** - クラウドインフラストラクチャー上のAdobe Commerce[composer.json ファイル ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/overview) の guzzlehttp/guzzle パッケージの最小バージョン要件をバージョン 6.2 にダウングレードして、`ece-tools` パッケージがより多くの拡張機能と互換性を持つようにしました。<!--MAGECLOUD-2205-->
 
-- ![ 新規アイコン ](../../assets/new.svg)**ビルドフェーズでAdobe Commerce アプリケーションにカスタムの変更を適用します** - ビルドフェーズを 2 つの個別のプロセスに分割して、フックを使用して、アプリケーションをデプロイメント用にパッケージ化する前に、生成された静的コンテンツにカスタムの変更を適用できます。 _build:generate_ プロセスは、コードを生成し、パッチを適用して、静的コンテンツを生成します。 _build:transfer_ プロセスは、生成されたコードと静的コンテンツを最終的な宛先に転送します。 [ アプリケーションフック ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property) を参照してください <!--MAGECLOUD-2363-->。
+- ![ 新規アイコン ](../../assets/new.svg)**ビルドフェーズでAdobe Commerce アプリケーションにカスタムの変更を適用します** - ビルドフェーズを 2 つの個別のプロセスに分割して、フックを使用して、アプリケーションをデプロイメント用にパッケージ化する前に、生成された静的コンテンツにカスタムの変更を適用できます。 _build:generate_ プロセスは、コードを生成し、パッチを適用して、静的コンテンツを生成します。 _build:transfer_ プロセスは、生成されたコードと静的コンテンツを最終的な宛先に転送します。 [ アプリケーションフック ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property) を参照してください <!--MAGECLOUD-2363-->。
 
 - ![ 修正アイコン ](../../assets/fix.svg)**環境設定チェック** - クラウドインフラストラクチャにAdobe Commerceをビルドおよびデプロイする前に、バージョンの非互換性と設定エラーに関する警告を表示するように、環境設定の検証を改善しました。
 
@@ -357,7 +357,7 @@ ht-degree: 0%
 
    - Elasticsearch設定の問題に関してユーザーに警告するためのElasticsearch互換性チェックが追加されました。 現在は、サーバー上のElasticsearchサービスのバージョンがAdobe Commerceと互換性がない場合、デプロイは失敗します。 以前は、Elasticsearchバージョンに互換性がない場合でもデプロイメントが成功し、サイトデプロイメント後に製品カタログの問題が発生していました。<!--MAGECLOUD-2389-->
 
-     この非互換性を解決するには、[ サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices) して、Elasticsearchを互換性のあるバージョンにアップグレードします。または、Adobe Commerce設定を変更して、Elasticsearch PHP クライアントの互換性のあるバージョンを指定します。
+     この非互換性を解決するには、[ サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices) して、Elasticsearchを互換性のあるバージョンにアップグレードします。または、Adobe Commerce設定を変更して、Elasticsearch PHP クライアントの互換性のあるバージョンを指定します。
 
       - Adobe Commerce バージョン 2.1.x から 2.2.2 の場合は、Elasticsearchをバージョン 2.4 にアップグレードします。
 
@@ -393,7 +393,7 @@ ht-degree: 0%
 
 - ![ 修正アイコン ](../../assets/fix.svg) [ 静的コンテンツ圧縮プロセス ](../environment/variables-intro.md) （`gzip`）で、デプロイメントプロセス中に圧縮ファイルを参照する際に `not overwritten` エラーと `no such file or directory` エラーが発生する問題を修正しました。<!-- MAGECLOUD-2182-->
 
-- ![ 修正アイコン ](../../assets/fix.svg) ストアのロケールが指定されていない場合に、ダンププロセス中に `php ./vendor/bin/ece-tools config:dump` コマンドが `config.php` ファイルから冗長なセクションを削除できなかった問題を修正しました。 これで、設定ファイルを環境間で簡単に移動できます。 `ece-tools` v2002.0.13 に更新した後は、改善された `config:dump` コマンドを使用して古い `config.php` ファイルを再生成します。 [ ストア設定の設定の管理 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure-store/store-settings) を参照してください。<!--MAGECLOUD-2444-->
+- ![ 修正アイコン ](../../assets/fix.svg) ストアのロケールが指定されていない場合に、ダンププロセス中に `php ./vendor/bin/ece-tools config:dump` コマンドが `config.php` ファイルから冗長なセクションを削除できなかった問題を修正しました。 これで、設定ファイルを環境間で簡単に移動できます。 `ece-tools` v2002.0.13 に更新した後は、改善された `config:dump` コマンドを使用して古い `config.php` ファイルを再生成します。 [ ストア設定の設定の管理 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure-store/store-settings) を参照してください。<!--MAGECLOUD-2444-->
 
 - ![ 修正アイコン ](../../assets/fix.svg) `.magento/routes.yaml` ファイルのルート設定が [apex](https://blog.cloudflare.com/zone-apex-naked-domain-root-domain-cname-supp/) ドメインから `www` ドメインにリダイレクトされる場合、デプロイフェーズ中にエラーが発生する問題を修正しました。<!--MAGECLOUD-2556-->
 
@@ -561,7 +561,7 @@ ht-degree: 0%
 
 - **新しい cron コマンド** - [`cron:unlock`](https://support.magento.com/hc/en-us/articles/360033099451) コマンドを使用してすべての cron ジョブを停止して再起動するのではなく、特定の停止した cron ジョブのロックを解除できるようになりました。 2.1.<!-- MAGECLOUD-1367 --> では利用できません。
 
-- **統合設定ファイル** - [`.magento.env.yaml`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml) ファイルを使用してビルドステージとデプロイステージを設定できるようになりました。<!-- MAGECLOUD-1369 -->
+- **統合設定ファイル** - [`.magento.env.yaml`](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/configure-env-yaml) ファイルを使用してビルドステージとデプロイステージを設定できるようになりました。<!-- MAGECLOUD-1369 -->
 
 - **設定ファイルのバックアップ** – 導入プロセスでは、導入後に `app/etc/env.php` と `app/etc/config.php` の設定ファイルのバックアップが自動的に作成されるようになりました。 また、これらの構成ファイルをバックアップからリストアするための [ 新しい CLI コマンド ](https://support.magento.com/hc/en-us/articles/360033182871) も追加しました <!-- MAGECLOUD-1372 -->。
 
@@ -623,11 +623,11 @@ ht-degree: 0%
 
    - [静的コンテンツのデプロイメントパフォーマンス](../deploy/static-content.md)
 
-   - [ デプロイメントプロセス ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)
+   - [ デプロイメントプロセス ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)
 
-- **設定管理** - ビルドフェーズ中に、Git リポジトリにまだ存在しない `app/etc/config.php` ファイルを自動生成するようになりました。 自動生成されたファイルには、モジュールと拡張子のリストのみが含まれます。 ファイルが既に存在する場合、ビルドフェーズは通常どおり続行されます。 後で [ 設定管理 ](../store/store-settings.md) に従うと、追加の手順を必要とせずにコマンドによってファイルが更新されます。 詳細は、「[ デプロイメントプロセス ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)」を参照してください。
+- **設定管理** - ビルドフェーズ中に、Git リポジトリにまだ存在しない `app/etc/config.php` ファイルを自動生成するようになりました。 自動生成されたファイルには、モジュールと拡張子のリストのみが含まれます。 ファイルが既に存在する場合、ビルドフェーズは通常どおり続行されます。 後で [ 設定管理 ](../store/store-settings.md) に従うと、追加の手順を必要とせずにコマンドによってファイルが更新されます。 詳細は、「[ デプロイメントプロセス ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/deploy/best-practices)」を参照してください。
 
-- **データベースダンプ** – すべての環境でデータベースダンプを作成するための `magento/ece-tools` CLI コマンドを追加しました。 Pro Plan の実稼動環境の場合、このコマンドは 3 つの高可用性ノードのうちの 1 つからのみダンプするので、ダンプ中に別のノードに書き込まれた実稼動データはコピーされません。 実稼動環境でデータベースダンプを実行する前に、アプリケーションをメンテナンスモードにすることをお勧めします。 詳しくは、[ バックアップ管理 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/snapshots) を参照してください。
+- **データベースダンプ** – すべての環境でデータベースダンプを作成するための `magento/ece-tools` CLI コマンドを追加しました。 Pro Plan の実稼動環境の場合、このコマンドは 3 つの高可用性ノードのうちの 1 つからのみダンプするので、ダンプ中に別のノードに書き込まれた実稼動データはコピーされません。 実稼動環境でデータベースダンプを実行する前に、アプリケーションをメンテナンスモードにすることをお勧めします。 詳しくは、[ バックアップ管理 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/storage/snapshots) を参照してください。
 
 - **Cron 間隔の制限の撤廃** - us-3、eu-3、ap-3 の各地域でプロビジョニングされたすべての環境のデフォルトの Cron 間隔は 1 分です。 その他のすべての地域のデフォルトの cron 間隔は、Pro 統合環境の場合は 5 分、Pro ステージング環境と実稼動環境の場合は 1 分です。 既存の cron ジョブを変更するには、`.magento.app.yaml` で設定を編集するか、実稼働/ステージング環境用のサポートチケットを作成します。 詳しくは、[cron ジョブの設定 ](../application/crons-property.md#set-up-cron-jobs) を参照してください。
 
@@ -671,7 +671,7 @@ ht-degree: 0%
 
 **新機能：**
 
-- クラウドインフラストラクチャー上のAdobe Commerceで scopes と [ 静的コンテンツのデプロイメント戦略 ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) がサポートされるようになりました。 静的コンテンツデプロイメント戦略のデフォルト設定 `quick` を使用して、`–s` パラメーターを追加しました。 環境変数 [SCD_STRATEGY](../environment/variables-deploy.md) を使用して、これらの戦略をカスタマイズし、ビルドおよびデプロイアクションで使用できます。 この変数は、`standard`、`quick`、`compact` のオプションをサポートします。 「`compact`」を選択した場合は、`STATIC_CONTENT_THREADS` 値が `1` で上書きされるので、デプロイメントの速度が低下する可能性があります（特に実稼動環境の場合）。 2.1.<!--- MAGECLOUD-1057 --> では利用できません。
+- クラウドインフラストラクチャー上のAdobe Commerceで scopes と [ 静的コンテンツのデプロイメント戦略 ](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) がサポートされるようになりました。 静的コンテンツデプロイメント戦略のデフォルト設定 `quick` を使用して、`–s` パラメーターを追加しました。 環境変数 [SCD_STRATEGY](../environment/variables-deploy.md) を使用して、これらの戦略をカスタマイズし、ビルドおよびデプロイアクションで使用できます。 この変数は、`standard`、`quick`、`compact` のオプションをサポートします。 「`compact`」を選択した場合は、`STATIC_CONTENT_THREADS` 値が `1` で上書きされるので、デプロイメントの速度が低下する可能性があります（特に実稼動環境の場合）。 2.1.<!--- MAGECLOUD-1057 --> では利用できません。
 
 - 環境に関するログファイルを作成して、ビルドアクションとデプロイアクションをキャプチャおよびコンパイルしました。 `var/log/cloud.log` ファイルは、ルートアプリケーションディレクトリにあります。<!--- MAGECLOUD-1014 & MAGECLOUD-1023 -->
 

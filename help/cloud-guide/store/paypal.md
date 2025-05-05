@@ -58,7 +58,7 @@ PayPal Express チェックアウトを設定するには：
    * **サンドボックスモード** 「はい」または「いいえ」を選択して、入力した資格情報がサンドボックス用かどうかを示します。 実稼働環境用の認証情報を入力した場合は、「いいえ」を選択します。
    * **API Uses Proxy** 「Yes」または「No」を選択して、システムがプロキシサーバーを使用してAdobe Commerceと PayPal 支払いシステム間の接続を確立するかどうかを設定します。 [Yes] の場合は、プロキシ・ホストとポートを入力します。
 
-1. アカウント設定の詳細と手順については、[PayPal Express Checkout](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) を参照してください。手順 2 必須設定を完了するから。
+1. アカウント設定の詳細と手順については、[PayPal Express Checkout](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) を参照してください。手順 2 必須設定を完了するから。
 
 アカウントを設定して認証すると、必要な PayPal 設定で PayPal 支払いオプションを有効または無効にすることができます。
 

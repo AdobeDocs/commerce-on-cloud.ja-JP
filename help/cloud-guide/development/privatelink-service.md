@@ -35,7 +35,7 @@ ht-degree: 0%
 - PrivateLink を使用して SSH 接続を確立することはできません。 [SSH キーの有効化 ](secure-connections.md) を参照してください。
 - Adobe Commerce サポートでは、最初のイネーブルメント以降のAWS PrivateLink の問題のトラブルシューティングには対応しません。
 - お客様は、独自のVPCの管理に関連するコストについて責任を負います。
-- [Fastly オリジンクローキング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html) が原因で、HTTPS プロトコル（ポート 443）を使用して、Azure プライベートリンク経由でクラウドインフラストラクチャ上のAdobe Commerceに接続することはできません。 この制限は、AWS PrivateLink には適用されません。
+- [Fastly オリジンクローキング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=ja) が原因で、HTTPS プロトコル（ポート 443）を使用して、Azure プライベートリンク経由でクラウドインフラストラクチャ上のAdobe Commerceに接続することはできません。 この制限は、AWS PrivateLink には適用されません。
 - PrivateDNS は使用できません。
 
 ## PrivateLink 接続タイプ
@@ -202,7 +202,7 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 
 ## PrivateLink 設定の変更
 
-既存の PrivateLink 設定を変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) します。 例えば、次のような変更をリクエストできます。
+既存の PrivateLink 設定を変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) します。 例えば、次のような変更をリクエストできます。
 
 - Cloud infrastructure Pro 実稼動環境またはステージング環境のAdobe Commerceから PrivateLink 接続を削除します。
 - Adobeエンドポイントサービスにアクセスするための顧客の Cloud Platform アカウント番号を変更します。

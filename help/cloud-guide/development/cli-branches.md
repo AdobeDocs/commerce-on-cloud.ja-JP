@@ -30,7 +30,7 @@ ht-degree: 0%
 
 **プロジェクトを環境 `master` 複製するには**:
 
-1. [ ファイル・システム所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) アカウントを使用して、ローカル・ワークステーションにログインします。
+1. [ ファイル・システム所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) アカウントを使用して、ローカル・ワークステーションにログインします。
 
 1. Web サーバーまたは仮想ホスト _docroot_ ディレクトリに移動します。
 

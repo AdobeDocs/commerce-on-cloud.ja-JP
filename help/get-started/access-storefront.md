@@ -25,8 +25,8 @@ Commerce管理パネルへの管理アクセス権を持つユーザーは、ユ
 
 >[!TIP]
 >
->パスワードのリセットに失敗した場合や管理パネルにログインできない場合は、管理者アクセス権を持つユーザーが SSH を使用してプロジェクトに接続し、`admin:user:create` CLI コマンドを使用して管理者ユーザーを追加できます。 [ インストール ガイド _の「管理者アカウントを作成、編集、またはロック解除する ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) を参照してください_。
+>パスワードのリセットに失敗した場合や管理パネルにログインできない場合は、管理者アクセス権を持つユーザーが SSH を使用してプロジェクトに接続し、`admin:user:create` CLI コマンドを使用して管理者ユーザーを追加できます。 [ インストール ガイド _の「管理者アカウントを作成、編集、またはロック解除する ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja) を参照してください_。
 
 ## サイトの正常性の監視
 
-[Site-Wide Analysis Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/intro) は、プロアクティブなセルフサービスツールで、Adobe Commerce インストールのセキュリティと操作性を確保するための詳細なシステムインサイトおよびレコメンデーションが含まれている中央リポジトリです。 24 時間 365 日、パフォーマンスの監視、レポート、アドバイスをリアルタイムで行うことで、潜在的な問題を特定し、サイトの正常性、安全性、アプリケーションの設定をより明確に把握します。 これにより、解決時間が短縮され、サイトの安定性とパフォーマンスが向上します。 [ 管理パネル ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel) から直接サイト全体の分析ツールにアクセスできます。
+[Site-Wide Analysis Tool](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/site-wide-analysis-tool/intro) は、プロアクティブなセルフサービスツールで、Adobe Commerce インストールのセキュリティと操作性を確保するための詳細なシステムインサイトおよびレコメンデーションが含まれている中央リポジトリです。 24 時間 365 日、パフォーマンスの監視、レポート、アドバイスをリアルタイムで行うことで、潜在的な問題を特定し、サイトの正常性、安全性、アプリケーションの設定をより明確に把握します。 これにより、解決時間が短縮され、サイトの安定性とパフォーマンスが向上します。 [ 管理パネル ](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel) から直接サイト全体の分析ツールにアクセスできます。

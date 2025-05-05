@@ -26,7 +26,7 @@ ht-degree: 0%
 
 _環境を設定_ ビューの **[!UICONTROL Outgoing emails]** 切り替えスイッチを使用して、メールのサポートを有効または無効にします。
 
-実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
+実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
 
 >[!TIP]
 >

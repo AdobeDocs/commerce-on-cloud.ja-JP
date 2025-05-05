@@ -39,7 +39,7 @@ Fastly は、Varnish と連携して高速キャッシュ機能と、静的ア�
 
 >[!NOTE]
 >
->クラウドインフラストラクチャー上のAdobe Commerceを使用して、Fastly Admin に直接アクセスすることはできません。 管理者を使用して、お使いの環境の Fastly 設定を確認および更新します。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信します。
+>クラウドインフラストラクチャー上のAdobe Commerceを使用して、Fastly Admin に直接アクセスすることはできません。 管理者を使用して、お使いの環境の Fastly 設定を確認および更新します。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信します。
 
 以下の方法を使用して、お使いの環境の Fastly サービス ID と API トークンを検索して保存します。
 
@@ -135,7 +135,7 @@ Fastly モジュールを有効にしたら、デフォルトの [VCL コード 
 
 ## SSL/TLS 証明書のプロビジョニング
 
-Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeでは、Pro Production （実稼動）、Staging （ステージング）、Starter Production （スターター）の各環境に対して 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[ クラウドインフラストラクチャー上のAdobe CommerceのAdobe SSL （TLS）証明書 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html) を参照してください。
+Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeでは、Pro Production （実稼動）、Staging （ステージング）、Starter Production （スターター）の各環境に対して 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[ クラウドインフラストラクチャー上のAdobe CommerceのAdobe SSL （TLS）証明書 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=ja) を参照してください。
 
 >[!NOTE]
 >
@@ -239,7 +239,7 @@ Fastly の初期セットアッププロセス中に、次の URL を使用し�
 
    >[!NOTE]
    >
-   >Cloud CLI を使用する代わりに、[Admin](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) からベース URL を更新できます
+   >Cloud CLI を使用する代わりに、[Admin](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ja) からベース URL を更新できます
 
 1. Web ブラウザーを再起動します。
 
@@ -314,4 +314,4 @@ Fastly は、Magento 2 用 Fastly CDN モジュールを更新して、問題の
 
 >[!TIP]
 >
-> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html) を参照してください。
+> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=ja) を参照してください。

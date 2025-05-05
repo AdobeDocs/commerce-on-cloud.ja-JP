@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Commerceのバージョンのアップグレード
 
-Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 プロジェクトをアップグレードする前に、最新のソフトウェア バージョン要件については [ インストール ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) ガイドの _システム要件_ を確認してください。
+Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 プロジェクトをアップグレードする前に、最新のソフトウェア バージョン要件については [ インストール ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) ガイドの _システム要件_ を確認してください。
 
 プロジェクトの設定に応じて、アップグレードタスクには次のものが含まれる場合があります。
 
@@ -289,15 +289,15 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
 
    - `.magento.env.yaml` ファイルに [ 品質向上パッチ ] が適用されている場合は、そのパッチを新しいバージョンにも適用できるかどうかを確認します。 `.magento.env.yaml` ファイルの `QUALITY_PATCHES` セクションから、適用できないパッチを削除します。
 
-   **方法 1**:[ 品質パッチのリリースノートで該当するバージョンを確認してください ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法 1**:[ 品質パッチのリリースノートで該当するバージョンを確認してください ](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法 2**:[ 使用可能なパッチおよびステータスの表示 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法 2**:[ 使用可能なパッチおよびステータスの表示 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法 3**:[ パッチの検索 ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+   **方法 3**:[ パッチの検索 ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)
 
 
 1. コードの変更を追加、コミットおよびプッシュします。

@@ -49,9 +49,9 @@ ht-degree: 0%
 
    - SSH を使用してリモートサーバーにログインし、以下を確認します。
 
-      - インデクサーのステータスを確認し、必要に応じてインデックスを再作成します。 _設定ガイド_ の [ インデクサーの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html) を参照してください。
+      - インデクサーのステータスを確認し、必要に応じてインデックスを再作成します。 _設定ガイド_ の [ インデクサーの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ja) を参照してください。
 
       - Adobe Commerce データベースの `cron` ログと `cron_schedule` テーブルを確認して cron ステータスを確認し、必要に応じて cron ジョブを再実行します。
-[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging) の _ログ_ を参照してください。
+[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ja#logging) の _ログ_ を参照してください。
 
    - ステージング環境および実稼動環境でアップグレード後のユーザー受け入れテスト UAT を完了し、サードパーティおよびカスタム拡張機能のアップグレードに関連する問題を修正します。

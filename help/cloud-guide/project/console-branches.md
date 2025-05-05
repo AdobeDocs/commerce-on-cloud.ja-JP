@@ -33,7 +33,7 @@ ht-degree: 0%
 
 お使いのアカウントは、限られた数の ![ アクティブなブランチ ](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} （非アクティブな）開発ブランチをサポートしています。 [!DNL Cloud Console] または Cloud CLI のみを使用してブランチを追加または削除することで、アクティブなブランチと非アクティブなブランチを管理します。 ブランチを削除する前に、そのブランチを非アクティブ化します。このブランチは、_環境_ リストに _非アクティブ_ として残ります。 後でブランチを再アクティブ化したり、環境設定または Cloud CLI を使用して [ ブランチを削除 ](../dev-tools/cloud-cli-overview.md#) することができます。
 
-開発用にさらにアクティブな環境が必要な場合は、[ サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信します。
+開発用にさらにアクティブな環境が必要な場合は、[ サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信します。
 
 **ブランチを追加するには**:
 

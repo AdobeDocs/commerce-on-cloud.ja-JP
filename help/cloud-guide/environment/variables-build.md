@@ -185,7 +185,7 @@ stage:
 - **デフォルト**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0 以降
 
-静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) をカスタマイズします。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) を参照してください。
+静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズします。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_ を使用します。
 

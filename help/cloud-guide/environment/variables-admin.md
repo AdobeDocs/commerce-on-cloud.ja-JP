@@ -18,7 +18,7 @@ ht-degree: 0%
 
 次の表の管理変数を使用して、Commerceのインストール中に管理者ユーザーの資格情報を上書きできます。
 
-インストール後に値を変更する場合は、SSH を使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンドを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) 管理者ユーザーの資格情報を作成または編集します。
+インストール後に値を変更する場合は、SSH を使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンドを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja) 管理者ユーザーの資格情報を作成または編集します。
 
 | 変数 | デフォルト | 説明 |
 | -------------- | --------------------------- | ----------- |

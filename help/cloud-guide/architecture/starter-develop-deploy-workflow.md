@@ -104,9 +104,9 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 設定に関する最適な情報については、Adobe Commerceのドキュメントとインストールされている拡張機能を参照してください。 開始に役立つリンクとアイデアを次に示します。
 
 - クラウド内の特定のベストプラクティスに関する [ ストア設定のベストプラクティス ](../store/best-practices.md)
-- ストア管理アクセス、名前、言語、通貨、ブランディング、サイト、ストア表示などの [ 基本設定 ](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)
-- [ テーマ ](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features):CSS やレイアウトを含むサイトやストアのルックアンドフィール用
-- 役割、ツール、通知およびデータベースの暗号化キーの [ システム設定 ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)
+- ストア管理アクセス、名前、言語、通貨、ブランディング、サイト、ストア表示などの [ 基本設定 ](https://experienceleague.adobe.com/ja/docs/commerce-admin/start/setup/store-details)
+- [ テーマ ](https://experienceleague.adobe.com/ja/docs/commerce-admin/content-design/content-menu#design-features):CSS やレイアウトを含むサイトやストアのルックアンドフィール用
+- 役割、ツール、通知およびデータベースの暗号化キーの [ システム設定 ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/guide-overview)
 - ドキュメントを使用した拡張機能の設定
 
 ストアの設定だけでなく、複数のサイトやストア、設定されたサービスなどをさらに設定できます。 詳しくは [ ストアの設定 ](../store/overview.md) を参照してください。
@@ -162,9 +162,9 @@ Adobe Commerce バージョン 2.2 以降を使用している場合、Configura
 
 実稼働データをテストデータとしてエクスポートし、ステージング環境と統合環境で使用できるようにするには、次の手順に従います。
 
-- [Adobe Commerce暗号化キーを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) お客様およびストアデータの保護されたバックアップを書き出す場合は、サポートユーティリティを実行し、CLI コマンドを実行します（推奨）。
+- [Adobe Commerce暗号化キーを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) お客様およびストアデータの保護されたバックアップを書き出す場合は、サポートユーティリティを実行し、CLI コマンドを実行します（推奨）。
 
-- [ データ収集 ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) データを生成および書き出すためのツール
+- [ データ収集 ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/support#data-collector) データを生成および書き出すためのツール
 
 このデータを移行するには、[ 静的ファイルおよびデータの移行およびデプロイ ](../deploy/staging-production.md#migrate-static-files) を参照してください。
 
@@ -172,7 +172,7 @@ Adobe Commerce バージョン 2.2 以降を使用している場合、Configura
 
 >[!NOTE]
 >
->データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [ サポートユーティリティの使用 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) または顧客データをスクラブするスクリプトの開発など、いくつかのオプションがあります。
+>データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [ サポートユーティリティの使用 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) または顧客データをスクラブするスクリプトの開発など、いくつかのオプションがあります。
 
 >[!WARNING]
 >
