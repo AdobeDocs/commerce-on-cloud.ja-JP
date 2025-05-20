@@ -2,16 +2,17 @@
 title: OpenSearch サービスの設定
 description: クラウドインフラストラクチャー上でAdobe Commerceの OpenSearch サービスを有効にする方法について説明します。
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
+source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
 # OpenSearch サービスの設定
 
-[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearchのライセンスの変更に伴い、Elasticsearch7.10.2 のオープンソースのフォークになりました。 詳しくは、GitHub の [OpenSource プロジェクト ](https://github.com/opensearch-project) を参照してください。
+[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearch 7.10.2 のオープンソースのフォークで、Elasticsearchのライセンスの変更に従っています。 詳しくは、GitHub の [OpenSource プロジェクト ](https://github.com/opensearch-project) を参照してください。
 
 {{elasticsearch-support}}
 
@@ -26,11 +27,11 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 >[!TIP]
 >
->Adobeでは、Adobe Commerce アプリケーションにサードパーティの検索ツールを設定する予定がある場合でも、クラウドインフラストラクチャプロジェクトでAdobe Commerce用に常に OpenSearch を設定することをお勧めします。 OpenSearch を設定すると、サードパーティの検索ツールでエラーが発生した場合にフォールバックオプションを利用できます。
+>Adobeでは、Adobe Commerce アプリケーションにサードパーティの検索ツールを使用する予定がある場合でも、クラウドインフラストラクチャプロジェクトでAdobe Commerce用に常に OpenSearch を設定することをお勧めします。 OpenSearch を設定すると、サードパーティの検索ツールでエラーが発生した場合にフォールバックオプションを利用できます。
 
 **OpenSearch を有効にするには**:
 
-1. スターターおよび Pro 統合環境の場合は、適切なバージョンと割り当てられたディスク容量（MB 単位）を使用して `opensearch` サービスを `.magento/services.yaml` ファイルに追加します。 この場合、バージョン 2 が適切です。 クラウドインフラストラクチャでは最新バージョンの OpenSearch が使用されるので、マイナーバージョンは必要ありません。
+1. 統合環境の場合、適切なバージョンと割り当てられたディスク領域（MB 単位）を使用して `opensearch` サービスを `.magento/services.yaml` ファイルに追加します。 この場合、バージョン 2 が適切です。 マイナーバージョンは必要ありません。
 
    ```yaml
    opensearch:
@@ -38,7 +39,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
 
 1. `.magento.app.yaml` ファイルの `relationships` プロパティを設定または確認します。
 
@@ -91,7 +92,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 - **プロジェクトのアップグレード** – 新しいアプリケーションバージョンの OpenSearch PHP クライアントが、クラウドインフラストラクチャにインストールされた OpenSearch サービスバージョンと互換性があることを確認します。
 
-サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド _の [&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) システム要件_ を参照してください。
+サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド _の [](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) システム要件_ を参照してください。
 
 **OpenSearch ソフトウェアの互換性を確認するには**:
 
