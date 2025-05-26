@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->セキュリティについて詳しくは、[ セキュリティのローンチチェックリスト ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration) を参照してください。
+>セキュリティについて詳しくは、[ セキュリティのローンチチェックリスト ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration) を参照してください。
 
 [Commerceのクラウドアーキテクチャ ](architecture/tech-stack.md) で、[ テクノロジースタック ](architecture/cloud-architecture.md) を詳しく表示するか、特定の機能とサポートされる製品について詳しく説明します。
 
@@ -60,5 +60,5 @@ ht-degree: 3%
 
 - [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
 
-- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League） – [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
+- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） – [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
 
