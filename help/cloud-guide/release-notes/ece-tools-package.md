@@ -2,11 +2,11 @@
 title: ECE-Tools リリースノート
 description: ECE-Tools パッケージの最新の改善点のリストを確認してください。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-24T00:00:00Z
+last-substantial-update: 2024-05-27T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: dff5792f310382eb97c9595da08faac90e602126
+source-git-commit: 70664897a10a59668fad74565c04b4ad72474736
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '3166'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,16 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.4 {#latest}
+## v2002.2.5 {#latest}
+
+リリース日：2025 年 5 月 27 日（PT）
+
+- ![fix icon](../../assets/new.svg)**Extended Valkey compatibility**-Adobe Commerceにおける Extended Valkey compatibility<!-- MCLOUD-13595	 - -->
+- ![ 修正アイコン ](../../assets/fix.svg)**更新された RabbitMQ バリデーター**-RabbitMQ の更新されたバリデーター <!-- MCLOUD-13589	 - -->
+- ![ 修正アイコン ](../../assets/fix.svg) **MariaDB バリデーターを更新**-MariaDB 10.11 用 ece-tools バリデーターを更新。<!-- MCLOUD-13593	 - -->
+- ![ 修正アイコン ](../../assets/fix.svg)**拡張 Opensearch2 互換性** 最新の 2.4.4 バージョンと互換性のある Opensearch2 を実現。<!-- MCLOUD-13710	 - -->
+
+## v2002.2.4
 
 リリース日：2025 年 4 月 24 日（PT）
 
