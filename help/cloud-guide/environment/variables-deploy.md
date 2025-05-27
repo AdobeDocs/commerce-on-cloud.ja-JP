@@ -63,7 +63,7 @@ stage:
             database: 11
 ```
 
-次の例では、_設定ガイド_ で定義されている [Redis プリロード機能 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature) を使用しています。
+次の例では、_設定ガイド_ で定義されている [Redis プリロード機能 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=ja#redis-preload-feature) を使用しています。
 
 ```yaml
 stage:
@@ -98,7 +98,7 @@ stage:
 - **デフォルト**—`true`
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-ビルドまたはデプロイ フェーズで生成された [ 静的コンテンツ ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) のクリーニングを有効または無効にします。 開発では、デフォルト値 _true_ をベストプラクティスとして使用します。
+ビルドまたはデプロイ フェーズで生成された [ 静的コンテンツ ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) のクリーニングを有効または無効にします。 開発では、デフォルト値 _true_ をベストプラクティスとして使用します。
 
 - **`true`** – 更新された静的コンテンツをデプロイする前に、既存の静的コンテンツをすべて削除します。
 - **`false`** – 生成されたコンテンツに新しいバージョンが含まれている場合にのみ、既存の静的コンテンツ・ファイルが配置によって上書きされます。
@@ -157,7 +157,7 @@ stage:
       consumers: []
 ```
 
-デフォルトでは、デプロイメントプロセスによって `env.php` ファイル内のすべての設定が上書きされます。 オンプレミスのAdobe Commerceの場合は、_Commerce設定ガイド_ の [ メッセージキューの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) を参照してください。
+デフォルトでは、デプロイメントプロセスによって `env.php` ファイル内のすべての設定が上書きされます。 オンプレミスのAdobe Commerceの場合は、_Commerce設定ガイド_ の [ メッセージキューの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=ja) を参照してください。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -187,7 +187,7 @@ stage:
 
 >[!WARNING]
 >
->環境のソースコードリポジトリで鍵が公開されないようにするには、`.magento.env.yaml` ファイルではなく [!DNL Cloud Console] を使用して `CRYPT_KEY` 値を設定します。 [ 環境およびプロジェクト変数の設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment) を参照してください。
+>環境のソースコードリポジトリで鍵が公開されないようにするには、`.magento.env.yaml` ファイルではなく [!DNL Cloud Console] を使用して `CRYPT_KEY` 値を設定します。 [ 環境およびプロジェクト変数の設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=ja#configure-environment) を参照してください。
 
 インストール処理を行わずに、ある環境から別の環境にデータベースを移動する場合は、対応する暗号化情報が必要です。 Adobe Commerceは、[!DNL Cloud Console] で設定された暗号化キーの値を `env.php` ファイルの `crypt/key` 値として使用します。
 
@@ -278,7 +278,7 @@ stage:
 
 >[!NOTE]
 >
->3 つのノード（または 3 つのサービスノードを [ スケールアーキテクチャ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier) 上に持つ Pro ステージング/実稼動クラスターでは、`indices_settings` を次のように設定する必要があります。
+>3 つのノード（または 3 つのサービスノードを [ スケールアーキテクチャ ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier) 上に持つ Pro ステージング/実稼動クラスターでは、`indices_settings` を次のように設定する必要があります。
 >
 >```yaml
 >           indices_settings:
@@ -357,7 +357,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html) ロックの設定 _を参照してください_。
+[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=ja) ロックの設定 _を参照してください_。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -443,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -495,7 +495,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -634,7 +634,7 @@ stage:
 - **デフォルト**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0 以降
 
-静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) をカスタマイズできます。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) を参照してください。
+静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズできます。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_ を使用します。
 
