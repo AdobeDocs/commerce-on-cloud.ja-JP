@@ -4,9 +4,10 @@ description: クラウドインフラストラクチャー上でのAdobe Commerc
 feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
+source-git-commit: 275a2a5c58b7c5db12f8f31bffed85004e77172f
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2483'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ stage:
             database: 11
 ```
 
-次の例では、_設定ガイド_ で定義されている [Redis プリロード機能 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=ja#redis-preload-feature) を使用しています。
+次の例では、_設定ガイド_ で定義されている [Redis プリロード機能 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature) を使用しています。
 
 ```yaml
 stage:
@@ -97,7 +98,7 @@ stage:
 - **デフォルト**—`true`
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-ビルドまたはデプロイ フェーズで生成された [ 静的コンテンツ ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) のクリーニングを有効または無効にします。 開発では、デフォルト値 _true_ をベストプラクティスとして使用します。
+ビルドまたはデプロイ フェーズで生成された [ 静的コンテンツ ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) のクリーニングを有効または無効にします。 開発では、デフォルト値 _true_ をベストプラクティスとして使用します。
 
 - **`true`** – 更新された静的コンテンツをデプロイする前に、既存の静的コンテンツをすべて削除します。
 - **`false`** – 生成されたコンテンツに新しいバージョンが含まれている場合にのみ、既存の静的コンテンツ・ファイルが配置によって上書きされます。
@@ -156,7 +157,7 @@ stage:
       consumers: []
 ```
 
-デフォルトでは、デプロイメントプロセスによって `env.php` ファイル内のすべての設定が上書きされます。 オンプレミスのAdobe Commerceの場合は、_Commerce設定ガイド_ の [ メッセージキューの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=ja) を参照してください。
+デフォルトでは、デプロイメントプロセスによって `env.php` ファイル内のすべての設定が上書きされます。 オンプレミスのAdobe Commerceの場合は、_Commerce設定ガイド_ の [ メッセージキューの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) を参照してください。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -186,7 +187,7 @@ stage:
 
 >[!WARNING]
 >
->環境のソースコードリポジトリで鍵が公開されないようにするには、`.magento.env.yaml` ファイルではなく [!DNL Cloud Console] を使用して `CRYPT_KEY` 値を設定します。 [ 環境およびプロジェクト変数の設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=ja#configure-environment) を参照してください。
+>環境のソースコードリポジトリで鍵が公開されないようにするには、`.magento.env.yaml` ファイルではなく [!DNL Cloud Console] を使用して `CRYPT_KEY` 値を設定します。 [ 環境およびプロジェクト変数の設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment) を参照してください。
 
 インストール処理を行わずに、ある環境から別の環境にデータベースを移動する場合は、対応する暗号化情報が必要です。 Adobe Commerceは、[!DNL Cloud Console] で設定された暗号化キーの値を `env.php` ファイルの `crypt/key` 値として使用します。
 
@@ -277,7 +278,7 @@ stage:
 
 >[!NOTE]
 >
->3 つのノード（または 3 つのサービスノードを [ スケールアーキテクチャ ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier) 上に持つ Pro ステージング/実稼動クラスターでは、`indices_settings` を次のように設定する必要があります。
+>3 つのノード（または 3 つのサービスノードを [ スケールアーキテクチャ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier) 上に持つ Pro ステージング/実稼動クラスターでは、`indices_settings` を次のように設定する必要があります。
 >
 >```yaml
 >           indices_settings:
@@ -302,7 +303,7 @@ stage:
 **既知の制限事項**:
 
 - 検索エンジンを `elasticsuite` 以外のタイプに変更すると、デプロイエラーが発生し、適切な検証エラーが表示されます
-- Elasticsearchサービスを削除すると、デプロイが失敗し、適切な検証エラーが表示されます
+- Elasticsearch サービスを削除すると、デプロイが失敗し、適切な検証エラーが表示されます
 
 >[!NOTE]
 >
@@ -315,8 +316,8 @@ stage:
 
 ステージング環境および統合環境にデプロイする場合に、Google Analyticsを有効または無効にします。 デフォルトでは、Google Analyticsは実稼動環境でのみ true になります。 この値を `true` に設定して、ステージング環境と統合環境でGoogle Analyticsを有効にします。
 
-- **`true`** - ステージング環境および統合環境でGoogle Analyticsを使用可能にします。
-- **`false`** - ステージング環境および統合環境でのGoogle Analyticsを使用不可にします。
+- **`true`** - ステージング環境および統合環境でGoogle Analyticsを有効にします。
+- **`false`** - ステージング環境および統合環境でGoogle Analyticsを無効にします。
 
 `ENABLE_GOOGLE_ANALYTICS` 環境変数を `.magento.env.yaml` ファイルの `deploy` ステージに追加します。
 
@@ -328,7 +329,7 @@ stage:
 
 >[!NOTE]
 >
->デプロイプロセスでは、常に実稼動環境でGoogle Analyticsを有効にします。
+>デプロイプロセスにより、実稼動環境でGoogle Analyticsが常に有効になります。
 
 ## `FORCE_UPDATE_URLS`
 
@@ -348,7 +349,7 @@ stage:
 - **デフォルト**—`file`
 - **バージョン** - Adobe Commerce 2.2.5 以降
 
-ロックプロバイダーは、重複した cron ジョブや cron グループの起動を防ぎます。 実稼動環境で `file` lock プロバイダーを使用します。 スターターMAGENTOと Pro 統合環境は、[Environment_CLOUD_LOCKS_DIR](variables-cloud.md) 変数を使用しないので、`ece-tools` は `db` ロックプロバイダーを自動的に適用します。
+ロックプロバイダーは、重複した cron ジョブや cron グループの起動を防ぎます。 実稼動環境で `file` lock プロバイダーを使用します。 スターター環境と Pro 統合環境では、[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md) 変数が使用されないので、`db` ロックプロバイダー `ece-tools` 自動的に適用されます。
 
 ```yaml
 stage:
@@ -356,7 +357,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=ja) ロックの設定 _を参照してください_。
+[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html) ロックの設定 _を参照してください_。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -442,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2}Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の {configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -451,7 +452,7 @@ stage:
 
 >[!WARNING]
 >
->[ スケール _アーキテクチャ_ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Redis 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 別の方法として、AdobeはAdobe Commerce 2.3.5 以降を使用し、新しい Redis バックエンド設定を実装し、Redis 用の L2 キャッシングを実装することをお勧めします。
+>[ スケール _アーキテクチャ_ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Redis 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 別の方法として、Adobeでは、Adobe Commerce 2.3.5 以降を使用し、新しい Redis バックエンド設定を実装し、Redis 用の L2 キャッシングを実装することをお勧めします。
 
 >[!TIP]
 >
@@ -468,6 +469,58 @@ stage:
 `.magento.app.yaml` ファイルと `services.yaml` ファイルに Redis サービスが設定されている必要があります。
 
 [ECE-Tools バージョン 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) 以降では、よりフォールトトレラントな設定を使用します。 Adobe Commerceが Redis _slave_ インスタンスからデータを読み取れない場合は、Redis _master_ インスタンスからデータを読み取ります。
+
+読み取り専用接続は、統合環境では使用できません。また、[`CACHE_CONFIGURATION` 変数 ](#cache_configuration) を使用しても使用できません。
+
+## `VALKEY_BACKEND`
+
+- **デフォルト**—`Cm_Cache_Backend_Redis`
+- **バージョン** - Adobe Commerce 2.8.0 以降
+
+`VALKEY_BACKEND` は、Valkey キャッシュのバックエンドモデル設定を指定します。
+
+Adobe Commerce バージョン 2.8.0 以降には、次のバックエンドモデルが含まれています。
+
+- `Cm_Cache_Backend_Redis`
+- `\Magento\Framework\Cache\Backend\Redis`
+- `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
+
+次の例は、`VALKEY_BACKEND` を設定する方法を示しています。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+```
+
+>[!NOTE]
+>
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2}Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の {configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+
+## `VALKEY_USE_SLAVE_CONNECTION`
+
+- **デフォルト**—`false`
+- **バージョン** - Adobe Commerce 2.4.8 以降
+
+>[!WARNING]
+>
+>[ スケール _アーキテクチャ_ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Valkey 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 または、Adobeでは、Adobe Commerce 2.4.8 以降を使用し、新しい Valkey バックエンド設定を実装し、Valkey の L2 キャッシングを実装することをお勧めします。
+
+>[!TIP]
+>
+>`VALKEY_USE_SLAVE_CONNECTION` 変数は、クラウドインフラストラクチャー上のAdobe Commerce ステージング環境および実稼動 Pro クラスター環境でのみサポートされており、スタータープロジェクトではサポートされていません。
+
+Adobe Commerceは、複数の Redis インスタンスを非同期で読み取ることができます。 `VALKEY_USE_SLAVE_CONNECTION` Redis インスタンスへの _読み取り専用_ 接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、`true` に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `env.php` ファイルから削除するには、`VALKEY_USE_SLAVE_CONNECTION` を `false` に設定します。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_USE_SLAVE_CONNECTION: true
+```
+
+`.magento.app.yaml` ファイルと `services.yaml` ファイルに Redis サービスが設定されている必要があります。
+
+[ECE-Tools バージョン 2002.0.18](../release-notes/cloud-release-archive.md#v2002018) 以降では、よりフォールトトレラントな設定を使用します。 Adobe Commerceが Valkey _slave_ インスタンスからデータを読み取れない場合は、Redis _master_ インスタンスからデータを読み取ります。
 
 読み取り専用接続は、統合環境では使用できません。また、[`CACHE_CONFIGURATION` 変数 ](#cache_configuration) を使用しても使用できません。
 
@@ -581,7 +634,7 @@ stage:
 - **デフォルト**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0 以降
 
-静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズできます。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
+静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) をカスタマイズできます。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_ を使用します。
 

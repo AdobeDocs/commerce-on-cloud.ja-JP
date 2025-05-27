@@ -2,7 +2,8 @@
 title: Valkey サービスの設定
 description: Cloud Infrastructure 上のAdobe Commerceのバックエンドキャッシュソリューションとして Valkey を設定し、最適化する方法について説明します。
 feature: Cloud, Cache, Services
-source-git-commit: f73c742cbdbf56ac073802074d5a9cd921591f0f
+exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
+source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) は、Adobe Commerceがデフォルトで使用する `Zend Framework Zend_Cache_Backend_File` に代わるオプションのバックエンドキャッシュソリューションです。
 
-_設定ガイド_ の [Valkey の設定 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ja){target="_blank"} を参照してください。
+[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"} の _Valkey の設定_ を参照してください。
 
 {{service-instruction}}
 
@@ -59,7 +60,7 @@ Valkey 関係の名前が `valkey` の場合は、`valkey-cli` ツールを使�
 1. ホストへの SSH トンネルを開きます。
 
    ```bash
-   valkey-cli -h valkeycache.internal
+   valkey-cli -h valkey.internal
    ```
 
 ## インストール済みの Valkey バージョンの取得
@@ -67,7 +68,7 @@ Valkey 関係の名前が `valkey` の場合は、`valkey-cli` ツールを使�
 次のコマンドを使用して、統合環境にインストールされている Valkey のバージョンを取得します。
 
 ```bash
-valkey-cli -h valkeycache.internal info | grep version
+valkey-cli -h valkey.internal info | grep version
 ```
 
 応答：
