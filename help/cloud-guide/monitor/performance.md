@@ -16,7 +16,7 @@ ht-degree: 0%
 以下のサービスを使用して、クラウド環境のパフォーマンスを監視できます。
 
 - [ 正常性通知 ](../integrations/health-notifications.md) - Starter および Pro 統合環境でディスク容量アラートを提供する統合。
-- [Adobe Commerceの監視ガイド ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) – 複数のソースからのログデータを組み合わせたすべてのCommerce サイトの包括的なモニタリングにより、Adobe Commerce サイトのパフォーマンスをより適切に管理し、問題を診断できます。
+- [Adobe Commerceの監視ガイド ](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) – 複数のソースからのログデータを組み合わせたすべてのCommerce サイトの包括的なモニタリングにより、Adobe Commerce サイトのパフォーマンスをより適切に管理し、問題を診断できます。
 - [ 運用上のテレメトリサービス ](operational-telemetry.md) - ストアフロント上のクライアントサイドトラフィックのパフォーマンス監視。
 
 ## New Relic サービス
