@@ -304,7 +304,7 @@ ht-degree: 0%
 
       - Elasticsearch 6.8、7.2、7.5、7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860--> がサポートされるようになりました。
 
-      - Docker コンポーズ設定ファイルを生成する際に ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)[Elasticsearch コンテナ設定をカスタマイズする機能が追加されました。<!--MCLOUD-3059-->
+      - Docker コンポーズ設定ファイルを生成する際に [&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)Elasticsearch コンテナ設定をカスタマイズする機能が追加されました。<!--MCLOUD-3059-->
 
       - Docker Compose 設定ファイルを生成するためのサービス設定オプションに `--no-es` オプションを追加しました。 Elasticsearch コンテナのインストールをスキップして MySQL 検索を使用する場合は、このオプションを使用します。 このオプションは、Adobe Commerce バージョン 2.3.5 以前でのみサポートされています。<!--MCLOUD-3766-->
 
