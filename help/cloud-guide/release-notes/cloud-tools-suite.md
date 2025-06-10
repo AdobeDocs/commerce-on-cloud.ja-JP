@@ -3,7 +3,7 @@ title: Cloud Tools Suite のリリースノート
 description: Adobe Commerce用 Cloud Tools スイートの最新の改善点について説明します。
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
-source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
+source-git-commit: 175fbddd496480a93c84e50ea731e18300c6c8b1
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 | リリースノート | バージョン | 説明 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
 | パッケ [`ece-tools` ジ ](ece-tools-package.md) | 2002.2.6 | クラウドプロジェクトの管理とデプロイを行うために設計された一連のスクリプトとツール | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.6) |
-| [Commerceのクラウドパッチ ](cloud-patches.md) | 1.1.8 | すべてのAdobe Commerce バージョンとクラウド環境の統合を改善するパッチセット。 このパッケージには、Adobe Commerceのパッチと、`ece-tools` を使用してデプロイする際に適用される使用可能なホットフィックスが含まれています | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.8) |
+| [Commerceのクラウドパッチ ](cloud-patches.md) | 1.1.9 | すべてのAdobe Commerce バージョンとクラウド環境の統合を改善するパッチセット。 このパッケージには、Adobe Commerceのパッチと、`ece-tools` を使用してデプロイする際に適用される使用可能なホットフィックスが含まれています | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.9) |
 | [Commerce用の Cloud Docker](cloud-docker.md) | 1.4.3 | Adobe Commerceをローカルクラウド環境にデプロイするための Docker イメージの機能および設定ファイル | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.3) |
 | [Commerceのクラウドコンポーネント ](cloud-components.md) | 1.1.2 | クラウドインフラストラクチャにデプロイされたサイト向けに拡張されたAdobe Commerce コア機能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.2) |
 
