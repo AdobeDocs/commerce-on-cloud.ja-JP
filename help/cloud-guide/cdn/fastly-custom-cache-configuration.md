@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## TLS を強制
 
-Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2 _ドキュメントの_ Fastly CDN モジュール ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly [Force TLS ガイド）を参照してください。
+Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2 _ドキュメントの_ Fastly CDN モジュール [&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly Force TLS ガイド）を参照してください。
 
 >[!NOTE]
 >
