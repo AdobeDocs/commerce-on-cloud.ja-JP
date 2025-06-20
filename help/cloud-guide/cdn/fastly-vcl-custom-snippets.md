@@ -2,9 +2,10 @@
 title: カスタム VCL スニペットの基本を学ぶ
 description: Varnish Control Language コードスニペットを使用して、Adobe Commerce用の Fastly サービス設定をカスタマイズする方法について説明します。
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
+source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2037'
 ht-degree: 0%
 
 ---
@@ -85,9 +86,9 @@ Edgeの辞書とアクセス制御リスト（ACL）と共にカスタム VCL �
 | `API_KEY` | Fastly アカウントにアクセスするための API キー。 [ 資格情報の取得 ](fastly-configuration.md) を参照してください。 |
 | `active` | スニペットまたはバージョンのアクティブなステータス。 `true` または `false` を返します。 true の場合、スニペットまたはバージョンは使用中です。 バージョン番号を使用してアクティブなスニペットのクローンを作成します。 |
 | `content` | 実行する VCL コードのスニペット。 Fastly では、すべての VCL 言語機能をサポートしているわけではありません。 また、Fastly は、カスタム機能を備えた拡張機能を提供します。 サポートされる機能の詳細については、[Fastly VCL プログラミングリファレンス ](https://docs.fastly.com/vcl/reference/) を参照してください。 |
-| `dynamic` | スニペットの動的ステータス。 Fastly サービス設定のバージョン管理された VCL に含まれる [ 通常のスニペット ](https://docs.fastly.com/en/guides/about-vcl-snippets) の `false` を返します。 新しい VCL バージョンを必要とせずに変更およびデプロイが可能な [&#128279;](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/) 動的スニペット  の `true` を返します。 |
+| `dynamic` | スニペットの動的ステータス。 Fastly サービス設定のバージョン管理された VCL に含まれる [ 通常のスニペット ](https://docs.fastly.com/en/guides/about-vcl-snippets) の `false` を返します。 新しい VCL バージョンを必要とせずに変更およびデプロイが可能な ](https://docs.fastly.com/vcl/vcl-snippets/using-dynamic-vcl-snippets/) 動的スニペット [ の `true` を返します。 |
 | `number` | スニペットが含まれている VCL バージョン番号。 Fastly では、サンプル値に *編集可能なバージョン #* を使用します。 API からカスタムスニペットを追加する場合は、API リクエストにバージョン番号を含めてください。 管理者からカスタム VCL を追加すると、のバージョンが提供されます。 |
-| `priority` | カスタム VCL スニペット コードを実行するタイミングを指定する `1` ～ `100` の数値。 優先度の値が小さいスニペットが最初に実行されます。 指定しない場合、`priority` 値はデフォルトで `100` になります。<p>優先順位の値が `5` のカスタム VCL スニペットは直ちに実行されます。これは、リクエストルーティング（ブロックおよび許可リストとリダイレクト）を実装する VCL コードに最適です。 優先順位 `100` は、デフォルトの VCL スニペットコードを上書きする場合に最適です。<p>MagentoFastly モジュールに含まれているすべての [ デフォルトの VCL スニペット ](fastly-configuration.md#upload-vcl-snippets) には `priority=50` があります。<ul><li>`100` などの高い優先度を割り当てて、他のすべての VCL 関数の後にカスタム VCL コードを実行し、デフォルトの VCL コードをオーバーライドします。</li></ul> |
+| `priority` | カスタム VCL スニペット コードを実行するタイミングを指定する `1` ～ `100` の数値。 優先度の値が小さいスニペットが最初に実行されます。 指定しない場合、`priority` 値はデフォルトで `100` になります。<p>優先順位の値が `5` のカスタム VCL スニペットは直ちに実行されます。これは、リクエストルーティング（ブロックおよび許可リストとリダイレクト）を実装する VCL コードに最適です。 優先順位 `100` は、デフォルトの VCL スニペットコードを上書きする場合に最適です。<p>Magento-Fastly モジュールに含まれているすべての [ デフォルト VCL スニペット ](fastly-configuration.md#upload-vcl-snippets) には、`priority=50` が含まれています。<ul><li>`100` などの高い優先度を割り当てて、他のすべての VCL 関数の後にカスタム VCL コードを実行し、デフォルトの VCL コードをオーバーライドします。</li></ul> |
 | `service_id` | 特定のステージング環境または実稼動環境の Fastly サービス ID。 この ID は、プロジェクトがクラウドインフラストラクチャ上のAdobe Commerce[Fastly サービスアカウント ](fastly.md#fastly-service-account-and-credentials) に追加されたときに割り当てられます。 |
 | `type` | 生成されたスニペットを挿入する場所を指定します。例えば、`init` （サブルーチンの上）や `recv` （サブルーチン内）などです。 詳しくは、Fastly [VCL スニペット ](https://docs.fastly.com/api/config#api-section-snippet) リファレンスを参照してください。 |
 
@@ -316,3 +317,16 @@ Fastly サービスから `500 Internal Server Error` 応答を受け取った�
 - **[ デフォルトの Fastly VCL コードの値を上書き ](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   更新された値でスニペットを作成し、`100` の優先度を割り当てます。
+
+## Commerce管理者で表示/変更できないスニペット
+
+一部のスニペットは、Commerce Admin 内で直接表示または変更することはできません。 例えば、[ 動的スニペット ](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets) です。 「カスタム VCL スニペット」セクションには、クラウドサポートチームによって [Fastly 管理ダッシュボード ](fastly.md#fastly-service-account-and-credentials) に直接追加されたスニペットは表示されません。
+
+
+**クラウドサポートチームによって追加されたスニペットを確認するには：**
+
+1. 「**ツール**」セクションに移動します。
+
+1. _バージョン履歴&#x200B;**の横にある**すべてのバージョンをリスト_ をクリックします。
+
+1. 該当する VCL バージョンの横にある目のアイコンをクリックして、既存のスニペットを表示します。
