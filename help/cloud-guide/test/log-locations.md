@@ -3,9 +3,9 @@ title: ログの表示と管理
 description: クラウドインフラストラクチャで使用できるログファイルのタイプと、それらのログファイルの場所について説明します。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
+source-git-commit: 731cc36816afdb5374269e871d337e056a71c050
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -77,13 +77,13 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >Pro ステージング環境および Pro 実稼動環境では、固定ファイル名のログファイルに対して、自動ログローテーション、圧縮、削除が有効になります。 各ログ ファイル タイプには、回転パターンと有効期間があります。
->環境のログのローテーションと圧縮ログの存続期間について詳しくは、`/etc/logrotate.conf` と `/etc/logrotate.d/<various>` を参照してください。
->ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+>>環境のログのローテーションと圧縮ログの存続期間について詳しくは、`/etc/logrotate.conf` と `/etc/logrotate.d/<various>` を参照してください。
+>>ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
 
 >[!TIP]
 >
 >ログのローテーションは、Pro 統合環境では設定できません。
->Pro 統合の場合、カスタムソリューション/スクリプトを実装し、必要に応じてスクリプトを実行するように [cron を設定 ](../application/crons-property.md) する必要があります。
+>>Pro 統合の場合、カスタムソリューション/スクリプトを実装し、必要に応じてスクリプトを実行するように [cron を設定 ](../application/crons-property.md) する必要があります。
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス ](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja) を参照してください。
+ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス ](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) を参照してください。
 
 ## アプリケーションログ
 
@@ -219,13 +219,17 @@ type: warning
 
 ### アーカイブしたログファイル
 
-アプリケーションログは 1 日に 1 回の頻度で圧縮およびアーカイブされ、**30 日間** 保持されます。 圧縮ログには、`Number of Days Ago + 1` に対応する一意の ID を使用して名前が付けられます。 例えば、Pro 実稼動環境では、過去 21 日間の PHP アクセスログが次のように保存され、名前が付けられます。
+アプリケーションログは 1 日に 1 回の頻度で圧縮およびアーカイブされ **デフォルトでは** 365 日間保持されます（Pro ステージングクラスターと実稼動クラスターの場合）。また、ログのローテーションは、すべての統合/スターター環境で使用できるわけではありません。 圧縮ログには、`Number of Days Ago + 1` に対応する一意の ID を使用して名前が付けられます。 例えば、Pro 実稼動環境では、過去 21 日間の PHP アクセスログが次のように保存され、名前が付けられます。
 
 ```
 /var/log/platform/<project-ID>/php.access.log.22.gz
 ```
 
 アーカイブされたログ・ファイルは、圧縮前に元のファイルがあったディレクトリに常に保存されます。
+
+[ サポートチケットを送信 ](https://experienceleague.adobe.com/home?support-tab=home#support) して、ログ保持期間またはログ回転設定の変更をリクエストできます。 保存期間は最大 365 日まで延長できます。また、ストレージ・クォータを節約するために保存期間を短縮することも、ログ回転構成にログ・パスを追加することもできます。 これらの変更は、ステージング環境および実稼動環境のクラスターで使用できます。
+
+例えば、ログを `var/log/mymodule` ディレクトリに保存するカスタムパスを作成した場合、このパスのログのローテーションをリクエストできます。 ただし、現在のインフラストラクチャでは、ログローテーションを正しく設定するために、Adobeの一貫したファイル名が必要です。 Adobeでは、設定の問題を回避するために、ログ名の一貫性を維持することをお勧めします。
 
 >[!NOTE]
 >
