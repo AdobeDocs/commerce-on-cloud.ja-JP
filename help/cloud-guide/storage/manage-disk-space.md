@@ -2,9 +2,10 @@
 title: ディスク容量の管理
 description: コマンドラインインターフェイスを使用してディスク容量を管理する方法を説明します。
 feature: Cloud, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
+source-git-commit: b8cabaad4b7805858563cecbe5ffc2fdb9aeac58
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ _「監視により、クラスター（project-id-environment）上のファイ
 
 >[!TIP]
 >
->このような自動的な増加を避けるために、ストレージ容量を定期的に監視し、90% 未満で十分に維持することをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。
+>Adobeでは、このような自動的な増加を避けるために、ストレージ容量を定期的にモニタリングし、90% 未満に保つことをお勧めします。 一度割り当てると、ステージングと実稼働用に増えたストレージは永続的に使用でき、元に戻すことはできません。
 
 ## 統合環境を確認
 
@@ -131,7 +132,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->プロ実稼動環境およびステージング環境の場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズは特定の間隔でのみ増加するので、現在のディスク容量の使用状況に応じて、サポートはディスク容量の割り当てを最小 10 GB 増やすことをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配分することはできません。 ファイルストレージ領域を追加するには、MySQL に割り当てるディスク領域を減らします。
+>プロ実稼動環境およびステージング環境の場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズは特定の間隔でのみ増加するので、現在のディスク容量の使用状況に応じて、サポートはディスク容量の割り当てを最小 10 GB 増やすことをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配分することはできません。 ファイルストレージ領域を追加するには、MySQL に割り当てるディスク領域を減らします。
 
 ### アプリケーションのディスク容量
 
@@ -187,7 +188,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク容量の監視
 
-Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスクスペースやその他のパフォーマンスインジケーターを監視できます。 詳しくは、[ 管理アラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。 詳しいガイダンスについては、[ データベースパフォーマンスの問題を解決するためのベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ja) を参照してください。
+Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスクスペースやその他のパフォーマンスインジケーターを監視できます。 詳しくは、[ 管理アラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。 詳しいガイダンスについては、[ データベースパフォーマンスの問題を解決するためのベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html) を参照してください。
 
 ## スペースが残っていません
 
