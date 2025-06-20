@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->クラウドプラットフォームにデプロイされたAdobe Commerce サイトの PCI コンプライアンスを維持するには、スターターメインブランチ、実稼動、ステージング環境に Fastly を設定します。 ヘッドレスデプロイメントでAdobe Commerceを使用する場合は、Fastly を使用してGraphQLの応答をキャッシュすることを強くお勧めします。 [2}GraphQL開発者ガイド ](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly) の「Fastly でのキャッシュ *」を参照してください。*
+>クラウドプラットフォームにデプロイされたAdobe Commerce サイトの PCI コンプライアンスを維持するには、スターターメインブランチ、実稼動、ステージング環境に Fastly を設定します。 ヘッドレスデプロイメントでAdobe Commerceを使用する場合は、Fastly を使用してGraphQLの応答をキャッシュすることを強くお勧めします。 [2&rbrace;GraphQL開発者ガイド ](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly) の「Fastly でのキャッシュ *」を参照してください。*
 
 Fastly は、クラウドインフラストラクチャプロジェクト上のAdobe Commerceのコンテンツ配信操作を最適化および保護するために、次のサービスを提供しています。 これらのサービスは、クラウドインフラストラクチャー上のAdobe Commerceに追加費用なしで含まれています。
 
@@ -118,7 +118,7 @@ DDOS 保護は、Fastly CDN サービスに組み込まれています。 Adobe 
 
   Fastly は、キャッシュレイヤーで TCP レベルの攻撃を管理します。 この戦略は、SYN フラッド攻撃とその多くのバリアント（TCP スタック、リソース攻撃、Fastly システム内の TLS 攻撃など）に対処するために、クライアントごとに必要な規模とコンテキストを提供します。
 
-- また、Fastly はレイヤー 7 攻撃に対する保護も提供します。 ストアでパフォーマンスの問題が発生しており、レイヤー 7 DDoS 攻撃が疑われる場合は、Adobe Commerce サポートチケットを送信します。 Adobeでは、カスタムルールを作成して Fastly サービスに適用し、攻撃トラフィックを特定するヘッダー、ペイロード、または属性の組み合わせに基づいて、悪意のあるリクエストを調べて除外できます。 [4}Adobe Commerce ヘルプセンター ] の [DDoS 攻撃の確認 ] および *悪意のあるトラフィックをブロックする方法 } を参照してください。*
+- また、Fastly はレイヤー 7 攻撃に対する保護も提供します。 ストアでパフォーマンスの問題が発生しており、レイヤー 7 DDoS 攻撃が疑われる場合は、Adobe Commerce サポートチケットを送信します。 Adobeでは、カスタムルールを作成して Fastly サービスに適用し、攻撃トラフィックを特定するヘッダー、ペイロード、または属性の組み合わせに基づいて、悪意のあるリクエストを調べて除外できます。 [4&rbrace;Adobe Commerce ヘルプセンター ] の [DDoS 攻撃の確認 ] および *悪意のあるトラフィックをブロックする方法 &rbrace; を参照してください。*
 
 <!--Link definitions-->
 
