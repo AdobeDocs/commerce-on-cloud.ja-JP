@@ -40,7 +40,7 @@ Adobe Commerce管理者から Fastly CDN サービスを設定し、Fastly API �
 
 クラウドインフラストラクチャー上のAdobe Commerceを使用して、Fastly Admin Dashboard に直接アクセスすることはできません。
 
-お使いの環境の Fastly 設定をレビューおよび更新するには、Adobe Commerce管理者を使用する必要があります。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信します。
+お使いの環境の Fastly 設定をレビューおよび更新するには、Adobe Commerce管理者を使用する必要があります。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信します。
 
 ## Fastly 資格情報の取得
 
@@ -138,7 +138,7 @@ Fastly モジュールを有効にしたら、デフォルトの [VCL コード 
 
 ## SSL/TLS 証明書のプロビジョニング
 
-Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeは、実稼動環境、ステージング環境、スターター実稼動環境ごとに 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[ クラウドインフラストラクチャー上のAdobe Commerce用Adobe SSL （TLS）証明書 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html) を参照してください。
+Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeは、実稼動環境、ステージング環境、スターター実稼動環境ごとに 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[ クラウドインフラストラクチャー上のAdobe Commerce用Adobe SSL （TLS）証明書 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=ja) を参照してください。
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ Fastly の初期セットアッププロセス中に、次の URL を使用し�
 
    >[!NOTE]
    >
-   >Cloud CLI を使用する代わりに、[Admin](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) からベース URL を更新できます
+   >Cloud CLI を使用する代わりに、[Admin](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ja) からベース URL を更新できます
 
 1. Web ブラウザーを再起動します。
 
@@ -317,4 +317,4 @@ Fastly は、Magento 2 モジュール用の Fastly CDN を更新して、問題
 
 >[!TIP]
 >
-> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html) を参照してください。
+> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=ja) を参照してください。
