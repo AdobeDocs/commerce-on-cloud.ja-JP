@@ -44,7 +44,7 @@ Fastly は、クラウドインフラストラクチャプロジェクト上のA
 
 - **オリジンクローキング** - トラフィックが Fastly WAFをバイパスするのを防ぎ、オリジンサーバーの IP アドレスを非表示にして、ダイレクトアクセスや DDoS 攻撃から保護します。
 
-  Cloud infrastructure Pro 実稼働プロジェクトのAdobe Commerceでは、オリジンクロークがデフォルトで有効になっています。 クラウドインフラストラクチャーのスターター実稼動プロジェクトでAdobe Commerceのオリジンクロークを有効にするには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信します。 キャッシュを必要としないトラフィックがある場合は、リクエストが [Fastly キャッシュをバイパス ](fastly-vcl-bypass-to-origin.md) できるように Fastly サービス設定をカスタマイズできます。
+  Cloud infrastructure Pro 実稼働プロジェクトのAdobe Commerceでは、オリジンクロークがデフォルトで有効になっています。 クラウドインフラストラクチャーのスターター実稼動プロジェクトでAdobe Commerceのオリジンクロークを有効にするには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信します。 キャッシュを必要としないトラフィックがある場合は、リクエストが [Fastly キャッシュをバイパス ](fastly-vcl-bypass-to-origin.md) できるように Fastly サービス設定をカスタマイズできます。
 
 - **[画像の最適化](fastly-image-optimization.md)** – 画像処理やサイズ変更の負荷を Fastly サービスにオフロードし、サーバーが注文やコンバージョンをより効率的に処理できるようにします。
 
@@ -66,13 +66,13 @@ Adobe Commerce プロジェクトの初期プロビジョニングまたはア�
 
 ### Fastly API トークンの変更
 
-Adobe Commerce サポートチケットを送信して、新しい Fastly API トークン資格情報 [ 検証に失敗した場合、有効期限が切れた場合 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) または侵害されたと思われる場合）を発行します。
+Adobe Commerce サポートチケットを送信して、新しい Fastly API トークン資格情報 [ 検証に失敗した場合、有効期限が切れた場合 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) または侵害されたと思われる場合）を発行します。
 
 新しいトークンを受け取ったら、新しいトークンを使用するようにステージング環境または実稼動環境を更新します。
 
 **Fastly API トークン資格情報を変更するには**:
 
-1. [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)、新しい Fastly API 資格情報をリクエストします。
+1. [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)、新しい Fastly API 資格情報をリクエストします。
 
    クラウドインフラストラクチャプロジェクト ID 上のAdobe Commerceと、新しい資格情報を必要とする環境を含めます。
 
@@ -124,12 +124,12 @@ DDOS 保護は、Fastly CDN サービスに組み込まれています。 Adobe 
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[DDoS 攻撃の確認]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
+[DDoS 攻撃の確認]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=ja
 
 [Magento 2 用 Fastly CDN モジュール]: https://github.com/fastly/fastly-magento2
 
 [Fastly サポートチケット]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[悪意のあるトラフィックをブロックする方法]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
+[悪意のあるトラフィックをブロックする方法]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=ja
 
 [ドメインの操作]: https://docs.fastly.com/en/guides/working-with-domains
