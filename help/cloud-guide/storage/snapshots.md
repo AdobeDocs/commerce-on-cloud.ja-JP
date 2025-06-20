@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >ターミナルで次のコマンドを実行して、含める/除外するフォルダー/パスに合わせて調整することで、Pro 実稼動クラスターとステージングクラスターに直接コードのバックアップを作成できます。
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
@@ -119,7 +119,7 @@ ht-degree: 0%
 1. プロジェクトナビゲーションバーから環境を選択します。
 1. _バックアップ_ ビューで、「保存 _リストからバックアップを選択_ ます。 バックアップ機能は Pro 環境には適用 **されません**。
 1. ![ その他 ](../../assets/icon-more.png){width="32"} （_その他_）メニューで、「**復元**」をクリックします。
-1. バックアップからのリストア情報を確認し、[ はい、リストア **をクリックします**。
+1. バックアップからのリストア情報を確認し、&lbrack; はい、リストア **をクリックします**。
 
 **Cloud CLI を使用してスナップショットを復元するには**:
 
