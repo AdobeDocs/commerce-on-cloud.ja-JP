@@ -49,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 
