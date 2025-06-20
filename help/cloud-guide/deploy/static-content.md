@@ -41,8 +41,8 @@ ht-degree: 0%
 静的コンテンツを生成するには、テーマとロケールにアクセスする必要があります。 Adobe Commerceは、テーマをファイルシステムに格納します。これはビルドフェーズでアクセスできますが、Adobe Commerceはデータベースにロケールを格納します。 データベースは、ビルドフェーズでは使用 _できません_。 ビルドフェーズで静的コンテンツを生成するには、`ece-tools` パッケージで `config:dump` コマンドを使用してロケールをファイルシステムに移動する必要があります。 ロケールが読み取られ、`app/etc/config.php` ファイルに保存されます。
 
 >[!NOTE]
->`ece-tools` パッケージで `config:dump` コマンドを実行すると、`config.php` ファイルにダンプされた設定は [ 管理ダッシュボードではロック（グレー表示）されます ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)。 管理者でこのような設定を更新する唯一の方法は、ファイルからローカルに設定を削除し、プロジェクトを再デプロイすることです。
->&#x200B;>また、インスタンスに新しいストア/ストアグループ/web サイトを追加するたびに、`config:dump` コマンドを実行してデータベースが同期されていることを確認する必要があります。 また、`config.php` ファイルに [ ダンプする設定 ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) を選択することもできます。
+>`ece-tools` パッケージで `config:dump` コマンドを実行すると、`config.php` ファイルにダンプされた設定は [ 管理ダッシュボードではロック（グレー表示）されます ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)。 管理者でこのような設定を更新する唯一の方法は、ファイルからローカルに設定を削除し、プロジェクトを再デプロイすることです。
+>&#x200B;>また、インスタンスに新しいストア/ストアグループ/web サイトを追加するたびに、`config:dump` コマンドを実行してデータベースが同期されていることを確認する必要があります。 また、`config.php` ファイルに [ ダンプする設定 ](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) を選択することもできます。
 >&#x200B;>フィールドがグレー表示されていてこの手順を実行しなかったため、`config.php` ファイルからストア/ストアグループ/web サイト設定を削除した場合、ダンプされなかった新しいエンティティは、次のデプロイメント時にデータベースから削除されます。
 
 **ビルド時に SCD を生成するようにプロジェクトを設定するには**:
