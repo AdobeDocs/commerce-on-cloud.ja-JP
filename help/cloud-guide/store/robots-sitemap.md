@@ -2,9 +2,10 @@
 title: サイトマップと検索エンジンロボットを追加
 description: クラウドインフラストラクチャー上でサイトマップと検索エンジンロボットをAdobe Commerceに追加する方法を説明します。
 feature: Cloud, Configuration, Search, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
+source-git-commit: 8626364ec7bcaaa0e17a3380ec0b9b73110c4574
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Please make sure that "/" is writable by the web-server.
 **バージョン 2.2 以降で `sitemap.xml` ファイルを生成するには**:
 
 1. 管理者にアクセスします。
-1. _マーケティング_ メニューで、「_SEO と検索&#x200B;**セクションの**&#x200B;サイトマップ_ をクリックします。
+1. _マーケティング_ メニューで、「_SEO と検索&#x200B;**セクションの**サイトマップ_ をクリックします。
 1. _サイトマップ_ ビューで、「**サイトマップを追加**」をクリックします。
 1. _新しいサイトマップ_ ビューで、次の値を入力します。
 
@@ -48,7 +49,7 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 
@@ -116,12 +117,19 @@ VCL スニペットは `http://domain.com/robots.txt` をルートし、`pub/med
 
 ### 検索エンジンによるインデックス作成の設定
 
-実稼動環境でカスタマイズ `robots.txt` アクティブ化するには、プロジェクト設定の `<environment-name>`**オプションで** 検索エンジンによるインデックス作成を有効にする必要があります。
+実稼動環境で `robots.txt` のカスタマイズを有効にするには、Cloud Console のプロジェクト設定で `<environment-name>`**のオプションに対して** 検索エンジンによるインデックス作成を有効にする必要があります。
 
 ![[!DNL Cloud Console] を使用した環境の管理 ](../../assets/robots-indexing-by-search-engine.png)
+
+また、magento-cloud CLI を使用してこの設定を更新することもできます。
+
+```bash
+magento-cloud environment:info -p <project_id> -e production restrict_robots false
+```
 
 >[!NOTE]
 >
 >- 検索エンジンによるインデックス作成は、実稼動環境でのみ有効にできますが、下位環境では有効にできません。
 >
->- PWA Studio許可リストに加えるを使用していて、設定済みの `robots.txt` ファイルにアクセスできない場合は、[Front Name](https://github.com/magento/magento2-upward-connector#front-name-allowlist)**Stores**/設定/**General**/**Web**/UPWARDPWA設定）に `robots.txt` を追加します。
+>- PWA Studio許可リストに加えるを使用していて、設定済みの `robots.txt` ファイルにアクセスできない場合は、[Front Name](https://github.com/magento/magento2-upward-connector#front-name-allowlist)**Stores**/Configuration/**General**/**Web**/UPWARD PWA Configuration に `robots.txt` を追加します。
+
