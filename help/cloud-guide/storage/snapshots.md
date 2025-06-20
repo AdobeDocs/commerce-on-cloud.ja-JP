@@ -3,9 +3,9 @@ title: バックアップ管理
 description: クラウドインフラストラクチャプロジェクト上のAdobe Commerceのバックアップを手動で作成および復元する方法について説明します。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 3efc5478428c4ede9e2106e1cbef8362c525ccd8
+source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,9 @@ ht-degree: 0%
 ## 手動バックアップの作成
 
 アクティブなスターター環境と Integration Pro 環境の手動バックアップを [!DNL Cloud Console] から作成するか、Cloud CLI からスナップショットを作成できます。 環境の [ 管理者の役割 ](../project/user-access.md) が必要です。
+
+**Pro 環境のデータベースバックアップを作成するには**:
+ステージングや実稼働を含む Pro 環境のデータベースダンプを作成するには、ナレッジベースの記事 [ データベースダンプの作成 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) を参照してください。
 
 **[!DNL Cloud Console]** を使用してスターター環境のバックアップを作成するには：
 
@@ -83,8 +86,6 @@ ht-degree: 0%
    +---------------------------+----------------------+------------+
    ```
 
-ステージングや実稼働を含む任意の環境のデータベースダンプを作成するには、ナレッジベースの記事 [ データベースダンプの作成 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) を参照してください。
-
 ## 手動バックアップの復元
 
 環境に対する [ 管理者アクセス ](../project/user-access.md) が必要です。 手動バックアップを **リストアする** には、最大で _7 日間_ かかります。 バックアップを復元しても、現在の Git ブランチのコードは変更されません。 この方法でのバックアップの復元は、Pro ステージング環境および実稼動環境には適用されません。[Pro バックアップおよび障害回復 ](../architecture/pro-architecture.md#backup-and-disaster-recovery) を参照してください。
@@ -108,7 +109,7 @@ ht-degree: 0%
 1. プロジェクトナビゲーションバーから環境を選択します。
 1. _バックアップ_ ビューで、「保存 _リストからバックアップを選択_ ます。 バックアップ機能は Pro 環境には適用 **されません**。
 1. ![ その他 ](../../assets/icon-more.png){width="32"} （_その他_）メニューで、「**復元**」をクリックします。
-1. バックアップからのリストア情報を確認し、&lbrack; はい、リストア **をクリックします**。
+1. バックアップからのリストア情報を確認し、[ はい、リストア **をクリックします**。
 
 **Cloud CLI を使用してスナップショットを復元するには**:
 
@@ -139,7 +140,7 @@ ht-degree: 0%
 
 ## 障害回復スナップショットの復元
 
-ステージング環境および実稼動環境で障害回復スナップショットを復元するには、[ データベースダンプをサーバーから直接読み込みます ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
+ステージング環境および実稼動環境で障害回復スナップショットを復元するには、[ データベースダンプをサーバーから直接読み込みます ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
 
 ## コードをロールバック
 
