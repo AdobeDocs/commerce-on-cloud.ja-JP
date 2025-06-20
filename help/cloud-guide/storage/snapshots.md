@@ -3,9 +3,9 @@ title: バックアップ管理
 description: クラウドインフラストラクチャプロジェクト上のAdobe Commerceのバックアップを手動で作成および復元する方法について説明します。
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ ht-degree: 0%
 
 アクティブなスターター環境と Integration Pro 環境の手動バックアップを [!DNL Cloud Console] から作成するか、Cloud CLI からスナップショットを作成できます。 環境の [ 管理者の役割 ](../project/user-access.md) が必要です。
 
+>[!NOTE]
+>
+>ターミナルで次のコマンドを実行して、含める/除外するフォルダー/パスに合わせて調整することで、Pro 実稼動クラスターとステージングクラスターに直接コードのバックアップを作成できます。
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **Pro 環境のデータベースバックアップを作成するには**:
-ステージングや実稼働を含む Pro 環境のデータベースダンプを作成するには、ナレッジベースの記事 [ データベースダンプの作成 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) を参照してください。
+
+ステージングや実稼働を含む Pro 環境のデータベースダンプを作成するには、ナレッジベースの記事 [ データベースダンプの作成 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) を参照してください。
 
 **[!DNL Cloud Console]** を使用してスターター環境のバックアップを作成するには：
 
@@ -109,7 +119,7 @@ ht-degree: 0%
 1. プロジェクトナビゲーションバーから環境を選択します。
 1. _バックアップ_ ビューで、「保存 _リストからバックアップを選択_ ます。 バックアップ機能は Pro 環境には適用 **されません**。
 1. ![ その他 ](../../assets/icon-more.png){width="32"} （_その他_）メニューで、「**復元**」をクリックします。
-1. バックアップからのリストア情報を確認し、&lbrack; はい、リストア **をクリックします**。
+1. バックアップからのリストア情報を確認し、[ はい、リストア **をクリックします**。
 
 **Cloud CLI を使用してスナップショットを復元するには**:
 
@@ -140,10 +150,15 @@ ht-degree: 0%
 
 ## 障害回復スナップショットの復元
 
-ステージング環境および実稼動環境で障害回復スナップショットを復元するには、[ データベースダンプをサーバーから直接読み込みます ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
+ステージング環境および実稼動環境で障害回復スナップショットを復元するには、[ データベースダンプをサーバーから直接読み込みます ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
 
 ## コードをロールバック
 
 バックアップとスナップショットには、コードのコピーは含まれません __。 コードは既に Git ベースのリポジトリに保存されているので、Git ベースのコマンドを使用してコードをロールバック（または元に戻す）できます。 例えば、以前のコミットをスクロールするには `git log --oneline` を使用し、特定のコミットからコードを復元するには [`git revert`](https://git-scm.com/docs/git-revert) を使用します。
 
 また、コードを _非アクティブ_ ブランチに保存することもできます。 `magento-cloud` のコマンドを使用する代わりに、Git コマンドを使用してブランチを作成します。 Cloud CLI トピックの [Git コマンド ](../dev-tools/cloud-cli-overview.md#git-commands) についてを参照してください。
+
+## 関連情報
+
+- [データベースのバックアップ](database-dump.md)
+- 実稼動環境およびステージングクラスター向けの [ バックアップと障害回復 ](../architecture/pro-architecture.md#backup-and-disaster-recovery)
