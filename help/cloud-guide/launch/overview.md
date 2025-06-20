@@ -1,9 +1,10 @@
 ---
 title: サイトの起動
 description: サイトのローンチの準備を開始する方法を説明します。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
+source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一環と�
 
 >[!NOTE]
 >
->Let’s Encrypt 証明書を使用する代わりに、会社に独自の拡張検証 SSL 証明書をデプロイする場合は、CTAまたは [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) にお問い合わせください。
+>Let’s Encrypt 証明書を使用する代わりに、会社に独自の拡張検証 SSL 証明書をデプロイする場合は、CTAまたは [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) にお問い合わせください。
 
 ## セキュリティスキャンツールの設定
 
@@ -58,13 +59,17 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一環と�
 >
 >これらの IP アドレスをネットワーク ファイアウォール規則の許可リストに追加して、サイトをスキャンできるようにします。 このツールは、ポート 80 および 443 にのみリクエストを POST します。
 
-セキュリティ スキャン ツールを使用すると、ストアの Web サイトを定期的に監視し、既知のセキュリティ リスク、マルウェア、および最新ではないソフトウェアの更新を受け取ることができます。 このツールは、クラウドインフラストラクチャー上のAdobe Commerceのすべての実装およびバージョンで利用できる無料のサービスです。 このツールには、[Commerce Marketplaceアカウント ](https://account.magento.com/customer/account/login) からアクセスします。
+セキュリティ スキャン ツールを使用すると、ストアの Web サイトを定期的に監視し、既知のセキュリティ リスク、マルウェア、および最新ではないソフトウェアの更新を受け取ることができます。 このツールは、クラウドインフラストラクチャー上のAdobe Commerceのすべての実装およびバージョンで利用できる無料のサービスです。 このツールには、[Commerce Marketplace アカウント ](https://account.magento.com/customer/account/login) からアクセスします。
 
 - Sites のセキュリティステータスと適用されたセキュリティ更新を監視
 
 - セキュリティ更新プログラムとサイト固有の通知を受信する
 
-セキュリティスキャンツールの設定と使用については、[ ユーザーガイド ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-scan) を参照してください。 通常は、ユーザー受け入れテスト（UAT）を開始する際に、このツールの使用を開始します。
+>[!NOTE]
+>
+>Adobeでは、調査結果の調査中に最高のサービス品質を確保するために、他のサードパーティツールよりもセキュリティスキャンツールを使用することをお勧めします。
+
+セキュリティスキャンツールの設定と使用については、[ ユーザーガイド ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) を参照してください。 通常は、ユーザー受け入れテスト（UAT）を開始する際に、このツールの使用を開始します。
 
 スキャンする各サイトは、「Security Scan」タブを使用して登録する必要があります。 スキャンを開始する前に、登録プロセス中に免責事項に同意する必要があります。 スケジュールを制御し、各スキャンが完了したときにユーザーが通知を受け取ることを許可します。 スキャンのスケジュールを特定の繰り返し日時に設定することも、必要に応じてスキャンをオンデマンドで実行することもできます。
 
@@ -79,7 +84,7 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## サイトをスキャン
 
-1. [Commerce Marketplaceアカウント ](https://account.magento.com/customer/account/login) にアクセスします。
+1. [Commerce Marketplace アカウント ](https://account.magento.com/customer/account/login) にアクセスします。
 
 1. [Security Scan] （セキュリティスキャン）タブをクリックし、**[Go to Security Scan] （セキュリティスキャンに移動** を選択します。
 
