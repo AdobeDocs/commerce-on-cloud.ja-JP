@@ -31,7 +31,7 @@ Cloud Console またはコマンドラインから、各環境の送信メール
 
 デフォルトでは、実稼動環境およびステージング環境では、送信メールが有効になっています。 ただし、[!UICONTROL Outgoing emails] コマンドライン `enable_smtp`[ たは ](outgoing-emails.md#enable-emails-in-the-cli)Cloud Console[ を使用して ](outgoing-emails.md#enable-emails-in-the-cloud-console) プロパティを設定するまで、環境設定で無効と表示される場合があります。 統合およびステージング環境で送信メールを有効にして、クラウドプロジェクトのユーザーに対して二要素認証またはパスワードリセットのメールを送信できます。 [ テスト用メールの設定 ](outgoing-emails.md) を参照してください。
 
-実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
+実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ Cloud Console またはコマンドラインから、各環境の送信メール
 
 すべてのクラウドプロジェクトは中央アカウントで管理されるので、SendGrid ダッシュボードにアクセスできるのはサポートのみです。 SendGrid は、サブアカウント制限機能を提供していません。
 
-アクティビティログで配信ステータスや、バウンスメールアドレス、却下メールアドレス、ブロックされたメールアドレスのリストを確認するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) します。 サポートチームは、30 日を経過したアクティビティログを取得 **できません**。
+アクティビティログで配信ステータスや、バウンスメールアドレス、却下メールアドレス、ブロックされたメールアドレスのリストを確認するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) します。 サポートチームは、30 日を経過したアクティビティログを取得 **できません**。
 
 可能であれば、次の情報をリクエストに含めます。
 
@@ -55,7 +55,7 @@ DKIMは、正規の送信者アドレスとフェイクセンダーアドレス�
 
 >[!WARNING]
 >
->SendGrid DKIMの署名とドメイン認証のサポートは、Pro プロジェクトの実稼動環境とステージング環境でのみ使用できますが、すべてのスターター環境では使用できません。 その結果、送信トランザクションメールはスパムフィルターによってフラグ付けされる可能性が高くなります。 DKIMを使用すると、認証済みメールの送信者としての配信率が向上します。 メッセージ配信率を向上させるには、Starter から Pro にアップグレードするか、独自の SMTP サーバーまたはメール配信サービスプロバイダーを使用します。 [ 管理システムガイド ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications) の「_メール接続の設定_」を参照してください。
+>SendGrid DKIMの署名とドメイン認証のサポートは、Pro プロジェクトの実稼動環境とステージング環境でのみ使用できますが、すべてのスターター環境では使用できません。 その結果、送信トランザクションメールはスパムフィルターによってフラグ付けされる可能性が高くなります。 DKIMを使用すると、認証済みメールの送信者としての配信率が向上します。 メッセージ配信率を向上させるには、Starter から Pro にアップグレードするか、独自の SMTP サーバーまたはメール配信サービスプロバイダーを使用します。 [ 管理システムガイド ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/communications/email-communications) の「_メール接続の設定_」を参照してください。
 
 ### 送信者とドメインの認証
 
@@ -67,7 +67,7 @@ SendGrid が実稼動環境またはステージング環境からユーザー�
 
 **ドメイン認証を有効にするには**:
 
-1. [ サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) を送信して、特定のドメインに対するDKIMの有効化をリクエストします（**Pro ステージング環境と実稼動環境のみ**）。
+1. [ サポートチケット ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) を送信して、特定のドメインに対するDKIMの有効化をリクエストします（**Pro ステージング環境と実稼動環境のみ**）。
 1. サポートチケットで提供された `TXT` および `CNAME` レコードを使用して、DNS 設定を更新します。
 
 **アカウント ID を持つ `TXT` レコードの例**:
@@ -118,7 +118,7 @@ dig CNAME s2._domainkey.domain_name
 
 トランザクションメールしきい値は、非実稼動環境から 1 か月に 12,000 通のメールなど、特定の期間内に Pro 環境から送信できるトランザクションメールメッセージの数を参照します。 しきい値は、スパムの送信と、メールの評判を損なう可能性のあるメールの送信を防ぐように設計されています。
 
-送信者評判スコアが 95% を超える限り、実稼動環境で送信できるメールの数にハードリミットはありません。 評判は、バウンスメールまたは却下されたメールの数と、DNS ベースのスパムレジストリによってドメインが潜在的なスパムソースとしてフラグ設定されているかどうかによって影響を受けます。 [2&rbrace;Commerce サポートナレッジベース ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) の「Adobe Commerceで SendGrid のクレジットを超えてもメールが送信されない _を参照してください。_
+送信者評判スコアが 95% を超える限り、実稼動環境で送信できるメールの数にハードリミットはありません。 評判は、バウンスメールまたは却下されたメールの数と、DNS ベースのスパムレジストリによってドメインが潜在的なスパムソースとしてフラグ設定されているかどうかによって影響を受けます。 [2&rbrace;Commerce サポートナレッジベース ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) の「Adobe Commerceで SendGrid のクレジットを超えてもメールが送信されない _を参照してください。_
 
 **最大クレジットを超えたかどうかを確認するには**:
 
@@ -132,7 +132,7 @@ dig CNAME s2._domainkey.domain_name
 
 1. `/var/log/mail.log` に `authentication failed : Maxium credits exceeded` のエントリがないか確認します。
 
-   `authentication failed` ログエントリが表示され、**メール送信のレピュテーション** が 95 以上である場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、クレジット割り当ての引き上げをリクエストできます。
+   `authentication failed` ログエントリが表示され、**メール送信のレピュテーション** が 95 以上である場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、クレジット割り当ての引き上げをリクエストできます。
 
 ### メール送信の評価
 
@@ -144,6 +144,6 @@ dig CNAME s2._domainkey.domain_name
 
 そもそもメールがスパムフォルダーに送信されるのを防ぐには、Sendgrid のベストプラクティス記事 [My Emails Going to Spam?](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder) に従ってください。
 
-一部の受信者にメールが届かない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、抑制リストの確認をリクエストし、必要に応じて受信者を削除することができます。
+一部の受信者にメールが届かない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、抑制リストの確認をリクエストし、必要に応じて受信者を削除することができます。
 
 詳しくは、[ 抑制リストとは ](https://sendgrid.com/en-us/blog/what-is-a-suppression-list) を参照してください。
