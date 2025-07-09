@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobeがクラウドインフラストラクチャプロジェクトをプロビジョニングすると、ライセンスオーナーは、New Relic アカウントにアクセスするための資格情報と手順が記載されたメールをNew Relicから受け取ります。 メールを受け取っていない場合は、ライセンス所有者のメールアドレスを使用して、New Relicのパスワードをリセットします。
 
-ライセンス所有者が変更され、新しいライセンス所有者が現在New Relicにアクセスできない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) してください。
+ライセンス所有者が変更され、新しいライセンス所有者が現在New Relicにアクセスできない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) してください。
 
 ## ユーザーアクセスの管理（管理者の役割）
 
@@ -41,7 +41,7 @@ Adobeがクラウドインフラストラクチャプロジェクトをプロビ
 
 >[!NOTE]
 >
->**Pro 環境** は、New Relic サービスを使用するように事前設定されており、有効化と接続の手順をスキップできます。 New Relic APM がステージング環境と実稼動環境にインストールされていない場合、またはNew Relic インフラストラクチャが実稼動環境で使用できない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) してインストールをリクエストします。
+>**Pro 環境** は、New Relic サービスを使用するように事前設定されており、有効化と接続の手順をスキップできます。 New Relic APM がステージング環境と実稼動環境にインストールされていない場合、またはNew Relic インフラストラクチャが実稼動環境で使用できない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) してインストールをリクエストします。
 
 スターター環境の場合、`.magento.app.yaml` ファイルを確認して、`runtime` セクションにNew Relic拡張機能が含まれていることを確認する必要があります。 拡張機能が設定されていない場合は、次を追加します。
 
@@ -61,7 +61,7 @@ runtime:
 
 - **スタータープロジェクト** の場合は、最大 _3_ 環境をサポートするNew Relic ライセンスキーがあります。 キーは手動で環境設定に追加する必要があります。 スターター環境は、New Relic サービスを使用するように事前にプロビジョニングされていません。
 
-スターター環境の場合は、環境設定にNew Relic ライセンスキーを追加して、New Relic統合を有効にします。 キーをステージング環境、実稼動環境、および任意のもう 1 つの環境に追加します。 設定に必要なのはNew Relic ライセンスキーのみです。 その他の設定オプションについて詳しくは、[New Relic ユーザーガイドの ](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html)Adobe Commerce レポート _に関するトピックを参照してくだ_ い。
+スターター環境の場合は、環境設定にNew Relic ライセンスキーを追加して、New Relic統合を有効にします。 キーをステージング環境、実稼動環境、および任意のもう 1 つの環境に追加します。 設定に必要なのはNew Relic ライセンスキーのみです。 その他の設定オプションについて詳しくは、[New Relic ユーザーガイドの ](https://experienceleague.adobe.com/docs/commerce-admin/config/general/new-relic-reporting.html?lang=ja)Adobe Commerce レポート _に関するトピックを参照してくだ_ い。
 
 {{redeploy-warning}}
 
@@ -69,7 +69,7 @@ runtime:
 >
 >- Adobe Commerce アカウントページまたはプロジェクトに関連付けられたNew Relic ライセンスのログイン資格情報
 >- 設定するスターター環境への [ 管理者レベルのアクセス ](../project/user-access.md)
->- 環境の [ 管理者 ](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html) にアクセスするための資格情報
+>- 環境の [ 管理者 ](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html?lang=ja) にアクセスするための資格情報
 
 **スターター環境用のNew Relicを設定するには**:
 
@@ -102,7 +102,7 @@ runtime:
      magento-cloud variable:update php:newrelic.license --value <newrelic-license-key>
      ```
 
-   オプションで、[Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html#step-3%3A-configure-your-store) から追加できます。
+   オプションで、[Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html?lang=ja#step-3%3A-configure-your-store) から追加できます。
 
 1. Adobe Commerceからデータを表示できることを確認するには [&#128279;](https://login.newrelic.com/login)New Relic アカウントにログインします。 [ パフォーマンスの調査 ](investigate-performance.md) を参照してください。
 
