@@ -35,7 +35,7 @@ Adobeがクラウドインフラストラクチャプロジェクトをプロビ
 
    - ユーザーグループ、役割、アカウントを管理で **[!UICONTROL Access management]** ます。
 
-[2}New Relic](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-ui-and-tasks/) ドキュメントの {User Management _を参照してください。_
+[2&rbrace;New Relic](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-ui-and-tasks/) ドキュメントの &lbrace;User Management _を参照してください。_
 
 ## スターター環境用のNew Relicの設定
 
@@ -104,7 +104,7 @@ runtime:
 
    オプションで、[Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/start/reporting/new-relic-reporting.html#step-3%3A-configure-your-store) から追加できます。
 
-1. Adobe Commerceからデータを表示できることを確認するには [](https://login.newrelic.com/login)New Relic アカウントにログインします。 [ パフォーマンスの調査 ](investigate-performance.md) を参照してください。
+1. Adobe Commerceからデータを表示できることを確認するには [&#128279;](https://login.newrelic.com/login)New Relic アカウントにログインします。 [ パフォーマンスの調査 ](investigate-performance.md) を参照してください。
 
 ### ライセンスキーを削除
 
