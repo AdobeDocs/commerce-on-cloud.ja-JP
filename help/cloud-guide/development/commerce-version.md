@@ -3,197 +3,38 @@ title: Commerceのバージョンのアップグレード
 description: クラウドインフラストラクチャプロジェクトでAdobe Commerceのバージョンをアップグレードする方法を説明します。
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: bcb5b00f7f203b53eae5c1bc1037cdb1837ad473
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
 
 # Commerceのバージョンのアップグレード
 
-Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 プロジェクトをアップグレードする前に、最新のソフトウェア バージョン要件については [ インストール ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) ガイドの _システム要件_ を確認してください。
+Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 プロジェクトをアップグレードする前に、最新のソフトウェア バージョン要件については [ インストール ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) ガイドの _システム要件_ を確認してください。
 
 プロジェクトの設定に応じて、アップグレードタスクには次のものが含まれる場合があります。
 
-- MariaDB(MySQL)、OpenSearch、RabbitMQ、Redis などのサービスを更新して、Adobe Systems Commerce の新しいバージョンとの互換性を確保します。
-- 古い構成管理ファイルを変換します。
+- 新しいAdobe Commerce バージョンとの互換性を保つため、MariaDB （MySQL）、OpenSearch、RabbitMQ、Redis の新しいバージョンで `.magento/services.yaml` ファイルをアップデートします。
 - フックと環境変数の新しい設定で `.magento.app.yaml` ファイルを更新します。
 - サードパーティの拡張機能をサポートされている最新バージョンにアップグレードします。
-- `.gitignore` ファイルを更新します。
 
 {{upgrade-tip}}
 
 {{pro-update-service}}
 
-## 古いバージョンからのアップグレード
-
-2.1 より前のCommerce バージョンからアップグレードを開始する場合、Adobe Commerce コードベースの一部の制限が、特定の ECE-Tools リリースへの _アップデート_ や、次のサポートされるCommerce バージョンへの _アップグレード_ の機能に影響を与える可能性があります。 次の表を使用して、最適なパスを決定します。
-
-| 現在のバージョン | アップグレードパス |
-| ----------------- | ------------ |
-| 2.1.3 以前 | 続行する前に、Adobe Commerceをバージョン 2.1.4 以降にアップグレードしてください。 次に、[1 回限りのアップグレード ](../dev-tools/install-package.md) を実行して、ECE-Tools をインストールします。 |
-| 2.1.4 - 2.1.14 | [ECE ツールを更新 ](../dev-tools/update-package.md) パッケージ。<br>[2002.0.9 以降の 2002.0.x リリースのリリースノートを参照してください ](../release-notes/cloud-release-archive.md#v200209)。 |
-| 2.1.15 - 2.1.16 | [ECE ツールを更新 ](../dev-tools/update-package.md) パッケージ。<br>2002[0.9 以降のリリースノートを参照してください ](../release-notes/cloud-release-archive.md#v200209)。 |
-| 2.2.x 以降 | [ECE ツールを更新 ](../dev-tools/update-package.md) パッケージ。<br>2002[0.8 以降のリリースノートを参照してください ](../release-notes/cloud-release-archive.md#v200208)。 |
-
-{style="table-layout:auto"}
-
-{{ece-tools-package}}
-
-## 設定管理
-
-2.1.4 以降から 2.2.x 以降など、以前のバージョンの Adobe Systems Commerce では、構成管理に `config.local.php` ファイルを使用していました。 Adobe Systems Commerce バージョン 2.2.0 以降では、`config.local.php` ファイルとまったく同じように機能する `config.php` ファイルを使用しますが、有効なモジュールのリストと追加の構成オプションを含むさまざまな構成設定があります。
-
-古いバージョンからアップグレードする場合は、新しい `config.php` ファイルを使用するように `config.local.php` ファイルを移行する必要があります。構成ファイルをバックアップして作成するには、次の手順を使用します。
-
-**一時 `config.php` ファイルを作成するには**:
-
-1. ファイルのコピー `config.local.php` 作成し、`config.php` という名前を付けます。
-
-1. このファイルをプロジェクトの `app/etc` フォルダーに追加します。
-
-1. ブランチにファイルを追加してコミットします。
-
-1. ファイルを統合ブランチにプッシュします。
-
-1. アップグレードプロセスを続行します。
-
->[!WARNING]
->
->アップグレード後、`config.php` ファイルを削除して新しい完全なファイルを生成することができます。 このファイルを削除して置き換えることができるのは、1 回だけです。 新しい完全なファイル `config.php` 生成した後は、そのファイルを削除して新しいファイルを生成することはできません。 [ 設定管理とパイプラインのデプロイメント ](../store/store-settings.md) を参照してください。
-
-### Zend Framework Composer の依存関係の検証
-
-2.2.x から **2.3.x 以降にアップグレードする場合は** Zend フレームワークの依存関係が `composer.json` ファイルの `autoload` プロパティに追加され、Lamina をサポートしていることを確認してください。 このプラグインは、Laminas プロジェクトに移行された Zend フレームワークの新しい要件をサポートします。 [2&rbrace;Magento DevBlog&rbrace; の ](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251)Zend フレームワークの Laminas プロジェクトへの移行 _を参照してください。_
-
-**`auto-load:psr-4` 設定を確認するには**:
-
-1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
-
-1. 統合ブランチを確認します。
-
-1. `composer.json` ファイルをテキストエディターで開きます。
-
-1. Zend プラグイン マネージャ実装コントローラの依存関係については、 `autoload:psr-4` の節を確認してください。
-
-   ```json
-    "autoload": {
-       "psr-4": {
-          "Magento\\Framework\\": "lib/internal/Magento/Framework/",
-          "Magento\\Setup\\": "setup/src/Magento/Setup/",
-          "Magento\\": "app/code/Magento/",
-          "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
-       },
-   }
-   ```
-
-1. Zend の依存関係がない場合は、 `composer.json` ファイルを更新してください。
-
-   - 次の行を `autoload:psr-4` セクションに追加します。
-
-     ```json
-     "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
-     ```
-
-   - プロジェクトの依存関係を更新します。
-
-     ```bash
-     composer update
-     ```
-
-   - コードの変更を追加、コミットおよびプッシュします。
-
-     ```bash
-     git add -A
-     ```
-
-     ```bash
-     git commit -m "Add Zend plugin manager implementation for controllers dependency for Laminas support"
-     ```
-
-     ```bash
-     git push origin <branch-name>
-     ```
-
-   - 変更内容をステージング環境に結合してから、実稼動環境に結合します。
-
 ## 設定ファイル
 
 アプリケーションをアップグレードする前に、クラウドインフラストラクチャー上のAdobe Commerceまたはアプリケーションのデフォルト設定に対する変更を考慮して、プロジェクト設定ファイルを更新する必要があります。 最新のデフォルトは、[magento-cloud GitHub リポジトリ ](https://github.com/magento/magento-cloud) にあります。
 
-### .magento.app.yaml
-
-[.magento.app.yaml](../application/configure-app-yaml.md) ファイルに含まれる値は、インストールしたバージョンで必ず確認してください。これは、アプリケーションのビルド方法や、クラウドインフラストラクチャへのデプロイ方法を制御しているからです。 次の例はバージョン 2.4.8 で、Composer 2.8.4 を使用します。`build: flavor:` プロパティは Composer 2.x には使用されません。[Composer 2 のインストールと使用 ](../application/properties.md#installing-and-using-composer-2) を参照してください。
-
-**`.magento.app.yaml` ファイルを更新するには**:
-
-1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
-
-1. `magento.app.yaml` ファイルを開いて編集します。
-
-1. PHP オプションを更新します。
-
-   ```yaml
-   type: php:8.4
-   
-   build:
-       flavor: none
-   dependencies:
-       php:
-           composer/composer: '2.8.4'
-   ```
-
-1. `hooks` プロパティ `build` および `deploy` コマンドを変更します。
-
-   ```yaml
-   hooks:
-       # We run build hooks before your application has been packaged.
-       build: |
-           set -e
-           composer install
-           php ./vendor/bin/ece-tools run scenario/build/generate.xml
-           php ./vendor/bin/ece-tools run scenario/build/transfer.xml
-       # We run deploy hook after your application has been deployed and started.
-       deploy: |
-           php ./vendor/bin/ece-tools run scenario/deploy.xml
-       # We run post deploy hook to clean and warm the cache. Available with ECE-Tools 2002.0.10.
-       post_deploy: |
-           php ./vendor/bin/ece-tools run scenario/post-deploy.xml
-   ```
-
-1. 次の環境変数をファイルの末尾に追加します。
-
-   Adobe Commerce 2.2.x から 2.3.x の場合 – 
-
-   ```yaml
-   variables:
-       env:
-           CONFIG__DEFAULT__PAYPAL_ONBOARDING__MIDDLEMAN_DOMAIN: 'payment-broker.magento.com'
-           CONFIG__STORES__DEFAULT__PAYMENT__BRAINTREE__CHANNEL: 'Magento_Enterprise_Cloud_BT'
-           CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE: 'Magento_Enterprise_Cloud'
-   ```
-
-   Adobe Commerce 2.4.x の場合 – 
-
-   ```yaml
-   variables:
-       env:
-           CONFIG__DEFAULT__PAYPAL_ONBOARDING__MIDDLEMAN_DOMAIN: 'payment-broker.magento.com'
-           CONFIG__STORES__DEFAULT__PAYPAL__NOTATION_CODE: 'Magento_Enterprise_Cloud'
-   ```
-
-1. ファイルを保存します。 リモート環境に対する変更は、まだコミットまたはプッシュしないでください。
-
-1. アップグレードプロセスを続行します。
-
 ### composer.json
 
-アップグレードする前に、 `composer.json` ファイル内の依存関係が Adobe Systems Commerce バージョンと互換性があることを必ず確認してください。
+アップグレードする前に必ず `composer.json` ファイルの依存関係がAdobe Commerceのバージョンと互換性があることを確認してください。
 
-**Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを更新するには**:
+Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを更新するには、**の手順を実行します。
 
-1. `config` セクションに次の `allow-plugins` を追加します。
+1. `allow-plugins` セクションに次の `config` を追加します。
 
    ```json
    "config": {
@@ -241,7 +82,7 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
    >[!NOTE]
    >
-   >`magento-cloud db:dump` コマンドは、`--single-transaction` フラグを指定して [mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html) コマンドを実行します。これにより、テーブルをロックせずにデータベースをバックアップできます。
+   >`magento-cloud db:dump` コマンドは、[ フラグを指定して ](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)mysqldump`--single-transaction` コマンドを実行します。これにより、テーブルをロックせずにデータベースをバックアップできます。
 
 1. コードとメディアをバックアップします。
 
@@ -261,27 +102,39 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
    vendor/bin/ece-tools db-dump
    ```
 
-   dump 操作では、リモートプロジェクトディレクトリに `dump-<timestamp>.sql.gz` アーカイブファイルが作成されます。 「 [データベースの戻る](../storage/database-dump.md)」を参照してください。
+   ダンプ操作では、リモート・プロジェクト・ディレクトリに `dump-<timestamp>.sql.gz` アーカイブ・ファイルが作成されます。 [ データベースのバックアップ ](../storage/database-dump.md) を参照してください。
 
 ## アプリケーションのアップグレード
 
-アプリケーションをアップグレードする前に、最新のソフトウェアバージョン要件の [サービスバージョン](../services/services-yaml.md#service-versions) 情報を確認してください。
+アプリケーションをアップグレードする前に、最新のソフトウェアバージョン要件の [ サービスバージョン ](../services/services-yaml.md#service-versions) 情報を確認してください。
 
-**アプリケーション バージョンをアップグレードするには**:
+**アプリケーションのバージョンをアップグレードするには**:
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
-1. [ バージョン制約構文 ](overview.md#cloud-metapackage) を使用して、アップグレードバージョンを設定します。
+1. ターゲットのアップグレード バージョンに対して [ バージョン制約 ](overview.md#cloud-metapackage) を設定します。 この手順は、ターゲットバージョンが既存の制約の範囲外にある場合にのみ必要です。
 
    ```bash
-   composer require "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
+   composer require-commerce "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
    ```
 
    >[!NOTE]
    >
-   >`ece-tools` パッケージを正常に更新するには、バージョン制約構文を使用する必要があります。 アップグレードに使用する [ アプリケーションテンプレート ](https://github.com/magento/magento-cloud/blob/master/composer.json) のバージョンのバージョン制約を `composer.json` ファイルで確認できます。
+   >`ece-tools` パッケージを正常に更新するには、バージョン制約構文を使用する必要があります。 アップグレードに使用する `composer.json` アプリケーションテンプレート [ のバージョンのバージョン制約を ](https://github.com/magento/magento-cloud/blob/master/composer.json) ファイルで確認できます。
 
-1. プロジェクトを更新します。
+1. コアのCommerce アップグレードバージョンで `composer.json` ファイルを更新します。
+
+   ```bash
+   composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
+   ```
+
+1. B2B を使用している場合は、Commerceの `composer.json` サポートされているバージョン [ で ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) ファイルをアップデートします。
+
+   ```bash
+   composer require-commerce magento/extension-b2b 1.5.2 --no-update
+   ```
+
+1. プロジェクトの依存関係を更新します。
 
    ```bash
    composer update
@@ -289,15 +142,15 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
 
-   - `.magento.env.yaml` ファイルに [ 品質向上パッチ ] が適用されている場合は、そのパッチを新しいバージョンにも適用できるかどうかを確認します。 `.magento.env.yaml` ファイルの `QUALITY_PATCHES` セクションから、適用できないパッチを削除します。
+   - [ ファイルに ] 品質向上パッチ `.magento.env.yaml` が適用されている場合は、そのパッチを新しいバージョンにも適用できるかどうかを確認します。 `QUALITY_PATCHES` ファイルの `.magento.env.yaml` セクションから、適用できないパッチを削除します。
 
-   **方法 1**:[ 品質パッチのリリースノートで該当するバージョンを確認してください ](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法 1**:[ 品質パッチのリリースノートで該当するバージョンを確認してください ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法 2**:[ 使用可能なパッチおよびステータスの表示 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法 2**:[ 使用可能なパッチおよびステータスの表示 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法 3**:[ パッチの検索 ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)
+   **方法 3**:[ パッチの検索 ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. コードの変更を追加、コミットおよびプッシュします。
@@ -320,47 +173,11 @@ Adobe Commerceのコードベースを新しいバージョンにアップグレ
 
 1. デプロイメントが完了するまで待ちます。
 
-1. 統合、ステージング、または実稼働環境で、SSH を使用してログインし、バージョンを確認し、アップグレードを確認します。
+1. SSH を使用してログインし、バージョンを確認して、統合環境、ステージング環境、実稼動環境でアップグレードを検証します。
 
    ```bash
    php bin/magento --version
    ```
-
-### config.php ファイルの作成
-
-[ 設定管理 ](#configuration-management) で説明したように、アップグレード後は、更新された `config.php` ファイルを作成する必要があります。 統合環境の管理者を通じて、追加の設定変更を行います。
-
-**システム固有の設定ファイルを作成するには**:
-
-1. ターミナルから、SSH コマンドを使用して、環境用の `/app/etc/config.php` ファイルを生成します。
-
-   ```bash
-   ssh <SSH-URL> "<Command>"
-   ```
-
-   例えば、Pro の場合は、`integration` のブランチで `scd-dump` を実行します。
-
-   ```bash
-   ssh <project-id-integration>@ssh.us.magentosite.cloud "php vendor/bin/ece-tools config:dump"
-   ```
-
-1. `rsync` または `scp` を使用して、`config.php` ファイルをローカル ワークステーションに転送します。 このファイルはブランチに対してのみローカルに追加できます。
-
-   ```bash
-   rsync <SSH-URL>:app/etc/config.php ./app/etc/config.php
-   ```
-
-1. コードの変更を追加、コミットおよびプッシュします。
-
-   ```bash
-   git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
-   ```
-
-   これにより、モジュールリストと構成設定を含む更新された `/app/etc/config.php` ファイルが生成されます。
-
->[!WARNING]
->
->アップグレードの場合は、`config.php` ファイルを削除します。 このファイルをコードに追加したら、削除 **ない** でください。 設定を削除または編集する必要がある場合は、ファイルを手動で編集します。
 
 ### アップグレード拡張機能
 
@@ -378,11 +195,11 @@ Marketplace または他の会社のサイトでサードパーティの拡張�
 
 1. 拡張機能を有効にしてテストします。
 
-1. 追加、コミットし、コードの変更をリモートにプッシュします。
+1. コードの変更を追加、コミットし、リモートにプッシュします。
 
-1. 統合環境にプッシュしてテストします。
+1. 統合環境でにプッシュしてテストします。
 
-1. ステージング環境にプッシュして、実稼働前環境にテストします。
+1. ステージング環境にプッシュして、実稼動前の環境でテストします。
 
 Adobeでは、アップグレードした拡張機能をサイト起動プロセスに含め _実稼動環境_ 以前）をアップグレードすることを強くお勧めします。
 
