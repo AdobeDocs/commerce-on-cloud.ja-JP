@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020 年 6 月 5 日（PT）より前にプロビジョニングされたプロジェクトには、複数の小規模な統合環境がありました。 テストおよび開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストします。 詳しくは、[Adobe Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) の _Integration Environment リクエスト_ を参照してください。
+>2020 年 6 月 5 日（PT）より前にプロビジョニングされたプロジェクトには、複数の小規模な統合環境がありました。 テストおよび開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストします。 詳しくは、[Adobe Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=ja) の _Integration Environment リクエスト_ を参照してください。
 
 ## 結合オプション {#merge-options}
 
@@ -38,15 +38,15 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->一部の **Pro プロジェクト** では、`routes.yaml` ファイルのルート設定と `.magento.app.yaml` ファイルの cron 設定を更新するために、サポートチケットが必要です。 Adobeでは、統合環境で YAML 設定ファイルを更新およびテストした後、変更をステージング環境にデプロイすることをお勧めします。 再デプロイ後に変更がステージングサイトに適用されず、関連するエラーメッセージがログに存在しない場合は、**必須**&#x200B;[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、試みた設定変更に関する説明が表示されます。 更新された YAML 設定ファイルをチケットに含めます。
+>一部の **Pro プロジェクト** では、`routes.yaml` ファイルのルート設定と `.magento.app.yaml` ファイルの cron 設定を更新するために、サポートチケットが必要です。 Adobeでは、統合環境で YAML 設定ファイルを更新およびテストした後、変更をステージング環境にデプロイすることをお勧めします。 再デプロイ後に変更がステージングサイトに適用されず、関連するエラーメッセージがログに存在しない場合は、**必須**&#x200B;[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) すると、試みた設定変更に関する説明が表示されます。 更新された YAML 設定ファイルをチケットに含めます。
 
 ## プロサービスサポート {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Pro プロジェクトの場合、[ および ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) 環境でのみ [ サービス ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html) をインストールまたは更新するには、`Staging`Adobe Commerce サポートチケットを送信 `Production` する必要があります。
+- Pro プロジェクトの場合、[ および ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) 環境でのみ [ サービス ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=ja) をインストールまたは更新するには、`Staging`Adobe Commerce サポートチケットを送信 `Production` する必要があります。
 
-- 必要なサービスの変更を示し、更新した `.magento.app.yaml` ファイルと `services.yaml` ファイルを含め、PHP バージョンをチケットに記載します。 PHP のバージョン、拡張機能、または環境設定のセルフサービスでの変更については、[ アプリケーション設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html) の _PHP 設定_ を参照してください。
+- 必要なサービスの変更を示し、更新した `.magento.app.yaml` ファイルと `services.yaml` ファイルを含め、PHP バージョンをチケットに記載します。 PHP のバージョン、拡張機能、または環境設定のセルフサービスでの変更については、[ アプリケーション設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=ja) の _PHP 設定_ を参照してください。
 
 - 実稼動環境（**Pro のみ**）に対する変更の場合は、少なくとも 48 時間の通知が必要です。 これにより、クラウドインフラストラクチャチームは、リソースをマーシャリングし、安全なアップグレードを実行するのに十分な時間を確保できます。 通知期間は、インフラストラクチャチームがリクエストを承認し、週末を除くアップグレードをスケジュールしたときに開始されます。 例えば、月曜日にサービスアップグレードを完了するには、水曜日までに予定されているアップグレードの確認を受け取る必要があります。 ピーク時の要求期間では、要求の処理により多くの時間がかかる場合があります。
 
@@ -56,9 +56,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->ステージング環境および実稼動環境では、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、チケットに記載された日付、時刻、タイムゾーンを示す特定のバックアップを取得する必要があります。
+>ステージング環境および実稼動環境では、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、チケットに記載された日付、時刻、タイムゾーンを示す特定のバックアップを取得する必要があります。
 >
->Adobeは、自動バックアップから環境を復元 **ません**。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[ ステージングまたは実稼動からの DB スナップショットの復元 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html) を参照してください。
+>Adobeは、自動バックアップから環境を復元 **ません**。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[ ステージングまたは実稼動からの DB スナップショットの復元 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=ja) を参照してください。
 
 ## 再配置警告 {#redeploy-warning}
 
@@ -96,7 +96,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して、Pro 実稼動環境とステージング環境のサービス設定を変更します。
+>[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、Pro 実稼動環境とステージング環境のサービス設定を変更します。
 
 ## サービスの変更 {#service-change-tip}
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->スタックしたデプロイメントのヘルプについては、[Adobe Commerce ヘルプセンターの &lbrace;0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)Commerce デプロイメントのトラブルシューティングツール _を参照してください。_
+>スタックしたデプロイメントのヘルプについては、[Adobe Commerce ヘルプセンターの &lbrace;0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja)Commerce デプロイメントのトラブルシューティングツール _を参照してください。_
 
 ## ECE-Tools のアップデート {#ece-tools-package}
 
