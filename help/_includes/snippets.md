@@ -25,7 +25,7 @@ ht-degree: 0%
 
 「`_merge`」オプションを次のいずれかに設定します。
 
-- `true` – 設定済みのサービス値を環境変数の値とマージ **** マージ）します。
+- `true` – 設定済みのサービス値を環境変数の値とマージ **&#x200B;**&#x200B;マージ）します。
 - `false` – 環境変数値を使用して設定されたサービス値を **上書き** します。
 
 ## プライベートリポジトリ {#private-repository}
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->一部の **Pro プロジェクト** では、`routes.yaml` ファイルのルート設定と `.magento.app.yaml` ファイルの cron 設定を更新するために、サポートチケットが必要です。 Adobeでは、統合環境で YAML 設定ファイルを更新およびテストした後、変更をステージング環境にデプロイすることをお勧めします。 再デプロイ後に変更がステージングサイトに適用されず、関連するエラーメッセージがログに存在しない場合は、**必須**[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、試みた設定変更に関する説明が表示されます。 更新された YAML 設定ファイルをチケットに含めます。
+>一部の **Pro プロジェクト** では、`routes.yaml` ファイルのルート設定と `.magento.app.yaml` ファイルの cron 設定を更新するために、サポートチケットが必要です。 Adobeでは、統合環境で YAML 設定ファイルを更新およびテストした後、変更をステージング環境にデプロイすることをお勧めします。 再デプロイ後に変更がステージングサイトに適用されず、関連するエラーメッセージがログに存在しない場合は、**必須**&#x200B;[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、試みた設定変更に関する説明が表示されます。 更新された YAML 設定ファイルをチケットに含めます。
 
 ## プロサービスサポート {#pro-update-service}
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->スタックしたデプロイメントのヘルプについては、[Adobe Commerce ヘルプセンターの {0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)Commerce デプロイメントのトラブルシューティングツール _を参照してください。_
+>スタックしたデプロイメントのヘルプについては、[Adobe Commerce ヘルプセンターの &lbrace;0](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)Commerce デプロイメントのトラブルシューティングツール _を参照してください。_
 
 ## ECE-Tools のアップデート {#ece-tools-package}
 
