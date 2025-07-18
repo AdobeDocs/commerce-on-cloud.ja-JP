@@ -3,9 +3,9 @@ title: Valkey サービスの設定
 description: Cloud Infrastructure 上のAdobe Commerceのバックエンドキャッシュソリューションとして Valkey を設定し、最適化する方法について説明します。
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
+source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) は、Adobe Commerceがデフォルトで使用する `Zend Framework Zend_Cache_Backend_File` に代わるオプションのバックエンドキャッシュソリューションです。
 
-[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ja){target="_blank"} の _Valkey の設定_ を参照してください。
+[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"} の _Valkey の設定_ を参照してください。
 
 {{service-instruction}}
 
-**Valkey を有効にするには**:
+**Redis を Valkey に置き換えるには、次の 3 つのファイルで設定を更新します**
 
 1. 必要な名前とタイプを `.magento/services.yaml` ファイルに追加します。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
        type: valkey:<version>
    ```
 
-   独自の Valkey 設定を指定するには、`.magento/services.yaml` ファイルに `core_config` キーを追加します。
+   独自の Valkey 設定を指定するには、`core_config` ファイルに `.magento/services.yaml` キーを追加します。
 
    ```yaml
    cache:
@@ -41,10 +41,19 @@ ht-degree: 0%
        valkey: "cache:valkey"
    ```
 
+1. `.magento.env.yaml` を次のように設定します。
+
+   ```yaml
+    stage:
+        deploy:
+        VALKEY_USE_SLAVE_CONNECTION: true
+        VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+   ```
+
 1. コードの変更を追加、コミット、プッシュします。
 
    ```bash
-   git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
+   git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
 1. [ サービスの関係を確認します ](services-yaml.md#service-relationships)。

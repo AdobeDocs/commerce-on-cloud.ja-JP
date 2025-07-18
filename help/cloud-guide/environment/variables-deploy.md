@@ -5,7 +5,7 @@ feature: Cloud, Configuration, Cache, Deploy, SCD, Storage, Search
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
-source-git-commit: 275a2a5c58b7c5db12f8f31bffed85004e77172f
+source-git-commit: 3f2a4f7dc9c23afb3af80304023d9e742c974ccd
 workflow-type: tm+mt
 source-wordcount: '2483'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 変数のデプロイ
 
-次の _デプロイ_ 変数は、デプロイフェーズでのアクションを制御し、[ グローバル変数 ](variables-global.md) の値を継承および上書きできます。 `.magento.env.yaml` ファイルの `deploy` のステージに、次の変数を挿入します。
+次の _デプロイ_ 変数は、デプロイフェーズでのアクションを制御し、[ グローバル変数 ](variables-global.md) の値を継承および上書きできます。 `deploy` ファイルの `.magento.env.yaml` のステージに、次の変数を挿入します。
 
 ```yaml
 stage:
@@ -63,7 +63,7 @@ stage:
             database: 11
 ```
 
-次の例では、_設定ガイド_ で定義されている [Redis プリロード機能 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=ja#redis-preload-feature) を使用しています。
+次の例では、[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature) で定義されている _Redis プリロード機能_ を使用しています。
 
 ```yaml
 stage:
@@ -98,7 +98,7 @@ stage:
 - **デフォルト**—`true`
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-ビルドまたはデプロイ フェーズで生成された [ 静的コンテンツ ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) のクリーニングを有効または無効にします。 開発では、デフォルト値 _true_ をベストプラクティスとして使用します。
+ビルドまたはデプロイ フェーズで生成された [ 静的コンテンツ ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) のクリーニングを有効または無効にします。 開発では、デフォルト値 _true_ をベストプラクティスとして使用します。
 
 - **`true`** – 更新された静的コンテンツをデプロイする前に、既存の静的コンテンツをすべて削除します。
 - **`false`** – 生成されたコンテンツに新しいバージョンが含まれている場合にのみ、既存の静的コンテンツ・ファイルが配置によって上書きされます。
@@ -157,7 +157,7 @@ stage:
       consumers: []
 ```
 
-デフォルトでは、デプロイメントプロセスによって `env.php` ファイル内のすべての設定が上書きされます。 オンプレミスのAdobe Commerceの場合は、_Commerce設定ガイド_ の [ メッセージキューの管理 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=ja) を参照してください。
+デフォルトでは、デプロイメントプロセスによって `env.php` ファイル内のすべての設定が上書きされます。 オンプレミスのAdobe Commerceの場合は、[Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) の _メッセージキューの管理_ を参照してください。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -166,9 +166,9 @@ stage:
 
 次のいず `consumers` かのオプションを選択して、メッセージキューからのメッセージの処理方法を設定します。
 
-- `false` - キュー内 `Consumers` 使用可能なメッセージを処理し、TCP 接続を閉じて終了します。 処理され `Consumers` メッセージの数が `CRON_CONSUMERS_RUNNER` のデプロイ変数で指定された `max_messages` 値より少ない場合でも、追加のメッセージがキューに入るのを待たないでください。
+- `false` - キュー内 `Consumers` 使用可能なメッセージを処理し、TCP 接続を閉じて終了します。 処理され `Consumers` メッセージの数が `max_messages` のデプロイ変数で指定された `CRON_CONSUMERS_RUNNER` 値より少ない場合でも、追加のメッセージがキューに入るのを待たないでください。
 
-- `true` - TCP 接続 `Consumers` 閉じてコンシューマ・プロセスを終了する前に、`CRON_CONSUMERS_RUNNER` デプロイ変数で指定された最大メッセージ数（`max_messages`）に達するまで、メッセージ・キューからのメッセージの処理を続行します。 キューが `max_messages` に到達する前に空になった場合、コンシューマーはさらに多くのメッセージが到着するのを待ちます。
+- `true` - TCP 接続 `Consumers` 閉じてコンシューマ・プロセスを終了する前に、`max_messages` デプロイ変数で指定された最大メッセージ数（`CRON_CONSUMERS_RUNNER`）に達するまで、メッセージ・キューからのメッセージの処理を続行します。 キューが `max_messages` に到達する前に空になった場合、コンシューマーはさらに多くのメッセージが到着するのを待ちます。
 
 >[!WARNING]
 >
@@ -187,16 +187,16 @@ stage:
 
 >[!WARNING]
 >
->環境のソースコードリポジトリで鍵が公開されないようにするには、`.magento.env.yaml` ファイルではなく [!DNL Cloud Console] を使用して `CRYPT_KEY` 値を設定します。 [ 環境およびプロジェクト変数の設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=ja#configure-environment) を参照してください。
+>環境のソースコードリポジトリで鍵が公開されないようにするには、`CRYPT_KEY` ファイルではなく [!DNL Cloud Console] を使用して `.magento.env.yaml` 値を設定します。 [ 環境およびプロジェクト変数の設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment) を参照してください。
 
-インストール処理を行わずに、ある環境から別の環境にデータベースを移動する場合は、対応する暗号化情報が必要です。 Adobe Commerceは、[!DNL Cloud Console] で設定された暗号化キーの値を `env.php` ファイルの `crypt/key` 値として使用します。
+インストール処理を行わずに、ある環境から別の環境にデータベースを移動する場合は、対応する暗号化情報が必要です。 Adobe Commerceは、[!DNL Cloud Console] で設定された暗号化キーの値を `crypt/key` ファイルの `env.php` 値として使用します。
 
 ## `DATABASE_CONFIGURATION`
 
 - **Default**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-`.magento.app.yaml` ファイルの [relationships プロパティ ](../application/properties.md#relationships) でデータベースを定義した場合は、データベース接続を配置用にカスタマイズできます。
+[ ファイルの ](../application/properties.md#relationships)relationships プロパティ `.magento.app.yaml` でデータベースを定義した場合は、データベース接続を配置用にカスタマイズできます。
 
 ```yaml
 stage:
@@ -223,7 +223,7 @@ stage:
 >
 >テーブル接頭辞で結合オプションを使用しない場合は、デフォルトの接続設定を指定する必要があります。指定しないと、配備の検証が失敗します。
 
-次の例では、`_merge` オプションを使用する代わりに、デフォルトの接続設定で `ece_` テーブルのプレフィックスを使用しています。
+次の例では、`ece_` オプションを使用する代わりに、デフォルトの接続設定で `_merge` テーブルのプレフィックスを使用しています。
 
 ```yaml
 stage:
@@ -278,7 +278,7 @@ stage:
 
 >[!NOTE]
 >
->3 つのノード（または 3 つのサービスノードを [ スケールアーキテクチャ ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier) 上に持つ Pro ステージング/実稼動クラスターでは、`indices_settings` を次のように設定する必要があります。
+>3 つのノード（または 3 つのサービスノードを [ スケールアーキテクチャ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier) 上に持つ Pro ステージング/実稼動クラスターでは、`indices_settings` を次のように設定する必要があります。
 >
 >```yaml
 >           indices_settings:
@@ -319,7 +319,7 @@ stage:
 - **`true`** - ステージング環境および統合環境でGoogle Analyticsを有効にします。
 - **`false`** - ステージング環境および統合環境でGoogle Analyticsを無効にします。
 
-`ENABLE_GOOGLE_ANALYTICS` 環境変数を `.magento.env.yaml` ファイルの `deploy` ステージに追加します。
+`ENABLE_GOOGLE_ANALYTICS` 環境変数を `deploy` ファイルの `.magento.env.yaml` ステージに追加します。
 
 ```yaml
 stage:
@@ -349,7 +349,7 @@ stage:
 - **デフォルト**—`file`
 - **バージョン** - Adobe Commerce 2.2.5 以降
 
-ロックプロバイダーは、重複した cron ジョブや cron グループの起動を防ぎます。 実稼動環境で `file` lock プロバイダーを使用します。 スターター環境と Pro 統合環境では、[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md) 変数が使用されないので、`db` ロックプロバイダー `ece-tools` 自動的に適用されます。
+ロックプロバイダーは、重複した cron ジョブや cron グループの起動を防ぎます。 実稼動環境で `file` lock プロバイダーを使用します。 スターター環境と Pro 統合環境では、[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md) 変数が使用されないので、`ece-tools` ロックプロバイダー `db` 自動的に適用されます。
 
 ```yaml
 stage:
@@ -357,7 +357,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=ja) ロックの設定 _を参照してください_。
+[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html) ロックの設定 _を参照してください_。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -368,7 +368,7 @@ stage:
 >
 >`MYSQL_USE_SLAVE_CONNECTION` 変数は、クラウドインフラストラクチャー上のAdobe Commerce ステージング環境および実稼動 Pro クラスター環境でのみサポートされており、スタータープロジェクトではサポートされていません。
 
-Adobe Commerceは、複数のデータベースを非同期で読み取ることができます。 データベースへの _読み取り専用_ 接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、`true` に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `env.php` ファイルから削除するには、`false` に設定します。
+Adobe Commerceは、複数のデータベースを非同期で読み取ることができます。 データベースへの `true` 読み取り専用 _接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、_ に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `false` ファイルから削除するには、`env.php` に設定します。
 
 ```yaml
 stage:
@@ -376,7 +376,7 @@ stage:
     MYSQL_USE_SLAVE_CONNECTION: true
 ```
 
-`MYSQL_USE_SLAVE_CONNECTION` 変数が `true` に設定されている場合、Pro ステージング環境と実稼動環境の `env.php` ファイルでは、`synchronous_replication` パラメーターがデフォルトで `true` に設定されます。 `MYSQL_USE_SLAVE_CONNECTION` が `false` に設定されている場合、`synchronous_replication` パラメーターは設定されません。
+`MYSQL_USE_SLAVE_CONNECTION` 変数が `true` に設定されている場合、Pro ステージング環境と実稼動環境の `synchronous_replication` ファイルでは、`true` パラメーターがデフォルトで `env.php` に設定されます。 `MYSQL_USE_SLAVE_CONNECTION` が `false` に設定されている場合、`synchronous_replication` パラメーターは設定されません。
 
 ## `QUEUE_CONFIGURATION`
 
@@ -443,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2}Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の {configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -452,13 +452,13 @@ stage:
 
 >[!WARNING]
 >
->[ スケール _アーキテクチャ_ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Redis 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 別の方法として、Adobeでは、Adobe Commerce 2.3.5 以降を使用し、新しい Redis バックエンド設定を実装し、Redis 用の L2 キャッシングを実装することをお勧めします。
+>_スケール_ アーキテクチャ [ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Redis 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 別の方法として、Adobeでは、Adobe Commerce 2.3.5 以降を使用し、新しい Redis バックエンド設定を実装し、Redis 用の L2 キャッシングを実装することをお勧めします。
 
 >[!TIP]
 >
 >`REDIS_USE_SLAVE_CONNECTION` 変数は、クラウドインフラストラクチャー上のAdobe Commerce ステージング環境および実稼動 Pro クラスター環境でのみサポートされており、スタータープロジェクトではサポートされていません。
 
-Adobe Commerceは、複数の Redis インスタンスを非同期で読み取ることができます。 Redis インスタンスへの _読み取り専用_ 接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、`true` に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `env.php` ファイルから削除するには、`false` に設定します。
+Adobe Commerceは、複数の Redis インスタンスを非同期で読み取ることができます。 Redis インスタンスへの `true` 読み取り専用 _接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、_ に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `false` ファイルから削除するには、`env.php` に設定します。
 
 ```yaml
 stage:
@@ -490,12 +490,13 @@ Adobe Commerce バージョン 2.8.0 以降には、次のバックエンドモ�
 ```yaml
 stage:
   deploy:
-    VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+  VALKEY_USE_SLAVE_CONNECTION: true
+  VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2}Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の {configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -504,13 +505,13 @@ stage:
 
 >[!WARNING]
 >
->[ スケール _アーキテクチャ_ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Valkey 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 または、Adobeでは、Adobe Commerce 2.4.8 以降を使用し、新しい Valkey バックエンド設定を実装し、Valkey の L2 キャッシングを実装することをお勧めします。
+>_スケール_ アーキテクチャ [ プロジェクトでは、この変数を有効にしないで ](../architecture/scaled-architecture.md) ださい。 Valkey 接続エラーが発生します。 Redis スレーブはアクティブですが、Redis 読み取りには使用されません。 または、Adobeでは、Adobe Commerce 2.4.8 以降を使用し、新しい Valkey バックエンド設定を実装し、Valkey の L2 キャッシングを実装することをお勧めします。
 
 >[!TIP]
 >
 >`VALKEY_USE_SLAVE_CONNECTION` 変数は、クラウドインフラストラクチャー上のAdobe Commerce ステージング環境および実稼動 Pro クラスター環境でのみサポートされており、スタータープロジェクトではサポートされていません。
 
-Adobe Commerceは、複数の Redis インスタンスを非同期で読み取ることができます。 `VALKEY_USE_SLAVE_CONNECTION` Redis インスタンスへの _読み取り専用_ 接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、`true` に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `env.php` ファイルから削除するには、`VALKEY_USE_SLAVE_CONNECTION` を `false` に設定します。
+Adobe Commerceは、複数の Redis インスタンスを非同期で読み取ることができます。 `VALKEY_USE_SLAVE_CONNECTION` Redis インスタンスへの `true` 読み取り専用 _接続を自動的に使用して、非マスターノードで読み取り専用トラフィックを受信するには、_ に設定します。 この接続では、読み取り/書き込みトラフィックを処理するノードが 1 つだけなので、ロード・バランシングによってパフォーマンスが向上します。 既存の読み取り専用接続配列を `VALKEY_USE_SLAVE_CONNECTION` ファイルから削除するには、`false` を `env.php` に設定します。
 
 ```yaml
 stage:
@@ -529,7 +530,7 @@ stage:
 - **Default** – 設定しない
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-リソース名をデータベース接続にマップします。 この設定は、`env.php` ファイルの `resource` セクションに対応します。
+リソース名をデータベース接続にマップします。 この設定は、`resource` ファイルの `env.php` セクションに対応します。
 
 {{merge-options}}
 
@@ -634,7 +635,7 @@ stage:
 - **デフォルト**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0 以降
 
-静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズできます。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
+静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) をカスタマイズできます。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html) を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_ を使用します。
 
@@ -661,7 +662,7 @@ stage:
     SCD_THREADS: 2
 ```
 
-デプロイメント時間をさらに短縮するには、`scd-dump` コマンドで [ 設定管理 ](../store/store-settings.md) を使用して、静的デプロイメントをビルドフェーズに移行します。
+デプロイメント時間をさらに短縮するには、[ コマンドで ](../store/store-settings.md) 設定管理 `scd-dump` を使用して、静的デプロイメントをビルドフェーズに移行します。
 
 ## `SEARCH_CONFIGURATION`
 
