@@ -443,7 +443,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2}Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の {configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Redis バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` はキャッシュ設定を自動的に生成します。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -496,7 +496,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2}Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の {configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache` を Valkey バックエンドモデルとして指定して [L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html) を有効にすると、`ece-tools` によってキャッシュ設定が自動的に生成されます。 [2&rbrace;Adobe Commerce設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example) の &lbrace;configuration ファイル _の例を参照してください。_&#x200B;生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
