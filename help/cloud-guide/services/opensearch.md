@@ -3,9 +3,9 @@ title: OpenSearch サービスの設定
 description: クラウドインフラストラクチャー上でAdobe Commerceの OpenSearch サービスを有効にする方法について説明します。
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
+source-git-commit: 1f965749e59e3c48be2d8e04ac58683234e7b685
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
 
-1. `.magento.app.yaml` ファイルの `relationships` プロパティを設定または確認します。
+1. `relationships` ファイルの `.magento.app.yaml` プロパティを設定または確認します。
 
    ```yaml
    relationships:
@@ -92,7 +92,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 - **プロジェクトのアップグレード** – 新しいアプリケーションバージョンの OpenSearch PHP クライアントが、クラウドインフラストラクチャにインストールされた OpenSearch サービスバージョンと互換性があることを確認します。
 
-サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド _の [&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) システム要件_ を参照してください。
+サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド [ の ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)_システム要件_ を参照してください。
 
 **OpenSearch ソフトウェアの互換性を確認するには**:
 
@@ -180,7 +180,12 @@ OpenSearch サービスを再起動する必要がある場合は、Adobe Commer
 
 ### OpenSearch 用プラグインの追加
 
-オプションで、`.magento/services.yaml` ファイルの OpenSearch サービスに `configuration:plugins` セクションを追加することで、OpenSearch 用のプラグインを追加できます。 例えば、次のコードは ICU 分析と音声分析プラグインを有効にします。
+オプションで、`configuration:plugins` ファイルの OpenSearch サービスに `.magento/services.yaml` セクションを追加することで、OpenSearch 用のプラグインを追加できます。 例えば、次のコードは ICU 分析と音声分析プラグインを有効にします。
+
+>[!NOTE]
+>
+>これは、統合環境とスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境にプラグインをインストールするには、[ サポートリクエストを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) します。
+
 
 ```yaml
 opensearch:
@@ -196,9 +201,14 @@ opensearch:
 
 ### OpenSearch のプラグインを削除
 
-`.magento/services.yaml` ファイルの `opensearch:` セクションからプラグイン エントリを削除しても、サービスはアンインストールまたは無効化 **されません**。 このサービスを完全に無効にするには、`.magento/services.yaml` ファイルからプラグインを削除した後、OpenSearch データのインデックスを再作成する必要があります。 この設計により、これらのプラグインに依存するデータの損失や破損を防ぐことができます。
+`opensearch:` ファイルの `.magento/services.yaml` セクションからプラグイン エントリを削除しても、サービスはアンインストールまたは無効化 **されません**。 このサービスを完全に無効にするには、`.magento/services.yaml` ファイルからプラグインを削除した後、OpenSearch データのインデックスを再作成する必要があります。 この設計により、これらのプラグインに依存するデータの損失や破損を防ぐことができます。
+
 
 **OpenSearch プラグインを削除するには**:
+
+>[!NOTE]
+>
+>この変更は、統合およびスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境でプラグインを削除するには、[ サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) する必要があります。
 
 1. `.magento/services.yaml` ファイルから OpenSearch プラグインのエントリを削除します。
 1. コードの変更を追加、コミット、プッシュします。
@@ -216,7 +226,7 @@ opensearch:
    ```
 
 1. `.magento/services.yaml` の変更をクラウドリポジトリにコミットします。
-1. カタログ検索インデックスを再インデックス化します。
+1. カタログ検索インデックスを再インデックス化します（すべての環境：統合、スターター、Pro ステージング、実稼動クラスター）。
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
