@@ -3,9 +3,9 @@ title: キャッシュ設定のカスタマイズ
 description: Fastly サービスのセットアップが完了した後に、キャッシュ設定を確認しカスタマイズする方法を説明します。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
+source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## TLS を強制
 
-Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2 _ドキュメントの_ Fastly CDN モジュール [&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly Force TLS ガイド）を参照してください。
+Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2[ ドキュメントの ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN モジュール _Fastly_ Force TLS ガイド）を参照してください。
 
 >[!NOTE]
 >
@@ -161,13 +161,15 @@ _接触チャネルシールド_ は、ストアに対するすべてのリク�
 
 ## 基本認証
 
-基本認証は、サイト上のすべてのページとアセットを保護する機能です
-ユーザー名とパスワード。 基本 **アクティブ化する** お勧めしません）
-実稼動環境での認証。 ステージングで設定できます
-開発プロセス中にサイトを保護します。 Fastly CDN モジュールのドキュメントの [ 基本認証ガイド ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) を参照してください。
+基本認証は、サイト上のすべてのページとアセットをユーザー名とパスワードで保護する機能です。
 
-ユーザーアクセスを追加し、ステージングで基本認証を有効にした場合も、引き続き可能です
-追加の資格情報を必要とせずに管理者にアクセスする。
+実稼動環境で基本認証をアクティブ化するAdobe **お勧めしません**。 ステージング環境で設定して、開発プロセス中にサイトを保護できます。 Fastly CDN モジュールのドキュメントの [ 基本認証ガイド ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) を参照してください。
+
+ユーザーアクセスを追加し、ステージングで基本認証を有効にした場合でも、追加の資格情報を必要とせずに管理者にアクセスできます。
+
+>[!NOTE]
+>
+>Fastly が有効になってい **環境（ステージング環境や実稼動以外の環境など）については、Cloud Console で確認しないでくださ**[!UICONTROL Enable HTTP access control]。 この方法でアクセス制御を設定すると、以前にアクセス権を持っていたユーザーは、アクセスが取り消された後も Fastly によって資格情報がキャッシュされたままであれば、引き続きサイトにアクセスできます。
 
 ## カスタム VCL スニペットの作成
 
@@ -185,7 +187,7 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
 - スタータープロジェクトの場合は、プロジェクトの「[!UICONTROL Domains]」タブで「プロジェクト URL」に移動して [!DNL Cloud Console] ロジェクト URL を追加します。
 
-- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
+- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
 
 **管理者から Fastly ドメイン設定を管理するには**:
 
