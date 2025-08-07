@@ -2,10 +2,11 @@
 title: Commerceのクラウドコンポーネント
 description: クラウドコンポーネントパッケージの最新の改善点のリストを確認します。
 recommendations: noDisplay, catalog
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.1.2 {#latest}
+## v1.1.3 {#latest}
+
+リリース日：2025 年 8 月 7 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 および修正の機能テストを追加しました。<!-- MCLOUD-13313 -->
+
+## v1.1.2
 
 リリース日：2025 年 6 月 3 日（PT）
 
@@ -60,7 +67,7 @@ ht-degree: 0%
 
 リリース日：2022 年 9 月 13 日（PT）
 
-- ![ 修正アイコン ](../../assets/fix.svg)**ウォームアップ時のエラー** – 管理者でページの表示が [ 個別に表示されない ](../environment/variables-post-deploy.md#warm_up_pages) に設定されている場合に、デプロイメントログに `ERROR: Warming up failed: <link to page>` エラーが表示される [**ウォームアップ**](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) を実行しようとした問題を修正しました。<!-- MCLOUD-9134 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**ウォームアップ時のエラー** – 管理者でページの表示が [ 個別に表示されない ](../environment/variables-post-deploy.md#warm_up_pages) に設定されている場合に、デプロイメントログに [**エラーが表示される** ウォームアップ ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)`ERROR: Warming up failed: <link to page>` を実行しようとした問題を修正しました。<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

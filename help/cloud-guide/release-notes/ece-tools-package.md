@@ -2,11 +2,11 @@
 title: ECE-Tools リリースノート
 description: ECE-Tools パッケージの最新の改善点のリストを確認してください。
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-06-03T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: e447e19d89edeaec84314c52b377f3712e0f0400
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '3185'
+source-wordcount: '3269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`ece-tools` パッケージの最新リリースへの更新について詳しくは、[ECE ツールのアップグレード ](../dev-tools/update-package.md) を参照してください。
+>[ パッケージの最新リリースへの更新について詳しくは、](../dev-tools/update-package.md)ECE ツールのアップグレード `ece-tools` を参照してください。
 
 `ece-tools` パッケージでは、次のリリースバージョン管理シーケンスを使用します。`200<major>.<minor>.<patch>`
 
@@ -28,20 +28,34 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.6 {#latest}
+## v2002.2.7 {#latest}
+
+リリース日：2025 年 8 月 7 日（PT）
+
+- ![ 修正アイコン ](../../assets/fix.svg) **PHP 8.4 の修正** 型の互換性を追加しました。<!-- MCLOUD-13965 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**EOL バリデーター** – 提供終了（EOL）サービスの日付を更新。<!-- MCLOUD-13929 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Valkey**-PHP 8.2 および PHP 8.3 の機能テストを追加しました。<!-- MCLOUD-13610 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**バリデーター**- ECE ツールの警告メッセージを修正しました。<!-- MCLOUD-13896 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**ECE ツール** – 追加された単体テストの改善。<!-- MCLOUD-13838 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**サービスのバリデーター**-Opensearch、MariaDB、PHP の新しいバージョンのサポートが追加されました。<!-- MCLOUD-13923 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Opensearch3**-Opensearch3.<!-- MCLOUD-13763 --> のサポートを追加
+- ![ 修正アイコン ](../../assets/fix.svg)**2.4.4-p7/p12 の Opensearch サポート** – バリデータースクリプトを更新。<!-- MCLOUD-13945 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Opensearch3 テスト** – 追加された機能テスト。<!-- MCLOUD-13769 -->
+
+## v2002.2.6
 
 リリース日：2025 年 6 月 3 日（PT）
 
-- ![ 修正アイコン ](../../assets/fix.svg)**2.4.8 との互換性の向上** – サードパーティライブラリを更新し、2.4.8 との互換性を向上 <!-- MCLOUD-13707	 - -->
+- ![ 修正アイコン ](../../assets/fix.svg)**2.4.8 との互換性の向上** – サードパーティライブラリを更新し、2.4.8 との互換性を向上 <!-- MCLOUD-13707 -->
 
 ## v2002.2.5
 
 リリース日：2025 年 5 月 27 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**Extended Valkey compatibility** Adobe Commerceの Extended Valkey compatibility<!-- MCLOUD-13595	 - -->
-- ![ 修正アイコン ](../../assets/fix.svg)**更新された RabbitMQ バリデーター**-RabbitMQ の更新されたバリデーター <!-- MCLOUD-13589	 - -->
-- ![ 修正アイコン ](../../assets/fix.svg) **MariaDB バリデーターを更新**-MariaDB 10.11 用 ece-tools バリデーターを更新。<!-- MCLOUD-13593	 - -->
-- ![ 修正アイコン ](../../assets/fix.svg)**拡張 Opensearch2 互換性** 最新の 2.4.4 バージョンと互換性のある Opensearch2 を実現。<!-- MCLOUD-13710	 - -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Extended Valkey compatibility** Adobe Commerceの Extended Valkey compatibility<!-- MCLOUD-13595 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**更新された RabbitMQ バリデーター**-RabbitMQ の更新されたバリデーター <!-- MCLOUD-13589 -->
+- ![ 修正アイコン ](../../assets/fix.svg) **MariaDB バリデーターを更新**-MariaDB 10.11 用 ece-tools バリデーターを更新。<!-- MCLOUD-13593 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**拡張 Opensearch2 互換性** 最新の 2.4.4 バージョンと互換性のある Opensearch2 を実現。<!-- MCLOUD-13710 -->
 
 ## v2002.2.4
 
@@ -53,8 +67,8 @@ ht-degree: 0%
 
 リリース日：2025 年 4 月 9 日（PT）
 
-- ![ 修正アイコン ](../../assets/fix.svg)**Valkey** Valkey カスタム設定の問題を修正しました。<!-- MCLOUD-13569	 - -->
-- ![ 修正アイコン ](../../assets/fix.svg)**修正バリデーター**-RabbitMQ 4.0 の修正バリデーター <!-- MCLOUD-13560	 - -->
+- ![ 修正アイコン ](../../assets/fix.svg)**Valkey** Valkey カスタム設定の問題を修正しました。<!-- MCLOUD-13569 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**修正バリデーター**-RabbitMQ 4.0 の修正バリデーター <!-- MCLOUD-13560 -->
 
 ## v2002.2.2
 
@@ -64,16 +78,15 @@ ht-degree: 0%
 
 リリース日：2025 年 4 月 7 日（PT）
 
-- ![ 新規アイコン ](../../assets/new.svg)**Valkey** - Redis に代わる新しいサービス（Valkey）のサポートを追加しました。&lt;!— MCLOUD-13455 —>
-- ![fix icon](../../assets/fix.svg)**Opensearch2 for 2.4.4/2.4.5**—Adobe Commerce バージョン 2.4.4/2.4.5で `opensearch2` のサポートが追加されました。 &lt;!— MCLOUD-13493 —>
+- ![ 新規アイコン ](../../assets/new.svg)**Valkey** - Redis に代わる新しいサービス（Valkey）のサポートを追加しました。<!-- MCLOUD-13455 -->
+- ![fix icon](../../assets/fix.svg)**Opensearch2 for 2.4.4/2.4.5**—Adobe Commerce バージョン 2.4.4/2.4.5で `opensearch2` のサポートが追加されました。<!-- MCLOUD-13493 -->
 
 ## v2002.2.1
 
 リリース日：2024 年 2 月 6 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13145     - -->
-- ![ 修正アイコン ](../../assets/fix.svg)**Opensearch のバリデーター** – 間違ったバージョンのサービスに関して誤解を招くメッセージを生成したバリデーターを修正しました。&lt;!— MCLOUD-13184 —>
-
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4**—PHP 8.4 のサポートを追加しました。<!-- MCLOUD-13145 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**Opensearch のバリデーター** – 間違ったバージョンのサービスに関して誤解を招くメッセージを生成したバリデーターを修正しました。<!-- MCLOUD-13184 -->
 
 ## v2002.2.0
 
@@ -134,13 +147,13 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)**Adobe I/O Events for Adobe Commerceのサポートを追加**。 拡張機能の開発者は、[Adobe I/O Events](https://developer.adobe.com/events/docs/) フレームワークを使用して、クラウドインスタンスから [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/) 用に作成されたアプリケーションにCommerce イベント情報を送信できるようになりました。 Adobe CommerceのAdobe I/O Eventsはパートナープレビュー版です。<!-- CEXT-932 -->
 - ![ 新しいアイコン ](../../assets/new.svg)**OPcache 設定のバリデーター** – 除外されたパスの OPcache 設定を確認するバリデーターを追加しました。<!-- MCLOUD-9485 -->
-- ![ 修正アイコン ](../../assets/fix.svg)**GraphQL キャッシュ設定の問題を修正** - ECE-Tools は、`app/etc/env.php` ファイルの `cache` 設定にGraphQL `id_salt` 値を保持するようになりました。<!-- MCLOUD-9486 -->
+- ![ 修正アイコン ](../../assets/fix.svg)**GraphQL キャッシュ設定の問題を修正** - ECE-Tools は、`id_salt` ファイルの `cache` 設定にGraphQL `app/etc/env.php` 値を保持するようになりました。<!-- MCLOUD-9486 -->
 
 ## v2002.1.12
 
 リリース日：2022 年 9 月 13 日（PT）
 
-- ![new icon](../../assets/new.svg) **Enable`synchronous_replication`**—ECE-Tools は、`MYSQL_USE_SLAVE_CONNECTION` が有効な場合に `app/etc/env.php` ファイルの `synchronous_replication=>true` を設定します。 この設定は、Commerce 2.4.6 以降にのみ影響します。 [ 変数のデプロイ ](../environment/variables-deploy.md#mysql_use_slave_connection) の `MYSQL_USE_SLAVE_CONNECTION` 変数の説明を参照してください。<!-- MCLOUD-9142 -->
+- ![new icon](../../assets/new.svg) **Enable`synchronous_replication`**—ECE-Tools は、`synchronous_replication=>true` が有効な場合に `app/etc/env.php` ファイルの `MYSQL_USE_SLAVE_CONNECTION` を設定します。 この設定は、Commerce 2.4.6 以降にのみ影響します。 `MYSQL_USE_SLAVE_CONNECTION` 変数のデプロイ [ の ](../environment/variables-deploy.md#mysql_use_slave_connection) 変数の説明を参照してください。<!-- MCLOUD-9142 -->
 - ![ 新規アイコン ](../../assets/new.svg)**OpenSearch** – 次回のAdobe Commerce リリース 2.4.6 用に `opensearch` エンジンを設定および設定する機能が追加されました。[OpenSearch サービスの設定 ](../services/opensearch.md) を参照してください <!-- MCLOUD-9236 -->。
 
 ## v2002.1.11
@@ -165,7 +178,7 @@ ht-degree: 0%
 - ![new icon](../../assets/new.svg) **PHP**—PHP 8.1 のサポートを追加しました。
 - ![fix icon](../../assets/fix.svg) **symfony/process** - symfony/process ^5.3 との互換性が追加されました。<!-- MCLOUD-8283 -->
 
-- ![ 新しいアイコン ](../../assets/new.svg)**コンシューマーの複数のプロセス** - コンシューマーごとに発生するプロセスの数を指定できる `multiple_processes` オプションが追加されました。 [ 変数のデプロイ ](../environment/variables-deploy.md#cron_consumers_runner) の `CRON_CONSUMERS_RUNNER` 変数の説明を参照してください。<!-- MCLOUD-8295 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**コンシューマーの複数のプロセス** - コンシューマーごとに発生するプロセスの数を指定できる `multiple_processes` オプションが追加されました。 `CRON_CONSUMERS_RUNNER` 変数のデプロイ [ の ](../environment/variables-deploy.md#cron_consumers_runner) 変数の説明を参照してください。<!-- MCLOUD-8295 -->
 - ![new icon](../../assets/new.svg)**OpenSearch scheme and full host path**—Elasticsearchスキームとフルホストパスを設定する機能が追加されました。
 - ![ 修正アイコン ](../../assets/fix.svg) **AWS S3** - AWS S3 のイネーブルメント方法を変更しました。
 - ![fix icon](../../assets/fix.svg) **Fix driver_options reader**—`env.php` ファイルから DB 接続用の driver_options 設定を読み取り、バリデータを `ece-tools` び出す機能を追加しました。<!-- MCLOUD-8420 -->
@@ -187,7 +200,7 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)Composer 2.0.<!--MCLOUD-8003--> のサポートを追加
 
-- ![fix icon](../../assets/fix.svg) **`symphony/console`** のコンポーザー要件の更新 – `symphony/console` パッケージの ECE-Tools `composer.json` バージョン要件を更新し、`di:compile` コマンドが次のエラーで失敗する問題を修正しました。`Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
+- ![fix icon](../../assets/fix.svg) **`symphony/console`** のコンポーザー要件の更新 – `composer.json` パッケージの ECE-Tools `symphony/console` バージョン要件を更新し、`di:compile` コマンドが次のエラーで失敗する問題を修正しました。`Incompatible argument type: Required type: int. Actual type: string`<!--MC-42919-->
 
 - ![fix icon](../../assets/fix.svg) 提供終了のソフトウェアチェック（`eol.yaml`）が更新され、Elasticsearch 7.9.x が含まれるようになりました。<!--MCLOUD-7938-->
 
@@ -215,7 +228,7 @@ ht-degree: 0%
 
 - ![ 新しいアイコン ](../../assets/new.svg)**リモートストレージ** - AWS S3 などのストレージサービスを使用してメディアファイルをリモートストレージする Cloud Projects を有効にするための `REMOTE_STORAGE` 環境変数が追加されました。 この設定オプションは ECE-Tools パッケージの一部ですが、クラウドインフラストラクチャー上のAdobe Commerceではサポートされていません。<!--MCLOUD-7153-->
 
-- ![ 新規アイコン ](../../assets/new.svg)**新規 `cloud:config:validate` コマンド** – 変更をリモートクラウド環境にプッシュする前に `.magento.env.yaml` 設定を検証するコマンド `php vendor/bin/ece-tools cloud:config:validate` を追加しました。<!--MCLOUD-7120-->
+- ![ 新規アイコン ](../../assets/new.svg)**新規 `cloud:config:validate` コマンド** – 変更をリモートクラウド環境にプッシュする前に `php vendor/bin/ece-tools cloud:config:validate` 設定を検証するコマンド `.magento.env.yaml` を追加しました。<!--MCLOUD-7120-->
 
 - ![ 新規アイコン ](../../assets/new.svg)**opcache のフラッシュ** – デプロイフックを実行する前に OPcache をフラッシュする `opcache.enable_cli` PHP オプションのサポートが追加されました。 この設定では、キャッシュ設定がリセットされ、各デプロイメントに現在の設定が確実に適用されます。<!--MCLOUD-7015-->
 
@@ -223,15 +236,15 @@ ht-degree: 0%
 
 - ![ 新規アイコン ](../../assets/new.svg)**新規 SCD_NO_PARENT 環境変数** – 親テーマの静的コンテンツの生成を管理するための `SCD_NO_PARENT` 環境変数（Adobe Commerce >=2.4.2 用）が追加されました。<!--MCLOUD-7284-->
 
-- ![fix icon](../../assets/fix.svg)**メモリ制限とコマンド**—`cloud.log` ファイルのサイズが PHP の memory_limit を超えると `php vendor/bin/ece-tools` コマンドが動作しない問題を修正しました。 `cloud.log` ファイル全体をメモリに読み込む代わりに、ログファイルから小さなサブセットのデータのみを読み込むようになりました。<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![fix icon](../../assets/fix.svg)**メモリ制限とコマンド**—`php vendor/bin/ece-tools` ファイルのサイズが PHP の memory_limit を超えると `cloud.log` コマンドが動作しない問題を修正しました。 `cloud.log` ファイル全体をメモリに読み込む代わりに、ログファイルから小さなサブセットのデータのみを読み込むようになりました。<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
-- ![ 修正アイコン ](../../assets/fix.svg)**カスタムデータベース接続** - `DATABASE_CONFIGURATION` 用に定義されたカスタムデータベース接続が使用されなかった `.magento.env.yaml` 設定の問題を修正しました。 接続設定が `app/etc/env.php`.<!--MCLOUD-7426--> に追加されませんでした
+- ![ 修正アイコン ](../../assets/fix.svg)**カスタムデータベース接続** - `.magento.env.yaml` 用に定義されたカスタムデータベース接続が使用されなかった `DATABASE_CONFIGURATION` 設定の問題を修正しました。 接続設定が `app/etc/env.php`.<!--MCLOUD-7426--> に追加されませんでした
 
 - ![ 修正アイコン ](../../assets/fix.svg)**空のエラーログ** - `cloud.error.log` が空の場合にデプロイメントが失敗する問題を修正しました。<!--MCLOUD-7296-->
 
 - ![fix icon](../../assets/fix.svg) **MariaDB 10.3 validation**—Adobe Commerce 2.3.6-p1.<!--MCLOUD-7416--> の MariaDB 10.3 の検証を修正しました。
 
-- ![fix icon](../../assets/fix.svg)**Cache:flush logging**—`cache:flush` のステップの開始と終了を示すようにログ・エントリを改善しました。<!--MCLOUD-7503-->
+- ![ 修正アイコン ](../../assets/fix.svg)**キャッシュ :flush ログ** -`cache:flush` の手順の開始と終了を示すようにログエントリを改善しました。<!--MCLOUD-7503-->
 
 ## v2002.1.4
 
@@ -259,7 +272,7 @@ ht-degree: 0%
 
 - ![ 新規アイコン ](../../assets/new.svg) Adobe Commerce Elasticsearch モジュールと互換性のあるElasticsearchのバージョンを示すように、Elasticsearch互換性エラーメッセージを更新しました。 お使いのバージョンのElasticsearchで使用されるElasticsearch モジュールと互換性を持たせるために、エラーメッセージに、クラウドインフラストラクチャにインストールする特定のAdobe Commerce バージョンが表示されるようになりました。 [ 警告エラー、ステージのデプロイ ](../dev-tools/error-reference.md#deploy-stage-1) を参照してください <!--MCLOUD-6698-->。
 
-- ![ 新規アイコン ](../../assets/new.svg) 無効な `MAGE_MODE` 環境変数の設定に対する警告エラー `2026` と `2027` を追加しました。 有効な値は `production` のみです。 この修正前は、読み取り専用ファイルに書き込もうとした場合に後でエラーが発生するように、`MAGE_MODE` を配置エラーなしで `developer` に設定できました。 [ 警告エラー ](../dev-tools/error-reference.md#warning-errors) を参照してください <!--MCLOUD-6708-->。
+- ![ 新規アイコン ](../../assets/new.svg) 無効な `2026` 環境変数の設定に対する警告エラー `2027` と `MAGE_MODE` を追加しました。 有効な値は `production` のみです。 この修正前は、読み取り専用ファイルに書き込もうとした場合に後でエラーが発生するように、`MAGE_MODE` を配置エラーなしで `developer` に設定できました。 [ 警告エラー ](../dev-tools/error-reference.md#warning-errors) を参照してください <!--MCLOUD-6708-->。
 
 - ![fix icon](../../assets/fix.svg)Redis、RabbitMQ および MySQL サービスの検証を修正し、これらのバージョンがAdobe Commerceのバージョンと互換性があることを確認しました。 これらのサービスの有効なバージョンが `cloud.log`.<!--MCLOUD-7098--> に書き込まれるようになりました。
 
@@ -267,7 +280,7 @@ ht-degree: 0%
 
 **CLI コマンドの更新**—
 
-- ![ 新規アイコン ](../../assets/new.svg)1 つ以上のビルド、デプロイ、デプロイ後変数を含めることができる設定で `.magento.env.yaml` ファイルを作成および更新するための CLI コマンド（`cloud:config:create` および `cloud:config:update`）が追加されました。 [CLI からの構成ファイルの作成 ](../environment/configure-env-yaml.md#create-configuration-file-from-cli) を参照してください <!--MCLOUD-7072-->。
+- ![ 新規アイコン ](../../assets/new.svg)1 つ以上のビルド、デプロイ、デプロイ後変数を含めることができる設定で `cloud:config:create` ファイルを作成および更新するための CLI コマンド（`cloud:config:update` および `.magento.env.yaml`）が追加されました。 [CLI からの構成ファイルの作成 ](../environment/configure-env-yaml.md#create-configuration-file-from-cli) を参照してください <!--MCLOUD-7072-->。
 
 **環境変数の更新**—
 
@@ -327,7 +340,7 @@ ht-degree: 0%
       - `app:config:import`
       - `module:enable`
 
-     各呼び出しのログレベルは、`.magento.env.yaml` ファイルの [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) 変数の設定によって決まります。<!--MCLOUD-3503-->
+     各呼び出しのログレベルは、[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) ファイルの `.magento.env.yaml` 変数の設定によって決まります。<!--MCLOUD-3503-->
 
 - ![ 新しいアイコン ](../../assets/new.svg)**検証の改善**—
 
@@ -335,7 +348,7 @@ ht-degree: 0%
 
    - ![ 新しいアイコン ](../../assets/new.svg)**更新されたサービスバージョンと EOL 検証チェック** – インストールされているサービスバージョンをAdobe Commerce 2.4 と照合するように検証を更新しました。要件 <!--MCLOUD-6144-->
 
-   - ![ 修正アイコン ](../../assets/fix.svg) 検証の問題を修正して、デプロイ後の警告メッセージが `.magento.app.yaml` ファイルに `post-deploy` フック設定がない場合にのみ表示されるようにしました。
+   - ![ 修正アイコン ](../../assets/fix.svg) 検証の問題を修正して、デプロイ後の警告メッセージが `post-deploy` ファイルに `.magento.app.yaml` フック設定がない場合にのみ表示されるようにしました。
 
      ```text
      Your application does not have the "post_deploy" hook enabled.
@@ -379,13 +392,13 @@ ht-degree: 0%
 
    - ![ 新しいアイコン ](../../assets/new.svg)**更新されたパッチ適用機能** - パッチ適用機能を ECE-Tools パッケージから別の [magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージに移動しました。 デプロイ時に、`ece-tools` は新しいパッケージを使用してパッチを適用します。 [ クラウドパッチのリリースノート ](cloud-patches.md) を参照してください。<!--MAGECLOUD-4567-->
 
-   - ![new icon](../../assets/new.svg)**更新された Composer の依存関係** - `magento/magento-cloud-docker` パッケージの依存関係を使用して、クラウドインフラストラクチャー上のAdobe Commerceの `composer.json` ファイルを更新しました。 現在は、[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md) ージ内のすべて `ece-tools` パッケージの依存関係が含まれています。 これらのパッケージは、のインストールまたはアップデート時に自動的にインストールおよびアップデートさ `ece-tools` ます。
+   - ![new icon](../../assets/new.svg)**更新された Composer の依存関係** - `composer.json` パッケージの依存関係を使用して、クラウドインフラストラクチャー上のAdobe Commerceの `magento/magento-cloud-docker` ファイルを更新しました。 現在は、`ece-tools` ージ内のすべて [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md) パッケージの依存関係が含まれています。 これらのパッケージは、のインストールまたはアップデート時に自動的にインストールおよびアップデートさ `ece-tools` ます。
 
 - ![ 新しいアイコン ](../../assets/new.svg)**シナリオベースのデプロイメントのサポート**—<!--MAGECLOUD-4101-->
 
    - ![ 新規アイコン ](../../assets/new.svg)XML 設定ファイルを使用して、ビルド、デプロイ、デプロイ後のプロセスをカスタマイズし、デフォルトの設定を上書きまたはカスタマイズできるようになりました。
 
-   - ![ 新規アイコン ](../../assets/new.svg) **`.magento.app.yaml`** の `hooks` 設定を変更 – シナリオベースのデプロイメントをサポートするために、`hooks` 設定形式を更新しました。 以前の ECE-Tools 2002.0.x リリースのレガシー形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。 [ シナリオベースのデプロイメント ](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks) を参照してください。
+   - ![ 新規アイコン ](../../assets/new.svg) **`hooks` の`.magento.app.yaml`** 設定を変更 – シナリオベースのデプロイメントをサポートするために、`hooks` 設定形式を更新しました。 以前の ECE-Tools 2002.0.x リリースのレガシー形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。 [ シナリオベースのデプロイメント ](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks) を参照してください。
 
 >[!NOTE]
 >
@@ -413,7 +426,7 @@ ht-degree: 0%
 
    - ![ 修正アイコン ](../../assets/fix.svg) `SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT` および `STATIC_CONTENT_SYMLINK` 環境変数を削除しました。 [ 後方互換性のない変更 ](backward-incompatible-changes.md#environment-configuration-changes) を参照してください。<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
-   - ![ 修正アイコン ](../../assets/fix.svg)Elastic Suite 設定プロセスの問題を修正して、`_merge` オプションを使用せずに `ELASTICSUITE_CONFIGURATION` デプロイ変数を設定した場合に、デフォルト設定が期待どおりに上書きされるようにしました。<!--MAGECLOUD-4388-->
+   - ![ 修正アイコン ](../../assets/fix.svg)Elastic Suite 設定プロセスの問題を修正して、`ELASTICSUITE_CONFIGURATION` オプションを使用せずに `_merge` デプロイ変数を設定した場合に、デフォルト設定が期待どおりに上書きされるようにしました。<!--MAGECLOUD-4388-->
 
 - ![ 新しいアイコン ](../../assets/new.svg)**CLI コマンドの更新**—
 

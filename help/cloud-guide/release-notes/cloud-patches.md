@@ -2,11 +2,11 @@
 title: Commerceのクラウドパッチ
 description: クラウドパッチパッケージの最新の改善点のリストを確認します。
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-06-09T00:00:00Z
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 7081a16f65ccbd76cab221c0a6bfd138e47a20f8
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2486'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.9 {#latest}
+## v1.1.10 {#latest}
+
+リリース日：2025 年 8 月 7 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**PHP 8.4** – 機能テストを追加しました。<!-- MCLOUD-13312 -->
+
+## v1.1.9
 
 リリース日：2025 年 6 月 9 日（PT）
 
@@ -46,13 +52,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2025 年 5 月 5 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.8 への更新されたパッチ** – これは、1.1.7 でリリースされた [CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch) の更新されたパッチです <!-- MCLOUD-13619 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.8 への更新されたパッチ** – これは、1.1.7 でリリースされた [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch) の更新されたパッチです <!-- MCLOUD-13619 -->
 
 ## v1.1.6
 
 リリース日：2025 年 4 月 24 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.7 への更新されたパッチ** – これは、1.1.4 でリリースされた [CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) の更新されたパッチです <!-- MCLOUD-13240 -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.7 への更新されたパッチ** – これは、1.1.4 でリリースされた [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) の更新されたパッチです <!-- MCLOUD-13240 -->
 
 ## v1.1.5
 
@@ -64,7 +70,7 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2025 年 2 月 13 日（PT）
 
-- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.7 への追加されたパッチ** – この更新パッチ [CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+- ![ 新しいアイコン ](../../assets/new.svg)**Commerce 2.4.4 から 2.4.7 への追加されたパッチ** – この更新パッチ [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
@@ -76,13 +82,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2024 年 11 月 5 日（PT）
 
-- ![fix icon](../../assets/fix.svg)**Commerce 2.4.4 から 2.4.7 へのパッチの追加** – この更新プログラムは、B2B モジュールを使用する場合のAdobe Commerceの重大な [CVE-2024-45115](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) 脆弱性を修正します。<!-- MCLOUD-12980 - -->
+- ![fix icon](../../assets/fix.svg)**Commerce 2.4.4 から 2.4.7 へのパッチの追加** – この更新プログラムは、B2B モジュールを使用する場合のAdobe Commerceの重大な [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) 脆弱性を修正します。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 リリース日：2024 年 11 月 5 日（PT）
 
-- ![fix icon](../../assets/fix.svg)**Commerce 2.4.4 から 2.4.7 への追加されたパッチ** – このアップデートは、重大な [CVE-2024-34102](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting の脆弱性にパッチを適用します。<!-- MCLOUD-12980 - -->
+- ![fix icon](../../assets/fix.svg)**Commerce 2.4.4 から 2.4.7 への追加されたパッチ** – このアップデートは、重大な [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicSting の脆弱性にパッチを適用します。<!-- MCLOUD-12980 - -->
 
 ## v1.1.0
 
@@ -160,7 +166,7 @@ Adobe Commerce 2.4.5 の重要なパッチ：
 
 - **Braintree支払いを使用した注文に関する問題** – このパッチは、管理者が新しい注文や再注文を行うのを妨げる重要な問題を解決します。<!-- MCLOUD-9137 -->
 
-[Braintree支払いが有効な場合、管理者が注文の作成や並べ替えができない ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=ja) を参照してください。
+[Braintree支払いが有効な場合、管理者が注文の作成や並べ替えができない ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html) を参照してください。
 
 ## v1.0.17
 
@@ -176,7 +182,7 @@ Adobe Commerce 2.3.3-p1 以降のバージョン用の重要なパッチ：
 
 認証されていないリモートコードの実行を引き起こす **重大** な脆弱性を解決するためにパッチを更新しました。<!-- MCLOUD-8479 -->
 
-[Adobe セキュリティ速報 APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html) を参照してください。
+[Adobe セキュリティ速報 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html) を参照してください。
 
 ## v1.0.15
 
@@ -193,7 +199,7 @@ Adobe Commerce 2.3.3-p1 以降のバージョン用の重要なパッチ：
 
 認証されていないリモートコードが実行される **重大** な）脆弱性を解決するためのパッチを追加しました。<!-- MCLOUD-8461 -->
 
-[Adobe セキュリティ速報 APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html) を参照してください。
+[Adobe セキュリティ速報 APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html) を参照してください。
 
 ## v1.0.13
 
@@ -209,7 +215,7 @@ Adobe Commerce 2.3.3-p1 以降のバージョン用の重要なパッチ：
 
 Adobe Commerce 2.4.3 および 2.3.7-p1 の重要なパッチ：
 
-- **API レート制限の問題** – このパッチは、配列に 20 項目を超える項目を含むリクエストを Web API が処理できなかったデフォルトのレート制限を修正します。 このパッチは、レート制限のデフォルト値を引き上げます。 Adobe Commerce [2.4.3 リリースノート ](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 --> を参照してください。
+- **API レート制限の問題** – このパッチは、配列に 20 項目を超える項目を含むリクエストを Web API が処理できなかったデフォルトのレート制限を修正します。 このパッチは、レート制限のデフォルト値を引き上げます。 Adobe Commerce [2.4.3 リリースノート ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 --> を参照してください。
 
 ## v1.0.11
 
@@ -242,7 +248,7 @@ Adobe Commerce 2.4.3 および 2.3.7-p1 の重要なパッチ：
 
 リリース日：2020 年 10 月 14 日
 
-- **magento/magento-cloud-patches の互換性アップデート** - Adobe Commerce 2.4.1 以降のリリースとの互換性を保つために、`composer.json` ファイルの `symfony` および `semver` バージョンの制約を更新しました。<!--MCLOUD-7111-->
+- **magento/magento-cloud-patches の互換性アップデート** - Adobe Commerce 2.4.1 以降のリリースとの互換性を保つために、`symfony` ファイルの `semver` および `composer.json` バージョンの制約を更新しました。<!--MCLOUD-7111-->
 
 ## v1.0.7
 
@@ -313,9 +319,9 @@ Adobe Commerce 2.4.3 および 2.3.7-p1 の重要なパッチ：
 
 - **magento/magento-cloud-patches の互換性のアップデート**
 
-   - Adobe Commerce 2.4 以降のリリースとの互換性を保つために、`composer.json` ファイルの `symfony` と `semver` のバージョンの制約を更新しました。<!--MAGECLOUD-5127-->
+   - Adobe Commerce 2.4 以降のリリースとの互換性を保つために、`symfony` ファイルの `semver` と `composer.json` のバージョンの制約を更新しました。<!--MAGECLOUD-5127-->
 
-   - `ece-tools` 2002.0.22 以降の 2002.0.x リリースとの互換性を確保するために、`composer.json` の制約を更新しました。
+   - `composer.json` 2002.0.22 以降の 2002.0.x リリースとの互換性を確保するために、`ece-tools` の制約を更新しました。
 
 - **PayPal Express Checkout** - 2020 年 2 月 12 日（PT）に公開されたこのパッチは、PayPal Express Checkout で発注された注文に影響を与える問題を解決します。この問題では、注文の配送先住所が、「配送」ページのドロップダウンメニューから選択するのではなく、テキストフィールドに手動で入力された国地域を指定します。 詳しくは、パッチのダウンロードページの完全なパッチの説明を参照してください。
 
@@ -335,7 +341,7 @@ magento/magento-cloud-patches v1.0.1 リリースのソフトウェアダウン�
 
    - `cron_schedule` テーブルのステータス値が正しくないことが原因で、一部の cron ジョブが実行されない問題を修正しました。 ここでは、`cron_schedule` テーブルを使用する代わりに、Adobe Commerce lock フレームワークを使用して、cron ジョブステータスをチェックおよび更新します。 エラーステータスで終了した Cron ジョブは、24 時間待たずに、次回の Cron 実行時に再試行されます。
 
-   - `cron_schedule` テーブル内のデータの更新中にデッドロックを回避するための _retry_ 操作を追加します。
+   - _テーブル内のデータの更新中にデッドロックを回避するための_ retry`cron_schedule` 操作を追加します。
 
 - **Magento Open Source 2.x で使用可能なすべてのパッチを含めるように `magento/magento-cloud-patches` を更新** - ソフトウェアのダウンロードページで使用可能なすべてのMagento Open Source 2.x パッチを含めるように magento/magento-cloud-patches パッケージを更新しました。 Magento Open Sourceのパッチをクラウドインフラストラクチャプロジェクト上のAdobe Commerceに以前にコピーした場合は、競合を避けるために削除します。<!--MAGECLOUD-4606-->
 
