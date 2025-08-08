@@ -1,13 +1,13 @@
 ---
-source-git-commit: 7f2934af84c947046fed3a32c3b6e2937aed418a
+source-git-commit: 69b764a03e6c272498e57645dca40d29c4e79626
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '934'
 ht-degree: 3%
 
 ---
 # ece-tools
 
-**バージョン**:2002.2.5
+**バージョン**:2002.2.7
 
 このリファレンスには、`ece-tools` のコマンド ライン ツールで使用できる 34 のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `ece-tools list` コマンドを使用して自動生成されます。
@@ -25,9 +25,16 @@ ht-degree: 3%
 - デフォルト：`false`
 - 値を受け入れません
 
-#### `--quiet`, `-q`
+#### `--silent`
 
 メッセージを出力しない
+
+- デフォルト：`false`
+- 値を受け入れません
+
+#### `--quiet`, `-q`
+
+エラーのみが表示されます。 その他の出力はすべて抑制されます
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -56,7 +63,6 @@ ANSI 出力を強制（または無効化 – no-ansi）
 
 「– ansi」オプションを否定します
 
-- デフォルト：`false`
 - 値を受け入れません
 
 #### `--no-interaction`, `-n`
@@ -401,7 +407,7 @@ ece-tools backup:list
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-重要な設定ファイルを復元します。 backup:list を実行して、バックアップ ファイルのリストを表示します。
+重要な設定ファイルを復元します。 backup:list を実行して、バックアップファイルのリストを表示します。
 
 ### オプション
 
