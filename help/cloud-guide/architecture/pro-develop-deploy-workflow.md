@@ -3,9 +3,9 @@ title: プロプロジェクトワークフロー
 description: Pro 開発ワークフローとデプロイメントワークフローの使用方法を説明します。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
+source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,20 @@ Pro プロジェクトには、グローバル `master` ブランチを持つ単
 
 ![Pro 環境リスト ](../../assets/pro-environments.png)
 
-これらの環境は `read-only` ンプル化され、ローカルワークスペースからプッシュされたブランチからデプロイされたコードの変更を受け入れます。 Pro 環境の概要については、[Pro アーキテクチャ ](pro-architecture.md) を参照してください。 プロジェクトビューの Pro 環境リストの概要については、[[!DNL Cloud Console]](../project/overview.md#cloud-console) を参照してください。
+これらの環境は `read-only` ンプルされ、ローカルワークスペースからプッシュされたブランチからのデプロイ済みコードの変更のみを受け入れます。
 
-次の図は、シンプルな Git ブランチのアプローチを使用する、Pro の開発とデプロイのワークフローを示しています。 `integration` 環境に基づくアクティブなブランチを使用してコードを [ 開発 ](#development-workflow)、リモートのアクティブなブランチとの間でコードの変更を _プッシュ_ および _プル_ します。 検証済みのコードをデプロイするには、リモートブランチをベースブランチに _マージ_ します。これにより、その環境の自動 [ ビルドおよびデプロイ ](#deployment-workflow) プロセスがアクティブになります。
+次の図は、シンプルな Git ブランチのアプローチを使用する、Pro の開発とデプロイのワークフローを示しています。 [ 環境に基づくアクティブなブランチを使用してコードを ](#development-workflow) 開発 `integration`、リモートのアクティブなブランチとの間でコードの変更を _プッシュ_ および _プル_ します。 検証済みのコードをデプロイするには、リモートブランチをベースブランチに _マージ_ します。これにより、その環境の自動 [ ビルドおよびデプロイ ](#deployment-workflow) プロセスがアクティブになります。
 
 ![Pro アーキテクチャ開発ワークフローの概要 ](../../assets/pro-dev-workflow.png)
+
+環境は読み取り専用なので、クラウド環境で直接コードを変更することはできません。 `composer install` を実行してモジュールをインストールしようとすると、次のようなエラーが発生します。
+
+```bash
+file_put_contents(...): Failed to open stream: Read-only file system  
+The disk hosting /app/<cluster_ID> is full
+```
+
+詳細については、[Pro アーキテクチャ ](pro-architecture.md) を参照して Pro 環境の概要を確認し、プロジェクト ビューの Pro 環境リストの概要については、[[!DNL Cloud Console]](../project/overview.md#cloud-console) を参照してください。
 
 ## 開発ワークフロー
 
@@ -36,9 +45,9 @@ Pro プロジェクトには、グローバル `master` ブランチを持つ単
 
 - **取得** 変更を `integration` から
 
-- `integration` から **分岐**
+- **から** 分岐 `integration`
 
-- ロー [!DNL Composer] ルアップデートを含むローカルワークステーションでのコードの **開発**
+- ロー **ルアップデートを含むローカルワークステーションでのコードの** 開発 [!DNL Composer]
 
 - **プッシュ** コードの変更をリモートに送信し、検証します
 
@@ -50,7 +59,7 @@ Pro プロジェクトには、グローバル `master` ブランチを持つ単
 
 - **構成管理ファイルの生成** - デプロイ済の環境では、一部の構成設定は _読み取り専用_ です。
 
-- **ストアの設定** – 統合環境を使用して、すべてのストア設定を完全に設定する必要があります。 **ストア管理者 URL** は、_[!DNL Cloud Console]_&#x200B;の_ integration _環境表示にあります。
+- **ストアの設定** – 統合環境を使用して、すべてのストア設定を完全に設定する必要があります。 **ストア管理者 URL** は、_の_ integration _[!DNL Cloud Console]_環境表示にあります。
 
 ## デプロイメントワークフロー
 
@@ -105,4 +114,4 @@ Pro プロジェクトには、グローバル `master` ブランチを持つ単
 
 サービスを中断せずに実稼動環境をデバッグする必要が生じた場合に備えて、常に実稼動コードのコピーをグローバル `master` ードにプッシュします。
 
-グロ **バル `master` から分岐を作成しないでくださ**。 `integration` ブランチを使用して、開発および修正用の新しいアクティブなブランチを作成します。
+グロ **バル** から分岐を作成しないでくださ `master`。 `integration` ブランチを使用して、開発および修正用の新しいアクティブなブランチを作成します。
