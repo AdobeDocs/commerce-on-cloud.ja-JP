@@ -3,7 +3,7 @@ title: PHP 設定
 description: クラウドインフラストラクチャーにおけるCommerce アプリケーション設定に最適な PHP 設定について説明します。
 feature: Cloud, Configuration, Extensions
 exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
-source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # PHP 設定
 
-`.magento.app.yaml` ファイルで実行する [PHP のバージョン ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) を選択できます。
+[ ファイルで実行する ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)PHP のバージョン `.magento.app.yaml` を選択できます。
 
 ```yaml
 name: mymagento
@@ -21,7 +21,7 @@ type: php:<version>
 
 >[!TIP]
 >
->PHP 8.1 以降にアップグレードする場合は、`.magento.app.yaml` ファイルの [`runtime: extensions:` プロパティから JSON を削除し ](properties.md#runtime) 再デプロイします。 JSON 拡張機能は、PHP 8.0 以降、クラウド環境にインストールされています。
+>PHP 8.1 以降にアップグレードする場合は、[`runtime: extensions:` ファイルの ](properties.md#runtime) プロパティから JSON を削除し `.magento.app.yaml` 再デプロイします。 JSON 拡張機能は、PHP 8.0 以降、クラウド環境にインストールされています。
 
 ## PHP の設定
 
@@ -63,7 +63,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->推奨される PHP 設定の一覧については、_インストールガイド_ の [ 必要な PHP 設定 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ja) を参照してください。
+>推奨される PHP 設定の一覧については、[ インストールガイド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) の _必要な PHP 設定_ を参照してください。
 
 ### カスタム PHP 設定の確認
 
@@ -81,7 +81,7 @@ register_argc_argv => On => On
 
 >[!WARNING]
 >
->Cloud Docker for Commerceをローカル開発に使用する場合、Docker 環境でカスタム `php.ini` ファイルを使用する方法については、[Docker サービスコンテナ ](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#fpm-container) を参照してください。
+>Cloud Docker for Commerceをローカル開発に使用する場合、Docker 環境でカスタム [ ファイルを使用する方法については、](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#fpm-container)Docker サービスコンテナ `php.ini` を参照してください。
 
 ## 拡張機能の有効化
 
@@ -118,7 +118,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP のモジュール要件は、Adobe Commerceのバージョンに関連付けられています。 [PHP の要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ja) を参照してください。
+PHP のモジュール要件は、Adobe Commerceのバージョンに関連付けられています。 [PHP の要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) を参照してください。
 
 ### 拡張機能のサポート
 
@@ -136,8 +136,10 @@ sourceguardian.restrict_unencoded = "1"
 
 [SourceGuardian ドキュメントの 3.5 節 ](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf) を参照してください。 _PDFへのリンクです_。
 
-[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) すると、これらの PHP 拡張機能をすべての実稼動環境および Pro ステージング環境にインストールする際のヘルプが表示されます。 更新した `.magento/services.yaml` ファイル、更新した PHP バージョン `.magento.app.yaml` 含むファイル、および追加の PHP 拡張子を含めます。 実稼動環境に変更を加える場合は、少なくとも 48 時間は通知する必要があります。 クラウドインフラストラクチャチームがプロジェクトを更新するまで、最大 48 時間かかる場合があります。
+[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) すると、これらの PHP 拡張機能をすべての実稼動環境および Pro ステージング環境にインストールする際のヘルプが表示されます。 更新した `.magento/services.yaml` ファイル、更新した PHP バージョン `.magento.app.yaml` 含むファイル、および追加の PHP 拡張子を含めます。 実稼動環境に変更を加える場合は、少なくとも 48 時間は通知する必要があります。 クラウドインフラストラクチャチームがプロジェクトを更新するまで、最大 48 時間かかる場合があります。
 
 >[!WARNING]
 >
 >debug を指定してコンパイルされた PHP はサポートされておらず、Probe は [!DNL XDebug] または [!DNL XHProf] と競合する可能性があります。 プローブを有効にする場合は、これらの拡張機能を無効にします。 Probe は [!DNL Pinba] や IonCube のような PHP 拡張モジュールと競合します。
+
+<!-- Last updated from includes: 2025-04-14 09:39:27 -->

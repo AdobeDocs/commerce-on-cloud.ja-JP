@@ -2,7 +2,8 @@
 title: Fastly キャッシュをバイパスするカスタム VCL
 description: Fastly キャッシュをバイパスするカスタム VCL スニペットを作成して、オリジンサーバーへのリクエストトラフィックをトラブルシューティングします。
 feature: Cloud, Configuration, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
@@ -57,13 +58,13 @@ ht-degree: 0%
      if (req.url ~ "/media/feeds/GoogleShoppingHiVisNew.xml") {  return (pass);}
      ```
 
-     URL が完全に一致する場合は、`~` 演算子の代わりに `==` 演算子を使用します。 詳しくは、[Fastly VCL リファレンス ] を参照してください。
+     URL が完全に一致する場合は、`==` 演算子の代わりに `~` 演算子を使用します。 詳しくは、[Fastly VCL リファレンス ] を参照してください。
 
 1. **作成** をクリックします。
 
    ![Fastly バイパス VCL スニペットの作成 ](/help/assets/cdn/fastly-create-bypass-snippet.png)
 
-1. ページのリロード後、「**Fastly 設定 *セクションの**&#x200B;Fastly に VCL をアップロード* をクリックします。
+1. ページのリロード後、「**Fastly 設定** セクションの *Fastly に VCL をアップロード* をクリックします。
 
 1. アップロードが完了したら、ページ上部の通知に従ってキャッシュを更新します。
 
@@ -86,3 +87,5 @@ curl -svo /dev/null www.example.com/index.html
 <!--External link definitions-->
 
 [Fastly VCL 参照]: https://docs.fastly.com/vcl/
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

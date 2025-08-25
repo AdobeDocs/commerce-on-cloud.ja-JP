@@ -2,7 +2,8 @@
 title: CMS バックエンドへのリクエストの再ルーティング
 description: Fastly エッジモジュールを使用して、Adobe Commerce ストアから受信したリクエストを別の WordPress サイトに再ルーティングする方法を説明します。
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -45,6 +46,8 @@ VCL コードを手動で書いて Fastly API を使用してアップロード�
 
    - Adobe Commerceから WordPress バックエンドへの URL 書き換えを処理する _その他のCMS/バックエンド統合_ Edge モジュールを設定します。
 
-     手順について詳しくは、Magento 2 _用 [Fastly CDN モジュール ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) ドキュメントの_ Fastly Edge モジュール – その他のCMS/バックエンド統合を参照してください。
+     手順について詳しくは、Magento 2[ 用 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md)Fastly CDN モジュール _ドキュメントの_ Fastly Edge モジュール – その他のCMS/バックエンドの統合を参照してください。
 
 1. Fastly サービス設定を更新した後、Adobe Commerce ストアをテストして、WordPress に指定した URL リクエストが正しく再ルーティングされていることを確認します。
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

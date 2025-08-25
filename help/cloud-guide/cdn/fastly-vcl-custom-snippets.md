@@ -3,7 +3,7 @@ title: カスタム VCL スニペットの基本を学ぶ
 description: Varnish Control Language コードスニペットを使用して、Adobe Commerce用の Fastly サービス設定をカスタマイズする方法について説明します。
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -332,3 +332,5 @@ Fastly サービスから `500 Internal Server Error` 応答を受け取った�
 - **[ デフォルトの Fastly VCL コードの値を上書き ](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   更新された値でスニペットを作成し、`100` の優先度を割り当てます。
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

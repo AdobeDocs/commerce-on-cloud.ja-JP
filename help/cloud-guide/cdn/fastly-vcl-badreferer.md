@@ -2,7 +2,8 @@
 title: リファラルスパムをブロック
 description: Fastly Edge辞書とカスタム VCL スニペットを使用して、サイトからリファラルスパムをブロックします。
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -79,7 +80,7 @@ Edge辞書について詳しくは、Fastly ドキュメントの [Edge辞書の
 
 - `dynamic` – 値 0 は、Fastly 設定用にバージョン管理された VCL にアップロードする [ 通常のスニペット ](https://docs.fastly.com/en/guides/using-regular-vcl-snippets) を示します。
 
-- `priority` — VCL スニペットを実行するタイミングを指定します。 優先度は、デフォルトのMagentoVCL スニペット（`magentomodule_*`）に優先度 50 が割り当てられる前に、このスニペットコードを実行する `5` 要があります。 各カスタムスニペットの優先度を、スニペットを実行するタイミングに応じて 50 より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
+- `priority` — VCL スニペットを実行するタイミングを指定します。 優先度は、デフォルトのMagento VCL スニペット（`5`）に優先度 50 が割り当てられる前に、このスニペットコードを実行する `magentomodule_*` 要があります。 各カスタムスニペットの優先度を、スニペットを実行するタイミングに応じて 50 より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
 
 - 「`type`」 - VCL バージョンにスニペットを挿入する場所を指定します。 この例では、VCL スニペットが `recv` スニペットです。 スニペットを VCL バージョンに挿入すると、既定の Fastly VCL コードの下で、オブジェクトの上にある `vcl_recv` サブルーチンに追加されます。
 
@@ -124,7 +125,7 @@ Edge辞書について詳しくは、Fastly ドキュメントの [Edge辞書の
 
    ![ カスタムリファラーブロック VCL スニペットの作成 ](/help/assets/cdn/fastly-create-referrer-block-snippet.png)
 
-1. ページのリロード後、「**Fastly 設定 *セクションの**&#x200B;Fastly に VCL をアップロード* をクリックします。
+1. ページのリロード後、「**Fastly 設定** セクションの *Fastly に VCL をアップロード* をクリックします。
 
 1. アップロードが完了したら、ページ上部の通知に従ってキャッシュを更新します。
 
@@ -135,3 +136,5 @@ Fastly は、アップロード処理中に更新された VCL バージョン�
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->
