@@ -1,7 +1,7 @@
 ---
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+source-git-commit: f75dbbc9726ff21a648b1bb3d8f06cb45a5d6b08
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -11,13 +11,28 @@ ht-degree: 0%
 
 ## ファイルの構成
 
+### `adobe-docs-tasks.rake`
+
+Experience League上のAdobe Commerceに関する一般的な要件、共有機能、名前空間に依存しないタスクが含まれています。
+
+- `whatsnew` - ニュースダイジェストのデータを生成（デフォルト：最終更新以降）
+- `render` - テンプレートファイルのレンダリングとインクルードの管理
+
 ### `includes.rake`
 
-`:includes` 名前空間の下にあるすべてのインクルード関連の rake タスクが含まれます。
+`:includes` 名前空間で整理されたインクルード管理タスクが含まれます。
 
-- `includes:maintain_relationships` - インクルード関係の検出と管理
+- `includes:maintain_relationships` - Markdown ファイルでのインクルード関係の検出と維持
 - `includes:maintain_timestamps` - インクルードファイルの変更に基づいてタイムスタンプを追加/更新します
 - `includes:maintain_all` – 両方の操作を順番に実行します
+- `includes:unused` – 未使用のインクルードファイルを検索する
+
+### `images.rake`
+
+`:images` 名前空間で整理された画像管理タスクが含まれます。
+
+- `images:optimize` – 変更されたコミットされていないファイルの画像を最適化する
+- `images:unused` - プロジェクト内の未使用の画像を検索する
 
 ## 仕組み
 
@@ -28,7 +43,7 @@ Rake は、`.rake` ディレクトリ内の `rakelib/` ファイルを自動的�
 3. **新しいタスクグループを簡単に追加** – 新しい `.rake` ファイルを作成するだけです
 4. **関心の分離を管理** – 各ファイルで特定のドメインを処理します
 
-## 新規タスクグループの追加
+## 新しいタスクグループの追加
 
 関連タスクの新しいグループを追加するには：
 
