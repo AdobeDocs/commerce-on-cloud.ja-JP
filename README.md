@@ -9,8 +9,8 @@ ht-degree: 1%
 
 このサイトには、クラウドインフラストラクチャー上のCommerceに関する最新の開発者向けドキュメントが含まれています。
 
-- [ クラウドインフラストラクチャー上のCommerceガイド ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- クラウドインフラストラクチャー上での [Commerceの概要 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
+- [ クラウドインフラストラクチャー上のCommerceガイド ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview)
+- クラウドインフラストラクチャー上での [Commerceの概要 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/start/overview)
 
 ## Adobe オープン Source行動規範
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## Adobe コンテンツへの投稿について
 
-[Adobe ドキュメント投稿者ガイドを参照してください ](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
+[Adobe ドキュメント投稿者ガイドを参照してください ](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction)。
 
 投稿方法は、投稿者と、投稿したい変更の種類に応じて異なります。
 
@@ -40,7 +40,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 コミュニティのコントリビューターは、基本的な編集を行う場合は GitHub UI を使用し、大きな変更を加える場合はリポジトリをフォークします。
 
-詳しくは、[Adobe ドキュメント投稿者ガイド ](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) を参照してください。
+詳しくは、[Adobe ドキュメント投稿者ガイド ](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction) を参照してください。
 
 ## Markdown を使用してトピックを書式設定する方法
 
