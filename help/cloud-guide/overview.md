@@ -2,7 +2,7 @@
 title: クラウドインフラストラクチャー上のCommerce
 description: クラウドインフラストラクチャー上で Commerce を構築、デプロイ、管理する方法を学びます。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 10818a862fbba14bdfb3de1e6107d745104e4791
+source-git-commit: b3b020dd4a0f76c60be3eae1c93f97e82adcacab
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # クラウドインフラストラクチャー上のCommerce
 
-クラウドインフラストラクチャー上のAdobe Commerceは、クラウドネイティブ環境で [!DNL Commerce] アプリケーションを構築、デプロイ、管理するための **セルフサービス** アプローチを備えた自動ホスティングプラットフォームを提供します。 Adobe Commerce on cloud infrastructure には、オンプレミスのAdobe CommerceおよびMagento Open Source プラットフォームとは異なる次の追加機能が付属しています。
+クラウドインフラストラクチャー上のAdobe Commerceは、クラウドネイティブ環境で **アプリケーションを構築、デプロイ、管理するための** セルフサービス [!DNL Commerce] アプローチを備えた自動ホスティングプラットフォームを提供します。 Adobe Commerce on cloud infrastructure には、オンプレミスのAdobe CommerceおよびMagento Open Source プラットフォームとは異なる次の追加機能が付属しています。
 
 - PHP、MySQL （MariaDB）、Redis、[!DNL RabbitMQ]、およびサポートされている検索エンジンテクノロジーを含む、プロビジョニング済みのインフラストラクチャ。
 - 自動ビルドおよび自動デプロイを使用した Git ベースのワークフロー Platform as a Service （PaaS）環境でコードの変更をプッシュするたびに、効率的な迅速な開発と継続的なデプロイメントを実現します。
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->セキュリティについて詳しくは、[ セキュリティのローンチチェックリスト ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration) を参照してください。
+>セキュリティについて詳しくは、[ セキュリティのローンチチェックリスト ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration) を参照してください。
 
 [Commerceのクラウドアーキテクチャ ](architecture/tech-stack.md) で、[ テクノロジースタック ](architecture/cloud-architecture.md) を詳しく表示するか、特定の機能とサポートされる製品について詳しく説明します。
 
@@ -60,5 +60,6 @@ ht-degree: 3%
 
 - [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
 
-- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） – [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
+- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League） – [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
 
+{{$include /help/_includes/templated/whats-new.md}}
