@@ -2,7 +2,7 @@
 title: クラウドインフラストラクチャー上のCommerce
 description: クラウドインフラストラクチャー上で Commerce を構築、デプロイ、管理する方法を学びます。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
+source-git-commit: 988b07b827c32c94a8cb2d30abb7e73fec71c4a0
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->セキュリティについて詳しくは、[ セキュリティのローンチチェックリスト ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration) を参照してください。
+>セキュリティについて詳しくは、[ セキュリティのローンチチェックリスト ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration) を参照してください。
 
 [Commerceのクラウドアーキテクチャ ](architecture/tech-stack.md) で、[ テクノロジースタック ](architecture/cloud-architecture.md) を詳しく表示するか、特定の機能とサポートされる製品について詳しく説明します。
 
@@ -60,8 +60,8 @@ ht-degree: 3%
 
 - [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
 
-- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） – [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
+- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League） – [!DNL Commerce] プロジェクトの計画、実装、運用、アップグレード、保守
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2025-09-03 16:00:46 -->
+<!-- Last updated from includes: 2025-09-19 20:32:03 -->
