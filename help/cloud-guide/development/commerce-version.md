@@ -1,20 +1,20 @@
 ---
 title: Commerceのバージョンのアップグレード
-description: クラウドインフラストラクチャプロジェクトでAdobe Commerceのバージョンをアップグレードする方法を説明します。
+description: クラウドインフラストラクチャ環境でAdobe Commerceのバージョンをアップグレードする方法を説明します。
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
-source-git-commit: bcb5b00f7f203b53eae5c1bc1037cdb1837ad473
+source-git-commit: 7f9aac358effdf200b59678098e6a1635612301b
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '898'
 ht-degree: 0%
 
 ---
 
 # Commerceのバージョンのアップグレード
 
-Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 プロジェクトをアップグレードする前に、最新のソフトウェア バージョン要件については [ インストール ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) ガイドの _システム要件_ を確認してください。
+Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、最新のソフトウェア バージョン要件について [ インストール ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) ガイドの _システム要件_ を確認してください。
 
-プロジェクトの設定に応じて、アップグレードタスクには次のものが含まれる場合があります。
+環境のタイプ（開発、ステージング、実稼動）に応じて、アップグレードタスクには次のものが含まれます。
 
 - 新しいAdobe Commerce バージョンとの互換性を保つため、MariaDB （MySQL）、OpenSearch、RabbitMQ、Redis の新しいバージョンで `.magento/services.yaml` ファイルをアップデートします。
 - フックと環境変数の新しい設定で `.magento.app.yaml` ファイルを更新します。
@@ -68,9 +68,9 @@ Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを�
 
 1. アップグレードプロセスを続行します。
 
-## プロジェクトのバックアップ
+## 環境のバックアップ
 
-アップグレードの前に、プロジェクトのバックアップを作成することをお勧めします。 統合環境、ステージング環境、実稼動環境をバックアップするには、次の手順を使用します。
+アップグレードの前に、インスタンスのバックアップを作成することをお勧めします。 統合環境、ステージング環境、実稼動環境をバックアップするには、次の手順を使用します。
 
 **統合環境のデータベースとコードをバックアップするには**:
 
@@ -128,7 +128,7 @@ Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを�
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2B を使用している場合は、Commerceの `composer.json` サポートされているバージョン [ で ](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/product-availability#adobe-authored-extensions) ファイルをアップデートします。
+1. B2B を使用している場合は、Commerceの `composer.json` サポートされているバージョン [ で ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) ファイルをアップデートします。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを�
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
 
    - [ ファイルに ] 品質向上パッチ `.magento.env.yaml` が適用されている場合は、そのパッチを新しいバージョンにも適用できるかどうかを確認します。 `QUALITY_PATCHES` ファイルの `.magento.env.yaml` セクションから、適用できないパッチを削除します。
 
-   **方法 1**:[ 品質パッチのリリースノートで該当するバージョンを確認してください ](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法 1**:[ 品質パッチのリリースノートで該当するバージョンを確認してください ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法 2**:[ 使用可能なパッチおよびステータスの表示 ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法 2**:[ 使用可能なパッチおよびステータスの表示 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法 3**:[ パッチの検索 ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)
+   **方法 3**:[ パッチの検索 ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
 
 
 1. コードの変更を追加、コミットおよびプッシュします。
