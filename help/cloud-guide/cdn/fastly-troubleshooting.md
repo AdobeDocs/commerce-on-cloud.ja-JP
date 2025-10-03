@@ -2,7 +2,8 @@
 title: Fastly のトラブルシューティング
 description: Adobe Commerce用の Fastly CDN モジュールおよびサービスのトラブルシューティングと管理の方法について説明します。
 feature: Cloud, Configuration, Cache, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 69954ef9-9ece-411e-934e-814a56542290
+source-git-commit: f496a4a96936558e6808b3ce74eac32dfdb9db19
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 0%
@@ -11,7 +12,7 @@ ht-degree: 0%
 
 # Fastly のトラブルシューティング
 
-以下の情報を使用して、クラウドインフラストラクチャプロジェクト環境のAdobe CommerceのMagento 2 用 Fastly CDN モジュールのトラブルシューティングと管理を行います。 例えば、応答ヘッダー値とキャッシュ動作を調査して、Fastly のサービスとパフォーマンスの問題を解決できます。
+クラウドインフラストラクチャプロジェクト環境のAdobe Commerceで、Magento 2 用 Fastly CDN モジュールをトラブルシューティングおよび管理するには、以下の情報を使用します。 例えば、応答ヘッダー値とキャッシュ動作を調査して、Fastly のサービスとパフォーマンスの問題を解決できます。
 
 プロの実稼動環境およびステージング環境では、[New Relic ログ ](../monitor/log-management.md) を使用して、Fastly CDN およびWAF ログデータを表示および分析し、エラーとパフォーマンスの問題のトラブルシューティングを行うことができます。
 
@@ -31,7 +32,7 @@ ht-degree: 0%
 log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 ```
 
-実稼動環境とステージング環境に同じ VCL を使用できます。 _Fastly ドキュメント_ の [`vcl_log`](https://www.fastly.com/documentation/reference/vcl/subroutines/log/) を参照してください。
+実稼動環境とステージング環境に同じ VCL を使用できます。 [`vcl_log`Fastly ドキュメント ](https://www.fastly.com/documentation/reference/vcl/subroutines/log/) の __ を参照してください。
 
 ## サイトのパフォーマンス、パージ、キャッシュの問題
 
@@ -41,9 +42,9 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 - **トップナビゲーションが機能しない** - トップナビゲーションは、Edge サイドインクルード （ESI）処理に依存しており、デフォルトのMagento Fastly VCL スニペットをアップロードする際に有効になります。 ナビゲーションが機能しない場合は [Fastly VCL をアップロード ](fastly-configuration.md#upload-vcl-to-fastly) し、サイトを再確認します。
 
-- **Geo-location/GeoIP が機能しない** - デフォルトMagentoの Fastly VCL スニペットは、国コードを URL に付加します。 国コードが機能しない場合は、[Fastly VCL をアップロード ](fastly-configuration.md#upload-vcl-to-fastly) してサイトを再確認します。
+- **Geo-location/GeoIP が機能しない** - デフォルトのMagento Fastly VCL スニペットは、国コードを URL に付加します。 国コードが機能しない場合は、[Fastly VCL をアップロード ](fastly-configuration.md#upload-vcl-to-fastly) してサイトを再確認します。
 
-- **ページはキャッシュされません** - デフォルトでは、Fastly は `Set-Cookies` ヘッダーを持つページをキャッシュしません。 Adobe Commerceは、キャッシュ可能なページ（TTL > 0）でも cookie を設定します。 デフォルトのMagentoである Fastly VCL では、キャッシュ可能なページにこれらの Cookie が削除されます。 ページがキャッシュされない場合は、[Fastly VCL をアップロード ](fastly-configuration.md#upload-vcl-to-fastly) して、サイトを再確認します。
+- **ページはキャッシュされません** - デフォルトでは、Fastly は `Set-Cookies` ヘッダーを持つページをキャッシュしません。 Adobe Commerceは、キャッシュ可能なページ（TTL > 0）でも cookie を設定します。 デフォルトのMagento Fastly VCL では、キャッシュ可能なページにこれらの Cookie が削除されます。 ページがキャッシュされない場合は、[Fastly VCL をアップロード ](fastly-configuration.md#upload-vcl-to-fastly) して、サイトを再確認します。
 
   この問題は、テンプレートのページブロックがキャッシュ不可とマークされている場合にも発生する可能性があります。 その場合、問題はサードパーティのモジュールまたは拡張機能がAdobe Commerce ヘッダーをブロックまたは削除したことが原因で発生する可能性が高くなります。 この問題を解決するには、[X-Cache contains only MISS, no HIT](#x-cache-contains-only-miss-no-hit) を参照してください。
 
@@ -88,7 +89,7 @@ Fastly が 503 タイムアウトエラーを返す場合は、エラーログ�
 
   503 エラーを返した URL のログで HTTP 200 応答を検索します。 200 の応答が見つかった場合は、Adobe Commerceがエラーなくページを返したことを意味します。 これは、間隔が Fastly サービス設定で設定された `first_byte_timeout` 値を超えた後に、問題が発生した可能性があることを示します。
 
-503 エラーが発生した場合、Fastly はエラーとメンテナンスページで理由を返します。 [ カスタム応答ページ ](fastly-custom-response.md) のコードを追加した場合、理由を確認できないことがあります。 デフォルトのエラーページで理由コードを確認するには、カスタムエラーページのHTMLコードを削除します。
+503 エラーが発生した場合、Fastly はエラーとメンテナンスページで理由を返します。 [ カスタム応答ページ ](fastly-custom-response.md) のコードを追加した場合、理由を確認できないことがあります。 デフォルトのエラーページに理由コードを表示するには、カスタムエラーページのHTML コードを削除します。
 
 **Fastly 503 エラーページを確認するには**:
 
@@ -153,7 +154,7 @@ Fastly API リクエストは、Fastly 拡張機能を通じて渡され、オ�
 1. 応答で [headers](#check-cache-hit-and-miss-response-headers) を検証し、Fastly が機能していることを確認します。 応答に次の一意のヘッダーが表示されます。
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.222
    < X-Cache: HIT, MISS
    ```
 
@@ -236,13 +237,13 @@ php bin/magento module:status Fastly_Cdn
 
 返されたステータスに基づいて、次の手順を使用して Fastly 設定を更新します。
 
-- `Module does not exist` - モジュールが存在しない場合 [ インストールと設定 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)、統合ブランチのMagento 2 用 Fastly CDN モジュール。 インストールが完了したら、モジュールを有効にして設定します。 [Fastly の設定 ](fastly-configuration.md) を参照してください。
+- `Module does not exist` - モジュールが存在しない場合 [ インストールと設定 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)、Magento 2 用 Fastly CDN モジュールは統合ブランチにあります。 インストールが完了したら、モジュールを有効にして設定します。 [Fastly の設定 ](fastly-configuration.md) を参照してください。
 
 - `Module is disabled` - Fastly モジュールが無効な場合は、ローカル環境の `integration` ブランチで環境設定を更新して有効にします。 次に、変更をステージング環境および実稼動環境にプッシュします。 詳しくは、[ 拡張機能の管理 ](../store/extensions.md#install-an-extension) を参照してください。
 
   [ 設定管理 ](../store/store-settings.md#configure-store) を使用している場合は、変更を実稼動環境またはステージング環境にプッシュする前に、`app/etc/config.php` 設定ファイルで Fastly CDN モジュールのステータスを確認します。
 
-  `config.php` ファイルでモジュールが有効（`Fastly_CDN => 0`）になっていない場合は、ファイルを削除し、次のコマンドを実行して `config.php` を最新の設定に更新します。
+  `Fastly_CDN => 0` ファイルでモジュールが有効（`config.php`）になっていない場合は、ファイルを削除し、次のコマンドを実行して `config.php` を最新の設定に更新します。
 
   ```bash
   bin/magento magento-cloud:scd-dump
@@ -258,7 +259,7 @@ Fastly VCL がアップロードされていない場合（`Fastly-Magento-VCL-U
 
 `X-Cache` ヘッダーが `MISS, MISS` で、`HIT` が含まれていない場合は、`curl` コマンドを再度実行し、ページが最近キャッシュからパージされていないことを確認してください。
 
-同じ結果が得られる場合は、[`curl` のコマンドを使用し ](#check-live-site-through-fastly) [response ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
+同じ結果が得られる場合は、[`curl` のコマンドを使用し ](#check-live-site-through-fastly)[response ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
 
 - `Pragma` is `cache`
 - `X-Magento-Tags` が存在する
@@ -278,13 +279,13 @@ Fastly VCL がアップロードされていない場合（`Fastly-Magento-VCL-U
 
 1. **システム**/**ツール**/**キャッシュ管理** をクリックします。
 
-1. **Magentoキャッシュをフラッシュ** をクリックします。
+1. **Magento キャッシュをフラッシュ** をクリックします。
 
 1. Fastly ヘッダーで問題を引き起こす可能性がある拡張機能ごとに、次の手順を実行します。
 
    - 一度に 1 つの拡張機能を有効にし、設定を保存して、Adobe Commerce キャッシュをフラッシュします。
 
-   - [`curl` のコマンドを実行して ](#check-live-site-through-fastly) [ 応答ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
+   - [`curl` のコマンドを実行して ](#check-live-site-through-fastly)[ 応答ヘッダー ](#check-cache-hit-and-miss-response-headers) を確認します。
 
    各拡張機能に対して、このプロセスを繰り返します。 Fastly 応答ヘッダーが表示されなくなった場合は、Fastly で問題を引き起こしている拡張機能を特定しました。
 

@@ -3,9 +3,9 @@ title: キャッシュ設定のカスタマイズ
 description: Fastly サービスのセットアップが完了した後に、キャッシュ設定を確認しカスタマイズする方法を説明します。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
+source-git-commit: a2f5e2f67c7739302a87eaa27df25a62fca1acb7
 workflow-type: tm+mt
-source-wordcount: '1953'
+source-wordcount: '1995'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,11 @@ ht-degree: 0%
 
 ステージング環境と実稼動環境で Fastly サービスを設定およびテストした後は、キャッシュ設定を確認し、カスタマイズします。 例えば、設定を更新して、TLS が HTTP 要求を Fastly にリダイレクトするように強制する、パージ設定を更新する、開発時にサイトをパスワードで保護するために基本認証を有効にするなどを行うことができます。
 
-次の節では、キャッシュ設定の概要と設定方法について説明します。 使用可能な設定オプションについて詳しくは、[Fastly CDN Module for Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation) ドキュメントを参照してください。
+次の節では、キャッシュ設定の概要と設定方法について説明します。
+
+>[!IMPORTANT]
+>
+>Fastly キャッシュを設定するために使用できる管理オプションは、インストールされている Fastly CDN Module for Magento 2 のバージョンによって異なります。 Adobeでは、ステージング環境および実稼動環境の Fastly モジュール [Fastly モジュールを最新バージョンに ](fastly-configuration.md#upgrade) アップグレード）することをお勧めします。 最新情報については、[Fastly CDN for Magento2 モジュールのリリースノート ](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) を参照してください。
 
 ## TLS を強制
 
@@ -169,7 +173,7 @@ _接触チャネルシールド_ は、ストアに対するすべてのリク�
 
 >[!NOTE]
 >
->Fastly が有効になってい **環境（ステージング環境や実稼動以外の環境など）については、Cloud Console で確認しないでくださ**&#x200B;[!UICONTROL Enable HTTP access control]。 この方法でアクセス制御を設定すると、以前にアクセス権を持っていたユーザーは、アクセスが取り消された後も Fastly によって資格情報がキャッシュされたままであれば、引き続きサイトにアクセスできます。
+>Fastly が有効になってい **環境（ステージング環境や実稼動以外の環境など）については、Cloud Console で確認しないでくださ**[!UICONTROL Enable HTTP access control]。 この方法でアクセス制御を設定すると、以前にアクセス権を持っていたユーザーは、アクセスが取り消された後も Fastly によって資格情報がキャッシュされたままであれば、引き続きサイトにアクセスできます。
 
 ## カスタム VCL スニペットの作成
 
@@ -187,7 +191,7 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
 - スタータープロジェクトの場合は、プロジェクトの「[!UICONTROL Domains]」タブで「プロジェクト URL」に移動して [!DNL Cloud Console] ロジェクト URL を追加します。
 
-- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
+- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
 
 **管理者から Fastly ドメイン設定を管理するには**:
 
