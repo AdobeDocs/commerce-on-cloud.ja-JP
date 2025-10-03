@@ -37,7 +37,7 @@ ht-degree: 0%
 - Adobe Commerce サポートでは、最初のイネーブルメント以降のAWS PrivateLink の問題のトラブルシューティングには対応しません。
 - お客様は、独自のVPCの管理に関連するコストについて責任を負います。
 - **プラットフォームによる HTTPS プロトコル（ポート 443）のサポート：**
-   - **Azure プライベートリンク**:[Fastly オリジンクローク &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html) が原因で、HTTPS プロトコル（ポート 443）を使用して、クラウドインフラストラクチャ上のAdobe Commerceに接続できません。
+   - **Azure プライベートリンク**:[Fastly オリジンクローク &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=ja) が原因で、HTTPS プロトコル（ポート 443）を使用して、クラウドインフラストラクチャ上のAdobe Commerceに接続できません。
    - **AWS PrivateLink**: HTTPS プロトコル （ポート 443）接続がサポートされています。
 - PrivateDNS は使用できません。
 
@@ -205,7 +205,7 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 
 ## PrivateLink 設定の変更
 
-既存の PrivateLink 設定を変更するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) します。 例えば、次のような変更をリクエストできます。
+既存の PrivateLink 設定を変更するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) します。 例えば、次のような変更をリクエストできます。
 
 - Cloud infrastructure Pro 実稼動環境またはステージング環境のAdobe Commerceから PrivateLink 接続を削除します。
 - Adobe エンドポイントサービスにアクセスするための、お客様の Cloud Platform アカウント番号を変更します。
