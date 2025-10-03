@@ -40,7 +40,7 @@ Adobe Commerce管理者から Fastly CDN サービスを設定し、Fastly API �
 
 クラウドインフラストラクチャー上のAdobe Commerceを使用して、Fastly Admin Dashboard に直接アクセスすることはできません。
 
-Adobe Commerce管理者を使用して、お使いの環境の Fastly 設定を確認および更新します。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) を送信します。
+Adobe Commerce管理者を使用して、お使いの環境の Fastly 設定を確認および更新します。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja) を送信します。
 
 ## Fastly 資格情報の取得
 
@@ -76,7 +76,7 @@ Cloud Starter プロジェクトでは、Cloud Console から、または Cloud 
 
 - ステージング環境または実稼動環境の Fastly 資格情報が見つからない場合は、Adobe カスタマーテクニカルアドバイザー（CTA）にお問い合わせください。
 
-- [Fastly 資格情報の検証中にエラーが発生する &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [Fastly 資格情報の検証中にエラーが発生する &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 認証情報を保護
 
@@ -156,7 +156,7 @@ Fastly モジュールを有効にしたら、デフォルトの [VCL コード 
 
 ## SSL/TLS 証明書のプロビジョニング
 
-Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeは、実稼動環境、ステージング環境、スターター実稼動環境ごとに 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[&#x200B; クラウドインフラストラクチャー上のAdobe Commerce用Adobe SSL （TLS）証明書 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq) を参照してください。
+Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeは、実稼動環境、ステージング環境、スターター実稼動環境ごとに 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[&#x200B; クラウドインフラストラクチャー上のAdobe Commerce用Adobe SSL （TLS）証明書 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq) を参照してください。
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ Fastly の初期セットアッププロセス中に、次の URL を使用し�
 
    >[!NOTE]
    >
-   >Cloud CLI を使用する代わりに、[Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls) からベース URL を更新できます
+   >Cloud CLI を使用する代わりに、[Admin](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls) からベース URL を更新できます
 
 1. Web ブラウザーを再起動します。
 
@@ -335,4 +335,4 @@ Adobeでは、ステージング環境および実稼動環境の Fastly モジ�
 
 >[!TIP]
 >
-> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter) を参照してください。
+> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter) を参照してください。
