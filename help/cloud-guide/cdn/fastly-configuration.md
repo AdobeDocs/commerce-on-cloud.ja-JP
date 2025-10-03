@@ -30,9 +30,9 @@ Fastly は、Varnish と連携して高速キャッシュ機能と、静的ア�
 
 >[!NOTE]
 >
->Fastly の初期設定を有効にして確認したら、設定をカスタマイズできます。 例えば、画像の最適化、エッジモジュール、カスタム VCL コードなどの追加オプションを有効にできます。 [ キャッシュ設定のカスタマイズ ](fastly-custom-cache-configuration.md) を参照してください。
+>Fastly の初期設定を有効にして確認したら、設定をカスタマイズできます。 例えば、画像の最適化、エッジモジュール、カスタム VCL コードなどの追加オプションを有効にできます。 [&#x200B; キャッシュ設定のカスタマイズ &#x200B;](fastly-custom-cache-configuration.md) を参照してください。
 
-プロジェクトのプロビジョニング時に、Adobeはクラウドインフラストラクチャ上のAdobe Commerceの [Fastly サービスアカウント ](fastly.md#fastly-service-account-and-credentials) にプロジェクトを追加し、スターターインスタンスと Pro ステージングおよび実稼動 `master` 境の Fastly アカウント資格情報を作成します。 各環境には一意の資格情報があります。
+プロジェクトのプロビジョニング時に、Adobeはクラウドインフラストラクチャ上のAdobe Commerceの [Fastly サービスアカウント &#x200B;](fastly.md#fastly-service-account-and-credentials) にプロジェクトを追加し、スターターインスタンスと Pro ステージングおよび実稼動 `master` 境の Fastly アカウント資格情報を作成します。 各環境には一意の資格情報があります。
 
 Adobe Commerce管理者から Fastly CDN サービスを設定し、Fastly API リクエストを送信するには、Fastly 資格情報が必要です。
 
@@ -40,7 +40,7 @@ Adobe Commerce管理者から Fastly CDN サービスを設定し、Fastly API �
 
 クラウドインフラストラクチャー上のAdobe Commerceを使用して、Fastly Admin Dashboard に直接アクセスすることはできません。
 
-Adobe Commerce管理者を使用して、お使いの環境の Fastly 設定を確認および更新します。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) を送信します。
+Adobe Commerce管理者を使用して、お使いの環境の Fastly 設定を確認および更新します。 管理者の Fastly 機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) を送信します。
 
 ## Fastly 資格情報の取得
 
@@ -60,13 +60,13 @@ Cloud Pro プロジェクトでは、IaaS マウントされた共有ディレ�
 
 Cloud Starter プロジェクトでは、Cloud Console から、または Cloud CLI を使用して、資格情報を取得します。
 
-- [!DNL Cloud Console] から、[ 環境設定 ](../project/overview.md#configure-environment) で次の環境変数を確認します。
+- [!DNL Cloud Console] から、[&#x200B; 環境設定 &#x200B;](../project/overview.md#configure-environment) で次の環境変数を確認します。
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
 
-- ローカルワークスペースのコマンドラインから、`magento-cloud` CLI を使用して Fastly 環境変数を [ リストおよび確認 ](../environment/variables-cloud.md#viewing-environment-variables) します。
+- ローカルワークスペースのコマンドラインから、`magento-cloud` CLI を使用して Fastly 環境変数を [&#x200B; リストおよび確認 &#x200B;](../environment/variables-cloud.md#viewing-environment-variables) します。
 
   ```bash
   magento-cloud variable:get -e <environment-ID>
@@ -76,7 +76,7 @@ Cloud Starter プロジェクトでは、Cloud Console から、または Cloud 
 
 - ステージング環境または実稼動環境の Fastly 資格情報が見つからない場合は、Adobe カスタマーテクニカルアドバイザー（CTA）にお問い合わせください。
 
-- [Fastly 資格情報の検証中にエラーが発生する ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [Fastly 資格情報の検証中にエラーが発生する &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 認証情報を保護
 
@@ -90,9 +90,9 @@ API トークンが公開されて共有されたり、サポートチケット�
 
 Fastly サービスを有効にして設定するには、次のコンポーネントが必要です。
 
-- 最新バージョンの [Fastly CDN for Magento 2 モジュール ](fastly.md#fastly-cdn-module-for-magento-2) がステージング環境と実稼動環境にインストールされています。 [Fastly へのアップグレード ](#upgrade-the-fastly-module) を参照してください。
+- 最新バージョンの [Fastly CDN for Magento 2 モジュール &#x200B;](fastly.md#fastly-cdn-module-for-magento-2) がステージング環境と実稼動環境にインストールされています。 [Fastly へのアップグレード &#x200B;](#upgrade-the-fastly-module) を参照してください。
 
-- クラウドインフラストラクチャステージング環境および実稼動環境でのAdobe Commerce用 [Fastly 資格情報 ](#get-fastly-credentials)
+- クラウドインフラストラクチャステージング環境および実稼動環境でのAdobe Commerce用 [Fastly 資格情報 &#x200B;](#get-fastly-credentials)
 
 **ステージング環境と実稼動環境で Fastly CDN キャッシュを有効にするには**:
 
@@ -100,13 +100,13 @@ Fastly サービスを有効にして設定するには、次のコンポーネ�
 
 1. **ストア**/設定/**設定**/**詳細**/**システム** をクリックし、「**フルページキャッシュ**」を展開します。
 
-   ![ 展開して Fastly を選択 ](../../assets/cdn/fastly-menu.png)
+   ![&#x200B; 展開して Fastly を選択 &#x200B;](../../assets/cdn/fastly-menu.png)
 
 1. _キャッシュアプリケーション_ セクションで、**システム値を使用** の選択を解除し、ドロップダウンリストから **Fastly CDN** を選択します。
 
-   ![Fastly を選択 ](../../assets/cdn/fastly-enable-admin.png)
+   ![Fastly を選択 &#x200B;](../../assets/cdn/fastly-enable-admin.png)
 
-1. **Fastly 設定** を展開し、[ キャッシュオプションを選択 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module) します。
+1. **Fastly 設定** を展開し、[&#x200B; キャッシュオプションを選択 &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module) します。
 
 1. キャッシュオプションを設定したら、ページ上部の **設定を保存** をクリックします。
 
@@ -120,11 +120,11 @@ Fastly サービスを有効にして設定するには、次のコンポーネ�
 
 1. 必要に応じて、プロジェクト環境の **Fastly サービス ID** と **API トークン** の値を追加します。
 
-   ![Fastly 資格情報管理者 ](../../assets/cdn/fastly-credentials-admin-ui.png)
+   ![Fastly 資格情報管理者 &#x200B;](../../assets/cdn/fastly-credentials-admin-ui.png)
 
    >[!NOTE]
    >
-   >Fastly API トークンを作成するには、リンクを選択しないでください。 代わりに、Adobeが提供する [Fastly 資格情報（サービス ID と API トークン） ](#get-fastly-credentials) を使用します。
+   >Fastly API トークンを作成するには、リンクを選択しないでください。 代わりに、Adobeが提供する [Fastly 資格情報（サービス ID と API トークン） &#x200B;](#get-fastly-credentials) を使用します。
 
 1. 「**認証情報をテスト**」をクリックします。
 
@@ -136,11 +136,11 @@ Fastly サービスを有効にして設定するには、次のコンポーネ�
 
 >[!NOTE]
 >
->ステージング環境または実稼動環境用の Fastly API トークン資格情報の変更手順については、[Fastly 資格情報の変更 ](fastly.md#change-fastly-api-token) を参照してください。
+>ステージング環境または実稼動環境用の Fastly API トークン資格情報の変更手順については、[Fastly 資格情報の変更 &#x200B;](fastly.md#change-fastly-api-token) を参照してください。
 
 ### Fastly への VCL のアップロード
 
-Fastly モジュールを有効にしたら、デフォルトの [VCL コード ](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets) を Fastly サーバーにアップロードします。 このコードは、クラウドインフラストラクチャ上のAdobe Commerceのキャッシュおよびその他の Fastly CDN サービスを有効にするための設定を指定する一連の VCL スニペットを提供します。
+Fastly モジュールを有効にしたら、デフォルトの [VCL コード &#x200B;](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets) を Fastly サーバーにアップロードします。 このコードは、クラウドインフラストラクチャ上のAdobe Commerceのキャッシュおよびその他の Fastly CDN サービスを有効にするための設定を指定する一連の VCL スニペットを提供します。
 
 >[!NOTE]
 >
@@ -150,13 +150,13 @@ Fastly モジュールを有効にしたら、デフォルトの [VCL コード 
 
 1. _Fastly 設定_ セクションで、**VCL を Fastly にアップロード** をクリックします（下図を参照）。
 
-   ![Magento VCL の Fastly へのアップロード ](../../assets/cdn/fastly-upload-vcl-admin.png)
+   ![Magento VCL の Fastly へのアップロード &#x200B;](../../assets/cdn/fastly-upload-vcl-admin.png)
 
 1. アップロードが完了したら、ページ上部の通知に従ってキャッシュを更新します。
 
 ## SSL/TLS 証明書のプロビジョニング
 
-Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeは、実稼動環境、ステージング環境、スターター実稼動環境ごとに 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[ クラウドインフラストラクチャー上のAdobe Commerce用Adobe SSL （TLS）証明書 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq) を参照してください。
+Adobeは、ドメインで検証された Let’s Encrypt SSL/TLS 証明書を提供し、Fastly から安全な HTTPS トラフィックを提供します。 Adobeは、実稼動環境、ステージング環境、スターター実稼動環境ごとに 1 つの証明書を提供し、その環境内のすべてのドメインを保護します。 提供された証明書について詳しくは、[&#x200B; クラウドインフラストラクチャー上のAdobe Commerce用Adobe SSL （TLS）証明書 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq) を参照してください。
 
 >[!NOTE]
 >
@@ -202,7 +202,7 @@ Fastly の初期セットアッププロセス中に、次の URL を使用し�
 
 >[!NOTE]
 >
->実稼動サイトを起動する準備が整ったら、DNS 設定を再度更新して、実稼動ドメインを Fastly サービスに指定し、追加の設定タスクを実行する必要があります。 [Launch チェックリスト ](../launch/checklist.md) を参照してください。
+>実稼動サイトを起動する準備が整ったら、DNS 設定を再度更新して、実稼動ドメインを Fastly サービスに指定し、追加の設定タスクを実行する必要があります。 [Launch チェックリスト &#x200B;](../launch/checklist.md) を参照してください。
 
 **前提条件：**
 
@@ -210,8 +210,8 @@ Fastly の初期セットアッププロセス中に、次の URL を使用し�
 - デフォルトの Fastly VCL コードをアップロードします。
 - 各環境の最上位ドメインとサブドメインのリストをAdobeに送信するか、Adobe Commerce サポートチケットを送信します。
 - 指定したドメインがクラウド環境に追加されたことを確認するまで待ちます。
-- スタータープロジェクトでは、ドメインを Fastly サービス設定に追加します。 [ ドメインの管理 ](fastly-custom-cache-configuration.md#manage-domains) を参照してください。
-- DNS 設定の更新の詳細については、[DNS レジストラー ](https://lookup.icann.org/) で、ドメイン サービスの正しい方法を確認してください。
+- スタータープロジェクトでは、ドメインを Fastly サービス設定に追加します。 [&#x200B; ドメインの管理 &#x200B;](fastly-custom-cache-configuration.md#manage-domains) を参照してください。
+- DNS 設定の更新の詳細については、[DNS レジストラー &#x200B;](https://lookup.icann.org/) で、ドメイン サービスの正しい方法を確認してください。
 
 **開発用に DNS 設定を更新するには**:
 
@@ -226,7 +226,7 @@ Fastly の初期セットアッププロセス中に、次の URL を使用し�
 
    >[!NOTE]
    >
-   >実稼動サイトに apex ドメイン（`your-domain.com`）を使用する予定の場合、Fastly サーバーの IP アドレスを指すように DNS アドレスレコード（A レコード）を設定する必要があります。 [ 実稼働設定を使用した DNS 設定の更新 ](../launch/checklist.md#to-update-dns-configuration-for-site-launch) を参照してください。
+   >実稼動サイトに apex ドメイン（`your-domain.com`）を使用する予定の場合、Fastly サーバーの IP アドレスを指すように DNS アドレスレコード（A レコード）を設定する必要があります。 [&#x200B; 実稼働設定を使用した DNS 設定の更新 &#x200B;](../launch/checklist.md#to-update-dns-configuration-for-site-launch) を参照してください。
 
 
 1. ドメインの検証と実稼動 SSL/TLS 証明書の事前プロビジョニングのために、ACME チャレンジ CNAME レコードを追加します。次に例を示します。
@@ -291,14 +291,14 @@ DNS 設定の変更が完了したら、[cURL](https://curl.se/) コマンドラ
    < X-Cache: HIT, MISS
    ```
 
-ヘッダーに正しい値がない場合は、[ 応答ヘッダーで見つかったエラーの解決 ](fastly-troubleshooting.md#curl) のトラブルシューティングのヘルプを参照してください。
+ヘッダーに正しい値がない場合は、[&#x200B; 応答ヘッダーで見つかったエラーの解決 &#x200B;](fastly-troubleshooting.md#curl) のトラブルシューティングのヘルプを参照してください。
 
 ## Fastly モジュールのアップグレード
 
 Fastly は、Magento 2 モジュール用の Fastly CDN を更新して、問題の解決、パフォーマンスの向上、新機能の提供を行います。
-Adobeでは、ステージング環境および実稼動環境の Fastly モジュールを [ 最新バージョン ](https://github.com/fastly/fastly-magento2/blob/master/VERSION) に更新することをお勧めします。
+Adobeでは、ステージング環境および実稼動環境の Fastly モジュールを [&#x200B; 最新バージョン &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/VERSION) に更新することをお勧めします。
 
-モジュールのバージョンとアップデートの最新情報については、GitHub の [Fastly CDN for Magento2 モジュールのリリースノート ](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) を参照してください。
+モジュールのバージョンとアップデートの最新情報については、GitHub の [Fastly CDN for Magento2 モジュールのリリースノート &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) を参照してください。
 
 モジュールを更新したら、VCL コードをアップロードして、変更を Fastly サービス設定に適用する必要があります。
 
@@ -316,11 +316,11 @@ Adobeでは、ステージング環境および実稼動環境の Fastly モジ�
    composer show *fastly*
    ```
 
-1. [ 最新リリース ](https://github.com/fastly/fastly-magento2/releases) がインストールされていない場合は、Fastly モジュールをアップグレードする手順を実行します。
+1. [&#x200B; 最新リリース &#x200B;](https://github.com/fastly/fastly-magento2/releases) がインストールされていない場合は、Fastly モジュールをアップグレードする手順を実行します。
 
 **Fastly モジュールをアップグレードするには**:
 
-1. ローカル統合環境で、次のモジュール情報を使用して [Fastly モジュールをアップグレード ](../store/extensions.md#upgrade-an-extension) します。
+1. ローカル統合環境で、次のモジュール情報を使用して [Fastly モジュールをアップグレード &#x200B;](../store/extensions.md#upgrade-an-extension) します。
 
    ```text
    module name: fastly/magento2
@@ -329,12 +329,12 @@ Adobeでは、ステージング環境および実稼動環境の Fastly モジ�
 
 1. 更新内容をステージング環境にプッシュします。
 
-1. ステージング環境の管理者にログインして、[VCL コードをアップロード ](#upload-vcl-to-fastly) します。
+1. ステージング環境の管理者にログインして、[VCL コードをアップロード &#x200B;](#upload-vcl-to-fastly) します。
 
-1. Adobe Commerce ステージングサイトで [Fastly サービスを検証 ](fastly-troubleshooting.md#verify-or-debug-fastly-services) します。
+1. Adobe Commerce ステージングサイトで [Fastly サービスを検証 &#x200B;](fastly-troubleshooting.md#verify-or-debug-fastly-services) します。
 
 ステージングサイトで Fastly サービスを確認したら、実稼動環境でアップグレードプロセスを繰り返します。
 
 >[!TIP]
 >
-> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter) を参照してください。
+> Adobe Commerce環境で Fastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastly トラブルシュータ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter) を参照してください。

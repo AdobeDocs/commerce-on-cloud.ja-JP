@@ -18,11 +18,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Fastly キャッシュを設定するために使用できる管理オプションは、インストールされている Fastly CDN Module for Magento 2 のバージョンによって異なります。 Adobeでは、ステージング環境および実稼動環境の Fastly モジュール [Fastly モジュールを最新バージョンに ](fastly-configuration.md#upgrade) アップグレード）することをお勧めします。 最新情報については、[Fastly CDN for Magento2 モジュールのリリースノート ](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) を参照してください。
+>Fastly キャッシュを設定するために使用できる管理オプションは、インストールされている Fastly CDN Module for Magento 2 のバージョンによって異なります。 Adobeでは、ステージング環境および実稼動環境の Fastly モジュール [Fastly モジュールを最新バージョンに &#x200B;](fastly-configuration.md#upgrade) アップグレード）することをお勧めします。 最新情報については、[Fastly CDN for Magento2 モジュールのリリースノート &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) を参照してください。
 
 ## TLS を強制
 
-Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [ 有効な SSL/TLS 証明書 ](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2[ ドキュメントの ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN モジュール _Fastly_ Force TLS ガイド）を参照してください。
+Fastly には、暗号化されていない要求（HTTP）を Fastly にリダイレクトする _Force TLS_ オプションが用意されています。 ステージング環境または実稼動環境に [&#x200B; 有効な SSL/TLS 証明書 &#x200B;](fastly-configuration.md#provision-ssltls-certificates) がプロビジョニングされたら、ストアの Fastly 設定を更新して、「TLS を強制」オプションを有効にできます。 Magento 2[&#x200B; ドキュメントの &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)Fastly CDN モジュール _Fastly_ Force TLS ガイド）を参照してください。
 
 >[!NOTE]
 >
@@ -36,9 +36,9 @@ Fastly サービス設定では、管理者への HTTPS リクエストに対し
 
 >[!NOTE]
 >
->**ストア**/**設定**/**詳細**/**管理者**/**管理者のベース URL** の **カスタム管理パス** フィールドにカスタム管理パスエンドポイントを指定した場合は、その環境の [ADMIN_URL 変数 ](../environment/variables-admin.md#change-the-admin-url) を同じ値に設定する必要もあります。 設定が異なる場合、タイムアウトは機能しません。
+>**ストア**/**設定**/**詳細**/**管理者**/**管理者のベース URL** の **カスタム管理パス** フィールドにカスタム管理パスエンドポイントを指定した場合は、その環境の [ADMIN_URL 変数 &#x200B;](../environment/variables-admin.md#change-the-admin-url) を同じ値に設定する必要もあります。 設定が異なる場合、タイムアウトは機能しません。
 >
->Fastly UI で管理者以外の Fastly タイムアウトパラメーターを拡張するには、[ 長いジョブのタイムアウトを増やす ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md) を参照してください。
+>Fastly UI で管理者以外の Fastly タイムアウトパラメーターを拡張するには、[&#x200B; 長いジョブのタイムアウトを増やす &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md) を参照してください。
 
 **管理者の Fastly タイムアウトを拡張するには**:
 
@@ -71,7 +71,7 @@ Fastly では、Magento Cache Management ページに、商品カテゴリ、商
 - **CMSページをパージ** - Adobe Commerce CMSでページを更新して追加するときにページコンテンツをパージします。 例えば、利用規約や返品ポリシーを更新する際にパージすることができます。 これらの変更をほとんど行わない場合は、自動パージを無効にすることができます。
 - **ソフトパージ** – 変更されたコンテンツを古いものに設定し、古くなったタイミングに従ってパージします。 古いタイミングに加えて、顧客には古いコンテンツが配信されるのに対して、Fastly はバックグラウンドでコンテンツを更新します。
 
-![ パージオプションの設定 ](../../assets/cdn/fastly-purge-options.png)
+![&#x200B; パージオプションの設定 &#x200B;](../../assets/cdn/fastly-purge-options.png)
 
 **Fastly パージオプションを設定するには**:
 
@@ -85,7 +85,7 @@ Fastly では、Magento Cache Management ページに、商品カテゴリ、商
 
 1. ページのリロード後、「**Fastly 設定** セクションの _Fastly に VCL をアップロード_ を選択します。
 
-詳しくは、[Fastly 設定オプション ](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/CONFIGURATION.md#further-configuration-options) を参照してください。
+詳しくは、[Fastly 設定オプション &#x200B;](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/CONFIGURATION.md#further-configuration-options) を参照してください。
 
 ## GeoIP 処理の設定
 
@@ -105,7 +105,7 @@ Fastly モジュールには、訪問者を自動的にリダイレクトする 
 
 1. **国マッピング** の場合、「**追加** を選択して 2 文字の国コードを入力し、リストから特定のAdobe Commerce ストアにマッピングします。
 
-   ![GeoIP 国マップの追加 ](/help/assets/cdn/fastly-geo-code.png)
+   ![GeoIP 国マップの追加 &#x200B;](/help/assets/cdn/fastly-geo-code.png)
 
 1. ページ上部にある「**設定を保存**」をクリックします。
 
@@ -115,7 +115,7 @@ Fastly モジュールには、訪問者を自動的にリダイレクトする 
 >
 >現在のAdobe Commerce Fastly GeoIP モジュールの実装では、複数の web サイト間のリダイレクトをサポートしていません。
 
-また、Fastly は、カスタマイズされた位置情報コーディング用に一連の [ 位置情報関連の VCL 機能 ](https://developer.fastly.com/reference/vcl/variables/geolocation/) を提供しています。
+また、Fastly は、カスタマイズされた位置情報コーディング用に一連の [&#x200B; 位置情報関連の VCL 機能 &#x200B;](https://developer.fastly.com/reference/vcl/variables/geolocation/) を提供しています。
 
 ## Fastly Edge モジュールの有効化
 
@@ -123,7 +123,7 @@ Fastly Edge モジュールは、テンプレートを使用して UI コンポ�
 
 Edge モジュールを使用すると、CORS ヘッダー、Cloud Sitemap の書き換えなどの特定の機能を有効にしたり、Adobe Commerce ストアと他の CMS またはバックエンドとの統合を設定したりできます。
 
-Edge Modules メニューにアクセスして利用可能なモジュールを表示、設定、管理するには、_Fastly Edge モジュールを有効にする_ オプションをオンにします。 Fastly CDN モジュールドキュメントの [Fastly Edge モジュール ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULES.md) を参照してください。
+Edge Modules メニューにアクセスして利用可能なモジュールを表示、設定、管理するには、_Fastly Edge モジュールを有効にする_ オプションをオンにします。 Fastly CDN モジュールドキュメントの [Fastly Edge モジュール &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULES.md) を参照してください。
 
 ## バックエンドとオリジン シールドの設定
 
@@ -135,7 +135,7 @@ _接触チャネルシールド_ は、ストアに対するすべてのリク�
 
 >[!NOTE]
 >
->サイトが [Wordpress](fastly-vcl-wordpress.md) のようなバックエンド統合を通じて機能的に配信される必要がある場合は、バックエンドを追加するように Fastly サービス設定をカスタマイズし、Adobe Commerce ストアから Wordpress へのリダイレクトを管理します。 詳しくは、Fastly モジュールのドキュメントの [Fastly Edge モジュール – その他のCMS/バックエンドの統合 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) を参照してください。
+>サイトが [Wordpress](fastly-vcl-wordpress.md) のようなバックエンド統合を通じて機能的に配信される必要がある場合は、バックエンドを追加するように Fastly サービス設定をカスタマイズし、Adobe Commerce ストアから Wordpress へのリダイレクトを管理します。 詳しくは、Fastly モジュールのドキュメントの [Fastly Edge モジュール – その他のCMS/バックエンドの統合 &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) を参照してください。
 
 **バックエンド設定の設定を確認するには**:
 
@@ -147,7 +147,7 @@ _接触チャネルシールド_ は、ストアに対するすべてのリク�
 
 1. **バックエンド設定** を展開し、歯車を選択してデフォルトのバックエンドを確認します。 現在の設定を変更するオプションを含むモーダルが開きます。
 
-   ![ バックエンドの変更 ](../../assets/cdn/fastly-backend.png)
+   ![&#x200B; バックエンドの変更 &#x200B;](../../assets/cdn/fastly-backend.png)
 
 1. **シールド** の場所（またはデータセンター）を選択します。
 
@@ -161,29 +161,29 @@ _接触チャネルシールド_ は、ストアに対するすべてのリク�
 
 1. 管理者で、「**設定を保存**」を選択します。
 
-詳しくは、Fastly モジュールのドキュメントにある [ バックエンド設定ガイド ](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/Guides/BACKEND-SETTINGS.md) を参照してください。
+詳しくは、Fastly モジュールのドキュメントにある [&#x200B; バックエンド設定ガイド &#x200B;](https://github.com/fastly/fastly-magento2/blob/21b61c8189971275589219d418332798efc7db41/Documentation/Guides/BACKEND-SETTINGS.md) を参照してください。
 
 ## 基本認証
 
 基本認証は、サイト上のすべてのページとアセットをユーザー名とパスワードで保護する機能です。
 
-実稼動環境で基本認証をアクティブ化するAdobe **お勧めしません**。 ステージング環境で設定して、開発プロセス中にサイトを保護できます。 Fastly CDN モジュールのドキュメントの [ 基本認証ガイド ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) を参照してください。
+実稼動環境で基本認証をアクティブ化するAdobe **お勧めしません**。 ステージング環境で設定して、開発プロセス中にサイトを保護できます。 Fastly CDN モジュールのドキュメントの [&#x200B; 基本認証ガイド &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) を参照してください。
 
 ユーザーアクセスを追加し、ステージングで基本認証を有効にした場合でも、追加の資格情報を必要とせずに管理者にアクセスできます。
 
 >[!NOTE]
 >
->Fastly が有効になってい **環境（ステージング環境や実稼動以外の環境など）については、Cloud Console で確認しないでくださ**[!UICONTROL Enable HTTP access control]。 この方法でアクセス制御を設定すると、以前にアクセス権を持っていたユーザーは、アクセスが取り消された後も Fastly によって資格情報がキャッシュされたままであれば、引き続きサイトにアクセスできます。
+>Fastly が有効になってい **環境（ステージング環境や実稼動以外の環境など）については、Cloud Console で確認しないでくださ**&#x200B;[!UICONTROL Enable HTTP access control]。 この方法でアクセス制御を設定すると、以前にアクセス権を持っていたユーザーは、アクセスが取り消された後も Fastly によって資格情報がキャッシュされたままであれば、引き続きサイトにアクセスできます。
 
 ## カスタム VCL スニペットの作成
 
 Fastly では、Fastly サービス設定をカスタマイズするために、Varnish Configuration Language （VCL）のカスタマイズバージョンをサポートしています。 例えば、エッジおよびアクセス制御リスト （ACL）辞書を持つ VCL コードブロックを使用して、特定のユーザーまたは IP アドレスに対するアクセスを許可、ブロック、またはリダイレクトできます。
 
-カスタム VCL スニペット、エッジ辞書、ACL を作成する手順については、[Custom Fastly VCL スニペット ](fastly-vcl-custom-snippets.md) を参照してください。
+カスタム VCL スニペット、エッジ辞書、ACL を作成する手順については、[Custom Fastly VCL スニペット &#x200B;](fastly-vcl-custom-snippets.md) を参照してください。
 
 >[!NOTE]
 >
->カスタム VCL コード、エッジ辞書、ACL を Fastly モジュール設定に追加する前に、Fastly キャッシュサービスがデフォルト設定で機能することを確認してください。 [Fastly の設定 ](fastly-configuration.md) を参照してください。
+>カスタム VCL コード、エッジ辞書、ACL を Fastly モジュール設定に追加する前に、Fastly キャッシュサービスがデフォルト設定で機能することを確認してください。 [Fastly の設定 &#x200B;](fastly-configuration.md) を参照してください。
 
 ## ドメインの管理
 
@@ -191,7 +191,7 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
 - スタータープロジェクトの場合は、プロジェクトの「[!UICONTROL Domains]」タブで「プロジェクト URL」に移動して [!DNL Cloud Console] ロジェクト URL を追加します。
 
-- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
+- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) を送信して、ドメインをクラウドプロジェクト設定に追加します。 また、サポートチームは、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
 
 **管理者から Fastly ドメイン設定を管理するには**:
 
@@ -207,13 +207,13 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
    指定できるのは、クラウドインフラストラクチャ設定に既に追加されているドメインのみです。
 
-   ![ スターター用 Fastly ドメイン設定の追加 ](../../assets/cdn/fastly-starter-activate-domain.png)
+   ![&#x200B; スターター用 Fastly ドメイン設定の追加 &#x200B;](../../assets/cdn/fastly-starter-activate-domain.png)
 
 1. **アクティブ化** をクリックして、Fastly ドメイン設定を更新します。
 
 >[!NOTE]
 >
->同じドメインが異なる Fastly アカウントで設定されている場合、ドメインをAdobe Commerceに追加する前に、Adobe Commerce サポートチケットを送信してドメインデリゲーションをリクエストする必要があります。 [ 複数の Fastly アカウントと割り当てられたドメイン ](fastly.md#multiple-fastly-accounts-and-assigned-domains) を参照してください。
+>同じドメインが異なる Fastly アカウントで設定されている場合、ドメインをAdobe Commerceに追加する前に、Adobe Commerce サポートチケットを送信してドメインデリゲーションをリクエストする必要があります。 [&#x200B; 複数の Fastly アカウントと割り当てられたドメイン &#x200B;](fastly.md#multiple-fastly-accounts-and-assigned-domains) を参照してください。
 
 ## メンテナンスモードの有効化
 
@@ -225,10 +225,10 @@ Fastly では、Fastly サービス設定をカスタマイズするために、
 
 1. 「_Edgeの ACL_」セクションで、`maint_allow` の ACL （アクセス制御リスト）を、メンテナンスモード中にストアにアクセスできる管理 IP アドレスで更新します。
 
-   ![IP メンテナンスモード許可リストの更新 ](../../assets/cdn/fastly-maint-allowlist.png)
+   ![IP メンテナンスモード許可リストの更新 &#x200B;](../../assets/cdn/fastly-maint-allowlist.png)
 
 1. 「_メンテナンスモード_」セクションで、「**メンテナンスモードを有効にする**」を選択します。
 
    メンテナンスモードを有効にすると、`maint_allowlist` ACL の IP アドレスからのリクエストを除くすべてのトラフィックがブロックされます。 `maint_allowlist` を更新して、ACL の IP アドレスを変更できます。
 
-   設定手順について詳しくは、Fastly CDN for Magento 2 モジュールドキュメントの [ メンテナンスモードガイド ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) を参照してください。
+   設定手順について詳しくは、Fastly CDN for Magento 2 モジュールドキュメントの [&#x200B; メンテナンスモードガイド &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) を参照してください。
