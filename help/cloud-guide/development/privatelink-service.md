@@ -2,9 +2,10 @@
 title: PrivateLink サービス
 description: PrivateLink サービスを使用して、同じリージョンのプライベートクラウドとAdobe Commerce クラウドプラットフォームの間に安全な接続を確立する方法を説明します。
 feature: Cloud, Iaas, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
+source-git-commit: 0e7f268de078bd9840358b66606a60b2a2225764
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -15,18 +16,18 @@ ht-degree: 0%
 
 >[!TIP]
 >
->PrivateLink は、データベースやファイル転送などの非 HTTP （S）統合用の接続を保護するのに最適です。 アプリケーションをAdobe Commerce API と統合する場合は、「Adobe Developer App Builderの API メッシュ [&#128279;](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/) の AdobeAPI メッシュを作成する方法 _を参照してください_。
+>PrivateLink は、データベースやファイル転送などの非 HTTP （S）統合用の接続を保護するのに最適です。 アプリケーションをAdobe Commerce API と統合する場合は、「Adobe Developer App Builderの API メッシュ [」の ](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)0}Adobe API メッシュを作成する方法 _を参照してください。_
 
 ## 機能とサポート
 
 クラウドインフラストラクチャプロジェクト上のAdobe Commerce向け PrivateLink サービス統合には、次の機能およびサポートが含まれます。
 
 - お客様の Virtual Private Cloud （VPC）と、同じクラウドリージョン内の同じクラウドプラットフォーム（AWSまたは Azure）上のAdobe VPCとの安全な接続。
-- AdobeVPC とお客様 VPC のエンドポイントサービス間での一方向性または双方向通信のサポート。
+- Adobeおよびお客様の VPC で利用できる、エンドポイントサービス間の一方向性または双方向通信のサポート。
 - サービス有効化：
 
    - クラウドインフラストラクチャー上のAdobe Commerceで必要なポートを開きます。
-   - お客様とAdobeの VPC 間の初期接続の確立
+   - お客様とAdobe VPC の初期接続の確立
    - イネーブルメント中の接続の問題のトラブルシューティング
 
 ## 制限事項
@@ -35,7 +36,9 @@ ht-degree: 0%
 - PrivateLink を使用して SSH 接続を確立することはできません。 [SSH キーの有効化 ](secure-connections.md) を参照してください。
 - Adobe Commerce サポートでは、最初のイネーブルメント以降のAWS PrivateLink の問題のトラブルシューティングには対応しません。
 - お客様は、独自のVPCの管理に関連するコストについて責任を負います。
-- [Fastly オリジンクローキング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=ja) が原因で、HTTPS プロトコル（ポート 443）を使用して、Azure プライベートリンク経由でクラウドインフラストラクチャ上のAdobe Commerceに接続することはできません。 この制限は、AWS PrivateLink には適用されません。
+- **プラットフォームによる HTTPS プロトコル（ポート 443）のサポート：**
+   - **Azure プライベートリンク**:[Fastly オリジンクローク ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html) が原因で、HTTPS プロトコル（ポート 443）を使用して、クラウドインフラストラクチャ上のAdobe Commerceに接続できません。
+   - **AWS PrivateLink**: HTTPS プロトコル （ポート 443）接続がサポートされています。
 - PrivateDNS は使用できません。
 
 ## PrivateLink 接続タイプ
@@ -49,8 +52,8 @@ ht-degree: 0%
 - **単方向 PrivateLink** - クラウドインフラストラクチャストア上のAdobe Commerceから安全にデータを取得する場合は、この設定を選択します。
 - **双方向 PrivateLink** - クラウドインフラストラクチャ環境で、Adobe Commerce外部のシステムとの間に安全な接続を確立する場合に選択します。 双方向オプションには、次の 2 つの接続が必要です。
 
-   - お客様のVPCとAdobeのVPCの間の接続
-   - AdobeVPCとカスタマーVPC間の接続
+   - お客様のVPCとAdobe VPCの間の接続
+   - Adobe VPCとカスタマーVPC間の接続
 
 >[!TIP]
 >
@@ -74,7 +77,7 @@ PrivateLink の有効化に必要な次のデータを収集します。
 
 - **お客様のクラウドアカウント番号** （AWSまたは Azure） – クラウドインフラストラクチャインスタンス上のAdobe Commerceと同じリージョンにある必要があります
 - **クラウド地域** – 検証目的でアカウントがホストされているクラウド地域を指定します
-- **サービスおよび通信ポート** - VPC 間のサービス通信を有効にするには、Adobeがポートを開く必要があります（SQL ポート 3306、SFTP ポート 2222 など）。
+- **サービスおよび通信ポート** - VPC 間のサービス通信を有効にするには、Adobeでポートを開く必要があります（SQL ポート 3306、SFTP ポート 2222 など）
 - **プロジェクト ID** - Adobe Commerce on cloud infrastructure Pro プロジェクト ID を指定します。 次の [Cloud CLI](../dev-tools/cloud-cli-overview.md) コマンドを使用すると、プロジェクト ID およびその他のプロジェクト情報を取得できます。`magento-cloud project:info`
 - **接続タイプ** – 接続タイプに単方向または双方向を指定します
 - **エンドポイントサービス** – 双方向の PrivateLink 接続の場合、Adobeが接続する必要があるVPC エンドポイントサービスの DNS URL を指定します（例：`com.amazonaws.vpce.<cloud-region>.vpce-svc-<service-id>`）。
@@ -106,35 +109,35 @@ PrivateLink の有効化に必要な次のデータを収集します。
 
 1. **顧客** 件名行 `PrivateLink support for <company>` で PrivateLink の有効化をリクエストするサポートチケットを送信します。 [ イネーブルメントに必要なデータ ](#prerequisites) をチケットに含めます。 Adobeは、サポートチケットを使用して、イネーブルメントプロセス中のコミュニケーションを調整します。
 
-1. **Adobe** カスタマーアカウントがAdobeVPCの endpoint service にアクセスできるようにします。
+1. **Adobe** を使用すると、顧客アカウントでAdobe VPCのエンドポイントサービスにアクセスできます。
 
-   - Adobeエンドポイントサービス設定を更新して、カスタマーAWSまたは Azure アカウントから開始されたリクエストを受け入れます。
-   - サポートチケットを更新して、接続先のAdobeVPC エンドポイントのサービス名（例：`com.amazonaws.vpce.<cloud-region>.vpce-svc-<service-id>`）を指定します。
+   - Adobe エンドポイントサービス設定を更新して、カスタマーAWSまたは Azure アカウントから開始されたリクエストを受け入れます。
+   - サポートチケットを更新して、Adobe VPC エンドポイントの接続先のサービス名（例：`com.amazonaws.vpce.<cloud-region>.vpce-svc-<service-id>`）を指定します。
 
-1. **顧客** Cloud アカウント（AWSまたは Azure）にAdobeエンドポイントサービスを追加します。これにより、Adobeへの接続リクエストがトリガーされます。 手順については、Cloud Platform のドキュメントを参照してください。
+1. **お客様** Adobe Endpoint Service を自分のクラウドアカウント（AWSまたは Azure）に追加します。これにより、Adobeへの接続リクエストがトリガーされます。 手順については、Cloud Platform のドキュメントを参照してください。
 
    - AWSについては、[ インターフェイスエンドポイント接続リクエストの承認と却下 ] を参照してください。
    - Azure については、[ 接続リクエストの管理 ] を参照してください。
 
 1. **Adobe** が接続リクエストを承認します。
 
-1. 接続リクエストの承認後、VPCとAdobe VPCの間の **お客様**&#x200B;[ 接続を検証 ](#test-vpc-endpoint-service-connection) します。
+1. 接続リクエストが承認されると、VPCとAdobe VPCの間の **お客様**[ 接続を検証 ](#test-vpc-endpoint-service-connection) します。
 
 1. 双方向接続を有効にするための追加手順：
 
-   - **Adobe** Adobeアカウントプリンシパル（AWSまたは Azure アカウントのルートユーザー）を提供し、customer VPC エンドポイントサービスへのアクセスをリクエストします。
-   - **顧客** カスタマーVPCのエンドポイントサービスへのAdobeアクセスを有効にします。 これは、前述の **Endpoint service access granted** 前提条件で説明したように、Adobeアカウントプリンシパルが `arn:aws:iam::402592597372:root` へのアクセス権を持っていることを前提としています。
+   - **Adobe** は、Adobe アカウントプリンシパル（AWSまたは Azure アカウントのルートユーザー）を提供し、customer VPC エンドポイントサービスへのアクセスをリクエストします。
+   - **顧客** AdobeがカスタマーVPCのエンドポイントサービスにアクセスできるようにします。 これは、前述の `arn:aws:iam::402592597372:root` エンドポイントサービスアクセスの許可 **前提条件で説明したように、Adobe アカウントプリンシパルが** にアクセスできることを前提としています。
 
-      - Adobeアカウントから開始されたリクエストを受け入れるように、カスタマーエンドポイントサービス設定を更新します。 手順については、Cloud Platform のドキュメントを参照してください。
+      - Adobe アカウントから開始されたリクエストを受け入れるように、カスタマーエンドポイントサービス設定を更新します。 手順については、Cloud Platform のドキュメントを参照してください。
 
          - AWSについては、[ エンドポイントサービスの権限の追加と削除 ] を参照してください。
          - Azure については、「[ プライベートエンドポイント接続の管理 ]」を参照してください。
 
-      - カスタマーVPCのエンドポイントサービス名でAdobeを指定します。
+      - Adobeに、お客様のVPCのエンドポイントサービス名を指定します。
 
-   - **Adobe** カスタマーエンドポイントサービスをAdobeプラットフォームアカウント（AWSまたは Azure）に追加します。これにより、カスタマーVPCへの接続リクエストがトリガーされます。
+   - **Adobe** は、カスタマーエンドポイントサービスをAdobe platform アカウント（AWSまたは Azure）に追加します。このアカウントは、カスタマーVPCへの接続リクエストをトリガーします。
    - **お客様**、Adobeからの接続リクエストを承認して設定を完了します。
-   - **お客様** AdobeVPCから [ 接続を検証 ](#test-vpc-endpoint-service-connection) します。
+   - Adobe VPCから **お客様** 接続を検証 [ します ](#test-vpc-endpoint-service-connection)。
 
 ## VPC Endpoint Service 接続のテスト
 
@@ -163,7 +166,7 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
    成功した応答のサンプル：
 
    ```
-   * Rebuilt URL to: telnet://vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce.amazonaws.com:80
+   * Rebuilt URL to: telnet://vpce-007ffnb9qkcnjgult-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce. amazonaws.com:80
    * Connected to vpce-0088d56482571241d-yfhmywqh.vpce-svc-083cqvm2ta3rxqat5v.us-east-1.vpce. amazonaws.com (191.210.82.246) port 80 (#0)
    ```
 
@@ -202,11 +205,11 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 
 ## PrivateLink 設定の変更
 
-既存の PrivateLink 設定を変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) します。 例えば、次のような変更をリクエストできます。
+既存の PrivateLink 設定を変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) します。 例えば、次のような変更をリクエストできます。
 
 - Cloud infrastructure Pro 実稼動環境またはステージング環境のAdobe Commerceから PrivateLink 接続を削除します。
-- Adobeエンドポイントサービスにアクセスするための顧客の Cloud Platform アカウント番号を変更します。
-- Adobe VPCから、カスタマーVPC環境で使用可能な他のエンドポイントサービスへの PrivateLink 接続を追加または削除します。
+- Adobe エンドポイントサービスにアクセスするための、お客様の Cloud Platform アカウント番号を変更します。
+- Adobe VPCから、お客様のVPC環境で使用可能な他のエンドポイントサービスへの PrivateLink 接続を追加または削除します。
 
 ## 双方向の PrivateLink 接続用の設定
 
@@ -214,7 +217,7 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 
 - ネットワーク ロード バランサー（NLB）
 - 顧客VPCからのアプリケーションまたはサービスへのアクセスを有効にするエンドポイントサービス設定
-- VPCでホストされているエンドポイントサービスにAdobeが接続できる [ インターフェイスエンドポイント ] （AWS）または [ プライベートエンドポイント ] （Azure）
+- VPCでホストされているエンドポイントサービスにAdobeを接続できる [ インターフェイスエンドポイント ] （AWS）または [ プライベートエンドポイント ] （Azure）
 
 これらのリソースがカスタマーVPCで使用できない場合は、Cloud Platform アカウントにサインインして設定を追加する必要があります。
 
