@@ -2,9 +2,10 @@
 title: クラウドインフラストラクチャプロジェクト
 description: クラウドインフラストラクチャー上のAdobe Commerceの概要と、アカウント設定へのアクセ  [!DNL Cloud Console]  方法について説明します。
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
+source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 
 クラウドインフラストラクチャー上のAdobe Commerce プロジェクトには、[!DNL Commerce] アプリケーションをデプロイするための Git ブランチ内のすべてのコード、関連付けられた環境およびスクリプトが含まれます。 環境には、データベース、web サーバー、キャッシュサーバーなど、[!DNL Commerce] アプリケーションをサポートするサービスが含まれています。
 
-Adobeでは、プロジェクトのすべての側面を完全に管理するための [!DNL Cloud Console] ールおよび開発者ツールを提供しています。 アカウント所有者は、すべての環境に対してフルアクセス権を持ちます。
+Adobeには、プロジェクトのあらゆる側面を完全に管理するための [!DNL Cloud Console] ールおよび開発者ツールが用意されています。 アカウント所有者は、すべての環境に対してフルアクセス権を持ちます。
 
 ## [!DNL Cloud Console]
 
-[!DNL Cloud Console] には、Commerce コードを簡単に作成、管理、デプロイするためのインタラクティブなメソッドが用意されています。 [ にログイン  [!DNL Cloud Console]](https://console.adobecommerce.com) して、プロジェクトのリストを表示します。 管理者として、または特定の環境タイプについてアクセスする権限を持っているプロジェクトのみを表示できます。 Adobeソリューションパートナーの場合、サポートしているクライアントに対して複数のプロジェクトが表示される場合があります。
+[!DNL Cloud Console] には、Commerce コードを簡単に作成、管理、デプロイするためのインタラクティブなメソッドが用意されています。 [ にログイン  [!DNL Cloud Console]](https://console.adobecommerce.com) して、プロジェクトのリストを表示します。 管理者として、または特定の環境タイプについてアクセスする権限を持っているプロジェクトのみを表示できます。 Adobe ソリューションパートナーの場合は、サポートしているクライアントに対して複数のプロジェクトが表示される場合があります。
 
 >[!TIP]
 >
@@ -42,7 +43,7 @@ _すべてのプロジェクト_ リストからプロジェクトを選択す�
 
 また、メインプロジェクトの概要でも同様です。
 
-- 環境ビュー：![ アクティブなブランチ ](../../assets/icon-active.png){width="32"} (active) and ![inactive branch](../../assets/icon-inactive.png){width="32"} （非アクティブ）環境のリストまたはツリー表示を表示します。
+- 環境ビュー：![ アクティブなブランチ ](../../assets/icon-active.png){width="32"} （アクティブ）環境と ![ 非アクティブなブランチ ](../../assets/icon-inactive.png){width="32"} （非アクティブ）環境のリストまたはツリー表示を表示します。
 - [ アクティビティストリーム ](activity-stream.md) には、プロジェクトの実行中、保留中、最近のアクティビティが表示されます。
 <!-- - Apps & Services—Shows a topology of service containers -->
 
@@ -140,7 +141,7 @@ https://<branch>-<unique-ID>-<project-ID>.<region>.magentosite.cloud/
 
 >[!WARNING]
 >
->**使用しない** Pro ステージング環境と実稼動環境を保護するために、HTTP アクセス制御方式を使用します。 これにより、Fastly のキャッシュが中断されます。 代わりに、Adobe Commerce用 Fastly CDN で利用可能な [ ブロッキング ](../cdn/fastly-vcl-blocking.md) 機能を使用します。
+>**使用しない** Pro ステージング環境と実稼動環境を保護するために、HTTP アクセス制御方式を使用します。 これにより、Fastly のキャッシュが中断されます。 代わりに、Adobe Commerce用 Fastly CDN で利用可能な [ ブロッキング ](../cdn/fastly-vcl-blocking.md) 機能を使用して、アクセスをブロックしたり、[Fastly Basic Auth](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) を使用してアクセス制御を実装したりできます。
 
 ## Fastly とNew Relicの資格情報
 
