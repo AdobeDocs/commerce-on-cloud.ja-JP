@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Commerceのバージョンのアップグレード
 
-Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、最新のソフトウェア バージョン要件について [&#x200B; インストール &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) ガイドの _システム要件_ を確認してください。
+Adobe Commerceのコードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、最新のソフトウェア バージョン要件について [&#x200B; インストール &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) ガイドの _システム要件_ を確認してください。
 
 環境のタイプ（開発、ステージング、実稼動）に応じて、アップグレードタスクには次のものが含まれます。
 
@@ -128,7 +128,7 @@ Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを�
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2B を使用している場合は、Commerceの `composer.json` サポートされているバージョン [&#x200B; で &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) ファイルをアップデートします。
+1. B2B を使用している場合は、Commerceの `composer.json` サポートされているバージョン [&#x200B; で &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/product-availability#adobe-authored-extensions) ファイルをアップデートします。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -142,15 +142,15 @@ Adobe Commerce バージョン 2.4.4 以降の `composer.json` ファイルを�
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) し、Adobe Commerce サポートに連絡して、新しいバージョンに適用可能なパッチを確認します。 該当しないパッチを `m2-hotfixes` ディレクトリから削除します。
 
    - [ ファイルに ] 品質向上パッチ `.magento.env.yaml` が適用されている場合は、そのパッチを新しいバージョンにも適用できるかどうかを確認します。 `QUALITY_PATCHES` ファイルの `.magento.env.yaml` セクションから、適用できないパッチを削除します。
 
-   **方法 1**:[&#x200B; 品質パッチのリリースノートで該当するバージョンを確認してください &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法 1**:[&#x200B; 品質パッチのリリースノートで該当するバージョンを確認してください &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法 2**:[&#x200B; 使用可能なパッチおよびステータスの表示 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法 2**:[&#x200B; 使用可能なパッチおよびステータスの表示 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法 3**:[&#x200B; パッチの検索 &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=en)
+   **方法 3**:[&#x200B; パッチの検索 &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)
 
 
 1. コードの変更を追加、コミットおよびプッシュします。
