@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>CLI ツール <code class="language-plaintext highlighter-rouge">magento-cloud</code> インストール <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview"> でサポートされ </a> オペレーティングシステムを明確にしました。</p>
+      <td><p>CLI ツール <code class="language-plaintext highlighter-rouge">magento-cloud</code> インストール <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-overview"> でサポートされ </a> オペレーティングシステムを明確にしました。</p>
 </td>
       <td>
         Feedback
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>クラウドパッチパッケージ v1.1.11 に <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches"> リリースノート </a> を追加しました。</p>
+      <td><p>クラウドパッチパッケージ v1.1.11 に <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches"> リリースノート </a> を追加しました。</p>
 </td>
       <td>
         メジャーアップデート
