@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
-source-wordcount: '13341'
+source-wordcount: '13671'
 ht-degree: 0%
 
 ---
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**バージョン**:1.46.1
+**バージョン**:1.47.0
 
-このリファレンスには、`magento-cloud` のコマンド ライン ツールで使用できる 119 個のコマンドが含まれています。
+このリファレンスには、`magento-cloud` のコマンド ライン ツールで使用できる 123 のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `magento-cloud list` コマンドを使用して自動生成されます。
 
 ## 一般
@@ -27,6 +27,13 @@ ht-degree: 0%
 - デフォルト：`false`
 - 値を受け入れません
 
+#### `--version`, `-V`
+
+このアプリケーションのバージョンを表示
+
+- デフォルト：`false`
+- 値を受け入れません
+
 #### `--verbose`, `-v|-vv|-vvv`
 
 メッセージの冗長性の向上
@@ -34,9 +41,9 @@ ht-degree: 0%
 - デフォルト：`false`
 - 値を受け入れません
 
-#### `--version`, `-V`
+#### `--quiet`, `-q`
 
-このアプリケーションのバージョンを表示
+必要な出力のみを出力し、その他のメッセージやエラーは出力しません。 これは、– 何の相互作用もないことを意味します。 詳細モードでは無視されます。
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -67,6 +74,44 @@ CLI のキャッシュをクリアする
 ### オプション
 
 グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+
+## `console`
+
+```bash
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+コンソールでプロジェクトを開きます
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--browser`
+
+URL を開くために使用するブラウザー。 何も設定しない場合は 0 を設定します。
+
+- 値が必要です
+
+#### `--pipe`
+
+URL を stdout に出力します。
+
+- デフォルト：`false`
+- 値を受け入れません
+
+#### `--project`, `-p`
+
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--environment`, `-e`
+
+環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
+
+- 値が必要です
 
 
 ## `decode`
@@ -292,44 +337,6 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 - デフォルト：`false`
 - 値を受け入れません
-
-
-## `web`
-
-```bash
-magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-Web UI でプロジェクトを開きます
-
-### オプション
-
-グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
-
-#### `--browser`
-
-URL を開くために使用するブラウザー。 何も設定しない場合は 0 を設定します。
-
-- 値が必要です
-
-#### `--pipe`
-
-URL を stdout に出力します。
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--project`, `-p`
-
-プロジェクト ID または URL
-
-- 値が必要です
-
-#### `--environment`, `-e`
-
-環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
-
-- 値が必要です
 
 
 ## `activity:cancel`
@@ -565,7 +572,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 #### `--columns`, `-c`
 
-表示する列。 使用可能な列：id*、created*、description*、progress*、state*、result*、completed、environments、type （* = default columns）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
+表示する列。 使用可能な列：id*、created*、description*、progress*、state*、result*、completed、environments、time_build、time_deploy、time_execute、time_wait、type （* = デフォルトの列）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
 
 - デフォルト：`[]`
 - 値が必要です
@@ -829,7 +836,7 @@ Alternatively, to log in to the CLI with a browser, run:
 ## `auth:browser-login`
 
 ```bash
-magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--method METHOD] [--max-age MAX-AGE] [--browser BROWSER] [--pipe]
 ```
 
 ブラウザーからMagento Cloud にログインします。
@@ -860,6 +867,19 @@ MAGENTO_CLOUD_CLI_TOKEN environment variable.
 
 - デフォルト：`false`
 - 値を受け入れません
+
+#### `--method`
+
+特定の認証方法が必要
+
+- デフォルト：`[]`
+- 値が必要です
+
+#### `--max-age`
+
+Web 認証セッションの最長有効期間（秒単位）
+
+- 値が必要です
 
 #### `--browser`
 
@@ -960,6 +980,156 @@ Magento Cloud からログアウトする
 
 - デフォルト：`false`
 - 値を受け入れません
+
+
+## `autoscaling:get`
+
+```bash
+magento-cloud autoscaling [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+環境上のアプリとワーカーの自動スケーリング設定の表示
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--project`, `-p`
+
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--environment`, `-e`
+
+環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
+
+- 値が必要です
+
+#### `--format`
+
+出力形式：table、csv、tsv、plain
+
+- デフォルト：`table`
+- 値が必要です
+
+#### `--columns`, `-c`
+
+表示する列。 使用可能な列：service*、metric*、direction*、threshold*、duration*、enabled*、instance_count*、cooldown、max_instances、min_instances （* = デフォルト列）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
+
+- デフォルト：`[]`
+- 値が必要です
+
+#### `--no-header`
+
+テーブルヘッダーを出力しない
+
+- デフォルト：`false`
+- 値を受け入れません
+
+
+## `autoscaling:set`
+
+```bash
+magento-cloud autoscaling:set [-s|--service SERVICE] [-m|--metric METRIC] [--enabled ENABLED] [--threshold-up THRESHOLD-UP] [--duration-up DURATION-UP] [--cooldown-up COOLDOWN-UP] [--threshold-down THRESHOLD-DOWN] [--duration-down DURATION-DOWN] [--cooldown-down COOLDOWN-DOWN] [--instances-min INSTANCES-MIN] [--instances-max INSTANCES-MAX] [--dry-run] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+環境内のアプリまたはワーカーの自動スケーリング設定を設定します
+
+```
+Configure automatic scaling for apps or workers in an environment.
+
+You can also configure resources statically by running: magento-cloud resources:set
+```
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--service`, `-s`
+
+自動スケーリングを設定するアプリまたはワーカーの名前
+
+- 値が必要です
+
+#### `--metric`, `-m`
+
+自動スケーリングのトリガーに使用する指標の名前
+
+- 値が必要です
+
+#### `--enabled`
+
+指定された指標に基づく自動スケーリングを有効にする
+
+- 値が必要です
+
+#### `--threshold-up`
+
+サービスが拡張されるしきい値
+
+- 値が必要です
+
+#### `--duration-up`
+
+スケールアップのしきい値に対して指標が評価される期間
+
+- 値が必要です
+
+#### `--cooldown-up`
+
+スケーリング イベント後にさらにスケール アップを試みるまでの待機時間
+
+- 値が必要です
+
+#### `--threshold-down`
+
+サービスが縮小されるしきい値
+
+- 値が必要です
+
+#### `--duration-down`
+
+スケールダウンのしきい値に対して指標が評価される期間
+
+- 値が必要です
+
+#### `--cooldown-down`
+
+スケールイベント後にさらにスケールダウンを試みるまでの待機時間
+
+- 値が必要です
+
+#### `--instances-min`
+
+に縮小されるインスタンスの最小数
+
+- 値が必要です
+
+#### `--instances-max`
+
+にスケールアップされるインスタンスの最大数
+
+- 値が必要です
+
+#### `--dry-run`
+
+何も変更せずに行われる変更を示します
+
+- デフォルト：`false`
+- 値を受け入れません
+
+#### `--project`, `-p`
+
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--environment`, `-e`
+
+環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
+
+- 値が必要です
 
 
 ## `blackfire:setup`
@@ -1362,7 +1532,7 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 ## `db:dump`
 
 ```bash
-magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 リモートデータベースのローカルダンプを作成します。
@@ -1461,101 +1631,11 @@ gzip を使用してダンプを圧縮します
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
-
-## `db:size`
-
-```bash
-magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
-```
-
-データベースのディスク使用量の見積もり
-
-```
-This is an estimate of the database disk usage. The real size on disk is usually higher because of overhead.
-
-To see more accurate disk usage, run: magento-cloud disk
-```
-
-### オプション
-
-グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
-
-#### `--bytes`, `-B`
-
-サイズをバイト単位で表示します。
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--cleanup`, `-C`
-
-テーブルをクリーンアップできるかどうかを確認し、推奨事項を表示します（InnoDb のみ）。
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--project`, `-p`
-
-プロジェクト ID または URL
-
-- 値が必要です
-
-#### `--environment`, `-e`
-
-環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
-
-- 値が必要です
-
-#### `--app`, `-A`
-
-リモートアプリケーション名
-
-- 値が必要です
-
-#### `--relationship`, `-r`
-
-使用するサービスの関係
-
-- 値が必要です
-
-#### `--format`
-
-出力形式：table、csv、tsv、plain
-
-- デフォルト：`table`
-- 値が必要です
-
-#### `--columns`, `-c`
-
-表示する列。 使用可能な列：max、percent_used、used。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
-
-- デフォルト：`[]`
-- 値が必要です
-
-#### `--no-header`
-
-テーブルヘッダーを出力しない
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `db:sql`
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--] [<query>]
 ```
 
 リモート・データベースで SQL を実行する
@@ -1607,12 +1687,6 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `domain:add`
 
@@ -1636,19 +1710,19 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 #### `--cert`
 
-このドメインの証明書ファイルへのパス
+カスタム証明書ファイルへのパス
 
 - 値が必要です
 
 #### `--key`
 
-指定された証明書の秘密鍵ファイルへのパス。
+カスタム証明書の秘密キーへのパス
 
 - 値が必要です
 
 #### `--chain`
 
-指定された証明書の証明書チェーンファイルまたはファイルへのパス
+カスタム証明書のチェーン ファイルへのパス
 
 - デフォルト：`[]`
 - 値が必要です
@@ -1866,19 +1940,19 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 #### `--cert`
 
-このドメインの証明書ファイルへのパス
+カスタム証明書ファイルへのパス
 
 - 値が必要です
 
 #### `--key`
 
-指定された証明書の秘密鍵ファイルへのパス。
+カスタム証明書の秘密キーへのパス
 
 - 値が必要です
 
 #### `--chain`
 
-指定された証明書の証明書チェーンファイルまたはファイルへのパス
+カスタム証明書のチェーン ファイルへのパス
 
 - デフォルト：`[]`
 - 値が必要です
@@ -1967,7 +2041,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 ## `environment:branch`
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [--no-checkout] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 環境のブランチ
@@ -2006,6 +2080,13 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 - デフォルト：`false`
 - 値を受け入れません
 
+#### `--no-checkout`
+
+ブランチをローカルでチェックアウトしないでください
+
+- デフォルト：`false`
+- 値を受け入れません
+
 #### `--project`, `-p`
 
 プロジェクト ID または URL
@@ -2036,7 +2117,7 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--pro
 ## `environment:checkout`
 
 ```bash
-magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [<id>]
 ```
 
 環境のチェックアウト
@@ -2051,17 +2132,11 @@ magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 
 グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `environment:delete`
 
 ```bash
-magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--status STATUS] [--only-status ONLY-STATUS] [--exclude-status EXCLUDE-STATUS] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 1 つ以上の環境を削除
@@ -2136,6 +2211,27 @@ Git ブランチ（非アクティブな環境）を削除しないでくださ�
 - デフォルト：`false`
 - 値を受け入れません
 
+#### `--status`
+
+ステータスのすべての環境を削除（選択されたその他のものに追加）値は、コンマ（「a,b,c」など）や空白で分割できます。
+
+- デフォルト：`[]`
+- 値が必要です
+
+#### `--only-status`
+
+特定のステータスの削除環境のみ、値はコンマ（「a,b,c」など）および空白で分割できます。
+
+- デフォルト：`[]`
+- 値が必要です
+
+#### `--exclude-status`
+
+環境ステータスのうち、値を削除しないものは、コンマ（「a,b,c」など）および空白で分割できます。
+
+- デフォルト：`[]`
+- 値が必要です
+
 #### `--merged`
 
 すべての結合環境を削除（選択されたその他のに追加）
@@ -2146,6 +2242,108 @@ Git ブランチ（非アクティブな環境）を削除しないでくださ�
 #### `--allow-delete-parent`
 
 子を持つ環境の削除を許可
+
+- デフォルト：`false`
+- 値を受け入れません
+
+#### `--project`, `-p`
+
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--environment`, `-e`
+
+環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
+
+- 値が必要です
+
+#### `--no-wait`, `-W`
+
+操作が完了するのを待たない
+
+- デフォルト：`false`
+- 値を受け入れません
+
+#### `--wait`
+
+操作が完了するまで待ちます（デフォルト）
+
+- デフォルト：`false`
+- 値を受け入れません
+
+
+## `environment:deploy`
+
+```bash
+magento-cloud deploy [-s|--strategy STRATEGY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+```
+
+環境のステージングされた変更のデプロイ
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--strategy`, `-s`
+
+デプロイメント戦略、ストップスタート（デフォルト、シャットダウンによる再起動）またはローリング（ダウンタイムなし）
+
+- 値が必要です
+
+#### `--project`, `-p`
+
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--environment`, `-e`
+
+環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
+
+- 値が必要です
+
+#### `--no-wait`, `-W`
+
+操作が完了するのを待たない
+
+- デフォルト：`false`
+- 値を受け入れません
+
+#### `--wait`
+
+操作が完了するまで待ちます（デフォルト）
+
+- デフォルト：`false`
+- 値を受け入れません
+
+
+## `environment:deploy:type`
+
+```bash
+magento-cloud environment:deploy:type [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<type>]
+```
+
+環境の展開の種類を表示または設定します
+
+```
+Choose automatic (the default) if you want your changes to be deployed immediately as they are made.
+Choose manual to have changes staged until you trigger a deployment (including changes to code, variables, domains and settings).
+```
+
+### 引数
+
+#### `type`
+
+環境のデプロイメントタイプ：自動または手動。
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--pipe`
+
+デプロイメントタイプを stdout に出力します
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -2377,7 +2575,7 @@ Git リポジトリへの URL
 ## `environment:list`
 
 ```bash
-magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--status STATUS] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 環境のリストの取得
@@ -2392,6 +2590,13 @@ magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--so
 
 - デフォルト：`false`
 - 値を受け入れません
+
+#### `--status`
+
+ステータス（アクティブ、非アクティブ、ダーティ、一時停止、削除中）で環境をフィルタリングします。 値は、コンマ（「a,b,c」など）や空白で分割できます。
+
+- デフォルト：`[]`
+- 値が必要です
 
 #### `--pipe`
 
@@ -2616,7 +2821,7 @@ The environment will be unavailable until it is resumed. No data will be lost.
 ## `environment:push`
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<source>]
 ```
 
 環境へのコードのプッシュ
@@ -2625,7 +2830,7 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 #### `source`
 
-ソース参照：ブランチ名またはコミットハッシュ
+Git ソース参照（ブランチ名やコミットハッシュなど）。
 
 - デフォルト：`HEAD`
 
@@ -2662,14 +2867,14 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 
 #### `--activate`
 
-プッシュする前に環境をアクティベート
+環境をアクティベートします。 一時停止された環境が再開されます。 これにより、変更がプッシュされなかった場合でも、環境がアクティブになります。
 
 - デフォルト：`false`
 - 値を受け入れません
 
 #### `--parent`
 
-新しい環境の親を設定します（– activate と共にのみ使用）
+環境の親を設定します（– activate と共にのみ使用）
 
 - 値が必要です
 
@@ -2709,12 +2914,6 @@ magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set
 #### `--environment`, `-e`
 
 環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
-
-- 値が必要です
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
 
 - 値が必要です
 
@@ -2761,7 +2960,7 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 ## `environment:relationships`
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<environment>]
 ```
 
 環境の関係を示す
@@ -2804,12 +3003,6 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 #### `--app`, `-A`
 
 リモートアプリケーション名
-
-- 値が必要です
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
 
 - 値が必要です
 
@@ -2856,7 +3049,7 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 ## `environment:scp`
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<files>]...
 ```
 
 scp を使用した環境との間でのファイルのコピー
@@ -2911,17 +3104,11 @@ scp を使用した環境との間でのファイルのコピー
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `environment:ssh`
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-o|--option OPTION] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<cmd>]...
 ```
 
 現在の環境への SSH
@@ -2953,6 +3140,13 @@ SSH URL のみを出力します。
 - デフォルト：`false`
 - 値を受け入れません
 
+#### `--option`, `-o`
+
+SSH に追加オプションを渡す
+
+- デフォルト：`[]`
+- 値が必要です
+
 #### `--project`, `-p`
 
 プロジェクト ID または URL
@@ -2983,12 +3177,6 @@ SSH URL のみを出力します。
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `environment:synchronize`
 
@@ -3002,7 +3190,9 @@ magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONME
 This command synchronizes to a child environment from its parent environment.
 
 Synchronizing "code" means there will be a Git merge from the parent to the
-child. Synchronizing "data" means that all files in all services (including
+child.
+
+Synchronizing "data" means that all files in all services (including
 static files, databases, logs, search indices, etc.) will be copied from the
 parent to the child.
 ```
@@ -3102,7 +3292,7 @@ URL を stdout に出力します。
 ## `environment:xdebug`
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 環境で Xdebug へのトンネルを開きます。
@@ -3145,12 +3335,6 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 #### `--instance`, `-I`
 
 インスタンス ID
-
-- 値が必要です
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
 
 - 値が必要です
 
@@ -3228,7 +3412,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 ## `integration:activity:list`
 
 ```bash
-magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud integration:activities [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 統合のアクティビティのリストの取得
@@ -3299,7 +3483,7 @@ magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LI
 
 #### `--columns`, `-c`
 
-表示する列。 使用可能な列：id*、created*、description*、type*、state*、result*、completed （* = デフォルト列）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
+表示する列。 使用可能な列：id*、created*、description*、type*、state*、result*、completed、progress、time_build、time_deploy、time_execute、time_wait （* = デフォルト列）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
 
 - デフォルト：`[]`
 - 値が必要です
@@ -3395,7 +3579,7 @@ magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-u
 
 #### `--type`
 
-統合タイプ （「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」）
+統合タイプ （「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」、「otlplog」）
 
 - 値が必要です
 
@@ -3793,7 +3977,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 ## `integration:list`
 
 ```bash
-magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [-t|--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 プロジェクト統合のリストの表示
@@ -3801,6 +3985,12 @@ magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header
 ### オプション
 
 グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--type`, `-t`
+
+タイプでフィルター
+
+- 値が必要です
 
 #### `--format`
 
@@ -3850,7 +4040,7 @@ magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucke
 
 #### `--type`
 
-統合タイプ （「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」）
+統合タイプ （「bitbucket」、「bitbucket_server」、「github」、「gitlab」、「webhook」、「health.email」、「health.pagerduty」、「health.slack」、「health.webhook」、「httplog」、「script」、「newrelic」、「splunk」、「sumologic」、「syslog」、「otlplog」）
 
 - 値が必要です
 
@@ -4341,7 +4531,7 @@ magento-cloud dir [<subdir>]
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA環境のCPU、ディスク、メモリの指標を表示します
+環境のCPU、ディスク、メモリの指標を表示します
 
 ### オプション
 
@@ -4440,7 +4630,7 @@ BETA環境のCPU、ディスク、メモリの指標を表示します
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA環境のCPUの使用状況を表示
+環境のCPUでの使用状況を表示
 
 ### オプション
 
@@ -4638,7 +4828,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA環境のメモリ使用量を表示します
+環境のメモリ使用量を表示
 
 ### オプション
 
@@ -4734,7 +4924,7 @@ BETA環境のメモリ使用量を表示します
 ## `mount:download`
 
 ```bash
-magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 rsync を使用したマウントからのファイルのダウンロード
@@ -4827,12 +5017,6 @@ rsync を使用したマウントからのファイルのダウンロード
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `mount:list`
 
@@ -4912,103 +5096,10 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 - 値が必要です
 
 
-## `mount:size`
-
-```bash
-magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
-```
-
-マウントのディスク使用量の確認
-
-```
-Use this command to check the disk size and usage for an application's mounts.
-
-Mounts are directories mounted into the application from a persistent, writable
-filesystem. They are configured in the mounts key in the application configuration.
-
-The filesystem's total size is determined by the disk key in the same file.
-```
-
-### オプション
-
-グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
-
-#### `--bytes`, `-B`
-
-サイズをバイト単位で表示
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--refresh`
-
-キャッシュを更新
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--format`
-
-出力形式：table、csv、tsv、plain
-
-- デフォルト：`table`
-- 値が必要です
-
-#### `--columns`, `-c`
-
-表示する列。 使用可能な列：available、max、mounts、percent_used、size、used。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
-
-- デフォルト：`[]`
-- 値が必要です
-
-#### `--no-header`
-
-テーブルヘッダーを出力しない
-
-- デフォルト：`false`
-- 値を受け入れません
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
-#### `--project`, `-p`
-
-プロジェクト ID または URL
-
-- 値が必要です
-
-#### `--environment`, `-e`
-
-環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
-
-- 値が必要です
-
-#### `--app`, `-A`
-
-リモートアプリケーション名
-
-- 値が必要です
-
-#### `--worker`
-
-セカンダリ名
-
-- 値が必要です
-
-#### `--instance`, `-I`
-
-インスタンス ID
-
-- 値が必要です
-
-
 ## `mount:upload`
 
 ```bash
-magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 rsync を使用したマウントへのファイルのアップロード
@@ -5087,12 +5178,6 @@ rsync を使用したマウントへのファイルのアップロード
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `operation:list`
 
@@ -5100,7 +5185,7 @@ rsync を使用したマウントへのファイルのアップロード
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
-環境のBETA リストのランタイム操作
+環境のランタイム操作のリスト
 
 ### オプション
 
@@ -5165,7 +5250,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
-BETA環境で操作を実行します
+環境での操作の実行
 
 ### 引数
 
@@ -5238,7 +5323,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT]
 ## `project:get`
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--] [<project>] [<directory>]
 ```
 
 プロジェクトのローカルクローン
@@ -5280,12 +5365,6 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 #### `--project`, `-p`
 
 プロジェクト ID または URL
-
-- 値が必要です
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
 
 - 値が必要です
 
@@ -5449,7 +5528,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 #### `--columns`
 
-表示する列。 使用可能な列：id*、title*、region*、created_at、organization_id、organization_label、organization_name、status （* = デフォルト列）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
+表示する列。 使用可能な列：id*、title*、region*、created_at、organization_id、organization_label、organization_name、organization_type、status （* = デフォルト列）。 「+」文字は、デフォルトの列のプレースホルダーとして使用できます。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
 
 - デフォルト：`[]`
 - 値が必要です
@@ -5620,6 +5699,46 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
 
 - 値が必要です
+
+
+## `resources:build:get`
+
+```bash
+magento-cloud build-resources:get [-p|--project PROJECT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+プロジェクトのビルドリソースの表示
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--project`, `-p`
+
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--format`
+
+出力形式：table、csv、tsv、plain
+
+- デフォルト：`table`
+- 値が必要です
+
+#### `--columns`, `-c`
+
+表示する列。 使用可能な列：cpu、メモリ。 % または*はワイルドカードとして使用できます。 値は、コンマ（「a,b,c」など）や空白で分割できます。
+
+- デフォルト：`[]`
+- 値が必要です
+
+#### `--no-header`
+
+テーブルヘッダーを出力しない
+
+- デフォルト：`false`
+- 値を受け入れません
 
 
 ## `route:get`
@@ -5890,7 +6009,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB からのデータのバイナリアーカイブダンプの作成
@@ -5925,12 +6044,6 @@ gzip を使用してダンプを圧縮します
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 #### `--project`, `-p`
 
 プロジェクト ID または URL
@@ -5953,7 +6066,7 @@ gzip を使用してダンプを圧縮します
 ## `service:mongo:export`
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB からのデータのエクスポート
@@ -5994,12 +6107,6 @@ MongoDB からのデータのエクスポート
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 #### `--project`, `-p`
 
 プロジェクト ID または URL
@@ -6022,7 +6129,7 @@ MongoDB からのデータのエクスポート
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 データのバイナリアーカイブダンプを MongoDB に復元します。
@@ -6040,12 +6147,6 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 #### `--relationship`, `-r`
 
 使用するサービスの関係
-
-- 値が必要です
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
 
 - 値が必要です
 
@@ -6071,7 +6172,7 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 MongoDB シェルの使用
@@ -6089,12 +6190,6 @@ JavaScript フラグメントをシェルに渡す
 #### `--relationship`, `-r`
 
 使用するサービスの関係
-
-- 値が必要です
-
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
 
 - 値が必要です
 
@@ -6120,7 +6215,7 @@ JavaScript フラグメントをシェルに渡す
 ## `service:redis-cli`
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
 ```
 
 Redis CLI へのアクセス
@@ -6129,7 +6224,10 @@ Redis CLI へのアクセス
 
 #### `args`
 
-Redis コマンドに追加する引数
+redis-cli コマンドに追加する引数
+
+- デフォルト：`[]`
+- 配列
 
 ### オプション
 
@@ -6141,9 +6239,49 @@ Redis コマンドに追加する引数
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
+#### `--project`, `-p`
 
-使用する SSH ID （秘密鍵）
+プロジェクト ID または URL
+
+- 値が必要です
+
+#### `--environment`, `-e`
+
+環境 ID。 「。」を使用します プロジェクトのデフォルト環境を選択します。
+
+- 値が必要です
+
+#### `--app`, `-A`
+
+リモートアプリケーション名
+
+- 値が必要です
+
+
+## `service:valkey-cli`
+
+```bash
+magento-cloud valkey [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
+```
+
+Valkey CLI へのアクセス
+
+### 引数
+
+#### `args`
+
+valkey-cli コマンドに追加する引数
+
+- デフォルト：`[]`
+- 配列
+
+### オプション
+
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
+
+#### `--relationship`, `-r`
+
+使用するサービスの関係
 
 - 値が必要です
 
@@ -6186,7 +6324,7 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 #### `--live`
 
-ライブバックアップ：環境を停止しないでください。 設定すると、バックアップ中も環境が実行中で、接続を開いたままになります。 これにより、整合性のない状態でデータをバックアップするリスクのあるダウンタイムが削減されます。
+ライブスナップショット：環境を停止しないでください。 設定した場合、スナップショットの実行中は環境が実行中で接続を開いたままになります。 これにより、整合性のない状態でデータをバックアップするリスクのあるダウンタイムが削減されます。
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -6363,7 +6501,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 ## `snapshot:restore`
 
 ```bash
-magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [--no-code] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 環境スナップショットの復元
@@ -6372,7 +6510,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 
 #### `snapshot`
 
-スナップショットの名前。 デフォルトは最新の値
+スナップショットの ID。 デフォルトは最新の値
 
 ### オプション
 
@@ -6389,6 +6527,13 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p
 —target がまだ存在しない場合、新しい環境の親を指定します
 
 - 値が必要です
+
+#### `--no-code`
+
+コードを復元せず、データのみを復元します。
+
+- デフォルト：`false`
+- 値を受け入れません
 
 #### `--project`, `-p`
 
@@ -6490,7 +6635,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 #### `--variable`
 
-操作中に設定する変数を type:name=value の形式で指定します。
+操作中に設定する変数。形式は type:name=value です。
 
 - デフォルト：`[]`
 - 値が必要です
@@ -6568,7 +6713,7 @@ explicitly. For unattended scripts, remember to turn off interaction via
 
 #### `--new-key`
 
-[ 非推奨 ] 代わりに – new を使用してください。
+新しいキーペアを強制的に生成
 
 - デフォルト：`false`
 - 値を受け入れません
@@ -6890,7 +7035,7 @@ SSH トンネルのリスト
 ## `tunnel:open`
 
 ```bash
-magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 アプリの関係に SSH トンネルを開く
@@ -6937,17 +7082,11 @@ extensions.
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `tunnel:single`
 
 ```bash
-magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 アプリの関係に対して 1 つの SSH トンネルを開く
@@ -6993,12 +7132,6 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 - 値が必要です
 
-#### `--identity-file`, `-i`
-
-使用する SSH ID （秘密鍵）
-
-- 値が必要です
-
 
 ## `user:add`
 
@@ -7020,7 +7153,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 
 #### `--role`, `-r`
 
-ユーザーのプロジェクトの役割（「管理者」または「閲覧者」）または環境の種類の役割（「ステージング：投稿者」や「実稼動：閲覧者」など）。 環境タイプからユーザーを削除するには、役割を「なし」に設定します。 % または*文字を環境タイプのワイルドカードとして使用できます（例：「%:viewer」）。これにより、ユーザーにすべてのタイプで「viewer」の役割を付与できます。 役割は短縮できます（例：「production:v」）。
+ユーザーのプロジェクトの役割（「管理者」または「閲覧者」）または環境タイプの役割（「ステージング :contributor」または「実稼動 :viewer」など）。 環境タイプからユーザーを削除するには、役割を「なし」に設定します。 % または*文字を環境タイプのワイルドカードとして使用できます（例：&#39;%:viewer&#39;）。これにより、ユーザーにすべてのタイプで「ビューア」の役割を付与できます。 役割は短縮できます（例：「production:v」）。
 
 - デフォルト：`[]`
 - 値が必要です
@@ -7153,7 +7286,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 #### `--role`, `-r`
 
-[ 非推奨：ユーザーの役割を変更するには user:update を使用してください ]
+[ 非推奨：ユーザーを使用 :update してユーザーの役割を変更 ]
 
 - 値が必要です
 
@@ -7218,7 +7351,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 
 #### `--role`, `-r`
 
-ユーザーのプロジェクトの役割（「管理者」または「閲覧者」）または環境の種類の役割（「ステージング：投稿者」や「実稼動：閲覧者」など）。 環境タイプからユーザーを削除するには、役割を「なし」に設定します。 % または*文字を環境タイプのワイルドカードとして使用できます（例：「%:viewer」）。これにより、ユーザーにすべてのタイプで「viewer」の役割を付与できます。 役割は短縮できます（例：「production:v」）。
+ユーザーのプロジェクトの役割（「管理者」または「閲覧者」）または環境タイプの役割（「ステージング :contributor」または「実稼動 :viewer」など）。 環境タイプからユーザーを削除するには、役割を「なし」に設定します。 % または*文字を環境タイプのワイルドカードとして使用できます（例：&#39;%:viewer&#39;）。これにより、ユーザーにすべてのタイプで「ビューア」の役割を付与できます。 役割は短縮できます（例：「production:v」）。
 
 - デフォルト：`[]`
 - 値が必要です
