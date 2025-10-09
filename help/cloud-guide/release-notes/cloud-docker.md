@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
+source-git-commit: c1f5e663716d3c9390e8ffb8bb2da6c7c67996b0
 workflow-type: tm+mt
-source-wordcount: '3775'
+source-wordcount: '3790'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.4 {#latest}
+## v1.4.5 {#latest}
+
+リリース日：2025 年 10 月 8 日（PT）
+
+- ![ 新しいアイコン ](../../assets/new.svg)**ActiveMQ** – 機能テストを含む Cloud-docker で ActiveMQ のサポートを追加しました。<!-- MCLOUD-13771 -->
+
+## v1.4.4
 
 リリース日：2025 年 8 月 7 日（PT）
 
@@ -314,7 +320,7 @@ ht-degree: 0%
 
       - Elasticsearch 6.8、7.2、7.5、7.6.<!--MCLOUD-4050, MCLOUD-5855,MCLOUD-5860--> がサポートされるようになりました。
 
-      - Docker コンポーズ設定ファイルを生成する際に [&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)Elasticsearch コンテナ設定をカスタマイズする機能が追加されました。<!--MCLOUD-3059-->
+      - Docker コンポーズ設定ファイルを生成する際に [](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service/#elasticsearch-container)Elasticsearch コンテナ設定をカスタマイズする機能が追加されました。<!--MCLOUD-3059-->
 
       - Docker Compose 設定ファイルを生成するためのサービス設定オプションに `--no-es` オプションを追加しました。 Elasticsearch コンテナのインストールをスキップして MySQL 検索を使用する場合は、このオプションを使用します。 このオプションは、Adobe Commerce バージョン 2.3.5 以前でのみサポートされています。<!--MCLOUD-3766-->
 
