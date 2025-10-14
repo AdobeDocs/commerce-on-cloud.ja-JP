@@ -80,6 +80,6 @@ ht-degree: 0%
 
 {{redeploy-warning}}
 
-バックアップを使用しない環境の復元について詳しくは、[ 環境の復元 ](../development/restore-environment.md) を参照してください。
+バックアップを使用しない環境の復元について詳しくは、[&#x200B; 環境の復元 &#x200B;](../development/restore-environment.md) を参照してください。
 
 {{stuck-deployment-tip}}

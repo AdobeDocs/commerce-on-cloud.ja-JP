@@ -27,11 +27,11 @@ ht-degree: 0%
 
 1. 右上隅でユーザー名をクリックし、「**マイプロファイル**」を選択します。
 
-   ![Marketplace アカウントにアクセス ](../../assets/marketplace/my-profile.png)
+   ![Marketplace アカウントにアクセス &#x200B;](../../assets/marketplace/my-profile.png)
 
 1. _マイアカウント_ ページで **購入履歴** をクリックします。
 
-   ![Marketplace の購入履歴 ](../../assets/marketplace/my-purchases.png)
+   ![Marketplace の購入履歴 &#x200B;](../../assets/marketplace/my-purchases.png)
 
 1. _購入_ ページで、購入したモジュールを選択し、「技術的な詳細 **をクリック** ます。
 
@@ -55,7 +55,7 @@ Adobeでは、実装に拡張機能を追加する際に、開発ブランチで
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
-1. 開発ブランチを作成またはチェックアウトします。 [ ブランチ ](../development/cli-branches.md) を参照してください。
+1. 開発ブランチを作成またはチェックアウトします。 [&#x200B; ブランチ &#x200B;](../development/cli-branches.md) を参照してください。
 
 1. Composer の名前とバージョンを使用して、`composer.json` ファイルの `require` セクションに拡張子を追加します。
 
@@ -101,7 +101,7 @@ Adobeでは、実装に拡張機能を追加する際に、開発ブランチで
    Module is enabled
    ```
 
-   デプロイメントエラーが発生した場合は、[ 拡張機能のデプロイメントの失敗 ](../deploy/recover-failed-deployment.md) を参照してください。
+   デプロイメントエラーが発生した場合は、[&#x200B; 拡張機能のデプロイメントの失敗 &#x200B;](../deploy/recover-failed-deployment.md) を参照してください。
 
 ## 拡張機能の管理
 
@@ -155,13 +155,13 @@ Composer を使用して拡張機能を追加すると、デプロイメント �
 
 ## 拡張機能のアップグレード
 
-続行する前に、拡張機能の Composer 名とバージョンが必要です。 また、拡張機能がプロジェクトおよびAdobe Commerceのバージョンと互換性があることを確認します。 特に、開始する前に [ 必要な PHP のバージョンを確認してください ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)。
+続行する前に、拡張機能の Composer 名とバージョンが必要です。 また、拡張機能がプロジェクトおよびAdobe Commerceのバージョンと互換性があることを確認します。 特に、開始する前に [&#x200B; 必要な PHP のバージョンを確認してください &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)。
 
 **拡張機能を更新するには**:
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
-1. 開発ブランチを作成またはチェックアウトします。 [ ブランチ ](../development/cli-branches.md) を参照してください。
+1. 開発ブランチを作成またはチェックアウトします。 [&#x200B; ブランチ &#x200B;](../development/cli-branches.md) を参照してください。
 
 1. `composer.json` ファイルをテキストエディターで開きます。
 
@@ -189,4 +189,4 @@ Composer を使用して拡張機能を追加すると、デプロイメント �
    git push origin <branch-names>
    ```
 
-エラーが発生した場合は、[ コンポーネントの障害からの回復 ](../deploy/recover-failed-deployment.md) を参照してください。 Adobe Commerceでの拡張機能の使用について詳しくは、『 _管理者ガイド_ 』の [ 拡張機能 ](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=ja) を参照してください。
+エラーが発生した場合は、[&#x200B; コンポーネントの障害からの回復 &#x200B;](../deploy/recover-failed-deployment.md) を参照してください。 Adobe Commerceでの拡張機能の使用について詳しくは、『 _管理者ガイド_ 』の [&#x200B; 拡張機能 &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=ja) を参照してください。

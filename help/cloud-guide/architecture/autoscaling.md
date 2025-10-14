@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 自動スケーリング
 
-自動スケーリングでは、最適なパフォーマンスと妥当なコストを維持するために、クラウドインフラストラクチャにリソースを自動的に追加または削除します。 現在、この機能は、[ 拡張アーキテクチャ ](scaled-architecture.md) で設定されたプロジェクトでのみ使用できます。
+自動スケーリングでは、最適なパフォーマンスと妥当なコストを維持するために、クラウドインフラストラクチャにリソースを自動的に追加または削除します。 現在、この機能は、[&#x200B; 拡張アーキテクチャ &#x200B;](scaled-architecture.md) で設定されたプロジェクトでのみ使用できます。
 
 ## Web サーバーノード
 
-[Web 層 ](scaled-architecture.md#web-tier) は、プロセスリクエストの増加とトラフィック要件の増加に対応するように拡張できます。 現在、自動スケーリング機能は、web サーバーノードを追加または削除することで水平方向にのみスケーリングできます。
+[Web 層 &#x200B;](scaled-architecture.md#web-tier) は、プロセスリクエストの増加とトラフィック要件の増加に対応するように拡張できます。 現在、自動スケーリング機能は、web サーバーノードを追加または削除することで水平方向にのみスケーリングできます。
 
 CPUの使用状況とトラフィックが事前定義されたしきい値に達すると、自動スケールイベントが発生します。
 
@@ -27,12 +27,12 @@ CPUの使用状況とトラフィックが事前定義されたしきい値に�
 
 ## New Relicによるしきい値の監視
 
-[New Relic サービス ](../monitor/new-relic-service.md) を使用して、ホスト数やCPUの使用状況など、特定のしきい値を監視できます。 次のNew Relic クエリでは、`cluster-id` 用の変数表記を例としてのみ使用しています。
+[New Relic サービス &#x200B;](../monitor/new-relic-service.md) を使用して、ホスト数やCPUの使用状況など、特定のしきい値を監視できます。 次のNew Relic クエリでは、`cluster-id` 用の変数表記を例としてのみ使用しています。
 
 >[!TIP]
 >
->クエリの作成について詳しくは、_New Relic[ ドキュメントの ](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/)NRQL 構文、句、関数_ を参照してください。
->クエリを使用して、[New Relic ダッシュボード ](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/) を作成します。
+>クエリの作成について詳しくは、_New Relic[&#x200B; ドキュメントの &#x200B;](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/)NRQL 構文、句、関数_ を参照してください。
+>クエリを使用して、[New Relic ダッシュボード &#x200B;](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/) を作成します。
 
 ### ホスト数
 
@@ -44,7 +44,7 @@ SELECT uniqueCount(SystemSample.entityId) AS 'Infrastructure hosts', uniqueCount
 
 次のスクリーンショットでは **APM ホストが表示されています** は、選択した期間中にトランザクションがログに記録されたホストの数を示しています。
 
-![New Relic ホスト数 ](../../assets/new-relic/host-count.png)
+![New Relic ホスト数 &#x200B;](../../assets/new-relic/host-count.png)
 
 ### CPUの使用
 
@@ -54,22 +54,22 @@ SELECT uniqueCount(SystemSample.entityId) AS 'Infrastructure hosts', uniqueCount
 SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames WHERE instanceType LIKE 'c%' TIMESERIES SINCE 3 HOURS AGO
 ```
 
-![New Relic web ノードのCPUの使用状況 ](../../assets/new-relic/web-node-cpu-usage.png)
+![New Relic web ノードのCPUの使用状況 &#x200B;](../../assets/new-relic/web-node-cpu-usage.png)
 
 ## 自動スケーリングを有効にする
 
-クラウドインフラストラクチャプロジェクトでAdobe Commerceの自動スケーリングを有効または無効にするには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) します。 チケットで次の理由を選択します。
+クラウドインフラストラクチャプロジェクトでAdobe Commerceの自動スケーリングを有効または無効にするには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) します。 チケットで次の理由を選択します。
 
 - **問い合わせ理由**：インフラストラクチャ変更リクエスト
 - **Adobe Commerce インフラストラクチャへの問い合わせ理由**：その他のインフラストラクチャの変更リクエスト
 
 >[!IMPORTANT]
 >
->自動スケーリング機能は、予期しないイベントをキャプチャします。 Adobe自動スケーリングが有効になっている場合でも、今後のイベントを想定している場合は、引き続き [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) することをお勧めします。
+>自動スケーリング機能は、予期しないイベントをキャプチャします。 Adobe自動スケーリングが有効になっている場合でも、今後のイベントを想定している場合は、引き続き [Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) することをお勧めします。
 
 ### 負荷テスト
 
-Adobeでは、最初にクラウドプロジェクト _ステージング_ クラスターで自動スケーリングを有効にします。 環境で負荷テストを実行して完了すると、Adobeは実稼動クラスターで自動スケーリングを有効にします。 負荷テストのガイダンスについては、[ パフォーマンステスト ](../launch/checklist.md#performance-testing) を参照してください。
+Adobeでは、最初にクラウドプロジェクト _ステージング_ クラスターで自動スケーリングを有効にします。 環境で負荷テストを実行して完了すると、Adobeは実稼動クラスターで自動スケーリングを有効にします。 負荷テストのガイダンスについては、[&#x200B; パフォーマンステスト &#x200B;](../launch/checklist.md#performance-testing) を参照してください。
 
 ### IP許可リスト
 

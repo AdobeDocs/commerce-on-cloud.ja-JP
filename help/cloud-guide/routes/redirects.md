@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->クラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、`routes.yaml` ファイルに多数の非正規表現リダイレクトや書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが 32 KB 以上の場合は、非正規表現のリダイレクトと書き換えを Fastly にオフロードします。 [2&rbrace;Adobe Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=ja) の Nginx （ルート）ではなく Fastly への非正規表現リダイレクトのオフロード _を参照してください。_
+>クラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、`routes.yaml` ファイルに多数の非正規表現リダイレクトや書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが 32 KB 以上の場合は、非正規表現のリダイレクトと書き換えを Fastly にオフロードします。 [2&rbrace;Adobe Commerce ヘルプセンター &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=ja) の Nginx （ルート）ではなく Fastly への非正規表現リダイレクトのオフロード _を参照してください。_
 
 ## ルート全体リダイレクト
 
@@ -66,7 +66,7 @@ http://{default}/:
   | `regexp` | オプション。デフォルトは `false` です。 パス キーを PCRE 正規表現として解釈するかどうかを指定します。 |
   | `prefix` | リダイレクトをパスとその子の両方に適用するか、パス自体に適用するかを指定します。 デフォルトは `true` です。 `regexp` が `true` の場合、この値はサポートされません。 |
   | `append_suffix` | リダイレクトでサフィックスを引き継ぐかどうかを決定します。 デフォルトは `true` です。 `regexp` キーが `true` の場合、または `prefix` キーが `false` の場合、この値はサポートされません。 |
-  | `code` | HTTP ステータスコードを指定します。 有効な状態コードは、[`301` （完全に移動） ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2)、[`302`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3)、[`307`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8)、および [`308`](https://www.rfc-editor.org/rfc/rfc7238) です。 デフォルトは `302` です。 |
+  | `code` | HTTP ステータスコードを指定します。 有効な状態コードは、[`301` （完全に移動） &#x200B;](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2)、[`302`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3)、[`307`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8)、および [`308`](https://www.rfc-editor.org/rfc/rfc7238) です。 デフォルトは `302` です。 |
   | `expires` | オプションで、ブラウザーでリダイレクトをキャッシュする時間を指定します。 デフォルトは、`redirects` キーの直下に定義された `expires` 値ですが、このレベルでは、個々の部分リダイレクトのキャッシュの有効期限を微調整できます。 |
 
 ## 部分的なルートリダイレクトの例

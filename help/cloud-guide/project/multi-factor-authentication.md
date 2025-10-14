@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->クラウドプロジェクトでは、MFA はデフォルトでは有効になっていません。 Adobe Commerce on cloud infrastructure プロジェクトのアカウント所有者は、有効にするために [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。 MFA が有効な場合、プロジェクト環境に SSH でアクセスするには、すべてのユーザーがAdobe Commerce on cloud infrastructure アカウントで二要素認証（TFA）を有効にする必要があります。
+>クラウドプロジェクトでは、MFA はデフォルトでは有効になっていません。 Adobe Commerce on cloud infrastructure プロジェクトのアカウント所有者は、有効にするために [Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。 MFA が有効な場合、プロジェクト環境に SSH でアクセスするには、すべてのユーザーがAdobe Commerce on cloud infrastructure アカウントで二要素認証（TFA）を有効にする必要があります。
 
 ## SSH アクセス用の証明書
 
@@ -88,7 +88,7 @@ magento-cloud ssh-cert:load
 
 ## SSH と TFA を使用した環境への接続
 
-プロジェクトで MFA を有効にする場合、SSH を使用してリモート環境に接続するには、アカウントで TFA を有効にしておく必要があります。 [TFA を有効にする ](user-access.md#enable-tfa-for-cloud-accounts) を参照してください。
+プロジェクトで MFA を有効にする場合、SSH を使用してリモート環境に接続するには、アカウントで TFA を有効にしておく必要があります。 [TFA を有効にする &#x200B;](user-access.md#enable-tfa-for-cloud-accounts) を参照してください。
 
 >[!BEGINSHADEBOX]
 
@@ -104,7 +104,7 @@ MFA 適用が有効なプロジェクトの場合、SSH アクセスには次の
 
 **TFA ユーザーアカウント資格情報を使用して SSH を使用して接続するには**:
 
-1. [ アカウント ](https://console.adobecommerce.com) にログインします。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com) にログインします。
 
 1. ローカル・ワークステーションで、`magento-cloud` CLI を使用して SSH 証明書を生成します。
 
@@ -152,11 +152,11 @@ MFA 適用が有効なプロジェクトの場合、SSH アクセスには次の
 
 **TFA ユーザーアカウント資格情報を使用して SSH を使用して接続するには**:
 
-1. [ アカウント ](https://console.adobecommerce.com) にログインし、TFA を使用して認証します。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com) にログインし、TFA を使用して認証します。
 
    >[!NOTE]
    >
-   >アカウントで TFA が有効になっていない場合は、有効にする必要があります。 [ クラウドアカウントで TFA を有効にする ](user-access.md#enable-tfa-for-cloud-accounts) を参照してください。
+   >アカウントで TFA が有効になっていない場合は、有効にする必要があります。 [&#x200B; クラウドアカウントで TFA を有効にする &#x200B;](user-access.md#enable-tfa-for-cloud-accounts) を参照してください。
 
 1. ローカル・ワークステーションで、`magento-cloud` CLI を使用して SSH 証明書を生成します。
 
@@ -285,7 +285,7 @@ authenticated, but could not connect to service abcdef7uyxabce-master-7rqtabc--m
 
 **TFA 設定と認証を確認するには**:
 
-1. [ アカウント ](https://console.adobecommerce.com) にログインします。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com) にログインします。
 
 1. 右上のアカウントメニューで、「**[!UICONTROL My Profile]**」をクリックします。
 
@@ -293,7 +293,7 @@ authenticated, but could not connect to service abcdef7uyxabce-master-7rqtabc--m
 
    TFA が有効になっている場合は、TFA の設定を管理するためのオプションが [ セキュリティ ] セクションに表示されます。
 
-1. TFA が設定されていない場合は、**[!UICONTROL Set up application]** をクリックし、指示に従って有効にします。 [TFA を有効にする ](user-access.md#enable-tfa-for-cloud-accounts) を参照してください。
+1. TFA が設定されていない場合は、**[!UICONTROL Set up application]** をクリックし、指示に従って有効にします。 [TFA を有効にする &#x200B;](user-access.md#enable-tfa-for-cloud-accounts) を参照してください。
 
 1. TFA が設定されている場合は、認証を再試行します。
 
@@ -324,7 +324,7 @@ Hello user-test (UUID: abaacca12-5cd1-4b123-9096-411add578998), you successfully
 oh2wi6klp5ytk-mc-35985-integration-nnulm4a--mymagento@ssh.eu-3.magento.cloud: Permission denied (publickey).
 ```
 
-この問題を修正するには、現在のセッションに SSH キーを追加するか、SSH 設定ファイルを更新して SSH キーを自動的に読み込みます。 [SSH 公開鍵の追加 ](../development/secure-connections.md#add-an-ssh-public-key-to-your-account) を参照してください。
+この問題を修正するには、現在のセッションに SSH キーを追加するか、SSH 設定ファイルを更新して SSH キーを自動的に読み込みます。 [SSH 公開鍵の追加 &#x200B;](../development/secure-connections.md#add-an-ssh-public-key-to-your-account) を参照してください。
 
 ### MFA のないプロジェクトにアクセスできません
 

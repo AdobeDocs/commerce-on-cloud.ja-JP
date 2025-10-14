@@ -25,7 +25,7 @@ ht-degree: 0%
 
 - Fastly やNew Relicなど、ステージング環境および実稼動環境で使用できる一部のサービスはサポートされていません。
 
-- 負荷、ストレス、パフォーマンス、サイトアセット用のステージングの様々なツールを使用して、サイトを [ 完全にテスト ](../test/guidance.md) します。
+- 負荷、ストレス、パフォーマンス、サイトアセット用のステージングの様々なツールを使用して、サイトを [&#x200B; 完全にテスト &#x200B;](../test/guidance.md) します。
 
 - 統合環境にはテストデータが入力されたデータベースのみが存在し、実稼動環境のような環境には一致しない場合があるので、ステージング環境または実稼動環境でテストすると、追加のエラーや予期しない動作が発生する可能性があります。
 
@@ -39,11 +39,11 @@ ht-degree: 0%
 
 - SSL/TLS 証明書
 
-Adobe Commerce on cloud infrastructure サブスクリプションの一環として、Adobeは、Let’s Encrypt によって発行された、ドメインで検証された SSL/TLS 証明書を提供します。 実稼動環境、ステージング環境、スターター環境（`master`）の各には、その環境内のすべてのドメインとサブドメインをカバーする一意の証明書があります。 これらの証明書は、開発および実稼動用に DNS 設定を更新した後、自動的にプロビジョニングされ、サイトにアップロードされます。 [SSL/TLS 証明書のプロビジョニング ](../cdn/fastly-configuration.md#provision-ssltls-certificates) を参照してください。
+Adobe Commerce on cloud infrastructure サブスクリプションの一環として、Adobeは、Let’s Encrypt によって発行された、ドメインで検証された SSL/TLS 証明書を提供します。 実稼動環境、ステージング環境、スターター環境（`master`）の各には、その環境内のすべてのドメインとサブドメインをカバーする一意の証明書があります。 これらの証明書は、開発および実稼動用に DNS 設定を更新した後、自動的にプロビジョニングされ、サイトにアップロードされます。 [SSL/TLS 証明書のプロビジョニング &#x200B;](../cdn/fastly-configuration.md#provision-ssltls-certificates) を参照してください。
 
 >[!NOTE]
 >
->Let’s Encrypt 証明書を使用する代わりに、会社に独自の拡張検証 SSL 証明書をデプロイする場合は、CTAまたは [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) にお問い合わせください。
+>Let’s Encrypt 証明書を使用する代わりに、会社に独自の拡張検証 SSL 証明書をデプロイする場合は、CTAまたは [Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) にお問い合わせください。
 
 ## セキュリティスキャンツールの設定
 
@@ -59,7 +59,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一環と�
 >
 >これらの IP アドレスをネットワーク ファイアウォール規則の許可リストに追加して、サイトをスキャンできるようにします。 このツールは、ポート 80 および 443 にのみリクエストを POST します。
 
-セキュリティ スキャン ツールを使用すると、ストアの Web サイトを定期的に監視し、既知のセキュリティ リスク、マルウェア、および最新ではないソフトウェアの更新を受け取ることができます。 このツールは、クラウドインフラストラクチャー上のAdobe Commerceのすべての実装およびバージョンで利用できる無料のサービスです。 このツールには、[Commerce Marketplace アカウント ](https://account.magento.com/customer/account/login) からアクセスします。
+セキュリティ スキャン ツールを使用すると、ストアの Web サイトを定期的に監視し、既知のセキュリティ リスク、マルウェア、および最新ではないソフトウェアの更新を受け取ることができます。 このツールは、クラウドインフラストラクチャー上のAdobe Commerceのすべての実装およびバージョンで利用できる無料のサービスです。 このツールには、[Commerce Marketplace アカウント &#x200B;](https://account.magento.com/customer/account/login) からアクセスします。
 
 - Sites のセキュリティステータスと適用されたセキュリティ更新を監視
 
@@ -69,7 +69,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一環と�
 >
 >Adobeでは、調査結果の調査中に最高のサービス品質を確保するために、他のサードパーティツールよりもセキュリティスキャンツールを使用することをお勧めします。
 
-セキュリティスキャンツールの設定と使用については、[ ユーザーガイド ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-scan) を参照してください。 通常は、ユーザー受け入れテスト（UAT）を開始する際に、このツールの使用を開始します。
+セキュリティスキャンツールの設定と使用については、[&#x200B; ユーザーガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-scan) を参照してください。 通常は、ユーザー受け入れテスト（UAT）を開始する際に、このツールの使用を開始します。
 
 スキャンする各サイトは、「Security Scan」タブを使用して登録する必要があります。 スキャンを開始する前に、登録プロセス中に免責事項に同意する必要があります。 スケジュールを制御し、各スキャンが完了したときにユーザーが通知を受け取ることを許可します。 スキャンのスケジュールを特定の繰り返し日時に設定することも、必要に応じてスキャンをオンデマンドで実行することもできます。
 
@@ -84,7 +84,7 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## サイトをスキャン
 
-1. [Commerce Marketplace アカウント ](https://account.magento.com/customer/account/login) にアクセスします。
+1. [Commerce Marketplace アカウント &#x200B;](https://account.magento.com/customer/account/login) にアクセスします。
 
 1. [Security Scan] （セキュリティスキャン）タブをクリックし、**[Go to Security Scan] （セキュリティスキャンに移動** を選択します。
 

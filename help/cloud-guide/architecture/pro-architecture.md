@@ -33,13 +33,13 @@ Adobe Commerce on cloud infrastructure Pro アーキテクチャは、ストア�
 
 >[!NOTE]
 >
->Adobeでは、ローカルの Cloud Docker 環境にデプロイしてAdobe Commerce プロジェクトの開発とテストを行うための Cloud Docker for Commerce ツールを提供しています。 [Docker 開発 ](../dev-tools/cloud-docker.md) を参照してください。
+>Adobeでは、ローカルの Cloud Docker 環境にデプロイしてAdobe Commerce プロジェクトの開発とテストを行うための Cloud Docker for Commerce ツールを提供しています。 [Docker 開発 &#x200B;](../dev-tools/cloud-docker.md) を参照してください。
 
 ## 環境アーキテクチャ
 
 プロジェクトは、`integration`、`staging`、`production` の 3 つのメイン環境ブランチを持つ単一の Git リポジトリーです。 次の図は、Pro 環境の階層関係を示しています。
 
-![Pro 環境アーキテクチャの概要 ](../../assets/pro-branch-architecture.png)
+![Pro 環境アーキテクチャの概要 &#x200B;](../../assets/pro-branch-architecture.png)
 
 ### マスター環境
 
@@ -53,7 +53,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 ### 統合環境
 
-統合環境は、PaaS と呼ばれるサーバーのグリッド上の Linux コンテナ（LXC）で動作します。 各環境には、サイトをテストするための web サーバーとデータベースが含まれます。 AWSと Azure の IP アドレスのリストについては、[ 地域の IP アドレス ](../project/regional-ip-addresses.md) を参照してください。
+統合環境は、PaaS と呼ばれるサーバーのグリッド上の Linux コンテナ（LXC）で動作します。 各環境には、サイトをテストするための web サーバーとデータベースが含まれます。 AWSと Azure の IP アドレスのリストについては、[&#x200B; 地域の IP アドレス &#x200B;](../project/regional-ip-addresses.md) を参照してください。
 
 **推奨されるユースケース：**
 
@@ -112,7 +112,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - cron 設定のカスタマイズと cron ジョブのテスト
 
-[ デプロイメントワークフロー ](pro-develop-deploy-workflow.md#deployment-workflow) および [ デプロイメントをテスト ](../test/staging-and-production.md) を参照してください。
+[&#x200B; デプロイメントワークフロー &#x200B;](pro-develop-deploy-workflow.md#deployment-workflow) および [&#x200B; デプロイメントをテスト &#x200B;](../test/staging-and-production.md) を参照してください。
 
 **注意事項：**
 
@@ -124,7 +124,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 ### 実稼動環境
 
-実稼動環境は、公開されている単一サイトおよびマルチサイトのストアフロントを実行します。 この環境は、冗長な高可用性ノードを備えた専用の IaaS ハードウェア上で動作し、継続的なアクセスとフェイルオーバー保護をお客様に提供します。 実稼働環境には、ステージング環境のすべてのサービスに加えて、アプリケーションデータとパフォーマンス分析に自動的に接続し、動的なサーバー監視を提供する [New Relic インフラストラクチャ （NRI） ](../monitor/new-relic-service.md#new-relic-infrastructure) サービスが含まれます。
+実稼動環境は、公開されている単一サイトおよびマルチサイトのストアフロントを実行します。 この環境は、冗長な高可用性ノードを備えた専用の IaaS ハードウェア上で動作し、継続的なアクセスとフェイルオーバー保護をお客様に提供します。 実稼働環境には、ステージング環境のすべてのサービスに加えて、アプリケーションデータとパフォーマンス分析に自動的に接続し、動的なサーバー監視を提供する [New Relic インフラストラクチャ （NRI） &#x200B;](../monitor/new-relic-service.md#new-relic-infrastructure) サービスが含まれます。
 
 **注意事項：**
 
@@ -155,7 +155,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 次の図は、実稼動環境で使用されるテクノロジーを示しています。
 
-![ 生産テクノロジースタック ](../../assets/az-stack-diagram.png)
+![&#x200B; 生産テクノロジースタック &#x200B;](../../assets/az-stack-diagram.png)
 
 ## 冗長ハードウェア
 
@@ -176,11 +176,11 @@ Adobeでは、独自の冗長ハードウェアを使用することで、3 台�
 
 >[!NOTE]
 >
->マウントされたボリュームは [ 書き込み可能なマウント ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) のみを含み/参照し、`app/` ディレクトリの一部は含みません。 他のファイルの場合は、[ ビルドとデプロイメントプロセス ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow) によって作成および生成されます。また、Git リポジトリで残りのファイルを確認する必要もあります。
+>マウントされたボリュームは [&#x200B; 書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) のみを含み/参照し、`app/` ディレクトリの一部は含みません。 他のファイルの場合は、[&#x200B; ビルドとデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow) によって作成および生成されます。また、Git リポジトリで残りのファイルを確認する必要もあります。
 
 {{pro-backups}}
 
-CLI コマンドを使用して、ステージング環境および実稼動環境用のデータベースの **手動バックアップ** を作成できます。 [ データベースのバックアップ ](../storage/database-dump.md) を参照してください。 `integration` 環境の場合、Adobeでは、クラウドインフラストラクチャプロジェクト上のAdobe Commerceにアクセスした後、大きな変更を加える前に、最初の手順としてバックアップを作成することをお勧めします。 [ バックアップ管理 ](../storage/snapshots.md) を参照してください。
+CLI コマンドを使用して、ステージング環境および実稼動環境用のデータベースの **手動バックアップ** を作成できます。 [&#x200B; データベースのバックアップ &#x200B;](../storage/database-dump.md) を参照してください。 `integration` 環境の場合、Adobeでは、クラウドインフラストラクチャプロジェクト上のAdobe Commerceにアクセスした後、大きな変更を加える前に、最初の手順としてバックアップを作成することをお勧めします。 [&#x200B; バックアップ管理 &#x200B;](../storage/snapshots.md) を参照してください。
 
 ### RPO （目標復旧時点）
 
@@ -208,6 +208,6 @@ RTO はストレージのサイズによって異なります。 大規模な EB
 
 Pro クラスターのサイズ設定と _コンピューティング_ 設定は、選択したクラウドプロバイダー（AWS、Azure）、地域、サービスの依存関係によって異なります。 Adobeクラウドインフラストラクチャは、トラフィックの期待値とサービス要件の変化に合わせて Pro クラスタを拡張できます。
 
-冗長アーキテクチャにより、Adobeのクラウドインフラストラクチャをダウンタイムなしでアップスケールできます。 アップグレード時には、3 つのインスタンスが回転して、サイトの運用に影響を与えることなく容量をアップグレードします。 例えば、データベース階層ではなく PHP 階層の制約を受ける場合、既存のクラスタに Web サーバを追加できます。 これにより、データベースレベルで追加の CPU によって提供される垂直方向のスケーリングを補完する _水平方向のスケーリング_ が提供されます。 [ 拡張アーキテクチャ ](scaled-architecture.md) を参照してください。
+冗長アーキテクチャにより、Adobeのクラウドインフラストラクチャをダウンタイムなしでアップスケールできます。 アップグレード時には、3 つのインスタンスが回転して、サイトの運用に影響を与えることなく容量をアップグレードします。 例えば、データベース階層ではなく PHP 階層の制約を受ける場合、既存のクラスタに Web サーバを追加できます。 これにより、データベースレベルで追加の CPU によって提供される垂直方向のスケーリングを補完する _水平方向のスケーリング_ が提供されます。 [&#x200B; 拡張アーキテクチャ &#x200B;](scaled-architecture.md) を参照してください。
 
-イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的な容量増加をリクエストできます。 [2&rbrace;Commerce ヘルプセンター ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ja) の一時的なアップサイズをリクエストする方法 _を参照してください。_
+イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的な容量増加をリクエストできます。 [2&rbrace;Commerce ヘルプセンター &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ja) の一時的なアップサイズをリクエストする方法 _を参照してください。_

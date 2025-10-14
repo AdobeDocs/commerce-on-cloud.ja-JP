@@ -31,9 +31,9 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[[!DNL Cloud Console]](../project/overview.md) を使用して環境変数を [ 設定を上書き ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=ja) に追加するには、次の例のように、変数名の前に `env:` を付ける必要があります。
+>[[!DNL Cloud Console]](../project/overview.md) を使用して環境変数を [&#x200B; 設定を上書き &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=ja) に追加するには、次の例のように、変数名の前に `env:` を付ける必要があります。
 >
->![ 環境変数の例 ](../../assets/set-env-variable-ui.png)
+>![&#x200B; 環境変数の例 &#x200B;](../../assets/set-env-variable-ui.png)
 
 値は時間の経過と共に変化する可能性があるので、実行時に変数を調べて、それを使用してアプリケーションを設定することをお勧めします。 例えば、`MAGENTO_CLOUD_RELATIONSHIPS` 変数を使用して、次のように環境に関連する関係を取得します。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ## 環境変数の表示
 
-[`ece-tools` パッケージ ](../dev-tools/package-overview.md) の `env:config:show` コマンドを使用して、現在の環境の変数のリストを表示できます。
+[`ece-tools` パッケージ &#x200B;](../dev-tools/package-overview.md) の `env:config:show` コマンドを使用して、現在の環境の変数のリストを表示できます。
 
 ```bash
 php ./vendor/bin/ece-tools env:config:show variables

@@ -14,16 +14,16 @@ ht-degree: 0%
 
 Adobe Commerce リポジトリにアクセスし、クラウドインフラストラクチャプロジェクト上のAdobe Commerceのインストールおよびアップデートコマンドを有効にするには、認証キーが必要です。 Composer 認証資格情報を指定する方法は 2 つあります。
 
-- **認証ファイル** - クラウドインフラストラクチャーのルートディレクトリ上のAdobe CommerceにAdobe Commerce[ 認証資格情報 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=ja) を含むファイルです。
+- **認証ファイル** - クラウドインフラストラクチャーのルートディレクトリ上のAdobe CommerceにAdobe Commerce[&#x200B; 認証資格情報 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=ja) を含むファイルです。
 - **環境変数** – 誤って公開されるのを防ぐために、クラウドインフラストラクチャプロジェクト上のAdobe Commerceに認証キーを設定するための環境変数。
 
 >[!BEGINSHADEBOX]
 
 **セキュリティノート**
 
-Adobeでは、認証資格情報が誤って漏洩されるのを防ぐために、クラウドプロジェクトで [ 環境変数 ](#composer-auth-environment-variable) 方式を使用することをお勧めします。
+Adobeでは、認証資格情報が誤って漏洩されるのを防ぐために、クラウドプロジェクトで [&#x200B; 環境変数 &#x200B;](#composer-auth-environment-variable) 方式を使用することをお勧めします。
 
-ローカル開発ファイル方式は、Cloud Docker for Commerceを認証ツールとして使用する場合に最適ですが、`auth.json` ファイルを公開 Git ベースのリポジトリにアップロードしないように注意してください。 `auth.json` ファイルを [`.gitignore` ファイルに追加でき ](../project/file-structure.md#ignoring-files) す。
+ローカル開発ファイル方式は、Cloud Docker for Commerceを認証ツールとして使用する場合に最適ですが、`auth.json` ファイルを公開 Git ベースのリポジトリにアップロードしないように注意してください。 `auth.json` ファイルを [`.gitignore` ファイルに追加でき &#x200B;](../project/file-structure.md#ignoring-files) す。
 
 >[!ENDSHADEBOX]
 
@@ -59,7 +59,7 @@ Adobeでは、認証資格情報が誤って漏洩されるのを防ぐために
 
 1. _[!DNL Cloud Console]_&#x200B;で、プロジェクトナビゲーションの右側にある「設定」アイコンをクリックします。
 
-   ![ プロジェクトの設定 ](../../assets/icon-configure.png){width="36"}
+   ![&#x200B; プロジェクトの設定 &#x200B;](../../assets/icon-configure.png){width="36"}
 
 1. _プロジェクト設定_ リストで、「**[!UICONTROL Variables]**」をクリックします。
 

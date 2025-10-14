@@ -37,7 +37,7 @@ ht-degree: 0%
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-現在の（デフォルトの `services.yaml` ファイル [ のデフォルトのバージョンとディスク値を表示 ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) きます。 次の例は、`services.yaml` 設定ファイルで定義されている `mysql`、`redis`、`opensearch` または `elasticsearch` および `rabbitmq` サービスを示しています。
+現在の（デフォルトの `services.yaml` ファイル [&#x200B; のデフォルトのバージョンとディスク値を表示 &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) きます。 次の例は、`services.yaml` 設定ファイルで定義されている `mysql`、`redis`、`opensearch` または `elasticsearch` および `rabbitmq` サービスを示しています。
 
 ```yaml
 mysql:
@@ -117,7 +117,7 @@ mysql:
 
 ## サービスの関係
 
-クラウドインフラストラクチャプロジェクトのAdobe Commerceでは、`.magento.app.yaml` ファイルで設定されたサービス [ 関係 ](../application/properties.md#relationships) によって、アプリケーションで使用可能なサービスが決まります。
+クラウドインフラストラクチャプロジェクトのAdobe Commerceでは、`.magento.app.yaml` ファイルで設定されたサービス [&#x200B; 関係 &#x200B;](../application/properties.md#relationships) によって、アプリケーションで使用可能なサービスが決まります。
 
 [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md) 環境変数から、すべてのサービス関係の設定データを取得できます。 設定データには、サービス名、タイプ、バージョンのほか、ポート番号やログイン資格情報など、必要な接続の詳細が含まれます。
 
@@ -171,7 +171,7 @@ mysql:
 
 ## サービスのバージョン
 
-クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされテストされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 特定のAdobe CommerceおよびMagento Open SourceリリースでAdobeでテストされたサードパーティ製ソフトウェアの依存関係のリストについては、『 _インストール_ ガイドの [ システム要件 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) を参照してください。
+クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされテストされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 特定のAdobe CommerceおよびMagento Open SourceリリースでAdobeでテストされたサードパーティ製ソフトウェアの依存関係のリストについては、『 _インストール_ ガイドの [&#x200B; システム要件 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja) を参照してください。
 
 ### ソフトウェアの EOL チェック
 
@@ -180,19 +180,19 @@ mysql:
 - サービスのバージョンが提供終了（EOL）日から 3 か月以内の場合、デプロイログに通知が表示されます。
 - EOL 日が過去の場合は、警告通知が表示されます。
 
-ストアのセキュリティを維持するには、インストールされているソフトウェアのバージョンを EOL になる前に更新してください。 [ece-tools&#39;の `eol.yaml` ファイル ](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml) で EOL 日付を確認できます。
+ストアのセキュリティを維持するには、インストールされているソフトウェアのバージョンを EOL になる前に更新してください。 [ece-tools&#39;の `eol.yaml` ファイル &#x200B;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml) で EOL 日付を確認できます。
 
 ### OpenSearch への移行
 
 {{elasticsearch-support}}
 
-Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サービスの設定 ](opensearch.md) を参照してください。
+Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サービスの設定 &#x200B;](opensearch.md) を参照してください。
 
 ## サービスバージョンの変更
 
 インストールしたサービスバージョンは、クラウド環境にデプロイされたAdobe Commerceのバージョンと互換性を持つようにアップグレードできます。
 
-インストールされているサービスのバージョンを直接ダウングレードすることはできません。 ただし、必要なバージョンを持つサービスを作成できます。 [ サービスのバージョンのダウングレード ](#downgrade-version) を参照してください。
+インストールされているサービスのバージョンを直接ダウングレードすることはできません。 ただし、必要なバージョンを持つサービスを作成できます。 [&#x200B; サービスのバージョンのダウングレード &#x200B;](#downgrade-version) を参照してください。
 
 ### インストールされているサービスのバージョンのアップグレード
 

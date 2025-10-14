@@ -13,14 +13,14 @@ ht-degree: 0%
 
 `.magento.app.yaml` ファイルは、アプリケーションのビルドおよびデプロイ方法を制御します。 クラウドインフラストラクチャー上のAdobe Commerceでは、プロジェクトごとに複数のアプリケーションをサポートしていますが、通常、プロジェクトにはリポジトリのルートに `.magento.app.yaml` ファイルを持つ単一のアプリケーションがあります。
 
-`.magento.app.yaml` には多くのデフォルト値があります。[ サンプル `.magento.app.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml) を参照してください。 インストールしたバージョンの `.magento.app.yaml` を常に確認してください。 このファイルは、クラウドインフラストラクチャー上のAdobe Commerceのバージョンによって異なる場合があります。
+`.magento.app.yaml` には多くのデフォルト値があります。[&#x200B; サンプル `.magento.app.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml) を参照してください。 インストールしたバージョンの `.magento.app.yaml` を常に確認してください。 このファイルは、クラウドインフラストラクチャー上のAdobe Commerceのバージョンによって異なる場合があります。
 
 `.magento.app.yaml` ファイルを使用して、次の設定値を定義します。
 
-- [ プロパティ ](properties.md) - アプリケーション・インスタンスのプロパティ値を定義します。
-- [Variables プロパティ ](variables-property.md) - [!DNL Commerce] アプリケーション・バージョンに必要な環境変数を確認します。
-- [PHP 設定 ](php-settings.md) – 実行時の PHP オプションを設定します。
-- [ 静的ファイルのキャッシュの設定 ](set-cache.md) - メディアと静的ファイルのキャッシュ TTL を設定します。
+- [&#x200B; プロパティ &#x200B;](properties.md) - アプリケーション・インスタンスのプロパティ値を定義します。
+- [Variables プロパティ &#x200B;](variables-property.md) - [!DNL Commerce] アプリケーション・バージョンに必要な環境変数を確認します。
+- [PHP 設定 &#x200B;](php-settings.md) – 実行時の PHP オプションを設定します。
+- [&#x200B; 静的ファイルのキャッシュの設定 &#x200B;](set-cache.md) - メディアと静的ファイルのキャッシュ TTL を設定します。
 
 >[!NOTE]
 >

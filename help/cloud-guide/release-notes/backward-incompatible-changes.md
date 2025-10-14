@@ -18,15 +18,15 @@ ht-degree: 0%
 
 以前 `ece-tools` パッケージに含まれていた機能の一部は、現在は別のパッケージで提供されています。 これらのパッケージは、ece-tools をインストールまたは更新すると自動的にインストールおよび更新される、`ece-tools` 用の composer の依存関係です。
 
-新しいアーキテクチャは、インストールや更新のプロセスには影響を与えません。 ただし、クラウドインフラストラクチャプロジェクトでAdobe Commerceを使用する場合、コマンドの構文とプロセスをいくつか変更する必要が生じる場合があります。 詳しくは、次の後方互換性のない変更情報と [Cloud Tools Suite リリースノート ](cloud-tools-suite.md) を参照してください。
+新しいアーキテクチャは、インストールや更新のプロセスには影響を与えません。 ただし、クラウドインフラストラクチャプロジェクトでAdobe Commerceを使用する場合、コマンドの構文とプロセスをいくつか変更する必要が生じる場合があります。 詳しくは、次の後方互換性のない変更情報と [Cloud Tools Suite リリースノート &#x200B;](cloud-tools-suite.md) を参照してください。
 
 ### サービス バージョン要件の変更
 
-`ece-tools` v2002.1.0 以降を使用するクラウドプロジェクトの場合、PHP の最小バージョン要件を 7.0.x から 7.1.x に変更しました。 環境設定で PHP 7.0 を指定している場合は、`.magento.app.yaml` ファイルの [php 設定 ](../application/php-settings.md) を更新します。
+`ece-tools` v2002.1.0 以降を使用するクラウドプロジェクトの場合、PHP の最小バージョン要件を 7.0.x から 7.1.x に変更しました。 環境設定で PHP 7.0 を指定している場合は、`.magento.app.yaml` ファイルの [php 設定 &#x200B;](../application/php-settings.md) を更新します。
 
 >[!WARNING]
 >
->PHP のバージョン要件が変わったので、`ece-tools` 2002.1.0 では、Adobe Commerce 2.1.15 以降を実行しているクラウドインフラストラクチャプロジェクトでのAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合、`ece-tools` 2002.1.0 に更新する前に [ アップグレード ](../development/commerce-version.md) する必要があります。
+>PHP のバージョン要件が変わったので、`ece-tools` 2002.1.0 では、Adobe Commerce 2.1.15 以降を実行しているクラウドインフラストラクチャプロジェクトでのAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合、`ece-tools` 2002.1.0 に更新する前に [&#x200B; アップグレード &#x200B;](../development/commerce-version.md) する必要があります。
 
 ### 環境設定の変更
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 ## クラウドパッチの変更
 
-- **ダウンロードしたパッチを削除**-`magento/magento-cloud-patches` パッケージには、「[ ソフトウェアのダウンロード ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ja)」ページから使用可能なすべてのパッチがバンドルされており、クラウドへのデプロイ時に自動的に適用されます。 ECE-Tools 2002.1.0 以降にアップグレードした後にパッチの競合が発生しないようにするには、ダウンロードしてプロジェクトに追加したAdobe提供のパッチを手動で削除します。
+- **ダウンロードしたパッチを削除**-`magento/magento-cloud-patches` パッケージには、「[&#x200B; ソフトウェアのダウンロード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ja)」ページから使用可能なすべてのパッチがバンドルされており、クラウドへのデプロイ時に自動的に適用されます。 ECE-Tools 2002.1.0 以降にアップグレードした後にパッチの競合が発生しないようにするには、ダウンロードしてプロジェクトに追加したAdobe提供のパッチを手動で削除します。
 
 - **apply patches コマンドの更新** - パッチを適用するためのコマンドを `vendor/bin/ece-tools` ディレクトリから `vendor/bin/ece-patches` ディレクトリに移動しました。 このコマンドを使用してパッチを手動で適用する場合は、新しいパスを使用します。
 

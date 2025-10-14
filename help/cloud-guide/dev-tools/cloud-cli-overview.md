@@ -19,12 +19,12 @@ ht-degree: 0%
 >
 >これはローカルツールで、Unix ベースのオペレーティングシステムでのみサポートされます。 Windows はサポートされていません。 このページで説明している方法を使用して、クラウド環境（読み取り専用）にインストールすることはできません。 クラウド環境にモジュールをインストールするには、次のいずれかの **デプロイメントワークフロー** を使用します。
 >
->- [Pro デプロイメントワークフロー ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [ スターターデプロイメントのワークフロー ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Pro デプロイメントワークフロー &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [&#x200B; スターターデプロイメントのワークフロー &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **`magento-cloud` CLI をインストールするには**:
 
-1. _ローカルワークステーション_ で、クラウドプロジェクトを複製するディレクトリと、[ ファイルシステムの所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) が _書き込み_ アクセス権を持つディレクトリに変更します。
+1. _ローカルワークステーション_ で、クラウドプロジェクトを複製するディレクトリと、[&#x200B; ファイルシステムの所有者 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) が _書き込み_ アクセス権を持つディレクトリに変更します。
 
 1. `magento-cloud` CLI をインストールします。
 
@@ -137,7 +137,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
-1. [ ファイルシステム所有者 ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) に切り替えます。
+1. [&#x200B; ファイルシステム所有者 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja) に切り替えます。
 
 1. プロジェクトにログインします。
 
@@ -185,7 +185,7 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
    git pull origin <environment-ID>
    ```
 
-1. （_オプション_）環境の [ スナップショット ](../storage/snapshots.md) をバックアップとして作成します。
+1. （_オプション_）環境の [&#x200B; スナップショット &#x200B;](../storage/snapshots.md) をバックアップとして作成します。
 
    ```bash
    magento-cloud snapshot:create -e <environment-ID>

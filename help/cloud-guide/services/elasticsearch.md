@@ -15,7 +15,7 @@ ht-degree: 0%
 
 {{elasticsearch-support}}
 
-Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サービスの設定 ](opensearch.md) を参照してください。
+Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サービスの設定 &#x200B;](opensearch.md) を参照してください。
 
 - Elasticsearchが商品カタログ内の商品に対してクイック検索と詳細検索を実行します
 - Elasticsearchアナライザーは複数の言語をサポートしています
@@ -53,7 +53,7 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable Elasticsearch" && git push origin <branch-name>
    ```
 
-   これらの変更が環境に与える影響について詳しくは、[ サービス ](services-yaml.md) を参照してください。
+   これらの変更が環境に与える影響について詳しくは、[&#x200B; サービス &#x200B;](services-yaml.md) を参照してください。
 
 1. デプロイメントプロセスが完了したら、SSH を使用してリモート環境にログインします。
 
@@ -83,7 +83,7 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
 
 - **プロジェクトのアップグレード** – 新しいアプリケーションバージョンのElasticsearch PHP クライアントが、クラウドインフラストラクチャにインストールされたElasticsearchサービスのバージョンと互換性があることを確認します。
 
-クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 [ サービスバージョン ](services-yaml.md#service-versions) を参照してください。
+クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 [&#x200B; サービスバージョン &#x200B;](services-yaml.md#service-versions) を参照してください。
 
 **Elasticsearchソフトウェアの互換性を確認するには**:
 
@@ -201,7 +201,7 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
 
 ## 追加の検索設定
 
-- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [ 変数のデプロイ ](../environment/variables-deploy.md#search_configuration) を参照してください。
+- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [&#x200B; 変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration) を参照してください。
 
 - プロジェクトのElasticsearchサービスを設定した後、管理 UI を使用してElasticsearchElasticsearchをテストし、Adobe Commerceの接続設定をカスタマイズします。
 
@@ -219,7 +219,7 @@ elasticsearch:
             - analysis-phonetic
 ```
 
-Elastic Suite サードパーティプラグインを使用する場合は、[`ece-tools` パッケージをバージョン 2002.0.19 以降に更新 ](../dev-tools/update-package.md) する必要があります。
+Elastic Suite サードパーティプラグインを使用する場合は、[`ece-tools` パッケージをバージョン 2002.0.19 以降に更新 &#x200B;](../dev-tools/update-package.md) する必要があります。
 Elastic Suite を設定する際に、`ELASTICSUITE_CONFIGURATION` のデプロイ変数に設定を追加します。 この設定により、デプロイメント全体で設定が保存されます。
 
 ### Elasticsearch用プラグインを削除
@@ -258,12 +258,12 @@ Elastic Suite を設定する際に、`ELASTICSUITE_CONFIGURATION` のデプロ�
 
 >[!TIP]
 >
->Adobe Commerceでの Elastic Suite プラグインの使用またはトラブルシューティングについて詳しくは、[Elastic Suite のドキュメント ](https://github.com/Smile-SA/elasticsuite) を参照してください。
+>Adobe Commerceでの Elastic Suite プラグインの使用またはトラブルシューティングについて詳しくは、[Elastic Suite のドキュメント &#x200B;](https://github.com/Smile-SA/elasticsuite) を参照してください。
 
 ## トラブルシューティング
 
 Elasticsearchの問題のトラブルシューティングについては、以下のAdobe Commerce サポートの記事を参照してください。
 
-- [Elasticsearch 5 が設定されましたが、「Fielddata が無効です…」エラーで検索ページが読み込まれません ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=ja)
-- [Adobe CommerceのElasticsearchのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
+- [Elasticsearch 5 が設定されましたが、「Fielddata が無効です…」エラーで検索ページが読み込まれません &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=ja)
+- [Adobe CommerceのElasticsearchのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
 - [Elasticsearch インデックスの状態は `yellow` または `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=ja) です

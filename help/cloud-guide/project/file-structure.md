@@ -10,23 +10,23 @@ ht-degree: 0%
 
 # プロジェクト構造
 
-クラウドインフラストラクチャー上のAdobe Commerce プロジェクトには、資格情報とアプリケーション設定に不可欠なファイルが含まれています。 これらのファイルは、Adobe Commerceのバージョンに応じて、テンプレートとしてで使用できます。 [`magento/magento-cloud` GitHub リポジトリ ](https://github.com/magento/magento-cloud) で、Adobe Commerce バージョンに基づくクラウドテンプレートを参照してください。
+クラウドインフラストラクチャー上のAdobe Commerce プロジェクトには、資格情報とアプリケーション設定に不可欠なファイルが含まれています。 これらのファイルは、Adobe Commerceのバージョンに応じて、テンプレートとしてで使用できます。 [`magento/magento-cloud` GitHub リポジトリ &#x200B;](https://github.com/magento/magento-cloud) で、Adobe Commerce バージョンに基づくクラウドテンプレートを参照してください。
 
 次の表では、クラウドプロジェクトに含まれるファイルについて説明します。
 
 | ファイル | 説明 |
 | ------------------------- | ------------ |
-| `/.magento/routes.yaml` | HTTP を提供するために apex ドメインおよび `php` アプリケーションに `www` ーザーをリダイレクトする設定ファイル。 [ ルートの設定 ](../routes/routes-yaml.md) を参照してください。 |
-| `/.magento/services.yaml` | MySQL インスタンス（MariaDB）、Redis、OpenSearch またはElasticsearchを定義する設定ファイルです。 [ サービスの設定 ](../services/services-yaml.md) を参照してください。 |
-| `/app` | `code` フォルダーは、カスタムモジュールに使用されます。 `design` フォルダーは [ カスタムテーマ ](../store/custom-theme.md) に使用されます。 `etc` フォルダーには、アプリケーションの設定ファイルが含まれます。 |
+| `/.magento/routes.yaml` | HTTP を提供するために apex ドメインおよび `php` アプリケーションに `www` ーザーをリダイレクトする設定ファイル。 [&#x200B; ルートの設定 &#x200B;](../routes/routes-yaml.md) を参照してください。 |
+| `/.magento/services.yaml` | MySQL インスタンス（MariaDB）、Redis、OpenSearch またはElasticsearchを定義する設定ファイルです。 [&#x200B; サービスの設定 &#x200B;](../services/services-yaml.md) を参照してください。 |
+| `/app` | `code` フォルダーは、カスタムモジュールに使用されます。 `design` フォルダーは [&#x200B; カスタムテーマ &#x200B;](../store/custom-theme.md) に使用されます。 `etc` フォルダーには、アプリケーションの設定ファイルが含まれます。 |
 | `/m2-hotfixes` | カスタムパッチに使用します。 |
 | `/update` | サポートモジュールが使用するサービスフォルダー。 |
-| `.gitignore` | 無視するファイルとディレクトリを指定します。 [`.gitignore` リファレンス ](#ignoring-files) を参照してください。 |
-| `.magento.app.yaml` | アプリケーションを構築するためのプロパティを定義する設定ファイル。 [ アプリケーションの設定 ](../application/configure-app-yaml.md) を参照してください。 |
-| `.magento.env.yaml` | ビルド、デプロイ、デプロイ後のフェーズ用の設定ファイル。 `ece-tools` パッケージには、このファイルのサンプルが含まれています。 [ 環境の設定 ](../environment/configure-env-yaml.md) を参照してください。 |
-| `composer.json` | Adobe Commerceと設定スクリプトを取得して、アプリケーションを準備します。 [ 必須パッケージ ](../development/overview.md#required-packages) を参照してください。 |
-| `composer.lock` | パッケージごとにバージョンの依存関係を格納します。 [ 必須パッケージ ](../development/overview.md#required-packages) を参照してください。 |
-| `magento-vars.php` | 変数を使用して [ 複数のストア ](../store/multiple-sites.md) およびサイトを定義するために使用します。 |
+| `.gitignore` | 無視するファイルとディレクトリを指定します。 [`.gitignore` リファレンス &#x200B;](#ignoring-files) を参照してください。 |
+| `.magento.app.yaml` | アプリケーションを構築するためのプロパティを定義する設定ファイル。 [&#x200B; アプリケーションの設定 &#x200B;](../application/configure-app-yaml.md) を参照してください。 |
+| `.magento.env.yaml` | ビルド、デプロイ、デプロイ後のフェーズ用の設定ファイル。 `ece-tools` パッケージには、このファイルのサンプルが含まれています。 [&#x200B; 環境の設定 &#x200B;](../environment/configure-env-yaml.md) を参照してください。 |
+| `composer.json` | Adobe Commerceと設定スクリプトを取得して、アプリケーションを準備します。 [&#x200B; 必須パッケージ &#x200B;](../development/overview.md#required-packages) を参照してください。 |
+| `composer.lock` | パッケージごとにバージョンの依存関係を格納します。 [&#x200B; 必須パッケージ &#x200B;](../development/overview.md#required-packages) を参照してください。 |
+| `magento-vars.php` | 変数を使用して [&#x200B; 複数のストア &#x200B;](../store/multiple-sites.md) およびサイトを定義するために使用します。 |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ## ファイルを無視
 
-Adobe Commerce on cloud infrastructure プロジェクトリポジトリを持つベース `.gitignore` ファイルがあります。 magento-cloud リポジトリの最新の [.gitignore ファイルを参照してください ](https://github.com/magento/magento-cloud/blob/master/.gitignore) `.gitignore` リストに含まれるファイルを追加するには、コミットをステージングするときに `-f` （force） オプションを使用します。
+Adobe Commerce on cloud infrastructure プロジェクトリポジトリを持つベース `.gitignore` ファイルがあります。 magento-cloud リポジトリの最新の [.gitignore ファイルを参照してください &#x200B;](https://github.com/magento/magento-cloud/blob/master/.gitignore) `.gitignore` リストに含まれるファイルを追加するには、コミットをステージングするときに `-f` （force） オプションを使用します。
 
 ```bash
 git add <path/filename> -f

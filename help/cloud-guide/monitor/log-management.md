@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # New Relic ログ管理
 
-すべてのクラウドインフラストラクチャプロジェクトには、[New Relic ログ管理 ](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) が含まれます。 このサービスは、ステージング環境と実稼動環境のすべてのログデータを集計して、一元化されたログ管理ダッシュボードに表示するように事前に設定されています。
+すべてのクラウドインフラストラクチャプロジェクトには、[New Relic ログ管理 &#x200B;](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) が含まれます。 このサービスは、ステージング環境と実稼動環境のすべてのログデータを集計して、一元化されたログ管理ダッシュボードに表示するように事前に設定されています。
 
 集計データには、次のログの情報が含まれます。
 
@@ -32,7 +32,7 @@ New Relic ログアプリケーションを使用して、集計ログデータ�
 
 **New Relic ログアプリケーションを使用するには**:
 
-1. [New Relic アカウント ](https://login.newrelic.com/login) にログインします。
+1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login) にログインします。
 
 1. エクスプローラーナビゲーションメニューから **ログ** を選択します。
 
@@ -44,16 +44,16 @@ New Relic ログアプリケーションを使用して、集計ログデータ�
 
    ログファイルの名前は、ログファイルのフルパスと共に「`filePath`」列に格納されます。
 
-   ![Cloud Project New Relic サービスのログデータ ](../../assets/new-relic/var-log-query.png)
+   ![Cloud Project New Relic サービスのログデータ &#x200B;](../../assets/new-relic/var-log-query.png)
 
 1. Fastly ログデータをレビューするには、_ログを検索_ フィールドにクエリ文字列 `has: "client_ip"` を入力します。 次に、「**[!UICONTROL Query logs]**」をクリックします。
 
 1. 国コードで Fastly ログ結果をフィルタリングするには、「**[!UICONTROL Add column]**」をクリックし、「**[!UICONTROL geo_country_code]**」を選択します。
 
-   ![Cloud Project New Relic CDN ログ属性フィルター ](../../assets/new-relic/fastly-countrycode-filter.png)
+   ![Cloud Project New Relic CDN ログ属性フィルター &#x200B;](../../assets/new-relic/fastly-countrycode-filter.png)
 
 >[!TIP]
 >
 >_保存済みのビュー_ ドロップダウンからクエリビューを保存できます。 「**[!UICONTROL Create new]**」をクリックし、名前を入力してオプションを選択し、「**[!UICONTROL Save view]**」をクリックします。
 >
->[4&rbrace;New Relic ドキュメント ](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) サイトの [ ログ管理の基本を学ぶ ](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/) および &lbrace;New Relic query language の概要 _を参照してください。_
+>[4&rbrace;New Relic ドキュメント &#x200B;](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) サイトの [&#x200B; ログ管理の基本を学ぶ &#x200B;](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/) および &lbrace;New Relic query language の概要 _を参照してください。_

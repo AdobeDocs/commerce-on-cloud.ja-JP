@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # デプロイ後変数
 
-次の _デプロイ後_ 変数は、デプロイ後のフェーズでのアクションを制御し、[ グローバル変数 ](variables-global.md) の値を継承および上書きできます。 `.magento.env.yaml` ファイルの `post-deploy` のステージに、次の変数を挿入します。
+次の _デプロイ後_ 変数は、デプロイ後のフェーズでのアクションを制御し、[&#x200B; グローバル変数 &#x200B;](variables-global.md) の値を継承および上書きできます。 `.magento.env.yaml` ファイルの `post-deploy` のステージに、次の変数を挿入します。
 
 ```yaml
 stage:
@@ -69,7 +69,7 @@ stage:
 - **デフォルト**— `index.php`
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-`post_deploy` ステージでキャッシュのプリロードに使用するページのリストをカスタマイズします。 デプロイ後フックを設定する必要があります。 `.magento.app.yaml` ファイルの [hooks セクション ](../application/hooks-property.md) を参照してください。
+`post_deploy` ステージでキャッシュのプリロードに使用するページのリストをカスタマイズします。 デプロイ後フックを設定する必要があります。 `.magento.app.yaml` ファイルの [hooks セクション &#x200B;](../application/hooks-property.md) を参照してください。
 
 - **単一ページ** - キャッシュに追加する単一ページを指定します。 デフォルトのベース URL を指定する必要はありません。 次の例では、`BASE_URL/index.php` ページをキャッシュします。
 

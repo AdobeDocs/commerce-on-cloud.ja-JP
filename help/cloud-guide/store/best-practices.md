@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # ストア設定のベストプラクティス
 
-ストア、サイト、web サイトの設定について詳しくは、[Adobe Commerce ユーザーガイド ](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=ja) を参照してください。 このページでは、時間の経過とバージョン間で投稿する追加コンテンツを使用して、ストア、サイトなどを設定するためのベストプラクティス、役立つ情報、ガイドラインを提供します。
+ストア、サイト、web サイトの設定について詳しくは、[Adobe Commerce ユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=ja) を参照してください。 このページでは、時間の経過とバージョン間で投稿する追加コンテンツを使用して、ストア、サイトなどを設定するためのベストプラクティス、役立つ情報、ガイドラインを提供します。
 
 ## マーケティングキャンペーンとプロモーション
 
 この情報は、クラウドインフラストラクチャー 2.1.X および 2.2.X 上のAdobe Commerceで役立ちます。
 
-キャンペーンとプロモーションを作成するには、[ コンテンツのステージング ](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=ja) でオプションと設定を作成します。 この機能を使用すると、キャンペーンを作成およびプレビューしてから、カスタマーセールス向けに公開できます。 次の情報は役に立つ情報を提供します。 正確な手順については、『 Adobe Commerce ユーザーガイド 』のリンク先を参照してください。
+キャンペーンとプロモーションを作成するには、[&#x200B; コンテンツのステージング &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=ja) でオプションと設定を作成します。 この機能を使用すると、キャンペーンを作成およびプレビューしてから、カスタマーセールス向けに公開できます。 次の情報は役に立つ情報を提供します。 正確な手順については、『 Adobe Commerce ユーザーガイド 』のリンク先を参照してください。
 
 _キャンペーン_ は、季節的な販売や新しい製品ラインなどのためのマーケティングイベントです。 各キャンペーンには、カスタムテーマ、コンテンツのブロック、コンテンツを制御および表示するウィジェット、価格ルールに関連付けられたプロモーションを含めることができます。 キャンペーンは広範な性質を持つので、コンテンツのステージングを通じて開始日と終了日を指定してキャンペーンを作成します。
 
-_プロモーション_ 割引、1 回限りのオファー、クーポン、初回購入者インセンティブなどを提供します。 これらのプロモーションを、顧客の購入を促す条件、割引、オプションを設定する _価格ルール_ として作成します。 バナーや報酬ポイントなどの追加オプションを使用して、[ 買い物かご ](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=ja) または [ カタログ ](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=ja) の価格ルールを作成できます。 新しい商品ラインや季節販売などの主要なイベントに価格ルールを適用して、プロモーションのキャンペーンをスケジュールできます。
+_プロモーション_ 割引、1 回限りのオファー、クーポン、初回購入者インセンティブなどを提供します。 これらのプロモーションを、顧客の購入を促す条件、割引、オプションを設定する _価格ルール_ として作成します。 バナーや報酬ポイントなどの追加オプションを使用して、[&#x200B; 買い物かご &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=ja) または [&#x200B; カタログ &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=ja) の価格ルールを作成できます。 新しい商品ラインや季節販売などの主要なイベントに価格ルールを適用して、プロモーションのキャンペーンをスケジュールできます。
 
 プロモーションとキャンペーンの作成、更新、管理に役立つヒントを以下に示します。
 
@@ -34,7 +34,7 @@ _プロモーション_ 割引、1 回限りのオファー、クーポン、初
 
 この情報は、クラウドインフラストラクチャー 2.1.X および 2.2.X 上のAdobe Commerceで役立ちます。
 
-通常、製品の [ 詳細価格 ](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=ja) は、管理者の **製品**/**カタログ** エリアを通じて設定できます。 ステージング済みコンテンツを使用する場合は、さらに手順を実行してプロモーションとキャンペーンに価格を追加します。
+通常、製品の [&#x200B; 詳細価格 &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=ja) は、管理者の **製品**/**カタログ** エリアを通じて設定できます。 ステージング済みコンテンツを使用する場合は、さらに手順を実行してプロモーションとキャンペーンに価格を追加します。
 
 拡張価格設定を編集し、コンテンツのステージングを更新する手順は、次のとおりです。
 
@@ -47,17 +47,17 @@ _プロモーション_ 割引、1 回限りのオファー、クーポン、初
 1. プロモーションを保存します。 非アクティブな初期キャンペーンが作成されます。
 1. プレビューして、キャンペーンの特別価格、プロモーション名、通常価格およびスケジュールされた日付範囲を確認できます。
 
-その他の手順については、「[ カタログ価格ルールの変更をスケジュール ](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=ja)」の指示に進んでください。 「**次へ**」をクリックして、手順を実行します。
+その他の手順については、「[&#x200B; カタログ価格ルールの変更をスケジュール &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=ja)」の指示に進んでください。 「**次へ**」をクリックして、手順を実行します。
 
 ## 価格ルール
 
 価格ルールには、マーケティングの想像力と同様に、制限のないロジックと条件を含めることができます。 人気のある例としては、Buy One Get One Free、Buy One Get One 50%Off、注文に対する 25 ドルの 100 ドル以上の割引などがあります。
 
-価格ルールを作成するには、[Adobe Commerce ユーザーガイド ](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=ja) を参照してください。
+価格ルールを作成するには、[Adobe Commerce ユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=ja) を参照してください。
 
 次に、最初の注文のみの割引に対する価格ルールを作成する例を示します。 この割引の場合、次の操作を行います。
 
-* [ 顧客セグメント ](https://experienceleague.adobe.com/ja/docs/commerce-admin/customers/segments/customer-segment-price-rule) を条件として価格ルールを作成します：合計注文数が 1 未満
+* [&#x200B; 顧客セグメント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/customers/segments/customer-segment-price-rule) を条件として価格ルールを作成します：合計注文数が 1 未満
 * この顧客セグメントを条件として買い物かごルールに追加
 * オプション – 条件とルールを追加して、特定の SKU や製品のカテゴリにフォーカスされた購入の割引を適用します
 
@@ -65,7 +65,7 @@ _プロモーション_ 割引、1 回限りのオファー、クーポン、初
 
 ## ビューを保存
 
-クラウドインフラストラクチャー上にAdobe Commerceを 1 つ実装するだけで、複数のストアを設定して実行できます。 [ 複数の web サイトまたはストアの設定 ](multiple-sites.md) を参照してください。
+クラウドインフラストラクチャー上にAdobe Commerceを 1 つ実装するだけで、複数のストアを設定して実行できます。 [&#x200B; 複数の web サイトまたはストアの設定 &#x200B;](multiple-sites.md) を参照してください。
 
 相互にやり取りしないストアの場合は、複数の _web サイト_ を作成できます。 各 web サイトには、Adobe Commerce内の他の web サイトとは共有されない特定の記事、お客様のデータ、チェックアウトおよび買い物かごがあります。
 
@@ -77,15 +77,15 @@ _プロモーション_ 割引、1 回限りのオファー、クーポン、初
 
 * 英語およびスペイン語ロケール用の 1 つのストアと 2 つのビューを備えた単一の web サイト。 すべての記事データ、顧客、チェックアウト、買い物かごが共有されます。
 
-  ![ ストアの例 1](../../assets/example-store1.png)
+  ![&#x200B; ストアの例 1](../../assets/example-store1.png)
 
 * 女性用衣料品店を含む単一のウェブサイトには、英語とスペイン語の 2 つのビューがあります。 子供服の店は英語のシングルストアビューを含んでいます。 すべての記事データ、顧客、チェックアウト、買い物かごが共有されます。 ストアには、異なるドメインとテーマが含まれる場合があります。
 
-  ![ ストアの例 2](../../assets/example-store2.png)
+  ![&#x200B; ストアの例 2](../../assets/example-store2.png)
 
 * 衣料品用と、異なるカタログと別々の記事、顧客データ、買い物かごを備えた家庭装飾用の 2 つの web サイト。 各 web サイトには、その web サイト内でのみ記事、顧客データ、チェックアウト、買い物かごを共有する複数のストアとビューを含めることができます。
 
-  ![ ストアの例 3](../../assets/example-store3.png)
+  ![&#x200B; ストアの例 3](../../assets/example-store3.png)
 
 >[!WARNING]
 >

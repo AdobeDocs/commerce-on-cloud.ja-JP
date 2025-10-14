@@ -42,7 +42,7 @@ Adobe Commerceの各バージョンには、次に基づいて異なる制約が
 
 Adobe Commerce `2.3.5-p2` をインストールする場合は、`current_version` を `2.3.5` に、`next_version` を `2.3.6` に設定します。 制約 `">=2.3.5 <2.3.6"` は、2.3.5 で利用可能な最新のパッケージをインストールします。
 
-最新のメタパッケージ制約は、[`magento-cloud` のテンプレートで常に見つけることができ ](https://github.com/magento/magento-cloud/blob/master/composer.json) す。
+最新のメタパッケージ制約は、[`magento-cloud` のテンプレートで常に見つけることができ &#x200B;](https://github.com/magento/magento-cloud/blob/master/composer.json) す。
 
 次の例では、クラウドインフラストラクチャメタパッケージ上のAdobe Commerceを、現在のバージョン 2.4.8 以上、次のバージョン 2.4.9 以下の任意のバージョンに制限します。
 
@@ -87,7 +87,7 @@ Adobe Commerce `2.3.5-p2` をインストールする場合は、`current_versio
            php ./vendor/bin/ece-tools run scenario/post-deploy.xml
    ```
 
-1. [ 非推奨パッケージ ](#remove-deprecated-packages) を確認して削除します。 非推奨パッケージを使用すると、アップグレードが正常に行われなくなる可能性があります。
+1. [&#x200B; 非推奨パッケージ &#x200B;](#remove-deprecated-packages) を確認して削除します。 非推奨パッケージを使用すると、アップグレードが正常に行われなくなる可能性があります。
 
    ```bash
    composer remove magento/magento-cloud-configuration

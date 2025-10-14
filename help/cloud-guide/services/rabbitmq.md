@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # サービス [!DNL RabbitMQ] 設定
 
-[Message Queue Framework （MQF） ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja) は、[ モジュール ](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja) は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
 
 MQF は、メッセージの送受信に使用できるスケーラブルなプラットフォームを提供するメッセージング ブローカーとして [&#128279;](https://www.rabbitmq.com/)0&rbrace;RabbitMQ&rbrace; を使用します。 また、未配信メッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ] は、Advanced Message Queuing Protocol （AMQP） 0.9.1 仕様に基づいています。
 
@@ -52,7 +52,7 @@ MQF は、メッセージの送受信に使用できるスケーラブルなプ�
    git push origin <branch-name>
    ```
 
-1. [ サービスの関係を確認します ](services-yaml.md#service-relationships)。
+1. [&#x200B; サービスの関係を確認します &#x200B;](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 

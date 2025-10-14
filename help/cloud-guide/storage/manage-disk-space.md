@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # ディスク容量の管理
 
-クラウドプロジェクトの合計ストレージ容量は、Adobe Commerceのクラウドインフラストラクチャー利用契約および [ アカウントページ ](https://accounts.magento.cloud/user) で確認できます。 アカウントの各プロジェクトカードには、_環境_ 数、_ストレージ_ 容量（GB）、および _ユーザー_ 数が表示されます。 または、次のクラウドコマンドを使用することもできます。
+クラウドプロジェクトの合計ストレージ容量は、Adobe Commerceのクラウドインフラストラクチャー利用契約および [&#x200B; アカウントページ &#x200B;](https://accounts.magento.cloud/user) で確認できます。 アカウントの各プロジェクトカードには、_環境_ 数、_ストレージ_ 容量（GB）、および _ユーザー_ 数が表示されます。 または、次のクラウドコマンドを使用することもできます。
 
 ```bash
 magento-cloud subscription:info | grep storage
@@ -128,16 +128,16 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク領域の割り当て
 
-2 つの [ 設定ファイル ](../environment/overview.md) は、クラウド環境のディスク領域の割り当てを制御します。`.magento.app.yaml` ファイルと `.magento/services.yaml` ファイルです。 各ファイルには、`disk` プロパティが含まれます。このプロパティは、各設定のディスクサイズ値を MB 単位で定義します。 ディスク容量の割り当てを変更できるのは、Pro 統合およびスターター環境のみです。
+2 つの [&#x200B; 設定ファイル &#x200B;](../environment/overview.md) は、クラウド環境のディスク領域の割り当てを制御します。`.magento.app.yaml` ファイルと `.magento/services.yaml` ファイルです。 各ファイルには、`disk` プロパティが含まれます。このプロパティは、各設定のディスクサイズ値を MB 単位で定義します。 ディスク容量の割り当てを変更できるのは、Pro 統合およびスターター環境のみです。
 
 >[!IMPORTANT]
 >
->- プロ実稼動環境およびステージング環境の場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズは特定の間隔でのみ増加するので、現在のディスク容量の使用状況に応じて、サポートはディスク容量の割り当てを最小 10 GB 増やすことをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配分することはできません。 ファイルストレージ領域を追加するには、MySQL に割り当てるディスク領域を減らします。
->- AWSでホストされるプロの実稼動環境およびステージング環境には、ディスク容量の増加に適用される [ 必須の 6 時間のクールダウン ](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html) があります。 マウント上のディスク容量を増やした後は、そのマウント上のディスク容量を再び増やすことができるようになるまで 6 時間待つ必要があります。
+>- プロ実稼動環境およびステージング環境の場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズは特定の間隔でのみ増加するので、現在のディスク容量の使用状況に応じて、サポートはディスク容量の割り当てを最小 10 GB 増やすことをお勧めします。 一度割り当てると、ステージングおよび実稼働用のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配分することはできません。 ファイルストレージ領域を追加するには、MySQL に割り当てるディスク領域を減らします。
+>- AWSでホストされるプロの実稼動環境およびステージング環境には、ディスク容量の増加に適用される [&#x200B; 必須の 6 時間のクールダウン &#x200B;](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html) があります。 マウント上のディスク容量を増やした後は、そのマウント上のディスク容量を再び増やすことができるようになるまで 6 時間待つ必要があります。
 
 ### アプリケーションのディスク容量
 
-`.magento.app.yaml` ファイルは、アプリケーションで使用可能な [ 永続的なディスク領域 ](../application/properties.md#disk) を制御します。
+`.magento.app.yaml` ファイルは、アプリケーションで使用可能な [&#x200B; 永続的なディスク領域 &#x200B;](../application/properties.md#disk) を制御します。
 
 **アプリケーションのディスク容量を増やすには**:
 
@@ -167,7 +167,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 1. ローカル開発環境で、`.magento/services.yaml` 設定ファイルを開きます。
 
-1. ファイルでサービスを追加または検索します。 [ サービスの設定の詳細 ](../services/services-yaml.md) を参照してください。
+1. ファイルでサービスを追加または検索します。 [&#x200B; サービスの設定の詳細 &#x200B;](../services/services-yaml.md) を参照してください。
 
 1. ディスクプロパティの新しい値（MB 単位）を設定します。
 
@@ -189,7 +189,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク容量の監視
 
-Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスクスペースやその他のパフォーマンスインジケーターを監視できます。 詳しくは、[ 管理アラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。 詳しいガイダンスについては、[ データベースパフォーマンスの問題を解決するためのベストプラクティス ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ja) を参照してください。
+Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスクスペースやその他のパフォーマンスインジケーターを監視できます。 詳しくは、[&#x200B; 管理アラートによるパフォーマンスの監視 &#x200B;](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。 詳しいガイダンスについては、[&#x200B; データベースパフォーマンスの問題を解決するためのベストプラクティス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ja) を参照してください。
 
 ## スペースが残っていません
 

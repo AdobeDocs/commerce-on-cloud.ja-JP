@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [Redis](https://redis.io) は、Adobe Commerceがデフォルトで使用する Zend フレームワークの Zend_Cache_Backend_File に代わる、オプションのバックエンドキャッシュソリューションです。
 
-[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html?lang=ja) の _Redis の設定_ を参照してください。
+[&#x200B; 設定ガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/config-redis.html?lang=ja) の _Redis の設定_ を参照してください。
 
 {{service-instruction}}
 
@@ -50,7 +50,7 @@ ht-degree: 0%
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable redis service" && git push origin <branch-name>
    ```
 
-1. [ サービスの関係を確認します ](services-yaml.md#service-relationships)。
+1. [&#x200B; サービスの関係を確認します &#x200B;](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 
@@ -128,7 +128,7 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 
 Redis の問題のトラブルシューティングについては、次のAdobe Commerce サポート記事を参照してください。
 
-- [Redis 問題により、管理者ログインまたはチェックアウトが遅れる ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html?lang=ja)
-- [ 拡張 Redis キャッシュ実装Adobe Commerce 2.3.5 以降 ](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=ja)
-- [Managed alerts on Adobe Commerce:Redis memory warning アラート ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=ja)
-- [Adobe Commerceの管理アラート：Redis メモリクリティカルアラート ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=ja)
+- [Redis 問題により、管理者ログインまたはチェックアウトが遅れる &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html?lang=ja)
+- [&#x200B; 拡張 Redis キャッシュ実装Adobe Commerce 2.3.5 以降 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=ja)
+- [Managed alerts on Adobe Commerce:Redis memory warning アラート &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=ja)
+- [Adobe Commerceの管理アラート：Redis メモリクリティカルアラート &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=ja)

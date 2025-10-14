@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # ECE-Tools パッケージの更新
 
-`ece-tools` パッケージのアップデートは、`ece-tools` の依存関係である他の [Cloud Tools Suite for Commerce パッケージ ](../release-notes/cloud-tools-suite.md) もアップデートします。 そのため、`ece-tools` パッケージをサポートするバージョンのAdobe Commerce on cloud infrastructure を使用する必要があります。
+`ece-tools` パッケージのアップデートは、`ece-tools` の依存関係である他の [Cloud Tools Suite for Commerce パッケージ &#x200B;](../release-notes/cloud-tools-suite.md) もアップデートします。 そのため、`ece-tools` パッケージをサポートするバージョンのAdobe Commerce on cloud infrastructure を使用する必要があります。
 
 {{ece-tools-package}}
 
 **前提条件**:
 
-- `ece-tools` を更新する前に、[Commerce Cloud Tools Suite リリースノート ](../release-notes/cloud-tools-suite.md) を確認してください。
-- `ece-tools` 2002.0.22 以前から 2002.1.0 にアップデートする場合は、[ 後方互換性のない変更点 ](../release-notes/backward-incompatible-changes.md) を確認し、クラウドインフラストラクチャプロジェクトのAdobe Commerceに必要な変更を加えます。
-- [ アップグレードとパッチ ](../development/commerce-version.md#upgrade-from-older-versions) を確認して、クラウドインフラストラクチャプロジェクト上のAdobe Commerceと互換性のある ECE-Tools のバージョンを判断します。
+- `ece-tools` を更新する前に、[Commerce Cloud Tools Suite リリースノート &#x200B;](../release-notes/cloud-tools-suite.md) を確認してください。
+- `ece-tools` 2002.0.22 以前から 2002.1.0 にアップデートする場合は、[&#x200B; 後方互換性のない変更点 &#x200B;](../release-notes/backward-incompatible-changes.md) を確認し、クラウドインフラストラクチャプロジェクトのAdobe Commerceに必要な変更を加えます。
+- [&#x200B; アップグレードとパッチ &#x200B;](../development/commerce-version.md#upgrade-from-older-versions) を確認して、クラウドインフラストラクチャプロジェクト上のAdobe Commerceと互換性のある ECE-Tools のバージョンを判断します。
 
 {{upgrade-tip}}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >バージョン 2002.0.8 以降 `ece-tools` 更新できない場合は、[ECE-Tools パッケージを使用するようにプロジェクトをアップグレードする ](install-package.md) を参照してください。
+   >バージョン 2002.0.8 以降 `ece-tools` 更新できない場合は、[ECE-Tools パッケージを使用するようにプロジェクトをアップグレードする &#x200B;](install-package.md) を参照してください。
 
 1. コードの変更を追加、コミットおよびプッシュします。
 

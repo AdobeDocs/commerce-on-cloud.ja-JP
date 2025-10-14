@@ -38,7 +38,7 @@ GitHub 開発者設定で、従来の個人用アクセストークンを作成�
 - `repo` - リポジトリとの統合
 - `read:org` – 組織リポジトリとの統合
 
-詳しくは、「[GitHub：作成 ](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)」を参照してください。
+詳しくは、「[GitHub：作成 &#x200B;](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)」を参照してください。
 
 ## リポジトリを準備
 
@@ -68,7 +68,7 @@ GitHub 開発者設定で、従来の個人用アクセストークンを作成�
    git remote add origin git@github.com:<user-name>/<repo-name>.git
    ```
 
-   リモート接続の既定の名前は `origin` または `magento` です。 `origin` が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント ](https://git-scm.com/docs/git-remote) を参照してください。
+   リモート接続の既定の名前は `origin` または `magento` です。 `origin` が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント &#x200B;](https://git-scm.com/docs/git-remote) を参照してください。
 
 1. GitHub リモートが正しく追加されていることを確認します。
 

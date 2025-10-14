@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ワーカーは、Pro ステージング環境および実稼動環境でのみ使用できます。 Pro 統合およびスターター環境は、[CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner) 変数の使用を選択できます。
 
-ステージング環境または実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、次の情報を含めます。
+ステージング環境または実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、次の情報を含めます。
 
 - プロジェクト ID
 - 環境 ID
@@ -48,7 +48,7 @@ workers:
 
 `size`、`relationships`、`access`、`disk`、`mount` および `variables` プロパティの定義は、明示的に上書きされない限り、ワーカーに継承されます。
 
-次のプロパティは、[ トップレベルの設定 ](properties.md) をオーバーライドする場合に最も一般的に使用されます。
+次のプロパティは、[&#x200B; トップレベルの設定 &#x200B;](properties.md) をオーバーライドする場合に最も一般的に使用されます。
 
 - `size`：単一のバックグラウンド・プロセスに割り当てるリソースを減らす
 - `variables` - アプリケーションに別の方法で実行するよう指示します

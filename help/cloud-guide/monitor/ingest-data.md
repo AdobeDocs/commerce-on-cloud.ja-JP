@@ -20,7 +20,7 @@ New Relicには、計画の使用状況をデータソース別にまとめた _
 1. New Relicのユーザーメニューで、「**[!UICONTROL Manage your data]**」をクリックします。
 1. _管理_ リストの「**[!UICONTROL Data management]**」をクリックします。
 
-   ![ データ管理 ](../../assets/new-relic/data-ingestion.png)
+   ![&#x200B; データ管理 &#x200B;](../../assets/new-relic/data-ingestion.png)
 
    「**[!UICONTROL Data ingestion]**」タブには、その日に取り込まれたデータと、そのデータのソースが表示されます。
 データ保持タブには、データが保存される期間を表示および制御します。
@@ -33,4 +33,4 @@ Adobe Commerceのデータソースには、次のものが含まれます。
 - **インフラストラクチャ**：プロセスおよびホストのメトリック（CPU、ストレージ、ネットワークなど）
 - **ログ** - CDN、APM およびアプリケーションサーバーのログ
 
-ログデータは、取り込みの大部分に貢献します。 [ ログデータの表示と分析 ](log-management.md#view-and-analyze-log-data) 方法を参照し、Adobeの担当者と協力して、データの取り込みと保持のニーズに対する戦略を立てる。 [ データ取り込みの管理 ](https://docs.newrelic.com/docs/data-apis/manage-data/manage-data-coming-new-relic/) について詳しくは、_New Relic ドキュメント_ を参照してください。
+ログデータは、取り込みの大部分に貢献します。 [&#x200B; ログデータの表示と分析 &#x200B;](log-management.md#view-and-analyze-log-data) 方法を参照し、Adobeの担当者と協力して、データの取り込みと保持のニーズに対する戦略を立てる。 [&#x200B; データ取り込みの管理 &#x200B;](https://docs.newrelic.com/docs/data-apis/manage-data/manage-data-coming-new-relic/) について詳しくは、_New Relic ドキュメント_ を参照してください。

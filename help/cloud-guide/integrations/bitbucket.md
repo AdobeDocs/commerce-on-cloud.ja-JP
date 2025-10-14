@@ -51,7 +51,7 @@ ht-degree: 0%
    git remote add origin git@bitbucket.org:<user-name>/<repo-name>.git
    ```
 
-   リモート接続の既定の名前は `origin` または `magento` です。 `origin` が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント ](https://git-scm.com/docs/git-remote) を参照してください。
+   リモート接続の既定の名前は `origin` または `magento` です。 `origin` が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント &#x200B;](https://git-scm.com/docs/git-remote) を参照してください。
 
 1. Bitbucket リモートを正しく追加したことを確認します。
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ## OAuth コンシューマーの作成
 
-Bitbucket 統合には [OAuth コンシューマー ](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/) が必要です。 次の節を完了するには、このコンシューマーからの OAuth `key` と `secret` が必要です。
+Bitbucket 統合には [OAuth コンシューマー &#x200B;](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/) が必要です。 次の節を完了するには、このコンシューマーからの OAuth `key` と `secret` が必要です。
 
 **Bitbucket で OAuth コンシューマーを作成するには**:
 
@@ -88,7 +88,7 @@ Bitbucket 統合には [OAuth コンシューマー ](https://support.atlassian.
 
 1. 「**消費者を追加**」をクリックして、次のように設定します。
 
-   ![Bitbucket OAuth コンシューマー設定 ](../../assets/oauth-consumer-config.png)
+   ![Bitbucket OAuth コンシューマー設定 &#x200B;](../../assets/oauth-consumer-config.png)
 
    >[!WARNING]
    >
@@ -169,7 +169,7 @@ Bitbucket 統合には [OAuth コンシューマー ](https://support.atlassian.
 
 1. 続行する前に Webhook を確認します。
 
-   フックがアクティブな場合は、残りの手順をスキップして [ 統合をテスト ](#test-the-integration) します。 フックの名前は「**cloud infrastructure 上のAdobe Commerce &lt;project_id>」のようになり** フック URL フォーマットは `https://<zone>.magento.cloud/api/projects/<project_id>/integrations/<id>/hook` のようになります。
+   フックがアクティブな場合は、残りの手順をスキップして [&#x200B; 統合をテスト &#x200B;](#test-the-integration) します。 フックの名前は「**cloud infrastructure 上のAdobe Commerce &lt;project_id>」のようになり** フック URL フォーマットは `https://<zone>.magento.cloud/api/projects/<project_id>/integrations/<id>/hook` のようになります。
 
 1. **Webhook を追加** をクリックします。
 
@@ -205,7 +205,7 @@ magento-cloud integration:validate
 
 1. [[!DNL Cloud Console]](../project/overview.md) にログインし、コミットメッセージが表示され、プロジェクトがデプロイされていることを確認します。
 
-   ![Bitbucket 統合のテスト ](../../assets/bitbucket-integration.png)
+   ![Bitbucket 統合のテスト &#x200B;](../../assets/bitbucket-integration.png)
 
 ## クラウドブランチの作成
 
@@ -272,7 +272,7 @@ Bitbucket 統合では、クラウドインフラストラクチャプロジェ�
 
 Bitbucket サーバー統合を使用するには、以下が必要です。
 
-- [Bitbucket アクセストークン ](https://confluence.atlassian.com/bitbucketserver/http-access-tokens-939515499.html) - Project `read` へのアクセスと Repository `admin` へのアクセスを許可するトークンを生成します。
+- [Bitbucket アクセストークン &#x200B;](https://confluence.atlassian.com/bitbucketserver/http-access-tokens-939515499.html) - Project `read` へのアクセスと Repository `admin` へのアクセスを許可するトークンを生成します。
 - [Bitbucket サーバー URL](https://confluence.atlassian.com/bitbucketserver/specify-the-bitbucket-base-url-776640392.html) - Bitbucket インスタンスのベース URL を追加します
 
 Cloud CLI を使用して Bitbucket サーバーの統合手順を実行することもできますが、完全なコマンドは次のようになります。

@@ -14,11 +14,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->ローカルデバッグ用に [!DNL Xdebug] を Cloud Docker 環境で実行するように設定できます。その際、クラウドインフラストラクチャプロジェクト設定のAdobe Commerceを変更する必要はありません。 [Docker の Xdebug の設定 ](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/) を参照してください。
+>ローカルデバッグ用に [!DNL Xdebug] を Cloud Docker 環境で実行するように設定できます。その際、クラウドインフラストラクチャプロジェクト設定のAdobe Commerceを変更する必要はありません。 [Docker の Xdebug の設定 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/) を参照してください。
 
 [!DNL Xdebug] を有効にするには、Git リポジトリにファイルを設定し、IDE を設定し、ポート転送を設定する必要があります。 一部の設定は `magento.app.yaml` ファイルで指定できます。 編集後、すべてのスターター環境と Pro 統合環境にわたって Git の変更をプッシュして、[!DNL Xdebug] を有効にします。 [!DNL Xdebug] は、既にステージング環境および実稼動環境で使用できます。
 
-設定が完了すると、CLI コマンド、Web リクエストおよびコードをデバッグできるようになります。 すべてのクラウドインフラストラクチャ環境は読み取り専用であることに注意してください。 デバッグを実行するために、ローカル開発環境にコードを複製します。 ステージング環境および実稼動環境については、[!DNL Xdebug] しくは [ 追加手順 ](#debug-for-pro-staging-and-production) を参照してください。
+設定が完了すると、CLI コマンド、Web リクエストおよびコードをデバッグできるようになります。 すべてのクラウドインフラストラクチャ環境は読み取り専用であることに注意してください。 デバッグを実行するために、ローカル開発環境にコードを複製します。 ステージング環境および実稼動環境については、[!DNL Xdebug] しくは [&#x200B; 追加手順 &#x200B;](#debug-for-pro-staging-and-production) を参照してください。
 
 ## 要件
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 ### ブランチの基本を学ぶ
 
-さらに [!DNL Xdebug] しくは、Adobeでは [ 開発ブランチ ](../dev-tools/cloud-cli-overview.md#create-an-environment-branch) で作業することをお勧めします。
+さらに [!DNL Xdebug] しくは、Adobeでは [&#x200B; 開発ブランチ &#x200B;](../dev-tools/cloud-cli-overview.md#create-an-environment-branch) で作業することをお勧めします。
 
 ### お使いの環境で Xdebug を有効にする
 
-[!DNL Xdebug] を有効にすると、すべてのスターター環境と Pro 統合環境に直接適用できます。 この設定手順は、実稼動環境とステージング環境には必要ありません。 [ ステージング環境および実稼動環境でのデバッグ ](#debug-for-pro-staging-and-production) を参照してください。
+[!DNL Xdebug] を有効にすると、すべてのスターター環境と Pro 統合環境に直接適用できます。 この設定手順は、実稼動環境とステージング環境には必要ありません。 [&#x200B; ステージング環境および実稼動環境でのデバッグ &#x200B;](#debug-for-pro-staging-and-production) を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
 
@@ -77,7 +77,7 @@ ht-degree: 0%
    git push origin <environment-ID>
    ```
 
-スターター環境と Pro 統合環境にデプロイすると、[!DNL Xdebug] が使用できるようになりました。 IDE の設定を続行します。 PhpStorm については、[PhpStorm の設定 ](#configure-phpstorm) を参照してください。
+スターター環境と Pro 統合環境にデプロイすると、[!DNL Xdebug] が使用できるようになりました。 IDE の設定を続行します。 PhpStorm については、[PhpStorm の設定 &#x200B;](#configure-phpstorm) を参照してください。
 
 ### PhpStorm サーバーの設定
 
@@ -96,9 +96,9 @@ ht-degree: 0%
 
 1. **+** をクリックして、サーバー設定を追加します。 プロジェクト名は、上部がグレーで表示されます。
 
-1. [ オプション ] 新しいサーバー設定に対して次の設定を行います。 _PHPStorm_ ドキュメントの [ デバッグサーバーが設定されていません ](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured) を参照してください。
+1. [ オプション ] 新しいサーバー設定に対して次の設定を行います。 _PHPStorm_ ドキュメントの [&#x200B; デバッグサーバーが設定されていません &#x200B;](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured) を参照してください。
 
-   - **名前** - ホスト名と同じ名前を入力します。 デバッグに CLI を使用するには、この値が [Debug CLI コマンド ](#debug-cli-commands) の `PHP_IDE_CONFIG` 変数の値と一致する必要があります。
+   - **名前** - ホスト名と同じ名前を入力します。 デバッグに CLI を使用するには、この値が [Debug CLI コマンド &#x200B;](#debug-cli-commands) の `PHP_IDE_CONFIG` 変数の値と一致する必要があります。
    - **ホスト** - ホスト名を入力します。
    - **ポート** - `443` と入力します。
    - **デバッガー** - 「`Xdebug`」を選択します。
@@ -131,7 +131,7 @@ ht-degree: 0%
 
    - 識別できる一意の名前を入力してください。
    - 「[!UICONTROL Filter debug connection by IDE key]**」チェックボックスをオンにします。
-   - [ 前の節 ](#configure-phpstorm-server) で作成したサーバーを選択します。 まだ作成していない場合は、ここで作成できますが、設定ガイドのその部分を参照してください。
+   - [&#x200B; 前の節 &#x200B;](#configure-phpstorm-server) で作成したサーバーを選択します。 まだ作成していない場合は、ここで作成できますが、設定ガイドのその部分を参照してください。
    - 「**[!UICONTROL IDE key(session id)]**」テキストフィールドに、大文字で `PHPSTORM` と入力します。 これは設定の他の部分で使用するので、同じにしておくことが重要です。 別の文字列を選択する場合は、設定および設定プロセスの他の場所でも使用する必要があります。
 
 1. **[!UICONTROL Apply]**/**[!UICONTROL OK]** をクリックします。
@@ -211,7 +211,7 @@ Windows にポート転送（SSH トンネリング）をセットアップす�
    - **ホスト名（または IP アドレス）** フィールド：クラウドサーバーの [SSH URL](../development/secure-connections.md#connect-to-a-remote-environment) を入力します
    - **ポート** フィールド：`22` を入力します
 
-   ![ パテのセットアップ ](../../assets/xdebug/putty-session.png)
+   ![&#x200B; パテのセットアップ &#x200B;](../../assets/xdebug/putty-session.png)
 
 1. _カテゴリ_ パネルで、**接続**/**SSH**/**トンネル** をクリックします。
 
@@ -223,7 +223,7 @@ Windows にポート転送（SSH トンネリング）をセットアップす�
 
 1. **追加** をクリックします。
 
-   ![Putty で SSH トンネルを作成する ](../../assets/xdebug/putty-tunnels.png)
+   ![Putty で SSH トンネルを作成する &#x200B;](../../assets/xdebug/putty-tunnels.png)
 
 1. _カテゴリ_ ウィンドウで、「**セッション**」をクリックします。
 
@@ -231,7 +231,7 @@ Windows にポート転送（SSH トンネリング）をセットアップす�
 
 1. **保存** をクリックします。
 
-   ![SSH トンネルを保存する ](../../assets/xdebug/putty-session-save.png)
+   ![SSH トンネルを保存する &#x200B;](../../assets/xdebug/putty-session-save.png)
 
 1. SSH トンネルをテストするには、**Load** をクリックし、**Open** をクリックします。
 
@@ -380,13 +380,13 @@ CLI コマンドをデバッグするには：
 
 **Chromeで Xdebug Helper を使用するには**:
 
-1. クラウドサーバーへの [SSH トンネル ](#ssh-access-to-xdebug-environments) を作成します。
+1. クラウドサーバーへの [SSH トンネル &#x200B;](#ssh-access-to-xdebug-environments) を作成します。
 
-1. Chrome ストアから [Xdebug Helper 拡張機能 ](https://chromewebstore.google.com/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) をインストールします。
+1. Chrome ストアから [Xdebug Helper 拡張機能 &#x200B;](https://chromewebstore.google.com/detail/eadndfjplgieldjbigjakmdgkmoaaaoc) をインストールします。
 
 1. 次の図に示すように、Chromeで拡張機能を有効にします。
 
-   ![Chromeで Xdebug 拡張機能を有効にする ](../../assets/xdebug/enable-chrome-ext.png)
+   ![Chromeで Xdebug 拡張機能を有効にする &#x200B;](../../assets/xdebug/enable-chrome-ext.png)
 
 1. Chromeで、Chrome ツールバーの緑のヘルパーアイコンを右クリックします。
 
@@ -396,7 +396,7 @@ CLI コマンドをデバッグするには：
 
 1. **保存** をクリックします。
 
-   ![Xdebug ヘルパーオプション ](../../assets/xdebug/helper-options.png)
+   ![Xdebug ヘルパーオプション &#x200B;](../../assets/xdebug/helper-options.png)
 
 1. PhpStorm プロジェクトを開きます。
 

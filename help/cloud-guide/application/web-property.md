@@ -38,7 +38,7 @@ web:
 - ルート（`/`）パスからは、web とメディアにのみアクセスできます
 - `~/pub/static` パスと `~/pub/media` パスから、任意のファイルにアクセスできます
 
-次の例は、[`mounts` プロパティのエントリに関連付けられた一連の web アクセス可能な場所の `.magento.app.yaml` ファイルのデフォルト設定を示してい ](properties.md#mounts) す。
+次の例は、[`mounts` プロパティのエントリに関連付けられた一連の web アクセス可能な場所の `.magento.app.yaml` ファイルのデフォルト設定を示してい &#x200B;](properties.md#mounts) す。
 
 ```yaml
  # The configuration of app when it is exposed to the web.
@@ -78,4 +78,4 @@ web:
 
 >[!NOTE]
 >
->この例は、単一のドメインをサポートするように設定されたクラウドプロジェクトのデフォルトの web 設定を示しています。 複数の web サイトやストアのサポートが必要なプロジェクトの場合は、共有ドメインをサポートするように `web` 設定を設定する必要があります。 [ 共有ドメインの場所の設定 ](../store/multiple-sites.md#configure-locations-for-shared-domains) を参照してください。
+>この例は、単一のドメインをサポートするように設定されたクラウドプロジェクトのデフォルトの web 設定を示しています。 複数の web サイトやストアのサポートが必要なプロジェクトの場合は、共有ドメインをサポートするように `web` 設定を設定する必要があります。 [&#x200B; 共有ドメインの場所の設定 &#x200B;](../store/multiple-sites.md#configure-locations-for-shared-domains) を参照してください。

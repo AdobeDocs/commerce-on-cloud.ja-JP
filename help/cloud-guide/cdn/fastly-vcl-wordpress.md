@@ -46,7 +46,7 @@ VCL コードを手動で書いて Fastly API を使用してアップロード�
 
    - Adobe Commerceから WordPress バックエンドへの URL 書き換えを処理する _その他のCMS/バックエンド統合_ Edge モジュールを設定します。
 
-     手順について詳しくは、Magento 2[ 用 ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md)Fastly CDN モジュール _ドキュメントの_ Fastly Edge モジュール – その他のCMS/バックエンドの統合を参照してください。
+     手順について詳しくは、Magento 2[&#x200B; 用 &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md)Fastly CDN モジュール _ドキュメントの_ Fastly Edge モジュール – その他のCMS/バックエンドの統合を参照してください。
 
 1. Fastly サービス設定を更新した後、Adobe Commerce ストアをテストして、WordPress に指定した URL リクエストが正しく再ルーティングされていることを確認します。
 

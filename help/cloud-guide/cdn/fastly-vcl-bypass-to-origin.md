@@ -62,7 +62,7 @@ ht-degree: 0%
 
 1. **作成** をクリックします。
 
-   ![Fastly バイパス VCL スニペットの作成 ](/help/assets/cdn/fastly-create-bypass-snippet.png)
+   ![Fastly バイパス VCL スニペットの作成 &#x200B;](/help/assets/cdn/fastly-create-bypass-snippet.png)
 
 1. ページのリロード後、「**Fastly 設定** セクションの *Fastly に VCL をアップロード* をクリックします。
 

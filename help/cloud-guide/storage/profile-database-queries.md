@@ -15,7 +15,7 @@ ht-degree: 0%
 
 **データベース・クエリー・プロファイリングを使用可能にする手順は、次のとおりです**。
 
-1. [ データベースにログインします ](../services/mysql.md#connect-to-the-database)。
+1. [&#x200B; データベースにログインします &#x200B;](../services/mysql.md#connect-to-the-database)。
 
 1. プロファイルを有効にします。
 

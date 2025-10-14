@@ -20,7 +20,7 @@ Adobe Commerce サポートに連絡し、サイトの立ち上げ（運用開�
 
 ## 新しいサイトへの DNS の切り替え
 
-変更されたドメインを確認するには、有効期間の変更された値が重要です。 A レコードと CNAME レコードを変更する場合、更新には、TTL で設定された時間がかかり、正しく更新されます。 DNS 設定について詳しくは、「[DNS 設定 ](checklist.md#update-dns-configuration-with-production-settings)」を参照してください。
+変更されたドメインを確認するには、有効期間の変更された値が重要です。 A レコードと CNAME レコードを変更する場合、更新には、TTL で設定された時間がかかり、正しく更新されます。 DNS 設定について詳しくは、「[DNS 設定 &#x200B;](checklist.md#update-dns-configuration-with-production-settings)」を参照してください。
 
 ### 新しいサイトに移動するには、次の手順に従います。
 
@@ -34,7 +34,7 @@ Adobe Commerce サポートに連絡し、サイトの立ち上げ（運用開�
 
 ## ライブストアのテスト
 
-ライブストアでいくつかの UAT テストを完了し、すべてが読み込まれ、アクションが正しく完了していることを確認します。 テストのリストについては、「[ デプロイメントをテスト ](../test/staging-and-production.md#complete-uat-testing)」を参照してください。
+ライブストアでいくつかの UAT テストを完了し、すべてが読み込まれ、アクションが正しく完了していることを確認します。 テストのリストについては、「[&#x200B; デプロイメントをテスト &#x200B;](../test/staging-and-production.md#complete-uat-testing)」を参照してください。
 
 ## ローンチ後
 

@@ -29,9 +29,9 @@ Adobeがクラウドプロジェクト環境にCommerceをプロビジョニン�
 - `mcprod.your-store.com`
 - `mcstaging.your-store.com`
 
-複数または一意のドメインに関する詳細なガイダンスについては、_クラウドインフラストラクチャー上のCommerce_ ガイドの [ 複数の web サイトまたはストアの設定 ](../cloud-guide/store/multiple-sites.md) を参照してください。
+複数または一意のドメインに関する詳細なガイダンスについては、_クラウドインフラストラクチャー上のCommerce_ ガイドの [&#x200B; 複数の web サイトまたはストアの設定 &#x200B;](../cloud-guide/store/multiple-sites.md) を参照してください。
 
-Adobe Commerce サイトで使用されているのと同じ apex およびサブドメインをリンクする既存の Fastly アカウントがある場合は、[ 複数の Fastly アカウントと割り当てられたドメイン ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} を参照してください。
+Adobe Commerce サイトで使用されているのと同じ apex およびサブドメインをリンクする既存の Fastly アカウントがある場合は、[&#x200B; 複数の Fastly アカウントと割り当てられたドメイン &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} を参照してください。
 
 ## トランザクションメールドメイン
 
@@ -41,7 +41,7 @@ Adobe Commerce サイトで使用されているのと同じ apex およびサ�
 
 SendGrid ドメインの例：`example@your-store.com`
 
-トランザクションメールとドメインの設定について詳しくは、_Commerce on Cloud Infrastructure_ ガイドの [SendGrid メールサービス ](../cloud-guide/project/sendgrid.md) を参照してください。
+トランザクションメールとドメインの設定について詳しくは、_Commerce on Cloud Infrastructure_ ガイドの [SendGrid メールサービス &#x200B;](../cloud-guide/project/sendgrid.md) を参照してください。
 
 ## ストレージ割り当て
 
@@ -61,7 +61,7 @@ SendGrid ドメインの例：`example@your-store.com`
 
 Adobe Commerce on cloud infrastructure Pro プロジェクトの Infrastructure as a Service （IaaS）基盤として、Amazon Web Services（AWS）またはMicrosoft Azure のいずれかを選択します。 各サービスプロバイダーは複数の地域で動作し、複数のアベイラビリティーゾーンを提供します。 場所に適した地域を選択し、待ち時間やコストの増加の可能性を減らします。
 
-[Adobe Commerce クラウド地域のマップ ](../cloud-guide/overview.md) を参照してください。
+[Adobe Commerce クラウド地域のマップ &#x200B;](../cloud-guide/overview.md) を参照してください。
 
 ## 接続サービス
 
@@ -69,7 +69,7 @@ Adobe Commerce on cloud infrastructure Pro プロジェクトの Infrastructure 
 
 クラウドインフラストラクチャー上のAdobe Commerceは、AWS PrivateLink または Azure Private Link サービスとの統合をサポートします。 このサービスはオプションですが、PrivateLink は、クラウドインフラストラクチャ環境間で、外部システムでホストされるサービスやアプリケーションとの安全なプライベート通信を確立するために使用されます。
 
-Adobe Commerce インスタンスが同じリージョン内でアクセスできるように、クラウドサービスの戦略（AWSまたは Azure）を検討することが重要です。 地域ごとのアクセシビリティについて詳しくは、_クラウドインフラストラクチャー上のCommerce_ ガイドの [PrivateLink サービス ](../cloud-guide/development/privatelink-service.md) を参照してください。
+Adobe Commerce インスタンスが同じリージョン内でアクセスできるように、クラウドサービスの戦略（AWSまたは Azure）を検討することが重要です。 地域ごとのアクセシビリティについて詳しくは、_クラウドインフラストラクチャー上のCommerce_ ガイドの [PrivateLink サービス &#x200B;](../cloud-guide/development/privatelink-service.md) を参照してください。
 
 ## ターゲットサイトの起動
 
@@ -83,4 +83,4 @@ Adobe Commerce インスタンスが同じリージョン内でアクセスで�
 >
 > クラウドポータルを素早く確認し、新しいクラウドプロジェクトにアクセスします。
 >
->**次の手順**:[Commerceのオンボーディング ](onboarding.md)
+>**次の手順**:[Commerceのオンボーディング &#x200B;](onboarding.md)

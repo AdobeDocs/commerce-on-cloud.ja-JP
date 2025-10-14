@@ -19,15 +19,15 @@ Commerceを初めて使用する場合でも、クラウドインフラストラ
 
 - **認証キー（Composer キー）**
 
-  認証キーは 32 文字の認証トークンで、Adobe Commerce Composer リポジトリ（`repo.magento.com`）や、GitHub などのアプリケーション開発に必要な他の Git サービスへの安全なアクセスを提供します。 アカウントには複数の認証キーを設定できます。 ワークスペースを設定する場合は、まずコードリポジトリに固有のキーを 1 つ使用します。 キーがない場合は、プロジェクトの所有者に問い合わせるか、自分で [ 認証キー ](../cloud-guide/development/authentication-keys.md) を作成します。
+  認証キーは 32 文字の認証トークンで、Adobe Commerce Composer リポジトリ（`repo.magento.com`）や、GitHub などのアプリケーション開発に必要な他の Git サービスへの安全なアクセスを提供します。 アカウントには複数の認証キーを設定できます。 ワークスペースを設定する場合は、まずコードリポジトリに固有のキーを 1 つ使用します。 キーがない場合は、プロジェクトの所有者に問い合わせるか、自分で [&#x200B; 認証キー &#x200B;](../cloud-guide/development/authentication-keys.md) を作成します。
 
 - **クラウドプロジェクトアカウント**
 
-  プロジェクトオーナーに、クラウドインフラストラクチャプロジェクトのAdobe Commerceへの招待を受ける必要があります。 電子メールによる招待を受け取ったら、リンクをクリックし、画面の指示に従ってアカウントを作成します。 [ オンボーディング ](onboarding.md) を参照してください。
+  プロジェクトオーナーに、クラウドインフラストラクチャプロジェクトのAdobe Commerceへの招待を受ける必要があります。 電子メールによる招待を受け取ったら、リンクをクリックし、画面の指示に従ってアカウントを作成します。 [&#x200B; オンボーディング &#x200B;](onboarding.md) を参照してください。
 
 - **Adobe Commerce暗号化キー**
 
-  既存のシステムのみをインポートする場合は、データベースのアクセスとデータを保護するために使用する暗号化キーを取得します。 このキーについて詳しくは、[ 暗号化キーに関する問題の解決 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=ja) を参照してください。
+  既存のシステムのみをインポートする場合は、データベースのアクセスとデータを保護するために使用する暗号化キーを取得します。 このキーについて詳しくは、[&#x200B; 暗号化キーに関する問題の解決 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=ja) を参照してください。
 
 ## デベロッパーツール
 
@@ -40,22 +40,22 @@ Commerceを初めて使用する場合でも、クラウドインフラストラ
   必要に応じて、Docker 環境を使用して、Commerce on cloud infrastructure `integration` 環境をローカル開発用にエミュレートします。 必須のコンポーネントには、Adobe Commerce v2 テンプレート、Docker Compose および `ece-tools` パッケージの 3 つがあります。
 
    - [Docker アーキテクチャと一般的なコマンド](../cloud-guide/dev-tools/cloud-docker.md)
-   - [Docker 開発環境の起動 ](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)
+   - [Docker 開発環境の起動 &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)
    - [ECE-Tools パッケージ](../cloud-guide/dev-tools/package-overview.md)
 
 - **Git ベースのサービスの統合**
 
-  オプションで、GitHub や GitLab などの Git ベースのホスティングサービスと、クラウドインフラストラクチャー上のAdobe Commerceを統合します。 [ 統合 ](../cloud-guide/integrations/overview.md) を参照してください。
+  オプションで、GitHub や GitLab などの Git ベースのホスティングサービスと、クラウドインフラストラクチャー上のAdobe Commerceを統合します。 [&#x200B; 統合 &#x200B;](../cloud-guide/integrations/overview.md) を参照してください。
 
 ## プロジェクトコード
 
-リモート環境とやり取りするには、安全な接続が不可欠です。 新規プロジェクトの場合は、[ にログイン  [!DNL Cloud Console]](https://console.adobecommerce.com) し、「**[!UICONTROL No SSH key]**」をクリックします。 このアイコンはコマンドフィールドの右側にあり、プロジェクトに SSH キーが含まれていない場合に表示されます。 [ 安全な接続 ](../cloud-guide/development/secure-connections.md#add-an-ssh-public-key-to-your-account) を参照してください。
+リモート環境とやり取りするには、安全な接続が不可欠です。 新規プロジェクトの場合は、[&#x200B; にログイン  [!DNL Cloud Console]](https://console.adobecommerce.com) し、「**[!UICONTROL No SSH key]**」をクリックします。 このアイコンはコマンドフィールドの右側にあり、プロジェクトに SSH キーが含まれていない場合に表示されます。 [&#x200B; 安全な接続 &#x200B;](../cloud-guide/development/secure-connections.md#add-an-ssh-public-key-to-your-account) を参照してください。
 
 **コードベースをローカルワークステーションにクローンするには**:
 
 1. [[!DNL Cloud Console]](https://console.adobecommerce.com) で「**[!UICONTROL code]**」をクリックし、「**[!UICONTROL Git]**」タブを選択します。
 
-   ![ コードのクローンを作成 ](../assets/ui-git-code.png){width="450"}
+   ![&#x200B; コードのクローンを作成 &#x200B;](../assets/ui-git-code.png){width="450"}
 
 1. 提供された `git clone ...` コマンドをコピーします。
 
@@ -65,4 +65,4 @@ Commerceを初めて使用する場合でも、クラウドインフラストラ
 
 >[!TIP]
 >
->Adobeは、特定のバージョンのAdobe Commerceのパッケージ手順を含むテンプレートリポジトリを使用して、初期プロジェクト環境をプロビジョニングします。 [ プロジェクトファイル構造 ](../cloud-guide/project/file-structure.md) のトピックを確認し、重要なプロジェクトファイルとクラウドテンプレートについて詳しく学びます。
+>Adobeは、特定のバージョンのAdobe Commerceのパッケージ手順を含むテンプレートリポジトリを使用して、初期プロジェクト環境をプロビジョニングします。 [&#x200B; プロジェクトファイル構造 &#x200B;](../cloud-guide/project/file-structure.md) のトピックを確認し、重要なプロジェクトファイルとクラウドテンプレートについて詳しく学びます。

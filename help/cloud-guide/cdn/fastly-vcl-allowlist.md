@@ -16,7 +16,7 @@ ht-degree: 0%
 
 許可リストを作成して、ステージング環境へのアクセスを制限し、内部開発者および承認済みの外部サービス用に指定された IP アドレスからのリクエストのみが許可されるようにします。 また、ステージング環境と実稼動環境で管理者へのアクセスを保護するための許可リストを作成することもできます。
 
-次の例は、[Fastly アクセス制御リスト（ACL） ](https://docs.fastly.com/guides/access-control-lists/about-acls) を含むカスタム VCL スニペットを使用して、クラウドインフラストラクチャプロジェクト環境でのAdobe Commerceの管理者へのアクセスを保護する方法を示しています。 カスタム VCL スニペットをクラウド環境に追加する場合、Fastly では、ACL に含まれる IP アドレスからのリクエストのみを許可します。
+次の例は、[Fastly アクセス制御リスト（ACL） &#x200B;](https://docs.fastly.com/guides/access-control-lists/about-acls) を含むカスタム VCL スニペットを使用して、クラウドインフラストラクチャプロジェクト環境でのAdobe Commerceの管理者へのアクセスを保護する方法を示しています。 カスタム VCL スニペットをクラウド環境に追加する場合、Fastly では、ACL に含まれる IP アドレスからのリクエストのみを許可します。
 
 >[!TIP]
 >
@@ -75,7 +75,7 @@ Edge ACL は、サイトへのアクセスを管理するための IP アドレ�
 }
 ```
 
-この例では [ カスタムスニペットの作成 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=ja#add-the-custom-vcl-snippet) の前に、値を確認して、変更が必要かどうかを判断してください。 次に、各値をそれぞれのフィールドに入力します（例えば、「タイプ」フィールドに `type` を入力 `content`、「コンテンツ」フィールドに入力します）。
+この例では [&#x200B; カスタムスニペットの作成 &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=ja#add-the-custom-vcl-snippet) の前に、値を確認して、変更が必要かどうかを判断してください。 次に、各値をそれぞれのフィールドに入力します（例えば、「タイプ」フィールドに `type` を入力 `content`、「コンテンツ」フィールドに入力します）。
 
 - `name` — VCL スニペットの名前。 この例の場合は `allowlist` です。
 
@@ -87,13 +87,13 @@ Edge ACL は、サイトへのアクセスを管理するための IP アドレ�
 
   管理者の URL が変更された場合は、サンプル値 `/admin` を環境の URL に置き換えます。 例：`/company-admin`。
 
-コードサンプルでは、`!req.http.Fastly-FF` 原点シールド [ を使用する場合、条件 ](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding) が重要です。 このコードを削除または編集しないでください。
+コードサンプルでは、`!req.http.Fastly-FF` 原点シールド [&#x200B; を使用する場合、条件 &#x200B;](fastly-custom-cache-configuration.md#configure-back-ends-and-origin-shielding) が重要です。 このコードを削除または編集しないでください。
 
 環境のコードを確認して更新した後、次のいずれかの方法を使用して、カスタム VCL スニペットを Fastly サービス設定に追加します。
 
-- [ カスタム VCL スニペットを管理者から追加します ](#add-the-custom-vcl-snippet)。 管理者にアクセスできる場合は、この方法をお勧めします。 （Magento 2 バージョン 1.2.58[ 以降には、](fastly-configuration.md#upgrade)Fastly CDN モジュールが必要です）。
+- [&#x200B; カスタム VCL スニペットを管理者から追加します &#x200B;](#add-the-custom-vcl-snippet)。 管理者にアクセスできる場合は、この方法をお勧めします。 （Magento 2 バージョン 1.2.58[&#x200B; 以降には、](fastly-configuration.md#upgrade)Fastly CDN モジュールが必要です）。
 
-- JSON コードの例をファイル（例：`allowlist.json`）に保存して、[Fastly API を使用してアップロード ](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api) します。 管理者にアクセスできない場合は、この方法を使用します。
+- JSON コードの例をファイル（例：`allowlist.json`）に保存して、[Fastly API を使用してアップロード &#x200B;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api) します。 管理者にアクセスできない場合は、この方法を使用します。
 
 ## カスタム VCL スニペットの追加
 

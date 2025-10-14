@@ -22,7 +22,7 @@ Please make sure that "/" is writable by the web-server.
 
 `robots.txt` ファイルは、オンデマンドで `robots.txt` コンテンツを生成してデータベースに保存するので、生成する必要はありません。 `<domain.your.project>/robots.txt` または `<domain.your.project>/robots` のリンクを使用して、ブラウザーでコンテンツを表示できます。
 
-これには、更新された `.magento.app.yaml` ファイルを含む ECE-Tools バージョン 2002.0.12 以降が必要です。 [magento-cloud リポジトリー ](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49) のこれらのルールの例を参照してください。
+これには、更新された `.magento.app.yaml` ファイルを含む ECE-Tools バージョン 2002.0.12 以降が必要です。 [magento-cloud リポジトリー &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49) のこれらのルールの例を参照してください。
 
 **バージョン 2.2 以降で `sitemap.xml` ファイルを生成するには**:
 
@@ -49,15 +49,15 @@ Please make sure that "/" is writable by the web-server.
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 
-異なるドメインがあり、個別のサイトマップが必要な場合は、適切なサイトマップにルーティングする VCL を作成できます。 上記のように、管理パネルで `sitemap.xml` ファイルを生成し、リダイレクトを管理するカスタム Fastly VCL スニペットを作成します。 [Custom Fastly VCL スニペット ](../cdn/fastly-vcl-custom-snippets.md) を参照してください。
+異なるドメインがあり、個別のサイトマップが必要な場合は、適切なサイトマップにルーティングする VCL を作成できます。 上記のように、管理パネルで `sitemap.xml` ファイルを生成し、リダイレクトを管理するカスタム Fastly VCL スニペットを作成します。 [Custom Fastly VCL スニペット &#x200B;](../cdn/fastly-vcl-custom-snippets.md) を参照してください。
 
 >[!NOTE]
 >
-> 管理 UI から、または Fastly API を使用して、カスタム VCL スニペットをアップロードできます。 [ カスタム VCL スニペットの例とチュートリアル ](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code) を参照してください。
+> 管理 UI から、または Fastly API を使用して、カスタム VCL スニペットをアップロードできます。 [&#x200B; カスタム VCL スニペットの例とチュートリアル &#x200B;](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code) を参照してください。
 
 ### リダイレクトに Fastly VCL スニペットを使用
 
@@ -119,7 +119,7 @@ VCL スニペットは `http://domain.com/robots.txt` をルートし、`pub/med
 
 実稼動環境で `robots.txt` のカスタマイズを有効にするには、Cloud Console のプロジェクト設定で `<environment-name>`**のオプションに対して** 検索エンジンによるインデックス作成を有効にする必要があります。
 
-![[!DNL Cloud Console] を使用した環境の管理 ](../../assets/robots-indexing-by-search-engine.png)
+![[!DNL Cloud Console] を使用した環境の管理 &#x200B;](../../assets/robots-indexing-by-search-engine.png)
 
 また、magento-cloud CLI を使用してこの設定を更新することもできます。
 

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 この例では、構成管理を使用して、すべての環境でストア設定の一貫性を維持する方法を示します。
 
-この例では、[ ストア設定 ](store-settings.md) で定義された次のプロシージャを使用します。
+この例では、[&#x200B; ストア設定 &#x200B;](store-settings.md) で定義された次のプロシージャを使用します。
 
 1. 統合環境ストア管理者に設定を入力します。
 1. `config.php` ファイルを作成し、ローカル ワークステーションに転送します。
@@ -33,18 +33,18 @@ ht-degree: 0%
 * ステージング環境および実稼動環境での静的ファイル最適化の有効化
 * ステージング環境および実稼動環境での Fastly の設定に、それぞれの特定の資格情報を使用する
 
-_静的ファイル最適化_ とは、JavaScriptとカスケードスタイルシートの結合と縮小、およびHTMLテンプレートの縮小を意味します。 [ 静的コンテンツデプロイメント戦略 ](../deploy/static-content.md) を参照してください。
+_静的ファイル最適化_ とは、JavaScriptとカスケードスタイルシートの結合と縮小、およびHTMLテンプレートの縮小を意味します。 [&#x200B; 静的コンテンツデプロイメント戦略 &#x200B;](../deploy/static-content.md) を参照してください。
 
 ## 前提条件
 
 これらの設定管理タスクを完了するには、以下が必要です。
 
-* [ 環境「管理者」 ](../project/user-access.md) 権限を持つプロジェクトリーダーの役割
+* [&#x200B; 環境「管理者」 &#x200B;](../project/user-access.md) 権限を持つプロジェクトリーダーの役割
 * 統合、ステージングおよび実稼動環境の管理者 URL と資格情報
 
 ## Commerce Admin の設定
 
-統合環境では、管理者にログインして、ストア、Web サイト、モジュールまたは拡張機能のシステム設定、静的ファイル最適化、静的コンテンツのデプロイメントに関連するシステム値を変更できます。 [ 設定データ ](store-settings.md#scd-performance) を参照してください。
+統合環境では、管理者にログインして、ストア、Web サイト、モジュールまたは拡張機能のシステム設定、静的ファイル最適化、静的コンテンツのデプロイメントに関連するシステム値を変更できます。 [&#x200B; 設定データ &#x200B;](store-settings.md#scd-performance) を参照してください。
 
 **ロケールと静的ファイル最適化設定を変更するには**:
 
@@ -53,17 +53,17 @@ _静的ファイル最適化_ とは、JavaScriptとカスケードスタイル�
 1. ページナビゲーションで、「ロケールオプション **を展開** ます。
 1. **ロケール** リストからロケールを変更します。 後で元に戻すことができます。
 
-   ![ ロケールの変更 ](../../assets/locale-options.png)
+   ![&#x200B; ロケールの変更 &#x200B;](../../assets/locale-options.png)
 
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[ キャッシュをフラッシュ ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management) します。
+1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management) します。
 1. 管理者からログアウトします。
 
 ## 値をエクスポートし、config.php をローカルシステムに転送します。
 
 この手順では、ローカルマシンで実行するコマンドを使用して、統合環境上に `config.php` 設定ファイルを作成し、転送します。
 
-この手順は、[ 推奨手順 ](store-settings.md) の手順 2 に対応します。 作成した `config.php` は、Git に追加できるように、ローカルシステムに転送します。
+この手順は、[&#x200B; 推奨手順 &#x200B;](store-settings.md) の手順 2 に対応します。 作成した `config.php` は、Git に追加できるように、ローカルシステムに転送します。
 
 **ア`config.php`** ットを作成して転送するには：
 
@@ -112,7 +112,7 @@ _静的ファイル最適化_ とは、JavaScriptとカスケードスタイル�
 
 ## config.php のプッシュと環境へのデプロイ
 
-`config.php` を作成してローカルシステムに転送したので、Git にコミットして環境にプッシュします。 この手順は、[ 推奨手順 ](store-settings.md) の手順 3 および 4 に対応します。
+`config.php` を作成してローカルシステムに転送したので、Git にコミットして環境にプッシュします。 この手順は、[&#x200B; 推奨手順 &#x200B;](store-settings.md) の手順 3 および 4 に対応します。
 
 次のコマンドは、追加、コミットおよび `master` 分岐へのプッシュを行います。
 
@@ -120,7 +120,7 @@ _静的ファイル最適化_ とは、JavaScriptとカスケードスタイル�
 git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
 ```
 
-ステージング環境および実稼動環境へのコードのデプロイメントを完了します。 スターターの場合は、`staging` 分岐と `master` 分岐にプッシュします。 デプロイメントコマンドについて詳しくは、[ ストアのデプロイ ](../deploy/staging-production.md) を参照してください。
+ステージング環境および実稼動環境へのコードのデプロイメントを完了します。 スターターの場合は、`staging` 分岐と `master` 分岐にプッシュします。 デプロイメントコマンドについて詳しくは、[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md) を参照してください。
 
 すべての環境でデプロイメントが完了するまで待ちます。
 
@@ -137,7 +137,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 
    次のサンプルに示すように、いくつかのフィールドは編集できないことに注意してください。 これらの設定は、`config.php` で管理されます。
 
-   ![ 一部の値は管理者では編集できなくなりました ](../../assets/locale-options-disabled.png)
+   ![&#x200B; 一部の値は管理者では編集できなくなりました &#x200B;](../../assets/locale-options-disabled.png)
 
 1. 管理者からログアウトします。
 
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 右側のウィンドウで、「**JavaScript設定**」を展開します。
 1. **JavaScript ファイルを結合** リストで、「はい **をクリックし** す。
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[ キャッシュをフラッシュ ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management) します。
+1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management) します。
 1. 管理者からログアウトします。
 
 dump コマンドを再度実行すると、新しい設定がファイルに追加されます。

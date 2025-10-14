@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスク容量を監視できます。 [ 管理アラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。
+>Pro 実稼動環境では、New Relicの Managed alerts for Adobe Commerce アラートポリシーを使用して、ディスク容量を監視できます。 [&#x200B; 管理アラートによるパフォーマンスの監視 &#x200B;](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。
 
 ## メール通知
 
@@ -32,7 +32,7 @@ magento-cloud integration:add --type health.email --from-address you@example.com
 
 ## Slack チャネルの通知
 
-Slackは、ボットと呼ばれるインタラクティブアプリを使用してチャットルームでメッセージを投稿する外部サービスです。 Slackでヘルス通知を受け取るには、Slack グループのカスタム [ ボットユーザー ](https://api.slack.com/bot-users) を作成する必要があります。 チャネル（複数可）のボットユーザーを設定したら、Slackから提供される [ ボットトークン ](https://api.slack.com/docs/token-types#bot) を保存し、統合を登録します。 次の例では、ヘルス通知をSlack チャネルに登録します。
+Slackは、ボットと呼ばれるインタラクティブアプリを使用してチャットルームでメッセージを投稿する外部サービスです。 Slackでヘルス通知を受け取るには、Slack グループのカスタム [&#x200B; ボットユーザー &#x200B;](https://api.slack.com/bot-users) を作成する必要があります。 チャネル（複数可）のボットユーザーを設定したら、Slackから提供される [&#x200B; ボットトークン &#x200B;](https://api.slack.com/docs/token-types#bot) を保存し、統合を登録します。 次の例では、ヘルス通知をSlack チャネルに登録します。
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'
@@ -40,7 +40,7 @@ magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --chan
 
 ## PagerDuty 通知
 
-PagerDuty は、オンコールチームメンバーに重要な問題を通知できる外部サービスです。 PagerDuty で正常性通知を受信するには、Events API バージョン 2 を使用する [PagerDuty 統合 ](https://developer.pagerduty.com/v2/docs/integrating) を作成する必要があります。 統合キーまたは _ルーティングキー_ を使用して、統合を登録します。 次の例では、ルーティング キーを使用して PagerDuty の通知を登録します。
+PagerDuty は、オンコールチームメンバーに重要な問題を通知できる外部サービスです。 PagerDuty で正常性通知を受信するには、Events API バージョン 2 を使用する [PagerDuty 統合 &#x200B;](https://developer.pagerduty.com/v2/docs/integrating) を作成する必要があります。 統合キーまたは _ルーティングキー_ を使用して、統合を登録します。 次の例では、ルーティング キーを使用して PagerDuty の通知を登録します。
 
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY

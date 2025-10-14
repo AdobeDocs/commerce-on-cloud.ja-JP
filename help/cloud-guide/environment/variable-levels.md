@@ -13,7 +13,7 @@ ht-degree: 0%
 
 プロジェクト変数は、プロジェクト内のすべての環境に適用されます。 環境変数は、特定の環境またはブランチに適用されます。 環境は、親環境から変数の定義を _継承_ します。
 
-継承された値を上書きするには、環境用に変数を特別に定義します。 例えば、開発用の変数を設定するには、統合環境の `.magento.env.yaml` ファイルで変数値を定義します。 統合環境から分岐するすべての環境は、これらの値を継承します。 `.magento.env.yaml` ファイルを使用した環境の設定について詳しくは、[ デプロイメント設定 ](configure-env-yaml.md) を参照してください。
+継承された値を上書きするには、環境用に変数を特別に定義します。 例えば、開発用の変数を設定するには、統合環境の `.magento.env.yaml` ファイルで変数値を定義します。 統合環境から分岐するすべての環境は、これらの値を継承します。 `.magento.env.yaml` ファイルを使用した環境の設定について詳しくは、[&#x200B; デプロイメント設定 &#x200B;](configure-env-yaml.md) を参照してください。
 
 >[!BEGINTABS]
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 
 1. _[!DNL Cloud Console]_&#x200B;で、プロジェクトナビゲーションの右側にある「設定」アイコンをクリックします。
 
-   ![ プロジェクトの設定 ](../../assets/icon-configure.png){width="36"}
+   ![&#x200B; プロジェクトの設定 &#x200B;](../../assets/icon-configure.png){width="36"}
 
 1. プロジェクトレベルの変数を設定するには、「_プロジェクト設定_ の **変数** をクリックします。
 
-   ![ プロジェクト変数 ](../../assets/ui-project-variables.png)
+   ![&#x200B; プロジェクト変数 &#x200B;](../../assets/ui-project-variables.png)
 
 1. 環境レベルの変数を設定するには、「_環境_」リストで環境を選択し、「**[!UICONTROL Variables]**」タブをクリックします。
 
-   ![ 「環境変数」タブ ](../../assets/ui-environment-variables.png)
+   ![&#x200B; 「環境変数」タブ &#x200B;](../../assets/ui-environment-variables.png)
 
 1. 「**[!UICONTROL Create variable]**」をクリックします。
 

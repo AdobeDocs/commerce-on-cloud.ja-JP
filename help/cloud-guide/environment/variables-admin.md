@@ -18,7 +18,7 @@ ht-degree: 0%
 
 次の表の管理変数を使用して、Commerceのインストール中に管理者ユーザーの資格情報を上書きできます。
 
-インストール後に値を変更する場合は、SSH を使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンドを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja) 管理者ユーザーの資格情報を作成または編集します。
+インストール後に値を変更する場合は、SSH を使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンドを使用して &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja) 管理者ユーザーの資格情報を作成または編集します。
 
 | 変数 | デフォルト | 説明 |
 | -------------- | --------------------------- | ----------- |
@@ -55,7 +55,7 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master
 
 1. プロジェクトの概要で、環境を選択し、設定アイコンをクリックします。
 
-   ![ プロジェクト設定 ](../../assets/icon-configure.png){width="36"}
+   ![&#x200B; プロジェクト設定 &#x200B;](../../assets/icon-configure.png){width="36"}
 
 1. 「**変数**」タブを選択します。
 

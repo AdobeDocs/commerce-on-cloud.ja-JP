@@ -18,7 +18,7 @@ Secure Shell （SSH）は、リモートサーバーおよびシステムに安�
 
 ## SSH キーペアの生成
 
-プロジェクトのソースコードと環境にアクセスする必要があるすべてのマシンとワークスペースに、SSH キーペアを作成します。 SSH キーを使用すると、GitHub に接続してソースコードを管理したり、クラウドサーバーに接続したりできます。ユーザー名やパスワードを常に指定する必要はありません。 SSH キーペアの作成について詳しくは、[SSH を使用した GitHub への接続 ](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) を参照してください。
+プロジェクトのソースコードと環境にアクセスする必要があるすべてのマシンとワークスペースに、SSH キーペアを作成します。 SSH キーを使用すると、GitHub に接続してソースコードを管理したり、クラウドサーバーに接続したりできます。ユーザー名やパスワードを常に指定する必要はありません。 SSH キーペアの作成について詳しくは、[SSH を使用した GitHub への接続 &#x200B;](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) を参照してください。
 
 - _公開鍵_ は、サイト、SSH および sFTP へのアクセスに安全に使用できます。
 - _秘密鍵_ は、ワークステーションでは非公開のままです。
@@ -29,7 +29,7 @@ Secure Shell （SSH）は、リモートサーバーおよびシステムに安�
 
 ## SSH 公開鍵をアカウントに追加
 
-クラウドインフラストラクチャアカウント上でAdobe Commerceに SSH 公開鍵を追加または更新したら、アカウントに [ すべてのアクティブな環境を再デプロイ ](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) して鍵をインストールします。
+クラウドインフラストラクチャアカウント上でAdobe Commerceに SSH 公開鍵を追加または更新したら、アカウントに [&#x200B; すべてのアクティブな環境を再デプロイ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) して鍵をインストールします。
 
 Cloud CLI または [!DNL Cloud Console] のいずれかの方法を使用して、アカウントに SSH キーを追加できます。
 
@@ -139,7 +139,7 @@ Cloud CLI または [!DNL Cloud Console] のいずれかの方法を使用して
 
 ## sFTP
 
-クラウドインフラストラクチャー上のAdobe Commerceでは、SSH 認証を使用した sFTP （セキュア FTP）を使用した環境へのアクセスをサポートしています。 sFTP 用の SSH キー認証をサポートするクライアントを使用し、SSH 公開キーを使用します。 SSH 公開鍵をターゲット環境に追加する必要があります。 スターター環境および Pro 統合環境の場合は、[ を使用して追加  [!DNL Cloud Console]](#add-your-ssh-key-using-the-project-web-interface) できます。
+クラウドインフラストラクチャー上のAdobe Commerceでは、SSH 認証を使用した sFTP （セキュア FTP）を使用した環境へのアクセスをサポートしています。 sFTP 用の SSH キー認証をサポートするクライアントを使用し、SSH 公開キーを使用します。 SSH 公開鍵をターゲット環境に追加する必要があります。 スターター環境および Pro 統合環境の場合は、[&#x200B; を使用して追加  [!DNL Cloud Console]](#add-your-ssh-key-using-the-project-web-interface) できます。
 
 読み取り専用の sFTP 接続はサポートされていま _ん_。sFTP アクセスは、デフォルトで _書き込み_ 権限で提供されます。
 
@@ -153,12 +153,12 @@ sFTP の設定時には、SSH アクセス環境のコマンドから次の情�
 
 クライアントによっては、sFTP の SSH 認証を完了するために、追加のオプションが必要になる場合があります。 選択したクライアントのドキュメントを確認します。
 
-**スターター環境と Pro 統合環境** の場合は、[ 特定のディレクトリにアクセスするための `mount`](../application/properties.md#mounts) ールを追加する」ことも検討してください。 `.magento.app.yaml` ファイルにマウントを追加します。 書き込み可能なディレクトリのリストについては、[ プロジェクト構造 ](../project/file-structure.md) を参照してください。 このマウントポイントは、これらの環境でのみ機能します。
+**スターター環境と Pro 統合環境** の場合は、[&#x200B; 特定のディレクトリにアクセスするための `mount`](../application/properties.md#mounts) ールを追加する」ことも検討してください。 `.magento.app.yaml` ファイルにマウントを追加します。 書き込み可能なディレクトリのリストについては、[&#x200B; プロジェクト構造 &#x200B;](../project/file-structure.md) を参照してください。 このマウントポイントは、これらの環境でのみ機能します。
 
-**Pro ステージング環境および実稼動環境** の場合、環境に SSH アクセスできない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、sFTP アクセスおよび特定のフォルダー（`pub/media` など）にアクセスするためのマウントポイントをリクエストする必要があります。
+**Pro ステージング環境および実稼動環境** の場合、環境に SSH アクセスできない場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、sFTP アクセスおよび特定のフォルダー（`pub/media` など）にアクセスするためのマウントポイントをリクエストする必要があります。
 
 >[!NOTE]
->ステージング環境および実稼動環境で、sFTP 接続が **クラウドプロジェクトに追加**&#x200B;[ する必要がない _汎用_ ユーザー用の場合は、](../project/user-access.md) 公開 **キーを添付した [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)** する必要があります。 **秘密の SSH キーを入力しないでください。**
+>ステージング環境および実稼動環境で、sFTP 接続が **クラウドプロジェクトに追加**&#x200B;[&#x200B; する必要がない _汎用_ ユーザー用の場合は、](../project/user-access.md) 公開 **キーを添付した [Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)** する必要があります。 **秘密の SSH キーを入力しないでください。**
 
 ## SSH トンネリング
 
@@ -176,7 +176,7 @@ magento-cloud login
 magento-cloud tunnel:list
 ```
 
-トンネルを構築するには、[ アプリケーション名 ](../application/properties.md#name) を知っている必要があります。 アプリケーション名は、CLI を使用して確認できます。
+トンネルを構築するには、[&#x200B; アプリケーション名 &#x200B;](../application/properties.md#name) を知っている必要があります。 アプリケーション名は、CLI を使用して確認できます。
 
 ```bash
 magento-cloud apps

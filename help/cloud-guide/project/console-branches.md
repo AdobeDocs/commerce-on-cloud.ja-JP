@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Cloud Console] で分岐を管理
 
-[!DNL Cloud Console] または `magento-cloud` CLI を使用して環境を管理できます。 プロジェクトファイルは Git リポジトリーに保存されます。 Git コマンドを使用してコードを管理できますが、`magento-cloud` CLI はプラットフォーム機能とやり取りするように設計されていますが、Git コマンドは設計されていません。 Cloud CLI トピックの [Git コマンド ](../dev-tools/cloud-cli-overview.md#git-commands) を参照してください。
+[!DNL Cloud Console] または `magento-cloud` CLI を使用して環境を管理できます。 プロジェクトファイルは Git リポジトリーに保存されます。 Git コマンドを使用してコードを管理できますが、`magento-cloud` CLI はプラットフォーム機能とやり取りするように設計されていますが、Git コマンドは設計されていません。 Cloud CLI トピックの [Git コマンド &#x200B;](../dev-tools/cloud-cli-overview.md#git-commands) を参照してください。
 
 このトピックでは、[!DNL Cloud Console] を使用して以下を行う方法について説明します。
 
@@ -31,9 +31,9 @@ ht-degree: 0%
 - Starter の場合は、`master` ブランチから `staging` ブランチを作成し、その後 `staging` ブランチを作成して開発を行います。
 - Pro の場合は、`Integration` 環境から開発ブランチを作成します。
 
-お使いのアカウントは、限られた数の ![ アクティブなブランチ ](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} （非アクティブな）開発ブランチをサポートしています。 [!DNL Cloud Console] または Cloud CLI のみを使用してブランチを追加または削除することで、アクティブなブランチと非アクティブなブランチを管理します。 ブランチを削除する前に、そのブランチを非アクティブ化します。このブランチは、_環境_ リストに _非アクティブ_ として残ります。 後でブランチを再アクティブ化したり、環境設定または Cloud CLI を使用して [ ブランチを削除 ](../dev-tools/cloud-cli-overview.md#) することができます。
+お使いのアカウントは、限られた数の ![&#x200B; アクティブなブランチ &#x200B;](../../assets/icon-active.png){width="32"} (active) and an unlimited number of ![inactive branch](../../assets/icon-inactive.png){width="32"} （非アクティブな）開発ブランチをサポートしています。 [!DNL Cloud Console] または Cloud CLI のみを使用してブランチを追加または削除することで、アクティブなブランチと非アクティブなブランチを管理します。 ブランチを削除する前に、そのブランチを非アクティブ化します。このブランチは、_環境_ リストに _非アクティブ_ として残ります。 後でブランチを再アクティブ化したり、環境設定または Cloud CLI を使用して [&#x200B; ブランチを削除 &#x200B;](../dev-tools/cloud-cli-overview.md#) することができます。
 
-開発用にさらにアクティブな環境が必要な場合は、[ サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信します。
+開発用にさらにアクティブな環境が必要な場合は、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) を送信します。
 
 **ブランチを追加するには**:
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 1. 「**[!UICONTROL Branch]**」をクリックします。
 
-   ![ ブランチの作成 ](../../assets/button-branch.png){width="150"}
+   ![&#x200B; ブランチの作成 &#x200B;](../../assets/button-branch.png){width="150"}
 
 1. _...からの分岐_ フォームで、分岐名を入力します。
 
@@ -93,7 +93,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 環境（またはブランチ）の同期は `git pull origin <parent>` と同じです。 親環境から更新されたコードを同期できます。 この機能は、すべての Starter および Pro 環境で [!DNL Cloud Console] を通じて使用できます。
 
-Pro プランの場合は、ステージング環境と実稼動環境から実 `master` 動環境のブランチに同期できます。 この同期では、コードの取り込みとプッシュのみが行われ、データはプッシュされません。 データを同期するには、データベースデータをダンプし、別の環境のデータベースにプッシュします。 [ 静的ファイルおよびデータの移行およびデプロイ ](/help/cloud-guide/deploy/staging-production.md#migrate-static-files) を参照してください。
+Pro プランの場合は、ステージング環境と実稼動環境から実 `master` 動環境のブランチに同期できます。 この同期では、コードの取り込みとプッシュのみが行われ、データはプッシュされません。 データを同期するには、データベースデータをダンプし、別の環境のデータベースにプッシュします。 [&#x200B; 静的ファイルおよびデータの移行およびデプロイ &#x200B;](/help/cloud-guide/deploy/staging-production.md#migrate-static-files) を参照してください。
 
 **環境を同期するには**:
 
@@ -105,7 +105,7 @@ Pro プランの場合は、ステージング環境と実稼動環境から実 
 
 1. （同期）をクリックします。
 
-   ![ 環境の同期 ](../../assets/button-sync.png){width="150"}
+   ![&#x200B; 環境の同期 &#x200B;](../../assets/button-sync.png){width="150"}
 
 1. 同期する項目を選択します。
 
@@ -130,7 +130,7 @@ Pro プランの場合は、ステージング環境と実稼動環境から実 
 
 1. （結合）をクリックします。
 
-   ![ 環境の結合 ](../../assets/button-merge.png){width="150"}
+   ![&#x200B; 環境の結合 &#x200B;](../../assets/button-merge.png){width="150"}
 
 1. **結合** をクリックして、アクションを確認します。
 
@@ -154,7 +154,7 @@ Pro プランの場合は、ステージング環境と実稼動環境から実 
 
 1. 環境を選択します。
 
-   環境ビューには [ 最近 ](activity-stream.md) のイベントと、同期、マージ、ブランチ、バックアップなど、試行されたアクションごとに 1 つのエントリを表示する _アクティビティリスト_ が表示されます。 デプロイメントの履歴をすべて表示するには、「**すべて**」をクリックします。
+   環境ビューには [&#x200B; 最近 &#x200B;](activity-stream.md) のイベントと、同期、マージ、ブランチ、バックアップなど、試行されたアクションごとに 1 つのエントリを表示する _アクティビティリスト_ が表示されます。 デプロイメントの履歴をすべて表示するには、「**すべて**」をクリックします。
 
 1. ビルドログを表示するには、アカウントのデプロイメントレコードごとに成功または失敗リンクを選択します。
 
@@ -168,7 +168,7 @@ Pro プランの場合は、ステージング環境と実稼動環境から実 
 
 デプロイメントキーを非公開 GitHub リポジトリに追加するには、そのリポジトリの管理者である必要があります。 GitHub では、1 つのリポジトリに対してのみデプロイキーを使用できます。
 
-プロジェクトで複数のリポジトリにアクセスする場合は、自動ユーザーアカウントに SSH キーを接続できます。 このアカウントは人間が使用するものではないので、[ マシンユーザー ](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys) と呼ばれます。 コンピューターアカウントを共同作業者として追加するか、リポジトリへのアクセス権を持つチームにコンピューターユーザーを追加します。
+プロジェクトで複数のリポジトリにアクセスする場合は、自動ユーザーアカウントに SSH キーを接続できます。 このアカウントは人間が使用するものではないので、[&#x200B; マシンユーザー &#x200B;](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys) と呼ばれます。 コンピューターアカウントを共同作業者として追加するか、リポジトリへのアクセス権を持つチームにコンピューターユーザーを追加します。
 
 >[!INFO]
 >
@@ -248,7 +248,7 @@ GitHub では、デプロイキーはデフォルトで読み取り専用です�
 
 >[!WARNING]
 >
->**使用しない** ステージング環境と実稼動環境を保護するために、次の方法を使用します。 これにより、Fastly のキャッシュが中断されます。 Adobe Commerce用 Fastly CDN で利用可能な [ ブロッキング ](../cdn/fastly-vcl-blocking.md) 機能を使用します。
+>**使用しない** ステージング環境と実稼動環境を保護するために、次の方法を使用します。 これにより、Fastly のキャッシュが中断されます。 Adobe Commerce用 Fastly CDN で利用可能な [&#x200B; ブロッキング &#x200B;](../cdn/fastly-vcl-blocking.md) 機能を使用します。
 
 **環境を保護するには**:
 

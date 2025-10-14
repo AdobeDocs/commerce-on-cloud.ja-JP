@@ -66,7 +66,7 @@ stage:
 - **Default**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4 以降
 
-コードを変更せずに、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントが失敗した場合、この変数を使用して、ログの精度をグローバルに高めることができます。 [ ログレベル ](log-handlers.md#log-levels) を参照してください。 ログハンドラーの `min_level` の値は、この設定を上書きします。
+コードを変更せずに、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントが失敗した場合、この変数を使用して、ログの精度をグローバルに高めることができます。 [&#x200B; ログレベル &#x200B;](log-handlers.md#log-levels) を参照してください。 ログハンドラーの `min_level` の値は、この設定を上書きします。
 
 ```yaml
 stage:
@@ -85,7 +85,7 @@ stage:
 
 ユーザー（SCD）から要求されたときに静的コンテンツを生成できるようにします。 静的コンテンツは、デプロイメント時間が短縮されるので、開発およびテストワークフローに最適です。
 
-[`post_deploy` フックを使用してキャッシュをプリロードすると ](../application/hooks-property.md) サイトのダウンタイムが削減されます。 キャッシュウォーミングは、[!DNL Cloud Console] にステージング環境と実稼動環境が含まれている Pro プロジェクトと、スタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND` 環境変数を `.magento.env.yaml` ファイルの `global` ステージに追加します。
+[`post_deploy` フックを使用してキャッシュをプリロードすると &#x200B;](../application/hooks-property.md) サイトのダウンタイムが削減されます。 キャッシュウォーミングは、[!DNL Cloud Console] にステージング環境と実稼動環境が含まれている Pro プロジェクトと、スタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND` 環境変数を `.magento.env.yaml` ファイルの `global` ステージに追加します。
 
 ```yaml
 stage:
@@ -184,7 +184,7 @@ stage:
 
 >[!WARNING]
 >
->Adobe Commerceでサポートされているブラウザーがサポートしなくなったため、`ALLOW-FROM <uri>` オプションは非推奨（廃止予定）になりました。 [ ブラウザー互換性 ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility) を参照してください。
+>Adobe Commerceでサポートされているブラウザーがサポートしなくなったため、`ALLOW-FROM <uri>` オプションは非推奨（廃止予定）になりました。 [&#x200B; ブラウザー互換性 &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility) を参照してください。
 
 `X_FRAME_CONFIGURATION` 環境変数を `.magento.env.yaml` ファイルの `global` ステージに追加します。
 

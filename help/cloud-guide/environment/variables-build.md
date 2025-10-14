@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ビルド変数
 
-次の _ビルド_ 変数は、ビルドフェーズでのアクションを制御し、[ グローバル変数 ](variables-global.md) の値を継承および上書きできます。 `.magento.env.yaml` ファイルの `build` のステージに、次の変数を挿入します。
+次の _ビルド_ 変数は、ビルドフェーズでのアクションを制御し、[&#x200B; グローバル変数 &#x200B;](variables-global.md) の値を継承および上書きできます。 `.magento.env.yaml` ファイルの `build` のステージに、次の変数を挿入します。
 
 ```yaml
 stage:
@@ -68,7 +68,7 @@ stage:
       - MC-456345
 ```
 
-[ パッチの適用 ](../development/apply-patches.md) を参照してください。
+[&#x200B; パッチの適用 &#x200B;](../development/apply-patches.md) を参照してください。
 
 ## `SCD_COMPRESSION_LEVEL`
 
@@ -103,7 +103,7 @@ stage:
 
 ビルドフェーズで親テーマの静的コンテンツが生成されないようにするには、`true` に設定します。
 
-親テーマの静的コンテンツを生成してもサイトのデプロイメントに影響を与えたり、不要なサイトのダウンタイムを引き起こしたりしないように、ビルドフェーズで `SCD_NO_PARENT: false` を設定します。 [ 静的コンテンツのデプロイメント ](../deploy/static-content.md) を参照してください。
+親テーマの静的コンテンツを生成してもサイトのデプロイメントに影響を与えたり、不要なサイトのダウンタイムを引き起こしたりしないように、ビルドフェーズで `SCD_NO_PARENT: false` を設定します。 [&#x200B; 静的コンテンツのデプロイメント &#x200B;](../deploy/static-content.md) を参照してください。
 
 ```yaml
 stage:
@@ -185,7 +185,7 @@ stage:
 - **デフォルト**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0 以降
 
-静的コンテンツの [ デプロイメント戦略 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズします。 [ 静的表示ファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
+静的コンテンツの [&#x200B; デプロイメント戦略 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズします。 [&#x200B; 静的表示ファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_ を使用します。
 
@@ -212,7 +212,7 @@ stage:
     SCD_THREADS: 2
 ```
 
-デプロイメント時間をさらに短縮するには、`scd-dump` コマンドで [ 設定管理 ](../store/store-settings.md) を使用して、静的デプロイメントをビルドフェーズに移行します。
+デプロイメント時間をさらに短縮するには、`scd-dump` コマンドで [&#x200B; 設定管理 &#x200B;](../store/store-settings.md) を使用して、静的デプロイメントをビルドフェーズに移行します。
 
 ## `SCD_USE_BALER`
 
@@ -257,7 +257,7 @@ stage:
 
 [Configuration Management](../store/store-settings.md) を使用してビルドフェーズで既に静的コンテンツをデプロイしている場合は、迅速なビルドテストのために静的コンテンツのデプロイメントをスキップできます。
 
-ビルドフェーズでは、静的コンテンツのビルドがビルドフェーズ中に実行され、プロセスがサイトのデプロイメントに影響を与えず、不要なサイトのダウンタイムを引き起こさないように、`SKIP_SCD: false` を設定します。 [ 静的コンテンツのデプロイメント ](../deploy/static-content.md) を参照してください。
+ビルドフェーズでは、静的コンテンツのビルドがビルドフェーズ中に実行され、プロセスがサイトのデプロイメントに影響を与えず、不要なサイトのダウンタイムを引き起こさないように、`SKIP_SCD: false` を設定します。 [&#x200B; 静的コンテンツのデプロイメント &#x200B;](../deploy/static-content.md) を参照してください。
 
 ```yaml
 stage:

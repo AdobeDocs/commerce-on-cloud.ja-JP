@@ -15,21 +15,21 @@ ht-degree: 0%
 
 ストア設定は、管理 **ストア**/**設定**/**設定** セクションの設定を参照し、設定のタイプに基づいてデプロイメント設定ファイルに格納されます。
 
-- `app/etc/config.php` - ストア、web サイト、モジュールまたは拡張機能、静的ファイル最適化、静的コンテンツのデプロイメントに関連するシステム値の設定。 [Configuration Guide _の_ config.php リファレンス ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=ja) を参照してください。
-- `app/etc/env.php` - ソース管理に保管する必要があるシステム固有の上書きと機密設定の値 _NOT_。 [Configuration Guide _の_ env.php リファレンス ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=ja) を参照してください。
+- `app/etc/config.php` - ストア、web サイト、モジュールまたは拡張機能、静的ファイル最適化、静的コンテンツのデプロイメントに関連するシステム値の設定。 [Configuration Guide _の_ config.php リファレンス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=ja) を参照してください。
+- `app/etc/env.php` - ソース管理に保管する必要があるシステム固有の上書きと機密設定の値 _NOT_。 [Configuration Guide _の_ env.php リファレンス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=ja) を参照してください。
 
 >[!NOTE]
 >
->クラウドインフラストラクチャー上のAdobe Commerceでは、実稼動モードとメンテナンスモードのみをサポートしているので、管理者から **詳細**/**開発者** セクションにアクセスできません。 構成管理タスクを完了するには、[ 環境管理者権限 ](../project/user-access.md) が必要です。 [ 環境変数 ](../environment/configure-env-yaml.md) を使用して、追加設定を指定できます。
+>クラウドインフラストラクチャー上のAdobe Commerceでは、実稼動モードとメンテナンスモードのみをサポートしているので、管理者から **詳細**/**開発者** セクションにアクセスできません。 構成管理タスクを完了するには、[&#x200B; 環境管理者権限 &#x200B;](../project/user-access.md) が必要です。 [&#x200B; 環境変数 &#x200B;](../environment/configure-env-yaml.md) を使用して、追加設定を指定できます。
 
-構成管理では、パイプラインデプロイメントを使用して、ダウンタイムを最小限に抑えながら、環境全体で一貫性のあるストア設定をデプロイする方法を提供します。 クラウドインフラストラクチャー上のAdobe Commerce プロジェクトには、ビルドサーバー、ビルドおよびデプロイスクリプト、デプロイメント環境が含まれ、これらは [ パイプラインのデプロイメント方法 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ja) を念頭に置いて設計されています。
+構成管理では、パイプラインデプロイメントを使用して、ダウンタイムを最小限に抑えながら、環境全体で一貫性のあるストア設定をデプロイする方法を提供します。 クラウドインフラストラクチャー上のAdobe Commerce プロジェクトには、ビルドサーバー、ビルドおよびデプロイスクリプト、デプロイメント環境が含まれ、これらは [&#x200B; パイプラインのデプロイメント方法 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ja) を念頭に置いて設計されています。
 
 ## 構成オーバーライド スキーム
 
 すべてのシステム設定は、次のオーバーライドスキームに従ってビルドおよびデプロイフェーズで設定されます。
 
 1. 環境変数が存在する場合、カスタム設定を使用し、デフォルト設定を無視します。
-1. 環境変数が存在しない場合は、[`.magento.app.yaml` ファイルの `MAGENTO_CLOUD_RELATIONSHIPS` の名前と値のペアから設定を使用します ](../application/configure-app-yaml.md)。 デフォルトの設定を無視します。
+1. 環境変数が存在しない場合は、[`.magento.app.yaml` ファイルの `MAGENTO_CLOUD_RELATIONSHIPS` の名前と値のペアから設定を使用します &#x200B;](../application/configure-app-yaml.md)。 デフォルトの設定を無視します。
 1. 環境変数が存在せず、`MAGENTO_CLOUD_RELATIONSHIPS` に名前と値のペアが含まれていない場合は、カスタマイズした設定をすべて削除し、デフォルト設定の値を使用します。
 
 要約すると、環境変数は他のすべての値を上書きします。
@@ -42,9 +42,9 @@ ht-degree: 0%
 
 | 優先度 | 設定 <br> メソッド | 説明 |
 | -------- | ------------------------ | ----------- |
-| 1 | [!DNL Cloud Console]<br> 環境変数 | [!DNL Cloud Console] の環境設定の「_変数_」タブから追加された値。 ここで、機密性の高い設定や環境固有の設定の値を指定します。 ここで指定した設定は、管理者から編集できません。 [ 環境設定変数 ](../project/overview.md#configure-environment) を参照してください。 |
-| 2 | `.magento.app.yaml` | `.magento.app.yaml` ファイルの `variables` セクションに追加された値。 ここで値を指定し、すべての環境で一貫した設定を行います。 **`.magento.app.yaml` ファイル内で機密性の高い値を指定しないでください。[ アプリケーション設定 ](../application/configure-app-yaml.md) を参照してくださ**。 |
-| 3 | `app/etc/env.php` | ここに格納された環境固有の設定値は、`app:config:dump` コマンドを使用して追加します。 環境変数または CLI を使用して、システム固有の機密性の高い値を設定します。 [ 機密データ ](#sensitive-data) を参照してください。 `env.php` ファイルはソース管理に含まれていま **ん**。 |
+| 1 | [!DNL Cloud Console]<br> 環境変数 | [!DNL Cloud Console] の環境設定の「_変数_」タブから追加された値。 ここで、機密性の高い設定や環境固有の設定の値を指定します。 ここで指定した設定は、管理者から編集できません。 [&#x200B; 環境設定変数 &#x200B;](../project/overview.md#configure-environment) を参照してください。 |
+| 2 | `.magento.app.yaml` | `.magento.app.yaml` ファイルの `variables` セクションに追加された値。 ここで値を指定し、すべての環境で一貫した設定を行います。 **`.magento.app.yaml` ファイル内で機密性の高い値を指定しないでください。[&#x200B; アプリケーション設定 &#x200B;](../application/configure-app-yaml.md) を参照してくださ**。 |
+| 3 | `app/etc/env.php` | ここに格納された環境固有の設定値は、`app:config:dump` コマンドを使用して追加します。 環境変数または CLI を使用して、システム固有の機密性の高い値を設定します。 [&#x200B; 機密データ &#x200B;](#sensitive-data) を参照してください。 `env.php` ファイルはソース管理に含まれていま **ん**。 |
 | 4 | `app/etc/config.php` | ここに格納された値は、`app:config:dump` コマンドを使用して追加されます。 共有設定値が `config.php` に追加されます。 管理者から、または CLI を使用して共有構成を設定します。 `config.php` ファイルはソース管理に含まれます。 |
 | 5 | データベース | ここに格納された値は、管理者の設定によって追加されます。 上記の方法のいずれかを使用して設定された設定は、ロック（グレー表示）され、管理者から編集できません。 |
 | 6 | `config.xml` | 多くの設定では、モジュールの `config.xml` ファイルにデフォルト値が設定されています。 上記のいずれかの方法で設定された値がAdobe Commerceで見つからない場合、設定されていれば、デフォルト値にフォールバックします。 |
@@ -69,13 +69,13 @@ ht-degree: 0%
 
 `bin/magento app:config:dump` コマンドを使用すると、機密性の高い設定がすべて `app/etc/env.php` ファイルに書き出されます。 CLI コマンドを使用して機密性の高い値を設定できます：`bin/magento config:sensitive:set`。 [2&rbrace;Commerce PHP Extensions](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/) ガイドの &lbrace;Sensitive and environment-specific settings _を参照して、コンフィギュレーション設定を機密またはシステム固有として指定する方法を確認してください。_
 
-_設定ガイド_ の [ 機密またはシステム固有の設定 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=ja) のリストを参照してください。
+_設定ガイド_ の [&#x200B; 機密またはシステム固有の設定 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=ja) のリストを参照してください。
 
 ### SCD パフォーマンス
 
-ストアのサイズによっては、デプロイする静的コンテンツファイルが多数ある場合があります。 通常、静的コンテンツのデプロイは、アプリケーションがメンテナンスモードのデプロイ段階でおこなわれます。 最も最適な設定は、ビルドフェーズで静的コンテンツを生成することです。 [ デプロイ方法の選択 ](../deploy/static-content.md) を参照してください。
+ストアのサイズによっては、デプロイする静的コンテンツファイルが多数ある場合があります。 通常、静的コンテンツのデプロイは、アプリケーションがメンテナンスモードのデプロイ段階でおこなわれます。 最も最適な設定は、ビルドフェーズで静的コンテンツを生成することです。 [&#x200B; デプロイ方法の選択 &#x200B;](../deploy/static-content.md) を参照してください。
 
-設定のダンプ後に設定管理を有効にした場合は、SCD_*変数をデプロイステージからビルドステージに移動し、ビルドフェーズ中に静的コンテンツの生成を適切に有効にする必要があります。 [ 環境変数 ](../environment/configure-env-yaml.md#environment-variables) を参照してください。
+設定のダンプ後に設定管理を有効にした場合は、SCD_*変数をデプロイステージからビルドステージに移動し、ビルドフェーズ中に静的コンテンツの生成を適切に有効にする必要があります。 [&#x200B; 環境変数 &#x200B;](../environment/configure-env-yaml.md#environment-variables) を参照してください。
 
 **設定管理前**:
 
@@ -108,13 +108,13 @@ SCD_*変数をビルドステージに移動します。
 
 >[!NOTE]
 >
->静的ファイルをデプロイする前に、ビルドフェーズとデプロイフェーズで、GZIP を使用して静的コンテンツを圧縮します。 静的ファイルを圧縮すると、サーバーの負荷が軽減され、サイトのパフォーマンスが向上します。 ファイル圧縮のカスタマイズまたは無効化については、[ ビルドオプション ](../environment/variables-build.md) を参照してください。
+>静的ファイルをデプロイする前に、ビルドフェーズとデプロイフェーズで、GZIP を使用して静的コンテンツを圧縮します。 静的ファイルを圧縮すると、サーバーの負荷が軽減され、サイトのパフォーマンスが向上します。 ファイル圧縮のカスタマイズまたは無効化については、[&#x200B; ビルドオプション &#x200B;](../environment/variables-build.md) を参照してください。
 
 ## 設定を管理する手順
 
 以下に、このプロセスの概要を示します。
 
-![ スターター設定管理の概要 ](../../assets/starter/configuration-management-flow.png)
+![&#x200B; スターター設定管理の概要 &#x200B;](../../assets/starter/configuration-management-flow.png)
 
 **ストアを設定し、設定ファイルを生成するには**:
 
@@ -173,7 +173,7 @@ env.php
 ...
 ```
 
-古い設定では `app/etc/config.local.php` ファイルを使用していました。 [ 古い設定の移行 ](#migrate-older-configurations) を参照してください。
+古い設定では `app/etc/config.local.php` ファイルを使用していました。 [&#x200B; 古い設定の移行 &#x200B;](#migrate-older-configurations) を参照してください。
 
 **設定ファイルを復元するには**:
 
@@ -231,7 +231,7 @@ Cloud infrastructure 2.2 以降でAdobe Commerceにアップグレードする�
 >
 >このプロセス **上書き** は、ストアの設定です。環境に同じストアが含まれている場合にのみ、次の操作を行います。
 
-1. 統合環境で、[`.magento.env.yaml` ファイル ](../environment/configure-env-yaml.md) を使用して `SCD_ON_DEMAND` 変数を有効にします。
+1. 統合環境で、[`.magento.env.yaml` ファイル &#x200B;](../environment/configure-env-yaml.md) を使用して `SCD_ON_DEMAND` 変数を有効にします。
 
 1. 管理者を使用して、必要なロケールを追加します。
 

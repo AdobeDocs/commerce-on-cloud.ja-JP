@@ -100,7 +100,7 @@ https://refactorcss-oy3m2pq-mswy7hzcuhcjw.us.magentosite.cloud/
 
 >[!NOTE]
 >
->クラウドプロジェクトが複数のストアをサポートしている場合は、[ 複数の web サイトまたはストア ](../store/multiple-sites.md) のルート設定手順に従います。
+>クラウドプロジェクトが複数のストアをサポートしている場合は、[&#x200B; 複数の web サイトまたはストア &#x200B;](../store/multiple-sites.md) のルート設定手順に従います。
 
 ### 末尾のスラッシュ
 
@@ -167,7 +167,7 @@ TLS 経由ですべてのページを提供します。 この設定では、次
       upstream: "mymagento:http"
   ```
 
-- ステージング環境と実稼動環境の場合は、管理 UI から「[Fastly で TLS を強制 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ja)」オプションを有効にします。 このオプションを使用すると、Fastly は HTTPS へのリダイレクトを処理するので、`routes.yaml` 設定を更新する必要はありません。
+- ステージング環境と実稼動環境の場合は、管理 UI から「[Fastly で TLS を強制 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ja)」オプションを有効にします。 このオプションを使用すると、Fastly は HTTPS へのリダイレクトを処理するので、`routes.yaml` 設定を更新する必要はありません。
 
 ## ルートオプション
 
@@ -177,9 +177,9 @@ TLS 経由ですべてのページを提供します。 この設定では、次
 | ---------------- | ----------- |
 | `type: upstream` | アプリケーションを提供します。 また、（`.magento.app.yaml` で定義された）アプリケーションの名前の後に `:http` エンドポイントを指定する `upstream` プロパティもあります。 |
 | `type: redirect` | 別のルートにリダイレクトします。 その後に `to` プロパティが続きます。これは、テンプレートで識別される別のルートへの HTTP リダイレクトです。 |
-| `cache:` | [ ルートのキャッシュ ](caching.md) を制御します。 |
-| `redirects:` | コントロール [ リダイレクトルール ](redirects.md)。 |
-| `ssi:` | [ サーバーサイドインクルード ](server-side-includes.md) の有効化を制御します。 |
+| `cache:` | [&#x200B; ルートのキャッシュ &#x200B;](caching.md) を制御します。 |
+| `redirects:` | コントロール [&#x200B; リダイレクトルール &#x200B;](redirects.md)。 |
+| `ssi:` | [&#x200B; サーバーサイドインクルード &#x200B;](server-side-includes.md) の有効化を制御します。 |
 
 ## シンプルなルート
 
@@ -314,7 +314,7 @@ Magento Cloud Routes:
 
 ## リダイレクトとキャッシュ
 
-[ リダイレクト ](redirects.md) で詳しく説明しているように、_部分リダイレクト_ などの複雑なリダイレクトルールを管理したり、ルートベースの [ キャッシュ ](caching.md) のルールを指定したりできます。
+[&#x200B; リダイレクト &#x200B;](redirects.md) で詳しく説明しているように、_部分リダイレクト_ などの複雑なリダイレクトルールを管理したり、ルートベースの [&#x200B; キャッシュ &#x200B;](caching.md) のルールを指定したりできます。
 
 ```yaml
 https://www.{default}/:

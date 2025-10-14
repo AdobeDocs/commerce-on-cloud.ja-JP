@@ -14,15 +14,15 @@ ht-degree: 0%
 [Cloud Patches for Commerce](https://github.com/magento/magento-cloud-patches) および [Quality Patches Tool](https://github.com/magento/quality-patches) は、インストールされているAdobe Commerce アプリケーションにパッチを提供します。
 
 - Commerce用クラウドパッチ パッケージは、重要な修正を含む必要なパッチを提供します
-- 品質パッチは、後方互換性のない変更を含まない [ 個別パッチ ](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=ja#individual-patch) として、オプションの影響の少ない品質修正を提供します
+- 品質パッチは、後方互換性のない変更を含まない [&#x200B; 個別パッチ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=ja#individual-patch) として、オプションの影響の少ない品質修正を提供します
 
-リリース済みのパッチの完全なリストを確認するには、_Commerce運用ツールガイド_ の [ 使用可能なパッチ ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja) を参照してください。
+リリース済みのパッチの完全なリストを確認するには、_Commerce運用ツールガイド_ の [&#x200B; 使用可能なパッチ &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja) を参照してください。
 
 どちらのパッケージも、すべてのAdobe Commerce バージョンとクラウド環境の統合を強化し、重要な修正、オプションの修正、カスタムの修正の迅速な配信をサポートします。 これらのパッケージを使用して、Commerceで使用可能な個々のパッチに関する一般情報を適用、元に戻し、表示できます。
 
 >[!TIP]
 >
->Magento Open SourceプロジェクトとAdobe Commerce プロジェクトのスタンドアロンパッケージとして、[ 品質向上パッチツール ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja) とCommerce用クラウドパッチを使用できます。 クラウド以外のプロジェクトには、品質向上パッチツールを使用することをお勧めします。
+>Magento Open SourceプロジェクトとAdobe Commerce プロジェクトのスタンドアロンパッケージとして、[&#x200B; 品質向上パッチツール &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja) とCommerce用クラウドパッチを使用できます。 クラウド以外のプロジェクトには、品質向上パッチツールを使用することをお勧めします。
 
 リモート環境に変更をデプロイすると、`ece-tools` パッケージは `magento/magento-cloud-patches` と `magento/quality-patches` を使用して保留中のパッチをチェックし、次の順序で自動的に適用します。
 
@@ -32,13 +32,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`ece-tools` パッケージまたはCommerce用クラウド修正プログラム パッケージを更新すると、次回プロジェクトをデプロイする際に必要な最新の修正プログラムが適用されます。または、`ece-patches apply` CLI コマンドを使用して即座に修正プログラムをデプロイし、クラウド環境を再デプロイすることもできます。 デプロイメントプロセス中は [ 必須パッチ ](https://github.com/magento/magento-cloud-patches/tree/develop/patches) をスキップすることはできません。
+>`ece-tools` パッケージまたはCommerce用クラウド修正プログラム パッケージを更新すると、次回プロジェクトをデプロイする際に必要な最新の修正プログラムが適用されます。または、`ece-patches apply` CLI コマンドを使用して即座に修正プログラムをデプロイし、クラウド環境を再デプロイすることもできます。 デプロイメントプロセス中は [&#x200B; 必須パッチ &#x200B;](https://github.com/magento/magento-cloud-patches/tree/develop/patches) をスキップすることはできません。
 
 ## 前提条件
 
 {{upgrade-tip}}
 
-Quality Patches Tool は、Cloud Patches for Commerceおよび `ece-tools` パッケージの依存関係です。 最新のパッチを適用するには、[ 最新バージョンの ECE-Tools](../dev-tools/update-package.md) がインストールされている必要があります。 ECE-Tools の最低限必要なバージョンは 2002.1.2 です。
+Quality Patches Tool は、Cloud Patches for Commerceおよび `ece-tools` パッケージの依存関係です。 最新のパッチを適用するには、[&#x200B; 最新バージョンの ECE-Tools](../dev-tools/update-package.md) がインストールされている必要があります。 ECE-Tools の最低限必要なバージョンは 2002.1.2 です。
 
 ## 使用可能なパッチとステータスの表示
 
@@ -239,7 +239,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 ## クラウド以外のプロジェクトへのパッチの適用
 
-Magento Open SourceプロジェクトとAdobe Commerce プロジェクトには、[ 品質向上パッチツール ](https://github.com/magento/quality-patches) を使用します。
+Magento Open SourceプロジェクトとAdobe Commerce プロジェクトには、[&#x200B; 品質向上パッチツール &#x200B;](https://github.com/magento/quality-patches) を使用します。
 
 ## ローカル環境でのパッチの復帰
 

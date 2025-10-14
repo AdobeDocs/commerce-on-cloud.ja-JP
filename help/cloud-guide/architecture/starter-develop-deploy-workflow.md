@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # スタータープロジェクトワークフロー
 
-Adobe Commerce on cloud インフラストラクチャには、実稼動環境用の `master` ブランチを持つ単一の Git リポジトリーが含まれています。このリポジトリーは分岐して、テストおよび開発作業用のステージング環境と複数の統合環境を作成できます。 実稼動サーバーの `master` 環境を含め、最大 4 つのアクティブな環境を持つことができます。 概要については、[ スターターアーキテクチャ ](starter-architecture.md) を参照してください。
+Adobe Commerce on cloud インフラストラクチャには、実稼動環境用の `master` ブランチを持つ単一の Git リポジトリーが含まれています。このリポジトリーは分岐して、テストおよび開発作業用のステージング環境と複数の統合環境を作成できます。 実稼動サーバーの `master` 環境を含め、最大 4 つのアクティブな環境を持つことができます。 概要については、[&#x200B; スターターアーキテクチャ &#x200B;](starter-architecture.md) を参照してください。
 
 お使いの環境では、[!UICONTROL Development > Staging > Production] のワークフローに従って、サイトを開発およびデプロイします。
 
@@ -29,20 +29,20 @@ Adobe Commerce on cloud インフラストラクチャには、実稼動環境�
 
 開発ワークフローには以下が含まれます。
 
-- `master` ージから [ クローンとブランチ ](#clone-and-branch) を作成して、`staging` 開発ブランチを作成します。
-- [ コードを開発 ](#develop-code) し、開発ブランチで拡張機能をローカルにインストール（[!DNL Composer] のアップデートを含む）
+- `master` ージから [&#x200B; クローンとブランチ &#x200B;](#clone-and-branch) を作成して、`staging` 開発ブランチを作成します。
+- [&#x200B; コードを開発 &#x200B;](#develop-code) し、開発ブランチで拡張機能をローカルにインストール（[!DNL Composer] のアップデートを含む）
 - ストアと拡張機能の設定 [&#128279;](#configure-store) 設定）
-- [ 設定の生成 ](#generate-configuration-management-files) 管理ファイル
-- [ プッシュコード ](#push-code-and-test) と、ビルドして `staging` 環境および `production` 環境にデプロイするための設定
+- [&#x200B; 設定の生成 &#x200B;](#generate-configuration-management-files) 管理ファイル
+- [&#x200B; プッシュコード &#x200B;](#push-code-and-test) と、ビルドして `staging` 環境および `production` 環境にデプロイするための設定
 
-![ ワークフローの開発とデプロイ ](../../assets/starter/workflow.png)
+![&#x200B; ワークフローの開発とデプロイ &#x200B;](../../assets/starter/workflow.png)
 
 また、コードとストアデータの開発とテストに役立つオプションの手順もあります。
 
-- ストアへの [ サンプルデータのインストール ](#optional-install-sample-data)
-- [ 本番ストア・データのプル配信 ](#optional-pull-production-data) 環境への取り込み
+- ストアへの [&#x200B; サンプルデータのインストール &#x200B;](#optional-install-sample-data)
+- [&#x200B; 本番ストア・データのプル配信 &#x200B;](#optional-pull-production-data) 環境への取り込み
 
-このプロセスは、[ ローカル開発者ワークスペース ](../development/overview.md) が設定されていることを前提としています。
+このプロセスは、[&#x200B; ローカル開発者ワークスペース &#x200B;](../development/overview.md) が設定されていることを前提としています。
 
 ### クローンとブランチ
 
@@ -74,7 +74,7 @@ Cloud CLI `branch` コマンドの形式は次のとおりです。
 magento-cloud environment:branch <environment-name> <parent-environment-ID>
 ```
 
-![マスターの分岐 ](../../assets/starter/branching.png)
+![マスターの分岐 &#x200B;](../../assets/starter/branching.png)
 
 ### コードの開発
 
@@ -95,7 +95,7 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 >
 >ローカル ワークステーションの設定は、まだ完了していません。
 
-![ ローカルからのコードのプッシュ ](../../assets/starter/push-code.png)
+![&#x200B; ローカルからのコードのプッシュ &#x200B;](../../assets/starter/push-code.png)
 
 ### ストアの設定
 
@@ -103,19 +103,19 @@ magento-cloud environment:branch <environment-name> <parent-environment-ID>
 
 設定に関する最適な情報については、Adobe Commerceのドキュメントとインストールされている拡張機能を参照してください。 開始に役立つリンクとアイデアを次に示します。
 
-- クラウド内の特定のベストプラクティスに関する [ ストア設定のベストプラクティス ](../store/best-practices.md)
-- ストア管理アクセス、名前、言語、通貨、ブランディング、サイト、ストア表示などの [ 基本設定 ](https://experienceleague.adobe.com/ja/docs/commerce-admin/start/setup/store-details)
-- [ テーマ ](https://experienceleague.adobe.com/ja/docs/commerce-admin/content-design/content-menu#design-features):CSS やレイアウトを含むサイトやストアのルックアンドフィール用
-- 役割、ツール、通知およびデータベースの暗号化キーの [ システム設定 ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/guide-overview)
+- クラウド内の特定のベストプラクティスに関する [&#x200B; ストア設定のベストプラクティス &#x200B;](../store/best-practices.md)
+- ストア管理アクセス、名前、言語、通貨、ブランディング、サイト、ストア表示などの [&#x200B; 基本設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/start/setup/store-details)
+- [&#x200B; テーマ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/content-design/content-menu#design-features):CSS やレイアウトを含むサイトやストアのルックアンドフィール用
+- 役割、ツール、通知およびデータベースの暗号化キーの [&#x200B; システム設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/guide-overview)
 - ドキュメントを使用した拡張機能の設定
 
-ストアの設定だけでなく、複数のサイトやストア、設定されたサービスなどをさらに設定できます。 詳しくは [ ストアの設定 ](../store/overview.md) を参照してください。
+ストアの設定だけでなく、複数のサイトやストア、設定されたサービスなどをさらに設定できます。 詳しくは [&#x200B; ストアの設定 &#x200B;](../store/overview.md) を参照してください。
 
 ### 構成管理ファイルの生成
 
 Adobe Commerceに精通しているユーザーは、開発環境のデータベースからステージング環境および実稼動環境に設定を取得する方法を気にする必要があります。 以前は、すべての設定を紙またはファイルにコピーしてから、手動でその設定を他の環境に適用する必要がありました。 または、データベースをダンプし、そのデータを別の環境にプッシュした可能性があります。
 
-クラウドインフラストラクチャー上のAdobe Commerceには、お使いの環境からファイルに設定を書き出す 2 つの [ 設定 ](../store/store-settings.md) 管理」コマンドが用意されています。 これらのコマンドは、**cloud infrastructure 2.2 以降のAdobe Commerce** でのみ使用できます。
+クラウドインフラストラクチャー上のAdobe Commerceには、お使いの環境からファイルに設定を書き出す 2 つの [&#x200B; 設定 &#x200B;](../store/store-settings.md) 管理」コマンドが用意されています。 これらのコマンドは、**cloud infrastructure 2.2 以降のAdobe Commerce** でのみ使用できます。
 
 - `php .vendor/bin/ece-tools config:dump` – 入力またはデフォルトから変更した構成設定のみを構成ファイルにエクスポートします。 _推奨_。
 - `php bin/magento app:config:dump` – 変更された設定とデフォルト設定を含むすべての設定を構成ファイルにエクスポートします。
@@ -134,9 +134,9 @@ Adobe Commerceを設定した統合環境にファイルを生成します。 �
 
 Adobe Commerce バージョン 2.2 以降を使用している場合、Configuration Management コマンドには、PayPal モジュールのサンドボックス資格情報などの機密データを保護する追加機能が用意されています。 書き出しプロセス中に、機密データを含むすべての値が別々の設定ファイル（`app/etc/` ディレクトリ内の `env.php`）に書き出されます。 このファイルはローカル環境に残り、コードを別のブランチにプッシュしてもコピーされません。 また、クラウドインフラストラクチャバージョン上のすべてのAdobe Commerceで、CLI コマンドを使用して環境変数を作成することもできます。
 
-![ 生成される環境変数 ](../../assets/starter/env-variables.png)
+![&#x200B; 生成される環境変数 &#x200B;](../../assets/starter/env-variables.png)
 
-[ 設定の管理 ](../store/store-settings.md) を参照してください。
+[&#x200B; 設定の管理 &#x200B;](../store/store-settings.md) を参照してください。
 
 ### コードとテストのプッシュ
 
@@ -146,33 +146,33 @@ Adobe Commerce バージョン 2.2 以降を使用している場合、Configura
 
 ストア URL、管理者 URL、SSH を使用して、この環境に直接アクセスできます。 これらの環境には、web サーバー、データベース、設定済みサービスが含まれます。 準備が整ったら、ステージング環境でデプロイとテストを開始できます。
 
-詳しくは、[ デプロイメントワークフロー ](#deployment-workflow) を参照してください。
+詳しくは、[&#x200B; デプロイメントワークフロー &#x200B;](#deployment-workflow) を参照してください。
 
 ### オプション：サンプル・データのインストール
 
-ストアの開発時にサンプルデータが必要な場合は、サンプルデータをインストールできます。 このデータは、顧客、製品、その他のデータを含む、アクティブなストアをシミュレートします。 このサンプルデータは、プロジェクトの作成時にクラウドインフラストラクチャテンプレートの「空白のサイト」Adobe Commerceで最適に機能します。 ベストプラクティスとして、運用を開始する前にサンプルデータを削除してください。 [ オプションのサンプルデータをインストールする ](../test/sample-data.md) を参照してください。
+ストアの開発時にサンプルデータが必要な場合は、サンプルデータをインストールできます。 このデータは、顧客、製品、その他のデータを含む、アクティブなストアをシミュレートします。 このサンプルデータは、プロジェクトの作成時にクラウドインフラストラクチャテンプレートの「空白のサイト」Adobe Commerceで最適に機能します。 ベストプラクティスとして、運用を開始する前にサンプルデータを削除してください。 [&#x200B; オプションのサンプルデータをインストールする &#x200B;](../test/sample-data.md) を参照してください。
 
-![ オプションのサンプルデータをインストールする ](../../assets/starter/sample-data.png)
+![&#x200B; オプションのサンプルデータをインストールする &#x200B;](../../assets/starter/sample-data.png)
 
 ### オプション：実稼動データの取り込み
 
 すべての製品、カタログ、サイトコンテンツなどを `production` 環境に直接追加します。 このデータを実稼動環境に追加すると、更新された価格、クーポン、在庫在庫、販売のお知らせ、今後のオファーに関する情報などを顧客に提供できます。 このデータには、ローカル開発ブランチで設定した拡張機能の設定は含まれていません。
 
-機能を開発したり、拡張機能を追加したり、テーマをデザインしたりする際に、実際のデータを操作できると便利です。 いつでも、実稼動環境から [ データベースダンプを作成 ](../storage/database-dump.md) し、必要に応じてステージング環境や統合環境にプッシュできます。
+機能を開発したり、拡張機能を追加したり、テーマをデザインしたりする際に、実際のデータを操作できると便利です。 いつでも、実稼動環境から [&#x200B; データベースダンプを作成 &#x200B;](../storage/database-dump.md) し、必要に応じてステージング環境や統合環境にプッシュできます。
 
 実稼働データをテストデータとしてエクスポートし、ステージング環境と統合環境で使用できるようにするには、次の手順に従います。
 
-- [Adobe Commerce暗号化キーを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) お客様およびストアデータの保護されたバックアップを書き出す場合は、サポートユーティリティを実行し、CLI コマンドを実行します（推奨）。
+- [Adobe Commerce暗号化キーを使用して &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) お客様およびストアデータの保護されたバックアップを書き出す場合は、サポートユーティリティを実行し、CLI コマンドを実行します（推奨）。
 
-- [ データ収集 ](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/support#data-collector) データを生成および書き出すためのツール
+- [&#x200B; データ収集 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/support#data-collector) データを生成および書き出すためのツール
 
-このデータを移行するには、[ 静的ファイルおよびデータの移行およびデプロイ ](../deploy/staging-production.md#migrate-static-files) を参照してください。
+このデータを移行するには、[&#x200B; 静的ファイルおよびデータの移行およびデプロイ &#x200B;](../deploy/staging-production.md#migrate-static-files) を参照してください。
 
-![ 本番データのプル処理とサニタイズ ](../../assets/starter/data-code-process.png)
+![&#x200B; 本番データのプル処理とサニタイズ &#x200B;](../../assets/starter/data-code-process.png)
 
 >[!NOTE]
 >
->データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [ サポートユーティリティの使用 ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) または顧客データをスクラブするスクリプトの開発など、いくつかのオプションがあります。
+>データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [&#x200B; サポートユーティリティの使用 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) または顧客データをスクラブするスクリプトの開発など、いくつかのオプションがあります。
 
 >[!WARNING]
 >
@@ -210,7 +210,7 @@ Adobe Commerce バージョン 2.2 以降を使用している場合、Configura
 
 完了すると、更新されたすべてのコードと設定を使用して、ストアがオンラインでライブ状態に戻ります。
 
-[ デプロイメントプロセス ](../deploy/process.md) を参照してください。
+[&#x200B; デプロイメントプロセス &#x200B;](../deploy/process.md) を参照してください。
 
 ### ステージングおよびテストへのプッシュ
 
@@ -218,19 +218,19 @@ Adobe Commerce バージョン 2.2 以降を使用している場合、Configura
 
 ステージングは実稼動前の環境であり、可能な限り実稼動環境に近いすべてのサービスと設定を提供します。 ストアが実稼動の準備ができていると感じられるまで、すべてのサービスを徹底的にテストし、パフォーマンステストツールを検証し、管理者および顧客として UAT テストを実行します。
 
-[ ストアのデプロイ ](../deploy/staging-production.md) を参照してください。
+[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md) を参照してください。
 
 ### 実稼動へのプッシュ
 
 `master` ブランチにプッシュすると、`production` 環境にプッシュされます。 ステージング環境と同様に、実稼動環境での設定およびテストアクティビティを、1 つの重要な違いを除いて完了します。 実稼動環境では、設定とテストにライブ資格情報を使用します。 サイトが立ち上げられた瞬間に、顧客は購入を完了でき、管理者はライブストアを管理できます。
 
-[ ストアのデプロイ ](../deploy/staging-production.md) を参照してください。
+[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md) を参照してください。
 
 ### サイトの起動
 
 サイトの運用を開始するための明確な手順があります。 これらの手順を完了すると、カスタマイズしたテーマの製品をすぐに販売することができます。
 
-[ サイトのローンチ ](../launch/overview.md) を参照してください。
+[&#x200B; サイトのローンチ &#x200B;](../launch/overview.md) を参照してください。
 
 ## 継続的統合
 

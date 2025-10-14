@@ -15,9 +15,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->実稼動環境を更新する前に、ステージング環境で変更をテストすることが重要です。 [Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、これらの環境の設定を更新するためのヘルプを入手します。
+>実稼動環境を更新する前に、ステージング環境で変更をテストすることが重要です。 [Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、これらの環境の設定を更新するためのヘルプを入手します。
 
-1. `.magento.app.yaml` ファイルの [`web` プロパティに TTL 時間（秒単位） ](web-property.md) 指定します。 `expires` キーは `locations` の下、または `"/media"` と `"/static"` の下に追加できます。
+1. `.magento.app.yaml` ファイルの [`web` プロパティに TTL 時間（秒単位） &#x200B;](web-property.md) 指定します。 `expires` キーは `locations` の下、または `"/media"` と `"/static"` の下に追加できます。
 
    キャッシュの有効期限が切れないようにするには、`expires: -1` のキーと値のペアを使用します。 次の例を参照してください。
 

@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Fastly オリジンへのリクエストが失敗した場合、Fastly は、ユーザーにとって混乱を招く可能性のある、基本的な形式と一般的なメッセージングを含むデフォルトの応答ページを返します。 例えば、Fastly オリジンへのリクエストが 503 エラーが原因で失敗した場合、Fastly は次のデフォルトのエラーページを返します。
 
-![Fastly デフォルトエラーページ ](../../assets/cdn/fastly-503-example.png)
+![Fastly デフォルトエラーページ &#x200B;](../../assets/cdn/fastly-503-example.png)
 
 次の例に示すように、Adobe Commerce ストアの設定を更新して、デフォルトの応答ページの一部を、より使いやすいメッセージ機能と改善されたHTMLスタイルを持つページに置き換えることができます。
 
-![Fastly カスタムエラーページ ](../../assets/cdn/fastly-new-error-page.png)
+![Fastly カスタムエラーページ &#x200B;](../../assets/cdn/fastly-new-error-page.png)
 
 現在、クラウドインフラストラクチャプロジェクト上のAdobe Commerceについて、次の Fastly 応答ページをカスタマイズできます。
 
@@ -63,13 +63,13 @@ Fastly 設定にカスタム応答ページを追加するには：
 
 1. 右側のパネルで、**フルページキャッシュ** / **Fastly 設定** / **カスタム合成ページ** を展開します。
 
-   ![503 エラーページを編集 ](../../assets/cdn/fastly-custom-synthetic-pages-edit-html.png)
+   ![503 エラーページを編集 &#x200B;](../../assets/cdn/fastly-custom-synthetic-pages-edit-html.png)
 
 1. **HTMLを設定** を選択します。
 
 1. カスタムHTMLページのソースコードをコピーして、「レスポンス」フィールドに貼り付けます。
 
-   ![ 更新 503 エラーページ ](../../assets/cdn/fastly-customize-503-response.png)
+   ![&#x200B; 更新 503 エラーページ &#x200B;](../../assets/cdn/fastly-customize-503-response.png)
 
 1. ページの上部にある「**アップロード**」を選択して、カスタマイズしたHTMLソースを Fastly サーバーにアップロードします。
 
@@ -85,7 +85,7 @@ Fastly 設定にカスタム応答ページを追加するには：
 
 [WAF](fastly-waf-service.md) のブロッキングイベントが原因で `403 Forbidden` エラーが発生して Fastly オリジンへのリクエストが失敗すると、デフォルトのWAF エラーページが表示されます。
 
-![WAF エラーページ ](../../assets/cdn/fastly-waf-403-error.png)
+![WAF エラーページ &#x200B;](../../assets/cdn/fastly-waf-403-error.png)
 
 次のコードサンプルに、デフォルトページのHTMLソースを示します。
 
@@ -115,19 +115,19 @@ Fastly 設定メニューの **カスタム合成ページ**/**WAFページを�
 
 **WAF エラーページを編集するには**:
 
-1. [ 管理者にログインします ](../../get-started/onboarding.md#access-your-admin-panel)。
+1. [&#x200B; 管理者にログインします &#x200B;](../../get-started/onboarding.md#access-your-admin-panel)。
 
 1. **ストア**/**設定**/**設定**/**詳細**/**システム** を選択します。
 
 1. 右側のパネルで、**フルページキャッシュ** / **Fastly 設定** / **カスタム合成ページ** を展開します。
 
-   ![ 「WAF エラーページを編集」オプション ](../../assets/cdn/fastly-custom-synthetic-pages-edit-waf.png)
+   ![&#x200B; 「WAF エラーページを編集」オプション &#x200B;](../../assets/cdn/fastly-custom-synthetic-pages-edit-waf.png)
 
 1. **WAFページを編集** を選択します。
 
 1. フィールドに入力して、HTMLを更新します。
 
-   ![WAFの更新のエラーページ ](../../assets/cdn/fastly-edit-waf-html.png)
+   ![WAFの更新のエラーページ &#x200B;](../../assets/cdn/fastly-edit-waf-html.png)
 
    - **ステータス**:`403 Forbidden` のステータスを選択します。
    - **MIME タイプ** - タイプ `text/html`。

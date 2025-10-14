@@ -15,7 +15,7 @@ ht-degree: 0%
 
 統合は、Git ホスティングやSlackボットなどの外部サービスを使用したり、GitHub のコードリビュープルリクエスト機能の使用など、現在の開発プロセスを維持管理したりするのに役立ちます。 クラウドインフラストラクチャー上のAdobe Commerce プロジェクトに次の統合を追加できます。
 
-![ 統合 ](/help/assets/integrations.png)
+![&#x200B; 統合 &#x200B;](/help/assets/integrations.png)
 
 >[!BEGINTABS]
 
@@ -65,7 +65,7 @@ magento-cloud integration:list
 
 ## Commerce Webhook
 
-[ENABLE_WEBHOOK グローバル変数 ](../environment/variables-global.md#enable_webhooks) を使用して、クラウドプロジェクト内でCommerce Webhook を設定できます。 Commerce Webhook は、Commerceが生成したイベントに応答して、外部サーバーにリクエストを送信します。 [_Webhook ガイド_](https://developer.adobe.com/commerce/extensibility/webhooks) では、この機能について詳しく説明します。
+[ENABLE_WEBHOOK グローバル変数 &#x200B;](../environment/variables-global.md#enable_webhooks) を使用して、クラウドプロジェクト内でCommerce Webhook を設定できます。 Commerce Webhook は、Commerceが生成したイベントに応答して、外部サーバーにリクエストを送信します。 [_Webhook ガイド_](https://developer.adobe.com/commerce/extensibility/webhooks) では、この機能について詳しく説明します。
 
 ## 汎用 Webhook
 
@@ -82,7 +82,7 @@ magento-cloud integration:add --type=webhook --url=https://hook-url.example.com
 
 応答のサンプルでは、統合をカスタマイズする機会を提供する一連のプロンプトを示しています。 デフォルト（空白）の応答を使用すると、プロジェクト内のすべての環境のすべてのイベントに関するメッセージが送信されます。
 
-統合をカスタマイズして、分岐へのコードのプッシュなど、特定の [ イベント ](#events-to-report) をレポートすることができます。 例えば、ユーザーがブランチにコードをプッシュする際にメッセージを送信するように、`environment.push` イベントを指定できます。
+統合をカスタマイズして、分岐へのコードのプッシュなど、特定の [&#x200B; イベント &#x200B;](#events-to-report) をレポートすることができます。 例えば、ユーザーがブランチにコードをプッシュする際にメッセージを送信するように、`environment.push` イベントを指定できます。
 
 ```
 Events to report (--events)

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 - **アプリケーションテスト** - Cloud Docker 環境でのアプリケーションテストには [&#128279;](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/)2&rbrace;Magento機能テストフレームワーク（MFTF）を使用します。
 
-- **コードテスト** - クラウドパッケージリポジトリへの投稿を目的としたコードを検証するには、[PHP 用 Codeception テストフレームワーク ](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/) を使用します。
+- **コードテスト** - クラウドパッケージリポジトリへの投稿を目的としたコードを検証するには、[PHP 用 Codeception テストフレームワーク &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/) を使用します。
 
 ## ローンチ前のベストプラクティス
 
@@ -28,10 +28,10 @@ ht-degree: 0%
 
 - **ストレステスト** - システム内の容量の上限に挑戦して、現在の負荷が予想される最大値を大幅に超えた場合にシステムが十分に機能するかどうかを判断します。
 
-- **セキュリティスキャン** - Adobeは、サイトに無料の [ セキュリティスキャンツール ](../launch/overview.md#set-up-the-security-scan-tool) を提供します。
+- **セキュリティスキャン** - Adobeは、サイトに無料の [&#x200B; セキュリティスキャンツール &#x200B;](../launch/overview.md#set-up-the-security-scan-tool) を提供します。
 
 - **侵入テスト** - システムのセキュリティを評価するために設計されたコンピュータシステムに対する承認されたシミュレーションサイバー攻撃です。 侵入テストは、権限のない関係者がシステムの機能やデータにアクセスできる可能性など、弱点や脆弱性を特定するのに役立ちます。
 
 >[!WARNING]
 >
->お客様は、AWS インフラストラクチャまたはAWS サービス自体のセキュリティ評価を行うことはできません。 セキュリティ評価で確認されたAWS サービス内にセキュリティ上の問題が見つかった場合は、直ちに [AWS Security にお問い合わせください ](mailto:aws-security@amazon.com)。 [ 侵入テストのAWS顧客ポリシー ](https://aws.amazon.com/security/penetration-testing/) を参照してください。
+>お客様は、AWS インフラストラクチャまたはAWS サービス自体のセキュリティ評価を行うことはできません。 セキュリティ評価で確認されたAWS サービス内にセキュリティ上の問題が見つかった場合は、直ちに [AWS Security にお問い合わせください &#x200B;](mailto:aws-security@amazon.com)。 [&#x200B; 侵入テストのAWS顧客ポリシー &#x200B;](https://aws.amazon.com/security/penetration-testing/) を参照してください。

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) は、Adobe Commerceがデフォルトで使用する `Zend Framework Zend_Cache_Backend_File` に代わるオプションのバックエンドキャッシュソリューションです。
 
-[ 設定ガイド ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ja){target="_blank"} の _Valkey の設定_ を参照してください。
+[&#x200B; 設定ガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=ja){target="_blank"} の _Valkey の設定_ を参照してください。
 
 {{service-instruction}}
 
@@ -56,7 +56,7 @@ ht-degree: 0%
    git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
-1. [ サービスの関係を確認します ](services-yaml.md#service-relationships)。
+1. [&#x200B; サービスの関係を確認します &#x200B;](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 

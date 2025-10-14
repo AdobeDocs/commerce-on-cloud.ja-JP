@@ -18,7 +18,7 @@ ht-degree: 0%
 
 - **ステップ設定** – 各シナリオでは、デプロイメントタスクの完了に必要な操作をプログラムで説明する一連の *ステップ* を使用します。 この手順は XML ベースのシナリオ設定ファイルで設定します。
 
-クラウドインフラストラクチャー上のAdobe Commerceでは、`ece-tools` パッケージに一連の [ デフォルトのシナリオ ](https://github.com/magento/ece-tools/tree/2002.1/scenario) と [ デフォルトの手順 ](https://github.com/magento/ece-tools/tree/2002.1/src/Step) が用意されています。 デフォルトの設定をオーバーライドまたはカスタマイズするカスタム XML 設定ファイルを作成することで、デプロイメントの動作をカスタマイズできます。 シナリオと手順を使用して、カスタムモジュールからコードを実行することもできます。
+クラウドインフラストラクチャー上のAdobe Commerceでは、`ece-tools` パッケージに一連の [&#x200B; デフォルトのシナリオ &#x200B;](https://github.com/magento/ece-tools/tree/2002.1/scenario) と [&#x200B; デフォルトの手順 &#x200B;](https://github.com/magento/ece-tools/tree/2002.1/src/Step) が用意されています。 デフォルトの設定をオーバーライドまたはカスタマイズするカスタム XML 設定ファイルを作成することで、デプロイメントの動作をカスタマイズできます。 シナリオと手順を使用して、カスタムモジュールからコードを実行することもできます。
 
 ## ビルドフックとデプロイフックを使用したシナリオの追加
 
@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.x のリリースでは、新しい [ フック設定 ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ja) 形式が追加されました。 `ece-tools` 2002.0.x リリースのレガシー形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
+>`ece-tools` 2002.1.x のリリースでは、新しい [&#x200B; フック設定 &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ja) 形式が追加されました。 `ece-tools` 2002.0.x リリースのレガシー形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
 
 ## シナリオ手順のレビュー
 
@@ -218,7 +218,7 @@ hooks:
 
 >[!TIP]
 >
->`ece-tools` GitHub リポジトリで [ デフォルトのシナリオ ](https://github.com/magento/ece-tools/tree/2002.1/scenario) と [ デフォルトのステップ設定 ](https://github.com/magento/ece-tools/tree/2002.1/src/Step) を確認して、プロジェクトのビルド、デプロイ、デプロイ後のタスクに合わせてカスタマイズするシナリオと手順を決定できます。
+>`ece-tools` GitHub リポジトリで [&#x200B; デフォルトのシナリオ &#x200B;](https://github.com/magento/ece-tools/tree/2002.1/scenario) と [&#x200B; デフォルトのステップ設定 &#x200B;](https://github.com/magento/ece-tools/tree/2002.1/src/Step) を確認して、プロジェクトのビルド、デプロイ、デプロイ後のタスクに合わせてカスタマイズするシナリオと手順を決定できます。
 
 ## `ece-tools` を拡張するカスタムモジュールの追加
 
@@ -270,7 +270,7 @@ hooks:
    </container>
    ```
 
-依存関係の挿入について詳しくは、[Symfony 依存関係の挿入 ](https://symfony.com/doc/current/components/dependency_injection.html) を参照してください。
+依存関係の挿入について詳しくは、[Symfony 依存関係の挿入 &#x200B;](https://symfony.com/doc/current/components/dependency_injection.html) を参照してください。
 
 <!-- link definitions -->
 

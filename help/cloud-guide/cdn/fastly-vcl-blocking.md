@@ -61,15 +61,15 @@ Edge ACL を定義した後、それを使用して、ACL で指定された IP 
 
 - `priority`: VCL スニペットを実行するタイミングを指定します。 優先度は、直ちに実行し、許可された IP アドレスからの管理リクエストであるかどうかを確認するように `5` 定されています。 このスニペットは、デフォルトのMagento VCL スニペット（`magentomodule_*`）に優先度 50 が割り当てられる前に実行されます。 各カスタムスニペットの優先度を、スニペットを実行するタイミングに応じて 50 より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
 
-- `type`：生成された VCL コード内のスニペットの場所を決定する VCL スニペットのタイプを指定します。 この例では、`recv` を使用して、VCL コードを `vcl_recv` サブルーチン内のボイラープレート VCL の下、およびオブジェクトの上に挿入します。 スニペットタイプのリストについては、[Fastly VCL スニペットリファレンス ](https://docs.fastly.com/api/config#api-section-snippet) を参照してください。
+- `type`：生成された VCL コード内のスニペットの場所を決定する VCL スニペットのタイプを指定します。 この例では、`recv` を使用して、VCL コードを `vcl_recv` サブルーチン内のボイラープレート VCL の下、およびオブジェクトの上に挿入します。 スニペットタイプのリストについては、[Fastly VCL スニペットリファレンス &#x200B;](https://docs.fastly.com/api/config#api-section-snippet) を参照してください。
 
 - `content`：実行する VCL コードのスニペット。クライアントの IP アドレスを確認します。 IP がEdgeの ACL に含まれている場合は、web サイト全体に対して `403 Forbidden` エラーが発生して IP のアクセスがブロックされます。 その他すべてのクライアント IP アドレスへのアクセスが許可されます。
 
 環境のコードを確認して更新した後、次のいずれかの方法を使用して、カスタム VCL スニペットを Fastly サービス設定に追加します。
 
-- [ カスタム VCL スニペットを管理者から追加します ](#add-the-custom-vcl-snippet)。 管理者にアクセスできる場合は、この方法をお勧めします。 （[Fastly バージョン 1.2.58](fastly-configuration.md#upgrade-fastly-module) 以降が必要です。）
+- [&#x200B; カスタム VCL スニペットを管理者から追加します &#x200B;](#add-the-custom-vcl-snippet)。 管理者にアクセスできる場合は、この方法をお勧めします。 （[Fastly バージョン 1.2.58](fastly-configuration.md#upgrade-fastly-module) 以降が必要です。）
 
-- JSON コードの例をファイル（例：`blocklist.json`）に保存して、[Fastly API を使用してアップロード ](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api) します。 管理者にアクセスできない場合は、この方法を使用します。
+- JSON コードの例をファイル（例：`blocklist.json`）に保存して、[Fastly API を使用してアップロード &#x200B;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api) します。 管理者にアクセスできない場合は、この方法を使用します。
 
 ## カスタム VCL スニペットの追加
 
@@ -109,7 +109,7 @@ Fastly は、アップロードプロセス中に VCL コードの更新バー�
 
 >[!WARNING]
 >
->これらの例では、VCL コードは JSON ペイロードとしてフォーマットされ、ファイルに保存して Fastly API リクエストで送信できます。 [VCL スニペットは、管理者から ](#add-the-custom-vcl-snippet) または Fastly API を使用して JSON 文字列として送信できます。 Fastly API を JSON 文字列と共に使用する場合に検証エラーを防ぐには、バックスラッシュを使用して特殊文字をエスケープする必要があります。
+>これらの例では、VCL コードは JSON ペイロードとしてフォーマットされ、ファイルに保存して Fastly API リクエストで送信できます。 [VCL スニペットは、管理者から &#x200B;](#add-the-custom-vcl-snippet) または Fastly API を使用して JSON 文字列として送信できます。 Fastly API を JSON 文字列と共に使用する場合に検証エラーを防ぐには、バックスラッシュを使用して特殊文字をエスケープする必要があります。
 
 >[!NOTE]
 >VCL スニペットを管理者から送信する場合は、サンプル VCL コードから個々の値を抽出し、対応するフィールドに入力します。 例：
@@ -119,7 +119,7 @@ Fastly は、アップロードプロセス中に VCL コードの更新バー�
 >- 優先度：`<priority>`
 >- コンテンツ：`<content>`
 
-Fastly VCL ドキュメントの [ 動的 VCL スニペットの使用 ](https://docs.fastly.com/vcl/vcl-snippets/) を参照してください。
+Fastly VCL ドキュメントの [&#x200B; 動的 VCL スニペットの使用 &#x200B;](https://docs.fastly.com/vcl/vcl-snippets/) を参照してください。
 
 ### VCL コード サンプル：国コードによるブロック
 
@@ -137,7 +137,7 @@ Fastly VCL ドキュメントの [ 動的 VCL スニペットの使用 ](https:/
 
 >[!NOTE]
 >
->カスタム VCL スニペットを使用する代わりに、クラウドインフラストラクチャー管理のAdobe Commerceにある Fastly [ ブロッキング ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) 機能を使用して、国コードまたは国コードのリスト別にブロッキングを設定できます。
+>カスタム VCL スニペットを使用する代わりに、クラウドインフラストラクチャー管理のAdobe Commerceにある Fastly [&#x200B; ブロッキング &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) 機能を使用して、国コードまたは国コードのリスト別にブロッキングを設定できます。
 
 ### VCL コード例：HTTP ユーザーエージェントリクエストヘッダーによるブロック
 

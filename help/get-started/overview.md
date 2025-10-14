@@ -17,12 +17,12 @@ Adobe Commerceへようこそ。
 
 このガイドは、[!DNL Commerce] アプリケーションに関する実用的な知識と理解があることを前提としています。 最新のCommerce開発者およびCommerce ユーザーガイドを参照できます。
 
-- [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
+- [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
 
-- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） - Commerce プロジェクトの計画、実装、運用、アップグレード、保守
+- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） - Commerce プロジェクトの計画、実装、運用、アップグレード、保守
 
 >[!TIP]
 >
 >クラウドインフラストラクチャプロジェクトでAdobe Commerceを初期化するためのウェルカムコールの準備をします。
 >
->**次の手順**:[Cloud でのCommerceのプロビジョニング ](new-project.md)
+>**次の手順**:[Cloud でのCommerceのプロビジョニング &#x200B;](new-project.md)
