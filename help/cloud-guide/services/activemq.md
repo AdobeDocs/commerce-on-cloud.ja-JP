@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # サービス [!DNL ActiveMQ] 設定
 
-[Message Queue Framework （MQF） ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) は、[ モジュール ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
 
 MQF は、メッセージを送受信するためのスケーラブルなプラットフォームを提供するメッセージングブローカーとして [ActiveMQ Artemis](https://activemq.apache.org/components/artemis/) を使用できます。 また、未配信メッセージを保存するメカニズムも含まれています。 [!DNL ActiveMQ Artemis] は、メッセージング用の STOMP （Streaming Text Oriented Messaging Protocol）プロトコルをサポートしています。
 
@@ -54,7 +54,7 @@ MQF は、メッセージを送受信するためのスケーラブルなプラ�
    git push origin <branch-name>
    ```
 
-1. [ サービスの関係を確認します ](services-yaml.md#service-relationships)。
+1. [&#x200B; サービスの関係を確認します &#x200B;](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 
