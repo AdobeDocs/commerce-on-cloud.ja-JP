@@ -26,7 +26,7 @@ WAF サービスには次の利点があります。
 
 >[!TIP]
 >
->クラウドインフラストラクチャストア上のAdobe Commerceで PCI への準拠を維持する方法について詳しくは、[PCI コンプライアンス &#x200B;](https://business.adobe.com/products/magento/pci-compliance.html) を参照してください。
+>クラウドインフラストラクチャストア上のAdobe Commerceで PCI への準拠を維持する方法について詳しくは、[PCI コンプライアンス &#x200B;](https://business.adobe.com/jp/products/magento/pci-compliance.html) を参照してください。
 
 ## WAFの有効化
 

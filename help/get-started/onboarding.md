@@ -52,6 +52,6 @@ Adobeがクラウドインフラストラクチャサブスクリプションで
 
 <!-- link definitions -->
 
-[売上]: https://business.adobe.com/products/magento/get-demo.html
+[売上]: https://business.adobe.com/jp/products/magento/get-demo.html
 [共有アクセス]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#shared-access
 [ステータスページ]: https://status.adobe.com/products/503473
