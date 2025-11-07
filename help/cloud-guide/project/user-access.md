@@ -39,7 +39,7 @@ ht-degree: 0%
 
 **前提条件：**
 
-- Adobe IDに登録されているユーザー。 ユーザーは [Adobe アカウントに登録 ](https://account.adobe.com) してから、[https://console.adobecommerce.com](https://console.adobecommerce.com) にアクセスして [Cloud アカウント ](https://console.adobecommerce.com) を初期化してから、Cloud プロジェクトに追加する必要があります。
+- Adobe IDに登録されているユーザー。 ユーザーは [Adobe アカウントに登録 &#x200B;](https://account.adobe.com) してから、[https://console.adobecommerce.com](https://console.adobecommerce.com) にアクセスして [Cloud アカウント &#x200B;](https://console.adobecommerce.com) を初期化してから、Cloud プロジェクトに追加する必要があります。
 - **管理者** の役割を割り当てられたユーザーは、`magento-cloud` CLI を使用してユーザーを管理できません。 **アカウント所有者** の役割を付与されたユーザーのみが、ユーザーを管理できます。
 
 >[!ENDSHADEBOX]
@@ -66,7 +66,7 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >ユーザーにはAdobe IDが必要です。[ 前提条件 ](#add-users-and-manage-access) を参照してください。
+   >ユーザーにはAdobe IDが必要です。[&#x200B; 前提条件 &#x200B;](#add-users-and-manage-access) を参照してください。
 
 1. プロンプトに従って、ユーザーのメールアドレスを指定し、プロジェクトおよび環境タイプの役割を設定し、ユーザーを追加します。
 
@@ -133,7 +133,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!IMPORTANT]
 >
->ユーザーにはAdobe IDが必要です。[ 前提条件 ](#add-users-and-manage-access) を参照してください。
+>ユーザーにはAdobe IDが必要です。[&#x200B; 前提条件 &#x200B;](#add-users-and-manage-access) を参照してください。
 
 ### プロジェクトにユーザーを追加する
 
@@ -147,7 +147,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. _アクセス_ ビューで、「**[!UICONTROL Add]**」をクリックします。
 
-1. _[!UICONTROL Add User]_フォームに入力します。
+1. _[!UICONTROL Add User]_&#x200B;フォームに入力します。
 
    - ユーザーのメールアドレスを入力します。
 
@@ -171,15 +171,15 @@ magento-cloud user:update alice@example.com -r production:a
 
 ## ユーザー認証の要件
 
-セキュリティを強化するために、Adobeは、クラウドインフラストラクチャプロジェクトのソースコードと環境で、Adobe Commerceに SSH アクセスするために 2 要素認証（TFA）を必要とする、プロジェクトレベルの多要素認証（MFA）の適用を提供します。 [SSH 用 MFA の有効化 ](multi-factor-authentication.md) を参照してください。
+セキュリティを強化するために、Adobeは、クラウドインフラストラクチャプロジェクトのソースコードと環境で、Adobe Commerceに SSH アクセスするために 2 要素認証（TFA）を必要とする、プロジェクトレベルの多要素認証（MFA）の適用を提供します。 [SSH 用 MFA の有効化 &#x200B;](multi-factor-authentication.md) を参照してください。
 
 クラウドインフラストラクチャプロジェクト上のAdobe Commerceで MFA 適用が有効になっている場合、そのプロジェクト内の環境に SSH アクセス権を持つすべてのユーザーは、クラウドインフラストラクチャアカウント上のAdobe Commerceで TFA を有効にする必要があります。 自動プロセスの場合、コマンドラインから認証するマシンユーザーと API トークンを作成できます。
 
 クラウドプロジェクトにユーザーを追加した後、そのユーザーにアカウントセキュリティ設定を確認するように依頼し、必要に応じて次のセキュリティ設定を追加します。
 
-- **TFA の有効化**：二要素認証を構成することにより、セキュリティとコンプライアンスの標準を満たします。 [MFA 強制 ](multi-factor-authentication.md) が設定されたプロジェクトにアクセスするには、SSH を使用するアカウントで TFA が必要です。
+- **TFA の有効化**：二要素認証を構成することにより、セキュリティとコンプライアンスの標準を満たします。 [MFA 強制 &#x200B;](multi-factor-authentication.md) が設定されたプロジェクトにアクセスするには、SSH を使用するアカウントで TFA が必要です。
 
-- **SSH キーを有効にする** - クラウドインフラストラクチャー上のAdobe Commerceのソースコードリポジトリーにアクセスする必要があるユーザーは、自分のアカウントで SSH キーを有効にする必要があります。 [ 安全な接続 ](../development/secure-connections.md) を参照してください。
+- **SSH キーを有効にする** - クラウドインフラストラクチャー上のAdobe Commerceのソースコードリポジトリーにアクセスする必要があるユーザーは、自分のアカウントで SSH キーを有効にする必要があります。 [&#x200B; 安全な接続 &#x200B;](../development/secure-connections.md) を参照してください。
 
 - **API トークンの作成** - ユーザーは、環境への SSH アクセスに使用される API トークンを生成する必要があります。 自動プロセスの認証ワークフローを有効にするには、トークンが必要です。
 
@@ -189,16 +189,16 @@ magento-cloud user:update alice@example.com -r production:a
 
 クラウドインフラストラクチャー上のAdobe Commerceは、次のいずれかのアプリケーションを使用して TFA をサポートします。
 
-- [Google認証（Android/iPhone） ](https://support.google.com/accounts/answer/1066447?hl=en)
-- [ 作成者（Android/iPhone） ](https://authy.com/features/)
-- [FreeOTP （Android） ](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
-- [GAuth 認証（Firefox OS、デスクトップなど） ](https://github.com/gbraad-apps/gauth)
+- [Google認証（Android/iPhone） &#x200B;](https://support.google.com/accounts/answer/1066447?hl=en)
+- [&#x200B; 作成者（Android/iPhone） &#x200B;](https://authy.com/features/)
+- [FreeOTP （Android） &#x200B;](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
+- [GAuth 認証（Firefox OS、デスクトップなど） &#x200B;](https://github.com/gbraad-apps/gauth)
 
 認証アプリケーションをインストールして TFA を有効にする手順については、_の_ アカウント設定 [!DNL Cloud Console] ページを参照してください。
 
 **ユーザーアカウントで TFA を有効にするには**:
 
-1. [ アカウント ](https://console.adobecommerce.com) にログインします。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com) にログインします。
 
 1. 右上のアカウントメニューで、「**[!UICONTROL My Profile]**」をクリックします。
 
@@ -232,7 +232,7 @@ magento-cloud user:update alice@example.com -r production:a
 
      >[!WARNING]
      >
-     >TFA のアカウントへのアクセス権を失い、復旧コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポート チケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して TFA アプリケーションをリセットする必要があります。
+     >TFA のアカウントへのアクセス権を失い、復旧コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポート チケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) して TFA アプリケーションをリセットする必要があります。
 
 1. TFA 設定が完了したら、「**保存**」をクリックしてアカウントを更新します。
 
@@ -246,7 +246,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 _マイプロファイル_ ページの _セキュリティ_ セクションで、クラウドインフラストラクチャアカウント上のAdobe Commerceの TFA 設定を管理できます。
 
-1. [ アカウント ](https://console.adobecommerce.com) にログインします。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com) にログインします。
 
 1. 右上のアカウントメニューで、「**[!UICONTROL My Profile]**」をクリックします。
 
@@ -271,7 +271,7 @@ MFA 適用が有効になっているプロジェクトでは、マシンユー�
 
 **API トークンを作成するには**:
 
-1. [ アカウント ](https://console.adobecommerce.com) にログインします。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com) にログインします。
 
 1. 右上のアカウントメニューで、「**[!UICONTROL My Profile]**」をクリックします。
 
@@ -279,6 +279,6 @@ MFA 適用が有効になっているプロジェクトでは、マシンユー�
 
 1. 「**[!UICONTROL Create API token]**」をクリックし、名前を入力します。例えば、マシンユーザーに一致する名前や、API トークンを使用する自動プロセスを指定します。
 
-   ![API トークン ](../../assets/api-token-name.png)
+   ![API トークン &#x200B;](../../assets/api-token-name.png)
 
 1. 「**[!UICONTROL Create API token]**」をクリックします。
