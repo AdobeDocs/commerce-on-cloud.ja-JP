@@ -3,16 +3,16 @@ title: ログの表示と管理
 description: クラウドインフラストラクチャで使用できるログファイルのタイプと、それらのログファイルの場所について説明します。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
+source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
 
 # ログの表示と管理
 
-クラウドインフラストラクチャプロジェクトのAdobe Commerceのログは、[&#x200B; ビルドとデプロイ &#x200B;](../application/hooks-property.md)、クラウドサービス、Adobe Commerce アプリケーションに関連する問題のトラブルシューティングに役立ちます。
+クラウドインフラストラクチャプロジェクトのAdobe Commerceのログは、[ ビルドとデプロイ ](../application/hooks-property.md)、クラウドサービス、Adobe Commerce アプリケーションに関連する問題のトラブルシューティングに役立ちます。
 
 ログは、ファイル・システム、[!DNL Cloud Console]、`magento-cloud` CLI から表示できます。
 
@@ -33,6 +33,37 @@ ht-degree: 0%
 `<project-ID>` の値は、プロジェクトと、環境がステージングか実稼動かによって異なります。 例えば、プロジェクト ID が `yw1unoukjcawe` の場合、ステージング環境のユーザーは `yw1unoukjcawe_stg`、実稼動環境のユーザーは `yw1unoukjcawe` となります。
 
 この例を使用する場合、デプロイログは `/var/log/platform/yw1unoukjcawe_stg/deploy.log` です。
+
+### 特定のエラーログレコードの検索
+
+特定のログレコード番号（`475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9` など）でエラーが発生した場合は、次の方法でCommerce アプリケーションサーバーのリモート環境ログにクエリを実行することで、レコードを見つけることができます。
+
+>[!NOTE]
+>
+>Secure Shell （SSH）を使用してCommerce アプリケーションのリモート環境ログにアクセスする手順については、「[ リモート環境への安全な接続 ](../development/secure-connections.md)」を参照してください。
+
+#### 方法 1:grep を使用して検索
+
+```bash
+# Search for the specific error record in all log files
+magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/"
+
+# Search in specific log files
+magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
+```
+
+#### 方法 2：アーカイブされたログを検索する
+
+エラーが過去に発生した場合は、アーカイブ・ログ・ファイルを確認します。
+
+```bash
+# Search in compressed log files
+magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
+```
+
+#### 方法 3:New Relic（Pro 環境）の使用
+
+実稼動環境およびステージング環境の場合は、New Relic ログを使用して、特定のエラーレコードを検索します。 詳しくは、[New Relic ログ管理 ](../monitor/log-management.md) を参照してください。
 
 ### リモート環境ログの表示
 
@@ -78,12 +109,12 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Pro ステージング環境および Pro 実稼動環境では、固定ファイル名のログファイルに対して、自動ログローテーション、圧縮、削除が有効になります。 各ログ ファイル タイプには、回転パターンと有効期間があります。
 >環境のログのローテーションと圧縮ログの存続期間について詳しくは、`/etc/logrotate.conf` と `/etc/logrotate.d/<various>` を参照してください。
->ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+>ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
 
 >[!TIP]
 >
 >ログのローテーションは、Pro 統合環境では設定できません。
->Pro 統合の場合、カスタムソリューション/スクリプトを実装し、必要に応じてスクリプトを実行するように [cron を設定 &#x200B;](../application/crons-property.md) する必要があります。
+>Pro 統合の場合、カスタムソリューション/スクリプトを実装し、必要に応じてスクリプトを実行するように [cron を設定 ](../application/crons-property.md) する必要があります。
 
 >[!NOTE]
 >
@@ -112,7 +143,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->クラウドを設定する際に、ビルドおよびデプロイアクション用の [&#x200B; ログベースのSlackおよびメール通知 &#x200B;](../environment/set-up-notifications.md) を設定できます。
+>クラウドを設定する際に、ビルドおよびデプロイアクション用の [ ログベースのSlackおよびメール通知 ](../environment/set-up-notifications.md) を設定できます。
 
 次のログは、すべてのクラウドプロジェクトで共通の場所を持ちます。
 
@@ -143,7 +174,7 @@ magento-cloud log -e <environment-ID> deploy
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
-[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
+[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\\n''.
 
 [2023-04-24T18:58:04.129888+00:00] INFO: Starting scenario(s): scenario/deploy.xml (magento/ece-tools version: 2002.1.14, magento/magento2-base version: 2.4.6)
 [2023-04-24T18:58:04.364714+00:00] NOTICE: Starting pre-deploy.
@@ -189,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス &#x200B;](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja) を参照してください。
+ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス ](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) を参照してください。
 
 ## アプリケーションログ
 
@@ -197,8 +228,8 @@ type: warning
 
 | ログファイル | スターターと Pro の統合 | 説明 |
 | ------------------- | --------------------------- | ------------------------------------------------- |
-| **ログをデプロイ** | `/var/log/deploy.log` | [&#x200B; デプロイフック &#x200B;](../application/hooks-property.md) からのアクティビティ。 |
-| **デプロイ後のログ** | `/var/log/post_deploy.log` | [&#x200B; デプロイ後フック &#x200B;](../application/hooks-property.md) からのアクティビティ。 |
+| **ログをデプロイ** | `/var/log/deploy.log` | [ デプロイフック ](../application/hooks-property.md) からのアクティビティ。 |
+| **デプロイ後のログ** | `/var/log/post_deploy.log` | [ デプロイ後フック ](../application/hooks-property.md) からのアクティビティ。 |
 | **Cron ログ** | `/var/log/cron.log` | Cron ジョブからの出力。 |
 | **Nginx アクセス ログ** | `/var/log/access.log` | Nginx の起動時に、ディレクトリの欠落や除外されたファイル タイプの HTTP エラーが発生します。 |
 | **Nginx エラーログ** | `/var/log/error.log` | Nginx に関連する構成エラーのデバッグに役立つスタートアップ メッセージ。 |
@@ -227,7 +258,7 @@ type: warning
 
 アーカイブされたログ・ファイルは、圧縮前に元のファイルがあったディレクトリに常に保存されます。
 
-[&#x200B; サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support) して、ログ保持期間またはログ回転設定の変更をリクエストできます。 保存期間は最大 365 日まで延長できます。また、ストレージ・クォータを節約するために保存期間を短縮することも、ログ回転構成にログ・パスを追加することもできます。 これらの変更は、ステージング環境および実稼動環境のクラスターで使用できます。
+[ サポートチケットを送信 ](https://experienceleague.adobe.com/home?support-tab=home#support) して、ログ保持期間またはログ回転設定の変更をリクエストできます。 保存期間は最大 365 日まで延長できます。また、ストレージ・クォータを節約するために保存期間を短縮することも、ログ回転構成にログ・パスを追加することもできます。 これらの変更は、ステージング環境および実稼動環境のクラスターで使用できます。
 
 例えば、ログを `var/log/mymodule` ディレクトリに保存するカスタムパスを作成した場合、このパスのログのローテーションをリクエストできます。 ただし、現在のインフラストラクチャでは、ログローテーションを正しく設定するために、Adobeの一貫したファイル名が必要です。 Adobeでは、設定の問題を回避するために、ログ名の一貫性を維持することをお勧めします。
 
@@ -251,10 +282,10 @@ type: warning
 
 >[!TIP]
 >
->スケールされたアーキテクチャにおけるログファイルの場所は、ノードタイプによって異なります。 [&#x200B; スケールされたアーキテクチャのログの場所 &#x200B;](../architecture/scaled-architecture.md#log-locations) のトピックを参照してください。
+>スケールされたアーキテクチャにおけるログファイルの場所は、ノードタイプによって異なります。 [ スケールされたアーキテクチャのログの場所 ](../architecture/scaled-architecture.md#log-locations) のトピックを参照してください。
 
 ## 実稼動およびステージング用のログデータ
 
-実稼動環境およびステージング環境では、プロジェクトと統合された [New Relic ログ管理 &#x200B;](../monitor/log-management.md) を使用して、クラウドインフラストラクチャプロジェクト上のAdobe Commerceに関連付けられたすべてのログからの集計ログデータを管理します。
+実稼動環境およびステージング環境では、プロジェクトと統合された [New Relic ログ管理 ](../monitor/log-management.md) を使用して、クラウドインフラストラクチャプロジェクト上のAdobe Commerceに関連付けられたすべてのログからの集計ログデータを管理します。
 
-New Relic ログアプリケーションは、クラウドインフラストラクチャの実稼動環境とステージング環境でAdobe Commerceをトラブルシューティングおよび監視するための一元的なログ管理ダッシュボードを提供します。 また、Fastly CDN、Image Optimization、Web Application Firewall （WAF）の各サービスのログデータにもアクセスできます。 [New Relic サービス &#x200B;](../monitor/new-relic-service.md) を参照してください。
+New Relic ログアプリケーションは、クラウドインフラストラクチャの実稼動環境とステージング環境でAdobe Commerceをトラブルシューティングおよび監視するための一元的なログ管理ダッシュボードを提供します。 また、Fastly CDN、Image Optimization、Web Application Firewall （WAF）の各サービスのログデータにもアクセスできます。 [New Relic サービス ](../monitor/new-relic-service.md) を参照してください。
