@@ -2,9 +2,9 @@
 title: SendGrid メールサービス
 description: クラウドインフラストラクチャ上のAdobe Commerce用 SendGrid メールサービスと、DNS 設定をテストする方法について説明します。
 exl-id: 06236068-df32-468f-99ec-c379984be136
-source-git-commit: 771fc9d0aed0e3ab6b9d693e7274ce1a7ffcf7ad
+source-git-commit: 0cb86dd5e4fe627b198ac3c1a6b14607f377a9a3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
@@ -29,19 +29,19 @@ SendGrid SMTP プロキシは、受信メールを受信するための汎用的
 
 Cloud Console またはコマンドラインから、各環境の送信メールを有効または無効にすることができます。
 
-デフォルトでは、実稼動環境およびステージング環境では、送信メールが有効になっています。 ただし、[!UICONTROL Outgoing emails] コマンドライン `enable_smtp`[&#x200B; たは &#x200B;](outgoing-emails.md#enable-emails-in-the-cli)Cloud Console[&#x200B; を使用して &#x200B;](outgoing-emails.md#enable-emails-in-the-cloud-console) プロパティを設定するまで、環境設定で無効と表示される場合があります。 統合およびステージング環境で送信メールを有効にして、クラウドプロジェクトのユーザーに対して二要素認証またはパスワードリセットのメールを送信できます。 [&#x200B; テスト用メールの設定 &#x200B;](outgoing-emails.md) を参照してください。
+デフォルトでは、実稼動環境およびステージング環境では、送信メールが有効になっています。 ただし、[!UICONTROL Outgoing emails] コマンドライン `enable_smtp`[ たは ](outgoing-emails.md#enable-emails-in-the-cli)Cloud Console[ を使用して ](outgoing-emails.md#enable-emails-in-the-cloud-console) プロパティを設定するまで、環境設定で無効と表示される場合があります。 統合およびステージング環境で送信メールを有効にして、クラウドプロジェクトのユーザーに対して二要素認証またはパスワードリセットのメールを送信できます。 [ テスト用メールの設定 ](outgoing-emails.md) を参照してください。
 
-実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
+実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
 
 >[!TIP]
 >
->[!UICONTROL enable_smtp] コマンドライン [&#x200B; で &#x200B;](outgoing-emails.md#enable-emails-in-the-cli) プロパティ値を更新すると、[!UICONTROL Enable outgoing emails]Cloud Console[&#x200B; でもこの環境の &#x200B;](outgoing-emails.md#enable-emails-in-the-cloud-console) 設定値が変更されます。
+>[!UICONTROL enable_smtp] コマンドライン [ で ](outgoing-emails.md#enable-emails-in-the-cli) プロパティ値を更新すると、[!UICONTROL Enable outgoing emails]Cloud Console[ でもこの環境の ](outgoing-emails.md#enable-emails-in-the-cloud-console) 設定値が変更されます。
 
 ## SendGrid ダッシュボード
 
 すべてのクラウドプロジェクトは中央アカウントで管理されるので、SendGrid ダッシュボードにアクセスできるのはサポートのみです。 SendGrid は、サブアカウント制限機能を提供していません。
 
-アクティビティログで配信ステータスや、バウンスメールアドレス、却下メールアドレス、ブロックされたメールアドレスのリストを確認するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) します。 サポートチームは、30 日を経過したアクティビティログを取得 **できません**。
+アクティビティログで配信ステータスや、バウンスメールアドレス、却下メールアドレス、ブロックされたメールアドレスのリストを確認するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) します。 サポートチームは、30 日を経過したアクティビティログを取得 **できません**。
 
 可能であれば、次の情報をリクエストに含めます。
 
@@ -51,11 +51,11 @@ Cloud Console またはコマンドラインから、各環境の送信メール
 
 ## DomainKeys Identified Mail （DKIM）
 
-DKIMは、正規の送信者アドレスとフェイクセンダーアドレスの両方をインターネットサービスプロバイダー（ISP）が識別できるようにするメール認証テクノロジーです。これは、フィッシング詐欺やメール詐欺で一般的に使用される手法です。 DKIMは、DNS レコードを管理するドメインオーナーに依存しています。 DKIMを使用する場合、送信者サーバーは秘密鍵を使用してメッセージに署名します。 また、ドメイン所有者はDKIM レコード（変更された `TXT` レコード）を送信者ドメインの DNS レコードに追加します。 この `TXT` レコードには、受信者のメールサーバーがメッセージの署名を検証するために使用する公開鍵が含まれています。 DKIMの公開鍵暗号手順を使用すると、受信者は送信者の信頼性を検証できます。 [DKIM レコードの説明 &#x200B;](https://docs.sendgrid.com/ui/account-and-settings/dkim-records) を参照してください。
+DKIMは、正規の送信者アドレスとフェイクセンダーアドレスの両方をインターネットサービスプロバイダー（ISP）が識別できるようにするメール認証テクノロジーです。これは、フィッシング詐欺やメール詐欺で一般的に使用される手法です。 DKIMは、DNS レコードを管理するドメインオーナーに依存しています。 DKIMを使用する場合、送信者サーバーは秘密鍵を使用してメッセージに署名します。 また、ドメイン所有者はDKIM レコード（変更された `TXT` レコード）を送信者ドメインの DNS レコードに追加します。 この `TXT` レコードには、受信者のメールサーバーがメッセージの署名を検証するために使用する公開鍵が含まれています。 DKIMの公開鍵暗号手順を使用すると、受信者は送信者の信頼性を検証できます。 [DKIM レコードの説明 ](https://docs.sendgrid.com/ui/account-and-settings/dkim-records) を参照してください。
 
 >[!WARNING]
 >
->SendGrid DKIMの署名とドメイン認証のサポートは、Pro プロジェクトの実稼動環境とステージング環境でのみ使用できますが、すべてのスターター環境では使用できません。 その結果、送信トランザクションメールはスパムフィルターによってフラグ付けされる可能性が高くなります。 DKIMを使用すると、認証済みメールの送信者としての配信率が向上します。 メッセージ配信率を向上させるには、Starter から Pro にアップグレードするか、独自の SMTP サーバーまたはメール配信サービスプロバイダーを使用します。 [&#x200B; 管理システムガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/communications/email-communications) の「_メール接続の設定_」を参照してください。
+>SendGrid DKIMの署名とドメイン認証のサポートは、Pro プロジェクトの実稼動環境とステージング環境でのみ使用できますが、すべてのスターター環境では使用できません。 その結果、送信トランザクションメールはスパムフィルターによってフラグ付けされる可能性が高くなります。 DKIMを使用すると、認証済みメールの送信者としての配信率が向上します。 メッセージ配信率を向上させるには、Starter から Pro にアップグレードするか、独自の SMTP サーバーまたはメール配信サービスプロバイダーを使用します。 [ 管理システムガイド ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/communications/email-communications) の「_メール接続の設定_」を参照してください。
 
 ### 送信者とドメインの認証
 
@@ -63,11 +63,11 @@ SendGrid が実稼動環境またはステージング環境からユーザー�
 
 >[!TIP]
 >
->必ず **[!UICONTROL Sトラストメールアドレス]** を適切なドメインで設定してくださ **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 ドメイン認証は、送信者のメールアドレスに対して実行されます。 デフォルト設定（`example.com`）が設定されている場合、`example.com` からのメールは Sendgrid によってブロックされます。
+>必ず **[!UICONTROLSトラストメールアドレス]** を適切なドメインで設定してくださ **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**。 ドメイン認証は、送信者のメールアドレスに対して実行されます。 デフォルト設定（`example.com`）が設定されている場合、`example.com` からのメールは Sendgrid によってブロックされます。
 
 **ドメイン認証を有効にするには**:
 
-1. [&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) を送信して、特定のドメインに対するDKIMの有効化をリクエストします（**Pro ステージング環境と実稼動環境のみ**）。
+1. [ サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) を送信して、特定のドメインに対するDKIMの有効化をリクエストします（**Pro ステージング環境と実稼動環境のみ**）。
 1. サポートチケットで提供された `TXT` および `CNAME` レコードを使用して、DNS 設定を更新します。
 
 **アカウント ID を持つ `TXT` レコードの例**:
@@ -104,7 +104,7 @@ me12345.mydomain.com | TXT | v=spf1 include:sendgrid.net ~all
 m1._mydomain.com | TXT | k=rsa; t=s; p=<public-key>
 ```
 
-ドメイン認証が設定されると、SendGrid は自動的に Security Policy Framework （SPF）とDKIMレコードを処理します。 SendGrid が DNS レコードに追加する `CNAME` レコードを提供した後、SPF レコードを手動で管理しなくても、専用の IP アドレスを追加したり、他のアカウントを更新したりできます。 [Automated Security とDKIMの署名 &#x200B;](https://docs.sendgrid.com/ui/account-and-settings/dkim-records#automated-security-and-your-dkim-signature) を参照してください。
+ドメイン認証が設定されると、SendGrid は自動的に Security Policy Framework （SPF）とDKIMレコードを処理します。 SendGrid が DNS レコードに追加する `CNAME` レコードを提供した後、SPF レコードを手動で管理しなくても、専用の IP アドレスを追加したり、他のアカウントを更新したりできます。 [Automated Security とDKIMの署名 ](https://docs.sendgrid.com/ui/account-and-settings/dkim-records#automated-security-and-your-dkim-signature) を参照してください。
 
 DNS 設定をテストするには：
 
@@ -118,7 +118,7 @@ dig CNAME s2._domainkey.domain_name
 
 トランザクションメールしきい値は、非実稼動環境から 1 か月に 12,000 通のメールなど、特定の期間内に Pro 環境から送信できるトランザクションメールメッセージの数を参照します。 しきい値は、スパムの送信と、メールの評判を損なう可能性のあるメールの送信を防ぐように設計されています。
 
-送信者評判スコアが 95% を超える限り、実稼動環境で送信できるメールの数にハードリミットはありません。 評判は、バウンスメールまたは却下されたメールの数と、DNS ベースのスパムレジストリによってドメインが潜在的なスパムソースとしてフラグ設定されているかどうかによって影響を受けます。 [2&rbrace;Commerce サポートナレッジベース &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) の「Adobe Commerceで SendGrid のクレジットを超えてもメールが送信されない _を参照してください。_
+送信者評判スコアが 95% を超える限り、実稼動環境で送信できるメールの数にハードリミットはありません。 評判は、バウンスメールまたは却下されたメールの数と、DNS ベースのスパムレジストリによってドメインが潜在的なスパムソースとしてフラグ設定されているかどうかによって影響を受けます。 [2}Commerce サポートナレッジベース ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/emails-not-being-sent-sendgrid-credits-exceeded) の「Adobe Commerceで SendGrid のクレジットを超えてもメールが送信されない _を参照してください。_
 
 **最大クレジットを超えたかどうかを確認するには**:
 
@@ -132,11 +132,15 @@ dig CNAME s2._domainkey.domain_name
 
 1. `/var/log/mail.log` に `authentication failed : Maxium credits exceeded` のエントリがないか確認します。
 
-   `authentication failed` ログエントリが表示され、**メール送信のレピュテーション** が 95 以上である場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、クレジット割り当ての引き上げをリクエストできます。
+   `authentication failed` ログエントリが表示され、**メール送信のレピュテーション** が 95 以上である場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、クレジット割り当ての引き上げをリクエストできます。
+
+>[!NOTE]
+>
+>`var/log/mail.log` ファイルは *実行中のログ* です。 新しいエントリが追加されると、時間の経過と共に古いエントリがファイルから削除されます。 ログでは、最新のログアクティビティのみ使用できます。 古いログエントリは、一度 mail.log から削除しても、アーカイブまたは保持されません。
 
 ### メール送信の評価
 
-メール送信の評価は、インターネットサービスプロバイダー（ISP）によって、メールメッセージを送信する会社に割り当てられるスコアです。 スコアが高いほど、ISP が受信者のインボックスにメッセージを配信する可能性が高くなります。 スコアが特定のレベルを下回ると、ISP が受信者のスパムフォルダーにメッセージをルーティングしたり、メッセージを完全に拒否したりする可能性があります。 評判スコアは、IP アドレスの 30 日間の平均が他の IP アドレスに対してランク付けされていることや、スパムの苦情率など、いくつかの要因によって決定されます。 [&#x200B; メール送信の評判を確認する 8 つの方法 &#x200B;](https://sendgrid.com/en-us/blog/5-ways-check-sending-reputation) を参照してください。
+メール送信の評価は、インターネットサービスプロバイダー（ISP）によって、メールメッセージを送信する会社に割り当てられるスコアです。 スコアが高いほど、ISP が受信者のインボックスにメッセージを配信する可能性が高くなります。 スコアが特定のレベルを下回ると、ISP が受信者のスパムフォルダーにメッセージをルーティングしたり、メッセージを完全に拒否したりする可能性があります。 評判スコアは、IP アドレスの 30 日間の平均が他の IP アドレスに対してランク付けされていることや、スパムの苦情率など、いくつかの要因によって決定されます。 [ メール送信の評判を確認する 8 つの方法 ](https://sendgrid.com/en-us/blog/5-ways-check-sending-reputation) を参照してください。
 
 ### メール抑制リスト
 
@@ -144,6 +148,6 @@ dig CNAME s2._domainkey.domain_name
 
 そもそもメールがスパムフォルダーに送信されるのを防ぐには、Sendgrid のベストプラクティス記事 [My Emails Going to Spam?](https://sendgrid.com/en-us/blog/10-tips-to-keep-email-out-of-the-spam-folder) に従ってください。
 
-一部の受信者にメールが届かない場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、抑制リストの確認をリクエストし、必要に応じて受信者を削除することができます。
+一部の受信者にメールが届かない場合は、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#submit-ticket) して、抑制リストの確認をリクエストし、必要に応じて受信者を削除することができます。
 
-詳しくは、[&#x200B; 抑制リストとは &#x200B;](https://sendgrid.com/en-us/blog/what-is-a-suppression-list) を参照してください。
+詳しくは、[ 抑制リストとは ](https://sendgrid.com/en-us/blog/what-is-a-suppression-list) を参照してください。
