@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>クラウドプロジェクト上のCommerceのアーカイブされたログファイルの保存期間が 30 日になりました。 Commerce on Cloud ガイドの <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations"> ログの表示と管理 </a> を参照してください。</p>
+      <td><p>クラウドプロジェクト上のCommerceのアーカイブされたログファイルの保存期間が 30 日になりました。 Commerce on Cloud ガイドの <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/test/log-locations"> ログの表示と管理 </a> を参照してください。</p>
 </td>
       <td>
         テクニカル、フィードバック
@@ -45,7 +45,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE ツールのリリース後に <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a> を更新しました。</p>
+      <td><p>ECE ツールのリリース後に <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a> を更新しました。</p>
 </td>
       <td>
         技術
@@ -67,7 +67,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud CLI リリース v1.47.0 以降に <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">CLI リファレンス </a> を更新しました。</p>
+      <td><p>Cloud CLI リリース v1.47.0 以降に <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference">CLI リファレンス </a> を更新しました。</p>
 </td>
       <td>
         技術
