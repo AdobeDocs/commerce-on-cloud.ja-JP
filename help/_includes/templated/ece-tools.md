@@ -1,5 +1,5 @@
 ---
-source-git-commit: 11d0e86ad4633d9c4232474b9921ed491f285969
+source-git-commit: 1521b83be787fd7d8e0db302bfaea48f912af572
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 3%
@@ -7,14 +7,14 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**バージョン**:2002.2.8
+**バージョン**:2002.2.9
 
 このリファレンスには、`ece-tools` のコマンド ライン ツールで使用できる 34 のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `ece-tools list` コマンドを使用して自動生成されます。
 
 ## 一般
 
-この参照は、アプリケーションコードベースから生成されます。 コンテンツを変更するには、_フィードバックを送信_ （右上のリンクを参照）。 投稿のガイドラインについては、[&#x200B; コードの投稿 &#x200B;](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) を参照してください。
+この参照は、アプリケーションコードベースから生成されます。 コンテンツを変更するには、_フィードバックを送信_ （右上のリンクを参照）。 投稿のガイドラインについては、[ コードの投稿 ](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) を参照してください。
 
 ### グローバルオプション
 
@@ -83,7 +83,7 @@ ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--shell`, `-s`
 
@@ -127,7 +127,7 @@ ece-tools build
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `completion`
@@ -175,7 +175,7 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--debug`
 
@@ -204,7 +204,7 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--remove-definers`, `-d`
 
@@ -230,7 +230,7 @@ ece-tools deploy
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `help`
@@ -263,7 +263,7 @@ To display the list of available commands, please use the list command.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--format`
 
@@ -314,7 +314,7 @@ It's also possible to get raw list of commands (useful for embedding command run
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--raw`
 
@@ -348,7 +348,7 @@ ece-tools patch
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `post-deploy`
@@ -361,7 +361,7 @@ ece-tools post-deploy
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `run`
@@ -385,7 +385,7 @@ ece-tools run <scenario>...
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `backup:list`
@@ -398,7 +398,7 @@ ece-tools backup:list
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `backup:restore`
@@ -411,7 +411,7 @@ ece-tools backup:restore [-f|--force] [--file [FILE]]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--force`, `-f`
 
@@ -437,7 +437,7 @@ ece-tools build:generate
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `build:transfer`
@@ -450,7 +450,7 @@ ece-tools build:transfer
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cloud:config:create`
@@ -471,7 +471,7 @@ JSON 形式の設定
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cloud:config:update`
@@ -492,7 +492,7 @@ JSON 形式の設定
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cloud:config:validate`
@@ -505,7 +505,7 @@ ece-tools cloud:config:validate
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `config:dump`
@@ -518,7 +518,7 @@ ece-tools config:dumpdump
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cron:disable`
@@ -531,7 +531,7 @@ ece-tools cron:disable
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cron:enable`
@@ -544,7 +544,7 @@ Magento cron プロセスを有効にします。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cron:kill`
@@ -557,7 +557,7 @@ ece-tools cron:kill
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `cron:unlock`
@@ -570,7 +570,7 @@ ece-tools cron:unlock [--job-code [JOB-CODE]]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--job-code`
 
@@ -590,7 +590,7 @@ schema.error.yaml ファイルからdist/error-codes.md ファイルを生成し
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `dev:git:update-composer`
@@ -603,7 +603,7 @@ Git からデプロイメント用に Composer を更新しました。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `env:config:show`
@@ -625,7 +625,7 @@ ece-tools env:config:show [<variable>...]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `error:show`
@@ -644,7 +644,7 @@ ece-tools error:show [-j|--json] [--] [<error-code>]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--json`, `-j`
 
@@ -664,7 +664,7 @@ ece-tools module:refresh
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `schema:generate`
@@ -677,7 +677,7 @@ ece-tools schema:generate
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `wizard:ideal-state`
@@ -690,7 +690,7 @@ ece-tools wizard:ideal-state
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `wizard:master-slave`
@@ -703,7 +703,7 @@ ece-tools wizard:master-slave
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `wizard:scd-on-build`
@@ -716,7 +716,7 @@ ece-tools wizard:scd-on-build
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `wizard:scd-on-demand`
@@ -729,7 +729,7 @@ SCD オンデマンド構成を検証します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `wizard:scd-on-deploy`
@@ -742,7 +742,7 @@ ece-tools wizard:scd-on-deploy
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `wizard:split-db-state`
@@ -755,4 +755,4 @@ DB を分割する機能と、DB が既に分割されているかどうかを�
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
