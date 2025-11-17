@@ -1,36 +1,37 @@
 ---
-title: Elasticsearchサービスの設定
-description: クラウドインフラストラクチャー上でAdobe CommerceのElasticsearchサービスを有効にする方法について説明します。
+title: Elasticsearch サービスの設定
+description: クラウドインフラストラクチャー上でAdobe CommerceのElasticsearch サービスを有効にする方法について説明します。
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
+source-git-commit: ef22e7b305c20148f4ee4b2c0e64e2114bf229b5
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
 
-# Elasticsearchサービスの設定
+# Elasticsearch サービスの設定
 
-[Elasticsearch](https://www.elastic.co) は、あらゆるソース、あらゆる形式からデータを取得し、リアルタイムで検索および視覚化できるオープンソース製品です。
+[Elasticsearch](https://www.elastic.co) は、あらゆるソース、あらゆる形式のデータを取得し、リアルタイムで検索および視覚化できるオープンソース製品です。
 
 {{elasticsearch-support}}
 
-Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サービスの設定 &#x200B;](opensearch.md) を参照してください。
+Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サービスの設定 ](opensearch.md) を参照してください。
 
-- Elasticsearchが商品カタログ内の商品に対してクイック検索と詳細検索を実行します
-- Elasticsearchアナライザーは複数の言語をサポートしています
+- Elasticsearchは、商品カタログ内の商品に対してクイック検索と詳細検索を実行します
+- Elasticsearch アナライザーが複数の言語をサポートしている
 - ストップワードおよび同義語のサポート
 - インデックス再作成が完了するまで、インデックス作成は顧客に影響しません
 
 >[!TIP]
 >
->Adobeでは、Adobe Commerce アプリケーションにサードパーティの検索ツールを設定する予定がある場合でも、クラウドインフラストラクチャプロジェクトでAdobe CommerceのElasticsearchを常に設定することをお勧めします。 Elasticsearchの設定では、サードパーティの検索ツールでエラーが発生した場合に備えてフォールバックオプションを提供しています。
+>Adobeでは、Adobe Commerce アプリケーションにサードパーティの検索ツールを設定する予定がある場合でも、クラウドインフラストラクチャプロジェクト上でAdobe Commerceに対して常にElasticsearchを設定することをお勧めします。 Elasticsearchの設定には、サードパーティの検索ツールでエラーが発生した場合に備えたフォールバックオプションが用意されています。
 
 {{service-instruction}}
 
 **Elasticsearchを有効にするには**:
 
-1. スタータープロジェクトの場合、Elasticsearchのバージョンと割り当てられたディスク領域（MB 単位）を指定して `elasticsearch` サービスを `.magento/services.yaml` ファイルに追加します。
+1. スタータープロジェクトの場合、Elasticsearchのバージョンと割り当てられたディスク領域（MB 単位）を使用して、`elasticsearch` サービスを `.magento/services.yaml` ファイルに追加します。
 
    ```yaml
    elasticsearch:
@@ -38,9 +39,9 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境でElasticsearchのバージョンを変更するには、Adobe Commerce サポートチケットを送信する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境でAdobe Commerceのバージョンを変更するには、Elasticsearch サポートチケットを送信する必要があります。
 
-1. `.magento.app.yaml` ファイルの `relationships` プロパティを設定します。
+1. `relationships` ファイルの `.magento.app.yaml` プロパティを設定します。
 
    ```yaml
    relationships:
@@ -53,7 +54,7 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable Elasticsearch" && git push origin <branch-name>
    ```
 
-   これらの変更が環境に与える影響について詳しくは、[&#x200B; サービス &#x200B;](services-yaml.md) を参照してください。
+   これらの変更が環境に与える影響について詳しくは、[ サービス ](services-yaml.md) を参照してください。
 
 1. デプロイメントプロセスが完了したら、SSH を使用してリモート環境にログインします。
 
@@ -75,21 +76,21 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
 
 {{service-change-tip}}
 
-## Elasticsearchソフトウェアの互換性
+## Elasticsearch ソフトウェアの互換性
 
-クラウドインフラストラクチャプロジェクトにAdobe Commerceをインストールまたはアップグレードする際は、ElasticsearchサービスのバージョンとAdobe Commerce用の [Elasticsearch PHP](https://github.com/elastic/elasticsearch-php) クライアントとの互換性を常に確認してください。
+クラウドインフラストラクチャプロジェクトにAdobe Commerceをインストールまたはアップグレードする際は、常にElasticsearch サービスのバージョンとAdobe Commerce用 [Elasticsearch PHP](https://github.com/elastic/elasticsearch-php) クライアントとの互換性を確認してください。
 
-- **初回セットアップ**- `services.yaml` ファイルで指定されたElasticsearchバージョンが、Adobe Commerce用に設定されたElasticsearch PHP クライアントと互換性があることを確認します。
+- **初回セットアップ**- `services.yaml` ファイルで指定されたElasticsearch バージョンが、Adobe Commerce用に設定されたElasticsearch PHP クライアントと互換性があることを確認します。
 
-- **プロジェクトのアップグレード** – 新しいアプリケーションバージョンのElasticsearch PHP クライアントが、クラウドインフラストラクチャにインストールされたElasticsearchサービスのバージョンと互換性があることを確認します。
+- **プロジェクトのアップグレード** – 新しいアプリケーションバージョンのElasticsearch PHP クライアントが、クラウドインフラストラクチャにインストールされたElasticsearch サービスのバージョンと互換性があることを確認します。
 
-クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 [&#x200B; サービスバージョン &#x200B;](services-yaml.md#service-versions) を参照してください。
+クラウドインフラストラクチャにおけるAdobe Commerceのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 [ サービスバージョン ](services-yaml.md#service-versions) を参照してください。
 
-**Elasticsearchソフトウェアの互換性を確認するには**:
+**Elasticsearch ソフトウェアの互換性を確認するには**:
 
 1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
 
-1. アクティブなElasticsearchの環境の詳細を表示します。
+1. アクティブな環境のElasticsearchの詳細を表示します
 
    ```bash
    magento-cloud relationships --property=elasticsearch
@@ -124,15 +125,15 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
    names    : elasticsearch/elasticsearch
    ```
 
-   また、Elasticsearchのルートディレクトリの `composer.lock` ファイルに、環境の PHP クライアントのバージョンがあります。
+   また、環境のルートディレクトリの `composer.lock` ファイルに、Elasticsearch PHP クライアントのバージョンがあります。
 
-1. コマンドラインから、Elasticsearchサービス接続の詳細を取得します。
+1. コマンドラインから、Elasticsearch サービス接続の詳細を取得します。
 
    ```bash
    vendor/bin/ece-tools env:config:show services
    ```
 
-   応答で、Elasticsearchサービスエンドポイントの IP アドレスを見つけます。
+   応答で、Elasticsearch サービスエンドポイントの IP アドレスを見つけます。
 
    ```
    | elasticsearch:                                                                                                  |
@@ -155,7 +156,7 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
    +------------------------------------------+----------------------------------------------------------------------+
    ```
 
-1. サービスエンドポイントから、インストールされているElasticsearchサービス `version:number` を取得します。
+1. サービスエンドポイントから、インストールされているElasticsearch サービス `version:number` を取得します。
 
    ```bash
    curl -XGET <elasticsearch-service-endpoint-ip-address>:9200/
@@ -181,33 +182,33 @@ Adobe Commerce バージョン 2.4.4 以降については、[OpenSearch サー�
    }
    ```
 
-1. Elasticsearchサービスと PHP クライアントのバージョンの互換性を確認します。
+1. Elasticsearch サービスと PHP クライアントのバージョンの互換性を確認します。
 
    バージョンに互換性がない場合は、環境設定を次のいずれかの更新をおこないます。
 
-   - Elasticsearch PHP クライアントを、Elasticsearchサービスのバージョンと互換性のあるバージョンに変更します。
+   - Elasticsearch PHP クライアントを、Elasticsearch サービスのバージョンと互換性のあるバージョンに変更します。
 
      ```bash
      composer require "elasticsearch/elasticsearch:~<version>"
      ```
 
-   - `services.yaml` ファイルのElasticsearchサービスのバージョンを、Elasticsearchの PHP クライアントと互換性のあるバージョンに変更します。
+   - `services.yaml` ファイルのElasticsearch サービスのバージョンを、Elasticsearch PHP クライアントと互換性のあるバージョンに変更します。
 
      {{pro-update-service}}
 
-## Elasticsearchサービスを再起動します
+## Elasticsearch サービスを再起動します
 
-[Elasticsearch](https://www.elastic.co) サービスを再起動する必要がある場合は、Adobe Commerce サポートに連絡してください。
+[Elasticsearch](https://www.elastic.co) サービスを再起動する必要がある場合は、Adobe Commerce サポートにお問い合わせください。
 
 ## 追加の検索設定
 
-- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [&#x200B; 変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration) を参照してください。
+- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [ 変数のデプロイ ](../environment/variables-deploy.md#search_configuration) を参照してください。
 
-- プロジェクトのElasticsearchサービスを設定した後、管理 UI を使用してElasticsearchElasticsearchをテストし、Adobe Commerceの接続設定をカスタマイズします。
+- プロジェクトのElasticsearch サービスを設定した後、管理 UI を使用してElasticsearch接続をテストし、Adobe CommerceのElasticsearch設定をカスタマイズします。
 
 ### Elasticsearch用プラグインの追加
 
-オプションで、`.magento/services.yaml` ファイルのElasticsearchサービスに `configuration:plugins` セクションを追加することで、Elasticsearch用のプラグインを追加できます。 例えば、次のコードは ICU 分析と音声分析プラグインを有効にします。
+オプションとして、`configuration:plugins` ファイルのElasticsearch サービスに `.magento/services.yaml` セクションを追加することで、Elasticsearch用のプラグインを追加できます。 例えば、次のコードは ICU 分析と音声分析プラグインを有効にします。
 
 ```yaml
 elasticsearch:
@@ -219,16 +220,16 @@ elasticsearch:
             - analysis-phonetic
 ```
 
-Elastic Suite サードパーティプラグインを使用する場合は、[`ece-tools` パッケージをバージョン 2002.0.19 以降に更新 &#x200B;](../dev-tools/update-package.md) する必要があります。
+Elastic Suite サードパーティプラグインを使用する場合は、[`ece-tools` パッケージをバージョン 2002.0.19 以降に更新 ](../dev-tools/update-package.md) する必要があります。
 Elastic Suite を設定する際に、`ELASTICSUITE_CONFIGURATION` のデプロイ変数に設定を追加します。 この設定により、デプロイメント全体で設定が保存されます。
 
-### Elasticsearch用プラグインを削除
+### Elasticsearchのプラグインを削除
 
-`.magento/services.yaml` の `elasticsearch:` からプラグインエントリを削除しても、期待どおりにアンインストールや無効化は行われません。 Elasticsearchデータを再インデックスする必要があります。 この動作は、これらのプラグインに依存するデータの損失や破損の可能性を防ぐことを目的としています。
+`elasticsearch:` の `.magento/services.yaml` からプラグインエントリを削除しても、期待どおりにアンインストールや無効化は行われません。 Elasticsearch データのインデックスを再作成する必要があります。 この動作は、これらのプラグインに依存するデータの損失や破損の可能性を防ぐことを目的としています。
 
-**Elasticsearchプラグインを削除するには**:
+**Elasticsearch プラグインを削除するには**:
 
-1. `.magento/services.yaml` ファイルからElasticsearchプラグインのエントリを削除します。
+1. `.magento/services.yaml` ファイルからElasticsearch プラグインのエントリを削除します。
 1. コードの変更を追加、コミット、プッシュします。
 
    ```bash
@@ -258,12 +259,5 @@ Elastic Suite を設定する際に、`ELASTICSUITE_CONFIGURATION` のデプロ�
 
 >[!TIP]
 >
->Adobe Commerceでの Elastic Suite プラグインの使用またはトラブルシューティングについて詳しくは、[Elastic Suite のドキュメント &#x200B;](https://github.com/Smile-SA/elasticsuite) を参照してください。
+>Adobe Commerceでの Elastic Suite プラグインの使用またはトラブルシューティングについて詳しくは、[Elastic Suite のドキュメント ](https://github.com/Smile-SA/elasticsuite) を参照してください。
 
-## トラブルシューティング
-
-Elasticsearchの問題のトラブルシューティングについては、以下のAdobe Commerce サポートの記事を参照してください。
-
-- [Elasticsearch 5 が設定されましたが、「Fielddata が無効です…」エラーで検索ページが読み込まれません &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=ja)
-- [Adobe CommerceのElasticsearchのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
-- [Elasticsearch インデックスの状態は `yellow` または `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=ja) です
