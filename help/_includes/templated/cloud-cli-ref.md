@@ -1,7 +1,7 @@
 ---
-source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
+source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13671'
+source-wordcount: '13721'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 一般
 
-この参照は、アプリケーションコードベースから生成されます。 コンテンツを変更するには、[codebase](https://github.com/magento/magento-cloud-cli) リポジトリ内の対応するコマンド実装のソースコードを更新し、変更点をレビュー用に送信します。 もう 1 つの方法は、_フィードバックを提供_ （右上のリンクを見つけます）です。 投稿のガイドラインについては、[&#x200B; コードの投稿 &#x200B;](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) を参照してください。
+この参照は、アプリケーションコードベースから生成されます。 コンテンツを変更するには、[codebase](https://github.com/magento/magento-cloud-cli) リポジトリ内の対応するコマンド実装のソースコードを更新し、変更点をレビュー用に送信します。 もう 1 つの方法は、_フィードバックを提供_ （右上のリンクを見つけます）です。 投稿のガイドラインについては、[ コードの投稿 ](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) を参照してください。
 
 ### グローバルオプション
 
@@ -73,7 +73,7 @@ CLI のキャッシュをクリアする
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `console`
@@ -86,7 +86,7 @@ magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--envi
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--browser`
 
@@ -132,7 +132,7 @@ Magento_CLOUD_VARIABLES などのエンコードされた文字列をデコー�
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -160,7 +160,7 @@ magento-cloud docs [--browser BROWSER] [--pipe] [--] [<search>]...
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--browser`
 
@@ -206,7 +206,7 @@ To display the list of available commands, please use the list command.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--format`
 
@@ -264,7 +264,7 @@ It's also possible to get raw list of commands (useful for embedding command run
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--raw`
 
@@ -309,7 +309,7 @@ magento-cloud multi [-p|--projects PROJECTS] [--continue] [--sort SORT] [--rever
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--projects`, `-p`
 
@@ -355,7 +355,7 @@ magento-cloud activity:cancel [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--type`, `-t`
 
@@ -407,7 +407,7 @@ magento-cloud activity:get [-P|--property PROPERTY] [-t|--type TYPE] [-x|--exclu
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -507,7 +507,7 @@ magento-cloud activities [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--li
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--type`, `-t`
 
@@ -620,7 +620,7 @@ magento-cloud activity:log [--refresh REFRESH] [-t|--timestamps] [--type TYPE] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
@@ -707,7 +707,7 @@ magento-cloud app:config-get [-P|--property PROPERTY] [--refresh] [-p|--project 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -757,7 +757,7 @@ magento-cloud apps [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
@@ -819,7 +819,7 @@ API トークンを使用してMagento Cloud にログインします
 Use this command to log in to your Magento Cloud account using an API token.
 
 You can create an account at:
-    https://business.adobe.com/jp/products/magento/magento-commerce.html
+    https://business.adobe.com/products/magento/magento-commerce.html
 
 If you have an account, but you do not already have an API token, you can create one here:
     https://accounts.magento.cloud/user/api-tokens
@@ -830,7 +830,7 @@ Alternatively, to log in to the CLI with a browser, run:
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `auth:browser-login`
@@ -859,7 +859,7 @@ MAGENTO_CLOUD_CLI_TOKEN environment variable.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--force`, `-f`
 
@@ -911,7 +911,7 @@ magento-cloud auth:info [--no-auto-login] [-P|--property PROPERTY] [--refresh] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--no-auto-login`
 
@@ -965,7 +965,7 @@ Magento Cloud からログアウトする
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--all`, `-a`
 
@@ -992,7 +992,7 @@ magento-cloud autoscaling [-p|--project PROJECT] [-e|--environment ENVIRONMENT] 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -1044,7 +1044,7 @@ You can also configure resources statically by running: magento-cloud resources:
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--service`, `-s`
 
@@ -1142,7 +1142,7 @@ magento-cloud blackfire:setup [--server_id SERVER_ID] [--server_token SERVER_TOK
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--server_id`
 
@@ -1187,7 +1187,7 @@ magento-cloud certificate:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--pr
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--cert`
 
@@ -1247,7 +1247,7 @@ magento-cloud certificate:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -1288,7 +1288,7 @@ magento-cloud certificate:get [-P|--property PROPERTY] [--date-fmt DATE-FMT] [-p
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -1320,7 +1320,7 @@ magento-cloud certificates [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--domain`
 
@@ -1435,7 +1435,7 @@ magento-cloud commit:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--e
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -1479,7 +1479,7 @@ magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment E
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--limit`
 
@@ -1539,7 +1539,7 @@ magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTO
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--schema`
 
@@ -1648,7 +1648,7 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--raw`
 
@@ -1694,7 +1694,7 @@ magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environ
 magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATTACH] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-新しいドメインをプロジェクトに追加する
+新しいドメインをプロジェクトに追加します。 このオプションは、Cloud Pro プランプロジェクトには使用できません。
 
 ### 引数
 
@@ -1706,7 +1706,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--cert`
 
@@ -1766,7 +1766,7 @@ magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [--attach ATT
 magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-プロジェクトからドメインを削除する
+プロジェクトからドメインを削除します。 このオプションは、Cloud Pro プランプロジェクトには使用できません。
 
 ### 引数
 
@@ -1778,7 +1778,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -1813,7 +1813,7 @@ magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
-ドメインの詳細情報を表示する
+ドメインの詳細情報を表示します。 このオプションは、Cloud Pro プランプロジェクトには使用できません。
 
 ### 引数
 
@@ -1823,7 +1823,7 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -1878,11 +1878,11 @@ magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--column
 magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-すべてのドメインのリストの取得
+すべてのドメインのリストを取得します。 このオプションは、Cloud Pro プランプロジェクトには使用できません。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--format`
 
@@ -1924,7 +1924,7 @@ magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p
 magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
-ドメインの更新
+ドメインを更新します。 このオプションは、Cloud Pro プランプロジェクトには使用できません。
 
 ### 引数
 
@@ -1936,7 +1936,7 @@ magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--proj
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--cert`
 
@@ -2003,7 +2003,7 @@ magento-cloud environment:activate [--parent PARENT] [-p|--project PROJECT] [-e|
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--parent`
 
@@ -2059,7 +2059,7 @@ magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [--no-che
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--title`
 
@@ -2130,7 +2130,7 @@ magento-cloud checkout [<id>]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `environment:delete`
@@ -2160,7 +2160,7 @@ This command allows you to delete environments as well as their Git branches.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--delete-branch`
 
@@ -2283,7 +2283,7 @@ magento-cloud deploy [-s|--strategy STRATEGY] [-p|--project PROJECT] [-e|--envir
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--strategy`, `-s`
 
@@ -2339,7 +2339,7 @@ Choose manual to have changes staged until you trigger a deployment (including c
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--pipe`
 
@@ -2385,7 +2385,7 @@ magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--access`
 
@@ -2455,7 +2455,7 @@ magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMA
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
@@ -2537,7 +2537,7 @@ Git リポジトリへの URL
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--profile`
 
@@ -2582,7 +2582,7 @@ magento-cloud environments [-I|--no-inactive] [--status STATUS] [--pipe] [--refr
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--no-inactive`, `-I`
 
@@ -2677,7 +2677,7 @@ magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environm
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--lines`
 
@@ -2744,7 +2744,7 @@ This command will initiate a Git merge of the specified environment into its par
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -2789,7 +2789,7 @@ The environment will be unavailable until it is resumed. No data will be lost.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -2836,7 +2836,7 @@ Git ソース参照（ブランチ名やコミットハッシュなど）。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--target`
 
@@ -2928,7 +2928,7 @@ magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -2973,7 +2973,7 @@ magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project P
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -3017,7 +3017,7 @@ magento-cloud environment:resume [-p|--project PROJECT] [-e|--environment ENVIRO
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -3065,7 +3065,7 @@ scp を使用した環境との間でのファイルのコピー
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--recursive`, `-r`
 
@@ -3124,7 +3124,7 @@ magento-cloud ssh [--pipe] [--all] [-o|--option OPTION] [-p|--project PROJECT] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--pipe`
 
@@ -3208,7 +3208,7 @@ parent to the child.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--rebase`
 
@@ -3254,7 +3254,7 @@ magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJ
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--primary`, `-1`
 
@@ -3299,7 +3299,7 @@ magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVI
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--port`
 
@@ -3360,7 +3360,7 @@ magento-cloud integration:activity:get [-P|--property PROPERTY] [-p|--project PR
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -3425,7 +3425,7 @@ magento-cloud integration:activities [--type TYPE] [-x|--exclude-type EXCLUDE-TY
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--type`
 
@@ -3536,7 +3536,7 @@ magento-cloud integration:activity:log [-t|--timestamps] [--date-fmt DATE-FMT] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--timestamps`, `-t`
 
@@ -3575,7 +3575,7 @@ magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-u
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--type`
 
@@ -3899,7 +3899,7 @@ magento-cloud integration:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -3938,7 +3938,7 @@ magento-cloud integration:get [-P|--property [PROPERTY]] [--format FORMAT] [-c|-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -3984,7 +3984,7 @@ magento-cloud integrations [-t|--type TYPE] [--format FORMAT] [-c|--columns COLU
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--type`, `-t`
 
@@ -4036,7 +4036,7 @@ magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucke
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--type`
 
@@ -4372,7 +4372,7 @@ repository may be deleted.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -4400,7 +4400,7 @@ magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTI
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--abslinks`, `-a`
 
@@ -4522,7 +4522,7 @@ magento-cloud dir [<subdir>]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `metrics:all`
@@ -4535,7 +4535,7 @@ magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--bytes`, `-B`
 
@@ -4634,7 +4634,7 @@ magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--la
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--range`, `-r`
 
@@ -4726,7 +4726,7 @@ magento-cloud disk [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--t
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--bytes`, `-B`
 
@@ -4832,7 +4832,7 @@ magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--bytes`, `-B`
 
@@ -4931,7 +4931,7 @@ rsync を使用したマウントからのファイルのダウンロード
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--all`, `-a`
 
@@ -5028,7 +5028,7 @@ magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUM
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--paths`
 
@@ -5106,7 +5106,7 @@ rsync を使用したマウントへのファイルのアップロード
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--source`
 
@@ -5189,7 +5189,7 @@ magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--full`
 
@@ -5260,7 +5260,7 @@ magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -5311,7 +5311,7 @@ magento-cloud project:clear-build-cache [-p|--project PROJECT]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -5341,7 +5341,7 @@ magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--environment`, `-e`
 
@@ -5390,7 +5390,7 @@ magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
@@ -5458,7 +5458,7 @@ magento-cloud projects [--pipe] [--region REGION] [--title TITLE] [--my] [--refr
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--pipe`
 
@@ -5564,7 +5564,7 @@ magento-cloud set-remote [<project>]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `repo:cat`
@@ -5585,7 +5585,7 @@ magento-cloud repo:cat [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environ
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--commit`, `-c`
 
@@ -5622,7 +5622,7 @@ magento-cloud repo:ls [-d|--directories] [-f|--files] [--git-style] [-c|--commit
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--directories`, `-d`
 
@@ -5680,7 +5680,7 @@ magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--commit`, `-c`
 
@@ -5711,7 +5711,7 @@ magento-cloud build-resources:get [-p|--project PROJECT] [--format FORMAT] [-c|-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -5757,7 +5757,7 @@ magento-cloud route:get [--id ID] [-1|--primary] [-P|--property PROPERTY] [--ref
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--id`
 
@@ -5833,7 +5833,7 @@ magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
@@ -5891,7 +5891,7 @@ adding autocompletion support and handy aliases. Bash and ZSH are supported.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--shell-type`
 
@@ -5910,7 +5910,7 @@ CLI を最新バージョンに更新します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--no-major`
 
@@ -5956,7 +5956,7 @@ magento-cloud services [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environ
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
@@ -6016,7 +6016,7 @@ MongoDB からのデータのバイナリアーカイブダンプの作成
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--collection`, `-c`
 
@@ -6073,7 +6073,7 @@ MongoDB からのデータのエクスポート
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--collection`, `-c`
 
@@ -6136,7 +6136,7 @@ magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELAT
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--collection`, `-c`
 
@@ -6179,7 +6179,7 @@ MongoDB シェルの使用
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--eval`
 
@@ -6231,7 +6231,7 @@ redis-cli コマンドに追加する引数
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--relationship`, `-r`
 
@@ -6277,7 +6277,7 @@ valkey-cli コマンドに追加する引数
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--relationship`, `-r`
 
@@ -6320,7 +6320,7 @@ magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--live`
 
@@ -6372,7 +6372,7 @@ magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONME
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -6417,7 +6417,7 @@ magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -6455,7 +6455,7 @@ magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--format`
 
@@ -6514,7 +6514,7 @@ magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [--
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--target`
 
@@ -6572,7 +6572,7 @@ magento-cloud source-ops [--full] [-p|--project PROJECT] [-e|--environment ENVIR
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--full`
 
@@ -6631,7 +6631,7 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--variable`
 
@@ -6695,7 +6695,7 @@ explicitly. For unattended scripts, remember to turn off interaction via
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh-only`
 
@@ -6745,7 +6745,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--name`
 
@@ -6780,7 +6780,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 
 ## `ssh-key:list`
@@ -6803,7 +6803,7 @@ To load or check your SSH certificate, run: magento-cloud ssh-cert:load
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--format`
 
@@ -6848,7 +6848,7 @@ magento-cloud subscription:info [-s|--id ID] [--date-fmt DATE-FMT] [--format FOR
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--id`, `-s`
 
@@ -6901,7 +6901,7 @@ SSH トンネルを閉じる
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--all`, `-a`
 
@@ -6939,7 +6939,7 @@ SSH トンネルの関係情報の表示
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -6983,7 +6983,7 @@ SSH トンネルのリスト
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--all`, `-a`
 
@@ -7055,7 +7055,7 @@ extensions.
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--gateway-ports`, `-g`
 
@@ -7093,7 +7093,7 @@ magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PRO
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--port`
 
@@ -7149,7 +7149,7 @@ magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] 
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--role`, `-r`
 
@@ -7204,7 +7204,7 @@ magento-cloud user:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <e
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--project`, `-p`
 
@@ -7243,7 +7243,7 @@ magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--level`, `-l`
 
@@ -7301,7 +7301,7 @@ magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|-
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--format`
 
@@ -7347,7 +7347,7 @@ magento-cloud user:update [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--role`, `-r`
 
@@ -7393,7 +7393,7 @@ magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--update`, `-u`
 
@@ -7513,7 +7513,7 @@ magento-cloud variable:delete [-l|--level LEVEL] [-p|--project PROJECT] [-e|--en
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--level`, `-l`
 
@@ -7564,7 +7564,7 @@ magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT]
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--property`, `-P`
 
@@ -7629,7 +7629,7 @@ magento-cloud variables [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUM
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--level`, `-l`
 
@@ -7689,7 +7689,7 @@ magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VA
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--allow-no-change`
 
@@ -7788,7 +7788,7 @@ magento-cloud workers [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environm
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options) を参照してください。
 
 #### `--refresh`
 
