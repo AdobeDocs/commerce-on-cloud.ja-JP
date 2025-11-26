@@ -14,8 +14,8 @@ ht-degree: 0%
 
 Cloud Docker for Commerceは、Cloud Tools Suite の一部です。 Cloud Docker ツールを使用すると、ローカルのクラウドのような環境で、Adobe Commerceのオンプレミスまたはクラウドインフラストラクチャプロジェクトを開発およびテストできます。
 
-- 最新のパッケージアップデートについては、[Cloud Docker パッケージリリースノート ](../release-notes/cloud-docker.md) を参照してください。
-- [2}Commerce Developer ドキュメント ](https://developer.adobe.com/commerce/cloud-tools/docker/) サイトの {Cloud Docker for Commerce ガイド _。_
+- 最新のパッケージアップデートについては、[Cloud Docker パッケージリリースノート &#x200B;](../release-notes/cloud-docker.md) を参照してください。
+- [2&rbrace;Commerce Developer ドキュメント &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/) サイトの &lbrace;Cloud Docker for Commerce ガイド _。_
 
 ## ローカル開発
 
@@ -25,4 +25,4 @@ Docker 環境は、便利なローカル開発とテストのために、Adobe C
 1. [Docker Compose](https://www.docker.com/get-started/)
 1. [ECE-Tools パッケージ](install-package.md)
 
-Docker 開発ローカル開発の使用を開始するには、前提条件とインストールについて、{Cloud Docker for Commerce ガイド [ の ](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)0} 開発 _を参照してください。_
+Docker 開発ローカル開発の使用を開始するには、前提条件とインストールについて、{Cloud Docker for Commerce ガイド [&#x200B; の &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/setup/)0} 開発 _を参照してください。_

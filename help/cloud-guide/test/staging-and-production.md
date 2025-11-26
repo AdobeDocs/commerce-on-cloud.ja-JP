@@ -21,7 +21,7 @@ ht-degree: 0%
 
 デプロイメントログは `/var/log/platform/<prodject-ID>/deploy.log` です。 `<project-ID>` の値は、プロジェクト ID と、環境がステージングか実稼動かによって異なります。 例えば、プロジェクト ID が `yw1unoukjcawe` の場合、ステージングユーザーは `yw1unoukjcawe_stg`、実稼動ユーザーは `yw1unoukjcawe` となります。
 
-実稼動環境またはステージング環境でログにアクセスする場合は、SSH を使用して 3 つのノードのそれぞれにログインしてログを探します。 または、[New Relic ログ管理 ](../monitor/log-management.md) を使用して、すべてのノードの集計ログデータを表示およびクエリできます。 [ ログを表示 ](log-locations.md#application-logs) を参照してください。
+実稼動環境またはステージング環境でログにアクセスする場合は、SSH を使用して 3 つのノードのそれぞれにログインしてログを探します。 または、[New Relic ログ管理 &#x200B;](../monitor/log-management.md) を使用して、すべてのノードの集計ログデータを表示およびクエリできます。 [&#x200B; ログを表示 &#x200B;](log-locations.md#application-logs) を参照してください。
 
 ## コードベースの確認
 
@@ -33,11 +33,11 @@ ht-degree: 0%
 
 ## Fastly キャッシュを確認する
 
-[Fastly の設定 ](../cdn/fastly-configuration.md) では、正しい Fastly サービス ID と Fastly API トークン資格情報の使用、Fastly VCL コードのアップロード、DNS 設定の更新、環境への SSL/TLS 証明書の適用など、詳細に注意する必要があります。 これらのセットアップタスクを完了したら、ステージング環境と実稼動環境で Fastly キャッシュを検証できます。
+[Fastly の設定 &#x200B;](../cdn/fastly-configuration.md) では、正しい Fastly サービス ID と Fastly API トークン資格情報の使用、Fastly VCL コードのアップロード、DNS 設定の更新、環境への SSL/TLS 証明書の適用など、詳細に注意する必要があります。 これらのセットアップタスクを完了したら、ステージング環境と実稼動環境で Fastly キャッシュを検証できます。
 
 **Fastly サービス設定を検証するには**:
 
-1. `/admin` を含む URL または [ 更新された管理者 URL](../environment/variables-admin.md#admin-url) を使用して、ステージング環境および実稼動環境で管理者にログインします。
+1. `/admin` を含む URL または [&#x200B; 更新された管理者 URL](../environment/variables-admin.md#admin-url) を使用して、ステージング環境および実稼動環境で管理者にログインします。
 
 1. **Stores**/**Settings**/**Configuration**/**Advanced**/**System** に移動します。 スクロールして、「**フルページキャッシュ**」をクリックします。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
    - **Fastly 設定** をクリックします。
 
-   - Fastly サービス ID と Fastly API トークン資格情報の値を確認します。 [Fastly 資格情報の取得 ](/help/cloud-guide/cdn/fastly-configuration.md#get-fastly-credentials) を参照してください。
+   - Fastly サービス ID と Fastly API トークン資格情報の値を確認します。 [Fastly 資格情報の取得 &#x200B;](/help/cloud-guide/cdn/fastly-configuration.md#get-fastly-credentials) を参照してください。
 
    - 「**認証情報をテスト**」をクリックします。
 
@@ -64,7 +64,7 @@ ht-degree: 0%
    - ステージング：`dig https://mcstaging.<your-domain>.com`
    - 実稼動：`dig https://mcprod.<your-domain>.com`
 
-   その他の `dig` テストについては、Fastly の [DNS 変更前のテスト ](https://docs.fastly.com/en/guides/working-with-domains) を参照してください。
+   その他の `dig` テストについては、Fastly の [DNS 変更前のテスト &#x200B;](https://docs.fastly.com/en/guides/working-with-domains) を参照してください。
 
 1. `cURL` を使用して、応答ヘッダー情報を確認します。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
    curl https://mcstaging.<your-domain>.com -H "host: mcstaging.<your-domain.com>" -k -vo /dev/null -H Fastly-Debug:1
    ```
 
-   ヘッダーの検証について詳しくは、[ 応答ヘッダーの確認 ](../cdn/fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) を参照してください。
+   ヘッダーの検証について詳しくは、[&#x200B; 応答ヘッダーの確認 &#x200B;](../cdn/fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) を参照してください。
 
 1. ライブ状態になったら、`cURL` を使用してライブサイトを確認できます。
 
@@ -204,7 +204,7 @@ ht-degree: 0%
 
 最適な結果を得るには、次のツールを使用します。
 
-- [ アプリケーションパフォーマンステスト ](../environment/variables-post-deploy.md#ttfb_tested_pages) - `TTFB_TESTED_PAGES` 環境変数を設定して、サイトの応答時間をテストすることで、アプリケーションパフォーマンスをテストします。
+- [&#x200B; アプリケーションパフォーマンステスト &#x200B;](../environment/variables-post-deploy.md#ttfb_tested_pages) - `TTFB_TESTED_PAGES` 環境変数を設定して、サイトの応答時間をテストすることで、アプリケーションパフォーマンスをテストします。
 - [Siege](https://www.joedog.org/siege-home/) - トラフィックのシェーピングとテストを行うソフトウェアで、ストアを限界まで押し上げます。 設定可能な数のシミュレーションクライアントを使用して、サイトをヒットします。 Siege では、基本認証、Cookie、HTTP、HTTPS、および FTP プロトコルをサポートしています。
 - [Jmeter](https://jmeter.apache.org) - フラッシュセールスなどのスパイクされたトラフィックのパフォーマンスを測定するのに役立つ、優れた負荷テスト。 サイトに対して実行するカスタムテストを作成します。
 - [New Relic](../monitor/new-relic-service.md) （提供） – データ、クエリ、Redis などの送信に費やした時間が追跡されるため、パフォーマンスが低下するサイトのプロセスや領域を見つけるのに役立ちます。
@@ -212,8 +212,8 @@ ht-degree: 0%
 
 ## 機能テスト
 
-Magento機能テストフレームワーク（MFTF）を使用すると、Cloud Docker 環境からAdobe Commerceの機能テストを実行できます。 [Cloud Docker for Commerce ガイド ](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) アプリケーションテスト _を参照してください_。
+Magento機能テストフレームワーク（MFTF）を使用すると、Cloud Docker 環境からAdobe Commerceの機能テストを実行できます。 [Cloud Docker for Commerce ガイド &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) アプリケーションテスト _を参照してください_。
 
 ## セキュリティスキャンツールの設定
 
-サイトには無料のセキュリティスキャンツールがあります。 サイトを追加してツールを実行するには、[ セキュリティ スキャン ツール ](../launch/overview.md#set-up-the-security-scan-tool) を参照してください。
+サイトには無料のセキュリティスキャンツールがあります。 サイトを追加してツールを実行するには、[&#x200B; セキュリティ スキャン ツール &#x200B;](../launch/overview.md#set-up-the-security-scan-tool) を参照してください。
