@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>「JS の縮小とバンドルが有効な場合にチェックアウトが失敗します：問題」の修正を含むように、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12 リリースノート </a> を更新しました。</p>
+      <td><p>「JS の縮小とバンドルが有効な場合にチェックアウトが失敗します：問題」の修正を含むように、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12 リリースノート </a> を更新しました。</p>
 </td>
       <td>
         技術
@@ -31,7 +31,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">コミット</a></td>
     </tr>
     <tr>
-      <td><p>ECE ツールのリリース後に <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a> v2002.2.9 を更新。</p>
+      <td><p>ECE ツールのリリース後に <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a> v2002.2.9 を更新。</p>
 </td>
       <td>
         技術
