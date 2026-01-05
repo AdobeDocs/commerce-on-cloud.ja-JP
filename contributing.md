@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 投稿者ガイドドキュメント
 
-詳しくは、[ 投稿者ガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) を参照してください。
+詳しくは、[&#x200B; 投稿者ガイド &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) を参照してください。
 
 ## 質問がある場合
 
@@ -31,17 +31,17 @@ ht-degree: 1%
 
 このプロジェクトへのサードパーティ投稿者には、署名済みの投稿者が関連付けられている必要があります
 使用許諾契約。 これにより、Adobeに投稿を再配布する権限が付与されます
-プロジェクトの一環として。 [ アドビの CLA に署名してください ](https://opensource.adobe.com/cla.html)。 あなた
+プロジェクトの一環として。 [&#x200B; アドビの CLA に署名してください &#x200B;](https://opensource.adobe.com/cla.html)。 あなた
 Adobe CLA の送信は 1 回だけでかまいません。したがって、以前に送信したことがある場合は、
 行ってもよろしい。
 
 ## コードレビュー
 
 すべての送信は、プルリクエスト形式でおこなわれ、レビューする必要があります
-プロジェクト コミッター別 [GitHub のプルリクエストドキュメントをお読みください ](https://docs.github.com/articles/about-pull-requests/)
+プロジェクト コミッター別 [GitHub のプルリクエストドキュメントをお読みください &#x200B;](https://docs.github.com/articles/about-pull-requests/)
 プルリクエストの送信に関する詳細情報。
 
-最後に、次の場合は [ プルリクエストテンプレート ](PULL_REQUEST_TEMPLATE.md) に従ってください
+最後に、次の場合は [&#x200B; プルリクエストテンプレート &#x200B;](PULL_REQUEST_TEMPLATE.md) に従ってください
 プルリクエストを送信しています！
 
 ## 投稿者からコミッターへ
@@ -55,11 +55,11 @@ Adobe CLA の送信は 1 回だけでかまいません。したがって、以�
 
 ## セキュリティ上の問題
 
-セキュリティ上の問題は、このイシュートラッカーでは報告しないでください。 代わりに、[ セキュリティの専門家に問題を提起してください ](https://helpx.adobe.com/security/alertus.html)
+セキュリティ上の問題は、このイシュートラッカーでは報告しないでください。 代わりに、[&#x200B; セキュリティの専門家に問題を提起してください &#x200B;](https://helpx.adobe.com/security/alertus.html)
 
 ## 新機能
 
-変更によって、強調表示する必要のある新しいトピック、重要な更新、修正が導入された場合は、プルリクエストの本文から [ 新機能 ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview#whats-new) のセクションに簡単な説明を追加できます。
+変更によって、強調表示する必要のある新しいトピック、重要な更新、修正が導入された場合は、プルリクエストの本文から [&#x200B; 新機能 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview#whats-new) のセクションに簡単な説明を追加できます。
 
 新機能のハイライトを追加するには：
 
@@ -103,4 +103,4 @@ Adobe CLA の送信は 1 回だけでかまいません。したがって、以�
 1. `whatsnew` 部は、`whatsnew` タグから始めて、プルリクエスト本文の最後になければなりません。
 1. 変更の説明には、作業リンクを含める必要があります。 リンクが正しいことを確認し、目的のトピックに導いてください。 トピックが新規の場合は、プルリクエストを結合して新しいトピックを公開した後、リンクが機能していることを確認します。 プルリクエストが結合された後は、リンクを修正しても問題ありません。
 
-例えば、リポジトリ内でクローズドなプルリクエストを検索して既存のハイライトの書式を確認し、[ 新機能 ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview#whats-new) の節と比較して、ドキュメントにどのように表示されるかを確認します。
+例えば、リポジトリ内でクローズドなプルリクエストを検索して既存のハイライトの書式を確認し、[&#x200B; 新機能 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview#whats-new) の節と比較して、ドキュメントにどのように表示されるかを確認します。
