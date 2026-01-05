@@ -1,7 +1,7 @@
 ---
-source-git-commit: d6a1bcb6167d490ff4bf8349a03fce63f5adde9d
+source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '71'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>「JS の縮小とバンドルが有効な場合にチェックアウトが失敗します：問題」の修正を含むように、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12 リリースノート </a> を更新しました。</p>
+      <td><p>「JS の縮小とバンドルが有効な場合にチェックアウトが失敗します：問題」の修正を含むように、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patches 1.1.12 リリースノート </a> を更新しました。</p>
 </td>
       <td>
         技術
@@ -31,34 +31,12 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">コミット</a></td>
     </tr>
     <tr>
-      <td><p>ECE ツールのリリース後に <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a> v2002.2.9 を更新。</p>
+      <td><p>ECE ツールのリリース後に <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a> v2002.2.9 を更新。</p>
 </td>
       <td>
         技術
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/5f088df3e7bc35cc1d7fa93d06b5fa9968802572">コミット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2025 年 11 月 6 日（Pt）
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>説明</th>
-      <th>タイプ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>クラウドプロジェクト上のCommerceのアーカイブされたログファイルの保存期間が 30 日になりました。 Commerce on Cloud ガイドの <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/test/log-locations"> ログの表示と管理 </a> を参照してください。</p>
-</td>
-      <td>
-        テクニカル、フィードバック
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/1aa8f5e1b64ae40330d9f4b499ceb42d7725d432">コミット</a></td>
     </tr>
   </tbody>
 </table>
