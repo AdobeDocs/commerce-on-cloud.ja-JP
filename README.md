@@ -1,7 +1,7 @@
 ---
-source-git-commit: b151aac666510594751937e80dc3d9db4ede41b7
+source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -9,16 +9,16 @@ ht-degree: 1%
 
 このサイトには、クラウドインフラストラクチャー上のCommerceに関する最新の開発者向けドキュメントが含まれています。
 
-- [&#x200B; クラウドインフラストラクチャー上のCommerceガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview)
-- クラウドインフラストラクチャー上での [Commerceの概要 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/start/overview)
+- [ クラウドインフラストラクチャー上のCommerceガイド ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- クラウドインフラストラクチャー上での [Commerceの概要 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 
 ## Adobe オープン Source行動規範
 
-このプロジェクトでは、[Adobe オープン Source行動規範 &#x200B;](code-of-conduct.md) を採用しています。 詳しくは、[投稿](contributing.md)の記事を参照してください。
+このプロジェクトでは、[Adobe オープン Source行動規範 ](code-of-conduct.md) を採用しています。 詳しくは、[投稿](contributing.md)の記事を参照してください。
 
 ## Adobe コンテンツへの投稿について
 
-[Adobe ドキュメント投稿者ガイドを参照してください &#x200B;](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction)。
+[Adobe ドキュメント投稿者ガイドを参照してください ](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)。
 
 投稿方法は、投稿者と、投稿したい変更の種類に応じて異なります。
 
@@ -40,14 +40,14 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 コミュニティのコントリビューターは、基本的な編集を行う場合は GitHub UI を使用し、大きな変更を加える場合はリポジトリをフォークします。
 
-詳しくは、[Adobe ドキュメント投稿者ガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction) を参照してください。
+詳しくは、[Adobe ドキュメント投稿者ガイド ](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) を参照してください。
 
 ## Markdown を使用してトピックを書式設定する方法
 
 このリポジトリ内の記事はすべて、GitHub Flavored Markdown を使用しています。 Markdown について詳しくは、以下を参照してください。
 
-- [Markdown の基本 &#x200B;](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [&#x200B; 印刷用 Markdown チートシート &#x200B;](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Markdown の基本 ](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [ 印刷用 Markdown チートシート ](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## テンプレート
 
@@ -70,7 +70,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 >**メモ：**
 >
 >- テンプレート化されたコンテンツを生成するには、ターミナルのコマンドラインで作業する必要があります。
->- レンダリングスクリプトを実行するには、Ruby がインストールされている必要があります。 必要なバージョンについては [_jekyll/.ruby-version] (_jekyll/.ruby-version) を参照してください。
+>- レンダリングスクリプトを実行するには、Ruby がインストールされている必要があります。 必要なバージョンについては [_jekyll/.ruby-version](_jekyll/.ruby-version) を参照してください。
 
 テンプレート化されたコンテンツのファイル構造について詳しくは、次を参照してください。
 
@@ -83,9 +83,9 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 1. テキストエディターで、`_jekyll/_data` ディレクトリにあるデータファイルを開きます。 例：
 
-   - [Cloud CLI リファレンス &#x200B;](help/templated/cloud-cli-ref.md):`_jekyll/_data/cloud-cli-ref.yaml`
-   - [&#x200B; クラウドパッケージ &#x200B;](help/templated/cloud-packages.md):`_jekyll/_data/cloud-packages.yaml`
-   - [ECE ツールリファレンス &#x200B;](help/templated/ece-tools.md):`_jekyll/_data/ece-tools.yaml`
+   - [Cloud CLI リファレンス ](help/templated/cloud-cli-ref.md):`_jekyll/_data/cloud-cli-ref.yaml`
+   - [ クラウドパッケージ ](help/templated/cloud-packages.md):`_jekyll/_data/cloud-packages.yaml`
+   - [ECE ツールリファレンス ](help/templated/ece-tools.md):`_jekyll/_data/ece-tools.yaml`
 
 2. 既存の YAML 構造を使用してエントリを作成します。
 
@@ -101,7 +101,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
    bundle exec rake render
    ```
 
-   >**注意：** スクリプトは `_jekyll` ディレクトリから実行する必要があります。 スクリプトを初めて実行する場合は、`bundle install` コマンドを使用して Ruby の依存関係をインストールする必要があります。 Rake タスクは、Adobe Commerce ドキュメントリポジトリ全体のメンテナンス性を向上させるために、`adobe-comdox-exl-rake-tasks` gem によって提供されます。
+   >**注意：** スクリプトは `_jekyll` ディレクトリから実行する必要があります。 スクリプトを初めて実行する場合は、`bundle install` コマンドを使用して Ruby の依存関係をインストールする必要があります。 コア Rake タスクと依存関係（Jekyll、Rake、画像の最適化）は、Adobe Commerce ドキュメントリポジトリ全体の保守性を向上させるために、`adobe-comdox-exl-rake-tasks` gem によって提供されます。 このリポジトリに固有のカスタムタスクは、`Rakefile` に実装されます。
 
 5. `root` ディレクトリに戻ります。
 
@@ -130,7 +130,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
    git push
    ```
 
-[&#x200B; データファイル &#x200B;](https://jekyllrb.com/docs/datafiles)、[&#x200B; 液体フィルター &#x200B;](https://jekyllrb.com/docs/liquid/filters/) およびその他の機能について詳しくは、Jekyll のドキュメントを参照してください。
+[ データファイル ](https://jekyllrb.com/docs/datafiles)、[ 液体フィルター ](https://jekyllrb.com/docs/liquid/filters/) およびその他の機能について詳しくは、Jekyll のドキュメントを参照してください。
 
 ## 使用可能な Rake タスク
 
