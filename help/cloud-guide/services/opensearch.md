@@ -3,16 +3,16 @@ title: OpenSearch サービスの設定
 description: クラウドインフラストラクチャー上でAdobe Commerceの OpenSearch サービスを有効にする方法について説明します。
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 5a190471f4ccc23eb1c311f3082af1948cf1c68d
+source-git-commit: 3a81c8ef2024341e60f4767bdd6616df26f8045f
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
 
 # OpenSearch サービスの設定
 
-[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearch 7.10.2 のオープンソースのフォークで、Elasticsearchのライセンスの変更に従っています。 詳しくは、GitHub の [OpenSource プロジェクト &#x200B;](https://github.com/opensearch-project) を参照してください。
+[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearch 7.10.2 のオープンソースのフォークで、Elasticsearchのライセンスの変更に従っています。 詳しくは、GitHub の [OpenSource プロジェクト ](https://github.com/opensearch-project) を参照してください。 [ 必要システム構成 ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) に、サポートされるバージョンを示します。
 
 {{elasticsearch-support}}
 
@@ -27,19 +27,19 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 >[!TIP]
 >
->[Live Search](https://experienceleague.adobe.com/ja/docs/commerce/live-search/overview) を使用しないクラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、Adobeでは、[!DNL OpenSearch] を設定してサードパーティの検索ツールのフォールバックオプションを提供することをお勧めします。 ただし、同じCommerce インスタンスで [!DNL OpenSearch] と [!DNL Live Search] の両方を有効にすることはできません。
+>[Live Search](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview) を使用しないクラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、Adobeでは、[!DNL OpenSearch] を設定してサードパーティの検索ツールのフォールバックオプションを提供することをお勧めします。 ただし、同じCommerce インスタンスで [!DNL OpenSearch] と [!DNL Live Search] の両方を有効にすることはできません。
 
 **OpenSearch を有効にするには**:
 
-1. 統合環境の場合、適切なバージョンと割り当てられたディスク領域（MB 単位）を使用して `opensearch` サービスを `.magento/services.yaml` ファイルに追加します。 この場合、バージョン 2 が適切です。 マイナーバージョンは必要ありません。
+1. 統合環境の場合、適切なバージョンと割り当てられたディスク領域（MB 単位）を使用して `opensearch` サービスを `.magento/services.yaml` ファイルに追加します。 この場合、バージョン 3 が適切です。 マイナーバージョンは必要ありません。
 
    ```yaml
    opensearch:
-       type: opensearch:2
+       type: opensearch:3
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) する必要があります。
 
 1. `relationships` ファイルの `.magento.app.yaml` プロパティを設定または確認します。
 
@@ -62,7 +62,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
    git push origin <branch-name>
    ```
 
-   これらの変更が環境に与える影響について詳しくは、[&#x200B; サービスの設定 &#x200B;](services-yaml.md) を参照してください。
+   これらの変更が環境に与える影響について詳しくは、[ サービスの設定 ](services-yaml.md) を参照してください。
 
 1. デプロイメントプロセスが完了したら、SSH を使用してリモート環境にログインします。
 
@@ -92,7 +92,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 - **プロジェクトのアップグレード** – 新しいアプリケーションバージョンの OpenSearch PHP クライアントが、クラウドインフラストラクチャにインストールされた OpenSearch サービスバージョンと互換性があることを確認します。
 
-サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド [&#x200B; の &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)_システム要件_ を参照してください。
+サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド [ の ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)_システム要件_ を参照してください。
 
 **OpenSearch ソフトウェアの互換性を確認するには**:
 
@@ -135,7 +135,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
    | path                                     | null                                                   |
    | query                                    |                                                        |
    | password                                 | null                                                   |
-   | type                                     | opensearch:2                                           |
+   | type                                     | opensearch:3                                           |
    | public                                   | false                                                  |
    | host_mapped                              | false                                                  |
    ```
@@ -153,7 +153,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
       "cluster_uuid" : "_yzaae6-ywSEW1MaAF8ZPWyQ",
       "version" : {
         "distribution" : "opensearch",
-        "number" : "2.5.0",
+        "number" : "3.1.0",
         "build_type" : "deb",
         "build_hash" : "aaaaaaa",
         "build_date" : "2023-01-23T12:07:18.760675Z",
@@ -174,7 +174,7 @@ OpenSearch サービスを再起動する必要がある場合は、Adobe Commer
 
 ## 追加の検索設定
 
-- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [&#x200B; 変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration) を参照してください。
+- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [ 変数のデプロイ ](../environment/variables-deploy.md#search_configuration) を参照してください。
 
 - プロジェクトの OpenSearch サービスを設定した後、管理 UI を使用して OpenSearch 接続をテストし、Adobe Commerceの OpenSearch 設定をカスタマイズします。
 
@@ -184,7 +184,7 @@ OpenSearch サービスを再起動する必要がある場合は、Adobe Commer
 
 >[!NOTE]
 >
->これは、統合環境とスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境にプラグインをインストールするには、[&#x200B; サポートリクエストを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) します。
+>これは、統合環境とスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境にプラグインをインストールするには、[ サポートリクエストを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) します。
 
 
 ```yaml
@@ -197,7 +197,7 @@ opensearch:
             - analysis-phonetic
 ```
 
-プラグインについて詳しくは、[OpenSearch プロジェクト &#x200B;](https://github.com/opensearch-project) を参照してください。
+プラグインについて詳しくは、[OpenSearch プロジェクト ](https://github.com/opensearch-project) を参照してください。
 
 ### OpenSearch のプラグインを削除
 
@@ -208,7 +208,7 @@ opensearch:
 
 >[!NOTE]
 >
->この変更は、統合およびスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境でプラグインを削除するには、[&#x200B; サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) する必要があります。
+>この変更は、統合およびスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境でプラグインを削除するには、[ サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) する必要があります。
 
 1. `.magento/services.yaml` ファイルから OpenSearch プラグインのエントリを削除します。
 1. コードの変更を追加、コミット、プッシュします。
