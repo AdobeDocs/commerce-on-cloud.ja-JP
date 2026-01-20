@@ -23,7 +23,7 @@ ht-degree: 6%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
 </td>
       <td>
         Feedback
