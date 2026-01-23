@@ -3,16 +3,16 @@ title: RabbitMQ サービスの設定
 description: RabbitMQ サービスを有効にして、クラウドインフラストラクチャー上のAdobe Commerceのメッセージキューを管理する方法について説明します。
 feature: Cloud, Services
 exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
-source-git-commit: 76a9721767cbd4328347311cc308810f0f7914c0
+source-git-commit: 258fe6de7a8b80cb3403f1ce04d0bf2e299f68ae
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
 
 # サービス [!DNL RabbitMQ] 設定
 
-[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja) は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
+[Message Queue Framework （MQF） ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) は、[ モジュール ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
 
 MQF では、メッセージの送受信に使用できるスケーラブルなプラットフォームを提供するメッセージングブローカーとして [RabbitMQ](https://www.rabbitmq.com/) を使用します。 また、未配信メッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ] は、Advanced Message Queuing Protocol （AMQP） 0.9.1 仕様に基づいています。
 
@@ -57,7 +57,7 @@ MQF では、メッセージの送受信に使用できるスケーラブルな�
    git push origin <branch-name>
    ```
 
-1. [&#x200B; サービスの関係を確認します &#x200B;](services-yaml.md#service-relationships)。
+1. [ サービスの関係を確認します ](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 
@@ -152,8 +152,12 @@ PHP アプリケーションを使用して RabbitMQ に接続するには、ソ
 
 ## [!DNL RabbitMQ] サービスのトラブルシューティング
 
-[Adobe Commerce Cloud で RabbitMQ に接続できない &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27688) を参照してください。
+[Adobe Commerce Cloud で RabbitMQ に接続できない ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688) を参照してください。
 
 ## [!DNL RabbitMQ] サービスのアップグレード
 
-アップグレード手順については、「[&#x200B; サービスバージョンの変更 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)」を参照してください。
+>
+>
+>統合環境で [!DNL RabbitMQ] をアップグレードする場合は、バージョンをスキップしないでください。 [ 順次アップグレード ](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability) のみがサポートされ（例：3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1）、各バージョンバンプは、クラウド環境が実際に正常にデプロイされたに対応する必要があります。
+>
+>一般的なサービスアップグレードの手順については、[ サービスバージョンの変更 ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version) を参照してください。
