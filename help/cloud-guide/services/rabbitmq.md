@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # サービス [!DNL RabbitMQ] 設定
 
-[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja) は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module) がメッセージをキューに公開できるようにする、Adobe Commerce内のシステムです。 また、メッセージを非同期で受信するコンシューマーも定義します。
 
 MQF では、メッセージの送受信に使用できるスケーラブルなプラットフォームを提供するメッセージングブローカーとして [RabbitMQ](https://www.rabbitmq.com/) を使用します。 また、未配信メッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ] は、Advanced Message Queuing Protocol （AMQP） 0.9.1 仕様に基づいています。
 
@@ -152,7 +152,7 @@ PHP アプリケーションを使用して RabbitMQ に接続するには、ソ
 
 ## [!DNL RabbitMQ] サービスのトラブルシューティング
 
-[Adobe Commerce Cloud で RabbitMQ に接続できない &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688) を参照してください。
+[Adobe Commerce Cloud で RabbitMQ に接続できない &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27688) を参照してください。
 
 ## [!DNL RabbitMQ] サービスのアップグレード
 
@@ -160,4 +160,4 @@ PHP アプリケーションを使用して RabbitMQ に接続するには、ソ
 >
 >統合環境で [!DNL RabbitMQ] をアップグレードする場合は、バージョンをスキップしないでください。 [&#x200B; 順次アップグレード &#x200B;](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability) のみがサポートされ（例：3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1）、各バージョンバンプは、クラウド環境が実際に正常にデプロイされたに対応する必要があります。
 >
->一般的なサービスアップグレードの手順については、[&#x200B; サービスバージョンの変更 &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version) を参照してください。
+>一般的なサービスアップグレードの手順については、[&#x200B; サービスバージョンの変更 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version) を参照してください。
