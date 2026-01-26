@@ -21,7 +21,7 @@ Adobeがクラウドインフラストラクチャー上でCommerceのサブス�
 
 ## Cloud アカウントへの新規登録
 
-クラウドインフラストラクチャー上のAdobe Commerce アカウントをお持ちでない場合は、[&#x200B; 営業 &#x200B;](https://business.adobe.com/products/magento/get-demo.html) にお問い合わせください。 新規登録すると、Adobeによってアカウントが作成され、プロジェクトインターフェイスへのアクセス方法を説明するお知らせメールが送信されます。 このメールにはリンクが含まれているので、アカウントにログインしてプロジェクトの初期設定を完了できます。
+クラウドインフラストラクチャー上のAdobe Commerce アカウントをお持ちでない場合は、[&#x200B; 営業 &#x200B;](https://business.adobe.com/jp/products/magento/get-demo.html) にお問い合わせください。 新規登録すると、Adobeによってアカウントが作成され、プロジェクトインターフェイスへのアクセス方法を説明するお知らせメールが送信されます。 このメールにはリンクが含まれているので、アカウントにログインしてプロジェクトの初期設定を完了できます。
 
 ## プロジェクトへのアクセスとユーザーの追加
 
@@ -33,7 +33,7 @@ Adobeがクラウドインフラストラクチャー上でCommerceのサブス�
 
 ### 共有アカウントアクセス
 
-ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスを使用すると、信頼できる社員やサービスプロバイダーは、ヘルプセンターを使用して、クラウドインフラストラクチャプロジェクトでのAdobe Commerceに関連するサポートチケットを送信および追跡できます。 設定手順については、ヘルプセンターの [&#x200B; 共有アクセス &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) の記事を参照してください。
+ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスを使用すると、信頼できる社員やサービスプロバイダーは、ヘルプセンターを使用して、クラウドインフラストラクチャプロジェクトでのAdobe Commerceに関連するサポートチケットを送信および追跡できます。 設定手順については、ヘルプセンターの [&#x200B; 共有アクセス &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#shared-access) の記事を参照してください。
 
 ### [!DNL Cloud Console]
 
