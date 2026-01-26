@@ -21,7 +21,7 @@ Adobeがクラウドインフラストラクチャー上でCommerceのサブス�
 
 ## Cloud アカウントへの新規登録
 
-クラウドインフラストラクチャー上のAdobe Commerce アカウントをお持ちでない場合は、[ 営業 ](https://business.adobe.com/products/magento/get-demo.html) にお問い合わせください。 新規登録すると、Adobeによってアカウントが作成され、プロジェクトインターフェイスへのアクセス方法を説明するお知らせメールが送信されます。 このメールにはリンクが含まれているので、アカウントにログインしてプロジェクトの初期設定を完了できます。
+クラウドインフラストラクチャー上のAdobe Commerce アカウントをお持ちでない場合は、[&#x200B; 営業 &#x200B;](https://business.adobe.com/products/magento/get-demo.html) にお問い合わせください。 新規登録すると、Adobeによってアカウントが作成され、プロジェクトインターフェイスへのアクセス方法を説明するお知らせメールが送信されます。 このメールにはリンクが含まれているので、アカウントにログインしてプロジェクトの初期設定を完了できます。
 
 ## プロジェクトへのアクセスとユーザーの追加
 
@@ -29,11 +29,11 @@ Adobeがクラウドインフラストラクチャー上でCommerceのサブス�
 
 ### ユーザー登録
 
-クラウドインフラストラクチャプロジェクトおよび環境では、登録済みユーザーのみをAdobe Commerceに追加できます。 新しいユーザーがいる場合は、[ アカウントの登録 ](https://account.magento.com/customer/account/login/) と、アカウントプロファイルに関連付けられているメールアドレスの入力を依頼します。
+クラウドインフラストラクチャプロジェクトおよび環境では、登録済みユーザーのみをAdobe Commerceに追加できます。 新しいユーザーがいる場合は、[&#x200B; アカウントの登録 &#x200B;](https://account.magento.com/customer/account/login/) と、アカウントプロファイルに関連付けられているメールアドレスの入力を依頼します。
 
 ### 共有アカウントアクセス
 
-ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスを使用すると、信頼できる社員やサービスプロバイダーは、ヘルプセンターを使用して、クラウドインフラストラクチャプロジェクトでのAdobe Commerceに関連するサポートチケットを送信および追跡できます。 設定手順については、ヘルプセンターの [ 共有アクセス ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) の記事を参照してください。
+ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスを使用すると、信頼できる社員やサービスプロバイダーは、ヘルプセンターを使用して、クラウドインフラストラクチャプロジェクトでのAdobe Commerceに関連するサポートチケットを送信および追跡できます。 設定手順については、ヘルプセンターの [&#x200B; 共有アクセス &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) の記事を参照してください。
 
 ### [!DNL Cloud Console]
 
@@ -41,7 +41,7 @@ Adobeがクラウドインフラストラクチャー上でCommerceのサブス�
 
 ## Adobe ステータスへの新規登録
 
-クラウドインフラストラクチャプラットフォーム環境および関連サービスについてのAdobe Commerceの最新情報については、[ ステータスページ ](https://status.adobe.com/products/503473) を参照してください。
+クラウドインフラストラクチャプラットフォーム環境および関連サービスについてのAdobe Commerceの最新情報については、[&#x200B; ステータスページ &#x200B;](https://status.adobe.com/products/503473) を参照してください。
 
 このページには、Adobe Commerceのコンポーネントとサービスのステータスが表示され、その後インシデントの報告、サービスのアップグレード、計画的な停止、予定されているメンテナンスなどに関する通知が表示されます。 プロジェクトに取り組んでいるユーザーは誰でも、Adobe Commerce ステータスサイトを購読して、メールまたはSlackを通じてイベント通知や最新情報を受け取ることができます。 Adobeのステータスサブスクリプションをカスタマイズすると、特定の商品を地域およびイベント別にトラッキングできます。
 
@@ -49,5 +49,5 @@ Adobeがクラウドインフラストラクチャー上でCommerceのサブス�
 >
 > 新しい [!DNL Cloud Console] を開き、プロジェクトと環境のアクティビティを表示します。
 >
->**次の手順**: [Cl[!DNL ]Oud コンソールにログイン ](cloud-console.md)
+>**次の手順**: [ClOud コンソールにログイン &#x200B;](cloud-console.md)
 
