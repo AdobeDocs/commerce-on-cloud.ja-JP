@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ## フックの機能
 
-- **自動検出** ステージングされた画像ファイル（PNG、JPG、JPEG、GIF、SVG）
+- **自動検出** ステージングされた画像ファイル（PNG、JPG、JPEG、GIF）
 - **`image_optim`** を実行して画像を圧縮および最適化
 - **最適化された画像を自動的に再ステージ**
 - **すべてのコミット済み画像が適切に最適化されていることを確認**
@@ -85,11 +85,11 @@ Image optimization complete!
 ## 画像のガイドライン
 
 - **PNG**：スクリーンショットと UI 要素に使用（自動的に最適化されます）
-- **SVG**: アイコンおよびシンプルなグラフィックに使用（最適化はデフォルトで無効になっています）
 - **JPEG**：写真に使用します（自動的に最適化されます）
 - **GIF**: アニメーションに使用（自動的に最適化されます）
+- **SVG**: アイコンおよびシンプルなグラフィックに使用（フックによって処理されず、そのままコミットされます）
 
-プリコミットフックは、コミット時にすべての画像を自動的に最適化します。
+プリコミットフックは、コミット時に PNG、JPEG、GIF画像を自動的に最適化します。
 
 ## 手動での最適化
 
@@ -107,7 +107,7 @@ bundle exec rake images:optimize path=../path/to/images
 - **PNG**:`advpng`、`optipng`、`pngquant` を使用します
 - **JPEG**: `jhead`、`jpegoptim`、`jpegtran` を使用します
 - **GIF**: `gifsicle` を使用します
-- **SVG**: SVGの最適化は既定で無効になっています（複雑なベクターグラフィックスやアニメーションを壊す可能性があります）
+- **SVG**：処理されません（ベクターグラフィックおよびアニメーションを保持するために検出から除外されます）
 
 ## トラブルシューティング
 
@@ -141,7 +141,7 @@ bundle exec rake images:optimize path=../path/to/images
 - **PNG** （`.png`） – 可逆および非可逆圧縮
 - **JPEG** （`.jpg`、`.jpeg`） – メタデータのクリーンアップによる非可逆圧縮
 - **GIF** （`.gif`） – アニメーションと静的な最適化
-- **SVG** （`.svg`） – ベクトルの最適化（デフォルトでは無効）
+- **SVG** （`.svg`） – フックによって処理されません（品質を保持するためにそのままコミットします）
 
 ## ベストプラクティス
 
