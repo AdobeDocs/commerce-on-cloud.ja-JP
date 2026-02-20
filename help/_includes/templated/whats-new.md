@@ -1,7 +1,7 @@
 ---
-source-git-commit: 76b43148aed413fc8108beb45ed292008f4b6aa0
+source-git-commit: 2d85220736f084121d0215bcfa481eb204d0e203
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '112'
 ht-degree: 4%
 
 ---
@@ -10,6 +10,28 @@ ht-degree: 4%
 ## 最新情報
 
 このページには、過去 60 日間に加えられた変更が含まれています。 コピー編集などのマイナーアップデートはすべて、このリストから除外します。
+
+### 2026 年 2 月 19 日（Pt）
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>説明</th>
+      <th>タイプ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic アカウント所有者の変更 </a> の手順を <em>Cloud Infrastructure ガイドのCommerce</em> に追加しました。</p>
+</td>
+      <td>
+        技術
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/6e570c70bb720a6469d7764c7640b07bb56880ce">コミット</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026 年 2 月 3 日（Pt）
 
@@ -23,7 +45,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p>オリジンのクロークに関する次の情報を <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly サービスの概要 </a> に追加しました。<br /> – 定義とトラフィックフロー <br />- イネーブルメントステータス（2021 年以降のすべてのクラウドプロジェクトで有効）ブロックされたオリジン URL の例 <br />- REST API の使用例</p>
+      <td><p>オリジンのクロークに関する次の情報を <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly サービスの概要 </a> に追加しました。<br /> – 定義とトラフィックフロー <br />- イネーブルメントステータス（2021 年以降のすべてのクラウドプロジェクトで有効）ブロックされたオリジン URL の例 <br />- REST API の使用例</p>
 </td>
       <td>
         技術
@@ -45,7 +67,7 @@ ht-degree: 4%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
 </td>
       <td>
         Feedback
