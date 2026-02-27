@@ -11,17 +11,17 @@ ht-degree: 0%
 
 # Launch チェックリスト
 
-実稼動環境にデプロイする前に、[Launch チェックリスト ](../../assets/adobe-commerce-cloud-prelaunch-checklist.pdf) をダウンロードし、以下の手順に従って使用することで、必要な設定とテストをすべて完了していることを確認します。 Starter と Pro の完全なデプロイメントプロセスの概要については、[ ストアのデプロイ ](../deploy/staging-production.md) を参照してください。
+実稼動環境にデプロイする前に、[Launch チェックリスト &#x200B;](../../assets/adobe-commerce-cloud-prelaunch-checklist.pdf) をダウンロードし、以下の手順に従って使用することで、必要な設定とテストをすべて完了していることを確認します。 Starter と Pro の完全なデプロイメントプロセスの概要については、[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md) を参照してください。
 
 ## 実稼動環境で完全にテスト
 
-サイト、ストア、環境のすべての側面をテストする方法については、[ デプロイメントのテスト ](../test/staging-and-production.md) を参照してください。 これらのテストには、Fastly の検証、ユーザー受け入れテスト（UAT）、パフォーマンステストが含まれます。
+サイト、ストア、環境のすべての側面をテストする方法については、[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md) を参照してください。 これらのテストには、Fastly の検証、ユーザー受け入れテスト（UAT）、パフォーマンステストが含まれます。
 
 ## TLS と Fastly
 
 Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供します。 この証明書は、HTTPS で安全なトラフィックを提供するために Fastly に必要です。
 
-この証明書を使用するには、DNS 設定を更新して、Adobeがドメインの検証を完了し、証明書を環境に適用できるようにする必要があります。 各環境には、その環境にデプロイされたクラウドインフラストラクチャサイト上のAdobe Commerceのドメインをカバーする一意の証明書があります。 [Fastly セットアッププロセス ](../cdn/fastly-configuration.md) の間に、および設定の更新を完了することをお勧めします。
+この証明書を使用するには、DNS 設定を更新して、Adobeがドメインの検証を完了し、証明書を環境に適用できるようにする必要があります。 各環境には、その環境にデプロイされたクラウドインフラストラクチャサイト上のAdobe Commerceのドメインをカバーする一意の証明書があります。 [Fastly セットアッププロセス &#x200B;](../cdn/fastly-configuration.md) の間に、および設定の更新を完了することをお勧めします。
 
 ## 実稼働設定で DNS 設定を更新します
 
@@ -33,9 +33,9 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
 
 - 実稼動環境の設定が、必要なすべてのドメインで更新されました
 
-  通常は、お客様のテクニカルアドバイザーと協力して、ストアに必要なすべての最上位ドメインとサブドメインを追加します。 実稼動環境用のドメインを追加または変更するには、[Adobe Commerce サポートチケットを送信 ](https://support.magento.com/hc/en-us/articles/360019088251) します。 プロジェクト設定が更新されたことを確認するまで待ちます。
+  通常は、お客様のテクニカルアドバイザーと協力して、ストアに必要なすべての最上位ドメインとサブドメインを追加します。 実稼動環境用のドメインを追加または変更するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://support.magento.com/hc/en-us/articles/360019088251) します。 プロジェクト設定が更新されたことを確認するまで待ちます。
 
-  スタータープロジェクトでは、ドメインをプロジェクトに追加する必要があります。 [ ドメインの管理 ](../cdn/fastly-custom-cache-configuration.md#manage-domains) を参照してください。
+  スタータープロジェクトでは、ドメインをプロジェクトに追加する必要があります。 [&#x200B; ドメインの管理 &#x200B;](../cdn/fastly-custom-cache-configuration.md#manage-domains) を参照してください。
 
 - 実稼動環境用にプロビジョニングされた SSL/TLS 証明書。
 
@@ -91,7 +91,7 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：管理者からベース URL を更新することもできます。 [2}Adobe Commerce ストアと購入エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) の {URL のストア _を参照してください。_
+   **注意**：管理者からベース URL を更新することもできます。 [2&rbrace;Adobe Commerce ストアと購入エクスペリエンスガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) の &lbrace;URL のストア _を参照してください。_
 
 1. サイトが更新されるまで数分待ちます。
 
@@ -113,7 +113,7 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
 
 ## Fastly キャッシュの検証
 
-- 実稼動サイトで Fastly キャッシュが正しく動作していることをテストし確認します。 詳細なテストとチェックについては、[Fastly テスト ](../test/staging-and-production.md#check-fastly-caching) を参照してください。
+- 実稼動サイトで Fastly キャッシュが正しく動作していることをテストし確認します。 詳細なテストとチェックについては、[Fastly テスト &#x200B;](../test/staging-and-production.md#check-fastly-caching) を参照してください。
 
 - [最新バージョンの Fastly CDN Module for Commerceが実稼動環境にインストールされていることを確認します](../cdn/fastly-configuration.md#upgrade-the-fastly-module)
 
@@ -147,7 +147,7 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
 
 ## パフォーマンス監視
 
-Pro および Starter 環境でのパフォーマンスモニタリングには、New Relic サービスを使用できます。 Pro プランアカウントでは、New Relic APM およびインフラストラクチャエージェントを使用してアプリケーションとインフラストラクチャのパフォーマンスを監視する、Adobe Commerceのアラートポリシーのマネージドアラートを提供しています。 これらのサービスの使用方法については、[ 管理されたアラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。
+Pro および Starter 環境でのパフォーマンスモニタリングには、New Relic サービスを使用できます。 Pro プランアカウントでは、New Relic APM およびインフラストラクチャエージェントを使用してアプリケーションとインフラストラクチャのパフォーマンスを監視する、Adobe Commerceのアラートポリシーのマネージドアラートを提供しています。 これらのサービスの使用方法については、[&#x200B; 管理されたアラートによるパフォーマンスの監視 &#x200B;](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。
 
 ### 次の手順
 
