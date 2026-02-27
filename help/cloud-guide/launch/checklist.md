@@ -1,26 +1,27 @@
 ---
 title: Launch チェックリスト
 description: サイトの起動のチェックリスト項目を確認します。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
+source-git-commit: ca2d94364787695398b2b8af559733fe52ec2949
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
 
 # Launch チェックリスト
 
-実稼動環境にデプロイする前に、[Launch チェックリスト &#x200B;](../../assets/adobe-commerce-cloud-prelaunch-checklist.pdf) をダウンロードし、以下の手順に従って使用することで、必要な設定とテストをすべて完了していることを確認します。 Starter と Pro の完全なデプロイメントプロセスの概要については、[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md) を参照してください。
+実稼動環境にデプロイする前に、[Launch チェックリスト ](../../assets/adobe-commerce-cloud-prelaunch-checklist.pdf) をダウンロードし、以下の手順に従って使用することで、必要な設定とテストをすべて完了していることを確認します。 Starter と Pro の完全なデプロイメントプロセスの概要については、[ ストアのデプロイ ](../deploy/staging-production.md) を参照してください。
 
 ## 実稼動環境で完全にテスト
 
-サイト、ストア、環境のすべての側面をテストする方法については、[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md) を参照してください。 これらのテストには、Fastly の検証、ユーザー受け入れテスト（UAT）、パフォーマンステストが含まれます。
+サイト、ストア、環境のすべての側面をテストする方法については、[ デプロイメントのテスト ](../test/staging-and-production.md) を参照してください。 これらのテストには、Fastly の検証、ユーザー受け入れテスト（UAT）、パフォーマンステストが含まれます。
 
 ## TLS と Fastly
 
-Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提供します。 この証明書は、HTTPS で安全なトラフィックを提供するために Fastly に必要です。
+Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供します。 この証明書は、HTTPS で安全なトラフィックを提供するために Fastly に必要です。
 
-この証明書を使用するには、ドメインの検証を完了してAdobeに証明書を適用できるように、DNS 構成を更新する必要があります。 各環境には、その環境にデプロイされたクラウドインフラストラクチャサイト上のAdobe Commerceのドメインをカバーする一意の証明書があります。 [Fastly セットアッププロセス &#x200B;](../cdn/fastly-configuration.md) の間に、および設定の更新を完了することをお勧めします。
+この証明書を使用するには、DNS 設定を更新して、Adobeがドメインの検証を完了し、証明書を環境に適用できるようにする必要があります。 各環境には、その環境にデプロイされたクラウドインフラストラクチャサイト上のAdobe Commerceのドメインをカバーする一意の証明書があります。 [Fastly セットアッププロセス ](../cdn/fastly-configuration.md) の間に、および設定の更新を完了することをお勧めします。
 
 ## 実稼働設定で DNS 設定を更新します
 
@@ -32,13 +33,13 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
 
 - 実稼動環境の設定が、必要なすべてのドメインで更新されました
 
-  通常は、お客様のテクニカルアドバイザーと協力して、ストアに必要なすべての最上位ドメインとサブドメインを追加します。 実稼動環境用のドメインを追加または変更するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://support.magento.com/hc/en-us/articles/360019088251) します。 プロジェクト設定が更新されたことを確認するまで待ちます。
+  通常は、お客様のテクニカルアドバイザーと協力して、ストアに必要なすべての最上位ドメインとサブドメインを追加します。 実稼動環境用のドメインを追加または変更するには、[Adobe Commerce サポートチケットを送信 ](https://support.magento.com/hc/en-us/articles/360019088251) します。 プロジェクト設定が更新されたことを確認するまで待ちます。
 
-  スタータープロジェクトでは、ドメインをプロジェクトに追加する必要があります。 [&#x200B; ドメインの管理 &#x200B;](../cdn/fastly-custom-cache-configuration.md#manage-domains) を参照してください。
+  スタータープロジェクトでは、ドメインをプロジェクトに追加する必要があります。 [ ドメインの管理 ](../cdn/fastly-custom-cache-configuration.md#manage-domains) を参照してください。
 
 - 実稼動環境用にプロビジョニングされた SSL/TLS 証明書。
 
-  Fastly のセットアッププロセス中に実稼動ドメインの ACME チャレンジレコードを追加した場合、Fastly サービスへのトラフィックをルーティングするように DNS 設定を更新すると、Adobeは SSL/TLS 証明書を実稼動環境に自動的にアップロードします。 証明書を事前にプロビジョニングしなかった場合、またはドメインを更新した場合、Adobeはドメインの検証を完了して証明書をプロビジョニングする必要があります（最大で 12 時間かかることがあります）。
+  Fastly のセットアッププロセス中に実稼動ドメインの ACME チャレンジレコードを追加した場合、Fastly サービスへのトラフィックをルーティングするように DNS 設定を更新する際に、Adobeは SSL/TLS 証明書を実稼動環境に自動的にアップロードします。 証明書を事前にプロビジョニングしていない場合、またはドメインを更新した場合、Adobeはドメインの検証を完了して証明書をプロビジョニングする必要があります（最大で 12 時間かかることがあります）。
 
 ### サイトを起動するための DNS 設定を更新するには：
 
@@ -60,14 +61,14 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
    | `www.<domain-name>.com` | prod.magentocloud.map.fastly.net |
    | `mystore.<domain-name>.com` | prod.magentocloud.map.fastly.net |
 
-1. 必要に応じて、A レコードを追加して、apex ドメイン（`<domain-name>.com`）を次の Fastly IP アドレスにマッピングします。
+1. 必要に応じて、A レコードと AAAA レコードを追加して、apex ドメイン（`<domain-name>.com`）を次の Fastly IP アドレスにマッピングします。
 
-   | Apex ドメイン | ANAME |
-   | --------------- | ----------------- |
-   | `<domain-name>.com` | `151.101.1.124` |
-   | `<domain-name>.com` | `151.101.65.124` |
-   | `<domain-name>.com` | `151.101.129.124` |
-   | `<domain-name>.com` | `151.101.193.124` |
+   | Apex ドメイン | ANAME | AAANAME |
+   | --------------- | ----------------- | -------- |
+   | `<domain-name>.com` | `151.101.1.124` | 2a04:4e42:200::380 |
+   | `<domain-name>.com` | `151.101.65.124` | 2a04:4e42:400::380 |
+   | `<domain-name>.com` | `151.101.129.124` | 2a04:4e42:600::380 |
+   | `<domain-name>.com` | `151.101.193.124` | 2a04:4e42::380 |
 
 >[!IMPORTANT]
 >
@@ -90,7 +91,7 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：管理者からベース URL を更新することもできます。 [2&rbrace;Adobe Commerce ストアと購入エクスペリエンスガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ja) の &lbrace;URL のストア _を参照してください。_
+   **注意**：管理者からベース URL を更新することもできます。 [2}Adobe Commerce ストアと購入エクスペリエンスガイド ](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) の {URL のストア _を参照してください。_
 
 1. サイトが更新されるまで数分待ちます。
 
@@ -104,7 +105,7 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
 
 - [送信メールのテストを完了しました](../project/outgoing-emails.md)
 
-- [&#x200B; 管理者資格情報とベース管理者 URL のセキュリティで保護された設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-admin)
+- [管理者資格情報およびベース管理者 URL のセキュリティで保護された設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
 - [Web 用にすべての画像を最適化](../cdn/fastly-image-optimization.md)
 
@@ -112,7 +113,7 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
 
 ## Fastly キャッシュの検証
 
-- 実稼動サイトで Fastly キャッシュが正しく動作していることをテストし確認します。 詳細なテストとチェックについては、[Fastly テスト &#x200B;](../test/staging-and-production.md#check-fastly-caching) を参照してください。
+- 実稼動サイトで Fastly キャッシュが正しく動作していることをテストし確認します。 詳細なテストとチェックについては、[Fastly テスト ](../test/staging-and-production.md#check-fastly-caching) を参照してください。
 
 - [最新バージョンの Fastly CDN Module for Commerceが実稼動環境にインストールされていることを確認します](../cdn/fastly-configuration.md#upgrade-the-fastly-module)
 
@@ -136,17 +137,17 @@ Adobeは、各環境に対して SSL/TLS 証明書を暗号化しましょう提
 
 - [セキュリティスキャンの設定](overview.md#set-up-the-security-scan-tool)
 
-- [&#x200B; 管理者ユーザーのセキュリティで保護された設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-admin)
+- [管理者ユーザーのセキュリティで保護された設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
 
-- [&#x200B; 管理者 URL のセキュア設定 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [管理者 URL のセキュア設定](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [クラウドインフラストラクチャプロジェクトでAdobe Commerceを終了したユーザーをすべて削除](../project/user-access.md)
 
-- [&#x200B; 二要素認証の設定 &#x200B;](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [二要素認証の設定](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
 
 ## パフォーマンス監視
 
-Pro および Starter 環境でのパフォーマンスモニタリングには、New Relic サービスを使用できます。 Pro プランアカウントでは、New Relic APM およびインフラストラクチャエージェントを使用してアプリケーションとインフラストラクチャのパフォーマンスを監視する、Adobe Commerceのアラートポリシーのマネージドアラートを提供しています。 これらのサービスの使用方法については、[&#x200B; 管理されたアラートによるパフォーマンスの監視 &#x200B;](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。
+Pro および Starter 環境でのパフォーマンスモニタリングには、New Relic サービスを使用できます。 Pro プランアカウントでは、New Relic APM およびインフラストラクチャエージェントを使用してアプリケーションとインフラストラクチャのパフォーマンスを監視する、Adobe Commerceのアラートポリシーのマネージドアラートを提供しています。 これらのサービスの使用方法については、[ 管理されたアラートによるパフォーマンスの監視 ](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) を参照してください。
 
 ### 次の手順
 
