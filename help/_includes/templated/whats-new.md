@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>クラウドプロジェクト上のCommerceの <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">Launch チェックリスト </a> を更新して、Fastly AAAA レコードを DNS 設定手順に追加しました。</p>
+      <td><p>クラウドプロジェクト上のCommerceの <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist">Launch チェックリスト </a> を更新して、Fastly AAAA レコードを DNS 設定手順に追加しました。</p>
 </td>
       <td>
         Feedback
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic アカウント所有者の変更 </a> の手順を <em>Cloud Infrastructure ガイドのCommerce</em> に追加しました。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic アカウント所有者の変更 </a> の手順を <em>Cloud Infrastructure ガイドのCommerce</em> に追加しました。</p>
 </td>
       <td>
         技術
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>オリジンのクロークに関する次の情報を追加しました <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly サービスの概要 </a>.<br /> – 定義とトラフィックフロー <br />- イネーブルメントステータス（2021 年以降のすべてのクラウドプロジェクトで有効） ブロックされたオリジン URL の例 <br />- REST API の使用例</p>
+      <td><p>オリジンのクロークに関する次の情報を追加しました <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly サービスの概要 </a>.<br /> – 定義とトラフィックフロー <br />- イネーブルメントステータス（2021 年以降のすべてのクラウドプロジェクトで有効） ブロックされたオリジン URL の例 <br />- REST API の使用例</p>
 </td>
       <td>
         技術
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
 </td>
       <td>
         Feedback
