@@ -91,7 +91,7 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **注意**：管理者からベース URL を更新することもできます。 [2&rbrace;Adobe Commerce ストアと購入エクスペリエンスガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) の &lbrace;URL のストア _を参照してください。_
+   **注意**：管理者からベース URL を更新することもできます。 [2&rbrace;Adobe Commerce ストアと購入エクスペリエンスガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ja) の &lbrace;URL のストア _を参照してください。_
 
 1. サイトが更新されるまで数分待ちます。
 
@@ -105,7 +105,7 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
 
 - [送信メールのテストを完了しました](../project/outgoing-emails.md)
 
-- [管理者資格情報およびベース管理者 URL のセキュリティで保護された設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [管理者資格情報およびベース管理者 URL のセキュリティで保護された設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-admin)
 
 - [Web 用にすべての画像を最適化](../cdn/fastly-image-optimization.md)
 
@@ -137,9 +137,9 @@ Adobeは、環境ごとに SSL/TLS 証明書を暗号化しましょう提供し
 
 - [セキュリティスキャンの設定](overview.md#set-up-the-security-scan-tool)
 
-- [管理者ユーザーのセキュリティで保護された設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [管理者ユーザーのセキュリティで保護された設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-admin)
 
-- [管理者 URL のセキュア設定](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [管理者 URL のセキュア設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [クラウドインフラストラクチャプロジェクトでAdobe Commerceを終了したユーザーをすべて削除](../project/user-access.md)
 
