@@ -3,9 +3,9 @@ user-guide-title: クラウド上の Commerce に関するガイド
 user-guide-description: クラウドインフラストラクチャー上で Adobe Commerce アプリケーションを管理する方法について説明します。
 product: magento
 feature: Cloud
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 2311b8e5c0216c01d0189c8f8e669dcddfcd1dcc
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '387'
 ht-degree: 8%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 8%
    + [Pro ワークフロー](architecture/pro-develop-deploy-workflow.md)
    + [拡張されたアーキテクチャ](architecture/scaled-architecture.md)
    + [自動スケーリング](architecture/autoscaling.md)
-+ [&#x200B; はじめに &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ja)
++ [基本を学ぶ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + リリースノート {#release-notes}
    + [クラウドツールスイート](release-notes/cloud-tools-suite.md)
    + [ECE-Tools パッケージ](release-notes/ece-tools-package.md)
@@ -89,6 +89,7 @@ ht-degree: 8%
    + [環境を復元](development/restore-environment.md)
    + ストレージ {#storage}
       + [ディスク容量の管理](storage/manage-disk-space.md)
+      + [クラウドインフラストラクチャー上のAdobe Commerceのディスク容量制限を確認](storage/check-disk-space-limit-on-cloud.md)
       + [プロファイルデータベースクエリ](storage/profile-database-queries.md)
       + [データベースのバックアップ](storage/database-dump.md)
       + [バックアップ管理](storage/snapshots.md)
