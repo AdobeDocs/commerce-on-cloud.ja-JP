@@ -3,9 +3,10 @@ title: 管理変数
 description: クラウドインフラストラクチャー上にAdobe Commerceをインストールする際に使用される環境変数のリストを参照してください。
 feature: Cloud, Configuration, Install, Roles/Permissions
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: d2746185-bc59-4d30-a088-73df1bd2c0b2
+source-git-commit: 4e751f02b92f954cd41d5523237da295a068661a
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 次の表の管理変数を使用して、Commerceのインストール中に管理者ユーザーの資格情報を上書きできます。
 
-インストール後に値を変更する場合は、SSH を使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンドを使用して &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja) 管理者ユーザーの資格情報を作成または編集します。
+インストール後に値を変更する場合は、SSH を使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンドを使用して ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) 管理者ユーザーの資格情報を作成または編集します。
 
 | 変数 | デフォルト | 説明 |
 | -------------- | --------------------------- | ----------- |
@@ -29,43 +30,62 @@ ht-degree: 0%
 
 ## 管理者 URL
 
-次の環境変数を使用して、管理 UI へのアクセスを保護します。 指定した場合、インストール時のデフォルト URL はこの値で上書きされます。
+次の環境変数を使用して、管理 UI へのアクセスを保護します。 指定した場合、インストール時のデフォルト URL はこの値で上書きされます。 クラウドインフラストラクチャー上の [!DNL Adobe Commerce] では、（[!DNL Cloud Console] または [!DNL Cloud CLI]）の `ADMIN_URL` 変数を使用して管理者 URL を設定または変更する必要があります。 [!DNL Admin] からの設定の変更は、オンプレミスのインストールにのみ適用されます。
 
-`ADMIN_URL` – 管理 UI にアクセスするための相対 URL。 デフォルトの URL は `/admin` です。 セキュリティ上の理由から、Adobeでは、デフォルトを推測しにくい一意のカスタム管理 URL に変更することをお勧めします。
+`ADMIN_URL` – 管理 UI にアクセスするための相対 URL。 デフォルトの URL は `/admin` です。
 
 ### 管理者 URL の変更
 
-Adobeでは、インストール後に管理者 URL の環境レベル変数を変更することをお勧めします。 クローン `master` 環境から分岐する前に、セキュリティ上の理由から、この設定を設定します。 `master` ブランチから作成されたすべてのブランチは、環境レベルの変数とその値を継承します。
+デフォルトでは、[Commerce管理者 ](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html) の URL は *&lt;domain_name>/admin* に設定されています。 セキュリティ上の理由から、Adobeでは、推測しにくい一意のカスタム管理 URL に変更することをお勧めします。
 
-`magento-cloud variable:update` コマンドを使用して、変数値を更新します。 （`variable:set` コマンドは非推奨となり、使用できなくなりました）。 次の例では、ADMIN_URL を `newAdmin_A8v10` に更新します。
+**クラウドインフラストラクチャー上の [!DNL Adobe Commerce] では**、（[!DNL Cloud Console] または [!DNL Cloud CLI]）の `ADMIN_URL` 環境変数を使用して管理者 URL を変更する必要があります。 [!DNL Admin] からの設定の変更は、オンプレミスのインストールにのみ適用されます。 オンプレミスのインストールの場合は、[ カスタム管理 URL を使用 ](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url) に従います。
+
+Adobeでは、インストール後に管理者 URL の環境レベル変数を変更することをお勧めします。 クローン `master` 環境から分岐する前に、セキュリティ上の理由から、この設定を設定します。 `master` ブランチから作成されたすべてのブランチは、継承を false に設定しない限り、環境レベルの変数とその値を継承します。
+
+[!DNL Cloud Console] または [!DNL Cloud CLI] のいずれかを使用して、`ADMIN_URL` を設定または更新します。
+
+#### オプション A:[!DNL Cloud Console] を使用して管理者 URL を変更
+
+##### 統合環境
+
+[Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html) から、次の設定で新しい変数を追加します。
+
+- **名前：** `ADMIN_URL`
+- **値：** 新しい管理者 URL （例：`magento_A8v10`）
+
+- 詳しい手順については、開発者向けドキュメントの [ 環境変数の追加 ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment) または [ 環境変数 ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html) を参照してください。
+
+##### [!DNL Cloud Console] に管理者 URL を設定
+
+1. [Cloud Console](https://console.adobecommerce.com/) にログインします。
+2. **[!UICONTROL All projects]** リストからプロジェクトを選択します。
+3. プロジェクトの概要で、環境を選択し、設定アイコンをクリックします。
+4. 「**[!UICONTROL Variables]**」タブを選択します。
+5. 「**[!UICONTROL Create Variable]**」をクリックします（または、既存の `ADMIN_URL` 変数が存在する場合はそれを編集します）。
+6. 以下を入力します。
+   - **変数名：** `ADMIN_URL`
+   - **値：** 新しい管理者パス（`magento_A8v10` など）。
+
+   デフォルトでは、**[!UICONTROL Available during runtime]** と **[!UICONTROL Make inheritable]** が選択されています。 子環境がこの値を継承しないようにするには、この変数の **[!UICONTROL Make inheritable]** をクリアします。
+7. **[!UICONTROL Create variable]** （または **[!UICONTROL Save]**）をクリックして、デプロイメントが完了するまで待ちます。 このボタンは、必須フィールドに値が含まれている場合にのみ表示されます。
+
+##### [!DNL Cloud Console] でステージングと実稼動が使用できない場合
+
+[ サポートチケットを送信 ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) ステージング環境または実稼動環境用の `ADMIN_URL` 変数の追加をリクエストします。 [!DNL Cloud Console] からステージングおよび実稼動環境にアクセスできる場合は、[ 統合環境 ](#integration-environment) の説明に従って変数を追加します。
+
+#### オプション B:[!DNL Cloud CLI] を使用して管理者 URL を変更
+
+`magento-cloud variable:update` コマンドを使用して、変数を更新します。 （`variable:set` コマンドは非推奨となり、使用できなくなりました）。
+
+次の例では、`master` 環境の `ADMIN_URL` を `newAdmin_A8v10` に更新し、子環境が値を継承しないようにします。
 
 ```bash
-magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master
+magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inheritable false
 ```
+
+- **再配置：** [!DNL Cloud CLI] の `ADMIN_URL` 変数を変更すると、環境の再配置がトリガーされます。
+- **継承：** 変数は、デフォルトで継承できます。 子環境に値が継承されないようにするには、次に示すように、`--inheritable false` オプションを使用します。 詳細は、「変数レベルの表示 [ を参照してください ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility)。
 
 >[!NOTE]
 >
->`ADMIN_URL` の値には、カスタム管理パス用の文字（a ～ z または A ～ Z）、数字（0 ～ 9）、アンダースコア文字（_）を使用できます。 スペースやその他の文字は使用 **きません**。
-
-**[!DNL Cloud Console]** を使用して URL を変更するには：
-
-1. [[!DNL Cloud Console]](https://console.adobecommerce.com) にログインします。
-
-1. _すべてのプロジェクト_ リストからプロジェクトを選択します。
-
-1. プロジェクトの概要で、環境を選択し、設定アイコンをクリックします。
-
-   ![&#x200B; プロジェクト設定 &#x200B;](../../assets/icon-configure.png){width="36"}
-
-1. 「**変数**」タブを選択します。
-
-1. **変数を作成** をクリックします。
-
-1. 以下を入力します。
-
-   - **変数名** = `ADMIN_URL`
-   - **value** =新しい URL。 例えば、管理者 URL を `magento_A8v10` に設定します。
-
-   デフォルトでは、`Available during runtime` と `Make inheritable` が選択されています。
-
-1. **変数を作成** をクリックして、デプロイメントが完了するまで待ちます。 このボタンは、必須フィールドに値が含まれている場合にのみ表示されます。
+>`ADMIN_URL` の値には、文字（a ～ z、A ～ Z）、数字（0 ～ 9）、アンダースコア文字（_）を使用できます。 スペースやその他の文字は使用できません。
