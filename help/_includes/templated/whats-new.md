@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE ツール </a> リリース、v2002.2.10。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE ツール </a> リリース、v2002.2.10。</p>
 </td>
       <td>
         技術
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>オンプレミスではなく、Cloud 上のAdobe Commerceで <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url"> 管理者 URL を変更 </a> する方法の説明を追加しました。</p>
+      <td><p>オンプレミスではなく、Cloud 上のAdobe Commerceで <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url"> 管理者 URL を変更 </a> する方法の説明を追加しました。</p>
 </td>
       <td>
         メジャーアップデート、フィードバック
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud Console から <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud"> クラウドプロジェクト上のAdobe Commerceのディスク容量制限の確認 </a> のドキュメントを追加しました。</p>
+      <td><p>Cloud Console から <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud"> クラウドプロジェクト上のAdobe Commerceのディスク容量制限の確認 </a> のドキュメントを追加しました。</p>
 </td>
       <td>
         新しいトピック、技術
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>クラウドプロジェクト上のCommerceの <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">Launch チェックリスト </a> を更新して、Fastly AAAA レコードを DNS 設定手順に追加しました。</p>
+      <td><p>クラウドプロジェクト上のCommerceの <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist">Launch チェックリスト </a> を更新して、Fastly AAAA レコードを DNS 設定手順に追加しました。</p>
 </td>
       <td>
         Feedback
@@ -111,7 +111,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic アカウント所有者の変更 </a> の手順を <em>Cloud Infrastructure ガイドのCommerce</em> に追加しました。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">New Relic アカウント所有者の変更 </a> の手順を <em>Cloud Infrastructure ガイドのCommerce</em> に追加しました。</p>
 </td>
       <td>
         技術
@@ -133,7 +133,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>オリジンのクロークに関する次の情報を追加しました <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly サービスの概要 </a>.<br /> – 定義とトラフィックフロー <br />- イネーブルメントステータス（2021 年以降のすべてのクラウドプロジェクトで有効） ブロックされたオリジン URL の例 <br />- REST API の使用例</p>
+      <td><p>オリジンのクロークに関する次の情報を追加しました <a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly">Fastly サービスの概要 </a>.<br /> – 定義とトラフィックフロー <br />- イネーブルメントステータス（2021 年以降のすべてのクラウドプロジェクトで有効） ブロックされたオリジン URL の例 <br />- REST API の使用例</p>
 </td>
       <td>
         技術
@@ -155,7 +155,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/opensearch">OpenSearch サービスの設定 </a> の例のバージョンを更新しました。</p>
 </td>
       <td>
         Feedback
