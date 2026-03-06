@@ -16,9 +16,9 @@ ht-degree: 3%
 
 | リリースノート | バージョン | 説明 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
-| [ece-tools パッケージ ](ece-tools-package.md) | 2002.2.10 | クラウドプロジェクトの管理とデプロイを行うために設計された一連のスクリプトとツール | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.10) |
-| [Commerceのクラウドパッチ ](cloud-patches.md) | 1.1.13 | すべてのAdobe Commerce バージョンとクラウド環境の統合を改善するパッチセット。 このパッケージには、Adobe Commerceのパッチと、`ece-tools` を使用してデプロイする際に適用される使用可能なホットフィックスが含まれています | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.13) |
+| [ece-tools パッケージ &#x200B;](ece-tools-package.md) | 2002.2.10 | クラウドプロジェクトの管理とデプロイを行うために設計された一連のスクリプトとツール | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.10) |
+| [Commerceのクラウドパッチ &#x200B;](cloud-patches.md) | 1.1.13 | すべてのAdobe Commerce バージョンとクラウド環境の統合を改善するパッチセット。 このパッケージには、Adobe Commerceのパッチと、`ece-tools` を使用してデプロイする際に適用される使用可能なホットフィックスが含まれています | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.13) |
 | [Commerce用の Cloud Docker](cloud-docker.md) | 1.4.7 | Adobe Commerceをローカルクラウド環境にデプロイするための Docker イメージの機能および設定ファイル | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.7) |
-| [Commerceのクラウドコンポーネント ](cloud-components.md) | 1.1.4 | クラウドインフラストラクチャにデプロイされたサイト向けに拡張されたAdobe Commerce コア機能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
+| [Commerceのクラウドコンポーネント &#x200B;](cloud-components.md) | 1.1.4 | クラウドインフラストラクチャにデプロイされたサイト向けに拡張されたAdobe Commerce コア機能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
-ECE-Tools 2002.1.0 以降に更新すると、`ece-tools` パッケージの依存関係である他のパッケージの最新バージョンに自動的に更新されます。 依存関係のリストについては、[ クラウドメタパッケージ ](../development/overview.md#cloud-metapackage) を参照してください。
+ECE-Tools 2002.1.0 以降に更新すると、`ece-tools` パッケージの依存関係である他のパッケージの最新バージョンに自動的に更新されます。 依存関係のリストについては、[&#x200B; クラウドメタパッケージ &#x200B;](../development/overview.md#cloud-metapackage) を参照してください。
