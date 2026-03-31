@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020年6月5日より前にプロビジョニングされたプロジェクトには、複数の小さい統合環境がありました。 テストと開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストしてください。 詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の[Integration Environment リクエスト &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)の記事を参照してください。
+>2020年6月5日より前にプロビジョニングされたプロジェクトには、複数の小さい統合環境がありました。 テストと開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストしてください。 詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の[Integration Environment リクエスト &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=ja)の記事を参照してください。
 
 ## 結合オプション {#merge-options}
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 >一部の&#x200B;**Pro プロジェクト**&#x200B;では、`routes.yaml` ファイルのルート設定と`.magento.app.yaml` ファイルのcron設定を更新するために、Adobe サポートの支援が必要です。 Adobeでは、まず統合環境でYAML設定の変更をすべて行って検証し、その後ステージング環境にデプロイすることをお勧めします。
 >
 >
->変更が再デプロイ後にステージングサイトに反映されず、ログに関連するエラーメッセージが表示されない場合は、**Adobe Commerce サポートチケット [&#128279;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を**&#x200B;送信する必要があります。 チケットで、試した設定の変更を明確に説明し、更新されたYAML設定ファイルをチケットに添付します。
+>変更が再デプロイ後にステージングサイトに反映されず、ログに関連するエラーメッセージが表示されない場合は、**Adobe Commerce サポートチケット [&#128279;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を**&#x200B;送信する必要があります。 チケットで、試した設定の変更を明確に説明し、更新されたYAML設定ファイルをチケットに添付します。
 
 ## プロサービスのサポート {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Pro プロジェクトの場合、`Staging`および`Production`環境でのみ[&#x200B; サービス &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html)をインストールまたは更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
+- Pro プロジェクトの場合、`Staging`および`Production`環境でのみ[&#x200B; サービス &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=ja)をインストールまたは更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
 
-- 必要なサービス変更を示し、更新された`.magento.app.yaml`および`services.yaml` ファイルを含め、チケットにPHP バージョンを明記します。 PHPのバージョン、拡張機能、環境設定に対するセルフサービスの変更については、_アプリケーション設定_&#x200B;の[PHP設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html)を参照してください。
+- 必要なサービス変更を示し、更新された`.magento.app.yaml`および`services.yaml` ファイルを含め、チケットにPHP バージョンを明記します。 PHPのバージョン、拡張機能、環境設定に対するセルフサービスの変更については、_アプリケーション設定_&#x200B;の[PHP設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=ja)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -68,9 +68,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Pro ステージング環境および実稼動環境では、チケット内の日付、時刻、タイムゾーンを記録したバックアップを取得するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
+>Pro ステージング環境および実稼動環境では、チケット内の日付、時刻、タイムゾーンを記録したバックアップを取得するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
 >
->Adobeは、自動バックアップから任意の環境を&#x200B;**not**&#x200B;復元します。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[&#x200B; ステージングまたは実稼動からのDB スナップショットの復元](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html)を参照してください。
+>Adobeは、自動バックアップから任意の環境を&#x200B;**not**&#x200B;復元します。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[&#x200B; ステージングまたは実稼動からのDB スナップショットの復元](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=ja)を参照してください。
 
 ## 再展開の警告 {#redeploy-warning}
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信して、Pro実稼動環境とステージング環境のサービス構成を変更します。
+>[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信して、Pro実稼動環境とステージング環境のサービス構成を変更します。
 
 ## サービスの変更 {#service-change-tip}
 
@@ -120,7 +120,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->デプロイメントが停止している場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)を参照してください。
+>デプロイメントが停止している場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja)を参照してください。
 
 ## ECE-Toolsへのアップデート {#ece-tools-package}
 
