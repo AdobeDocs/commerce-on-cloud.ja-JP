@@ -29,20 +29,20 @@ ht-degree: 0%
 
 ## NEW RELIC APM
 
-[New Relic for application performance management （APM） ](https://docs.newrelic.com/introduction-apm/)は、アプリケーションのインタラクションを分析および改善するのに役立つソフトウェア分析製品です。 New Relic APMは、すべてのAdobe Commerceのクラウドインフラストラクチャプロジェクトで利用でき、次の機能を提供します。
+[New Relic for application performance management （APM） &#x200B;](https://docs.newrelic.com/introduction-apm/)は、アプリケーションのインタラクションを分析および改善するのに役立つソフトウェア分析製品です。 New Relic APMは、すべてのAdobe Commerceのクラウドインフラストラクチャプロジェクトで利用でき、次の機能を提供します。
 
 - **特定のトランザクションに集中** - カートへの追加、チェックアウト、支払いの処理など、サイト内の主要な顧客アクションに積極的にマークを付けて監視します。
 - **データベースクエリ監視**：パフォーマンスに影響を与えるデータベースクエリを検出して監視します。
 - **アプリ マップ** - サイト、拡張機能、外部サービス内のすべてのアプリケーション依存関係を表示します。
 - **[!DNL Apdex]スコア** - パフォーマンスを評価し、問題を特定するアラートを作成し、Flash セールまたはweb イベントの影響を受けるサイトパフォーマンスなど、問題が発生したときに通知します。 [Apdex score](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/)を参照してください。
-- **Adobe Commerceのアラートを管理** – このNew Relicのアラートポリシーを使用して、業界のベストプラクティスに基づいてアプリケーションとインフラストラクチャのパフォーマンスを監視します。 Adobe Commerceのアラート管理ポリシー](investigate-performance.md/#monitor-performance-with-managed-alerts)でパフォーマンスを監視するを参照してください。[
+- **Adobe Commerceのアラートを管理** – このNew Relicのアラートポリシーを使用して、業界のベストプラクティスに基づいてアプリケーションとインフラストラクチャのパフォーマンスを監視します。 Adobe Commerceのアラート管理ポリシー[&#128279;](investigate-performance.md/#monitor-performance-with-managed-alerts)でパフォーマンスを監視するを参照してください。
 - **デプロイメントを追跡** – デプロイメントイベントを監視し、デプロイメントが全体的なパフォーマンスに与える影響を分析します。 [展開の追跡](track-deployments.md)を参照してください。
 
 Adobe Commerce on cloud インフラストラクチャプロジェクトには、New Relic APM サービス用のソフトウェアとライセンスキーが含まれます。 追加のソフトウェアを購入したりインストールしたりする必要はありません。
 
 ## New Relic Infrastructure
 
-プロプロジェクトには、[New Relic Infrastructure （NRI） ](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) サービスが含まれます。このサービスは、アプリケーションデータとパフォーマンス分析に自動的に接続して、動的なサーバーモニタリングを提供します。 このサービスは、Pro実稼動環境とステージング環境で利用できます。
+プロプロジェクトには、[New Relic Infrastructure （NRI） &#x200B;](https://docs.newrelic.com/docs/infrastructure/infrastructure-monitoring/get-started/get-started-infrastructure-monitoring/) サービスが含まれます。このサービスは、アプリケーションデータとパフォーマンス分析に自動的に接続して、動的なサーバーモニタリングを提供します。 このサービスは、Pro実稼動環境とステージング環境で利用できます。
 
 ## New Relic Log Management
 
