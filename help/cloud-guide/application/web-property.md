@@ -43,7 +43,7 @@ web:
 - ルート （`/`） パスからアクセスできるのは、webとメディアのみです
 - `~/pub/media`および`~/pub/static`のパスから、すべてのファイルにアクセスできます
 
-次の例は、[`mounts` プロパティ ](properties.md#mounts)のエントリに関連付けられたweb アクセス可能な場所のセットに対する`.magento.app.yaml` ファイルのデフォルト設定を示しています。
+次の例は、[`mounts` プロパティ &#x200B;](properties.md#mounts)のエントリに関連付けられたweb アクセス可能な場所のセットに対する`.magento.app.yaml` ファイルのデフォルト設定を示しています。
 
 ```yaml
  # The configuration of app when it is exposed to the web.
