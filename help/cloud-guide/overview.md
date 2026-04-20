@@ -23,7 +23,7 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 >[!NOTE]
 >
->セキュリティについて詳しくは、[&#x200B; セキュリティ起動チェックリスト &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)を参照してください。
+>セキュリティについて詳しくは、[&#x200B; セキュリティ起動チェックリスト &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)を参照してください。
 
 [&#x200B; テクノロジースタック &#x200B;](architecture/tech-stack.md)の詳細を確認するか、[Commerceのクラウドアーキテクチャ &#x200B;](architecture/cloud-architecture.md)の特定の機能とサポート対象の製品について詳しく確認します。
 
@@ -60,7 +60,7 @@ Commerce on cloud インフラストラクチャガイドでは、Adobe Commerce
 
 - [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
+- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
 
 {{$include /help/_includes/templated/whats-new.md}}
 
