@@ -50,10 +50,10 @@ ht-degree: 0%
 
    - SSHを使用してリモートサーバーにログインし、次の点を確認します。
 
-      - インデクサーステータスを確認し、必要に応じてインデックスを再作成します。 _設定ガイド_&#x200B;の「[&#x200B; インデクサーの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)」を参照してください。
+      - インデクサーステータスを確認し、必要に応じてインデックスを再作成します。 _設定ガイド_&#x200B;の「[&#x200B; インデクサーの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ja)」を参照してください。
 
       - Adobe Commerce データベースの`cron` ログと`cron_schedule` テーブルを確認して、cron ステータスを確認し、必要に応じてcron ジョブを再実行します。
-_設定ガイド_&#x200B;の「[&#x200B; ログ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html#logging)」を参照してください。
+_設定ガイド_&#x200B;の「[&#x200B; ログ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ja#logging)」を参照してください。
 
    - ステージング環境および実稼動環境でのアップグレード後のユーザー受け入れテスト UATを完了し、サードパーティおよびカスタム拡張機能のアップグレードに関連する問題を修正します。
 
@@ -67,7 +67,7 @@ _設定ガイド_&#x200B;の「[&#x200B; ログ &#x200B;](https://experienceleag
 
 設定と使用の詳細については、次を参照してください。
 
-- [アップグレード互換性ツールの概要](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [互換性のアップグレード ツールの実行](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [アップグレード互換性ツールの概要](https://experienceleague.adobe.com/ja/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [互換性のアップグレード ツールの実行](https://experienceleague.adobe.com/ja/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-Site-Wide Analysis Toolを使用するCloud マーチャントの場合は、ダッシュボードからUCTをトリガーし、ウィジェットから直接HTML レポートをダウンロードすることもできます。 [&#x200B; サイト全体の分析ツールの統合](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)を参照してください。
+Site-Wide Analysis Toolを使用するCloud マーチャントの場合は、ダッシュボードからUCTをトリガーし、ウィジェットから直接HTML レポートをダウンロードすることもできます。 [&#x200B; サイト全体の分析ツールの統合](https://experienceleague.adobe.com/ja/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool)を参照してください。
