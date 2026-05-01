@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>クラウドインフラストラクチャ上のAdobe Commerceの<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web プロパティ設定</a>のリファレンスにセキュリティノートを追加して、web プロパティのデフォルト設定では、アップロードされたファイルの実行を防ぐためにメディアロケーションに<code class="language-plaintext highlighter-rouge">scripts:false</code>が使用されていることを明確にしました。</p>
+      <td><p>クラウドインフラストラクチャ上のAdobe Commerceの<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web プロパティ設定</a>のリファレンスにセキュリティノートを追加して、web プロパティのデフォルト設定では、アップロードされたファイルの実行を防ぐためにメディアロケーションに<code class="language-plaintext highlighter-rouge">scripts:false</code>が使用されていることを明確にしました。</p>
 </td>
       <td>
         技術的、フィードバック
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a> リリース、v2002.2.10。</p>
+      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a> リリース、v2002.2.10。</p>
 </td>
       <td>
         テクニカル
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>オンプレミスではなく、Adobe Commerce on Cloudで管理者URL</a>を<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">変更する方法の説明を追加しました。</p>
+      <td><p>オンプレミスではなく、Adobe Commerce on Cloudで管理者URL</a>を<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">変更する方法の説明を追加しました。</p>
 </td>
       <td>
         メジャーアップデート、フィードバック
