@@ -3,22 +3,24 @@ cloud: Experience Cloud
 type: Documentation
 solution-title: Commerce
 solution: Commerce
+landing-page-name: commerce
+landing-page-breadcrumb-title: Commerce
 feature-set: Commerce
 role: Admin, Developer
 topic: Commerce, Development
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/commerce-on-cloud.ja-JP
-description: クラウドインフラストラクチャー上のAdobe Commerce ガイド
+git-repo: https://github.com/AdobeDocs/commerce-on-cloud.en
+description: Adobe Commerce on Cloud Infrastructure Guides
 index: true
-badgePaas: label="PaaS のみ" type="Informative" url="https://experienceleague.adobe.com/ja/docs/commerce/user-guides/product-solutions" tooltip="Adobe Commerce on Cloud プロジェクト（Adobeが管理する PaaS インフラストラクチャ）およびオンプレミスプロジェクトにのみ適用されます。"
-source-git-commit: cb478d1f34e68784b3d7e9fe69bee62fcda00a60
+badgePaas: label="PaaSのみ" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Adobe Commerce on Cloud プロジェクト（Adobeで管理されるPaaS インフラストラクチャ）とオンプレミス プロジェクトにのみ適用されます。"
+source-git-commit: bdbb6e21c8d7af1c2726382333ec5184b87ac7b7
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
 
-# 内部使用のメタデータ
+# 内部使用のためのメタデータ
 
-`metadata.md` ファイルには、リポジトリ内のファイルに関するユーザーガイドにパススルーされる、リポジトリレベル `TOC.md` メタデータが含まれています。 任意のユーザーガイドのコンテンツ `metadata.md` 変更する場合は、任意の `TOC.md` ファイルで変更します。
+`metadata.md` ファイルには、リポジトリ内のユーザーガイド `TOC.md` ファイルに渡されるリポジトリーレベルのメタデータが含まれています。 任意のユーザーガイドの`metadata.md` コンテンツを変更する場合は、任意の`TOC.md` ファイルで変更します。
