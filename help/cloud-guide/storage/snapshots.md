@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 手動バックアップの作成
 
-アクティブなStarter環境とintegration Pro環境の手動バックアップを[!DNL Cloud Console]から作成するか、Cloud CLIからスナップショットを作成できます。 環境には[管理者ロール ](../project/user-access.md)が必要です。
+アクティブなStarter環境とintegration Pro環境の手動バックアップを[!DNL Cloud Console]から作成するか、Cloud CLIからスナップショットを作成できます。 環境には[管理者ロール &#x200B;](../project/user-access.md)が必要です。
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 **Pro環境**&#x200B;のデータベースバックアップを作成するには：
 
-ステージングと実稼動を含むPro環境のデータベースダンプを作成するには、[ データベースダンプの作成](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) ナレッジベース記事を参照してください。
+ステージングと実稼動を含むPro環境のデータベースダンプを作成するには、[&#x200B; データベースダンプの作成](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) ナレッジベース記事を参照してください。
 
 **[!DNL Cloud Console]**&#x200B;を使用して任意のStarter環境のバックアップを作成するには：
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 1. プロジェクトのナビゲーションバーから環境を選択します。 環境はアクティブである必要があります。
 1. _バックアップ_ ビューで、**[!UICONTROL Backup]**&#x200B;をクリックします。 このオプションは、Pro環境では使用できません。
 
-   ![ バックアップ ](../../assets/button-backup.png){width="150"}
+   ![&#x200B; バックアップ &#x200B;](../../assets/button-backup.png){width="150"}
 
 **[!DNL Cloud Console]**&#x200B;を使用して統合環境のバックアップを作成するには：
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 ## 手動バックアップの復元
 
-環境への[管理者アクセス ](../project/user-access.md)が必要です。 手動バックアップは、最大&#x200B;**7日間**～_復元_&#x200B;です。 バックアップを復元しても、現在のGit ブランチのコードは変更されません。 この方法でバックアップを復元することは、Proのステージング環境と実稼動環境には適用されません。[Pro Backup &amp; Disaster Recovery](../architecture/pro-architecture.md#backup-and-disaster-recovery)を参照してください。
+環境への[管理者アクセス &#x200B;](../project/user-access.md)が必要です。 手動バックアップは、最大&#x200B;**7日間**～_復元_&#x200B;です。 バックアップを復元しても、現在のGit ブランチのコードは変更されません。 この方法でバックアップを復元することは、Proのステージング環境と実稼動環境には適用されません。[Pro Backup &amp; Disaster Recovery](../architecture/pro-architecture.md#backup-and-disaster-recovery)を参照してください。
 
 復元時間は、データベースのサイズによって異なります。
 
@@ -110,7 +110,7 @@ ht-degree: 0%
 >
 >バックアップなしで復元：
 >
->- 前のコードにロールバックしたり、環境に追加された拡張機能を削除したりするには、[ コードをロールバック ](#roll-back-code)するを参照してください。
+>- 前のコードにロールバックしたり、環境に追加された拡張機能を削除したりするには、[&#x200B; コードをロールバック &#x200B;](#roll-back-code)するを参照してください。
 >- _not_&#x200B;にバックアップがある不安定な環境を復元するには、[環境の復元](../development/restore-environment.md)を参照してください。
 
 **[!DNL Cloud Console]**&#x200B;を使用してバックアップを復元するには：
@@ -150,15 +150,15 @@ ht-degree: 0%
 
 ## 災害復旧スナップショットの復元
 
-Pro ステージング環境および実稼動環境で災害復旧スナップショットを復元するには、[ データベース ダンプをサーバーから直接インポートします](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
+Pro ステージング環境および実稼動環境で災害復旧スナップショットを復元するには、[&#x200B; データベース ダンプをサーバーから直接インポートします](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
 
 ## コードをロールバック
 
 バックアップとスナップショットには、コードのコピーが&#x200B;_not_&#x200B;含まれています。 コードは既にGit ベースのリポジトリに保存されているため、Git ベースのコマンドを使用してコードをロールバック（または元に戻す）できます。 例えば、`git log --oneline`を使用して以前のコミットをスクロールし、[`git revert`](https://git-scm.com/docs/git-revert)を使用して特定のコミットからコードを復元します。
 
-また、_非アクティブ_ ブランチにコードを保存することもできます。 `magento-cloud` コマンドを使用する代わりに、Git コマンドを使用してブランチを作成します。 Cloud CLI トピックの[Git コマンド ](../dev-tools/cloud-cli-overview.md#git-commands)について参照してください。
+また、_非アクティブ_ ブランチにコードを保存することもできます。 `magento-cloud` コマンドを使用する代わりに、Git コマンドを使用してブランチを作成します。 Cloud CLI トピックの[Git コマンド &#x200B;](../dev-tools/cloud-cli-overview.md#git-commands)について参照してください。
 
 ## 関連情報
 
 - [データベースのバックアップ](database-dump.md)
-- Pro実稼動クラスターとステージング クラスターの[ バックアップと災害復旧](../architecture/pro-architecture.md#backup-and-disaster-recovery)
+- Pro実稼動クラスターとステージング クラスターの[&#x200B; バックアップと災害復旧](../architecture/pro-architecture.md#backup-and-disaster-recovery)
