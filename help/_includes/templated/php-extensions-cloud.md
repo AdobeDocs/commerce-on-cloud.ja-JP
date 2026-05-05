@@ -1,20 +1,20 @@
 ---
-source-git-commit: c82272b1867bf72e800668c9d91f15e53f252223
+source-git-commit: 7abea6614a5c817cef3f83b293fab98974d4b072
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '63'
 ht-degree: 0%
 
 ---
-# クラウド用 PHP 拡張機能
+# クラウド向けPHP拡張機能
 
 <table style="table-layout:auto">
     <thead>
       <tr>
         <th>
-            デフォルトの拡張機能
+            既定の拡張機能
         </th>
         <th>
-            アンインストールできないインストール済み拡張機能
+            アンインストールできないインストール済みの拡張機能
         </th>
         <th>
             必要に応じてインストールおよびアンインストールできる拡張機能
@@ -24,71 +24,76 @@ ht-degree: 0%
     <tbody>
         <tr>
             <td>
-                bcmath<br>
-                bz2<br>
-                カレンダー <br>
-                exif<br>
-                gd<br>
-                gettext<br>
-                intl<br>
-                libxml<br>
-                mysqli<br>
-                pcntl<br>
-                pdo_mysql<br>
-                反射 <br>
-                soap<br>
-                ソケット <br>
-                SPL<br>
-                標準 <br>
-                スウール <br>
-                sysvmsg<br>
-                システムの設定 <br>
-                sysvshm<br>
-                郵便番号 <br>
-                zlib<br>
+                <code>bcmath</code><br>
+                <code>bz2</code><br>
+                <code>calendar</code><br>
+                <code>exif</code><br>
+                <code>gd</code><br>
+                <code>gettext</code><br>
+                <code>intl</code><br>
+                <code>libxml</code><br>
+                <code>mysqli</code><br>
+                <code>pcntl</code><br>
+                <code>pdo_mysql</code><br>
+                <code>Reflection</code><br>
+                <code>soap</code><br>
+                <code>sockets</code><br>
+                <code>SPL</code><br>
+                <code>standard</code><br>
+                <code>swoole</code><br>
+                <code>sysvmsg</code><br>
+                <code>sysvsem</code><br>
+                <code>sysvshm</code><br>
+                <code>zip</code><br>
+                <code>zlib</code><br>
             </td>
             <td>
-                ctype<br>
-                curl<br>
-                日付 <br>
-                dba<br>
-                dom<br>
-                fileinfo<br>
-                フィルター <br>
-                ftp<br>
-                hash<br>
-                iconv<br>
-                json<br>
-                mbstring<br>
-                mysqlnd<br>
-                openssl<br>
-                pcre<br>
-                pdo<br>
-                pdo_sqlite<br>
-                phar<br>
-                posix<br>
-                readline<br>
-                セッション <br>
-                sqlite3<br>
-                tokenizer <br>
-                xml<br>
-                xmlreader<br>
-                xmlwriter<br>
+                <code>ctype</code><br>
+                <code>curl</code><br>
+                <code>date</code><br>
+                <code>dba</code><br>
+                <code>dom</code><br>
+                <code>fileinfo</code><br>
+                <code>filter</code><br>
+                <code>ftp</code><br>
+                <code>hash</code><br>
+                <code>iconv</code><br>
+                <code>json</code><br>
+                <code>mbstring</code><br>
+                <code>mysqlnd</code><br>
+                <code>openssl</code><br>
+                <code>pcre</code><br>
+                <code>pdo</code><br>
+                <code>pdo_sqlite</code><br>
+                <code>phar</code><br>
+                <code>posix</code><br>
+                <code>readline</code><br>
+                <code>session</code><br>
+                <code>sqlite3</code><br>
+                <code>tokenizer</code><br>
+                <code>xml</code><br>
+                <code>xmlreader</code><br>
+                <code>xmlwriter</code><br>
             </td>
             <td>
-                igbinary<br>
-                imap<br>
-                mcrypt<br>
-                mysqli<br>
-                pdo_mysql<br>
-                propro<br>
-                コード <br>
-                redis<br>
-                shmop ソケット <br>
-                ナトリウム <br>
-                xmlrpc<br>
-                xsl<br>
+                <code>igbinary</code><br>
+                <code>imap</code><br>
+                <code>ldap</code><br>
+                <code>mcrypt</code><br>
+                <code>mysqli</code><br>
+                <code>pdo_mysql</code><br>
+                <code>propro</code><br>
+                <code>recode</code><br>
+                <code>redis</code><br>
+                <code>shmop sockets</code><br>
+                <code>sodium</code><br>
+                <code>xmlrpc</code><br>
+                <code>xsl</code><br>
             </td>
         </tr>
     </tbody>
 </table>
+
+>[!NOTE]
+>
+>一部のPHP拡張機能には環境固有のインストール制限があり、上記の表では完全に表されていません。 例えば、[!DNL LDAP]はプロジェクト設定を通じて統合環境で有効にできますが、`.magento.app.yaml`を通じてPro ステージングおよび実稼動のセルフサービス設定ではありません。
