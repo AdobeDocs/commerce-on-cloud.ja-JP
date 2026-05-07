@@ -1,5 +1,5 @@
 ---
-source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
+source-git-commit: eff03e0955ae067eb509c7d49eb59f64b3bb1c6a
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 3%
@@ -7,70 +7,70 @@ ht-degree: 3%
 ---
 # ece-tools
 
-**バージョン**:2002.2.10
+**バージョン**: 2002.2.11
 
-このリファレンスには、`ece-tools` のコマンド ライン ツールで使用できる 34 のコマンドが含まれています。
-最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで `ece-tools list` コマンドを使用して自動生成されます。
+このリファレンスには、`ece-tools` コマンドラインツールを通じて利用できる34のコマンドが含まれています。
+最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで`ece-tools list` コマンドを使用して自動生成されます。
 
 ## 一般
 
-この参照は、アプリケーションコードベースから生成されます。 コンテンツを変更するには、_フィードバックを送信_ （右上のリンクを参照）。 投稿のガイドラインについては、[&#x200B; コードの投稿 &#x200B;](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) を参照してください。
+この参照は、アプリケーションコードベースから生成されます。 コンテンツを変更するには、_フィードバックを送信してください_ （右上のリンクを見つけてください）。 貢献度ガイドラインについては、[ コード貢献度](https://developer.adobe.com/commerce/contributor/guides/code-contributions/)を参照してください。
 
 ### グローバルオプション
 
 #### `--help`, `-h`
 
-指定されたコマンドのヘルプを表示します。 コマンドが指定されていない場合は、list コマンドの表示ヘルプが表示されます
+指定されたコマンドのヘルプを表示します。 コマンドが指定されていない場合は、list コマンドのdisplay help
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--silent`
 
 メッセージを出力しない
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--quiet`, `-q`
 
-エラーのみが表示されます。 その他の出力はすべて抑制されます
+エラーのみが表示されます。 他のすべての出力は抑制されます
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--verbose`, `-v|-vv|-vvv`
 
-メッセージの冗長さを増やします。通常の出力の場合は 1、詳細な出力の場合は 2、デバッグの場合は 3 です。
+メッセージの冗長性を上げます。通常の出力は1、詳細な出力は2、デバッグは3
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--version`, `-V`
 
 このアプリケーションのバージョンを表示
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--ansi`
 
-ANSI 出力を強制（または無効化 – no-ansi）
+ANSI出力を強制（または – no-ansiを無効にする）
 
-- 値を受け入れません
+- 値を受け付けません
 
 #### `--no-ansi`
 
-「– ansi」オプションを否定します
+「 – ansi」オプションを無効にする
 
-- 値を受け入れません
+- 値を受け付けません
 
 #### `--no-interaction`, `-n`
 
-対話型の質問をしない
+インタラクティブな質問は避けてください
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 
 ## `_complete`
@@ -79,34 +79,34 @@ ANSI 出力を強制（または無効化 – no-ansi）
 ece-tools _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-a|--api-version API-VERSION] [-S|--symfony SYMFONY]
 ```
 
-シェル補完の候補を提供する内部コマンド
+シェル補完の提案を提供する内部コマンド
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--shell`, `-s`
 
-シェル型（「bash」、「fish」、「zsh」）
+シェルタイプ （&quot;bash&quot;, &quot;fish&quot;, &quot;zsh&quot;）
 
 - 値が必要です
 
 #### `--input`, `-i`
 
-入力トークンの配列（例：COMP_WORDS または argv）
+入力トークンの配列（例：COMP_WORDSまたはargv）
 
-- デフォルト：`[]`
+- 既定：`[]`
 - 値が必要です
 
 #### `--current`, `-c`
 
-カーソルがある「入力」配列のインデックス （例：COMP_CWORD）
+カーソルが置かれている「input」配列のインデックス（例：COMP_CWORD）
 
 - 値が必要です
 
 #### `--api-version`, `-a`
 
-完了スクリプトの API バージョン
+完了スクリプトのAPI バージョン
 
 - 値が必要です
 
@@ -127,7 +127,7 @@ ece-tools build
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `completion`
@@ -136,7 +136,7 @@ ece-tools build
 ece-tools completion [--debug] [--] [<shell>]
 ```
 
-シェル完了スクリプトをダンプ
+シェル完了スクリプトをダンプします
 
 ```
 The completion command dumps the shell completion script required
@@ -171,18 +171,18 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
 
 #### `shell`
 
-シェルの型（例：&#39;&#39;bash&#39;&#39;）は、&#39;&#39;$SHELL&#39;&#39;環境変数の値が指定されていない場合に使用されます
+シェルタイプ （例：「bash」）、環境変数「$SHELL」の値が指定されていない場合は使用されます
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--debug`
 
 完了デバッグログのテール
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 
 ## `db-dump`
@@ -197,25 +197,25 @@ ece-tools db-dump [-d|--remove-definers] [-a|--dump-directory DUMP-DIRECTORY] [-
 
 #### `databases`
 
-バックアップするデータベース。 使用可能な値：[ メインの見積もり売上 ]。 引数の値が指定されていない場合、データベースバックアップは、`MAGENTO_CLOUD_RELATIONSHIP` 環境変数または.magento.env.yaml 設定ファイルの `stage.deploy.DATABASE_CONFIGURATION` プロパティ（あるいはその両方）に保存されている資格情報を使用して作成されます。
+バックアップ用データベース。 使用可能な値：[ メイン見積もり売上]。 引数の値が指定されていない場合、データベースのバックアップは、`MAGENTO_CLOUD_RELATIONSHIP`環境変数または.magento.env.yaml設定ファイルの`stage.deploy.DATABASE_CONFIGURATION` プロパティに格納されている資格情報を使用して作成されます。
 
-- デフォルト：`[]`
+- 既定：`[]`
 - 配列
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--remove-definers`, `-d`
 
-データベース ダンプから定義を削除する
+データベースダンプからの定義の削除
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--dump-directory`, `-a`
 
-ダンプの保存に代替ディレクトリを使用
+ダンプを保存するための代替ディレクトリの使用
 
 - 値が必要です
 
@@ -230,7 +230,7 @@ ece-tools deploy
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `help`
@@ -239,7 +239,7 @@ ece-tools deploy
 ece-tools help [--format FORMAT] [--raw] [--] [<command_name>]
 ```
 
-コマンドのヘルプを表示する
+コマンドのヘルプの表示
 
 ```
 The help command displays help for a given command:
@@ -259,25 +259,25 @@ To display the list of available commands, please use the list command.
 
 コマンド名
 
-- デフォルト：`help`
+- 既定：`help`
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--format`
 
 出力形式（txt、xml、json、md）
 
-- デフォルト：`txt`
+- 既定：`txt`
 - 値が必要です
 
 #### `--raw`
 
-生のコマンド ヘルプを出力するには
+Raw コマンド ヘルプを出力するには
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 
 ## `list`
@@ -286,7 +286,7 @@ To display the list of available commands, please use the list command.
 ece-tools list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
-コマンドのリスト
+リストコマンド
 
 ```
 The list command lists all commands:
@@ -314,28 +314,28 @@ It's also possible to get raw list of commands (useful for embedding command run
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--raw`
 
-生のコマンド リストを出力するには
+Raw コマンドリストを出力するには
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--format`
 
 出力形式（txt、xml、json、md）
 
-- デフォルト：`txt`
+- 既定：`txt`
 - 値が必要です
 
 #### `--short`
 
-説明コマンドの引数をスキップするには
+コマンドの引数の記述をスキップするには
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 
 ## `patch`
@@ -348,7 +348,7 @@ ece-tools patch
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `post-deploy`
@@ -357,11 +357,11 @@ ece-tools patch
 ece-tools post-deploy
 ```
 
-デプロイ後の操作を実行します。
+デプロイ操作の後に実行します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `run`
@@ -378,14 +378,14 @@ ece-tools run <scenario>...
 
 シナリオ
 
-- デフォルト：`[]`
+- 既定：`[]`
 - 必須
 
 - 配列
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `backup:list`
@@ -394,11 +394,11 @@ ece-tools run <scenario>...
 ece-tools backup:list
 ```
 
-バックアップ ファイルの一覧を表示します。
+バックアップ ファイルのリストを表示します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `backup:restore`
@@ -407,18 +407,18 @@ ece-tools backup:list
 ece-tools backup:restore [-f|--force] [--file [FILE]]
 ```
 
-重要な設定ファイルを復元します。 backup:list を実行して、バックアップファイルのリストを表示します。
+重要な設定ファイルを復元します。 バックアップ :listを実行して、バックアップ ファイルのリストを表示します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--force`, `-f`
 
 バックアップの復元中に既存のファイルを上書き
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 #### `--file`
 
@@ -437,7 +437,7 @@ ece-tools build:generate
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `build:transfer`
@@ -446,11 +446,11 @@ ece-tools build:generate
 ece-tools build:transfer
 ```
 
-生成されたファイルを init ディレクトリに転送します。
+生成されたファイルをinit ディレクトリに転送します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cloud:config:create`
@@ -459,19 +459,19 @@ ece-tools build:transfer
 ece-tools cloud:config:create <configuration>
 ```
 
-指定されたビルド、デプロイ、およびデプロイ後の変数設定で `.magento.env.yaml` ファイルを作成します。 既存の `.magento.env.yaml` ファイルを上書きします。
+指定されたビルド、デプロイ、デプロイ後の変数設定を使用して`.magento.env.yaml` ファイルを作成します。 既存の`.magento.env.yaml` ファイルをすべて上書きします。
 
 ### 引数
 
 #### `configuration`
 
-JSON 形式の設定
+JSON形式での設定
 
 - 必須
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cloud:config:update`
@@ -480,19 +480,19 @@ JSON 形式の設定
 ece-tools cloud:config:update <configuration>
 ```
 
-既存の `.magento.env.yaml` ファイルを指定された設定で更新します。 ファイル `.magento.env.yaml` 存在しない場合は作成します。
+指定された設定で既存の`.magento.env.yaml` ファイルを更新します。 ファイルが存在しない場合は、`.magento.env.yaml` ファイルを作成します。
 
 ### 引数
 
 #### `configuration`
 
-JSON 形式の設定
+JSON形式での設定
 
 - 必須
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cloud:config:validate`
@@ -501,11 +501,11 @@ JSON 形式の設定
 ece-tools cloud:config:validate
 ```
 
-設定ファイル `.magento.env.yaml` 検証します
+`.magento.env.yaml`設定ファイルを検証します
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `config:dump`
@@ -514,11 +514,11 @@ ece-tools cloud:config:validate
 ece-tools config:dumpdump
 ```
 
-静的コンテンツのデプロイメントのダンプ設定です。
+静的コンテンツのデプロイメント用のダンプ設定。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cron:disable`
@@ -531,7 +531,7 @@ ece-tools cron:disable
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cron:enable`
@@ -544,7 +544,7 @@ Magento cron プロセスを有効にします。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cron:kill`
@@ -557,7 +557,7 @@ ece-tools cron:kill
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `cron:unlock`
@@ -566,18 +566,18 @@ ece-tools cron:kill
 ece-tools cron:unlock [--job-code [JOB-CODE]]
 ```
 
-「実行中」状態のままになる cron ジョブのロックを解除します。
+「実行中」状態で停止したcron ジョブのロックを解除します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--job-code`
 
-ロックを解除する Cron ジョブコード。
+ロックを解除するCron ジョブ コード。
 
-- デフォルト：`[]`
-- 複数の値を使用できます
+- 既定：`[]`
+- 複数の値を受け入れる
 
 
 ## `dev:generate:schema-error`
@@ -590,7 +590,7 @@ schema.error.yaml ファイルからdist/error-codes.md ファイルを生成し
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `dev:git:update-composer`
@@ -599,11 +599,11 @@ schema.error.yaml ファイルからdist/error-codes.md ファイルを生成し
 ece-tools dev:git:update-composer
 ```
 
-Git からデプロイメント用に Composer を更新しました。
+Gitからデプロイメント用のコンポーザーを更新します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `env:config:show`
@@ -620,12 +620,12 @@ ece-tools env:config:show [<variable>...]
 
 表示する環境変数、可能なオプション：サービス、ルート、変数
 
-- デフォルト：`[]`
+- 既定：`[]`
 - 配列
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `error:show`
@@ -634,24 +634,24 @@ ece-tools env:config:show [<variable>...]
 ece-tools error:show [-j|--json] [--] [<error-code>]
 ```
 
-エラー ID 別のエラーに関する情報、または前回のデプロイメントのすべてのエラーに関する情報を表示します。
+エラーID別のエラーに関する情報または前回のデプロイメントのすべてのエラーに関する情報を表示します。
 
 ### 引数
 
 #### `error-code`
 
-エラーコード（渡されなかった場合） コマンドは、前回のデプロイメントからのすべてのエラーに関する情報を表示します
+エラーコード （コマンドが渡されない場合）最後のデプロイメントからのすべてのエラーに関する情報を表示
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 #### `--json`, `-j`
 
-JSON 形式で結果を取得するために使用されます
+JSON形式で結果を取得するために使用します
 
-- デフォルト：`false`
-- 値を受け入れません
+- 既定：`false`
+- 値を受け付けません
 
 
 ## `module:refresh`
@@ -664,7 +664,7 @@ ece-tools module:refresh
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `schema:generate`
@@ -677,7 +677,7 @@ ece-tools schema:generate
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `wizard:ideal-state`
@@ -686,11 +686,11 @@ ece-tools schema:generate
 ece-tools wizard:ideal-state
 ```
 
-設定の理想的な状態を確認します。
+構成の理想的な状態を検証します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `wizard:master-slave`
@@ -699,11 +699,11 @@ ece-tools wizard:ideal-state
 ece-tools wizard:master-slave
 ```
 
-マスター/スレーブ構成を確認します。
+マスタースレーブ設定を検証します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `wizard:scd-on-build`
@@ -712,11 +712,11 @@ ece-tools wizard:master-slave
 ece-tools wizard:scd-on-build
 ```
 
-ビルド設定時に SCD を検証します。
+ビルド設定でSCDを検証します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `wizard:scd-on-demand`
@@ -725,11 +725,11 @@ ece-tools wizard:scd-on-build
 ece-tools wizard:scd-on-demand
 ```
 
-SCD オンデマンド構成を検証します。
+オンデマンド設定のSCDを検証します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `wizard:scd-on-deploy`
@@ -738,11 +738,11 @@ SCD オンデマンド構成を検証します。
 ece-tools wizard:scd-on-deploy
 ```
 
-デプロイ時の SCD 設定を検証します。
+デプロイ設定時にSCDを検証します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
 
 
 ## `wizard:split-db-state`
@@ -751,8 +751,8 @@ ece-tools wizard:scd-on-deploy
 ece-tools wizard:split-db-state
 ```
 
-DB を分割する機能と、DB が既に分割されているかどうかを確認します。
+DBを分割する機能と、DBが既に分割されているかどうかを確認します。
 
 ### オプション
 
-グローバルオプションについては、[&#x200B; グローバルオプション &#x200B;](#global-options) を参照してください。
+グローバルオプションについては、[ グローバルオプション ](#global-options)を参照してください。
