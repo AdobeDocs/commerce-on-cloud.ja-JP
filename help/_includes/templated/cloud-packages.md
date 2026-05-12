@@ -1,7 +1,7 @@
 ---
-source-git-commit: bd353c3d100dee7fd0a1846b582a8af44448ff1b
+source-git-commit: 30d2462df80a252519fcaa90e225c219d4ead2f1
 workflow-type: tm+mt
-source-wordcount: '3168'
+source-wordcount: '3177'
 ht-degree: 0%
 
 ---
@@ -27,17 +27,18 @@ Adobe Commerce クラウドインフラストラクチャでは、Composerを使
 
 `composer.json` ファイルはパッケージのリストを宣言しますが、`composer.lock` ファイルには、Adobe Commerceのインストールの構築に使用されたパッケージの完全なリスト（各パッケージとその依存関係の完全なバージョン）が格納されます。
 
-次のリファレンスドキュメントは`composer.lock` ファイルから生成され、クラウドインフラストラクチャ 2.4.8-p1のAdobe Commerceに含まれる必要なパッケージについて説明しています。
+次のリファレンスドキュメントは`composer.lock` ファイルから生成され、クラウドインフラストラクチャ 2.4.9-p2のAdobe Commerceに含まれる必要なパッケージについて説明しています。
 
 ## 依存関係
 
-`magento/magento-cloud-metapackage 2.4.8-p1`には次の依存関係があります：
+`magento/magento-cloud-metapackage 2.4.9-p2`には次の依存関係があります：
 
 ```config
+aem/rum: ^1.0.4
 fastly/magento2: ^1.2.34
 magento/ece-tools: ^2002.2.0
 magento/module-paypal-on-boarding: ~100.5.0
-magento/product-enterprise-edition: >=2.4.8 <2.4.9
+magento/product-enterprise-edition: >=2.4.9 <2.4.10
 ```
 
 ## サードパーティライセンス
@@ -94,6 +95,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>PHP用AWS SDK - PHP プロジェクトでのAmazon Web Servicesの使用</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/giggsey/libphonenumber-for-php.git">giggsey/libphonenumber-for-php</a>
+    </td>
+    <td>Library</td>
+    <td>国際電話番号の解析、フォーマット、保存、検証のためのライブラリ、GoogleのlibphonenumberのPHP ポート。</td>
   </tr>
   <tr>
     <td>
@@ -209,17 +217,10 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
+      <a href="https://github.com/googleapis/php-jwt.git">firebase/php-jwt</a>
     </td>
     <td>Library</td>
     <td>PHPでJSON Web Tokens （JWT）をエンコードおよびデコードするためのシンプルなライブラリ。 現在の仕様に準拠する必要があります。</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-captcha.git">laminas/laminas-captcha</a>
-    </td>
-    <td>Library</td>
-    <td>フィレット、画像、ReCaptchaなどを使用してCAPTCHAを生成し、検証します</td>
   </tr>
   <tr>
     <td>
@@ -234,13 +235,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>アプリケーション コード内でこの設定データにアクセスするための、ネストされたオブジェクト プロパティ ベースのユーザーインターフェイスを提供します</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
-    </td>
-    <td>Library</td>
-    <td>PSR-11 コンテナの依存関係の自動挿入</td>
   </tr>
   <tr>
     <td>
@@ -307,13 +301,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mvc.git">laminas/laminas-mvc</a>
-    </td>
-    <td>Library</td>
-    <td>MVC アプリケーション、コントローラ、プラグインを含むLaminasのイベント駆動型MVC レイヤー</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-permissions-acl.git">laminas/laminas-permissions-acl</a>
     </td>
     <td>Library</td>
@@ -328,20 +315,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-router.git">laminas/laminas-router</a>
-    </td>
-    <td>Library</td>
-    <td>HTTPおよびコンソールアプリケーション向けの柔軟なルーティングシステム</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-server.git">laminas/laminas-server</a>
-    </td>
-    <td>Library</td>
-    <td>リフレクションベースのRPC サーバーの作成</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-servicemanager.git">laminas/laminas-servicemanager</a>
     </td>
     <td>Library</td>
@@ -353,13 +326,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>PHP セッションとストレージへのオブジェクト指向インターフェイス</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-soap.git">laminas/laminas-soap</a>
-    </td>
-    <td>Library</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -419,6 +385,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/php-db/phpdb.git">php-db/phpdb</a>
+    </td>
+    <td>Library</td>
+    <td>データベース抽象化層、SQL抽象化、結果セット抽象化、RowDataGatewayおよびTableDataGatewayの実装</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
     </td>
     <td>Library</td>
@@ -458,27 +431,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>magento-module</td>
     <td>タグを完全にサポートするRedisを使用したZend_Cache バックエンド。</td>
-  </tr>
-  </tbody>
-</table>
-
-### ISC
-
-<table>
-  <thead>
-    <tr>
-      <th>名前</th>
-      <th>タイプ</th>
-      <th>説明</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <a href="https://github.com/paragonie/sodium_compat.git"> パラゴニー/ナトリウム_コンパット </a>
-    </td>
-    <td>Library</td>
-    <td>libsodiumの純粋なPHP実装。存在する場合はPHP拡張機能を使用します。</td>
   </tr>
   </tbody>
 </table>
@@ -535,6 +487,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>任意精度演算ライブラリ</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/brick/phonenumber.git"> レンガ/音声番号</a>
+    </td>
+    <td>Library</td>
+    <td>電話番号ライブラリ</td>
   </tr>
   <tr>
     <td>
@@ -675,6 +634,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>ocramius/proxy-managerに幅広いPHP バージョンのサポートを追加</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/giggsey/Locale.git">giggsey/locale</a>
+    </td>
+    <td>Library</td>
+    <td>libphonenumber-for-phpで必要なロケール関数</td>
   </tr>
   <tr>
     <td>
@@ -839,7 +805,7 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/PhpGt/CssXPath.git">phpgt/cssxpath</a>
+      <a href="https://github.com/phpgt/CssXPath.git">phpgt/cssxpath</a>
     </td>
     <td>Library</td>
     <td>CSS セレクターをXPath クエリに変換します。</td>
@@ -871,6 +837,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>PHP Secure Communications Library - RSA、AES、SSH2、SFTP、X.509などの純粋なPHP実装。</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/predis/predis.git">predis/predis</a>
+    </td>
+    <td>Library</td>
+    <td>PHP用の柔軟で機能的なRedis/Valkey クライアント。</td>
   </tr>
   <tr>
     <td>
@@ -1014,6 +987,20 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/cache.git">symfony/cache</a>
+    </td>
+    <td>Library</td>
+    <td>拡張されたPSR-6、PSR-16 （およびタグ）実装を提供</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/cache-contracts.git">symfony/cache-contracts</a>
+    </td>
+    <td>Library</td>
+    <td>キャッシュに関連する一般的な抽象化</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/clock.git">symfony/clock</a>
     </td>
     <td>Library</td>
@@ -1088,13 +1075,6 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </td>
     <td>Library</td>
     <td>直感的な流暢なインターフェイスを介してファイルとディレクトリを検索します</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/symfony/http-client.git">symfony/http-client</a>
-    </td>
-    <td>Library</td>
-    <td>HTTP リソースを同期または非同期で取得するための強力なメソッドを提供します</td>
   </tr>
   <tr>
     <td>
@@ -1294,6 +1274,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/thecodingmachine/safe.git">thecodingmachine/safe</a>
+    </td>
+    <td>Library</td>
+    <td>エラー時にFALSEを返す代わりに例外をスローするPHP コア関数</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-framework</a>
     </td>
     <td>symfony-bundle</td>
@@ -1432,6 +1419,13 @@ magento/product-enterprise-edition: >=2.4.8 <2.4.9
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>
+      aem/rum
+    </td>
+    <td>magento2-module</td>
+    <td>該当なし</td>
+  </tr>
   <tr>
     <td>
       paypal/module-braintree-core
