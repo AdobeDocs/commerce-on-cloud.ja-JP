@@ -5,9 +5,9 @@ user-guide-title: クラウド上の Commerce に関するガイド
 user-guide-description: クラウドインフラストラクチャー上で Adobe Commerce アプリケーションを管理する方法について説明します。
 product: magento
 feature: Cloud
-source-git-commit: 14964492bc82a50b1eea0636d01b8f7f2583755b
+source-git-commit: 5475b65cb9606b200ff6ac3096ed0d0cf3168cf9
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 8%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 8%
    + [プロワークフロー](architecture/pro-develop-deploy-workflow.md)
    + [拡張されたアーキテクチャ](architecture/scaled-architecture.md)
    + [自動スケーリング](architecture/autoscaling.md)
-+ [基本を学ぶ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ja)
++ [基本を学ぶ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + リリースノート {#release-notes}
    + [Cloud tools suite](release-notes/cloud-tools-suite.md)
    + [ECE-Tools パッケージ](release-notes/ece-tools-package.md)
@@ -148,6 +148,7 @@ ht-degree: 8%
       + [キャッシュ設定のカスタマイズ](cdn/fastly-custom-cache-configuration.md)
       + [エラーおよびメンテナンスページのカスタマイズ](cdn/fastly-custom-response.md)
    + [Web アプリケーションファイアウォール](cdn/fastly-waf-service.md)
+   + [高度なセキュリティ](cdn/advanced-security.md)
    + [画像の最適化](cdn/fastly-image-optimization.md)
    + VCLによるカスタマイズ {#custom-vcl-snippets}
       + [基本を学ぶ](cdn/fastly-vcl-custom-snippets.md)
