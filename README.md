@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # アーカイブ
 
-このリポジトリは<https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en>に移行されました。
+このリポジトリは<https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.ja-JP>に移行されました。
