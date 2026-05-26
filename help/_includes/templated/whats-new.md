@@ -1,5 +1,5 @@
 ---
-source-git-commit: e22b5b3508105aa17d397ac299df12f07004383f
+source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 1%
@@ -97,7 +97,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>クラウドインフラストラクチャ上のAdobe Commerceの<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web プロパティ設定</a>のリファレンスにセキュリティノートを追加して、web プロパティのデフォルト設定では、アップロードされたファイルの実行を防ぐためにメディアロケーションに<code class="language-plaintext highlighter-rouge">scripts:false</code>が使用されていることを明確にしました。</p>
+      <td><p>クラウドインフラストラクチャ上のAdobe Commerceの<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web プロパティ設定</a>のリファレンスにセキュリティノートを追加して、web プロパティのデフォルト設定では、アップロードされたファイルの実行を防ぐためにメディアロケーションに<code>scripts:false</code>が使用されていることを明確にしました。</p>
 </td>
       <td>
         技術的、フィードバック
