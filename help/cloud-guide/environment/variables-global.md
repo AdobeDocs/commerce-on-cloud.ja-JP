@@ -1,19 +1,20 @@
 ---
 title: グローバル変数
-description: クラウドインフラストラクチャデプロイメントプロセス上のAdobe Commerceのアクションを制御する環境変数のリストを参照してください。
+description: Adobe Commerce on cloud infrastructure デプロイメントプロセスのアクションを制御する環境変数の一覧を参照してください。
 feature: Cloud, Configuration, Build, Deploy, Eventing, Logs, SCD
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
+source-git-commit: e3a2c8580ad1f27ddd3dc8fc40207bce68ee1c7f
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
 
 # グローバル変数
 
-グローバル変数は、[!DNL Commerce] デプロイメントプロセスの各フェーズ（ビルド、デプロイ、デプロイ後）でのアクションを制御します。 グローバル変数は各フェーズに影響を与えるので、`.magento.env.yaml` ファイルの `global` の段階で設定する必要があります。
+グローバル変数は、デプロイメントプロセス [!DNL Commerce]の各フェーズ（ビルド、デプロイ、デプロイ後）でのアクションを制御します。 グローバル変数は各フェーズに影響を与えるため、`.magento.env.yaml` ファイルの`global` ステージで設定する必要があります。
 
 ```yaml
 stage:
@@ -21,21 +22,21 @@ stage:
     GLOBAL_VARIABLE_NAME: value
 ```
 
-ビルドおよびデプロイプロセスのカスタマイズに関する詳細情報：
+ビルドおよびデプロイプロセスのカスタマイズについて詳しくは、次を参照してください。
 
 - [デプロイメント設定](configure-env-yaml.md)
 - [デプロイメントプロセス](../deploy/process.md)
 
 ## `ENABLE_EVENTING`
 
-- **デフォルト**-_設定なし_
-- **バージョン** - Adobe Commerce 2.4.5 以降
+- **既定**-_設定なし_
+- **バージョン** - Adobe Commerce 2.4.5以降
 
-`true` に設定すると、cron でメッセージキューコンシューマーを実行できます。 Adobe I/O Events for Adobe Commerceでは、メッセージキューを使用して重要なイベントの配信を迅速に行います。
+`true`に設定すると、cronでメッセージキューコンシューマーを実行できるようになります。 Adobe I/O Events for Adobe Commerceでは、メッセージキューを使用して、重要なイベントの配信を迅速化します。
 
-Adobeでは、`true` に設定した [`CRON_CONSUMERS_RUNNER`](./variables-deploy.md#cron_consumers_runner) 変数を `.magento.env.yaml` ファイルの `deploy` のステージに追加す `cron_run` こともお勧めします。
+Adobeでは、`cron_run`が`true`に設定された`.magento.env.yaml` ファイルの`deploy` ステージに[`CRON_CONSUMERS_RUNNER`](./variables-deploy.md#cron_consumers_runner)変数を追加することをお勧めします。
 
-次の例は、完全に設定された `ENABLE_EVENTING` 変数を示しています。
+次の例は、完全に設定された`ENABLE_EVENTING`変数を示しています。
 
 ```yaml
 stage:
@@ -48,12 +49,12 @@ stage:
       consumers: []
 ```
 
-## ENABLE_WEBHOOK
+## ENABLE_WEBHOOKS
 
-- **デフォルト**-_設定なし_
-- **バージョン** - Adobe Commerce 2.4.4 以降
+- **既定**-_設定なし_
+- **バージョン** - Adobe Commerce 2.4.4以降
 
-`true` に設定すると、Commerce Webhook が有効になります。 Webhook は、App Builder ランタイムアクションやサードパーティの在庫管理システムなどの外部エンドポイントで実行されます。 [_Webhook ガイド_](https://developer.adobe.com/commerce/extensibility/webhooks) では、この機能について詳しく説明します。
+`true`に設定すると、CommerceのWebhookを有効にします。 Webhookは、App Builder ランタイムアクションやサードパーティの在庫管理システムなどの外部エンドポイントで実行されます。 [_Webhook ガイド_](https://developer.adobe.com/commerce/extensibility/webhooks)では、この機能について詳しく説明しています。
 
 ```yaml
 stage:
@@ -63,10 +64,10 @@ stage:
 
 ## `MIN_LOGGING_LEVEL`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-コードを変更せずに、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントが失敗した場合、この変数を使用して、ログの精度をグローバルに高めることができます。 [&#x200B; ログレベル &#x200B;](log-handlers.md#log-levels) を参照してください。 ログハンドラーの `min_level` の値は、この設定を上書きします。
+コードを変更することなく、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントに失敗した場合、この変数を使用して、ログの精度をグローバルに増やすことができます。 [ ログレベル ](log-handlers.md#log-levels)を参照してください。 Logging ハンドラーの`min_level`値は、この設定を上書きします。
 
 ```yaml
 stage:
@@ -76,16 +77,16 @@ stage:
 
 >[!WARNING]
 >
->`MIN_LOGGING_LEVEL` 変数の設定は、デフォルトで `debug` に設定されているファイルハンドラーのログレベル設定を変更しません。
+>`MIN_LOGGING_LEVEL`変数の設定では、デフォルトで`debug`に設定されているファイルハンドラーのログレベル設定は変更されません。
 
 ## `SCD_ON_DEMAND`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-ユーザー（SCD）から要求されたときに静的コンテンツを生成できるようにします。 静的コンテンツは、デプロイメント時間が短縮されるので、開発およびテストワークフローに最適です。
+ユーザー（SCD）から要求されたときに、静的コンテンツの生成を有効にします。 静的なオンデマンド型コンテンツは、デプロイメント時間を短縮するため、開発やテストのワークフローに最適です。
 
-[`post_deploy` フックを使用してキャッシュをプリロードすると &#x200B;](../application/hooks-property.md) サイトのダウンタイムが削減されます。 キャッシュウォーミングは、[!DNL Cloud Console] にステージング環境と実稼動環境が含まれている Pro プロジェクトと、スタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND` 環境変数を `.magento.env.yaml` ファイルの `global` ステージに追加します。
+[`post_deploy` フック ](../application/hooks-property.md)を使用してキャッシュを事前に読み込むと、サイトのダウンタイムが短縮されます。 キャッシュ ウォーミングは、[!DNL Cloud Console]のステージング環境と実稼動環境を含むPro プロジェクトとスタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 
 ```yaml
 stage:
@@ -93,7 +94,7 @@ stage:
     SCD_ON_DEMAND: true
 ```
 
-`SCD_ON_DEMAND` 変数は、両方のフェーズ（build と deploy）で SCD をスキップし、`pub/static` フォルダーと `var/view_preprocessed` フォルダーをクリアして、以下を `app/etc/env.php` ファイルに書き込みます。
+`SCD_ON_DEMAND`変数は、SCDを両方のフェーズ（ビルドとデプロイ）でスキップし、`pub/static`および`var/view_preprocessed` フォルダーをクリアし、次の内容を`app/etc/env.php` ファイルに書き込みます。
 
 ```php?start_inline=1
 return array(
@@ -105,12 +106,12 @@ return array(
 
 ## `SCD_MAX_EXECUTION_TIME`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.2.0 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツのデプロイメントの予想最大実行時間を増やすことができます。
+静的コンテンツのデプロイメントで想定される最大実行時間を増やすことができます。
 
-デフォルトでは、Adobe Commerceは想定される最大実行時間を 900 秒に設定しますが、場合によっては、Cloud プロジェクトの静的コンテンツのデプロイメントを完了するためにより多くの時間が必要になることがあります。
+デフォルトでは、Adobe Commerceは想定される最大実行時間を900秒に設定しますが、一部のシナリオでは、Cloud プロジェクトの静的コンテンツのデプロイメントを完了するのに多くの時間が必要になる場合があります。
 
 ```yaml
 stage:
@@ -122,10 +123,10 @@ stage:
 
 ## `SCD_NO_PARENT`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.4.2 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.4.2以降
 
-ビルドおよびデプロイメントフェーズで親テーマの静的コンテンツが生成されないようにするには、`true` に設定します。 このオプションを `true` に設定すると、生成される静的コンテンツが少なくなり、ビルドとデプロイメントの全体的な時間が短縮されます。
+ビルドおよびデプロイメントフェーズで親テーマの静的コンテンツを生成しないようにするには、`true`に設定します。 このオプションを`true`に設定すると、より少ない静的コンテンツが生成されるので、全体的なビルドとデプロイメントの時間が短縮されます。
 
 ```yaml
 stage:
@@ -135,12 +136,12 @@ stage:
 
 ## `SCD_USE_BALER`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.3.0 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.3.0以降
 
-[Baler](https://github.com/magento/baler) は、生成されたJavaScript コードをスキャンし、最適化されたJavaScript バンドルを作成するモジュールです。 最適化されたバンドルをサイトにデプロイすると、サイトを読み込む際のネットワークリクエストの数を減らし、ページの読み込み時間を短縮できます。
+[Baler](https://github.com/magento/baler)は、生成されたJavaScript コードをスキャンし、最適化されたJavaScript バンドルを作成するモジュールです。 最適化されたバンドルをサイトにデプロイすると、サイトの読み込み時のネットワークリクエストの数を減らし、ページの読み込み時間を短縮できます。
 
-静的コンテンツのデプロイメントの実行後に Baler を実行する場合は、`true` に設定します。
+静的コンテンツのデプロイメントを実行した後にBalerを実行するには、`true`に設定します。
 
 ```yaml
 stage:
@@ -150,21 +151,21 @@ stage:
 
 >[!NOTE]
 >
->この機能を使用する前に、Baler モジュールをインストールして設定します。 Baler はアルファリリースなので、ステージング環境でのみ、このオプションを有効にします。
+>この機能を使用する前に、Baler モジュールをインストールして設定します。 Balerはアルファリリースであるため、このオプションはステージング環境でのみ有効にします。
 
 ## `SKIP_HTML_MINIFICATION`
 
-- **デフォルト**:
-   - `true` - `ece-tools` 2002.0.13 以降
-   - `false` - `ece-tools` の以前のバージョン用
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**:
+   - `true` - `ece-tools` 2002.0.13以降
+   - `false` – 以前のバージョン `ece-tools`の場合
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-ビルド段階の最後の `<magento_root>/init/` ディレクトリへの静的ビューファイルのコピーを有効または無効にします。 `true` に設定した場合、ファイルはコピーされず、リクエストに応じてHTMLの縮小が可能になります。 この値を `true` に設定すると、ステージング環境と実稼動環境にデプロイする際のダウンタイムを短縮できます。
+ビルド ステージの最後にある`<magento_root>/init/` ディレクトリへの静的ビューファイルのコピーを有効または無効にします。 `true`に設定されている場合、ファイルはコピーされず、HTMLの縮小はリクエストに応じて利用できます。 この値を`true`に設定すると、ステージング環境と実稼動環境にデプロイする際のダウンタイムが短縮されます。
 
-- **`false`** - `view_preprocessed` ディレクトリを構築フェーズの最後の `<magento_root>/init/` ディレクトリにコピーし、デプロイフェーズの最初の `<magento_root>/var` ディレクトリにディレクトリを復元します。
-- **`true`** - オンデマンドのHTML縮小が可能です。構築フェーズの最後に `<magento_root>var/view_preprocessed` を `<magento_root>/init/` ディレクトリにコピーする _しない_ です。
+- **`false`** - ビルドフェーズの終了時に`view_preprocessed` ディレクトリを`<magento_root>/init/` ディレクトリにコピーし、デプロイフェーズの開始時に`<magento_root>/var` ディレクトリにディレクトリを復元します。
+- **`true`** - オンデマンド HTMLの縮小を有効にします。_not_&#x200B;は、ビルド フェーズの最後に`<magento_root>var/view_preprocessed`を`<magento_root>/init/` ディレクトリにコピーします。
 
-`SKIP_HTML_MINIFICATION` 環境変数を `.magento.env.yaml` ファイルの `global` ステージに追加します。
+`SKIP_HTML_MINIFICATION`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 
 ```yaml
 stage:
@@ -174,19 +175,19 @@ stage:
 
 ## `X_FRAME_CONFIGURATION`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-`X_FRAME_CONFIGURATION` 変数を使用して、Adobe Commerce サイトの [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=ja) ヘッダー設定を変更します。 この設定は、`<frame>`、`<iframe>` または `<object>` でブラウザーがページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
+Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
 
-- `DENY` - ページをフレーム内に表示できません。
-- `SAMEORIGIN` – （デフォルトのAdobe Commerce設定。） ページは、ページ自体と同じ原点のフレーム内でのみ表示できます。
+- `DENY` - ページはフレーム内に表示できません。
+- `SAMEORIGIN` – （デフォルトのAdobe Commerce設定） ページは、ページ自体と同じオリジンのフレームでのみ表示できます。
 
 >[!WARNING]
 >
->Adobe Commerceでサポートされているブラウザーがサポートしなくなったため、`ALLOW-FROM <uri>` オプションは非推奨（廃止予定）になりました。 [&#x200B; ブラウザー互換性 &#x200B;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility) を参照してください。
+>Adobe Commerceでサポートされているブラウザーではサポートされなくなったため、`ALLOW-FROM <uri>` オプションは廃止されました。 [ ブラウザーの互換性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)を参照してください。
 
-`X_FRAME_CONFIGURATION` 環境変数を `.magento.env.yaml` ファイルの `global` ステージに追加します。
+`X_FRAME_CONFIGURATION`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 
 ```yaml
 stage:
