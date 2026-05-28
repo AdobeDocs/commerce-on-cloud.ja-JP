@@ -105,9 +105,9 @@ Adobe Commerceのクラウドインフラストラクチャコード上のベー
 設定について詳しくは、Adobe Commerceのドキュメントとインストールされている拡張機能を参照してください。 まず、それぞれのCMSを導入することを想定し、自社のニーズを確認しましょう。
 
 - クラウド内の特定のベストプラクティスの[&#x200B; ストア設定のベストプラクティス &#x200B;](../store/best-practices.md)
-- [&#x200B; ストア管理者アクセス、名前、言語、通貨、ブランディング、サイト、ストアビューなどの基本設定](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details)
-- CSSやレイアウトを含むサイトとストアのルックアンドフィール用の[&#x200B; テーマ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features)
-- 役割、ツール、通知、およびデータベースの暗号化キーに対する[&#x200B; システム設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview)
+- [&#x200B; ストア管理者アクセス、名前、言語、通貨、ブランディング、サイト、ストアビューなどの基本設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/start/setup/store-details)
+- CSSやレイアウトを含むサイトとストアのルックアンドフィール用の[&#x200B; テーマ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/content-design/content-menu#design-features)
+- 役割、ツール、通知、およびデータベースの暗号化キーに対する[&#x200B; システム設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/guide-overview)
 - ドキュメントを使用した拡張機能の設定
 
 ストア設定だけでなく、複数のサイトやストア、設定済みのサービスなどを設定することもできます。 [&#x200B; ストアの設定](../store/overview.md)を参照してください。
@@ -163,9 +163,9 @@ Adobe Commerce バージョン 2.2以降を使用している場合、Configurat
 
 ステージング環境と統合環境で使用するテストデータとして実稼動データを書き出すには、次の手順を実行します。
 
-- [Adobe Commerce暗号化キーを使用して、お客様とストアデータの保護されたバックアップを書き出す際に、](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) CLI コマンドを実行する（推奨）
+- [Adobe Commerce暗号化キーを使用して、お客様とストアデータの保護されたバックアップを書き出す際に、](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) CLI コマンドを実行する（推奨）
 
-- データの生成と書き出しを行うための[&#x200B; データ収集](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) ツール
+- データの生成と書き出しを行うための[&#x200B; データ収集](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/support#data-collector) ツール
 
 このデータを移行するには、[静的ファイルとデータの移行とデプロイ &#x200B;](../deploy/staging-production.md#migrate-static-files)を参照してください。
 
@@ -173,7 +173,7 @@ Adobe Commerce バージョン 2.2以降を使用している場合、Configurat
 
 >[!NOTE]
 >
->データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [&#x200B; サポートユーティリティの使用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html)や、顧客データを削除するスクリプトの開発など、いくつかのオプションがあります。
+>データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [&#x200B; サポートユーティリティの使用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja)や、顧客データを削除するスクリプトの開発など、いくつかのオプションがあります。
 
 >[!WARNING]
 >
