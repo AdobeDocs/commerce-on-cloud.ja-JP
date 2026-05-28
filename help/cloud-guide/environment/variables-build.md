@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # ビルド変数
 
-次の&#x200B;_ビルド_&#x200B;変数は、ビルド フェーズのアクションを制御し、[ グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`build` ステージに挿入します。
+次の&#x200B;_ビルド_&#x200B;変数は、ビルド フェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`build` ステージに挿入します。
 
 ```yaml
 stage:
@@ -69,7 +69,7 @@ stage:
       - MC-456345
 ```
 
-[ パッチの適用](../development/apply-patches.md)を参照してください。
+[&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
 
 ## `SCD_COMPRESSION_LEVEL`
 
@@ -186,7 +186,7 @@ stage:
 - **Default**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツの[ デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)をカスタマイズします。 [静的ビューファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)を参照してください。
+静的コンテンツの[&#x200B; デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)をカスタマイズします。 [静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_&#x200B;を使用します。
 

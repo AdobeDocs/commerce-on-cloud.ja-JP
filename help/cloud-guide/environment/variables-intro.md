@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 環境変数
 
-Adobe Commerce on cloud infrastructureでは、環境変数を割り当てて設定オプションを上書きできます。 `ece-tools` パッケージは、[ クラウド変数](variables-cloud.md)、[!DNL Cloud Console]で設定された変数、`.magento.env.yaml`設定ファイルの値に基づいて、`env.php` ファイルの値を設定します。
+Adobe Commerce on cloud infrastructureでは、環境変数を割り当てて設定オプションを上書きできます。 `ece-tools` パッケージは、[&#x200B; クラウド変数](variables-cloud.md)、[!DNL Cloud Console]で設定された変数、`.magento.env.yaml`設定ファイルの値に基づいて、`env.php` ファイルの値を設定します。
 
 `.magento.env.yaml` ファイルの環境変数は、既存のCommerce設定を上書きしてCloud環境をカスタマイズします。 デフォルト値が`Not Set`の場合、`ece-tools` パッケージは&#x200B;**NO** アクションを実行し、[!DNL Commerce]のデフォルトまたは`MAGENTO_CLOUD_RELATIONSHIPS`設定の値を使用します。 デフォルト値が設定されている場合、`ece-tools` パッケージはそのデフォルト値を設定するように動作します。
 
@@ -21,10 +21,10 @@ Adobe Commerce on cloud infrastructureでは、環境変数を割り当てて設
 - [ADMIN](variables-admin.md)：変数がプロジェクト管理者の変数を上書きする
 - [MAGENTO_CLOUD](variables-cloud.md) – クラウドインフラストラクチャ固有の変数
 - `.magento.env.yaml` ファイルで使用される変数：
-   - [ グローバル ](variables-global.md)：変数がビルド、デプロイ、デプロイ後のステージに影響する
-   - [ ビルド ](variables-build.md) – 変数はビルドアクションを制御します
-   - [ デプロイ ](variables-deploy.md) – 変数がデプロイアクションを制御します
-   - [ デプロイ後](variables-post-deploy.md) – 変数はデプロイ後のアクションを制御します
+   - [&#x200B; グローバル &#x200B;](variables-global.md)：変数がビルド、デプロイ、デプロイ後のステージに影響する
+   - [&#x200B; ビルド &#x200B;](variables-build.md) – 変数はビルドアクションを制御します
+   - [&#x200B; デプロイ &#x200B;](variables-deploy.md) – 変数がデプロイアクションを制御します
+   - [&#x200B; デプロイ後](variables-post-deploy.md) – 変数はデプロイ後のアクションを制御します
 
 変数は&#x200B;_階層_&#x200B;です。つまり、変数が上書きされない場合、親環境から継承されます。
 
@@ -32,4 +32,4 @@ Adobe Commerce on cloud infrastructureでは、環境変数を割り当てて設
 
 >[!TIP]
 >
->YAML ファイルでは大文字と小文字が区別され、タブは使用できません。 `.magento.env.yaml` ファイル全体で一貫したインデントを使用するように注意してください。そうしないと、設定が期待どおりに動作しない可能性があります。 このドキュメントとサンプルファイルの例では、_2空間_ インデントを使用しています。 [ece-tools validate コマンド ](configure-env-yaml.md#validate-configuration-file)を使用して、設定を確認します。
+>YAML ファイルでは大文字と小文字が区別され、タブは使用できません。 `.magento.env.yaml` ファイル全体で一貫したインデントを使用するように注意してください。そうしないと、設定が期待どおりに動作しない可能性があります。 このドキュメントとサンプルファイルの例では、_2空間_ インデントを使用しています。 [ece-tools validate コマンド &#x200B;](configure-env-yaml.md#validate-configuration-file)を使用して、設定を確認します。
