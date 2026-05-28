@@ -232,7 +232,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
      >[!WARNING]
      >
-     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
+     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
 
 1. TFA設定が完了したら、**保存**&#x200B;をクリックしてアカウントを更新します。
 
