@@ -35,7 +35,7 @@ ht-degree: 8%
    + [クラウドコンポーネント](release-notes/cloud-components.md)
    + [クラウドパッケージ](release-notes/cloud-packages.md)
    + [後方互換性のない変更](release-notes/backward-incompatible-changes.md)
-   + {hide-from-toc}[ リリースノートのアーカイブ ](release-notes/cloud-release-archive.md)
+   + {hide-from-toc}[&#x200B; リリースノートのアーカイブ &#x200B;](release-notes/cloud-release-archive.md)
 + クラウドプロジェクト {#project}
    + [プロジェクト概要](project/overview.md)
    + [プロジェクト構造](project/file-structure.md)

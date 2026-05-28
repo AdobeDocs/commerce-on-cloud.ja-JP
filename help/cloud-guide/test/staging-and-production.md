@@ -21,7 +21,7 @@ ht-degree: 0%
 
 デプロイメント ログは`/var/log/platform/<prodject-ID>/deploy.log`にあります。 `<project-ID>`の値は、プロジェクト IDと、環境がステージング環境と実稼動環境のどちらに依存しているかによって異なります。 例えば、プロジェクト IDが`yw1unoukjcawe`の場合、ステージング ユーザーは`yw1unoukjcawe_stg`、実稼動ユーザーは`yw1unoukjcawe`です。
 
-実稼動環境またはステージング環境のログにアクセスする場合は、SSHを使用して3つのノードのそれぞれにログインし、ログを探します。 または、[New Relic ログ管理](../monitor/log-management.md)を使用して、すべてのノードから集約されたログデータを表示および照会できます。 [ ログの表示](log-locations.md#application-logs)を参照してください。
+実稼動環境またはステージング環境のログにアクセスする場合は、SSHを使用して3つのノードのそれぞれにログインし、ログを探します。 または、[New Relic ログ管理](../monitor/log-management.md)を使用して、すべてのノードから集約されたログデータを表示および照会できます。 [&#x200B; ログの表示](log-locations.md#application-logs)を参照してください。
 
 ## コードベースを確認する
 
@@ -204,7 +204,7 @@ ht-degree: 0%
 
 最適な結果を得るには、次のツールを使用します。
 
-- [ アプリケーション パフォーマンス テスト ](../environment/variables-post-deploy.md#ttfb_tested_pages) - サイト応答時間をテストするために`TTFB_TESTED_PAGES`環境変数を設定して、アプリケーション パフォーマンスをテストします。
+- [&#x200B; アプリケーション パフォーマンス テスト &#x200B;](../environment/variables-post-deploy.md#ttfb_tested_pages) - サイト応答時間をテストするために`TTFB_TESTED_PAGES`環境変数を設定して、アプリケーション パフォーマンスをテストします。
 - [包囲攻撃](https://www.joedog.org/siege-home/) - ストアを制限にプッシュするためのトラフィック形成およびテスト ソフトウェア。 設定可能な数のシミュレートされたクライアントで、サイトにアクセスします。 Siegeは、基本認証、Cookie、HTTP、HTTPS、およびFTP プロトコルをサポートしています。
 - [Jmeter](https://jmeter.apache.org) - フラッシュ セールスのようなスパイク トラフィックのパフォーマンスを測定するのに役立つ優れた負荷テスト。 サイトに対して実行するカスタムテストを作成します。
 - [New Relic](../monitor/new-relic-service.md) （提供） – データ、クエリ、Redisなどの送信アクションごとに費やされた時間を追跡して、パフォーマンスの低下を引き起こすサイトのプロセスと領域を特定します。
@@ -216,4 +216,4 @@ Magento Functional Testing Framework （MFTF）を使用して、Cloud Docker環
 
 ## セキュリティスキャンツールの設定
 
-無料のセキュリティスキャンツールがあります。 サイトを追加してツールを実行するには、[ セキュリティスキャンツール ](../launch/overview.md#set-up-the-security-scan-tool)を参照してください。
+無料のセキュリティスキャンツールがあります。 サイトを追加してツールを実行するには、[&#x200B; セキュリティスキャンツール &#x200B;](../launch/overview.md#set-up-the-security-scan-tool)を参照してください。

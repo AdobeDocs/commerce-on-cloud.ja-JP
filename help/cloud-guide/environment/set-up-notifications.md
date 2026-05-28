@@ -35,7 +35,7 @@ ht-degree: 0%
 通知を設定するには：
 
 1. ローカル ワークステーションで、プロジェクト ディレクトリに移動します。
-1. プロジェクト ルートの`.magento.env.yaml` ファイルで、メッセージ システムの設定（優先通知[ ログレベル ](log-handlers.md#log-levels)を含む）を追加します。
+1. プロジェクト ルートの`.magento.env.yaml` ファイルで、メッセージ システムの設定（優先通知[&#x200B; ログレベル &#x200B;](log-handlers.md#log-levels)を含む）を追加します。
 
    例えば、Slack _と_&#x200B;の両方のメール設定を設定するには、次の手順を使用します。
 
@@ -80,7 +80,7 @@ log:
     min_level: "info"
 ```
 
-- `token` – お使いのSlack [ ユーザートークン ](https://api.slack.com/docs/token-types#user)。 ユーザートークンは、クラウドインフラストラクチャ上のAdobe Commerceにメッセージの送信を許可します。
+- `token` – お使いのSlack [&#x200B; ユーザートークン &#x200B;](https://api.slack.com/docs/token-types#user)。 ユーザートークンは、クラウドインフラストラクチャ上のAdobe Commerceにメッセージの送信を許可します。
 - `channel` - Slack チャネルの名前Adobe Commerce on cloud infrastructureは通知を送信します。
 - `username` - クラウドインフラストラクチャ上のAdobe Commerceで、Slackで通知メッセージを送信する際に使用するユーザー名。
 - `min_level` – 通知メッセージの最小ログレベル。 `info`を使用することをお勧めします。

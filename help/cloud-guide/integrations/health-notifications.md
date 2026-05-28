@@ -32,7 +32,7 @@ magento-cloud integration:add --type health.email --from-address you@example.com
 
 ## Slack チャネル通知
 
-Slackは、チャットルームにメッセージを投稿するために、ボットと呼ばれるインタラクティブなアプリを使用する外部サービスです。 Slackでヘルス通知を受け取る前に、Slack グループのカスタム [ ボットユーザー](https://api.slack.com/bot-users)を作成する必要があります。 チャネルまたはチャネルのボットユーザーを設定したら、Slackから提供された[ ボットトークン ](https://api.slack.com/docs/token-types#bot)を保存して統合を登録します。 次の例では、Slack チャネルにヘルス通知を登録します。
+Slackは、チャットルームにメッセージを投稿するために、ボットと呼ばれるインタラクティブなアプリを使用する外部サービスです。 Slackでヘルス通知を受け取る前に、Slack グループのカスタム [&#x200B; ボットユーザー](https://api.slack.com/bot-users)を作成する必要があります。 チャネルまたはチャネルのボットユーザーを設定したら、Slackから提供された[&#x200B; ボットトークン &#x200B;](https://api.slack.com/docs/token-types#bot)を保存して統合を登録します。 次の例では、Slack チャネルにヘルス通知を登録します。
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'

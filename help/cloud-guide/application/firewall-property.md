@@ -167,7 +167,7 @@ IP アドレスの範囲を指定するには、[IP Range to CIDR](https://ipadd
 
 ### `ports`
 
-`ports` オプションを使用すると、1から65535までのポートのリストを許可できます。 この例のほとんどのルールでは、ポート `80`と`443`でHTTP要求とHTTPS要求の両方が許可されています。 ただし、New Relicの場合、このルールではポート `443`上のドメインとIP アドレスへのアクセスのみが許可されます。これは、[ ネットワークトラフィック ](https://docs.newrelic.com/docs/new-relic-solutions/get-started/networks/#agents)に関するNew Relic ドキュメントで推奨されています。
+`ports` オプションを使用すると、1から65535までのポートのリストを許可できます。 この例のほとんどのルールでは、ポート `80`と`443`でHTTP要求とHTTPS要求の両方が許可されています。 ただし、New Relicの場合、このルールではポート `443`上のドメインとIP アドレスへのアクセスのみが許可されます。これは、[&#x200B; ネットワークトラフィック &#x200B;](https://docs.newrelic.com/docs/new-relic-solutions/get-started/networks/#agents)に関するNew Relic ドキュメントで推奨されています。
 
 ルールが`ports`のみを定義する場合、ファイアウォールでは、定義されたポートのすべてのドメインとIP アドレスへのアクセスが許可されます。
 

@@ -13,9 +13,9 @@ ht-degree: 0%
 
 [!DNL Cloud Console]またはコマンドラインから、統合（およびスターターのみのステージング）環境の送信メールを有効または無効にできます。 送信メールを有効にして、Cloud プロジェクトユーザーに2要素認証を送信したり、パスワードリセットのメールを送信したりできます。
 
-デフォルトでは、送信メールは実稼動環境とステージング環境（Proのみ）で有効になっています。 ただし、[ コマンドライン ](#enable-emails-in-the-cli)または[Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console)を使用して`enable_smtp` プロパティを設定するまで、ステータスに関係なく、**[!UICONTROL Enable outgoing emails]**&#x200B;設定が環境設定で無効に表示される場合があります。
+デフォルトでは、送信メールは実稼動環境とステージング環境（Proのみ）で有効になっています。 ただし、[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli)または[Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console)を使用して`enable_smtp` プロパティを設定するまで、ステータスに関係なく、**[!UICONTROL Enable outgoing emails]**&#x200B;設定が環境設定で無効に表示される場合があります。
 
-[ コマンドライン ](#enable-emails-in-the-cli)によって`enable_smtp` プロパティ値を更新すると、Cloud Consoleのこの環境の[!UICONTROL Enable outgoing emails]設定値も変更されます。
+[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli)によって`enable_smtp` プロパティ値を更新すると、Cloud Consoleのこの環境の[!UICONTROL Enable outgoing emails]設定値も変更されます。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 _環境設定_ ビューの&#x200B;**[!UICONTROL Outgoing emails]** トグルを使用して、電子メールサポートを有効または無効にします。
 
-Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
+Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
 
 >[!TIP]
 >
