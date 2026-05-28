@@ -1,86 +1,87 @@
 ---
-title: Cloud でのCommerceのプロビジョニング
-description: クラウドインフラストラクチャプロジェクトでAdobe Commerceをプロビジョニングするための、Adobeのカスタマーテクニカルアドバイザーの準備方法について説明します。
+title: Commerce on Cloudのプロビジョニング
+description: Adobe Commerce on Cloud Infrastructure プロジェクトをプロビジョニングするためのAdobe カスタマーテクニカルアドバイザーの準備方法について説明します。
 recommendations: noDisplay, catalog
 role: Admin
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 77e8c9fb-8c4a-4c98-adbc-e57871c5bdbc
+source-git-commit: e3a2c8580ad1f27ddd3dc8fc40207bce68ee1c7f
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
 
 # Commerce on Cloud プロビジョニングの前提条件
 
-それでは、クラウドインフラストラクチャー上でCommerce プロジェクトを開始して初期化しましょう。
+クラウドインフラストラクチャでのCommerce プロジェクトの開始と初期化を行います。
 
-Adobeがクラウドプロジェクト環境にCommerceをプロビジョニングする前に、次の方策を検討し、最初にAdobeアカウントチームに問い合わせるための回答を準備することをお勧めします。 次の節をチェックリストとして使用して、お客様のテクニカルアドバイザーとクラウドプロジェクトをプロビジョニングするための会話の準備に役立ててください。
+AdobeでCommerceをクラウドプロジェクト環境にプロビジョニングする前に、次の手順を検討し、最初にAdobe アカウントチームと相談するための回答を準備することをお勧めします。 次のセクションをチェックリストとして使用すると、お客様のテクニカルアドバイザーとの会話に備えてクラウドプロジェクトをプロビジョニングできます。
 
 ## ドメイン定義
 
-**質問 1**:_サイトのローンチにはどのドメインを使用しますか？_
+**質問1**: _サイトの起動に使用するドメインまたはドメインを選択してください。_
 
-ステージング環境および実稼動環境用の最上位ドメインとサブドメインを定義して、Fastly サービスと Nginx サービスの統合を準備します。 初期設定後は、Adobe Commerce サポートチケットを送信することによってのみドメインを追加できるので、ドメイン情報の準備を整えることをお勧めします。
+Pro ステージング環境と実稼動環境のトップレベルドメインとサブドメインを定義することで、Fastlyとnginx サービスの統合を準備します。 初期設定の後、Adobe Commerce サポートチケットを送信してドメインを追加できるため、ドメイン情報の準備を整えることをお勧めします。
 
-実稼働ドメインとステージングドメインの例：
+実稼動ドメインとステージングドメインの例：
 
 - `www.your-store.com`
 - `your-store.com`
 - `mcprod.your-store.com`
 - `mcstaging.your-store.com`
 
-複数または一意のドメインに関する詳細なガイダンスについては、_クラウドインフラストラクチャー上のCommerce_ ガイドの [&#x200B; 複数の web サイトまたはストアの設定 &#x200B;](../cloud-guide/store/multiple-sites.md) を参照してください。
+複数または一意のドメインに関する詳細なガイダンスについては、_Commerce on Cloud Infrastructure_ ガイドの[複数のweb サイトまたはストアの設定](../cloud-guide/store/multiple-sites.md)を参照してください。
 
-Adobe Commerce サイトで使用されているのと同じ apex およびサブドメインをリンクする既存の Fastly アカウントがある場合は、[&#x200B; 複数の Fastly アカウントと割り当てられたドメイン &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"} を参照してください。
+Adobe Commerce サイトで使用されている同じapexとサブドメインをリンクする既存のFastly アカウントがある場合は、[複数のFastly アカウントと割り当て済みドメイン ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly#multiple-fastly-accounts-and-assigned-domains){target="_blank"}を参照してください。
 
 ## トランザクションメールドメイン
 
-**質問 2**:_トランザクションメールにどのドメインを使用する予定ですか？_
+**質問2**: _トランザクションメールに使用するドメインまたはドメインはどれですか？_
 
-クラウド上のAdobe Commerceでは、送信メール認証サービスと評価モニタリングサービスを提供する SendGrid Simple Mail Transfer Protocol （SMTP）プロキシサービスを使用しています。 SendGrid は、トランザクションメールをユーザーに代わって送信するので、ドメイン情報が必要です。
+Adobe Commerce on Cloudでは、送信メール認証およびレピュテーション監視サービスを提供するSendGrid Simple Mail Transfer Protocol （SMTP）プロキシサービスを使用しています。 SendGridはあなたの代わりにトランザクションメールを送信するので、ドメイン情報が必要です。
 
 SendGrid ドメインの例：`example@your-store.com`
 
-トランザクションメールとドメインの設定について詳しくは、_Commerce on Cloud Infrastructure_ ガイドの [SendGrid メールサービス &#x200B;](../cloud-guide/project/sendgrid.md) を参照してください。
+トランザクションメールとドメイン設定に関する詳細なガイダンスについては、_Commerce on Cloud Infrastructure_ ガイドの[SendGrid メールサービス ](../cloud-guide/project/sendgrid.md)を参照してください。
 
-## ストレージ割り当て
+## ストレージ配分
 
-**質問 3**:_ファイルのアップロードとデータベースに割り当てる契約済みストレージの容量を計画していますか？_
+**質問3**: _契約したストレージのうち、ファイルのアップロードとデータベースに割り当てる予定の容量は？_
 
-クラウドインフラストラクチャー上のAdobe Commerceでは、ファイル構造、検索インデックス作成、データベースにストレージを使用します。 必要に応じて、パーティションごとに 10 GB から始めてストレージを細分できます。
+Adobe Commerce on cloud infrastructureでは、ファイル構造、検索インデックス、データベースにストレージが使用されます。 必要に応じて、各パーティションに対して10 GBから始めてストレージを再分割できます。
 
-クラウドプロジェクト用に契約したストレージ量は、各環境の合計ストレージ量を表します。 例えば、50 GB のストレージスペースを購入した場合、各環境に 50 GB のストレージがあります。 実稼動環境、ステージング環境、各統合環境用にそれぞれ 50 GB の個別のストレージがあります。
+クラウドプロジェクト用に契約したストレージの量は、各環境の合計ストレージを表します。 例えば、50 GBのストレージ容量を購入した場合、各環境に50 GBのストレージが割り当てられます。 実稼動環境、ステージング環境、および各統合環境には、それぞれ50 GBの個別のストレージがあります。
 
-契約済みストレージはいつでも増やすことができます。 実稼動環境とステージング環境の場合は、Adobe Commerce サポートチケットを送信して、ディスク容量の割り当てを変更する必要があります。 実稼動環境とステージング環境のサイズの増加は、特定の間隔でのみ発生します。 現在のディスク容量の使用状況に応じて、サポートチームはディスク容量の割り当てを最小 10 GB 増やすことをお勧めすることがあります。 一度割り当てると、ステージング環境と実稼動環境のストレージの増加を元に戻すこ **はできません**。
+契約ストレージはいつでも増やすことができます。 Pro実稼動環境およびステージング環境の場合、ディスク領域の割り当てを変更するには、Adobe Commerce サポートチケットを送信する必要があります。 Proの実稼動環境とステージング環境のサイズの増加は、特定の間隔でのみ発生する可能性があります。 現在のディスク容量の使用状況に応じて、サポートチームはディスク容量の割り当てを少なくとも10 GB増やすことを推奨する場合があります。 割り当てが完了すると、Pro ステージングおよび実稼動環境のストレージの増加を&#x200B;**not**&#x200B;に戻すことができます。
 
-クラウドインフラストラクチャー上の _Commerce[&#128279;](../cloud-guide/storage/manage-disk-space.md) ガイドの  ディスク容量の管理_ を参照してください。
+_Commerce on Cloud Infrastructure_ ガイドの「[ ディスク領域の管理](../cloud-guide/storage/manage-disk-space.md)」を参照してください。
 
-## クラウドサービス地域
+## クラウドサービスリージョン
 
-**質問 4**:_どのクラウドサービス地域が近くに最も便利ですか？_
+**質問4**: _お近くにお住まいの方が最も便利なクラウドサービスの地域はどれですか？_
 
-Adobe Commerce on cloud infrastructure Pro プロジェクトの Infrastructure as a Service （IaaS）基盤として、Amazon Web Services（AWS）またはMicrosoft Azure のいずれかを選択します。 各サービスプロバイダーは複数の地域で動作し、複数のアベイラビリティーゾーンを提供します。 場所に適した地域を選択し、待ち時間やコストの増加の可能性を減らします。
+Amazon Web Services（AWS）またはMicrosoft Azureを、Adobe Commerce on cloud infrastructure Pro プロジェクトのInfrastructure as a Service （IaaS）基盤として選択します。 各サービスプロバイダーは、複数の地域で事業を展開し、複数の可用性ゾーンを提供しています。 現在地に便利な地域を選択し、待ち時間が発生する可能性を減らし、コストを増大させます。
 
-[Adobe Commerce クラウド地域のマップ &#x200B;](../cloud-guide/overview.md) を参照してください。
+Adobe Commerce クラウドリージョンのマップ [を参照](../cloud-guide/overview.md)。
 
 ## 接続サービス
 
-**質問 5**:_PrivateLink サービスは必要ですか？ その場合、PrivateLink 接続はどの地域にありますか？_
+**質問5**: _PrivateLink サービスが必要ですか？ その場合、PrivateLink接続はどの地域にありますか？_
 
-クラウドインフラストラクチャー上のAdobe Commerceは、AWS PrivateLink または Azure Private Link サービスとの統合をサポートします。 このサービスはオプションですが、PrivateLink は、クラウドインフラストラクチャ環境間で、外部システムでホストされるサービスやアプリケーションとの安全なプライベート通信を確立するために使用されます。
+Adobe Commerce クラウドインフラストラクチャでは、AWS PrivateLinkまたはAzure Private Link サービスとの統合をサポートしています。 このサービスはオプションですが、PrivateLinkは、外部システムでホストされているサービスとアプリケーションとのクラウドインフラストラクチャ環境間の安全でプライベートな通信を確立するために使用されます。
 
-Adobe Commerce インスタンスが同じリージョン内でアクセスできるように、クラウドサービスの戦略（AWSまたは Azure）を検討することが重要です。 地域ごとのアクセシビリティについて詳しくは、_クラウドインフラストラクチャー上のCommerce_ ガイドの [PrivateLink サービス &#x200B;](../cloud-guide/development/privatelink-service.md) を参照してください。
+Adobe Commerce インスタンスに同じリージョン内からアクセスできるように、クラウドサービス戦略（AWSまたはAzure）を検討することが重要です。 地域のアクセシビリティについて詳しくは、_Commerce on Cloud Infrastructure_ ガイドの[PrivateLink サービス ](../cloud-guide/development/privatelink-service.md)を参照してください。
 
-## ターゲットサイトの起動
+## ターゲットサイトの立ち上げ
 
-**質問 6**:_ターゲットローンチ予定日を教えてください。_
+**質問6**: _目標のローンチ予定日を教えてください。_
 
-サイトを起動するには、サイトの起動を確実に成功させるために、反復的な設定とテストが必要です。 目標日を設定すると、ユーザーとAdobeアカウントチームが、最終的なローンチ前のアクティビティ（最終手順を調整するための呼び出しを含む）の準備を整えるのに役立ちます。
+サイトを立ち上げるには、サイトの立ち上げを成功させるために、反復的な設定とテストが必要です。 目標日を設定することで、Adobeアカウントチームは、最終ステップを調整するための呼び出しを含む、ローンチ前の最終的なアクティビティに備えることができます。
 
-[2&rbrace; クラウドインフラストラクチャー上のCommerce](../cloud-guide/launch/overview.md) ガイドの &lbrace;Launch サイトの概要 _を参照して、プロセス全体を確認し、Launch チェックリストのコピーをダウンロードします。_
+完全なプロセスを確認し、Launch チェックリストのコピーをダウンロードするには、_Commerce on Cloud Infrastructure_ ガイドの[Launch サイトの概要](../cloud-guide/launch/overview.md)を参照してください。
 
 >[!TIP]
 >
-> クラウドポータルを素早く確認し、新しいクラウドプロジェクトにアクセスします。
+> Cloud Portalを見て、新しいクラウドプロジェクトにアクセスします。
 >
->**次の手順**:[Commerceのオンボーディング &#x200B;](onboarding.md)
+>**次の手順**: [Commerceへのオンボーディング ](onboarding.md)
