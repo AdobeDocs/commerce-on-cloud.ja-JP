@@ -27,7 +27,7 @@ ht-degree: 0%
 
 _環境設定_ ビューの&#x200B;**[!UICONTROL Outgoing emails]** トグルを使用して、電子メールサポートを有効または無効にします。
 
-Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
+Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
 
 >[!TIP]
 >
