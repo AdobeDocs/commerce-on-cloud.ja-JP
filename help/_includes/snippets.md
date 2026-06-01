@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020年6月5日より前にプロビジョニングされたプロジェクトには、複数の小さい統合環境がありました。 テストと開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストしてください。 詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の[Integration Environment リクエスト ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)の記事を参照してください。
+>2020年6月5日より前にプロビジョニングされたプロジェクトには、複数の小さい統合環境がありました。 テストと開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストしてください。 詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の[Integration Environment リクエスト &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html)の記事を参照してください。
 
 ## 結合オプション {#merge-options}
 
@@ -41,13 +41,13 @@ ht-degree: 0%
 >一部の&#x200B;**Pro プロジェクト**&#x200B;では、`routes.yaml` ファイルのルート設定と`.magento.app.yaml` ファイルのcron設定を更新するために、Adobe サポートの支援が必要です。 Adobeでは、まず統合環境でYAML設定の変更をすべて行って検証し、その後ステージング環境にデプロイすることをお勧めします。
 >
 >
->変更が再デプロイ後にステージングサイトに反映されず、ログに関連するエラーメッセージが表示されない場合は、**Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を**&#x200B;送信する必要があります。[ チケットで、試した設定の変更を明確に説明し、更新されたYAML設定ファイルをチケットに添付します。
+>変更が再デプロイ後にステージングサイトに反映されず、ログに関連するエラーメッセージが表示されない場合は、**Adobe Commerce サポートチケット [&#128279;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を**&#x200B;送信する必要があります。 チケットで、試した設定の変更を明確に説明し、更新されたYAML設定ファイルをチケットに添付します。
 
 ## プロサービスのサポート {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Pro プロジェクトの場合、`Staging`および`Production`環境でのみ[ サービス ](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html)をインストールまたは更新するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
+- Pro プロジェクトの場合、`Staging`および`Production`環境でのみ[&#x200B; サービス &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html)をインストールまたは更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
 
 - 必要なサービス変更を示し、更新された`.magento.app.yaml`および`services.yaml` ファイルを含め、チケットにPHP バージョンを明記します。 PHPのバージョン、拡張機能、環境設定に対するセルフサービスの変更については、_アプリケーション設定_&#x200B;の[PHP設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html)を参照してください。
 
@@ -78,9 +78,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Pro ステージング環境および実稼動環境では、チケット内の日付、時刻、タイムゾーンを記録したバックアップを取得するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
+>Pro ステージング環境および実稼動環境では、チケット内の日付、時刻、タイムゾーンを記録したバックアップを取得するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
 >
->Adobeは、自動バックアップから任意の環境を&#x200B;**not**&#x200B;復元します。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[ ステージングまたは実稼動からのDB スナップショットの復元](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html)を参照してください。
+>Adobeは、自動バックアップから任意の環境を&#x200B;**not**&#x200B;復元します。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[&#x200B; ステージングまたは実稼動からのDB スナップショットの復元](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html)を参照してください。
 
 ## 再展開の警告 {#redeploy-warning}
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->次のルート設定例では、ルートテンプレートとプレースホルダーを使用しています。 `{default}` プレースホルダーは、サイトに設定された既定のドメインを表します。 プロジェクトに複数のドメインがある場合は、`{all}` プレースホルダーを使用して、デフォルトドメインとすべてのエイリアスのルーティングを設定します。 [ ルートの設定](/help/cloud-guide/routes/routes-yaml.md)を参照してください。
+>次のルート設定例では、ルートテンプレートとプレースホルダーを使用しています。 `{default}` プレースホルダーは、サイトに設定された既定のドメインを表します。 プロジェクトに複数のドメインがある場合は、`{all}` プレースホルダーを使用して、デフォルトドメインとすべてのエイリアスのルーティングを設定します。 [&#x200B; ルートの設定](/help/cloud-guide/routes/routes-yaml.md)を参照してください。
 
 ## SCD タイミング {#scd-timing-warning}
 
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!DNL ECE-Tools] 2002.1.0以降では、シナリオベースのデプロイメント機能を使用して、Adobe Commerce on cloud infrastructure プロジェクトのビルド、デプロイ、デプロイ後のプロセスをカスタマイズできます。 [ シナリオベースのデプロイメント ](/help/cloud-guide/deploy/scenario-based.md)を参照してください。
+>[!DNL ECE-Tools] 2002.1.0以降では、シナリオベースのデプロイメント機能を使用して、Adobe Commerce on cloud infrastructure プロジェクトのビルド、デプロイ、デプロイ後のプロセスをカスタマイズできます。 [&#x200B; シナリオベースのデプロイメント &#x200B;](/help/cloud-guide/deploy/scenario-based.md)を参照してください。
 
 ## 2番目のステージ {#second-staging}
 
@@ -118,25 +118,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信して、Pro実稼動環境とステージング環境のサービス構成を変更します。
+>[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信して、Pro実稼動環境とステージング環境のサービス構成を変更します。
 
 ## サービスの変更 {#service-change-tip}
 
 >[!TIP]
 >
->最初のサービス設定の後、`services.yaml`および`.magento.app.yaml`設定ファイルを更新することで、インストール済みサービスのソフトウェアバージョンを変更できます。 サービスのアップグレードまたはダウングレードに関するガイダンスについては、[ サービスバージョンの変更](/help/cloud-guide/services/services-yaml.md#change-service-version)を参照してください。
+>最初のサービス設定の後、`services.yaml`および`.magento.app.yaml`設定ファイルを更新することで、インストール済みサービスのソフトウェアバージョンを変更できます。 サービスのアップグレードまたはダウングレードに関するガイダンスについては、[&#x200B; サービスバージョンの変更](/help/cloud-guide/services/services-yaml.md#change-service-version)を参照してください。
 
 ## 展開のヒントをスタック {#stuck-deployment-tip}
 
 >[!TIP]
 >
->デプロイメントが停止している場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)を参照してください。
+>デプロイメントが停止している場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html)を参照してください。
 
 ## ECE-Toolsへのアップデート {#ece-tools-package}
 
 >[!NOTE]
 >
->`ece-tools` パッケージを含まないクラウドインフラストラクチャでAdobe Commerceのバージョンを使用する場合は、非推奨パッケージを削除するために、クラウドプロジェクトに[1回アップグレード ](/help/cloud-guide/dev-tools/install-package.md)を実行する必要があります。 現在`ece-tools` パッケージを使用しており、それを更新する必要がある場合は、[ECE-Tools パッケージの更新](/help/cloud-guide/dev-tools/update-package.md)を参照してください。
+>`ece-tools` パッケージを含まないクラウドインフラストラクチャでAdobe Commerceのバージョンを使用する場合は、非推奨パッケージを削除するために、クラウドプロジェクトに[1回アップグレード &#x200B;](/help/cloud-guide/dev-tools/install-package.md)を実行する必要があります。 現在`ece-tools` パッケージを使用しており、それを更新する必要がある場合は、[ECE-Tools パッケージの更新](/help/cloud-guide/dev-tools/update-package.md)を参照してください。
 
 ## アップグレードのヒント {#upgrade-tip}
 
@@ -154,6 +154,6 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->カスタム VCL スニペットを手動でアップロードする代わりに、環境内の`$MAGENTO_CLOUD_APP_DIR/var/vcl_snippets_custom` ディレクトリにスニペットを追加できます。 このディレクトリのスニペットは、Commerce管理者で&#x200B;_VCLをFastly_&#x200B;にアップロードをクリックすると、自動的にアップロードされます。 Magento 2用Fastly CDN モジュールの[自動カスタム VCL スニペットのデプロイメント ](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md#automated-custom-vcl-snippets-deployment)を参照してください。
+>カスタム VCL スニペットを手動でアップロードする代わりに、環境内の`$MAGENTO_CLOUD_APP_DIR/var/vcl_snippets_custom` ディレクトリにスニペットを追加できます。 このディレクトリのスニペットは、Commerce管理者で&#x200B;_VCLをFastly_&#x200B;にアップロードをクリックすると、自動的にアップロードされます。 Magento 2用Fastly CDN モジュールの[自動カスタム VCL スニペットのデプロイメント &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/CUSTOM-VCL-SNIPPETS.md#automated-custom-vcl-snippets-deployment)を参照してください。
 
 <!-- Fastly-related snippets end -->
