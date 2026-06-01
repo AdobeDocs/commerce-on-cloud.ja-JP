@@ -2,12 +2,13 @@
 cloud: Experience Cloud
 solution-title: Commerce
 user-guide-title: クラウド上の Commerce に関するガイド
+breadcrumb-title: Commerce on Cloud
 user-guide-description: クラウドインフラストラクチャー上で Adobe Commerce アプリケーションを管理する方法について説明します。
 product: magento
 feature: Cloud
-source-git-commit: 6f70f167bbd29c6a83f4feaf14e5b642cd39e87f
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '392'
 ht-degree: 8%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 8%
    + [プロワークフロー](architecture/pro-develop-deploy-workflow.md)
    + [拡張されたアーキテクチャ](architecture/scaled-architecture.md)
    + [自動スケーリング](architecture/autoscaling.md)
-+ [基本を学ぶ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=ja)
++ [基本を学ぶ](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + リリースノート {#release-notes}
    + [Cloud tools suite](release-notes/cloud-tools-suite.md)
    + [ECE-Tools パッケージ](release-notes/ece-tools-package.md)
@@ -35,7 +36,7 @@ ht-degree: 8%
    + [クラウドコンポーネント](release-notes/cloud-components.md)
    + [クラウドパッケージ](release-notes/cloud-packages.md)
    + [後方互換性のない変更](release-notes/backward-incompatible-changes.md)
-   + {hide-from-toc}[&#x200B; リリースノートのアーカイブ &#x200B;](release-notes/cloud-release-archive.md)
+   + {hide-from-toc}[ リリースノートのアーカイブ ](release-notes/cloud-release-archive.md)
 + クラウドプロジェクト {#project}
    + [プロジェクト概要](project/overview.md)
    + [プロジェクト構造](project/file-structure.md)
