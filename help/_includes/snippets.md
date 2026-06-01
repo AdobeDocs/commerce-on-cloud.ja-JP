@@ -1,7 +1,7 @@
 ---
-source-git-commit: c8effbdb82060e2a2cbcbdef577fed7249a76799
+source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Elasticsearch 7.11以降は、Adobe Commerce オンクラウドインフラストラクチャではサポートされていません。 Adobe Commerce バージョン 2.3.7-p3、2.4.3-p2、および2.4.4以降では、OpenSearch サービスがサポートされています。 オンプレミスのインストールは、引き続きElasticsearchをサポートします。
+>Elasticsearch 7以降は、Adobe Commerce オンクラウドインフラストラクチャではサポートされていません。 Adobe Commerce バージョン 2.3.7-p3、2.4.3-p2、および2.4.4以降では、OpenSearch サービスがサポートされています。
 
 ## 拡張統合 {#enhanced-integration-envs}
 
