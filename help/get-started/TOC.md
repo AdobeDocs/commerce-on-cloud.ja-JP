@@ -18,7 +18,7 @@ ht-degree: 0%
 + [Commerce入門](overview.md)
 + [Commerce on Cloudのプロビジョニング](new-project.md)
 + [オンボーディング](onboarding.md)
-+ [ [!DNL Cloud Console]にログイン](cloud-console.md)
++ [&#x200B; [!DNL Cloud Console]にログイン](cloud-console.md)
 + [ストアフロントへのアクセス](access-storefront.md)
 + [開発のための準備](prepare-workspace.md)
 + [クラウドインフラストラクチャガイドに戻る](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
