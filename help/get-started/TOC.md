@@ -21,4 +21,4 @@ ht-degree: 0%
 + [&#x200B; [!DNL Cloud Console]にログイン](cloud-console.md)
 + [ストアフロントへのアクセス](access-storefront.md)
 + [開発のための準備](prepare-workspace.md)
-+ [クラウドインフラストラクチャガイドに戻る](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html)
++ [クラウドインフラストラクチャガイドに戻る](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ja)
