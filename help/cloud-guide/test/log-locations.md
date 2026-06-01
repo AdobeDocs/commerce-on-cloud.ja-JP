@@ -1,48 +1,48 @@
 ---
 title: ログの表示と管理
-description: クラウドインフラストラクチャで使用できるログファイルのタイプと、それらのログファイルの場所について説明します。
+description: クラウドインフラストラクチャで使用可能なログファイルの種類と、ログファイルを検索する場所について説明します。
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
 source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # ログの表示と管理
 
-クラウドインフラストラクチャプロジェクトのAdobe Commerceのログは、[&#x200B; ビルドとデプロイ &#x200B;](../application/hooks-property.md)、クラウドサービス、Adobe Commerce アプリケーションに関連する問題のトラブルシューティングに役立ちます。
+クラウドインフラストラクチャプロジェクト上のAdobe Commerceのログは、[&#x200B; フックのビルドとデプロイ &#x200B;](../application/hooks-property.md)、クラウドサービス、Adobe Commerce アプリケーションに関する問題のトラブルシューティングに役立ちます。
 
-ログは、ファイル・システム、[!DNL Cloud Console]、`magento-cloud` CLI から表示できます。
+ファイルシステム、[!DNL Cloud Console]および`magento-cloud` CLIからログを表示できます。
 
-- **ファイルシステム** - `/var/log` システムディレクトリには、すべての環境のログが含まれます。 `var/log/` ディレクトリには、特定の環境に固有のアプリ固有のログが含まれています。 これらのディレクトリは、クラスター内のノード間で共有されません。 実稼動環境およびステージング環境では、各ノードのログを確認する必要があります。
+- **ファイルシステム** - `/var/log` システムディレクトリには、すべての環境のログが含まれています。 `var/log/` ディレクトリには、特定の環境に固有のアプリ固有のログが含まれています。 これらのディレクトリは、クラスター内のノード間で共有されません。 Pro実稼動環境とステージング環境では、各ノードのログを確認する必要があります。
 
-- **[!DNL Cloud Console]** – 環境 _メッセージ_ リストで、ビルド、デプロイおよびデプロイ後のログ情報を確認できます。
+- **[!DNL Cloud Console]** – 環境&#x200B;_メッセージ_ リストで、ビルド、デプロイ、デプロイ後のログ情報を確認できます。
 
-- **Cloud CLI** - `magento-cloud log` コマンドを使用してローカル環境ログを、または `magento-cloud ssh` コマンドを使用してリモート環境ログを表示できます。
+- **Cloud CLI**- `magento-cloud log` コマンドを使用してローカル環境ログを表示するか、`magento-cloud ssh` コマンドを使用してリモート環境ログを表示できます。
 
 ## ログの場所
 
-システムログは、次の場所に保存されています。
+システムログは、次の場所に保存されます。
 
 - 統合：`/var/log/<log-name>.log`
-- Pro ステージング：`/var/log/platform/<project-ID>_stg/<log-name>.log`
-- 試作品：`/var/log/platform/<project-ID>/<log-name>.log`
+- プロステージング：`/var/log/platform/<project-ID>_stg/<log-name>.log`
+- プロプロダクション：`/var/log/platform/<project-ID>/<log-name>.log`
 
-`<project-ID>` の値は、プロジェクトと、環境がステージングか実稼動かによって異なります。 例えば、プロジェクト ID が `yw1unoukjcawe` の場合、ステージング環境のユーザーは `yw1unoukjcawe_stg`、実稼動環境のユーザーは `yw1unoukjcawe` となります。
+`<project-ID>`の値は、プロジェクトと、環境がステージング環境か実稼動環境かによって異なります。 例えば、プロジェクト IDが`yw1unoukjcawe`の場合、ステージング環境ユーザーは`yw1unoukjcawe_stg`、実稼動環境ユーザーは`yw1unoukjcawe`です。
 
-この例を使用する場合、デプロイログは `/var/log/platform/yw1unoukjcawe_stg/deploy.log` です。
+この例を使用すると、デプロイログは次のとおりです。`/var/log/platform/yw1unoukjcawe_stg/deploy.log`
 
 ### 特定のエラーログレコードの検索
 
-特定のログレコード番号（`475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9` など）でエラーが発生した場合は、次の方法でCommerce アプリケーションサーバーのリモート環境ログにクエリを実行することで、レコードを見つけることができます。
+特定のログレコード番号（`475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9`など）でエラーが発生した場合は、次の方法を使用してCommerce application server remote environment logsをクエリすることで、レコードを見つけることができます。
 
 >[!NOTE]
 >
->Secure Shell （SSH）を使用してCommerce アプリケーションのリモート環境ログにアクセスする手順については、「[&#x200B; リモート環境への安全な接続 &#x200B;](../development/secure-connections.md)」を参照してください。
+>Secure Shell （SSH）を使用してCommerce アプリケーションのリモート環境ログにアクセスする手順については、[&#x200B; リモート環境へのセキュアな接続](../development/secure-connections.md)を参照してください。
 
-#### 方法 1:grep を使用して検索
+#### 方法1:grepを使用して検索する
 
 ```bash
 # Search for the specific error record in all log files
@@ -52,28 +52,28 @@ magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da
 magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
 ```
 
-#### 方法 2：アーカイブされたログを検索する
+#### 方法2：アーカイブされたログ内の検索
 
-エラーが過去に発生した場合は、アーカイブ・ログ・ファイルを確認します。
+過去にエラーが発生した場合は、アーカイブされたログファイルを確認します。
 
 ```bash
 # Search in compressed log files
 magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
 ```
 
-#### 方法 3:New Relic（Pro 環境）の使用
+#### 方法3:New Relicを使用する（Pro環境）
 
-実稼動環境およびステージング環境の場合は、New Relic ログを使用して、特定のエラーレコードを検索します。 詳しくは、[New Relic ログ管理 &#x200B;](../monitor/log-management.md) を参照してください。
+Pro実稼動環境およびステージング環境では、New Relic ログを使用して特定のエラーレコードを検索します。 詳しくは、[New Relic ログ管理](../monitor/log-management.md)を参照してください。
 
-### リモート環境ログの表示
+### リモート環境のログを表示する
 
-ほとんどのログには、リモート環境で発生するイベントが含まれます。 Pro の場合、複数のノードがあり、各ノードには一意のログがあります。 すべてのホストのリストを表示するには、以下を使用します。
+ほとんどのログには、リモート環境で発生するイベントが含まれています。 Proの場合、複数のノードがあり、各ノードには一意のログがあります。 すべてのホストのリストを表示するには、次を使用します。
 
 ```bash
 magento-cloud ssh -p <project-ID> -e <environment-ID> --all
 ```
 
-応答の例：
+回答サンプル：
 
 ```
 1.ent-project-environment-id@ssh.region.magento.cloud
@@ -87,7 +87,7 @@ magento-cloud ssh -p <project-ID> -e <environment-ID> --all
 magento-cloud ssh -e <environment-ID> "ls var/log"
 ```
 
-Pro の例：
+Proの例：
 
 ```bash
 ssh 1.ent-project-environment-id@ssh.region.magento.cloud "ls var/log | grep error"
@@ -99,7 +99,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "ls var/log | grep err
 magento-cloud ssh -e <environment-ID> "cat var/log/cron.log"
 ```
 
-Pro の例：
+Proの例：
 
 ```bash
 ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
@@ -107,24 +107,24 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->Pro ステージング環境および Pro 実稼動環境では、固定ファイル名のログファイルに対して、自動ログローテーション、圧縮、削除が有効になります。 各ログ ファイル タイプには、回転パターンと有効期間があります。
->環境のログのローテーションと圧縮ログの存続期間について詳しくは、`/etc/logrotate.conf` と `/etc/logrotate.d/<various>` を参照してください。
->ステージング環境および実稼動環境が Pro の場合、ログローテーション設定の変更を依頼するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+>Pro ステージング環境およびPro実稼動環境では、固定ファイル名のログファイルに対して、自動ログのローテーション、圧縮、削除が有効になります。 各ログファイルタイプには、回転パターンとライフタイムがあります。
+>環境のログのローテーションと圧縮されたログの有効期間の詳細については、`/etc/logrotate.conf`および`/etc/logrotate.d/<various>`を参照してください。
+>Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
 
 >[!TIP]
 >
->ログのローテーションは、Pro 統合環境では設定できません。
->Pro 統合の場合、カスタムソリューション/スクリプトを実装し、必要に応じてスクリプトを実行するように [cron を設定 &#x200B;](../application/crons-property.md) する必要があります。
+>ログのローテーションは、Pro統合環境では設定できません。
+>Pro統合の場合は、カスタムソリューション/スクリプトを実装し、必要に応じてスクリプトを実行するように[cron](../application/crons-property.md)を設定する必要があります。
 
 >[!NOTE]
 >
->スタータープロジェクト環境にはログローテーションがありません。
+>スタータープロジェクト環境には、ログのローテーションがありません。
 
-## ログの作成とデプロイ
+## ログのビルドとデプロイ
 
-環境に変更をプッシュした後、`var/log/cloud.log` ファイルの各フックからログを確認できます。 ログには、各フックの開始メッセージと停止メッセージが含まれます。 次の例では、メッセージは「`Starting post-deploy.`」と「`Post-deploy is complete.`」です
+環境に変更をプッシュした後、`var/log/cloud.log` ファイル内の各フックからのログ記録を確認できます。 ログには、各フックの開始メッセージと停止メッセージが含まれます。 次の例では、メッセージは「`Starting post-deploy.`」および「`Post-deploy is complete.`」です
 
-特定のデプロイメントのログエントリのタイムスタンプを確認し、ログを確認および特定します。 次に、トラブルシューティングに使用できるログ出力の圧縮例を示します。
+ログエントリのタイムスタンプを確認し、特定のデプロイメントのログを確認して見つけます。 次に、トラブルシューティングに使用できるログ出力の例を示します。
 
 ```
 Re-deploying environment project-integration-ID
@@ -143,33 +143,33 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->クラウドを設定する際に、ビルドおよびデプロイアクション用の [&#x200B; ログベースのSlackおよびメール通知 &#x200B;](../environment/set-up-notifications.md) を設定できます。
+>Cloud環境を設定する際に、ビルドとデプロイのアクション用に[&#x200B; ログベースのSlackとメール通知](../environment/set-up-notifications.md)を設定できます。
 
-次のログは、すべてのクラウドプロジェクトで共通の場所を持ちます。
+次のログは、すべてのCloud プロジェクトに共通の場所を持ちます。
 
-- **配置ログ**: `var/log/cloud.log`
+- **デプロイメントログ**: `var/log/cloud.log`
 - **前回のデプロイメントエラーログ**: `var/log/cloud.error.log`
 - **デバッグログ**: `var/log/debug.log`
 - **例外ログ**: `var/log/exception.log`
 - **システム ログ**: `var/log/system.log`
 - **サポートログ**: `var/log/support_report.log`
-- **報告書**: `var/report/`
+- **レポート**: `var/report/`
 
-`cloud.log` ファイルには、デプロイメントプロセスの各ステージからのフィードバックが含まれていますが、デプロイメントフックによって作成されるログは、環境ごとに一意です。 環境固有のデプロイログは、次のディレクトリにあります。
+`cloud.log` ファイルには、デプロイメントプロセスの各段階からのフィードバックが含まれていますが、デプロイメントフックによって作成されたログは、各環境に固有です。 環境固有のデプロイログは、次のディレクトリにあります。
 
-- **Starter と Pro の統合**: `/var/log/deploy.log`
+- **スターターとプロの統合**: `/var/log/deploy.log`
 - **Pro ステージング**: `/var/log/platform/<project-ID>_stg/deploy.log`
-- **Pro 実稼働**: `/var/log/platform/<project-ID>/deploy.log`
+- **Pro実稼動**: `/var/log/platform/<project-ID>/deploy.log`
 
-### ログをデプロイ
+### デプロイ ログ
 
-各デプロイメントのログは、特定の `deploy.log` ファイルに連結されます。 次の例では、ターミナル内の現在の環境のデプロイログを出力します。
+各デプロイメントのログは、特定の`deploy.log` ファイルに連結されます。 次の例では、現在の環境のデプロイログをターミナルに出力します。
 
 ```bash
 magento-cloud log -e <environment-ID> deploy
 ```
 
-応答の例：
+回答サンプル：
 
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
@@ -185,15 +185,15 @@ Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/
 
 ### エラーログ
 
-デプロイメントプロセス中に生成されたエラーメッセージと警告メッセージは、`var/log/cloud.log` ファイルと `var/log/cloud.error.log` ファイルの両方に書き込まれます。 Cloud エラーログファイルには、最新のデプロイメントのエラーと警告のみが含まれます。 空のファイルは、エラーのないデプロイメントが成功したことを示します。
+デプロイメントプロセス中に生成されたエラーと警告メッセージは、`var/log/cloud.log`と`var/log/cloud.error.log` ファイルの両方に書き込まれます。 クラウドエラーログファイルには、最新のデプロイメントからのエラーと警告のみが含まれます。 空のファイルは、エラーのないデプロイメントが成功したことを示します。
 
-[Cloud CLI SSH](#view-remote-environment-logs) を使用してログファイルを表示したり、ECE-Tools を使用してエラーと提案を表示したりできます。
+[Cloud CLI SSH](#view-remote-environment-logs)を使用してログファイルを表示するか、ECE-Toolsを使用してエラーを表示して候補を表示できます。
 
 ```bash
 magento-cloud ssh -e <environment-ID> "./vendor/bin/ece-tools error:show"
 ```
 
-応答の例：
+回答サンプル：
 
 ```
 errorCode: 1001
@@ -220,72 +220,72 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と推奨されるアクションが含まれています。 [ECE-Tools のエラーメッセージのリファレンス &#x200B;](../dev-tools/error-reference.md) を使用して、エラーコードを検索し、詳しいガイダンスを得ます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja) を参照してください。
+ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja)を参照してください。
 
 ## アプリケーションログ
 
-デプロイログと同様、アプリケーションログは環境ごとに一意です。
+デプロイログと同様に、アプリケーションログは各環境に対して一意です。
 
-| ログファイル | スターターと Pro の統合 | 説明 |
+| ログファイル | スターターとプロの統合 | 説明 |
 | ------------------- | --------------------------- | ------------------------------------------------- |
-| **ログをデプロイ** | `/var/log/deploy.log` | [&#x200B; デプロイフック &#x200B;](../application/hooks-property.md) からのアクティビティ。 |
-| **デプロイ後のログ** | `/var/log/post_deploy.log` | [&#x200B; デプロイ後フック &#x200B;](../application/hooks-property.md) からのアクティビティ。 |
-| **Cron ログ** | `/var/log/cron.log` | Cron ジョブからの出力。 |
-| **Nginx アクセス ログ** | `/var/log/access.log` | Nginx の起動時に、ディレクトリの欠落や除外されたファイル タイプの HTTP エラーが発生します。 |
-| **Nginx エラーログ** | `/var/log/error.log` | Nginx に関連する構成エラーのデバッグに役立つスタートアップ メッセージ。 |
-| **PHP アクセスログ** | `/var/log/php.access.log` | PHP サービスへのリクエスト。 |
+| **ログのデプロイ** | `/var/log/deploy.log` | [&#x200B; デプロイ フック &#x200B;](../application/hooks-property.md)のアクティビティ。 |
+| **デプロイ後のログ** | `/var/log/post_deploy.log` | [&#x200B; デプロイ後のフック &#x200B;](../application/hooks-property.md)のアクティビティ。 |
+| **Cron ログ** | `/var/log/cron.log` | cron ジョブからの出力。 |
+| **Nginx アクセス ログ** | `/var/log/access.log` | Nginxの開始時に、見つからないディレクトリと除外されたファイルタイプに対するHTTP エラーが発生します。 |
+| **Nginx エラーログ** | `/var/log/error.log` | Nginxに関連する設定エラーのデバッグに役立つ起動メッセージ。 |
+| **PHP アクセス ログ** | `/var/log/php.access.log` | PHP サービスへのリクエスト。 |
 | **PHP FPM ログ** | `/var/log/app.log` | |
 
-ステージング環境および実稼動環境の場合、デプロイ、ポストデプロイ、Cron ログは、クラスターの最初のノードでのみ使用できます。
+Pro ステージング環境および実稼動環境の場合、デプロイ、ポストデプロイ、およびCron ログは、クラスター内の最初のノードでのみ使用できます。
 
-| ログファイル | Pro ステージング | 実稼動環境に対応 |
+| ログファイル | プロステージング | プロ制作 |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **ログをデプロイ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/deploy.log` |
+| **ログのデプロイ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/deploy.log` |
 | **デプロイ後のログ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/post_deploy.log` |
 | **Cron ログ** | 最初のノードのみ：<br>`/var/log/platform/<project-ID>_stg*/cron.log` | 最初のノードのみ：<br>`/var/log/platform/<project-ID>/cron.log` |
 | **Nginx アクセス ログ** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
 | **Nginx エラーログ** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **PHP アクセスログ** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **PHP アクセス ログ** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
 | **PHP FPM ログ** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
-### アーカイブしたログファイル
+### アーカイブされたログファイル
 
-アプリケーションログは 1 日に 1 回の頻度で圧縮およびアーカイブされ **デフォルトで** 30 日間保持されます（Pro ステージングクラスターと実稼動クラスターの場合）。また、ログのローテーションは、すべての統合/スターター環境で使用できるわけではありません。 圧縮ログには、`Number of Days Ago + 1` に対応する一意の ID を使用して名前が付けられます。 例えば、Pro 実稼動環境では、過去 21 日間の PHP アクセスログが次のように保存され、名前が付けられます。
+アプリケーションログは1日に1回圧縮およびアーカイブされ、デフォルトで&#x200B;**30日間**&#x200B;保持されます（Pro ステージングおよび実稼動クラスターの場合）。ログのローテーションは、すべての統合/スターター環境で利用できません。 圧縮されたログには、`Number of Days Ago + 1`に対応する一意のIDを使用して名前が付けられます。 例えば、Proの本番環境では、過去21日間のPHP アクセスログが保存され、次のように名前が付けられます。
 
 ```
 /var/log/platform/<project-ID>/php.access.log.22.gz
 ```
 
-アーカイブされたログ・ファイルは、圧縮前に元のファイルがあったディレクトリに常に保存されます。
+アーカイブされたログファイルは、圧縮前に元のファイルが配置されていたディレクトリに常に保存されます。
 
-[&#x200B; サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support) して、ログ保持期間またはログ回転設定の変更をリクエストできます。 保存期間は最大 365 日まで延長できます。また、ストレージ・クォータを節約するために保存期間を短縮することも、ログ回転構成にログ・パスを追加することもできます。 これらの変更は、ステージング環境および実稼動環境のクラスターで使用できます。
+[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support)を送信して、ログの保持期間またはログローテーション設定の変更を要求できます。 保持期間を最大365日まで延長したり、ストレージ クォータを節約するために期間を短縮したり、logrotate設定に追加のログパスを追加したりできます。 これらの変更は、Pro ステージングおよび実稼動クラスターで使用できます。
 
-例えば、ログを `var/log/mymodule` ディレクトリに保存するカスタムパスを作成した場合、このパスのログのローテーションをリクエストできます。 ただし、現在のインフラストラクチャでは、ログローテーションを正しく設定するために、Adobeの一貫したファイル名が必要です。 Adobeでは、設定の問題を回避するために、ログ名の一貫性を維持することをお勧めします。
+例えば、`var/log/mymodule` ディレクトリにログを保存するためのカスタムパスを作成する場合、このパスのログローテーションをリクエストできます。 ただし、現在のインフラストラクチャでは、ログのローテーションを適切に設定するために、Adobeに一貫したファイル名が必要です。 Adobeでは、設定の問題を回避するために、ログ名の一貫性を維持することをお勧めします。
 
 >[!NOTE]
 >
->**デプロイ** および **デプロイ後** ログファイルは、ローテーションされたりアーカイブされたりしません。 デプロイメント履歴全体がこれらのログファイルに書き込まれます。
+>**デプロイ**&#x200B;および&#x200B;**デプロイ後**&#x200B;のログファイルはローテーションされず、アーカイブされません。 デプロイメント履歴はすべて、ログファイル内に書き込まれます。
 
 ## サービスログ
 
-各サービスは個別のコンテナで実行されるので、サービスログは統合環境では使用できません。 クラウドインフラストラクチャー上のAdobe Commerceを使用すると、統合環境内の web サーバーコンテナにのみアクセスできます。 次のサービスログの場所は、実稼動環境およびステージング環境用です。
+各サービスは個別のコンテナで実行されるため、サービスログは統合環境では使用できません。 Adobe Commerce クラウドインフラストラクチャでは、統合環境でのみweb サーバーコンテナにアクセスできます。 次のサービスログの場所は、Pro実稼動環境とステージング環境用です。
 
 - **Redis ログ**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
 - **Elasticsearch ログ**: `/var/log/elasticsearch/elasticsearch.log`
-- **Java ガベージコレクションログ**:`/var/log/elasticsearch/gc.log`
-- **メール ログ**: `/var/log/mail.log`
+- **Java ガベージコレクションログ**: `/var/log/elasticsearch/gc.log`
+- **メールログ**: `/var/log/mail.log`
 - **MySQL エラーログ**: `/var/log/mysql/mysql-error.log`
-- **MySQL 低速ログ**: `/var/log/mysql/mysql-slow.log`
-- **RabbitMQ ログ**:`/var/log/rabbitmq/rabbit@host1.log`
+- **MySQL スローログ**: `/var/log/mysql/mysql-slow.log`
+- **RabbitMQ ログ**: `/var/log/rabbitmq/rabbit@host1.log`
 
-サービス・ログは、ログ・タイプに応じて異なる期間にわたってアーカイブおよび保存されます。 例えば、MySQL ログの有効期間が最短で、7 日後に削除されます。
+サービスログは、ログの種類に応じて、異なる期間アーカイブおよび保存されます。 例えば、MySQLのログの有効期間は最も短く、7日後に削除されます。
 
 >[!TIP]
 >
->スケールされたアーキテクチャにおけるログファイルの場所は、ノードタイプによって異なります。 [&#x200B; スケールされたアーキテクチャのログの場所 &#x200B;](../architecture/scaled-architecture.md#log-locations) のトピックを参照してください。
+>スケーリングされたアーキテクチャ内のログファイルの場所は、ノードタイプによって異なります。 「[拡張アーキテクチャの場所をログに記録する](../architecture/scaled-architecture.md#log-locations)」トピックを参照してください。
 
-## 実稼動およびステージング用のログデータ
+## プロの実稼動とステージング用のログデータ
 
-実稼動環境およびステージング環境では、プロジェクトと統合された [New Relic ログ管理 &#x200B;](../monitor/log-management.md) を使用して、クラウドインフラストラクチャプロジェクト上のAdobe Commerceに関連付けられたすべてのログからの集計ログデータを管理します。
+Pro実稼動環境およびステージング環境では、プロジェクトに統合された[New Relic ログ管理](../monitor/log-management.md)を使用して、Adobe Commerce on cloud infrastructure プロジェクトに関連付けられたすべてのログから集約されたログデータを管理します。
 
-New Relic ログアプリケーションは、クラウドインフラストラクチャの実稼動環境とステージング環境でAdobe Commerceをトラブルシューティングおよび監視するための一元的なログ管理ダッシュボードを提供します。 また、Fastly CDN、Image Optimization、Web Application Firewall （WAF）の各サービスのログデータにもアクセスできます。 [New Relic サービス &#x200B;](../monitor/new-relic-service.md) を参照してください。
+New Relic Logs アプリケーションは、クラウドインフラストラクチャの実稼動環境とステージング環境でAdobe Commerceをトラブルシューティングおよび監視するための一元化されたログ管理ダッシュボードを提供します。 また、ダッシュボードでは、Fastly CDN、Image Optimization、web アプリケーションファイアウォール（WAF）サービスのログデータへのアクセスも提供されます。 [New Relic サービス &#x200B;](../monitor/new-relic-service.md)を参照してください。

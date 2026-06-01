@@ -1,80 +1,81 @@
 ---
 title: 送信メールの設定
-description: クラウドインフラストラクチャでAdobe Commerce用の送信メールを有効にする方法を説明します。
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+description: Adobe Commerce on cloud infrastructureの送信メールを有効にする方法を説明します。
+exl-id: 616e287b-960a-4933-916e-37896ee6b533
+source-git-commit: e3a2c8580ad1f27ddd3dc8fc40207bce68ee1c7f
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
 # 送信メールの設定
 
-[!DNL Cloud Console] またはコマンドラインから、統合（スターターのみの場合はステージング）環境用の送信メールを有効または無効にできます。 送信メールを有効にして、クラウドプロジェクトユーザーに二要素認証またはパスワードリセットメールを送信できるようにします。
+[!DNL Cloud Console]またはコマンドラインから、統合（およびスターターのみのステージング）環境の送信メールを有効または無効にできます。 送信メールを有効にして、Cloud プロジェクトユーザーに2要素認証を送信したり、パスワードリセットのメールを送信したりできます。
 
-デフォルトでは、送信メールは実稼動環境とステージング環境（Pro のみ）で有効になります。 ただし、[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli) または [Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console) から `enable_smtp` プロパティを設定するまで、ステータスに関係なく、環境設定で **[!UICONTROL Enable outgoing emails]** 設定が無効に表示される場合があります。
+デフォルトでは、送信メールは実稼動環境とステージング環境（Proのみ）で有効になっています。 ただし、[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli)または[Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console)を使用して`enable_smtp` プロパティを設定するまで、ステータスに関係なく、**[!UICONTROL Enable outgoing emails]**&#x200B;設定が環境設定で無効に表示される場合があります。
 
-[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli) で `enable_smtp` プロパティ値を更新すると、Cloud Console でこの環境の [!UICONTROL Enable outgoing emails] 設定値も変更されます。
+[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli)によって`enable_smtp` プロパティ値を更新すると、Cloud Consoleのこの環境の[!UICONTROL Enable outgoing emails]設定値も変更されます。
 
 >[!NOTE]
 >
->**[!UICONTROL Enable outgoing emails]** 設定を有効/無効にしても、ステージング環境または実稼動環境でメールを有効/無効にすることはできません。
+>**[!UICONTROL Enable outgoing emails]**&#x200B;設定を有効または無効にすると、Pro ステージング環境または実稼動環境でメールが有効または無効になりません。
 
 {{redeploy-warning}}
 
-## Cloud Console でメールを有効にする
+## Cloud Consoleでメールを有効にする
 
-_環境を設定_ ビューの **[!UICONTROL Outgoing emails]** 切り替えスイッチを使用して、メールのサポートを有効または無効にします。
+_環境設定_ ビューの&#x200B;**[!UICONTROL Outgoing emails]** トグルを使用して、電子メールサポートを有効または無効にします。
 
-実稼動環境またはステージング環境で送信メールを無効にするか再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) を送信できます。
+Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
 
 >[!TIP]
 >
->送信メールのステータスは、Cloud Console のステージング環境または実稼動環境では反映されない場合があります。
+>Cloud ConsoleのPro ステージング環境または実稼動環境では、送信メールのステータスが反映されない場合があります。
 
-**[!DNL Cloud Console]** からメールのサポートを管理するには：
+**[!DNL Cloud Console]**&#x200B;からの電子メールサポートを管理するには：
 
-1. [[!DNL Cloud Console]](https://console.adobecommerce.com) にログインします。
+1. [[!DNL Cloud Console]](https://console.adobecommerce.com)にログインします。
 1. _すべてのプロジェクト_ リストからプロジェクトを選択します。
 1. プロジェクトダッシュボードで、右上の設定アイコンをクリックします。
-1. 「**[!UICONTROL Environments]**」をクリックし、リストから特定の環境を選択します（「ステージング」と「Production for Pro」を除く）。
-1. 送信メールを有効または無効にするには、_送信メールを有効にする_&#x200B;**オン** または **オフ** を切り替えます。
+1. **[!UICONTROL Environments]**&#x200B;をクリックし、リストから特定の環境を選択します（ステージングと実稼動用Proを除く）。
+1. 送信メールを有効または無効にするには、_送信メールを有効にする_ **オン**&#x200B;または&#x200B;**オフ**&#x200B;を切り替えます。
 
-   ![&#x200B; 送信メール設定を有効にする &#x200B;](../../assets/outgoing-emails.png)
+   ![送信メール設定を有効にする](../../assets/outgoing-emails.png)
 
-設定を変更すると、環境は新しい設定でビルドおよびデプロイされます。
+設定を変更すると、環境はビルドされ、新しい設定でデプロイされます。
 
-## CLI でのメールの有効化
+## CLIでメールを有効にする
 
-アクティブな環境のメール設定を変更するには、`magento-cloud` CLI `environment:info` コマンドを使用して `enable_smtp` プロパティを設定します。 SMTP を有効にすると、メール送信用の SMTP ホストの IP アドレスで `MAGENTO_CLOUD_SMTP_HOST` 環境変数が更新されます。
+アクティブな環境のメール設定を変更するには、`magento-cloud` CLI `environment:info` コマンドを使用して`enable_smtp` プロパティを設定します。 SMTPを有効にすると、`MAGENTO_CLOUD_SMTP_HOST`環境変数が、メール送信用のSMTP ホストのIP アドレスで更新されます。
 
 **コマンドラインからメールサポートを管理するには**:
 
-1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
+1. ローカル ワークステーションで、プロジェクト ディレクトリに移動します。
 
-1. 環境の送信メールの設定を確認します。
+1. 環境の送信メール設定を確認します。
 
    ```bash
    magento-cloud environment:info -e <environment-id> | grep enable_smtp
    ```
 
-1. `enable_smtp` 環境変数を `true` または `false` に設定して、メールサポートの設定を変更します。
+1. `enable_smtp`環境変数を`true`または`false`に設定して、電子メールサポートの設定を変更します。
 
    ```bash
    magento-cloud environment:info --refresh -e <environment-id> enable_smtp true
    ```
 
-   環境がビルドおよびデプロイされるのを待ちます。
+   環境がビルドしてデプロイするのを待ちます。
 
-1. SSH を使用してリモート環境にログインします。
+1. SSHを使用してリモート環境にログインします。
 
-1. メールが機能することを確認します。確認可能なアドレスにテストメールを送信します。
+1. 電子メールが機能することを確認します。確認できるアドレスにテストメールを送信します。
 
    ```bash
    php -r 'mail("mail@example.com", "test message", "just testing", "From: tester@example.com");'
    ```
 
-1. メールが SendGrid で受信されることを確認します。
+1. メールがSendGridによって受信されていることを確認します。
 
    ```bash
    grep mail@example.com /var/log/mail.log

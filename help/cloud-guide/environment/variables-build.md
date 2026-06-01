@@ -1,19 +1,20 @@
 ---
 title: ビルド変数
-description: クラウドインフラストラクチャー上のAdobe Commerceのビルドフェーズでアクションを制御する環境変数のリストを参照してください。
+description: Adobe Commerce on cloud infrastructureのビルドフェーズでアクションを制御する環境変数のリストを参照してください。
 feature: Cloud, Configuration, Build, SCD, Upgrade
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 67bc77da-d7f2-4a92-bc11-aa4673d733c1
+source-git-commit: e3a2c8580ad1f27ddd3dc8fc40207bce68ee1c7f
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '944'
 ht-degree: 0%
 
 ---
 
 # ビルド変数
 
-次の _ビルド_ 変数は、ビルドフェーズでのアクションを制御し、[&#x200B; グローバル変数 &#x200B;](variables-global.md) の値を継承および上書きできます。 `.magento.env.yaml` ファイルの `build` のステージに、次の変数を挿入します。
+次の&#x200B;_ビルド_&#x200B;変数は、ビルド フェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`build` ステージに挿入します。
 
 ```yaml
 stage:
@@ -21,22 +22,22 @@ stage:
     BUILD_VARIABLE_NAME: value
 ```
 
-ビルドおよびデプロイプロセスのカスタマイズに関する詳細情報：
+ビルドおよびデプロイプロセスのカスタマイズについて詳しくは、次を参照してください。
 
 - [デプロイメント設定](configure-env-yaml.md)
 - [デプロイメントプロセス](../deploy/process.md)
 
-v2.2 では、次の変数が削除されました。
+v2.2では、次の変数が削除されました。
 
 - `skip_di_clearing`
 - `skip_di_compilation`
 
 ## `ERROR_REPORT_DIR_NESTING_LEVEL`
 
-- **デフォルト**—`1`
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **Default**—`1`
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-エラーレポートファイルの保存に使用するディレクトリネストのレベルを設定して、レポートディレクトリが数万のファイルで埋もれてしまい、データの管理やレビューが困難になるのを回避します。 この設定のデフォルトは `1` です。 通常、`<magento_root>/var/report/` ディレクトリ内のエラーレポート ファイルを管理する際に問題が発生しない限り、既定値を変更する必要はありません。
+エラーレポートファイルを保存するためのディレクトリネストのレベルを設定して、レポートディレクトリに数万ファイルを入力しないようにします。これにより、データの管理とレビューが困難になる可能性があります。 この設定はデフォルトで`1`です。 通常、`<magento_root>/var/report/` ディレクトリでのエラーレポートファイルの管理に問題がある場合を除き、デフォルト値を変更する必要はありません。
 
 ```yaml
 stage:
@@ -46,10 +47,10 @@ stage:
 
 ## `QUALITY_PATCHES`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-デプロイ時に適用するAdobe Commerce品質パッチのリストを指定します。
+デプロイメント時に適用するAdobe Commerce品質パッチのリストを指定します。
 
 ```yaml
 stage:
@@ -57,7 +58,7 @@ stage:
     QUALITY_PATCHES: [ ]
 ```
 
-次の例では、デプロイメント時に適用する 3 つのパッチを指定します。
+次の例では、デプロイメント時に適用する3つのパッチを指定します。
 
 ```yaml
 stage:
@@ -68,14 +69,14 @@ stage:
       - MC-456345
 ```
 
-[&#x200B; パッチの適用 &#x200B;](../development/apply-patches.md) を参照してください。
+[&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
 
 ## `SCD_COMPRESSION_LEVEL`
 
-- **デフォルト**—`6`
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **Default**—`6`
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-静的コンテンツを圧縮するときに使用する [gzip](https://www.gnu.org/software/gzip) 圧縮レベル （`0` ～ `9`）を指定します。`0` では圧縮を無効にします。
+静的コンテンツを圧縮する際に使用する[gzip](https://www.gnu.org/software/gzip)圧縮レベル （`0` ～ `9`）を指定します。`0`は圧縮を無効にします。
 
 ```yaml
 stage:
@@ -85,10 +86,10 @@ stage:
 
 ## `SCD_COMPRESSION_TIMEOUT`
 
-- **デフォルト**—`600`
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **Default**—`600`
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-静的アセットの圧縮に要する時間が圧縮タイムアウトの制限を超えると、デプロイメントプロセスが中断されます。 静的コンテンツ圧縮コマンドの最大実行時間を秒単位で設定します。
+静的アセットの圧縮にかかる時間が圧縮タイムアウトの制限を超えると、デプロイメントプロセスが中断されます。 静的コンテンツ圧縮コマンドの最大実行時間を秒単位で設定します。
 
 ```yaml
 stage:
@@ -98,12 +99,12 @@ stage:
 
 ## `SCD_NO_PARENT`
 
-- **デフォルト**—`false`
-- **バージョン** - Adobe Commerce 2.4.2 以降
+- **Default**—`false`
+- **バージョン** - Adobe Commerce 2.4.2以降
 
-ビルドフェーズで親テーマの静的コンテンツが生成されないようにするには、`true` に設定します。
+ビルド フェーズで親テーマの静的コンテンツを生成しないようにするには、`true`に設定します。
 
-親テーマの静的コンテンツを生成してもサイトのデプロイメントに影響を与えたり、不要なサイトのダウンタイムを引き起こしたりしないように、ビルドフェーズで `SCD_NO_PARENT: false` を設定します。 [&#x200B; 静的コンテンツのデプロイメント &#x200B;](../deploy/static-content.md) を参照してください。
+親テーマの静的コンテンツを生成しても、サイトの展開に影響を与えたり、不要なサイトのダウンタイムが発生したりしないように、ビルド段階で`SCD_NO_PARENT: false`を設定します。 [静的コンテンツ展開](../deploy/static-content.md)を参照してください。
 
 ```yaml
 stage:
@@ -113,12 +114,12 @@ stage:
 
 ## `SCD_MATRIX`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-テーマごとに複数のロケールを設定できます。 このカスタマイズにより、不要なテーマファイルの数を減らすことで、ビルドプロセスを迅速化できます。 例えば、英語の _magento/backend_ テーマと、他の言語のカスタムテーマを作成できます。
+テーマごとに複数のロケールを設定できます。 このカスタマイズは、不要なテーマファイルの数を減らすことによって、ビルドプロセスを高速化するのに役立ちます。 例えば、英語で&#x200B;_magento/backend_ テーマを作成し、他の言語でカスタムテーマを作成できます。
 
-次の例では、3 つのロケールで `Magento/backend` テーマをビルドします。
+次の例では、3つのロケールを持つ`Magento/backend` テーマを構築します。
 
 ```yaml
 stage:
@@ -131,7 +132,7 @@ stage:
           - af_ZA
 ```
 
-次の例では、3 つのロケールで 3 つのテーマを構築します。
+次の例では、3つのロケールを持つ3つのテーマを構築します。
 
 ```yaml
 stage:
@@ -154,7 +155,7 @@ stage:
           - af_ZA
 ```
 
-または、テーマをデプロイする _しない_ を選択できます。
+または、テーマを&#x200B;_not_ デプロイするように選択できます。
 
 ```yaml
 stage:
@@ -165,12 +166,12 @@ stage:
 
 ## `SCD_MAX_EXECUTION_TIME`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.2.0 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツのデプロイメントの予想最大実行時間を増やすことができます。
+静的コンテンツのデプロイメントで想定される最大実行時間を増やすことができます。
 
-デフォルトでは、クラウドインフラストラクチャー上のAdobe Commerceでは、予想される最大実行時間が 900 秒に設定されていますが、場合によっては、クラウドプロジェクトの静的コンテンツのデプロイメントを完了するためにより多くの時間が必要になることがあります。
+デフォルトでは、Adobe Commerce on cloud infrastructureは、想定される最大実行時間を900秒に設定しますが、一部のシナリオでは、Cloud プロジェクトの静的コンテンツのデプロイメントを完了するのに多くの時間が必要になる場合があります。
 
 ```yaml
 stage:
@@ -182,16 +183,16 @@ stage:
 
 ## `SCD_STRATEGY`
 
-- **デフォルト**—`quick`
-- **バージョン** - Adobe Commerce 2.2.0 以降
+- **Default**—`quick`
+- **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツの [&#x200B; デプロイメント戦略 &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja) をカスタマイズします。 [&#x200B; 静的表示ファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja) を参照してください。
+静的コンテンツの[&#x200B; デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja)をカスタマイズします。 [静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja)を参照してください。
 
-複数のロケールがある場合は、次のオプション _のみ_ を使用します。
+複数のロケールがある場合は、次のオプション _のみ_&#x200B;を使用します。
 
 - `standard` – すべてのパッケージのすべての静的ビューファイルをデプロイします。
-- `quick` - （_デフォルト_）展開時間を最小限に抑えます。
-- `compact` - サーバー上のディスク領域を節約します。 Adobe Commerce バージョン 2.2.4 以前では、この設定によって `scd_threads` の値が `1` で上書きされます。
+- `quick` – （_default_）は、デプロイメント時間を最小限に抑えます。
+- `compact` - サーバー上のディスク領域を節約します。 Adobe Commerce バージョン 2.2.4以前では、この設定は`scd_threads`の値を`1`の値で上書きします。
 
 ```yaml
 stage:
@@ -202,9 +203,9 @@ stage:
 ## `SCD_THREADS`
 
 - **Default** – 自動
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-静的コンテンツのデプロイメントのスレッド数を設定します。 デフォルト値は、検出されたCPU スレッドの数に基づいて設定され、値 4 を超えることはありません。 スレッド数を増やすと、静的コンテンツのデプロイメントが高速化されます。スレッド数を減らすと、速度が低下します。 スレッドの値は、次のように設定できます。
+静的コンテンツのデプロイメント用のスレッド数を設定します。 デフォルト値は、検出されたCPU スレッド数に基づいて設定され、値4を超えることはありません。 スレッド数を増やすと、静的コンテンツのデプロイメントが高速化されます。スレッド数を減らすと、速度が低下します。 スレッドの値を設定できます。例：
 
 ```yaml
 stage:
@@ -212,16 +213,16 @@ stage:
     SCD_THREADS: 2
 ```
 
-デプロイメント時間をさらに短縮するには、`scd-dump` コマンドで [&#x200B; 設定管理 &#x200B;](../store/store-settings.md) を使用して、静的デプロイメントをビルドフェーズに移行します。
+デプロイメントの時間をさらに短縮するには、`scd-dump` コマンドで[構成管理](../store/store-settings.md)を使用して、静的デプロイメントをビルド フェーズに移動します。
 
 ## `SCD_USE_BALER`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.3.0 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.3.0以降
 
-[Baler](https://github.com/magento/baler) は、生成されたJavaScript コードをスキャンし、最適化されたJavaScript バンドルを作成します。 最適化されたバンドルをサイトにデプロイすると、サイトを読み込む際のネットワークリクエストの数を減らし、ページの読み込み時間を短縮できます。
+[Baler](https://github.com/magento/baler)は、生成されたJavaScript コードをスキャンし、最適化されたJavaScript バンドルを作成します。 最適化されたバンドルをサイトにデプロイすると、サイトの読み込み時のネットワークリクエストの数を減らし、ページの読み込み時間を短縮できます。
 
-静的コンテンツのデプロイメントの実行後に Baler を実行する場合は、`true` に設定します。
+静的コンテンツのデプロイメントを実行した後にBalerを実行するには、`true`に設定します。
 
 ```yaml
 stage:
@@ -231,16 +232,16 @@ stage:
 
 >[!NOTE]
 >
->Baler はアルファリリースなので、実稼動環境で使用することはお勧めしません。
+>Balerはアルファリリースであるため、実稼動環境で使用することはお勧めできません。
 
 ## `SKIP_COMPOSER_DUMP_AUTOLOAD`
 
-- **デフォルト**— _設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **Default**— _設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-Cloud Docker のインストール中に `composer dump-autoload` コマンドをスキップする場合は、`true` に設定します。 この変数は、書き込み可能なファイルシステムを持つ Cloud Docker コンテナにのみ関連します。 このような場合は、コマンドをスキップすると、削除された `generated` ディレクトリからコードにアクセスしようとする他のコマンドからのエラーを防ぐことができます。
+Cloud Dockerのインストール中に`composer dump-autoload` コマンドをスキップするには、`true`に設定します。 この変数は、書き込み可能なファイルシステムを持つCloud Docker コンテナにのみ関連します。 このような場合、コマンドをスキップすると、削除された`generated` ディレクトリからコードにアクセスしようとする他のコマンドのエラーが回避されます。
 
-Adobe Commerceを `composer dump-autoload` 実行すると、`generated` フォルダー内に、生成されたクラスへのリンクを含んだ自動読み込みファイルが作成されます。これは、読み取り専用ファイルシステムを使用した実稼動環境では問題になりません。 ただし、書き込み可能なファイルシステム（`./vendor/bin/ece-docker build:compose --with-test` を使用したテストと開発のためにのみ作成されたもの）を持つ Cloud Docker インストールの場合は、`--keep-generated` オプションを指定せずに `bin/magento -n setup:upgrade` コマンドを実行すると、`generated` ディレクトリが削除されます。 ディレクトリを削除すると、自動読み込みには削除されたディレクトリ内のファイルへのリンクが含まれるため、`composer dump-autoload` コマンドは失敗します。
+Adobe Commerceが`composer dump-autoload`を実行すると、生成されたクラスへのリンクを含む自動ロード ファイルが`generated` フォルダーに作成されます。これは、読み取り専用のファイル システムを備えた実稼動環境では問題ありません。 ただし、書き込み可能なファイルシステムを使用したCloud Dockerのインストール（`./vendor/bin/ece-docker build:compose --with-test`を使用したテストおよび開発用にのみ作成）の場合、`--keep-generated` オプションを使用せずに`bin/magento -n setup:upgrade` コマンドを実行すると、`generated` ディレクトリが削除されます。 ディレクトリが削除されると、オートロードに削除されたディレクトリ内のファイルへのリンクが含まれているため、`composer dump-autoload` コマンドは失敗します。
 
 ```yaml
 stage:
@@ -250,14 +251,14 @@ stage:
 
 ## `SKIP_SCD`
 
-- **デフォルト**— _設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **Default**— _設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-ビルドフェーズで静的コンテンツのデプロイメントをスキップする場合は、`true` に設定します。
+ビルド フェーズ中に静的コンテンツのデプロイメントをスキップするには、`true`に設定します。
 
-[Configuration Management](../store/store-settings.md) を使用してビルドフェーズで既に静的コンテンツをデプロイしている場合は、迅速なビルドテストのために静的コンテンツのデプロイメントをスキップできます。
+[構成管理](../store/store-settings.md)のビルド フェーズで既に静的コンテンツをデプロイしている場合、クイック ビルド テスト用に静的コンテンツのデプロイをスキップできます。
 
-ビルドフェーズでは、静的コンテンツのビルドがビルドフェーズ中に実行され、プロセスがサイトのデプロイメントに影響を与えず、不要なサイトのダウンタイムを引き起こさないように、`SKIP_SCD: false` を設定します。 [&#x200B; 静的コンテンツのデプロイメント &#x200B;](../deploy/static-content.md) を参照してください。
+ビルド フェーズで、`SKIP_SCD: false`を設定して、静的コンテンツのビルドがビルド フェーズ中に発生し、プロセスがサイトのデプロイメントに影響を与えたり、不要なサイト ダウンタイムを引き起こしたりしないようにします。 [静的コンテンツ展開](../deploy/static-content.md)を参照してください。
 
 ```yaml
 stage:
@@ -267,20 +268,20 @@ stage:
 
 ## `VERBOSE_COMMANDS`
 
-- **Default**—_設定なし_
-- **バージョン** - Adobe Commerce 2.1.4 以降
+- **既定**—_設定なし_
+- **バージョン** - Adobe Commerce 2.1.4以降
 
-デプロイメントフェーズで実行される CLI コマンドの [Symfony](https://symfony.com/doc/current/console/verbosity.html) debug 冗長レベル `bin/magento` 有効または無効にします。
+デプロイメントフェーズ中に実行される`bin/magento` CLI コマンドの[Symfony](https://symfony.com/doc/current/console/verbosity.html) デバッグの冗長性レベルを有効または無効にします。
 
 >[!NOTE]
 >
->VERBOSE_COMMANDS を使用して、CLI コマンドの成功および失敗の両方のコマンド出力の詳細 `bin/magento` 制御するには、[MIN_LOGGING_LEVEL](variables-global.md#minlogginglevel) `debug` を設定する必要があります。
+>VERBOSE_COMMANDSを使用して、成功したCLI コマンドと失敗した`bin/magento` CLI コマンドの両方のコマンド出力の詳細を制御するには、[MIN_LOGGING_LEVEL](variables-global.md#minlogginglevel) `debug`を設定する必要があります。
 
-ログに表示される詳細レベルを選択します。
+ログに記載されている詳細レベルを選択します。
 
-- `-v`=通常出力
+- `-v`=通常の出力
 - `-vv`=より詳細な出力
-- `-vvv` =デバッグに最適な詳細出力
+- `-vvv` = デバッグに最適な詳細な出力
 
 ```yaml
 stage:
