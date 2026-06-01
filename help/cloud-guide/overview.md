@@ -2,7 +2,7 @@
 title: Commerce on Cloud Infrastructure
 description: クラウドインフラストラクチャー上で Commerce を構築、デプロイ、管理する方法を学びます。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 37505db0488204c40ca37356c4d496bba73c537f
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 3%
@@ -40,7 +40,7 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 ## AWS地域
 
-![AWS地域を示す図](../assets/aws-regions.svg){zoomable="yes"}
+![AWS地域を示す図](../assets/aws-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 ## Azure地域
 
-![Azure地域を示す図](../assets/azure-regions.svg){zoomable="yes"}
+![Azure地域を示す図](../assets/azure-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >

@@ -1,23 +1,24 @@
 ---
-user-guide-title: Commerceの基本を学ぶ
-user-guide-description: クラウドインフラストラクチャで  [!DNL Commerce]  アプリケーションの初期セットアップを開始します。
+user-guide-title: Commerce入門
+breadcrumb-title: 詳細を見る
+user-guide-description: クラウド インフラストラクチャで [!DNL Commerce]  アプリケーションの初期設定を開始します。
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
-source-git-commit: 6860d79d243e3a96a9d544f5811854b7c7f55c48
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
 
-# Commerceの基本を学ぶ {#start}
+# Commerce入門 {#start}
 
-+ [Commerceの基本を学ぶ](overview.md)
-+ [Cloud でのCommerceのプロビジョニング](new-project.md)
++ [Commerce入門](overview.md)
++ [Commerce on Cloudのプロビジョニング](new-project.md)
 + [オンボーディング](onboarding.md)
-+ [ログイン先  [!DNL Cloud Console]](cloud-console.md)
-+ [ストアフロントにアクセス](access-storefront.md)
-+ [開発の準備](prepare-workspace.md)
-+ [&#x200B; クラウドインフラストラクチャガイドに戻る &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ja)
++ [&#x200B; [!DNL Cloud Console]にログイン](cloud-console.md)
++ [ストアフロントへのアクセス](access-storefront.md)
++ [開発のための準備](prepare-workspace.md)
++ [クラウドインフラストラクチャガイドに戻る](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ja)
