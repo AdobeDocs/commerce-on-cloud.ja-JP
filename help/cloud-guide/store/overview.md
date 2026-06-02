@@ -1,39 +1,45 @@
 ---
 title: ストアオプションと設定管理の概要
-description: クラウドインフラストラクチャー上のAdobe Commerce ストアをカスタマイズします。
+description: クラウド基盤でAdobe Commerceストアをカスタマイズ。
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e653172f-7370-4761-b2ce-3a420b33b948
+TQID: https://experienceleague.adobe.com/iseYcfjh61-4ArUf9rKBGKFVuOz1dbS1xVq-FYiCxsw
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: 193
 ht-degree: 0%
 
 ---
 
 # ストアオプションと設定管理の概要
 
-カスタムテーマの追加、拡張機能のインストール、クラウドインフラストラクチャ環境全体での特定の設定の適用など、ストアをカスタマイズする方法は多数あります。 ステージング環境と実稼動環境で、特定のサービスの設定を直接構成できます。 複数の web サイトやストアを設定できます。 ストア設定は、ローカルワークステーションでこれらのオプションを設定し、環境全体に特定の設定をデプロイするのに役立ちます。
+カスタムテーマの追加、拡張機能のインストール、クラウドインフラストラクチャ環境全体での特定の設定の適用など、ストアをカスタマイズする方法はたくさんあります。 ステージング環境と実稼動環境で、特定のサービスの設定を直接設定できます。 複数のweb サイトやストアを設定できます。 ストア設定を使用すると、ローカルワークステーションでこれらのオプションを設定し、環境全体に特定の設定をデプロイできます。
 
-ストアフロントにアクセスするには、`magento-cloud url` コマンドを使用してプロンプトに答えます。 または、[!DNL Cloud Console] の **Access site** の下で URL を見つけることができます。
+ストアフロントにアクセスするには、`magento-cloud url` コマンドを使用して、プロンプトに答えます。 または、**アクセス サイト**&#x200B;の[!DNL Cloud Console]でURLを見つけることができます。
 
 ## ストアオプションの設定
 
-ストアオプションには次のものがあります。
+ストアオプションには次のものが含まれます。
 
-* [B2B （Business-to-Business）モジュール](b2b-module.md)
+* [企業間取引モジュール（B2B）](b2b-module.md)
 * [カスタムテーマ](custom-theme.md)
 * [拡張機能](extensions.md)
 * [複数のサイト](multiple-sites.md)
-* [支払いサービス](paypal.md)
+* [決済サービス](paypal.md)
 
 ## サービスと統合の設定
 
-リモート環境に対する特定のデプロイメント動作を管理する特定の [&#x200B; 設定ファイル &#x200B;](../environment/overview.md) があります。 これらのトピックは、個別に確認できます。
+リモート環境に対する特定のデプロイメント動作を管理する特定の[設定ファイル ](../environment/overview.md)があります。 これらのトピックは個別に確認できます。
 
-* [アプリケーションのデプロイメント](../application/configure-app-yaml.md)
-* [環境ビルドおよびデプロイアクション](../environment/configure-env-yaml.md)
+* [アプリケーションの展開](../application/configure-app-yaml.md)
+* [環境のビルドとデプロイのアクション](../environment/configure-env-yaml.md)
 * [受信リクエストルート](../routes/routes-yaml.md)
-* [サポートされるサービス](../services/services-yaml.md)
+* [サポート対象サービス](../services/services-yaml.md)
 
 ## 設定管理
 
-ストアオプション、サービス、統合を設定した後、設定管理を使用して、ダウンタイムを最小限に抑えながら、すべての環境にこのような設定を一貫してデプロイします。 [&#x200B; 設定の管理 &#x200B;](store-settings.md) を参照してください。
+ストアのオプション、サービス、統合を設定した後は、構成管理を使用して、すべての環境に一貫した構成をデプロイし、ダウンタイムを最小限に抑えます。 [構成管理](store-settings.md)を参照してください。

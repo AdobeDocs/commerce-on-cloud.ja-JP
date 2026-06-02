@@ -5,16 +5,20 @@ feature: Cloud, Configuration, Build, SCD, Upgrade
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 67bc77da-d7f2-4a92-bc11-aa4673d733c1
-source-git-commit: e3a2c8580ad1f27ddd3dc8fc40207bce68ee1c7f
+TQID: https://experienceleague.adobe.com/faQLVL7yA4G8uh8VNVpjouJdVPdwio8PdpOh-a-hHyE
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: 944
 ht-degree: 0%
 
 ---
 
 # ビルド変数
 
-次の&#x200B;_ビルド_&#x200B;変数は、ビルド フェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`build` ステージに挿入します。
+次の&#x200B;_ビルド_&#x200B;変数は、ビルド フェーズのアクションを制御し、[ グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`build` ステージに挿入します。
 
 ```yaml
 stage:
@@ -69,7 +73,7 @@ stage:
       - MC-456345
 ```
 
-[&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
+[ パッチの適用](../development/apply-patches.md)を参照してください。
 
 ## `SCD_COMPRESSION_LEVEL`
 
@@ -186,7 +190,7 @@ stage:
 - **Default**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツの[&#x200B; デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja)をカスタマイズします。 [静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja)を参照してください。
+静的コンテンツの[ デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)をカスタマイズします。 [静的ビューファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_&#x200B;を使用します。
 

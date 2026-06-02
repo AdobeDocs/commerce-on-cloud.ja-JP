@@ -3,9 +3,12 @@ title: ヘルス通知
 description: Adobe Commerce on cloud インフラストラクチャプロジェクトでディスク領域を使用するように、Slack、電子メール、およびPagerDuty通知を設定する方法を説明します。
 feature: Cloud, Observability, Integration
 exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
-source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
+TQID: https://experienceleague.adobe.com/Tt4zWTqehO4SLsimUv3IE5VvjJ1OwAA27tT9Mot24FU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: 386
 ht-degree: 0%
 
 ---
@@ -32,7 +35,7 @@ magento-cloud integration:add --type health.email --from-address you@example.com
 
 ## Slack チャネル通知
 
-Slackは、チャットルームにメッセージを投稿するために、ボットと呼ばれるインタラクティブなアプリを使用する外部サービスです。 Slackでヘルス通知を受け取る前に、Slack グループのカスタム [&#x200B; ボットユーザー](https://api.slack.com/bot-users)を作成する必要があります。 チャネルまたはチャネルのボットユーザーを設定したら、Slackから提供された[&#x200B; ボットトークン &#x200B;](https://api.slack.com/docs/token-types#bot)を保存して統合を登録します。 次の例では、Slack チャネルにヘルス通知を登録します。
+Slackは、チャットルームにメッセージを投稿するために、ボットと呼ばれるインタラクティブなアプリを使用する外部サービスです。 Slackでヘルス通知を受け取る前に、Slack グループのカスタム [ ボットユーザー](https://api.slack.com/bot-users)を作成する必要があります。 チャネルまたはチャネルのボットユーザーを設定したら、Slackから提供された[ ボットトークン ](https://api.slack.com/docs/token-types#bot)を保存して統合を登録します。 次の例では、Slack チャネルにヘルス通知を登録します。
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'

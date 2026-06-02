@@ -1,24 +1,28 @@
 ---
 title: キャッシュ
-description: クラウドインフラストラクチャ環境でAdobe Commerceのキャッシュを有効にする方法を説明します。
+description: Adobe Commerce on cloud infrastructure環境のキャッシュを有効にする方法について説明します。
 feature: Cloud, Cache, Routes
 exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
-source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
+TQID: https://experienceleague.adobe.com/dCr0px-0XWXIznsg1w8tUnBaAeXvanY1h-mwiu6GfzU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: 430
 ht-degree: 0%
 
 ---
 
-# キャッシング
+# キャッシュ
 
-クラウドインフラストラクチャープロジェクト環境キャッシュを有効にすることができます。 キャッシュを無効にすると、Adobe Systems Commerce がファイルを直接提供します。
+クラウドインフラストラクチャプロジェクト環境でキャッシュを有効にできます。 キャッシュを無効にすると、Adobe Commerceはファイルを直接提供します。
 
 {{route-placeholder}}
 
-## 設定アップキャッシュ
+## キャッシュの設定
 
-次のように `.magento/routes.yaml` ファイルでキャッシュルールを設定して、アプリケーションのキャッシュを有効にします。
+次のように`.magento/routes.yaml` ファイルでキャッシュルールを設定して、アプリケーションのキャッシュを有効にします。
 
 ```yaml
 http://{default}/:
@@ -33,7 +37,7 @@ http://{default}/:
 
 ## ルートベースのキャッシュ
 
-次の例に示すように、複数のルートに対して個別に キャッシュ ルールを設定することで、きめ細かなキャッシュを有効にします。
+次の例に示すように、複数のルートに対して個別にキャッシングルールを設定して、きめ細かいキャッシュを有効にします。
 
 ```yaml
 http://{default}/:
@@ -61,24 +65,24 @@ http://{default}/path/more/:
 - `http://{default}/path/more/`
 - `http://{default}/path/more/etc/`
 
-また、次のルートは **キャッシュされません**。
+次のルートは&#x200B;**not** キャッシュです：
 
 - `http://{default}/path/`
 - `http://{default}/path/etc/`
 
 >[!NOTE]
 >
->ルートの正規表現はサポートされて **ません**。
+>ルートの正規表現は&#x200B;**サポートされていません**。
 
 ## キャッシュ時間
 
-キャッシュ期間は、 `Cache-Control` 応答ヘッダー値によって決まります。 応答に `Cache-Control` ヘッダーが含まれていない場合は、 `default_ttl` キーが使用されます。
+キャッシュ時間は、`Cache-Control`応答ヘッダー値によって決まります。 応答に`Cache-Control` ヘッダーがない場合、`default_ttl` キーが使用されます。
 
 ## キャッシュキー
 
-応答をキャッシュする方法を決定するために、Adobe Systems Commerce は、いくつかの要因に依存するキャッシュキーを作成し、このキーに関連付けられた応答ストアます。 リクエストに同じキャッシュキーが付いている場合、応答が再利用されます。 その目的は、HTTP [`Vary` ヘッダー](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44)に似ています。
+レスポンスをキャッシュする方法を決定するために、Adobe Commerceは、いくつかの要素に依存するキャッシュキーを作成し、このキーに関連付けられたレスポンスを保存します。 リクエストが同じキャッシュキーを持つ場合、応答は再利用されます。 その目的は、HTTP [`Vary` ヘッダー](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44)と似ています。
 
-パラメーター `headers` キーと `cookies` キーを使用すると、このキャッシュ キーを変更できます。
+パラメーター`headers`および`cookies` キーを使用すると、このキャッシュキーを変更できます。
 
 これらのキーのデフォルト値は次のとおりです。
 
@@ -93,13 +97,13 @@ cache:
 
 ### `enabled`
 
-`true` に設定した場合は、このルートのキャッシュを有効にします。 `false` に設定した場合は、このルートのキャッシュを無効にします。
+`true`に設定した場合は、このルートのキャッシュを有効にします。 `false`に設定した場合は、このルートのキャッシュを無効にします。
 
 ### `headers`
 
-キャッシュキーが依存する必要がある値を定義します。
+キャッシュキーが依存する値を定義します。
 
-例えば、`headers` のキーが次のような場合：
+例えば、`headers` キーが次の場合です。
 
 ```yaml
 cache:
@@ -107,11 +111,11 @@ cache:
     headers: ["Accept"]
 ```
 
-次にAdobe Systemsコマースは、 `Accept` HTTP ヘッダーの値ごとに異なる応答をキャッシュします。
+次に、Adobe Commerceは、`Accept` HTTP ヘッダーの値ごとに異なるレスポンスをキャッシュします。
 
 ### `cookies`
 
-`cookies` キーは、キャッシュ キーが依存する必要がある値を定義します。
+`cookies` キーは、キャッシュキーがどの値に依存する必要があるかを定義します。
 
 例：
 
@@ -121,19 +125,19 @@ cache:
     cookies: ["value"]
 ```
 
-キャッシュキーは、リクエスト内の `value` cookieの値によって異なります。
+キャッシュキーは、リクエスト内の`value` Cookieの値によって異なります。
 
-`cookies` キーに `["*"]` 値がある場合は、特別なケースがあります。この値は、cookieを持つすべてのリクエストキャッシュをバイパスすることを意味します。 これがデフォルト値です。
+`cookies` キーの値が`["*"]`の場合、特殊ケースが存在します。 この値は、Cookieを使用したリクエストがキャッシュをバイパスすることを意味します。 これがデフォルト値です。
 
 >[!NOTE]
 >
->cookie名にワイルドカードは使用できません。 正確な cookie 名を使用するか、アスタリスク（`*`）ですべての cookie に一致します。 例えば、`SESS*` や `~SESS` は現在 **無効** 値です。
+>Cookie名にワイルドカードを使用することはできません。 正確なCookie名を使用するか、すべてのCookieにアスタリスク （`*`）を付けます。 例えば、`SESS*`または`~SESS`は現在&#x200B;**not**&#x200B;の有効な値です。
 
-Cookie には次の制限があります。
+Cookieには次の制限があります。
 
-- システムには最大 **50 個の cookie** が設定されています。 それ以外の場合、アプリケーションは `Unable to send the cookie. Maximum number of cookies would be exceeded` 例外をスローします。 Cookie の数を 200 に増やすには、[Quality Patches Tool](https://experienceleague.adobe.com/ja/docs/commerce-learn/tutorials/tools/quality-patch-tool) を使用して [MDVA-12304 パッチ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=ja) を適用します。
-- 最大cookieサイズは **4096 バイト**&#x200B;です。 それ以外の場合、アプリケーションは `Unable to send the cookie. Size of '%name' is %size bytes` 例外をスローします。
+- システムには最大&#x200B;**50 Cookie**&#x200B;が設定されています。 それ以外の場合は、`Unable to send the cookie. Maximum number of cookies would be exceeded`例外がスローされます。 Cookieの数を200に増やすには、[品質パッチツール ](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)を使用して[MDVA-12304 パッチ ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)を適用します。
+- 最大Cookie サイズは&#x200B;**4096 バイト**&#x200B;です。 それ以外の場合は、`Unable to send the cookie. Size of '%name' is %size bytes`例外がスローされます。
 
 ### `default_ttl`
 
-応答に `Cache-Control` ヘッダーがない場合は、 `default_ttl` キーを使用してキャッシュ期間を秒単位で定義します。 デフォルト値は `0` です。これは、何もキャッシュされないことを意味します。
+応答に`Cache-Control` ヘッダーがない場合、`default_ttl` キーを使用してキャッシュ時間を秒単位で定義します。 デフォルト値は`0`です。つまり、何もキャッシュされません。

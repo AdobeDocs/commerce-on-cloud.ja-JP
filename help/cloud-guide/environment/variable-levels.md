@@ -3,9 +3,14 @@ title: 変数レベルとオプション
 description: Adobe Commerce on cloud infrastructure プロジェクトランタイム環境のカスタマイズで使用されるさまざまな変数レベルとオプションについて説明します。
 feature: Cloud, Configuration, Security
 exl-id: 6761cb45-9c8d-4a4e-940f-d62e0e15dcb4
-source-git-commit: e3a2c8580ad1f27ddd3dc8fc40207bce68ee1c7f
+TQID: https://experienceleague.adobe.com/MRFC5zU5M3PtRiB-g69HqTIu--dN7iYjOcENNVp5cmA
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: 456
 ht-degree: 0%
 
 ---
@@ -14,7 +19,7 @@ ht-degree: 0%
 
 プロジェクト変数は、プロジェクト内のあらゆる環境に適用されます。 環境変数は、特定の環境またはブランチに適用されます。 環境&#x200B;_は、親環境から_&#x200B;変数定義を継承します。
 
-環境に特化した変数を定義することで、継承された値を上書きできます。 例えば、開発用の変数を設定するには、統合環境の`.magento.env.yaml` ファイルで変数値を定義します。 統合環境から分岐するすべての環境は、これらの値を継承します。 `.magento.env.yaml` ファイルを使用して環境を設定する方法について詳しくは、[&#x200B; デプロイメント設定](configure-env-yaml.md)を参照してください。
+環境に特化した変数を定義することで、継承された値を上書きできます。 例えば、開発用の変数を設定するには、統合環境の`.magento.env.yaml` ファイルで変数値を定義します。 統合環境から分岐するすべての環境は、これらの値を継承します。 `.magento.env.yaml` ファイルを使用して環境を設定する方法について詳しくは、[ デプロイメント設定](configure-env-yaml.md)を参照してください。
 
 >[!BEGINTABS]
 
@@ -40,17 +45,17 @@ ht-degree: 0%
 
 **[!DNL Cloud Console]**&#x200B;を使用して変数を設定するには：
 
-1. _[!DNL Cloud Console]_&#x200B;で、プロジェクトナビゲーションの右側にある設定アイコンをクリックします。
+1. _[!DNL Cloud Console]_で、プロジェクトナビゲーションの右側にある設定アイコンをクリックします。
 
-   ![&#x200B; プロジェクトの設定](../../assets/icon-configure.png){width="36"}
+   ![ プロジェクトの設定](../../assets/icon-configure.png){width="36"}
 
 1. プロジェクトレベルの変数を設定するには、_プロジェクト設定_&#x200B;で「**変数**」をクリックします。
 
-   ![&#x200B; プロジェクト変数](../../assets/ui-project-variables.png)
+   ![ プロジェクト変数](../../assets/ui-project-variables.png)
 
 1. 環境レベルの変数を設定するには、_環境_ リストで環境を選択し、**[!UICONTROL Variables]** タブをクリックします。
 
-   ![環境変数タブ &#x200B;](../../assets/ui-environment-variables.png)
+   ![環境変数タブ ](../../assets/ui-environment-variables.png)
 
 1. **[!UICONTROL Create variable]**&#x200B;をクリックします。
 

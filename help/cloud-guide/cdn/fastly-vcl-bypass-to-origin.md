@@ -1,40 +1,45 @@
 ---
 title: Fastly キャッシュをバイパスするカスタム VCL
-description: Fastly キャッシュをバイパスするカスタム VCL スニペットを作成して、オリジンサーバーへのリクエストトラフィックをトラブルシューティングします。
+description: Fastly キャッシュをバイパスするカスタム VCL スニペットを作成することで、オリジンサーバーへのリクエストトラフィックをトラブルシューティングします。
 feature: Cloud, Configuration, Cache
 exl-id: 4e19d6d4-b5a1-4623-b0be-804ddc81ff3d
-source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
+TQID: https://experienceleague.adobe.com/67LdlbG62T-cBEgNTwQ5p5MvvYQwNuHUYVQhrVBSn1A
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: 303
 ht-degree: 0%
 
 ---
 
 # Fastly キャッシュをバイパスするカスタム VCL
 
-カスタム VCL スニペットを作成して、Fastly キャッシュをバイパスし、オリジンサーバーへのリクエストトラフィックのトラブルシューティングを行うことができます。 例えば、スニペットを作成して、サイトの問題がキャッシュに起因するものかどうかを判断したり、ヘッダーのトラブルシューティングを行ったりできます。
+Fastly キャッシュをバイパスするようにカスタム VCL スニペットを作成することで、オリジンサーバーへのリクエストトラフィックをトラブルシューティングできます。 例えば、サイトの問題がキャッシュによって発生しているかどうかを判断したり、ヘッダーのトラブルシューティングを行うためにスニペットを作成できます。
 
-特定の IP アドレスまたは URL からのリクエストに対して Fastly のキャッシュをバイパスするように、スニペットを設定できます。
+特定のIP アドレスまたはURLからのリクエストに対して、Fastlyのキャッシュをバイパスするようにスニペットを設定できます。
 
 >[!NOTE]
 >
->カスタム VCL 設定を実稼動環境に結合する前に、必ずステージング環境でコードをテストしてください。
+>カスタム VCL設定を実稼動環境にマージする前に、必ずステージング環境でコードをテストしてください。
 
 **前提条件：**
 
 {{$include /help/_includes/vcl-snippet-prerequisites.md}}
 
-**IP アドレスまたは URL に基づいて Fastly キャッシュをバイパスするには**:
+**IP アドレスまたはURL**&#x200B;に基づいてFastly キャッシュをバイパスするには：
 
 {{admin-login-step}}
 
-1. **ストア**/設定/**設定**/**詳細**/**システム** をクリックします。
+1. **ストア** / 設定/**構成** / **詳細** / **システム**&#x200B;をクリックします。
 
-1. **フルページキャッシュ**/**Fastly 設定**/**カスタム VCL スニペット** の順に展開します。
+1. **フルページキャッシュ** > **Fastly設定** > **カスタム VCL スニペット**&#x200B;を展開します。
 
-1. **カスタムスニペットを作成** をクリックします。
+1. 「**カスタムスニペットを作成**」をクリックします。
 
-1. VCL スニペットの値を追加します。
+1. VCL スニペット値を追加します。
 
    - **名前** — `bypass_fastly`
 
@@ -44,7 +49,7 @@ ht-degree: 0%
 
    - **VCL** スニペットコンテンツ —
 
-     次の例では、特定の IP アドレスの Fastly をバイパスしています。
+     次の例では、特定のIP アドレスに対してFastlyをバイパスします。
 
      ```conf
      if (client.ip == "<Your IPv4 IP address>" || client.ip == "<Your IPv6 IP address>") {
@@ -52,31 +57,31 @@ ht-degree: 0%
      }
      ```
 
-     次の例では、特定の URL パターンに対して Fastly をバイパスしています。
+     次の例では、特定のURL パターンに対してFastlyをバイパスします。
 
      ```conf
      if (req.url ~ "/media/feeds/GoogleShoppingHiVisNew.xml") {  return (pass);}
      ```
 
-     URL が完全に一致する場合は、`==` 演算子の代わりに `~` 演算子を使用します。 詳しくは、[Fastly VCL リファレンス ] を参照してください。
+     正確なURL一致を得るには、`~`演算子の代わりに`==`演算子を使用します。 詳しくは、[Fastly VCL リファレンス ]を参照してください。
 
-1. **作成** をクリックします。
+1. 「**作成**」をクリックします。
 
-   ![Fastly バイパス VCL スニペットの作成 &#x200B;](/help/assets/cdn/fastly-create-bypass-snippet.png)
+   ![FastlyでVCL スニペットをバイパスする](/help/assets/cdn/fastly-create-bypass-snippet.png)を作成
 
-1. ページのリロード後、「**Fastly 設定** セクションの *Fastly に VCL をアップロード* をクリックします。
+1. ページが再読み込みされたら、「*Fastly設定*」セクションの「**VCLをFastly**&#x200B;にアップロード」をクリックします。
 
 1. アップロードが完了したら、ページ上部の通知に従ってキャッシュを更新します。
 
-   Fastly は、アップロード処理中に更新された VCL バージョンを検証します。 検証に失敗した場合は、カスタム VCL スニペットを編集して問題を修正します。 次に、VCL を再度アップロードします。
+   アップロードプロセス中に、更新されたVCL バージョンをFastlyが検証します。 検証が失敗した場合は、カスタム VCL スニペットを編集して問題を修正します。 次に、VCLをもう一度アップロードします。
 
-VCL スニペットを追加した後、cURL コマンドを使用して、次の例に示すように、指定した IP アドレスまたは URL からオリジンサーバーにリクエストを送信できます。
+VCL スニペットを追加した後、次の例に示すように、cURL コマンドを使用して、指定したIP アドレスまたはURLからオリジンサーバーにリクエストを送信できます。
 
 ```bash
 curl -svo /dev/null www.example.com/index.html
 ```
 
-次に、応答を調べて、キャッシュされていないコンテンツに関する問題のトラブルシューティングを行います。
+次に、応答を調べて、キャッシュされていないコンテンツに関する問題をトラブルシューティングします。
 
 {{automate-vcl-snippet-deployment}}
 
@@ -86,6 +91,6 @@ curl -svo /dev/null www.example.com/index.html
 
 <!--External link definitions-->
 
-[Fastly VCL 参照]: https://docs.fastly.com/vcl/
+[Fastly VCL リファレンス]: https://docs.fastly.com/vcl/
 
 <!-- Last updated from includes: 2025-01-27 17:16:28 -->

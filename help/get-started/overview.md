@@ -1,28 +1,32 @@
 ---
-title: Adobe Commerceの基本を学ぶ
-description: クラウドインフラストラクチャ上の新しいセルフサービス Adobe Commerceの使用を開始し、Adobe Commerce ストアを数分でビルドしてデプロイする方法を説明します。
+title: Adobe Commerce入門
+description: クラウドインフラストラクチャ上の新しいセルフサービスのAdobe Commerceを開始し、Adobe Commerce ストアを数分で構築およびデプロイする方法について説明します。
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: be93ef73-ae10-4d87-83ed-8da90bb5527c
+TQID: https://experienceleague.adobe.com/Dc7EadNPF5I2NrEZKD2TvV9otmLoN6-gnTF-c2k20wA
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: 172
 ht-degree: 0%
 
 ---
 
-# Cloud 上のAdobe Commerceの概要
+# Adobe Commerce Cloud版の基本を学ぶ
 
-Adobe Commerceへようこそ。
+Adobe Commerceへようこそ！
 
-「はじめに」の節では、Adobe Commerce アカウントを初期化して [!DNL Cloud Console] にアクセスするための手順を説明しています。 各トピックの下部にある _次のステップ_ リンクをクリックすると、次の概念と手順が開きます。 各トピックは、前のトピックに基づいて、新しいタスクと学習リンクを追加しています。
+「基本を学ぶ」セクションでは、Adobe Commerce アカウントを初期化し、[!DNL Cloud Console]にアクセスする手順を説明します。 各トピックの下部にある&#x200B;_次の手順_ リンクをクリックすると、次の概念と手順が開きます。 各トピックは、新しいタスクや学習リンクにより、以前のトピックの上に構築されます。
 
-このガイドは、[!DNL Commerce] アプリケーションに関する実用的な知識と理解があることを前提としています。 最新のCommerce開発者およびCommerce ユーザーガイドを参照できます。
+このガイドでは、[!DNL Commerce] アプリケーションに関する実務的な知識と理解を有していることを前提としています。 最新のCommerce DeveloperおよびCommerce ユーザーガイドを参照できます。
 
-- [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト） – 高度な機能を開発、カスタマイズ、統合、拡張、使用します
+- [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） - Commerce プロジェクトの計画、実装、運用、アップグレード、保守
+- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League）:Commerce プロジェクトの計画、実装、操作、アップグレード、保守
 
 >[!TIP]
 >
->クラウドインフラストラクチャプロジェクトでAdobe Commerceを初期化するためのウェルカムコールの準備をします。
+>Adobe Commerce on cloud infrastructure プロジェクトを初期化するためのウェルカムコールの準備をします。
 >
->**次の手順**:[Cloud でのCommerceのプロビジョニング &#x200B;](new-project.md)
+>**次の手順**: [ クラウドでのCommerceのプロビジョニング ](new-project.md)

@@ -1,16 +1,20 @@
 ---
-title: サイトマップと検索エンジンロボットを追加
-description: クラウドインフラストラクチャー上でサイトマップと検索エンジンロボットをAdobe Commerceに追加する方法を説明します。
+title: サイトマップと検索エンジンロボットを追加する
+description: Adobe Commerce on cloud infrastructureにサイトマップと検索エンジンロボットを追加する方法について説明します。
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
+TQID: https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: 612
 ht-degree: 0%
 
 ---
 
-# サイトマップと検索エンジンロボットを追加
+# サイトマップと検索エンジンロボットを追加する
 
 `sitemap.xml` ファイルを生成してルートディレクトリに書き込もうとすると、次のエラーが発生します。
 
@@ -18,50 +22,50 @@ ht-degree: 0%
 Please make sure that "/" is writable by the web-server.
 ```
 
-クラウドインフラストラクチャー上のAdobe Commerceでは、`var`、`pub/media`、`pub/static`、`app/etc` など、特定のディレクトリにのみ書き込むことができます。 管理パネルを使用して `sitemap.xml` ファイルを生成する場合は、`/media/` パスを指定する必要があります。
+Adobe Commerce クラウド基盤では、`var`、`pub/media`、`pub/static`、`app/etc`などの特定のディレクトリにのみ書き込むことができます。 管理パネルを使用して`sitemap.xml` ファイルを生成する場合は、`/media/` パスを指定する必要があります。
 
-`robots.txt` ファイルは、オンデマンドで `robots.txt` コンテンツを生成してデータベースに保存するので、生成する必要はありません。 `<domain.your.project>/robots.txt` または `<domain.your.project>/robots` のリンクを使用して、ブラウザーでコンテンツを表示できます。
+`robots.txt` ファイルは、オンデマンドで`robots.txt` コンテンツを生成し、データベースに保存するため、生成する必要はありません。 `<domain.your.project>/robots.txt`または`<domain.your.project>/robots` リンクを使用すると、ブラウザーでコンテンツを表示できます。
 
-これには、更新された `.magento.app.yaml` ファイルを含む ECE-Tools バージョン 2002.0.12 以降が必要です。 [magento-cloud リポジトリー &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49) のこれらのルールの例を参照してください。
+これには、ECE-Tools バージョン 2002.0.12以降と、更新された`.magento.app.yaml` ファイルが必要です。 これらのルールの例については、[magento-cloud リポジトリ ](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49)を参照してください。
 
-**バージョン 2.2 以降で `sitemap.xml` ファイルを生成するには**:
+**バージョン 2.2以降**&#x200B;で`sitemap.xml` ファイルを生成するには：
 
 1. 管理者にアクセスします。
-1. _マーケティング_ メニューで、「**SEO と検索** セクションの _サイトマップ_ をクリックします。
-1. _サイトマップ_ ビューで、「**サイトマップを追加**」をクリックします。
+1. _マーケティング_ メニューで、_SEOと検索_ セクションの&#x200B;**サイトマップ**&#x200B;をクリックします。
+1. _サイトマップ_&#x200B;表示で、**サイトマップを追加**&#x200B;をクリックします。
 1. _新しいサイトマップ_ ビューで、次の値を入力します。
 
    - **ファイル名**:`sitemap.xml`
    - **パス**:`/media/`
 
-1. **保存して生成** をクリックします。 新しいサイトマップが _サイトマップ_ グリッドで使用できるようになります。
-1. _Googleへのリンク_ 列のパスをクリックします。
+1. 「**保存して生成**」をクリックします。 新しいサイトマップは、_サイトマップ_ グリッドで利用できるようになります。
+1. Google _の_ リンク列のパスをクリックします。
 
-**コンテンツを `robots.txt` ファイルに追加するには**:
+**コンテンツを`robots.txt` ファイル**&#x200B;に追加するには：
 
 1. 管理者にアクセスします。
-1. _コンテンツ_ メニューで、「**デザイン** セクションの _設定_ をクリックします。
-1. _デザイン設定_ ビューで、「**アクション** 列の web サイトの _編集_ をクリックします。
-1. _メイン Web サイト_ ビューで、「**検索エンジンロボット**」をクリックします。
-1. 「**robots.txt のカスタム命令を編集**」フィールドを更新します。
-1. **設定を保存** をクリックします。
-1. ブラウザーで `<domain.your.project>/robots.txt` ファイルまたは `<domain.your.project>/robots` URL を確認します。
+1. _コンテンツ_ メニューで、「_デザイン_」セクションの「**設定**」をクリックします。
+1. _デザイン設定_ ビューで、_アクション_&#x200B;列のweb サイトの&#x200B;**編集**&#x200B;をクリックします。
+1. _メイン Web サイト_ ビューで、**検索エンジン ロボット**&#x200B;をクリックします。
+1. robots.txt **フィールドの** Edit カスタム命令を更新します。
+1. 「**設定を保存**」をクリックします。
+1. ブラウザーで`<domain.your.project>/robots.txt` ファイルまたは`<domain.your.project>/robots` URLを確認します。
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで `404 error` が生成された場合は、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、`/robots.txt` から `/media/robots.txt` へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 
-異なるドメインがあり、個別のサイトマップが必要な場合は、適切なサイトマップにルーティングする VCL を作成できます。 上記のように、管理パネルで `sitemap.xml` ファイルを生成し、リダイレクトを管理するカスタム Fastly VCL スニペットを作成します。 [Custom Fastly VCL スニペット &#x200B;](../cdn/fastly-vcl-custom-snippets.md) を参照してください。
+ドメインが異なり、個別のサイトマップが必要な場合は、VCLを作成して適切なサイトマップにルーティングできます。 前述のように、管理パネルで`sitemap.xml` ファイルを生成し、カスタム Fastly VCL スニペットを作成してリダイレクトを管理します。 [ カスタム Fastly VCL スニペット ](../cdn/fastly-vcl-custom-snippets.md)を参照してください。
 
 >[!NOTE]
 >
-> 管理 UI から、または Fastly API を使用して、カスタム VCL スニペットをアップロードできます。 [&#x200B; カスタム VCL スニペットの例とチュートリアル &#x200B;](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code) を参照してください。
+> カスタム VCL スニペットは、Admin UIまたはFastly APIを使用してアップロードできます。 [ カスタム VCL スニペットの例とチュートリアル ](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code)を参照してください。
 
-### リダイレクトに Fastly VCL スニペットを使用
+### リダイレクトにFastly VCL スニペットを使用する
 
-カスタム VCL スニペットを作成し、`sitemap.xml` と `/media/sitemap.xml` のキーと値のペアを使用して、`type` のパスを書き換えて `content` きます。
+`type`と`content`のキーと値のペアを使用して`sitemap.xml`から`/media/sitemap.xml`までのパスを書き換えるカスタム VCL スニペットを作成します。
 
 ```json
 {
@@ -73,7 +77,7 @@ Please make sure that "/" is writable by the web-server.
 }
 ```
 
-次の例は、`robots.txt` および `sitemap.xml` のパスを `/media/robots.txt` および `/media/sitemap.xml` に書き換える方法を示しています
+次の例は、`robots.txt`および`sitemap.xml`のパスを`/media/robots.txt`および`/media/sitemap.xml`に書き換える方法を示しています
 
 ```json
 {
@@ -85,9 +89,9 @@ Please make sure that "/" is writable by the web-server.
 }
 ```
 
-**特定のドメインリダイレクトに Fastly VCL スニペットを使用するには**:
+**特定のドメインリダイレクトにFastly VCL スニペットを使用するには**:
 
-ドメインが `pub/media/domain_robots.txt` の `domain.com` ファイルを作成し、次の VCL スニペットを使用します。
+ドメインが`domain.com`の`pub/media/domain_robots.txt` ファイルを作成し、次のVCL スニペットを使用します。
 
 ```json
 {
@@ -99,9 +103,9 @@ Please make sure that "/" is writable by the web-server.
 }
 ```
 
-VCL スニペットは `http://domain.com/robots.txt` をルートし、`pub/media/domain_robots.txt` ファイルを表示します。
+VCL スニペットは`http://domain.com/robots.txt`をルーティングし、`pub/media/domain_robots.txt` ファイルを表示します。
 
-単一のスニペット内で `robots.txt` と `sitemap.xml` のリダイレクトを設定するには、`pub/media/domain_robots.txt` ファイルと `pub/media/domain_sitemap.xml` ファイルを作成します。ここで、ドメインは `domain.com` で、次の VCL スニペットを使用します。
+単一のスニペットで`robots.txt`と`sitemap.xml`のリダイレクトを設定するには、`pub/media/domain_robots.txt`と`pub/media/domain_sitemap.xml`のファイルを作成します。このファイルには、ドメインが`domain.com`あり、次のVCL スニペットを使用します。
 
 ```json
 {
@@ -113,23 +117,23 @@ VCL スニペットは `http://domain.com/robots.txt` をルートし、`pub/med
 }
 ```
 
-`sitemap` 管理設定では、`pub/media/` ではなく `/` を使用してファイルの場所を指定する必要があります。
+`sitemap`管理者設定では、`/`ではなく`pub/media/`を使用してファイルの場所を指定する必要があります。
 
 ### 検索エンジンによるインデックス作成の設定
 
-実稼動環境で `robots.txt` のカスタマイズを有効にするには、Cloud Console のプロジェクト設定で、「`<environment-name>`」オプションの検索エンジンによるインデックス作成を有効にします。
+実稼動環境で`robots.txt` カスタマイズをアクティブ化するには、Cloud Consoleのプロジェクト設定の`<environment-name>` オプションに対する検索エンジンによるインデックス作成を有効にします。
 
-- 従来の Cloud Console - URL はパターン `https://<region-id>.magento.cloud/projects/<project_id>` に従います。
+- レガシークラウドコンソール - URLはパターン `https://<region-id>.magento.cloud/projects/<project_id>`に従います
 
-  [!UICONTROL Indexing by search engines] （従来のコンソール） [!UICONTROL Hide from search engines] （Adobe コンソール）の設定を **オン** に切り替えます。
+  設定[!UICONTROL Indexing by search engines] （Legacy Console） [!UICONTROL Hide from search engines] （Adobe Console）を&#x200B;**On**&#x200B;に切り替えます。
 
-  ![[!DNL Cloud Console] を使用した環境の管理 &#x200B;](../../assets/robots-indexing-by-search-engine.png)
+  ![環境の管理に[!DNL Cloud Console]を使用](../../assets/robots-indexing-by-search-engine.png)
 
-- Adobe Cloud Console - URL はパターン ``https://console.adobecommerce.com/<username>/<project_id>`` に従います。
+- Adobe Cloud Console - URLはパターン ``https://console.adobecommerce.com/<username>/<project_id>``に従います
 
-  設定 [!UICONTROL Hide from search engines] のチェックを外します。
+  設定[!UICONTROL Hide from search engines]のチェックを外します。
 
-- また、magento-cloud CLI を使用してこの設定を更新することもできます。
+- magento-cloud CLIを使用して、この設定を更新することもできます。
 
   ```bash
   magento-cloud environment:info -p <project_id> -e production restrict_robots false
@@ -137,7 +141,7 @@ VCL スニペットは `http://domain.com/robots.txt` をルートし、`pub/med
 
 >[!NOTE]
 >
->- 検索エンジンによるインデックス作成は、実稼動環境でのみ有効にできますが、下位環境では有効にできません。
+>- 検索エンジンによるインデックス作成は、実稼動環境でのみ有効にできますが、下位の環境では有効にできません。
 >
->- PWA Studio許可リストに加えるを使用していて、設定済みの `robots.txt` ファイルにアクセスできない場合は、`robots.txt`Front Name[&#128279;](https://github.com/magento/magento2-upward-connector#front-name-allowlist)Stores **/Configuration/** General **/** Web **/UPWARD PWA Configuration に** を追加します。
+>- PWA Studioを使用しており、設定した`robots.txt` ファイルにアクセスできない場合は、**Stores**/Configuration > **General** > **Web**/UPWARD PWA Configurationの[Front Name 許可リストに加える](https://github.com/magento/magento2-upward-connector#front-name-allowlist)に`robots.txt`を追加します。
 

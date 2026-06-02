@@ -2,13 +2,18 @@
 title: Commerce on Cloud Infrastructure
 description: クラウドインフラストラクチャー上で Commerce を構築、デプロイ、管理する方法を学びます。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 37505db0488204c40ca37356c4d496bba73c537f
+TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: efe0f95c16d9aab9af6a9c263034b08dce4d7c93
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: 323
 ht-degree: 3%
 
 ---
-
 
 # Commerce on Cloud Infrastructure
 
@@ -19,13 +24,13 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 - 高度にカスタマイズ可能な環境設定ファイルとコマンドラインインターフェイス（CLI）ツールの管理とデプロイ。
 - Amazon Web Services（AWS）ホスティングは、オンライン販売と小売業のための拡張性と安全性の高い環境を提供します。
 
-![&#x200B; クラウドのメリット &#x200B;](../assets/CloudBenefits.svg)
+![ クラウドのメリット ](../assets/CloudBenefits.svg)
 
 >[!NOTE]
 >
->セキュリティについて詳しくは、[&#x200B; セキュリティ起動チェックリスト &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)を参照してください。
+>セキュリティについて詳しくは、[ セキュリティ起動チェックリスト ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)を参照してください。
 
-[&#x200B; テクノロジースタック &#x200B;](architecture/tech-stack.md)の詳細を確認するか、[Commerceのクラウドアーキテクチャ &#x200B;](architecture/cloud-architecture.md)の特定の機能とサポート対象の製品について詳しく確認します。
+[ テクノロジースタック ](architecture/tech-stack.md)の詳細を確認するか、[Commerceのクラウドアーキテクチャ ](architecture/cloud-architecture.md)の特定の機能とサポート対象の製品について詳しく確認します。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -58,9 +63,9 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 Commerce on cloud インフラストラクチャガイドでは、Adobe Commerce アプリケーションに関する実務的な知識と理解を有していることを前提としています。 以下の[!DNL Commerce]開発者およびユーザーガイドを参照してください。
 
-- [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
+- [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
+- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
 
 {{$include /help/_includes/templated/whats-new.md}}
 

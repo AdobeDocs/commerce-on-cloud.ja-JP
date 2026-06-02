@@ -1,26 +1,29 @@
 ---
-title: パフォーマンスの監視
-description: クラウドインフラストラクチャー上のAdobe Commerceのパフォーマンス監視について説明します。
+title: パフォーマンス監視
+description: Adobe Commerce on cloud infrastructureのパフォーマンスモニタリングについて説明します。
 feature: Cloud, Observability
 topic: Performance
 exl-id: 51e371cf-8374-4dae-8e5a-f31477dc59c1
-source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
+TQID: https://experienceleague.adobe.com/m90Dn1QULOga6Q-Rlq6bvfYkN2FXd3k1GRkpAvayuig
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: 154
 ht-degree: 0%
 
 ---
 
 # パフォーマンス監視
 
-以下のサービスを使用して、クラウド環境のパフォーマンスを監視できます。
+次のサービスを使用して、クラウド環境のパフォーマンスを監視できます。
 
-- [&#x200B; 正常性通知 &#x200B;](../integrations/health-notifications.md) - Starter および Pro 統合環境でディスク容量アラートを提供する統合。
-- [Adobe Commerceの監視ガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/observation-for-adobe-commerce/intro) – 複数のソースからのログデータを組み合わせたすべてのCommerce サイトの包括的なモニタリングにより、Adobe Commerce サイトのパフォーマンスをより適切に管理し、問題を診断できます。
-- [&#x200B; 運用上のテレメトリサービス &#x200B;](operational-telemetry.md) - ストアフロント上のクライアントサイドトラフィックのパフォーマンス監視。
+- [ ヘルス通知](../integrations/health-notifications.md) - StarterおよびPro統合環境でディスク容量アラートを提供する統合。
+- [Adobe Commerce向け観察ガイド ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/observation-for-adobe-commerce/intro)：複数のソースからのログデータを組み合わせたすべてのCommerce サイトを包括的にモニタリングして、Adobe Commerce サイトのパフォーマンスをより適切に管理し、問題を診断します。
+- [運用テレメトリ サービス ](operational-telemetry.md) - ストアフロントのクライアント側トラフィックのパフォーマンス監視。
 
 ## New Relic サービス
 
-[&#x200B; パフォーマンス監視用のAdobe Commerce サービス &#x200B;](new-relic-service.md) を使用して、ステージング環境および実稼動環境でNew Relicのパフォーマンスを監視します。
+[Adobe Commerce サービスを使用して、ステージング環境と実稼動環境でNew Relicのパフォーマンスを監視してパフォーマンスを監視](new-relic-service.md)。
 
-- [Adobe管理アラート ポリシー &#x200B;](investigate-performance.md#monitor-performance-with-managed-alerts) – さまざまなパフォーマンス メトリックを追跡し、サイトのインフラストラクチャまたはアプリケーションの問題がパフォーマンスに影響を与えた場合に、トリガーの警告および重要な通知に対するしきい値を設定するアラートの集合を含むポリシー。
+- [Adobe Managed Alerts ポリシー](investigate-performance.md#monitor-performance-with-managed-alerts) – 様々なパフォーマンス指標を追跡し、サイト インフラストラクチャまたはアプリケーションの問題がパフォーマンスに影響を与える場合に、トリガーの警告とクリティカル通知のしきい値を設定するアラートのコレクションを含むポリシー。

@@ -1,21 +1,25 @@
 ---
 title: プロファイルデータベースクエリ
-description: データベースに対する変更の影響を理解するためのプロファイルを有効にする方法を説明します。
+description: プロファイリングを有効にして、データベースに対する変更の影響を把握する方法を説明します。
 feature: Cloud, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eaa2dea-80b7-4f53-9f9d-734e811f91c0
+TQID: https://experienceleague.adobe.com/ZQZh5c7ts4osFU8oGoW3CeEIt7X1qASguPzyIm-e9-A
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: 73
 ht-degree: 0%
 
 ---
 
 # プロファイルデータベースクエリ
 
-データベースに書き込む場合は、プロファイルを実行して、これらの変更の影響を特定すると役立つ場合があります。 プロファイリングでは、データベース・クエリーのログが保持され、実行時の精度が向上します。
+データベースに書き込む際には、プロファイリングを実行して、変更の影響を特定すると便利です。 プロファイリングによって、データベースクエリのログが保持され、実行時の精度が向上します。
 
-**データベース・クエリー・プロファイリングを使用可能にする手順は、次のとおりです**。
+**データベース クエリ プロファイリングを有効にするには**:
 
-1. [&#x200B; データベースにログインします &#x200B;](../services/mysql.md#connect-to-the-database)。
+1. [ データベース ](../services/mysql.md#connect-to-the-database)にログインします。
 
 1. プロファイルを有効にします。
 
