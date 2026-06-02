@@ -1,25 +1,34 @@
 ---
 title: 静的ファイルのキャッシュの設定
-description: アプリケーション設定ファイルでキャッシュストレージオプション  [!DNL Commerce]  設定する方法を説明します。
+description: ' [!DNL Commerce]  アプリケーション設定ファイルでキャッシュ ストレージ オプションを設定する方法を説明します。'
 feature: Cloud, Configuration, Cache, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 0f577974-85d7-4972-8f03-856aa6accaae
+TQID: https://experienceleague.adobe.com/ZA0WRB9p4Gpi7kjWxNPS5uCSfaTmrkrqxc4SgC9y9og
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: 131
 ht-degree: 0%
 
 ---
 
 # 静的ファイルのキャッシュの設定
 
-メディアおよび静的ファイルのキャッシュ TTL （time-to-live）は、`expires` キーを使用して `.magento.app.yaml` 設定ファイルに設定されます。
+メディアと静的ファイルのキャッシュ TTL （有効期間）は、`expires` キーを使用して`.magento.app.yaml`設定ファイルで設定されます。
 
 >[!NOTE]
 >
->実稼動環境を更新する前に、ステージング環境で変更をテストすることが重要です。 [Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) して、これらの環境の設定を更新するためのヘルプを入手します。
+>実稼動環境を更新する前に、ステージング環境の変更をテストすることが重要です。 これらの環境の設定を更新するヘルプについては、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信してください。
 
-1. `.magento.app.yaml` ファイルの [`web` プロパティに TTL 時間（秒単位） &#x200B;](web-property.md) 指定します。 `expires` キーは `locations` の下、または `"/media"` と `"/static"` の下に追加できます。
+1. `.magento.app.yaml` ファイルの[`web` プロパティ &#x200B;](web-property.md)でTTL時間（秒単位）を指定します。 `expires` キーは`locations`の下、または`"/media"`と`"/static"`の下に追加できます。
 
-   キャッシュの有効期限が切れないようにするには、`expires: -1` のキーと値のペアを使用します。 次の例を参照してください。
+   キャッシュの有効期限が切れるのを防ぐには、`expires: -1` キーと値のペアを使用します。 次の例を参照してください。
 
    ```yaml
    # The configuration of app when it is exposed to the web.
@@ -34,7 +43,7 @@ ht-degree: 0%
          expires: -1
    ```
 
-1. コードの変更を追加、コミット、プッシュします。
+1. コード変更を追加、コミット、プッシュします。
 
    ```bash
    git add -A && git commit -m "Set cache TTL for static files" && git push origin <branch-name>

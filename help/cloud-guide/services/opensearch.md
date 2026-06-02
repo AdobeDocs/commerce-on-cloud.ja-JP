@@ -1,37 +1,45 @@
 ---
 title: OpenSearch サービスの設定
-description: クラウドインフラストラクチャー上でAdobe Commerceの OpenSearch サービスを有効にする方法について説明します。
+description: Adobe Commerce オンクラウドインフラストラクチャでOpenSearch サービスを有効にする方法について説明します。
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
-source-git-commit: 3a81c8ef2024341e60f4767bdd6616df26f8045f
+TQID: https://experienceleague.adobe.com/DIH1i-hJKlsoFFmDsws-w6iuJ56B7dcdiJP5Zh1iRII
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: 788
 ht-degree: 0%
 
 ---
 
 # OpenSearch サービスの設定
 
-[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearch 7.10.2 のオープンソースのフォークで、Elasticsearchのライセンスの変更に従っています。 詳しくは、GitHub の [OpenSource プロジェクト &#x200B;](https://github.com/opensearch-project) を参照してください。 [&#x200B; 必要システム構成 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements) に、サポートされるバージョンを示します。
+[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearchのライセンス変更に続く、Elasticsearch 7.10.2のオープンソース フォークです。 GitHubの[OpenSource プロジェクト &#x200B;](https://github.com/opensearch-project)を参照してください。 [必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)には、サポートされているバージョンが一覧表示されます。
 
 {{elasticsearch-support}}
 
-OpenSearch を使用すると、任意のソース、任意の形式からデータを取得し、リアルタイムで検索および視覚化できます。
+OpenSearchなら、あらゆるソースやフォーマットからデータを取得し、リアルタイムで検索して可視化できます。
 
-- 製品カタログ内の製品に対するクイック検索と詳細検索
-- OpenSearch アナライザーは複数の言語をサポートしています
-- ストップワードおよび同義語のサポート
-- インデックス再作成が完了するまで、インデックス作成は顧客に影響しません
+- 商品カタログ内の商品をすばやく高度に検索
+- OpenSearch Analyzersは多言語をサポートしています
+- ストップワードと類義語をサポート
+- インデックス再作成操作が完了するまで、インデックス作成は顧客に影響しません
 
 {{service-instruction}}
 
 >[!TIP]
 >
->[Live Search](https://experienceleague.adobe.com/ja/docs/commerce/live-search/overview) を使用しないクラウドインフラストラクチャプロジェクトのAdobe Commerceの場合、Adobeでは、[!DNL OpenSearch] を設定してサードパーティの検索ツールのフォールバックオプションを提供することをお勧めします。 ただし、同じCommerce インスタンスで [!DNL OpenSearch] と [!DNL Live Search] の両方を有効にすることはできません。
+>[&#x200B; ライブサーチ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce/live-search/overview)を使用していないCloud Infrastructure プロジェクトのAdobe Commerceの場合、Adobeでは、サードパーティの検索ツールにフォールバックオプションを提供するように[!DNL OpenSearch]を設定することをお勧めします。 ただし、[!DNL OpenSearch]と[!DNL Live Search]の両方を同じCommerce インスタンスで有効にすることはできません。
 
-**OpenSearch を有効にするには**:
+**OpenSearch**&#x200B;を有効にするには：
 
-1. 統合環境の場合、適切なバージョンと割り当てられたディスク領域（MB 単位）を使用して `opensearch` サービスを `.magento/services.yaml` ファイルに追加します。 この場合、バージョン 3 が適切です。 マイナーバージョンは必要ありません。
+1. 統合環境の場合は、適切なバージョンと割り当てられたディスク容量がMBの`.magento/services.yaml` ファイルに`opensearch` サービスを追加します。 この場合、バージョン 3が適切です。 マイナーバージョンは必要ありません。
 
    ```yaml
    opensearch:
@@ -39,16 +47,16 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境で OpenSearch バージョンを変更するには、[Adobe Commerce サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket) する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境でOpenSearch バージョンを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
 
-1. `relationships` ファイルの `.magento.app.yaml` プロパティを設定または確認します。
+1. `.magento.app.yaml` ファイルの`relationships` プロパティを設定または検証します。
 
    ```yaml
    relationships:
        opensearch: "opensearch:opensearch"
    ```
 
-1. コードの変更を追加、コミットおよびプッシュします。
+1. コードの変更を追加、コミット、プッシュします。
 
    ```bash
    git add .magento/services.yaml .magento.app.yaml
@@ -62,21 +70,21 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
    git push origin <branch-name>
    ```
 
-   これらの変更が環境に与える影響について詳しくは、[&#x200B; サービスの設定 &#x200B;](services-yaml.md) を参照してください。
+   これらの変更が環境にどのような影響を与えるかについては、[&#x200B; サービスの設定](services-yaml.md)を参照してください。
 
-1. デプロイメントプロセスが完了したら、SSH を使用してリモート環境にログインします。
+1. デプロイメントプロセスが完了したら、SSHを使用してリモート環境にログインします。
 
    ```bash
    magento-cloud ssh
    ```
 
-1. カタログ検索インデックスを再インデックス化します。
+1. カタログ検索インデックスのインデックスを再作成します。
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
    ```
 
-1. キャッシュをクリーンアップします。
+1. キャッシュをクリーニングします。
 
    ```bash
    bin/magento cache:clean
@@ -86,25 +94,25 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 ## OpenSearch ソフトウェアの互換性
 
-クラウドインフラストラクチャプロジェクトでAdobe Commerceをインストールまたはアップグレードする際は、常に OpenSearch サービスのバージョンと、Adobe Commerce用の [OpenSearch PHP](https://github.com/opensearch-project/opensearch-php) クライアントとの互換性を確認してください。
+Adobe Commerce on cloud infrastructure プロジェクトをインストールまたはアップグレードする場合は、常にOpenSearch サービスのバージョンとAdobe Commerce用の[OpenSearch PHP](https://github.com/opensearch-project/opensearch-php) クライアントとの互換性を確認してください。
 
-- **初回セットアップ**- `services.yaml` ファイルで指定された OpenSearch バージョンが、Adobe Commerce用に設定された OpenSearch PHP クライアントと互換性があることを確認します。
+- **初回設定**- `services.yaml` ファイルで指定されたOpenSearch バージョンが、Adobe Commerce用に設定されたOpenSearch PHP クライアントと互換性があることを確認します。
 
-- **プロジェクトのアップグレード** – 新しいアプリケーションバージョンの OpenSearch PHP クライアントが、クラウドインフラストラクチャにインストールされた OpenSearch サービスバージョンと互換性があることを確認します。
+- **プロジェクトのアップグレード** – 新しいアプリケーション バージョンのOpenSearch PHP クライアントが、クラウド インフラストラクチャにインストールされているOpenSearch サービス バージョンと互換性があることを確認します。
 
-サービスのバージョンと互換性のサポートは、Cloud Infrastructure でテストおよびデプロイされたバージョンによって決まり、Adobe Commerceのオンプレミスデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、『インストール ガイド [&#x200B; の &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)_システム要件_ を参照してください。
+サービスのバージョンと互換性のサポートは、クラウドインフラストラクチャでテストおよびデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、_インストールガイド_&#x200B;の[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
 
 **OpenSearch ソフトウェアの互換性を確認するには**:
 
-1. ローカルワークステーションで、をプロジェクトディレクトリに変更します。
+1. ローカル ワークステーションで、プロジェクト ディレクトリに移動します。
 
-1. アクティブな環境の OpenSearch の詳細を表示します。
+1. アクティブな環境のOpenSearchの詳細を表示します。
 
    ```bash
    magento-cloud relationships --property=opensearch
    ```
 
-1. または、SSH を使用してリモート環境にログインすることもできます。
+1. また、SSHを使用してリモート環境にログインすることもできます。
 
    ```bash
    magento-cloud ssh
@@ -116,7 +124,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
    vendor/bin/ece-tools env:config:show services
    ```
 
-   応答で、OpenSearch サービスエンドポイントの IP アドレスとポートを見つけます。
+   応答で、OpenSearch サービスエンドポイントのIP アドレスとポートを見つけます。
 
    ```
    +------------------------------------------+--------------------------------------------------------+
@@ -140,7 +148,7 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
    | host_mapped                              | false                                                  |
    ```
 
-1. サービスエンドポイントから、インストールされている OpenSearch サービス `version:number` を取得します。
+1. インストールされたOpenSearch サービス `version:number`をサービス エンドポイントから取得します。
 
    ```bash
    curl -XGET <opensearch-service-endpoint-ip-address>:9200
@@ -170,21 +178,21 @@ OpenSearch を使用すると、任意のソース、任意の形式からデー
 
 ## OpenSearch サービスを再起動します
 
-OpenSearch サービスを再起動する必要がある場合は、Adobe Commerce サポートに連絡してください。
+OpenSearch サービスを再起動する必要がある場合は、Adobe Commerce サポートにお問い合わせください。
 
 ## 追加の検索設定
 
-- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイメント間でカスタム検索設定を保持できます。 [&#x200B; 変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration) を参照してください。
+- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイ間でカスタム検索設定を保持できます。 [変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration)を参照してください。
 
-- プロジェクトの OpenSearch サービスを設定した後、管理 UI を使用して OpenSearch 接続をテストし、Adobe Commerceの OpenSearch 設定をカスタマイズします。
+- プロジェクトにOpenSearch サービスを設定したら、Admin UIを使用してOpenSearch接続をテストし、Adobe CommerceのOpenSearch設定をカスタマイズします。
 
-### OpenSearch 用プラグインの追加
+### OpenSearchのプラグインを追加
 
-オプションで、`configuration:plugins` ファイルの OpenSearch サービスに `.magento/services.yaml` セクションを追加することで、OpenSearch 用のプラグインを追加できます。 例えば、次のコードは ICU 分析と音声分析プラグインを有効にします。
+オプションとして、`.magento/services.yaml` ファイルのOpenSearch サービスに`configuration:plugins` セクションを追加することで、OpenSearch用のプラグインを追加できます。 例えば、次のコードでは、ICU解析と音声解析プラグインを有効にします。
 
 >[!NOTE]
 >
->これは、統合環境とスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境にプラグインをインストールするには、[&#x200B; サポートリクエストを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) します。
+>これは、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターにプラグインをインストールするには、[&#x200B; サポートリクエストを送信](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)してください。
 
 
 ```yaml
@@ -197,21 +205,21 @@ opensearch:
             - analysis-phonetic
 ```
 
-プラグインについて詳しくは、[OpenSearch プロジェクト &#x200B;](https://github.com/opensearch-project) を参照してください。
+プラグインについて詳しくは、[OpenSearch プロジェクト &#x200B;](https://github.com/opensearch-project)を参照してください。
 
-### OpenSearch のプラグインを削除
+### OpenSearchのプラグインを削除
 
-`opensearch:` ファイルの `.magento/services.yaml` セクションからプラグイン エントリを削除しても、サービスはアンインストールまたは無効化 **されません**。 このサービスを完全に無効にするには、`.magento/services.yaml` ファイルからプラグインを削除した後、OpenSearch データのインデックスを再作成する必要があります。 この設計により、これらのプラグインに依存するデータの損失や破損を防ぐことができます。
+`.magento/services.yaml` ファイルの`opensearch:` セクションからプラグインエントリを削除すると、**not**&#x200B;がサービスをアンインストールまたは無効にしません。 サービスを完全に無効にするには、`.magento/services.yaml` ファイルからプラグインを削除した後、OpenSearch データを再インデックスする必要があります。 このデザインは、これらのプラグインに依存するデータの可能性のある損失や破損を防ぎます。
 
 
 **OpenSearch プラグインを削除するには**:
 
 >[!NOTE]
 >
->この変更は、統合およびスターター環境にのみ適用されます。 実稼動クラスターまたはステージング環境でプラグインを削除するには、[&#x200B; サポートチケットを送信 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) する必要があります。
+>この変更は、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターでプラグインを削除するには、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信する必要があります。
 
-1. `.magento/services.yaml` ファイルから OpenSearch プラグインのエントリを削除します。
-1. コードの変更を追加、コミット、プッシュします。
+1. OpenSearch プラグインのエントリを`.magento/services.yaml` ファイルから削除します。
+1. コード変更を追加、コミット、プッシュします。
 
    ```bash
    git add .magento/services.yaml
@@ -225,14 +233,14 @@ opensearch:
    git push origin <branch-name>
    ```
 
-1. `.magento/services.yaml` の変更をクラウドリポジトリにコミットします。
-1. カタログ検索インデックスを再インデックス化します（すべての環境：統合、スターター、Pro ステージング、実稼動クラスター）。
+1. `.magento/services.yaml`の変更をクラウドリポジトリにコミットします。
+1. カタログ検索インデックスのインデックスを再作成します（すべての環境：統合、スターター、プロステージング、実稼動クラスター）。
 
    ```bash
    bin/magento indexer:reindex catalogsearch_fulltext
    ```
 
-1. キャッシュをクリーンアップします。
+1. キャッシュをクリーニングします。
 
    ```bash
    bin/magento cache:clean

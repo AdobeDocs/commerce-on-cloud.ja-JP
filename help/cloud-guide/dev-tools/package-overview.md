@@ -1,23 +1,31 @@
 ---
 title: '[!DNL ECE-Tools] パッケージ'
-description: パッケージの概要と、パッケ  [!DNL ECE-Tools]  ジを使用してAdobe Commerceを管理およびデプロイする方法について説明します。
+description: ' [!DNL ECE-Tools]  パッケージと、Adobe Commerceの管理とデプロイにどのように役立つかについて説明します。'
 exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
-source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
+TQID: https://experienceleague.adobe.com/YMuy2Ta0Ylkewxb2EhQgpZG8WW8bG4kFzrCXm0A7rX0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: 450
 ht-degree: 0%
 
 ---
 
 # ECE-Tools パッケージ
 
-[!DNL ECE-Tools] パッケージは、[!DNL Commerce] アプリケーションを管理およびデプロイするために設計された一連のスクリプトとツールです。 `ece-tools` パッケージを使用すると、cron ジョブの管理、プロジェクト設定の検証、Adobeのパッチやホットフィックスの適用など、多くのプロセスを簡単に実行できます。 [GitHub のオープンソース  [!DNL ECE-Tools]  コードリポジトリ &#x200B;](https://github.com/magento/ece-tools) を表示し、投稿できます。
+[!DNL ECE-Tools] パッケージは、[!DNL Commerce] アプリケーションを管理およびデプロイするために設計されたスクリプトとツールのセットです。 `ece-tools` パッケージは、cron ジョブの管理、プロジェクト設定の検証、Adobeのパッチとホットフィックスの適用など、多くのプロセスを簡素化します。 GitHub[&#128279;](https://github.com/magento/ece-tools)で オープンソース  [!DNL ECE-Tools]  コードリポジトリを表示して貢献できます。
 
 {{ece-tools-package}}
 
-`ece-tools` パッケージは、バージョン 2.1.4 以降のAdobe Commerceと互換性があり、コードの管理とプロジェクトの自動ビルドおよびデプロイに役立つ、クラウドインフラストラクチャコマンド上のスクリプトおよびAdobe Commerceが含まれています。
+`ece-tools` パッケージは、バージョン 2.1.4以降のAdobe Commerceと互換性があり、コードの管理とプロジェクトの自動ビルドおよびデプロイに役立つスクリプトとAdobe Commerce on cloud infrastructure コマンドが含まれています。
 
-使用可能な `ece-tools` コマンドを次に示します。
+使用可能な`ece-tools` コマンドを次に示します。
 
 ```bash
 php ./vendor/bin/ece-tools list
@@ -25,17 +33,17 @@ php ./vendor/bin/ece-tools list
 
 ## ビルドとデプロイ
 
-`ece-tools` パッケージには、クラウドインフラストラクチャアプリケーション上でAdobe Commerceを起動する際の、ビルド、デプロイ、およびデプロイ後の段階で操作を実行するコマンドが含まれています。 例えば、`php ./vendor/bin/ece-tools build` コマンドは、アプリケーションビルドプロセスを開始します。
+`ece-tools` パッケージには、Adobe Commerce on cloud infrastructure アプリケーションを起動するビルド、デプロイ、デプロイ後の各ステージの操作を実行するコマンドが含まれています。 例えば、`php ./vendor/bin/ece-tools build` コマンドは、アプリケーションのビルド プロセスを開始します。
 
-デフォルトでは、これらの `ece-tools` コマンドは [&#x200B; 設定ファイルの &#x200B;](../application/hooks-property.md)hooks プロパティ `.magento.app.yaml` にあります。
+デフォルトでは、これらの`ece-tools` コマンドは`.magento.app.yaml`設定ファイルの[hook プロパティ &#x200B;](../application/hooks-property.md)にあります。
 
-## Docker 設定ジェネレーター
+## Docker設定ジェネレーター
 
-`ece-tools` パッケージには、[magento/magento-cloud-docker](https://github.com/magento/magento-cloud-docker) パッケージの依存関係が含まれています。このパッケージは、クラウドインフラストラクチャ上でAdobe Commerce用の Docker 開発環境を起動するための Docker イメージの機能と設定ファイルを提供します。 また、Cloud Docker for Commerceをスタンドアロンパッケージとして実行することもできます。 [Docker 開発 &#x200B;](../dev-tools/cloud-docker.md) を参照してください。
+`ece-tools` パッケージには、[magento/magento-cloud-docker](https://github.com/magento/magento-cloud-docker) パッケージの依存関係が含まれています。このパッケージは、Docker イメージでAdobe CommerceのDocker開発環境をクラウドインフラストラクチャ上で起動するための機能と設定ファイルを提供します。 また、Commerce用Cloud Dockerをスタンドアロンパッケージとして実行することもできます。 [Docker開発](../dev-tools/cloud-docker.md)を参照してください。
 
 ## サービス、ルート、変数
 
-`ece-tools` パッケージを使用すると、任意のクラウド環境で使用される Base64 でエンコードされた [&#x200B; クラウド変数 &#x200B;](../environment/variables-cloud.md) に関する詳細情報を表示できます。 次のコマンドは、すべてのサービス、ルート、変数を表示します。
+`ece-tools` パッケージを使用すると、任意のCloud環境で使用されているBase64 エンコードされた[Cloud variables](../environment/variables-cloud.md)に関する詳細情報を表示できます。 次のコマンドは、すべてのサービス、ルートおよび変数を示します。
 
 ```bash
 php ./vendor/bin/ece-tools env:config:show
@@ -47,9 +55,9 @@ php ./vendor/bin/ece-tools env:config:show
 php ./vendor/bin/ece-tools env:config:show <option>
 ```
 
-- `services` - `MAGENTO_CLOUD_RELATIONSHIPS` ファイルで定義された `services.yaml` 環境変数の関係データを表示します。
-- `routes` - `MAGENTO_CLOUD_ROUTES` 環境変数を使用して、プロジェクトに設定されているルートを表示します。
-- `variables` - `MAGENTO_CLOUD_VARIABLES` 環境変数を使用して、プロジェクトの設定済み変数を表示します。
+- `services` - `services.yaml` ファイルで定義されている`MAGENTO_CLOUD_RELATIONSHIPS`環境変数の関係データを表示します。
+- `routes` - `MAGENTO_CLOUD_ROUTES`環境変数を使用してプロジェクトの設定済みルートを表示します。
+- `variables` - `MAGENTO_CLOUD_VARIABLES`環境変数を使用して、プロジェクトに設定された変数を表示します。
 
 `services` オプションの出力例：
 
@@ -73,7 +81,7 @@ Magento Cloud Services:
 
 ## 環境設定の確認
 
-プロジェクトの設定を評価するのに役立つ一連の検証コマンドを使用できます。 各ウィザードのコマンドの詳細については、[&#x200B; 展開の最適化 &#x200B;](../deploy/smart-wizards.md) のセクションの _スマート ウィザード_ を参照してください。 `wizard:ideal-state` コマンドは、ビルドフェーズで自動的に実行されます。 プロジェクトの理想的な状態を確認するには：
+プロジェクトの設定を評価するのに役立つ確認コマンドのセットがあります。 各ウィザードコマンドの詳細については、「_デプロイメントの最適化_」セクションの「[&#x200B; スマートウィザード &#x200B;](../deploy/smart-wizards.md)」を参照してください。 `wizard:ideal-state` コマンドは、ビルド フェーズ中に自動的に実行されます。 プロジェクトの理想的な状態を確認するには：
 
 ```bash
 php ./vendor/bin/ece-tools wizard:ideal-state
@@ -81,17 +89,17 @@ php ./vendor/bin/ece-tools wizard:ideal-state
 
 >[!NOTE]
 >
->`wizard:ideal-state` コマンドは、リモート クラウド環境で実行する必要があります。 ローカル開発環境で実行すると、常にコマンドが `The configured state is not ideal` エラーを返します。
+>リモート クラウド環境で`wizard:ideal-state` コマンドを実行する必要があります。 このコマンドは、ローカル開発環境で実行すると、常に`The configured state is not ideal` エラーを返します。
 
-サンプル出力：
+出力サンプル：
 
 ```
 Ideal state is configured
 ```
 
-[ece-tools のリリースノート &#x200B;](../release-notes/cloud-tools-suite.md) を参照してください。
+ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)の リリースノートを参照してください。
 
 ## Adobeのパッチとカスタムパッチ
 
-`ece-tools` パッケージには、[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージの依存関係が含まれています。このパッケージは、Adobeのパッチとホットフィックスを提供し、Adobe Commerceのすべてのバージョンとクラウド環境の統合を強化し、重要な修正の迅速な配信をサポートします。 「」には、クラウドインフラストラクチャプロジェクト上のAdobe Commerceに追加するカスタムパッチも提供されます。 [&#x200B; パッチの適用 &#x200B;](../development/apply-patches.md) を参照してください。
+`ece-tools` パッケージには、[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージの依存関係が含まれています。このパッケージは、Adobeのパッチとホットフィックスを提供し、すべてのAdobe Commerce バージョンとCloud環境の統合を向上させ、重要な修正の迅速な提供をサポートします。 「」は、Adobe Commerce on cloud infrastructure プロジェクトに追加するカスタムパッチも提供します。 [&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
 

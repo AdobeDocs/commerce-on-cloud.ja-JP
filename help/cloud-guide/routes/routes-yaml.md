@@ -1,19 +1,28 @@
 ---
 title: ルートの設定
-description: クラウドインフラストラクチャ環境でAdobe Commerceの受信 HTTPS リクエストのルートを定義する方法について説明します。
+description: Adobe Commerce on cloud infrastructure環境に対する受信HTTPS リクエストのルートを定義する方法について説明します。
 feature: Cloud, Configuration, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0d6eefa-1122-4753-8a7c-1fa0c77590f0
+TQID: https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: 910
 ht-degree: 0%
 
 ---
 
 # ルートの設定
 
-`.magento/routes.yaml` ディレクトリの `routes.yaml` ファイルは、クラウドインフラストラクチャ統合、ステージングおよび実稼動環境でのAdobe Commerceのルートを定義します。 ルートは、受信する HTTP リクエストと HTTPS リクエストをアプリケーションがどのように処理するかを決定します。
+`.magento/routes.yaml` ディレクトリの`routes.yaml` ファイルは、クラウドインフラストラクチャのIntegration、Staging、およびProduction環境でAdobe Commerceのルートを定義します。 ルートは、アプリケーションが受信するHTTP要求とHTTPS要求をどのように処理するかを決定します。
 
-デフォルトの `routes.yaml` ファイルは、単一のデフォルトドメインを持つプロジェクトと、複数のドメインに対して設定されたプロジェクトで、HTTP リクエストを HTTPS として処理するためのルートテンプレートを指定します。
+デフォルトの`routes.yaml` ファイルは、単一のデフォルトドメインを持つプロジェクトおよび複数のドメインに設定されたプロジェクトで、HTTP リクエストをHTTPSとして処理するためのルートテンプレートを指定します。
 
 ```yaml
 "http://{default}/":
@@ -24,7 +33,7 @@ ht-degree: 0%
     upstream: "mymagento:http"
 ```
 
-`magento-cloud` CLI を使用して、設定済みルートのリストを表示します。
+設定されたルートのリストを表示するには、`magento-cloud` CLIを使用します。
 
 ```bash
 magento-cloud environment:routes
@@ -36,33 +45,33 @@ magento-cloud environment:routes
 +-------------------+----------+---------------+
 ```
 
-## Pro 環境の設定アップデート
+## Pro環境の設定の更新
 
 {{pro-self-service-warning}}
 
 ## ルートテンプレート
 
-`routes.yaml` ファイルは、テンプレート化されたルートとその設定のリストです。 ルートテンプレートでは、以下のプレースホルダーを使用できます。
+`routes.yaml` ファイルは、テンプレート化されたルートとその設定のリストです。 ルートテンプレートでは、次のプレースホルダーを使用できます。
 
 - `{default}` プレースホルダーは、プロジェクトのデフォルトとして設定された修飾ドメイン名を表します。
 
-  例えば、デフォルトのドメイン `example.com` と次のルートテンプレートを使用するプロジェクトの場合は、
+  例えば、デフォルトドメイン `example.com`と次のルートテンプレートを持つプロジェクトの場合です。
 
   ```text
   https://www.{default}/
   https://{default}/blog
   ```
 
-  これらのテンプレートは、実稼動環境では次の URL に解決されます。
+  これらのテンプレートは、実稼動環境の次のURLに解決されます。
 
   ```text
   https://www.example.com/
   https://example.com/blog
   ```
 
-- `{all}` プレースホルダーには、プロジェクトに設定されたすべてのドメイン名が表示されます。
+- `{all}` プレースホルダーは、プロジェクトに設定されたすべてのドメイン名を表します。
 
-  例えば、次のルートテンプレートを持つ `example.com` ドメインと `example1.com` ドメインを持つプロジェクトでは、
+  例えば、次のルートテンプレートを持つ`example.com`および`example1.com` ドメインを持つプロジェクトの場合：
 
   ```text
   https://www.{all}/
@@ -70,7 +79,7 @@ magento-cloud environment:routes
   https://{all}/blog
   ```
 
-  これらのテンプレートは、プロジェクト内のすべてのドメインの次のルートに解決されます。
+  これらのテンプレートは、プロジェクト内のすべてのドメインに対して次のルートに解決されます。
 
   ```text
   https://www.example.com/
@@ -82,17 +91,17 @@ magento-cloud environment:routes
   https://example1.com/blog
   ```
 
-  `{all}` プレースホルダーは、複数のドメイン用に設定されたプロジェクトに役立ちます。 実稼動以外のブランチでは、`{all}` は各ドメインのプロジェクト ID と環境 ID に置き換えられます。
+  `{all}` プレースホルダーは、複数のドメイン用に設定されたプロジェクトに便利です。 実稼動以外のブランチでは、`{all}`は各ドメインのプロジェクト IDと環境IDに置き換えられます。
 
-  プロジェクトにドメインが設定されていない場合（開発時に一般的）、`{all}` プレースホルダーは `{default}` プレースホルダーと同じ方法で動作します。
+  プロジェクトにドメインが設定されていない場合（開発中に一般的なドメイン）、`{all}` プレースホルダーは、`{default}` プレースホルダーと同じように動作します。
 
-Adobe Commerceは、アクティブな統合環境ごとにルートも生成します。 統合環境の場合、`{default}` のプレースホルダーは次のドメイン名に置き換えられます。
+また、Adobe Commerceは、アクティブな統合環境ごとにルートを生成します。 統合環境の場合、`{default}` プレースホルダーは次のドメイン名に置き換えられます。
 
 ```text
 [branch]-[per-environment-random-string]-[project-id].[region].magentosite.cloud
 ```
 
-例えば、`us` クラスターでホストされる `mswy7hzcuhcjw` プロジェクトの `refactorcss` ブランチには、次のドメインがあります。
+例えば、`us` クラスターでホストされている`mswy7hzcuhcjw` プロジェクトの`refactorcss` ブランチには、次のドメインがあります。
 
 ```text
 https://refactorcss-oy3m2pq-mswy7hzcuhcjw.us.magentosite.cloud/
@@ -100,11 +109,11 @@ https://refactorcss-oy3m2pq-mswy7hzcuhcjw.us.magentosite.cloud/
 
 >[!NOTE]
 >
->クラウドプロジェクトが複数のストアをサポートしている場合は、[&#x200B; 複数の web サイトまたはストア &#x200B;](../store/multiple-sites.md) のルート設定手順に従います。
+>Cloud プロジェクトで複数のストアをサポートしている場合は、[複数のweb サイトまたはストア &#x200B;](../store/multiple-sites.md)のルート設定手順に従います。
 
 ### 末尾のスラッシュ
 
-ルート定義には、フォルダーまたはディレクトリを示す末尾のスラッシュが含まれています。ただし、末尾のスラッシュの有無にかかわらず、同じコンテンツを提供できます。 次の URL は同じように解決されますが、_2 つの異なる_ URL として解釈される可能性があります。
+ルート定義には、フォルダーまたはディレクトリを示す末尾のスラッシュが含まれていますが、同じコンテンツを末尾のスラッシュの有無で提供できます。 次のURLは同じように解決されますが、_2つの異なる_ URLとして解釈できます。
 
 ```text
 https://www.example.com/blog/
@@ -114,21 +123,21 @@ https://www.example.com/blog
 
 >[!TIP]
 >
->ディレクトリには末尾のスラッシュを使用することをお勧めしますが、どちらの方法を選択する場合でも、2 つの場所を生成しないようにするために、**一貫性を維持** することが重要です。
+>ディレクトリに末尾のスラッシュを使用することをお勧めしますが、どの方法を選択しても、2つの場所を生成しないようにするには、**一貫性を維持**&#x200B;することが重要です。
 
-## ルート プロトコル
+## プロトコルのルーティング
 
-すべての環境で、HTTP と HTTPS の両方を自動的にサポートしています。
+すべての環境で、HTTPとHTTPSの両方が自動的にサポートされます。
 
-- 設定で HTTP ルートのみが指定されている場合、HTTPS ルートが自動的に作成され、リダイレクトを必要とせずにサイトが HTTP と HTTPS の両方から提供されます。
+- 設定がHTTP ルートのみを指定する場合、HTTPS ルートは自動的に作成され、リダイレクトを必要とせずにサイトをHTTPとHTTPSの両方から提供できます。
 
-  例えば、デフォルトのドメイン `example.com` と次のルートテンプレートを持つプロジェクトの場合：
+  例えば、デフォルトドメイン `example.com`と次のルートテンプレートを持つプロジェクトの場合です。
 
   ```text
   http://{default}/
   ```
 
-  このテンプレートは次の URL に解決されます。
+  このテンプレートは、次のURLに解決されます。
 
   ```text
   http://example.com/
@@ -136,15 +145,15 @@ https://www.example.com/blog
   https://example.com/
   ```
 
-- 設定で HTTPS ルートのみが指定されている場合、すべての HTTP リクエストは HTTPS にリダイレクトされます。
+- 設定でHTTPS ルートのみを指定する場合、すべてのHTTP リクエストはHTTPSにリダイレクトされます。
 
-  例えば、デフォルトのドメインを持つプロジェクト `example.com`、次のルートテンプレートを持つプロジェクトです。
+  例えば、次のルートテンプレートを持つデフォルトドメイン `example.com`を持つプロジェクトなどです。
 
   ```text
   https://{default}/
   ```
 
-  このテンプレートは次の URL に解決されます。
+  このテンプレートは次のURLに解決されます。
 
   ```text
   https://example.com/
@@ -154,9 +163,9 @@ https://www.example.com/blog
 
   `http://example.com/` ==> `https://example.com/`
 
-TLS 経由ですべてのページを提供します。 この設定では、次のいずれかの方法を使用して、暗号化されていないすべてのリクエストを TLS と同等の値にリダイレクトするように設定する必要があります。
+TLS経由ですべてのページを提供します。 この設定では、暗号化されていないすべてのリクエストのリダイレクトを、次のいずれかの方法を使用してTLS同等のリクエストに設定する必要があります。
 
-- `routes.yaml` ファイルのプロトコルを HTTPS に変更します。
+- プロトコルを`routes.yaml` ファイルのHTTPSに変更します。
 
   ```yaml
   "https://{default}/":
@@ -167,7 +176,7 @@ TLS 経由ですべてのページを提供します。 この設定では、次
       upstream: "mymagento:http"
   ```
 
-- ステージング環境と実稼動環境の場合は、管理 UI から「[Fastly で TLS を強制 &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ja)」オプションを有効にします。 このオプションを使用すると、Fastly は HTTPS へのリダイレクトを処理するので、`routes.yaml` 設定を更新する必要はありません。
+- ステージング環境と実稼動環境の場合は、管理UIから「[FastlyにTLSを強制](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ja)」オプションを有効にします。 このオプションを使用すると、FastlyはHTTPSへのリダイレクトを処理するので、`routes.yaml`設定を更新する必要はありません。
 
 ## ルートオプション
 
@@ -175,17 +184,17 @@ TLS 経由ですべてのページを提供します。 この設定では、次
 
 | プロパティ | 説明 |
 | ---------------- | ----------- |
-| `type: upstream` | アプリケーションを提供します。 また、（`.magento.app.yaml` で定義された）アプリケーションの名前の後に `:http` エンドポイントを指定する `upstream` プロパティもあります。 |
-| `type: redirect` | 別のルートにリダイレクトします。 その後に `to` プロパティが続きます。これは、テンプレートで識別される別のルートへの HTTP リダイレクトです。 |
-| `cache:` | [&#x200B; ルートのキャッシュ &#x200B;](caching.md) を制御します。 |
-| `redirects:` | コントロール [&#x200B; リダイレクトルール &#x200B;](redirects.md)。 |
-| `ssi:` | [&#x200B; サーバーサイドインクルード &#x200B;](server-side-includes.md) の有効化を制御します。 |
+| `type: upstream` | アプリケーションを提供します。 また、アプリケーションの名前（`.magento.app.yaml`で定義されているように）の後に`:http` エンドポイントを指定する`upstream` プロパティもあります。 |
+| `type: redirect` | 別のルートにリダイレクトします。 その後に`to` プロパティが続きます。このプロパティは、テンプレートによって識別される別のルートへのHTTP リダイレクトです。 |
+| `cache:` | ルート [&#128279;](caching.md)の キャッシュを制御します。 |
+| `redirects:` | [&#x200B; リダイレクトルール &#x200B;](redirects.md)を制御します。 |
+| `ssi:` | [&#x200B; サーバーサイド インクルード &#x200B;](server-side-includes.md)の有効化を制御します。 |
 
 ## シンプルなルート
 
-次の例では、ルート設定は apex ドメインと `www` サブドメインを `mymagento` アプリケーションにルーティングします。 このルートでは、HTTPS リクエストはリダイレクトされません。
+次の例では、ルート設定によってapex ドメインと`www` サブドメインが`mymagento` アプリケーションにルーティングされます。 このルートは、HTTPS リクエストをリダイレクトしません。
 
-**例 1:**
+**例1:**
 
 ```yaml
 "http://{default}/":
@@ -197,29 +206,29 @@ TLS 経由ですべてのページを提供します。 この設定では、次
     to: "http://{default}/"
 ```
 
-この例では、リクエストルーティングは次のルールに従います。
+この例では、リクエストルーティングは次のルールに従っています。
 
-- サーバーは、次の URL パターンを使用してリクエストに直接応答します。
+- サーバーは、次のURL パターンでリクエストに直接応答します。
 
   ```text
   http://example.com/path
   ```
 
-- サーバーは、次の URL パターンのリクエストに対して _301 リダイレクト_ を発行します。
+- サーバーは、次のURL パターンを持つリクエストに対して&#x200B;_301 リダイレクト_&#x200B;を発行します。
 
   ```text
   http://www.example.com/mypath
   ```
 
-  これらのリクエストは、apex ドメインにリダイレクトされます。例：
+  これらのリクエストは、例えば、apex ドメインにリダイレクトされます。
 
   ```text
   http://example.com/mypath
   ```
 
-次の例では、ルート設定で www ドメインから apex ドメインに URL がリダイレクトされません。 代わりに、リクエストは www ドメインと apex ドメインの両方から提供されます。
+次の例では、ルート設定はwww ドメインからapex ドメインにURLをリダイレクトしません。 代わりに、リクエストはwww ドメインとapex ドメインの両方から提供されます。
 
-**例 2:**
+**例2:**
 
 ```yaml
 "http://{default}/":
@@ -233,22 +242,22 @@ TLS 経由ですべてのページを提供します。 この設定では、次
 
 ## ワイルドカードルート
 
-クラウドインフラストラクチャー上のAdobe Commerceでは、ワイルドカードルートをサポートしているので、複数のサブドメインを同じアプリケーションにマッピングできます。 これは、リダイレクト ルートとアップストリーム ルートで機能します。 ルートの前にはアスタリスク（\*）を付けます。 例えば、同じアプリケーションに対して次のようなルートがあります。
+Adobe Commerce on cloud infrastructureはワイルドカードルートをサポートしているので、複数のサブドメインを同じアプリケーションにマッピングできます。 これは、リダイレクト ルートとアップストリーム ルートに対して機能します。 ルートの先頭にはアスタリスク（\*）を付けます。 例えば、同じアプリケーションに対して次のルートを作成します。
 
 - `*.example.com`
 - `www.example.com`
 - `blog.example.com`
 - `us.example.com`
 
-これは、ライブ環境ではキャッチオール ドメインとして機能します。
+これは、ライブ環境でキャッチオールドメインとして機能します。
 
 ### マッピングされていないドメインのルーティング
 
-ドット（`.`）を使用して、ドメインにマッピングされていないシステムにルーティングすることで、サブドメインを分離できます。
+ドット （`.`）を使用してサブドメインを分離し、ドメインにマッピングされていないシステムにルーティングできます。
 
 **例：**
 
-`add-theme` ブランチを持つプロジェクトは、次の URL にルーティングされます。
+`add-theme` ブランチを持つプロジェクトは、次のURLにルーティングします。
 
 ```text
 http://add-theme-projectID.us.magento.com/
@@ -260,13 +269,13 @@ http://add-theme-projectID.us.magento.com/
 http://www.{default}/
 ```
 
-ルートは次の URL に解決されます。
+ルートは次のURLに解決されます。
 
 ```text
 http://www.add-theme-projectID.us.magento.com/
 ```
 
-ドットとルートが解決される前に任意のサブドメインを挿入できます。
+ドットとルートが解決する前に、任意のサブドメインを挿入できます。
 
 **例：**
 
@@ -276,14 +285,14 @@ http://www.add-theme-projectID.us.magento.com/
 http://*.{default}/
 ```
 
-このテンプレートは次の両方の URL を解決します。
+このテンプレートは、次の両方のURLを解決します。
 
 ```text
 http://foo.add-theme-projectID.us.magentosite.cloud/
 http://bar.add-theme-projectID.us.magentosite.cloud/
 ```
 
-マッピングされていないドメインのルートパターンを確認するには、環境への SSH 接続を確立し、`magento-cloud` CLI を使用してルートをリストします。
+マッピングされていないドメインのルートパターンを表示するには、環境へのSSH接続を確立し、`magento-cloud` CLIを使用してルートを一覧表示します。
 
 ```bash
 vendor/bin/ece-tools env:config:show routes
@@ -314,7 +323,7 @@ Magento Cloud Routes:
 
 ## リダイレクトとキャッシュ
 
-[&#x200B; リダイレクト &#x200B;](redirects.md) で詳しく説明しているように、_部分リダイレクト_ などの複雑なリダイレクトルールを管理したり、ルートベースの [&#x200B; キャッシュ &#x200B;](caching.md) のルールを指定したりできます。
+詳細については、[&#x200B; リダイレクト &#x200B;](redirects.md)で説明しているように、_部分リダイレクト_&#x200B;などの複雑なリダイレクトルールを管理し、ルートベースの[&#x200B; キャッシュ &#x200B;](caching.md)のルールを指定できます。
 
 ```yaml
 https://www.{default}/:
