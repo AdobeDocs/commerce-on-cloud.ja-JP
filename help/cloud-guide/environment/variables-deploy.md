@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: 2551
+source-wordcount: 2575
 ht-degree: 0%
 
 ---
@@ -357,18 +357,18 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **Default**—`file`
+- **Default** – 実稼動環境およびステージング環境では、デフォルトは`file`です。 Pro統合およびスターター環境の場合、デフォルトは`db`です。
 - **バージョン** - Adobe Commerce 2.2.5以降
 
-ロックプロバイダーは、重複したcron ジョブとcron グループの起動を防ぎます。 実稼動環境で`file` ロックプロバイダーを使用します。 スターター環境とPro統合環境では[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)変数が使用されないため、`ece-tools`は`db` ロックプロバイダーを自動的に適用します。
+ロックプロバイダーは、重複したcron ジョブとcron グループの起動を防ぎます。 Commerce on Cloudでは、`file`および`db`のロックプロバイダーのみをサポートしています。
+
+実稼動環境とステージング環境の場合、デフォルト値`file`は[MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md)によって設定され、上書きできません。 スターター環境とPro統合環境の場合、`ece-tools`は`db` ロックプロバイダーを自動的に設定します。 これらの環境では、デフォルトを`file`に変更して、ローカルパフォーマンスとミラープロダクションアーキテクチャを最適化できます。
 
 ```yaml
 stage:
   deploy:
     LOCK_PROVIDER: "db"
 ```
-
-_インストールガイド_&#x200B;の「[&#x200B; ロックの設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=ja)」を参照してください。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
