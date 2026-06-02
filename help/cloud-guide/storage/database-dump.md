@@ -4,9 +4,13 @@ description: ECE ツールを使用して、Adobe Commerce on cloud インフラ
 feature: Cloud, Iaas, Storage
 exl-id: 351f7691-3153-4b8a-83af-8b8895b93d98
 TQID: https://experienceleague.adobe.com/bT80HnUguAzsYdVx-kNcxJUyggLzzyfomXHdZvUAcrY
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 364
@@ -23,7 +27,7 @@ DB ダンプに関する次のガイドラインを検討します。
 - 実稼動環境の場合、Adobeでは、サイトがメンテナンスモードの場合に発生するサービスの中断を最小限に抑えるために、オフピーク時にデータベースダンプ操作を実行することをお勧めします。
 - ダンプ操作中にエラーが発生した場合、コマンドはダンプ ファイルを削除してディスク容量を節約します。 詳細については、ログを確認してください（`var/log/cloud.log`）。
 - Pro実稼動環境の場合、このコマンドは3つの高可用性ノードのうち&#x200B;_one_&#x200B;からのみダンプされるため、ダンプ中に別のノードに書き込まれた実稼動データがコピーされない可能性があります。 コマンドは、コマンドが複数のノードで実行されないように`var/dbdump.lock` ファイルを生成します。
-- すべての環境サービスのバックアップを作成する場合、Adobeでは[ バックアップ ](snapshots.md)を作成することをお勧めします。
+- すべての環境サービスのバックアップを作成する場合、Adobeでは[&#x200B; バックアップ &#x200B;](snapshots.md)を作成することをお勧めします。
 
 コマンドにデータベース名を追加することで、複数のデータベースをバックアップできます。 次の例では、`main`と`sales`の2つのデータベースをバックアップしています。
 
@@ -83,4 +87,4 @@ php vendor/bin/ece-tools db-dump main sales
 
 >[!TIP]
 >
->このデータを特定の環境にプッシュする場合は、[ データと静的ファイルの移行](../deploy/staging-production.md#migrate-static-files)を参照してください。
+>このデータを特定の環境にプッシュする場合は、[&#x200B; データと静的ファイルの移行](../deploy/staging-production.md#migrate-static-files)を参照してください。

@@ -5,9 +5,14 @@ feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
 TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 822
@@ -23,7 +28,7 @@ ht-degree: 0%
 
 以前は`ece-tools` パッケージに含まれていた一部の機能が、個別のパッケージで提供されるようになりました。 これらのパッケージは、`ece-tools`のコンポーザー依存関係です。これらは、e ツールのインストールまたは更新時に自動的にインストールおよび更新されます。
 
-新しいアーキテクチャは、インストールプロセスやアップデートプロセスに影響を与えることはありません。 ただし、Adobe Commerce on cloud infrastructure プロジェクトを使用する場合は、コマンドの構文やプロセスを変更する必要がある場合があります。 詳しくは、後方互換性のない次の変更情報と[Cloud Tools Suite リリースノート ](cloud-tools-suite.md)を参照してください。
+新しいアーキテクチャは、インストールプロセスやアップデートプロセスに影響を与えることはありません。 ただし、Adobe Commerce on cloud infrastructure プロジェクトを使用する場合は、コマンドの構文やプロセスを変更する必要がある場合があります。 詳しくは、後方互換性のない次の変更情報と[Cloud Tools Suite リリースノート &#x200B;](cloud-tools-suite.md)を参照してください。
 
 ### サービスバージョン要件の変更
 
@@ -31,7 +36,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->PHPのバージョン要件が変更されたため、`ece-tools` 2002.1.0では、Adobe Commerce 2.1.15以降を実行しているクラウドインフラストラクチャプロジェクト上のAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合は、`ece-tools` 2002.1.0に更新する前に[ アップグレード ](../development/commerce-version.md)する必要があります。
+>PHPのバージョン要件が変更されたため、`ece-tools` 2002.1.0では、Adobe Commerce 2.1.15以降を実行しているクラウドインフラストラクチャプロジェクト上のAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合は、`ece-tools` 2002.1.0に更新する前に[&#x200B; アップグレード &#x200B;](../development/commerce-version.md)する必要があります。
 
 ### 環境設定の変更
 
@@ -62,7 +67,7 @@ ht-degree: 0%
 
 ## クラウドパッチの変更
 
-- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[ ソフトウェアのダウンロード ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
+- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[&#x200B; ソフトウェアのダウンロード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
 
 - **パッチ適用コマンドの更新** – パッチを適用するコマンドを`vendor/bin/ece-tools` ディレクトリから`vendor/bin/ece-patches` ディレクトリに移動しました。 このコマンドを使用してパッチを手動で適用する場合は、新しいパスを使用します。
 

@@ -4,8 +4,11 @@ description: ' [!DNL Cloud Console] またはCloud上のAdobe Commerce インフ
 last-substantial-update: 2024-02-06T00:00:00.000Z
 exl-id: 1acac76e-b088-44ad-9c93-ea27b686b6b4
 TQID: https://experienceleague.adobe.com/piZcU6SjL054YJU9yISQJss7LVEHEHZc7zSYa2QGe60
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 448
@@ -17,13 +20,13 @@ ht-degree: 0%
 
 各環境のメインビューには、Git ログに似た履歴イベントの&#x200B;**アクティビティ** リストが表示されます。 アクティビティリストは、アクティブな環境の最近のイベントのストリームです。 次に、アクティビティストリームに表示されるアクティビティタイプとそのアイコンのリストを示します。
 
-![ アクティビティの種類](../../assets/activity-types.svg){width="500" align="center"}
+![&#x200B; アクティビティの種類](../../assets/activity-types.svg){width="500" align="center"}
 
 ## ログを表示
 
 アクティビティリストで、アクティビティのステータスアイコンをクリックしてログを表示します。 または、![More](../../assets/icon-more.png){width="32"} （_more_）メニューをクリックして、アクティビティを管理するためのより多くのオプションにアクセスします。 次に、バックアップを作成するためのショートログを示します。 [Cloud CLI](#activity-stream-with-cloud-cli)を使用して、同じログを表示できます。
 
-![ ログビュー](../../assets/log-view.png)
+![&#x200B; ログビュー](../../assets/log-view.png)
 
 ## アクティビティの管理
 
@@ -37,13 +40,13 @@ ht-degree: 0%
 
 実行中のアクティビティを操作するには、![More](../../assets/icon-more.png){width="32"} （_more_）メニューにアクセスし、`Cancel`や`View log`などのアクションを選択します。 この例では、**キャンセル** オプションを選択して、実行中のアクティビティを停止します。
 
-すべてのアクティビティに解約オプションがあるわけではありません。 例えば、アプリケーションのデプロイメントをキャンセルするオプションは、_ビルド_ フェーズでのみ表示されます。 アプリケーションが&#x200B;_デプロイ_ フェーズに移行すると、アクティビティをキャンセルできなくなります。 様々なフェーズについては、[ デプロイメントプロセス ](../deploy/process.md)を参照してください。
+すべてのアクティビティに解約オプションがあるわけではありません。 例えば、アプリケーションのデプロイメントをキャンセルするオプションは、_ビルド_ フェーズでのみ表示されます。 アプリケーションが&#x200B;_デプロイ_ フェーズに移行すると、アクティビティをキャンセルできなくなります。 様々なフェーズについては、[&#x200B; デプロイメントプロセス &#x200B;](../deploy/process.md)を参照してください。
 
-![ アクティビティをキャンセル ](../../assets/activity-icons/cancel-activity.png){width="450" align="center"}
+![&#x200B; アクティビティをキャンセル &#x200B;](../../assets/activity-icons/cancel-activity.png){width="450" align="center"}
 
 デプロイメントアクティビティを実行している端末がある場合、[!DNL Cloud Console]でキャンセルすると、端末でキャンセルが発生します。
 
-![ ターミナルでアクティビティがキャンセルされました](../../assets/activity-icons/activity-cancelled.png){width="300"}
+![&#x200B; ターミナルでアクティビティがキャンセルされました](../../assets/activity-icons/activity-cancelled.png){width="300"}
 
 >[!TAB CLI]
 
@@ -71,9 +74,9 @@ ht-degree: 0%
 
 1. 環境を選択し、アクティビティ **[!UICONTROL All]** ビューを選択して、完全なイベント履歴を含めます。
 
-1. 「![ フィルター](../../assets/icon-filterby.png){width="32"}」をクリックし、**[!UICONTROL Filter by]** オプションを選択します。
+1. 「![&#x200B; フィルター](../../assets/icon-filterby.png){width="32"}」をクリックし、**[!UICONTROL Filter by]** オプションを選択します。
 
-   ![ アクティビティのフィルター](../../assets/activity-filter.png)
+   ![&#x200B; アクティビティのフィルター](../../assets/activity-filter.png)
 
 1. アクティビティ **[!UICONTROL Recent]** ビューを選択し、リストをリセットします。
 

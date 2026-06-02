@@ -6,10 +6,16 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
 TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 2551
@@ -19,7 +25,7 @@ ht-degree: 0%
 
 # 変数のデプロイ
 
-次の&#x200B;_デプロイ_&#x200B;変数は、デプロイフェーズのアクションを制御し、[ グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`deploy` ステージに挿入します。
+次の&#x200B;_デプロイ_&#x200B;変数は、デプロイフェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`deploy` ステージに挿入します。
 
 ```yaml
 stage:
@@ -103,7 +109,7 @@ stage:
 - **Default**—`true`
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-ビルドまたはデプロイのフェーズで生成された[静的コンテンツファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)のクリーニングを有効または無効にします。 開発時のデフォルト値&#x200B;_true_&#x200B;をベストプラクティスとして使用します。
+ビルドまたはデプロイのフェーズで生成された[静的コンテンツファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)のクリーニングを有効または無効にします。 開発時のデフォルト値&#x200B;_true_&#x200B;をベストプラクティスとして使用します。
 
 - **`true`** – 更新された静的コンテンツをデプロイする前に、既存のすべての静的コンテンツを削除します。
 - **`false`** – 生成されたコンテンツに新しいバージョンが含まれている場合にのみ、デプロイメントは既存の静的コンテンツファイルを上書きします。
@@ -116,7 +122,7 @@ stage:
     CLEAN_STATIC_FILES: false
 ```
 
-デプロイ前に静的ビューファイルをクリーンアップしないと、以前のバージョンを削除せずに既存のファイルにアップデートをデプロイすると問題が発生する可能性があります。 [静的ファイルのフォールバック ](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) ルールにより、ディレクトリに同じファイルの複数のバージョンが含まれている場合、フォールバック操作で間違ったファイルが表示される可能性があります。
+デプロイ前に静的ビューファイルをクリーンアップしないと、以前のバージョンを削除せずに既存のファイルにアップデートをデプロイすると問題が発生する可能性があります。 [静的ファイルのフォールバック &#x200B;](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) ルールにより、ディレクトリに同じファイルの複数のバージョンが含まれている場合、フォールバック操作で間違ったファイルが表示される可能性があります。
 
 ## `CRON_CONSUMERS_RUNNER`
 
@@ -162,7 +168,7 @@ stage:
       consumers: []
 ```
 
-デフォルトでは、デプロイメントプロセスは`env.php` ファイルのすべての設定を上書きします。 オンプレミス Adobe Commerceについては、_Commerce設定ガイド_&#x200B;の「[ メッセージキューの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html)」を参照してください。
+デフォルトでは、デプロイメントプロセスは`env.php` ファイルのすべての設定を上書きします。 オンプレミス Adobe Commerceについては、_Commerce設定ガイド_&#x200B;の「[&#x200B; メッセージキューの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html)」を参照してください。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -201,7 +207,7 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-`.magento.app.yaml` ファイルの[関係プロパティ ](../application/properties.md#relationships)でデータベースを定義した場合、デプロイメント用にデータベース接続をカスタマイズできます。
+`.magento.app.yaml` ファイルの[関係プロパティ &#x200B;](../application/properties.md#relationships)でデータベースを定義した場合、デプロイメント用にデータベース接続をカスタマイズできます。
 
 ```yaml
 stage:
@@ -312,7 +318,7 @@ stage:
 
 >[!NOTE]
 >
->Adobe Commerceでの[!DNL Elastic Suite] プラグインの使用またはトラブルシューティングについて詳しくは、[[!DNL Elastic Suite]  ドキュメント ](https://github.com/Smile-SA/elasticsuite)を参照してください。
+>Adobe Commerceでの[!DNL Elastic Suite] プラグインの使用またはトラブルシューティングについて詳しくは、[[!DNL Elastic Suite]  ドキュメント &#x200B;](https://github.com/Smile-SA/elasticsuite)を参照してください。
 
 ## `ENABLE_GOOGLE_ANALYTICS`
 
@@ -362,7 +368,7 @@ stage:
     LOCK_PROVIDER: "db"
 ```
 
-_インストールガイド_&#x200B;の「[ ロックの設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html)」を参照してください。
+_インストールガイド_&#x200B;の「[&#x200B; ロックの設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html)」を参照してください。
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
@@ -461,7 +467,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`をRedis バックエンドモデルとして指定して[L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`をRedis バックエンドモデルとして指定して[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -510,7 +516,7 @@ stage:
 
 >[!NOTE]
 >
->Valkey バックエンドモデルとして`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`を指定して[L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>Valkey バックエンドモデルとして`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`を指定して[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -645,7 +651,7 @@ stage:
 - **Default**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツの[ デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)をカスタマイズできます。 [静的ビューファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)を参照してください。
+静的コンテンツの[&#x200B; デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)をカスタマイズできます。 [静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_&#x200B;を使用します。
 

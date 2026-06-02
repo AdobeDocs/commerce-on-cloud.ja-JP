@@ -5,9 +5,12 @@ feature: Cloud, Logs, Configuration
 role: Developer
 exl-id: 0d7fb653-468b-432c-9830-582b0fed8512
 TQID: https://experienceleague.adobe.com/4dowk2oMMCROVmEc8muHE7CzaZ-T3SaQi4sANVnMeWQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 235
@@ -19,7 +22,7 @@ ht-degree: 0%
 
 ログハンドラーを設定して、メッセージをリモートログサーバーに送信できます。 ログハンドラーは、ログをSlackやメールにプッシュする方法と同様に、ビルドとデプロイのログを他のシステムにプッシュします。 ハードウェアに関連するメッセージのログ記録に最適な&#x200B;_syslog_ ハンドラー、またはソフトウェアアプリケーションからのメッセージのログ記録に最適なGraylog Extended Log Format （GELF） ハンドラーを有効にできます。
 
-次の例では、設定を`.magento.env.yaml` ファイルに追加して、これらのハンドラーの両方を設定します。 ログ レベル （`min_level`）の最小値については、[ ログ レベル ](#log-levels)を参照してください。
+次の例では、設定を`.magento.env.yaml` ファイルに追加して、これらのハンドラーの両方を設定します。 ログ レベル （`min_level`）の最小値については、[&#x200B; ログ レベル &#x200B;](#log-levels)を参照してください。
 
 ```yaml
 log:

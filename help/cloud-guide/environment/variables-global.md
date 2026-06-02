@@ -6,10 +6,16 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
 TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 774
@@ -72,7 +78,7 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-コードを変更することなく、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントに失敗した場合、この変数を使用して、ログの精度をグローバルに増やすことができます。 [ ログレベル ](log-handlers.md#log-levels)を参照してください。 Logging ハンドラーの`min_level`値は、この設定を上書きします。
+コードを変更することなく、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントに失敗した場合、この変数を使用して、ログの精度をグローバルに増やすことができます。 [&#x200B; ログレベル &#x200B;](log-handlers.md#log-levels)を参照してください。 Logging ハンドラーの`min_level`値は、この設定を上書きします。
 
 ```yaml
 stage:
@@ -91,7 +97,7 @@ stage:
 
 ユーザー（SCD）から要求されたときに、静的コンテンツの生成を有効にします。 静的なオンデマンド型コンテンツは、デプロイメント時間を短縮するため、開発やテストのワークフローに最適です。
 
-[`post_deploy` フック ](../application/hooks-property.md)を使用してキャッシュを事前に読み込むと、サイトのダウンタイムが短縮されます。 キャッシュ ウォーミングは、[!DNL Cloud Console]のステージング環境と実稼動環境を含むPro プロジェクトとスタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
+[`post_deploy` フック &#x200B;](../application/hooks-property.md)を使用してキャッシュを事前に読み込むと、サイトのダウンタイムが短縮されます。 キャッシュ ウォーミングは、[!DNL Cloud Console]のステージング環境と実稼動環境を含むPro プロジェクトとスタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 
 ```yaml
 stage:
@@ -190,7 +196,7 @@ Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.co
 
 >[!WARNING]
 >
->Adobe Commerceでサポートされているブラウザーではサポートされなくなったため、`ALLOW-FROM <uri>` オプションは廃止されました。 [ ブラウザーの互換性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)を参照してください。
+>Adobe Commerceでサポートされているブラウザーではサポートされなくなったため、`ALLOW-FROM <uri>` オプションは廃止されました。 [&#x200B; ブラウザーの互換性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)を参照してください。
 
 `X_FRAME_CONFIGURATION`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 

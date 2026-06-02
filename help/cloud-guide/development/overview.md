@@ -7,10 +7,15 @@ topic: Development
 last-substantial-update: 2024-02-06T00:00:00.000Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
 TQID: https://experienceleague.adobe.com/VrOBK4bPYTxzRz10ZaHYDOdISw0lSl6WPAHcnEI1J-w
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 580
@@ -42,7 +47,7 @@ Composerは、プロジェクトに必要なライブラリと依存関係を`ve
 
 {style="table-layout:auto"}
 
-更新されたコードを追加、コミット、プッシュすると、デプロイメントプロセスは[ ビルド段階](../deploy/process.md#build-phase-build-phase)中に`composer install` コマンドを自動的に実行します。
+更新されたコードを追加、コミット、プッシュすると、デプロイメントプロセスは[&#x200B; ビルド段階](../deploy/process.md#build-phase-build-phase)中に`composer install` コマンドを自動的に実行します。
 
 ### クラウドメタパッケージ
 
@@ -62,13 +67,13 @@ Adobe Commerce on cloud infrastructureは、`magento/product-enterprise-edition`
 
 - **vendor/magento/ece-tools** - `ece-tools` パッケージは、Adobe Commerce バージョン 2.1.4以降と互換性があり、Adobe Commerce on cloud infrastructure プロジェクトの管理に使用できる豊富な機能を提供します。 コードの管理やプロジェクトの自動ビルドとデプロイに役立つスクリプトとAdobe Commerce on cloud infrastructure コマンドが含まれています。 [`ece-tools` パッケージの概要](../dev-tools/package-overview.md)を参照してください。
 - **vendor/magento/product-enterprise-edition**：このメタパッケージには、モジュール、フレームワーク、テーマなどのアプリケーションコンポーネントが必要です。
-- **vendor/fastly2/magento2**：このモジュールは、プロステージング環境および実稼動環境とスターター実稼動環境のFastly CDNとサービスを管理します。 [Fastly サービス ](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)を参照してください。
-- **vendor/magento/module-paypal-on-boarding**：このモジュールは、PayPal加盟店アカウントに接続することで、PayPal支払いゲートウェイのチェックアウトを提供します。 [PayPal オンボーディングツール ](../store/paypal.md)を参照してください。
-- **vendor/aem/rum**：このモジュールは、[運用上のテレメトリ ](../monitor/operational-telemetry.md) データ収集ツールを管理します。
+- **vendor/fastly2/magento2**：このモジュールは、プロステージング環境および実稼動環境とスターター実稼動環境のFastly CDNとサービスを管理します。 [Fastly サービス &#x200B;](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)を参照してください。
+- **vendor/magento/module-paypal-on-boarding**：このモジュールは、PayPal加盟店アカウントに接続することで、PayPal支払いゲートウェイのチェックアウトを提供します。 [PayPal オンボーディングツール &#x200B;](../store/paypal.md)を参照してください。
+- **vendor/aem/rum**：このモジュールは、[運用上のテレメトリ &#x200B;](../monitor/operational-telemetry.md) データ収集ツールを管理します。
 
 >[!TIP]
 >
->依存関係とサードパーティライセンスの一覧については、_Adobe Commerce リリースノート_&#x200B;の[Commerce用クラウドパッケージ ](/help/cloud-guide/release-notes/cloud-packages.md)を参照してください。
+>依存関係とサードパーティライセンスの一覧については、_Adobe Commerce リリースノート_&#x200B;の[Commerce用クラウドパッケージ &#x200B;](/help/cloud-guide/release-notes/cloud-packages.md)を参照してください。
 
 ## Docker環境
 

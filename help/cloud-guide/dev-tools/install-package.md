@@ -4,9 +4,13 @@ description: ECE-Tools パッケージを使用し、最新の修正と機能を
 feature: Cloud, Install
 exl-id: 164c47e4-c871-41a3-b268-581d426e7a7f
 TQID: https://experienceleague.adobe.com/CH-wgIk-5aM6qIO7tdHI2jHlx1YgaEbLvfp4cEpSqTc
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 376
@@ -46,7 +50,7 @@ Adobe Commerceの各バージョンには、次の要素に基づいて異なる
 
 Adobe Commerce `2.3.5-p2`をインストールする場合は、`current_version`を`2.3.5`に、`next_version`を`2.3.6`に設定します。 制約`">=2.3.5 <2.3.6"`は、2.3.5の利用可能な最新のパッケージをインストールします。
 
-最新のメタパッケージ制約は、[`magento-cloud` テンプレート ](https://github.com/magento/magento-cloud/blob/master/composer.json)にいつでも見つけることができます。
+最新のメタパッケージ制約は、[`magento-cloud` テンプレート &#x200B;](https://github.com/magento/magento-cloud/blob/master/composer.json)にいつでも見つけることができます。
 
 次の例では、Adobe Commerce on cloud infrastructure メタパッケージの制約を、現在のバージョン 2.4.8以上のバージョンと次のバージョン 2.4.9未満のバージョンに設定します。
 

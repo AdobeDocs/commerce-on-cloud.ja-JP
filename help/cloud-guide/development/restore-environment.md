@@ -5,10 +5,14 @@ role: Developer
 topic: Development
 exl-id: 78e4c535-8c4d-4185-9a56-d25cb04db991
 TQID: https://experienceleague.adobe.com/fYo3B1zwc8a9UAFL3Eo8dOwjG7XQXrhUiJHYqNLTbeQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 493
@@ -18,7 +22,7 @@ ht-degree: 0%
 
 # 環境の復元
 
-統合環境で問題が発生し、[有効なバックアップ ](../storage/snapshots.md)がない場合、または環境を空白のスレートにリセットする場合は、次のいずれかの方法で環境を復元またはリセットできます。
+統合環境で問題が発生し、[有効なバックアップ &#x200B;](../storage/snapshots.md)がない場合、または環境を空白のスレートにリセットする場合は、次のいずれかの方法で環境を復元またはリセットできます。
 
 - Git ブランチのコードをリセットまたは元に戻す
 - [!DNL Commerce] アプリケーションのアンインストール

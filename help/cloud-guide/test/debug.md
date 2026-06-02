@@ -3,10 +3,15 @@ title: ' [!DNL Xdebug]の設定'
 description: Adobe Commerce on cloud infrastructure プロジェクト開発をデバッグするためのXdebug拡張機能の設定方法について説明します。
 exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
 TQID: https://experienceleague.adobe.com/DGrQ8tHkdWCLbWQ6Mt-RvED2SCATyzyqZznZB8dUjGM
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 1955
@@ -41,11 +46,11 @@ ht-degree: 0%
 
 ### ブランチの基本を学ぶ
 
-[!DNL Xdebug]を追加するには、[開発用ブランチ ](../dev-tools/cloud-cli-overview.md#create-an-environment-branch)で作業することをお勧めします。Adobeでは、を追加します。
+[!DNL Xdebug]を追加するには、[開発用ブランチ &#x200B;](../dev-tools/cloud-cli-overview.md#create-an-environment-branch)で作業することをお勧めします。Adobeでは、を追加します。
 
 ### 環境でXdebugを有効にする
 
-[!DNL Xdebug]は、すべてのStarter環境およびPro統合環境に対して直接有効にできます。 この設定手順は、Pro実稼動環境およびステージング環境では必要ありません。 プロステージングおよび実稼動用の[ デバッグ ](#debug-for-pro-staging-and-production)を参照してください。
+[!DNL Xdebug]は、すべてのStarter環境およびPro統合環境に対して直接有効にできます。 この設定手順は、Pro実稼動環境およびステージング環境では必要ありません。 プロステージングおよび実稼動用の[&#x200B; デバッグ &#x200B;](#debug-for-pro-staging-and-production)を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
 
@@ -102,9 +107,9 @@ ht-degree: 0%
 
 1. **+**&#x200B;をクリックして、サーバー設定を追加します。 プロジェクト名は上部がグレーで表示されています。
 
-1. [ オプション ]新しいサーバー設定に対して次の設定を行います。 _PHPStorm_ ドキュメントの「[ デバッグサーバーが構成されていません](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)」を参照してください。
+1. [ オプション ]新しいサーバー設定に対して次の設定を行います。 _PHPStorm_ ドキュメントの「[&#x200B; デバッグサーバーが構成されていません](https://www.jetbrains.com/help/phpstorm/troubleshooting-php-debugging.html#no-debug-server-is-configured)」を参照してください。
 
-   - **名前** - ホスト名と同じ名前を入力します。 デバッグにCLIを使用するには、この値が[ デバッグ CLI コマンド ](#debug-cli-commands)の`PHP_IDE_CONFIG`変数の値と一致する必要があります。
+   - **名前** - ホスト名と同じ名前を入力します。 デバッグにCLIを使用するには、この値が[&#x200B; デバッグ CLI コマンド &#x200B;](#debug-cli-commands)の`PHP_IDE_CONFIG`変数の値と一致する必要があります。
    - **ホスト** - ホスト名を入力します。
    - **Port** - `443`と入力します。
    - **Debugger**- `Xdebug`を選択します。
@@ -137,7 +142,7 @@ ht-degree: 0%
 
    - 一意だが認識可能な名前を入力してください。
    - 「[!UICONTROL Filter debug connection by IDE key]**」チェックボックスをオンにします。
-   - [前のセクション ](#configure-phpstorm-server)で作成したサーバーを選択します。 まだ作成していない場合は、今すぐ作成できますが、セットアップガイドのその部分を参照してください。
+   - [前のセクション &#x200B;](#configure-phpstorm-server)で作成したサーバーを選択します。 まだ作成していない場合は、今すぐ作成できますが、セットアップガイドのその部分を参照してください。
    - **[!UICONTROL IDE key(session id)]** テキストフィールドに、`PHPSTORM`を大文字で入力します。 設定の他の部分でも使用するため、同じことを維持することが重要です。 別の文字列を選択した場合は、設定および設定プロセスの別の場所で使用することを忘れないでください。
 
 1. **[!UICONTROL Apply]** > **[!UICONTROL OK]**&#x200B;をクリックします。
@@ -229,7 +234,7 @@ Windowsでポート転送（SSH トンネリング）を設定するには、Win
 
 1. 「**追加**」をクリックします。
 
-   ![ パティでSSH トンネルを作成](../../assets/xdebug/putty-tunnels.png)
+   ![&#x200B; パティでSSH トンネルを作成](../../assets/xdebug/putty-tunnels.png)
 
 1. _カテゴリー_ ペインで、**セッション**&#x200B;をクリックします。
 
@@ -386,7 +391,7 @@ CLI コマンドをデバッグするには：
 
 **ChromeでXdebug Helperを使用するには**:
 
-1. クラウド サーバーに[SSH トンネル ](#ssh-access-to-xdebug-environments)を作成します。
+1. クラウド サーバーに[SSH トンネル &#x200B;](#ssh-access-to-xdebug-environments)を作成します。
 
 1. Chrome ストアから[Xdebug Helper拡張機能](https://chromewebstore.google.com/detail/eadndfjplgieldjbigjakmdgkmoaaaoc)をインストールします。
 
@@ -402,7 +407,7 @@ CLI コマンドをデバッグするには：
 
 1. **保存**&#x200B;をクリックします。
 
-   ![Xdebug ヘルパーオプション ](../../assets/xdebug/helper-options.png)
+   ![Xdebug ヘルパーオプション &#x200B;](../../assets/xdebug/helper-options.png)
 
 1. PhpStorm プロジェクトを開きます。
 

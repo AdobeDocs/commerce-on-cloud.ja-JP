@@ -6,9 +6,12 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 42523ff9-d8ca-470a-ac7b-d2ce21edd830
 TQID: https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 516
@@ -18,7 +21,7 @@ ht-degree: 0%
 
 # デプロイ後の変数
 
-次の&#x200B;_デプロイ後_&#x200B;変数は、デプロイ後フェーズのアクションを制御し、[ グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`post-deploy` ステージに挿入します。
+次の&#x200B;_デプロイ後_&#x200B;変数は、デプロイ後フェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`post-deploy` ステージに挿入します。
 
 ```yaml
 stage:
@@ -74,7 +77,7 @@ stage:
 - **Default**— `index.php`
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-`post_deploy` ステージでキャッシュのプリロードに使用するページのリストをカスタマイズします。 デプロイ後フックを設定する必要があります。 `.magento.app.yaml` ファイルの[ フックの節](../application/hooks-property.md)を参照してください。
+`post_deploy` ステージでキャッシュのプリロードに使用するページのリストをカスタマイズします。 デプロイ後フックを設定する必要があります。 `.magento.app.yaml` ファイルの[&#x200B; フックの節](../application/hooks-property.md)を参照してください。
 
 - **単一ページ** - キャッシュに追加する単一ページを指定します。 デフォルトのベース URLを指定する必要はありません。 次の例は、`BASE_URL/index.php` ページをキャッシュします。
 

@@ -3,10 +3,20 @@ title: ステージングと実稼動のテスト
 description: ステージング環境と実稼動環境でのテスト方法について説明します。
 exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
 TQID: https://experienceleague.adobe.com/kcmgbPlj1Pa0JW6daRzbr40HMfoy64ETmowCiWzXD-A
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: c32adafa-ed01-4b31-997e-2413013911b0id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 1368
@@ -26,7 +36,7 @@ ht-degree: 0%
 
 デプロイメント ログは`/var/log/platform/<prodject-ID>/deploy.log`にあります。 `<project-ID>`の値は、プロジェクト IDと、環境がステージング環境と実稼動環境のどちらに依存しているかによって異なります。 例えば、プロジェクト IDが`yw1unoukjcawe`の場合、ステージング ユーザーは`yw1unoukjcawe_stg`、実稼動ユーザーは`yw1unoukjcawe`です。
 
-実稼動環境またはステージング環境のログにアクセスする場合は、SSHを使用して3つのノードのそれぞれにログインし、ログを探します。 または、[New Relic ログ管理](../monitor/log-management.md)を使用して、すべてのノードから集約されたログデータを表示および照会できます。 [ ログの表示](log-locations.md#application-logs)を参照してください。
+実稼動環境またはステージング環境のログにアクセスする場合は、SSHを使用して3つのノードのそれぞれにログインし、ログを探します。 または、[New Relic ログ管理](../monitor/log-management.md)を使用して、すべてのノードから集約されたログデータを表示および照会できます。 [&#x200B; ログの表示](log-locations.md#application-logs)を参照してください。
 
 ## コードベースを確認する
 
@@ -209,7 +219,7 @@ ht-degree: 0%
 
 最適な結果を得るには、次のツールを使用します。
 
-- [ アプリケーション パフォーマンス テスト ](../environment/variables-post-deploy.md#ttfb_tested_pages) - サイト応答時間をテストするために`TTFB_TESTED_PAGES`環境変数を設定して、アプリケーション パフォーマンスをテストします。
+- [&#x200B; アプリケーション パフォーマンス テスト &#x200B;](../environment/variables-post-deploy.md#ttfb_tested_pages) - サイト応答時間をテストするために`TTFB_TESTED_PAGES`環境変数を設定して、アプリケーション パフォーマンスをテストします。
 - [包囲攻撃](https://www.joedog.org/siege-home/) - ストアを制限にプッシュするためのトラフィック形成およびテスト ソフトウェア。 設定可能な数のシミュレートされたクライアントで、サイトにアクセスします。 Siegeは、基本認証、Cookie、HTTP、HTTPS、およびFTP プロトコルをサポートしています。
 - [Jmeter](https://jmeter.apache.org) - フラッシュ セールスのようなスパイク トラフィックのパフォーマンスを測定するのに役立つ優れた負荷テスト。 サイトに対して実行するカスタムテストを作成します。
 - [New Relic](../monitor/new-relic-service.md) （提供） – データ、クエリ、Redisなどの送信アクションごとに費やされた時間を追跡して、パフォーマンスの低下を引き起こすサイトのプロセスと領域を特定します。
@@ -221,4 +231,4 @@ Magento Functional Testing Framework （MFTF）を使用して、Cloud Docker環
 
 ## セキュリティスキャンツールの設定
 
-無料のセキュリティスキャンツールがあります。 サイトを追加してツールを実行するには、[ セキュリティスキャンツール ](../launch/overview.md#set-up-the-security-scan-tool)を参照してください。
+無料のセキュリティスキャンツールがあります。 サイトを追加してツールを実行するには、[&#x200B; セキュリティスキャンツール &#x200B;](../launch/overview.md#set-up-the-security-scan-tool)を参照してください。

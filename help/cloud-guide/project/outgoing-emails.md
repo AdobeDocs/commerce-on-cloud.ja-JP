@@ -3,9 +3,13 @@ title: 送信メールの設定
 description: Adobe Commerce on cloud infrastructureの送信メールを有効にする方法を説明します。
 exl-id: 616e287b-960a-4933-916e-37896ee6b533
 TQID: https://experienceleague.adobe.com/qTZHcNU58ZVNRE9FgaIdcVsRg6--ae6dL-hKCjpUt3w
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 402
@@ -17,9 +21,9 @@ ht-degree: 0%
 
 [!DNL Cloud Console]またはコマンドラインから、統合（およびスターターのみのステージング）環境の送信メールを有効または無効にできます。 送信メールを有効にして、Cloud プロジェクトユーザーに2要素認証を送信したり、パスワードリセットのメールを送信したりできます。
 
-デフォルトでは、送信メールは実稼動環境とステージング環境（Proのみ）で有効になっています。 ただし、[ コマンドライン ](#enable-emails-in-the-cli)または[Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console)を使用して`enable_smtp` プロパティを設定するまで、ステータスに関係なく、**[!UICONTROL Enable outgoing emails]**&#x200B;設定が環境設定で無効に表示される場合があります。
+デフォルトでは、送信メールは実稼動環境とステージング環境（Proのみ）で有効になっています。 ただし、[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli)または[Cloud Console](outgoing-emails.md#enable-emails-in-the-cloud-console)を使用して`enable_smtp` プロパティを設定するまで、ステータスに関係なく、**[!UICONTROL Enable outgoing emails]**&#x200B;設定が環境設定で無効に表示される場合があります。
 
-[ コマンドライン ](#enable-emails-in-the-cli)によって`enable_smtp` プロパティ値を更新すると、Cloud Consoleのこの環境の[!UICONTROL Enable outgoing emails]設定値も変更されます。
+[&#x200B; コマンドライン &#x200B;](#enable-emails-in-the-cli)によって`enable_smtp` プロパティ値を更新すると、Cloud Consoleのこの環境の[!UICONTROL Enable outgoing emails]設定値も変更されます。
 
 >[!NOTE]
 >
@@ -31,7 +35,7 @@ ht-degree: 0%
 
 _環境設定_ ビューの&#x200B;**[!UICONTROL Outgoing emails]** トグルを使用して、電子メールサポートを有効または無効にします。
 
-Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
+Pro実稼動環境またはステージング環境で送信メールを無効にするか、再度有効にする必要がある場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)を送信できます。
 
 >[!TIP]
 >

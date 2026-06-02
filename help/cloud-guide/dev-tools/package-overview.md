@@ -3,9 +3,13 @@ title: '[!DNL ECE-Tools] パッケージ'
 description: ' [!DNL ECE-Tools]  パッケージと、Adobe Commerceの管理とデプロイにどのように役立つかについて説明します。'
 exl-id: 15d762ef-bca7-480b-b719-caf131dc9180
 TQID: https://experienceleague.adobe.com/YMuy2Ta0Ylkewxb2EhQgpZG8WW8bG4kFzrCXm0A7rX0
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
 source-wordcount: 450
@@ -15,7 +19,7 @@ ht-degree: 0%
 
 # ECE-Tools パッケージ
 
-[!DNL ECE-Tools] パッケージは、[!DNL Commerce] アプリケーションを管理およびデプロイするために設計されたスクリプトとツールのセットです。 `ece-tools` パッケージは、cron ジョブの管理、プロジェクト設定の検証、Adobeのパッチとホットフィックスの適用など、多くのプロセスを簡素化します。 GitHub](https://github.com/magento/ece-tools)で[ オープンソース  [!DNL ECE-Tools]  コードリポジトリを表示して貢献できます。
+[!DNL ECE-Tools] パッケージは、[!DNL Commerce] アプリケーションを管理およびデプロイするために設計されたスクリプトとツールのセットです。 `ece-tools` パッケージは、cron ジョブの管理、プロジェクト設定の検証、Adobeのパッチとホットフィックスの適用など、多くのプロセスを簡素化します。 GitHub[&#128279;](https://github.com/magento/ece-tools)で オープンソース  [!DNL ECE-Tools]  コードリポジトリを表示して貢献できます。
 
 {{ece-tools-package}}
 
@@ -31,7 +35,7 @@ php ./vendor/bin/ece-tools list
 
 `ece-tools` パッケージには、Adobe Commerce on cloud infrastructure アプリケーションを起動するビルド、デプロイ、デプロイ後の各ステージの操作を実行するコマンドが含まれています。 例えば、`php ./vendor/bin/ece-tools build` コマンドは、アプリケーションのビルド プロセスを開始します。
 
-デフォルトでは、これらの`ece-tools` コマンドは`.magento.app.yaml`設定ファイルの[hook プロパティ ](../application/hooks-property.md)にあります。
+デフォルトでは、これらの`ece-tools` コマンドは`.magento.app.yaml`設定ファイルの[hook プロパティ &#x200B;](../application/hooks-property.md)にあります。
 
 ## Docker設定ジェネレーター
 
@@ -77,7 +81,7 @@ Magento Cloud Services:
 
 ## 環境設定の確認
 
-プロジェクトの設定を評価するのに役立つ確認コマンドのセットがあります。 各ウィザードコマンドの詳細については、「_デプロイメントの最適化_」セクションの「[ スマートウィザード ](../deploy/smart-wizards.md)」を参照してください。 `wizard:ideal-state` コマンドは、ビルド フェーズ中に自動的に実行されます。 プロジェクトの理想的な状態を確認するには：
+プロジェクトの設定を評価するのに役立つ確認コマンドのセットがあります。 各ウィザードコマンドの詳細については、「_デプロイメントの最適化_」セクションの「[&#x200B; スマートウィザード &#x200B;](../deploy/smart-wizards.md)」を参照してください。 `wizard:ideal-state` コマンドは、ビルド フェーズ中に自動的に実行されます。 プロジェクトの理想的な状態を確認するには：
 
 ```bash
 php ./vendor/bin/ece-tools wizard:ideal-state
@@ -93,9 +97,9 @@ php ./vendor/bin/ece-tools wizard:ideal-state
 Ideal state is configured
 ```
 
-ece-tools](../release-notes/cloud-tools-suite.md)の[ リリースノートを参照してください。
+ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)の リリースノートを参照してください。
 
 ## Adobeのパッチとカスタムパッチ
 
-`ece-tools` パッケージには、[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージの依存関係が含まれています。このパッケージは、Adobeのパッチとホットフィックスを提供し、すべてのAdobe Commerce バージョンとCloud環境の統合を向上させ、重要な修正の迅速な提供をサポートします。 「」は、Adobe Commerce on cloud infrastructure プロジェクトに追加するカスタムパッチも提供します。 [ パッチの適用](../development/apply-patches.md)を参照してください。
+`ece-tools` パッケージには、[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージの依存関係が含まれています。このパッケージは、Adobeのパッチとホットフィックスを提供し、すべてのAdobe Commerce バージョンとCloud環境の統合を向上させ、重要な修正の迅速な提供をサポートします。 「」は、Adobe Commerce on cloud infrastructure プロジェクトに追加するカスタムパッチも提供します。 [&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
 
