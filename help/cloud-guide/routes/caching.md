@@ -139,7 +139,7 @@ cache:
 
 Cookieには次の制限があります。
 
-- システムには最大&#x200B;**50 Cookie**&#x200B;が設定されています。 それ以外の場合は、`Unable to send the cookie. Maximum number of cookies would be exceeded`例外がスローされます。 Cookieの数を200に増やすには、[品質パッチツール &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool)を使用して[MDVA-12304 パッチ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html)を適用します。
+- システムには最大&#x200B;**50 Cookie**&#x200B;が設定されています。 それ以外の場合は、`Unable to send the cookie. Maximum number of cookies would be exceeded`例外がスローされます。 Cookieの数を200に増やすには、[品質パッチツール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-learn/tutorials/tools/quality-patch-tool)を使用して[MDVA-12304 パッチ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=ja)を適用します。
 - 最大Cookie サイズは&#x200B;**4096 バイト**&#x200B;です。 それ以外の場合は、`Unable to send the cookie. Size of '%name' is %size bytes`例外がスローされます。
 
 ### `default_ttl`

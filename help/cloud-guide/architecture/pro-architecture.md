@@ -191,7 +191,7 @@ Adobe Commerce オンクラウド基盤では、各Pro プロジェクトを3つ
 
 >[!NOTE]
 >
->マウントされたボリュームには、[書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれます。また、`app/` ディレクトリの一部も含まれません。 他のファイルについては、[&#x200B; ビルドおよびデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
+>マウントされたボリュームには、[書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれます。また、`app/` ディレクトリの一部も含まれません。 他のファイルについては、[&#x200B; ビルドおよびデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
 
 {{pro-backups}}
 
@@ -225,4 +225,4 @@ Pro クラスターのサイズと&#x200B;_compute_&#x200B;の設定は、選択
 
 冗長なアーキテクチャにより、Adobeのクラウドインフラストラクチャは、ダウンタイムなしでアップグレードできます。 アップスケーリングの場合、3つのインスタンスのそれぞれは、サイトの操作に影響を与えることなく、容量をアップグレードするために回転します。 例えば、制約がデータベースレベルではなくPHP レベルにある場合は、既存のクラスターに追加のweb サーバーを追加できます。 これにより、_水平方向のスケーリング_&#x200B;が提供され、データベースレベルの余分なCPUによって提供される垂直方向のスケーリングを補完します。 [拡張アーキテクチャ &#x200B;](scaled-architecture.md)を参照してください。
 
-イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html)を参照してください。
+イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ja)を参照してください。

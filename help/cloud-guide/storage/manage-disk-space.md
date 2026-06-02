@@ -143,7 +143,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 >[!IMPORTANT]
 >
->- Pro実稼動環境およびステージング環境の場合、ディスク領域の割り当てを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。 Pro実稼動環境とステージング環境のサイズの増加は、一定の間隔でのみ発生する可能性があるため、現在のディスク容量の使用状況に応じて、サポートではディスク容量の割り当てを最低10 GB増やすことをお勧めします。 割り当てが完了すると、Pro ステージングと実稼動環境のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配布することはできません。 ファイルのストレージ容量を増やすには、MySQLに割り当てられているディスク容量を減らします。
+>- Pro実稼動環境およびステージング環境の場合、ディスク領域の割り当てを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 Pro実稼動環境とステージング環境のサイズの増加は、一定の間隔でのみ発生する可能性があるため、現在のディスク容量の使用状況に応じて、サポートではディスク容量の割り当てを最低10 GB増やすことをお勧めします。 割り当てが完了すると、Pro ステージングと実稼動環境のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配布することはできません。 ファイルのストレージ容量を増やすには、MySQLに割り当てられているディスク容量を減らします。
 >- AWSでホストされているPro実稼動環境とステージング環境には、ディスク容量の増加に適用される[必須の6時間のクールダウン &#x200B;](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html)があります。 マウント上のディスク容量を増やした後、そのマウント上でディスク容量を再び増やすには、6時間待つ必要があります。
 
 ### アプリケーションディスク領域
@@ -200,7 +200,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク容量の監視
 
-Pro実稼動環境では、New RelicのManaged Alerts for Adobe Commerceアラートポリシーを使用して、ディスク容量やその他のパフォーマンス指標を監視できます。 詳しくは、[管理済みアラートを使用したパフォーマンスの監視](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)を参照してください。 詳細なガイダンスについては、[&#x200B; データベースのパフォーマンスの問題を解決するためのベストプラクティス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html)を参照してください。
+Pro実稼動環境では、New RelicのManaged Alerts for Adobe Commerceアラートポリシーを使用して、ディスク容量やその他のパフォーマンス指標を監視できます。 詳しくは、[管理済みアラートを使用したパフォーマンスの監視](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)を参照してください。 詳細なガイダンスについては、[&#x200B; データベースのパフォーマンスの問題を解決するためのベストプラクティス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ja)を参照してください。
 
 ## スペースが残りません
 

@@ -189,7 +189,7 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
+Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=ja) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
 
 - `DENY` - ページはフレーム内に表示できません。
 - `SAMEORIGIN` – （デフォルトのAdobe Commerce設定） ページは、ページ自体と同じオリジンのフレームでのみ表示できます。

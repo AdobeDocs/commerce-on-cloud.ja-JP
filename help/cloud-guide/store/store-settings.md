@@ -26,14 +26,14 @@ ht-degree: 0%
 
 管理者&#x200B;**ストア** > **設定** > **設定** セクションの設定を参照するストア設定は、設定のタイプに基づいてデプロイメント設定ファイルに保存されます。
 
-- `app/etc/config.php` – 静的コンテンツのデプロイメントに関連するストア、web サイト、モジュールまたは拡張機能、静的ファイルの最適化、およびシステム値の設定。 _設定ガイド_&#x200B;の[config.php リファレンス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html)を参照してください。
-- `app/etc/env.php` - システム固有のオーバーライドの値と、_NOT_&#x200B;をソース コントロールに保存する必要がある機密設定。 _設定ガイド_&#x200B;の[env.php リファレンス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html)を参照してください。
+- `app/etc/config.php` – 静的コンテンツのデプロイメントに関連するストア、web サイト、モジュールまたは拡張機能、静的ファイルの最適化、およびシステム値の設定。 _設定ガイド_&#x200B;の[config.php リファレンス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-configphp.html?lang=ja)を参照してください。
+- `app/etc/env.php` - システム固有のオーバーライドの値と、_NOT_&#x200B;をソース コントロールに保存する必要がある機密設定。 _設定ガイド_&#x200B;の[env.php リファレンス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html?lang=ja)を参照してください。
 
 >[!NOTE]
 >
 >Adobe Commerce on cloud infrastructureは実稼動モードとメンテナンスモードのみをサポートするため、管理者は&#x200B;**Advanced** > **Developer** セクションにアクセスできません。 構成管理タスクを完了するには、[環境管理者権限](../project/user-access.md)が必要です。 [環境変数](../environment/configure-env-yaml.md)を使用して追加の設定を行うことができます。
 
-設定管理を使用すると、パイプラインのデプロイメントを使用して、ダウンタイムを最小限に抑えながら、環境全体で一貫したストア設定をデプロイできます。 Adobe Commerce on cloud infrastructure プロジェクトには、[&#x200B; パイプラインのデプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)を念頭に置いて設計されたビルドサーバー、ビルドおよびデプロイ環境が含まれます。
+設定管理を使用すると、パイプラインのデプロイメントを使用して、ダウンタイムを最小限に抑えながら、環境全体で一貫したストア設定をデプロイできます。 Adobe Commerce on cloud infrastructure プロジェクトには、[&#x200B; パイプラインのデプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ja)を念頭に置いて設計されたビルドサーバー、ビルドおよびデプロイ環境が含まれます。
 
 ## 設定の上書きスキーム
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->パイプラインのデプロイメントのオーバーライドスキームについて詳しくは、_設定ガイド_&#x200B;の[設定管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html)を参照してください。
+>パイプラインのデプロイメントのオーバーライドスキームについて詳しくは、_設定ガイド_&#x200B;の[設定管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html?lang=ja)を参照してください。
 
 同じ設定が複数の場所で設定されている場合、アプリケーションは次の設定階層に依存して、環境に適用する値を決定します。
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 
 `bin/magento app:config:dump` コマンドを使用すると、機密性の高い設定はすべて`app/etc/env.php` ファイルに書き出されます。 CLI コマンド `bin/magento config:sensitive:set`を使用して、機密値を設定できます。 _Commerce PHP Extensions_ ガイドの[機密性の高い環境固有の設定](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/)を参照して、機密性の高い設定またはシステム固有の設定を指定する方法について説明します。
 
-_設定ガイド_&#x200B;の[機密設定またはシステム固有の設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html)の一覧を参照してください。
+_設定ガイド_&#x200B;の[機密設定またはシステム固有の設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/config-reference-sens.html?lang=ja)の一覧を参照してください。
 
 ### SCD パフォーマンス
 

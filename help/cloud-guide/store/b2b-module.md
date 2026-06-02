@@ -18,4 +18,4 @@ ht-degree: 0%
 
 # B2B モジュールを有効にする
 
-お客様が企業の場合は、Adobe Commerce B2B モジュールをインストールして、Adobe Commerce on cloud infrastructure Pro プロジェクトを拡張し、法人向けモデルに対応できます。 クラウドインフラストラクチャ上のAdobe CommerceのB2B モジュールをインストールおよび設定する方法については、[Adobe Commerce B2B ユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/b2b/guide-overview.html)を参照してください。
+お客様が企業の場合は、Adobe Commerce B2B モジュールをインストールして、Adobe Commerce on cloud infrastructure Pro プロジェクトを拡張し、法人向けモデルに対応できます。 クラウドインフラストラクチャ上のAdobe CommerceのB2B モジュールをインストールおよび設定する方法については、[Adobe Commerce B2B ユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/b2b/guide-overview.html?lang=ja)を参照してください。

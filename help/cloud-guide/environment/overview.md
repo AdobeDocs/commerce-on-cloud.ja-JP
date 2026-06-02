@@ -36,7 +36,7 @@ Adobe Commerce on cloud インフラストラクチャの環境には、Adobe Co
 
 ## Pro環境の設定の更新
 
-Adobe Commerce on cloud infrastructure Proのステージング環境および実稼動環境では、ローカル開発環境の多くの設定オプションを更新し、変更を確定してこれらの環境に適用できます。 ただし、次の設定オプションを更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
+Adobe Commerce on cloud infrastructure Proのステージング環境および実稼動環境では、ローカル開発環境の多くの設定オプションを更新し、変更を確定してこれらの環境に適用できます。 ただし、次の設定オプションを更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
 
 - `.magento/services.yaml` ファイル内のサービスをインストールまたは更新します。
 - `.magento.app.yaml` ファイルの`mounts`および`disk` プロパティの設定を変更します。

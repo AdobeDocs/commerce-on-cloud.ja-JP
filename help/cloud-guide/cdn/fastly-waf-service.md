@@ -44,7 +44,7 @@ WAF サービスには、次の利点があります。
 
 >[!TIP]
 >
->Adobe Commerce on cloud infrastructure ストアのPCI コンプライアンスの維持について詳しくは、[PCI コンプライアンス &#x200B;](https://business.adobe.com/products/magento/pci-compliance.html)を参照してください。
+>Adobe Commerce on cloud infrastructure ストアのPCI コンプライアンスの維持について詳しくは、[PCI コンプライアンス &#x200B;](https://business.adobe.com/jp/products/magento/pci-compliance.html)を参照してください。
 
 ## WAFの有効化
 
@@ -68,7 +68,7 @@ WAF サービスが有効になっている場合、すべてのweb トラフィ
 
 このエラー応答ページは、管理者からカスタマイズできます。 [WAFの回答ページのカスタマイズ &#x200B;](fastly-custom-response.md#customize-the-waf-error-page)を参照してください。
 
-Adobe Commerce管理ページまたはストアフロントで、正当なURL リクエストに応じて`403 Forbidden` エラーページが返された場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信します。 エラー応答ページから参照IDをコピーし、チケットの説明に貼り付けます。
+Adobe Commerce管理ページまたはストアフロントで、正当なURL リクエストに応じて`403 Forbidden` エラーページが返された場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信します。 エラー応答ページから参照IDをコピーし、チケットの説明に貼り付けます。
 
 New Relicを使用した特定のリクエストに対するWAFのレスポンスを特定するには、次を参照してください。
 

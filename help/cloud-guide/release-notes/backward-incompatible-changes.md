@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ## クラウドパッチの変更
 
-- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[&#x200B; ソフトウェアのダウンロード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
+- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[&#x200B; ソフトウェアのダウンロード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ja) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
 
 - **パッチ適用コマンドの更新** – パッチを適用するコマンドを`vendor/bin/ece-tools` ディレクトリから`vendor/bin/ece-patches` ディレクトリに移動しました。 このコマンドを使用してパッチを手動で適用する場合は、新しいパスを使用します。
 

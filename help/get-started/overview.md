@@ -26,7 +26,7 @@ Adobe Commerceへようこそ！
 
 - [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html) （Adobe Experience League）:Commerce プロジェクトの計画、実装、操作、アップグレード、保守
+- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League）:Commerce プロジェクトの計画、実装、操作、アップグレード、保守
 
 >[!TIP]
 >

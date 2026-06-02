@@ -45,7 +45,7 @@ ht-degree: 0%
 
 **Pro環境**&#x200B;のデータベースバックアップを作成するには：
 
-ステージングと実稼動を含むPro環境のデータベースダンプを作成するには、[&#x200B; データベースダンプの作成](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) ナレッジベース記事を参照してください。
+ステージングと実稼動を含むPro環境のデータベースダンプを作成するには、[&#x200B; データベースダンプの作成](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud) ナレッジベース記事を参照してください。
 
 **[!DNL Cloud Console]**&#x200B;を使用して任意のStarter環境のバックアップを作成するには：
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 ## 災害復旧スナップショットの復元
 
-Pro ステージング環境および実稼動環境で災害復旧スナップショットを復元するには、[&#x200B; データベース ダンプをサーバーから直接インポートします](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
+Pro ステージング環境および実稼動環境で災害復旧スナップショットを復元するには、[&#x200B; データベース ダンプをサーバーから直接インポートします](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3)。
 
 ## コードをロールバック
 

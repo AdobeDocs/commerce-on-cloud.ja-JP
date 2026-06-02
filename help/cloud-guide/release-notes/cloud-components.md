@@ -83,7 +83,7 @@ ht-degree: 0%
 
 リリース日：2022年9月13日（PT）
 
-- ![&#x200B; アイコン &#x200B;](../../assets/fix.svg) **ウォームアップ**&#x200B;のエラー – ページの表示が管理者で&#x200B;[**個別に表示されない**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)に設定されている場合に[&#x200B; ウォームアップ &#x200B;](../environment/variables-post-deploy.md#warm_up_pages)を試みた問題を修正し、デプロイメントログに`ERROR: Warming up failed: <link to page>`個のエラーが発生しました。<!-- MCLOUD-9134 -->
+- ![&#x200B; アイコン &#x200B;](../../assets/fix.svg) **ウォームアップ**&#x200B;のエラー – ページの表示が管理者で&#x200B;[**個別に表示されない**](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure)に設定されている場合に[&#x200B; ウォームアップ &#x200B;](../environment/variables-post-deploy.md#warm_up_pages)を試みた問題を修正し、デプロイメントログに`ERROR: Warming up failed: <link to page>`個のエラーが発生しました。<!-- MCLOUD-9134 -->
 
 ## v1.0.11
 

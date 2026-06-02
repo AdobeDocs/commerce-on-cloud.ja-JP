@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # ダウンタイムのゼロ導入
 
-Adobe Commerce on cloud infrastructureは、デプロイメントフェーズ中に&#x200B;[_maintenance_ モード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode)でアプリケーションを実行します。デプロイメントが完了するまで、サイトはオフラインになります。 実稼動サイトがメンテナンスモードになる時間は、サイトのサイズ、デプロイメント中に適用される変更回数、静的コンテンツのデプロイメントの設定によって異なります。 プロジェクトは、**ゼロ**&#x200B;のダウンタイム効果でデプロイするように設定できます。
+Adobe Commerce on cloud infrastructureは、デプロイメントフェーズ中に&#x200B;[_maintenance_ モード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=ja#production-mode)でアプリケーションを実行します。デプロイメントが完了するまで、サイトはオフラインになります。 実稼動サイトがメンテナンスモードになる時間は、サイトのサイズ、デプロイメント中に適用される変更回数、静的コンテンツのデプロイメントの設定によって異なります。 プロジェクトは、**ゼロ**&#x200B;のダウンタイム効果でデプロイするように設定できます。
 
 デプロイメントプロセス中、すべての接続は、アクティブなセッションと保留中のアクション（カートへの追加やチェックアウトなど）を保持するために、最大5分間キューに入れます。 デプロイメント後、キューは解放され、接続は中断なく続行されます。 この&#x200B;_接続保留_&#x200B;を利用してデプロイメントを&#x200B;_0_&#x200B;のダウンタイムに短縮するには、最も効率的なデプロイ戦略を使用するようにプロジェクトを設定する必要があります。
 
