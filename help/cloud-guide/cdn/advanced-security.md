@@ -2,9 +2,10 @@
 title: Adobe Commerceの高度なセキュリティ
 description: Advanced Securityが、Adobe Commerce on Cloud Infrastructureにボット管理、高度なレート制限、およびレイヤ 7 DDoS対策をどのように追加するかをご覧ください。
 feature: Cloud, Configuration, Security
-source-git-commit: 8a7c1c297092fdf2b75d22ce99c360c85eac0495
+exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
+source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '2474'
 ht-degree: 0%
 
 ---
@@ -34,6 +35,80 @@ ht-degree: 0%
 >[!NOTE]
 >
 >現在、[!DNL Advanced Security]設定でサポートチケットの送信が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。 詳しくは、[&#x200B; リクエスト  [!DNL Advanced Security]](#request-advanced-security)を参照してください。
+
+>[!IMPORTANT]
+>
+>**現在の制限**
+>
+>2026年第3四半期末まで、お客様はボット管理ルールを直接変更または管理することはできません。
+>
+>ルールの追加、変更、調整については、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support)を通じてAdobe Commerce サポートにお問い合わせください。 サポートチームは、要求された変更を実装します。
+>
+>Fastlyは、2026年第4四半期以降、Commerceの管理パネルでボット管理ルールを管理できるアドオン機能をリリースする予定です。
+
+## デフォルトのルールと保護
+
+次のデフォルトのルールと保護は、[!DNL Advanced Security]で使用できます。
+
+### レイヤー7 DDoS
+
+- DDoSしきい値はFastly CDN プラットフォームに組み込まれており、現在は顧客ごとにカスタマイズすることはできません。
+- DDoS対策によってブロックされたトラフィックのログは、顧客に直接表示されません。
+- リクエストに応じて、Adobe Commerce サポートは、ブロックされたDDoS トラフィックに関連する詳細を提供できます。
+- ネイティブのDDoS ログ転送機能は、今後のリリースで提供される予定です。
+
+### ボット管理
+
+以下のベースラインボット管理の保護は、FastlyのSignal Sciences ダッシュボードを通じて利用できます。
+
+| ルールタイプ | ステータス | 表示 |
+|---|---|---|
+| 不正なBOTと疑われるタグ付けされたトラフィックをブロック | オンボーディング中にデフォルトで有効 | `sigsci_tags`の下のNew Relic ログに表示 |
+| 特定のタグ（sigsci タグ）にもとづくトラフィックのブロック | お客様と共同で必要な場合にのみ設定 | `sigsci_tags`の下のNew Relic ログに表示 |
+| 特定のAPIやURL パターンに対するレート制限 | お客様と共同で必要な場合にのみ設定 | ブロックされたトラフィックは、`Agent_response`の下のNew Relic ログに表示されます |
+| 特定のAPIやURL パターンに対する動的な課題 | お客様と共同で必要な場合にのみ設定 | ブロックされたトラフィックは、`Agent_response`の下のNew Relic ログに表示されます |
+| ブラウザーチャレンジ | お客様と共同で必要な場合にのみ設定 | ブロックされたトラフィックは、`Agent_response`の下のNew Relic ログに表示されます |
+
+## オブザーバビリティ：ボット保護とNGWAF アクティビティの監視
+
+CDN ログは、お客様のNew Relic アカウントに自動的に転送されます。 詳細については、[&#x200B; ログ管理](../monitor/log-management.md)を参照してください。
+
+CDN ログには、Signal Sciences （Bot Protection / Next-Generation WAF）の組み込みのテレメトリが含まれており、お客様はNew Relic内で直接セキュリティイベントを監視できます。
+
+主なフィールドは次のとおりです。
+
+- **`Sigsci_Tags`** - Signal Sciencesによって適用される分類とタグを示します。
+- **`Agent_response`** - ボット保護/NGWAF エージェントによって実行されたアクションを示します。
+
+例：
+
+- ボット保護またはNGWAF ルールによってブロックされたトラフィックを識別するには：
+
+  `Agent_response:"406"`
+
+  応答コード 406は、リクエストがセキュリティ制御によってブロックされたことを示します。
+
+- 不正なボットとしてタグ付けされたリクエストを識別するには：
+
+  `Sigsci_Tags:"*SUSPECTED-BAD-BOT*"`
+
+これらのフィールドを使用して、New Relic内でダッシュボード、アラート、調査を作成し、ボットのアクティビティ、ブロックされたリクエスト、その他のセキュリティ関連イベントをモニタリングします。
+
+## 既存のVCL機能は変更されません
+
+[!DNL Advanced Security] アドオンを有効にしても、既存のFastly VCL ベースのセキュリティ制御を変更または置き換えることはできません。
+
+次の既存のVCL ブロック機能は、変更なしで引き続き機能します。
+
+- IP ベースのブロッキング
+- 位置情報のブロック
+- ユーザーエージェントベースのブロック
+- JA3署名ベースのブロッキング
+- JA4署名ベースのブロッキング
+
+お客様は、既存のカスタム VCL設定とセキュリティルールを[!DNL Advanced Security] アドオン機能と一緒に引き続き使用できます。
+
+[!DNL Advanced Security] アドオンは、標準のFastly CDNと、既に[!DNL Adobe Commerce on Cloud Infrastructure]で利用可能な既存のVCL保護に加えて動作します。
 
 ## 脅威のカバレッジ
 
