@@ -1,7 +1,7 @@
 ---
-source-git-commit: a15ae4e0e11a84662c980ad351e32362f14e69e1
+source-git-commit: e0e4b21e76a5c1fa9e146695a183a29ec79e6cc1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '376'
 ht-degree: 2%
 
 ---
@@ -147,28 +147,6 @@ ht-degree: 2%
         テクニカル
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/3546f15b4e1d4e192177064c3c72652d8ae7b5cb">コミット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月10日（PT）
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>説明</th>
-      <th>タイプ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>クラウドインフラストラクチャ上のAdobe Commerceの<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web プロパティ設定</a>のリファレンスにセキュリティノートを追加して、web プロパティのデフォルト設定では、アップロードされたファイルの実行を防ぐためにメディアロケーションに<code>scripts:false</code>が使用されていることを明確にしました。</p>
-</td>
-      <td>
-        技術的、フィードバック
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f3fa8339961505f9c8ac2612d7a89e83553eee37">コミット</a></td>
     </tr>
   </tbody>
 </table>
