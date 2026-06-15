@@ -1,7 +1,7 @@
 ---
-source-git-commit: a15ae4e0e11a84662c980ad351e32362f14e69e1
+source-git-commit: e0e4b21e76a5c1fa9e146695a183a29ec79e6cc1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '376'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>制限と識別可能性に関する情報を含む<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高度なセキュリティ </a>のトピックを更新しました。</p>
+      <td><p>制限と識別可能性に関する情報を含む<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高度なセキュリティ </a>のトピックを更新しました。</p>
 </td>
       <td>
         メジャーアップデート
@@ -45,7 +45,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>デフォルトのロック設定と、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a>および<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a>環境変数がProおよびStarter環境にどのような影響を与えるかを明確にしました。</p>
+      <td><p>デフォルトのロック設定と、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a>環境変数がProおよびStarter環境にどのような影響を与えるかを明確にしました。</p>
 </td>
       <td>
         テクニカル
@@ -67,7 +67,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>オンプレミスのElasticsearch サポートステートメントが<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch サポートの警告</a>で削除されました。</p>
+      <td><p>オンプレミスのElasticsearch サポートステートメントが<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch サポートの警告</a>で削除されました。</p>
 </td>
       <td>
         テクニカル
@@ -89,7 +89,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud Infrastructure上のAdobe Commerce向けに<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高度なセキュリティ </a>機能を追加しました。</p>
+      <td><p>Cloud Infrastructure上のAdobe Commerce向けに<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">高度なセキュリティ </a>機能を追加しました。</p>
 </td>
       <td>
         新しいトピック
@@ -111,7 +111,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>Cloud Tools ドキュメント全体のリリースノートを更新して、最新バージョンの追加、互換性の更新、および修正を反映します。 Commerce Cloud Tools Suite</a>の<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite"> リリースノートを参照してください。</p>
+      <td><p>Cloud Tools ドキュメント全体のリリースノートを更新して、最新バージョンの追加、互換性の更新、および修正を反映します。 Commerce Cloud Tools Suite</a>の<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite"> リリースノートを参照してください。</p>
 </td>
       <td>
         テクニカル
@@ -119,7 +119,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">コミット</a></td>
     </tr>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.11の後、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI参照</a>および<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference"> エラーメッセージ </a>を更新しました。</p>
+      <td><p>ECE-Tools リリース v2002.2.11の後、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI参照</a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference"> エラーメッセージ </a>を更新しました。</p>
 </td>
       <td>
         テクニカル
@@ -141,34 +141,12 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>を更新して、オプションのPHP拡張機能のうちLDAPを一覧表示し、LDAPおよび類似の拡張機能が環境固有であることを確認しました（例えば、Pro ステージング/実稼動環境ではセルフサービスではありません）。</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">PHP設定</a>を更新して、オプションのPHP拡張機能のうちLDAPを一覧表示し、LDAPおよび類似の拡張機能が環境固有であることを確認しました（例えば、Pro ステージング/実稼動環境ではセルフサービスではありません）。</p>
 </td>
       <td>
         テクニカル
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/3546f15b4e1d4e192177064c3c72652d8ae7b5cb">コミット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年4月10日（PT）
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>説明</th>
-      <th>タイプ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>クラウドインフラストラクチャ上のAdobe Commerceの<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">Web プロパティ設定</a>のリファレンスにセキュリティノートを追加して、web プロパティのデフォルト設定では、アップロードされたファイルの実行を防ぐためにメディアロケーションに<code>scripts:false</code>が使用されていることを明確にしました。</p>
-</td>
-      <td>
-        技術的、フィードバック
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f3fa8339961505f9c8ac2612d7a89e83553eee37">コミット</a></td>
     </tr>
   </tbody>
 </table>
