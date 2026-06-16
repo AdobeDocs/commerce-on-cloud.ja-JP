@@ -5,12 +5,24 @@ role: Admin
 feature: Cloud, Roles/Permissions
 level: Beginner
 short-description: ユーザーを追加し、Cloud ConsoleまたはCLIでプロジェクトと環境の役割を割り当てます。
-last-substantial-update: 2026-06-11T00:00:00Z
+last-substantial-update: 2026-06-11
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-source-git-commit: de324897e87232393f20d95b2867d8a95605fa23
+TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 30e6d068126e2713dcaa23292db5704c23c272ad
 workflow-type: tm+mt
-source-wordcount: '1690'
+source-wordcount: 1690
 ht-degree: 0%
 
 ---
@@ -246,7 +258,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
      >[!WARNING]
      >
-     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
+     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
 
 1. TFA設定が完了したら、**保存**&#x200B;をクリックしてアカウントを更新します。
 
