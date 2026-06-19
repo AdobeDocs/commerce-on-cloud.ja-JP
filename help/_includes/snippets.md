@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,16 @@ ht-degree: 0%
 >[!TIP]
 >
 >アップグレードまたはパッチ適用プロセスを開始する前に、統合環境からアクティブなブランチを作成し、新しいブランチをローカル ワークステーションにチェックアウトします。 アップグレードまたはパッチプロセスにブランチを割り当てることで、進行中の作業への干渉を回避できます。
+
+## New Relicのバルキー {#valkey-newrelic}
+
+>[!NOTE]
+>
+>Valkeyへの移行後も、New RelicでRedisが表示される場合がある
+>
+>New Relicは、環境がValkeyに移行された後も、引き続きRedisとしてキャッシュサービスを参照する可能性があります。
+>
+>ValkeyはRedisのオープンソースのフォークであり、一部のツールや統合機能は、明確なValkey ラベルではなくRedis命名を使用してサービスを識別し続けています。 これは、Redisがまだインストールされていることを必ずしも示しません。
 
 <!-- Fastly-related snippets begin -->
 
