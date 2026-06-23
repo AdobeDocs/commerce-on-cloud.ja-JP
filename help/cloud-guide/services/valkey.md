@@ -22,7 +22,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)は、Adobe Commerceがデフォルトで使用する`Zend Framework Zend_Cache_Backend_File`に代わるオプションのバックエンドキャッシュソリューションです。
 
-_実装プレイブックのベストプラクティスガイド_&#x200B;の「[Valkey](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}の設定」を参照してください。
+_実装プレイブックのベストプラクティスガイド_&#x200B;の「[Valkey](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}の設定」を参照してください。
 
 {{service-instruction}}
 
