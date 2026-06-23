@@ -5,16 +5,11 @@ feature: Cloud, Configuration, Install, Roles/Permissions
 role: Developer
 exl-id: d2746185-bc59-4d30-a088-73df1bd2c0b2
 TQID: https://experienceleague.adobe.com/gCq40IqrBWMNPSy8eLBQhXFIXmgmUWQjQ8bWZK7fIcQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 785
 ht-degree: 0%
@@ -29,7 +24,7 @@ ht-degree: 0%
 
 次の表のADMIN変数を使用して、Commerceのインストール中に管理者ユーザーの資格情報を上書きできます。
 
-インストール後に値を変更する場合は、SSHを使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンド &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja)を使用してAdmin ユーザー資格情報を作成または編集します。
+インストール後に値を変更する場合は、SSHを使用して環境に接続し、Adobe Commerce CLI [`admin:user` コマンド ](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html)を使用してAdmin ユーザー資格情報を作成または編集します。
 
 | 変数 | Default | 説明 |
 | -------------- | --------------------------- | ----------- |
@@ -48,9 +43,9 @@ ht-degree: 0%
 
 ### 管理者URLの変更
 
-デフォルトでは、[Commerce管理者](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html?lang=ja) URLは&#x200B;*&lt;domain_name>/admin*&#x200B;に設定されています。 セキュリティ上の理由から、Adobeでは、推測しにくい一意のカスタム管理者URLに変更することをお勧めします。
+デフォルトでは、[Commerce管理者](https://experienceleague.adobe.com/docs/commerce-admin/start/admin/admin.html) URLは&#x200B;*&lt;domain_name>/admin*&#x200B;に設定されています。 セキュリティ上の理由から、Adobeでは、推測しにくい一意のカスタム管理者URLに変更することをお勧めします。
 
-**クラウドインフラストラクチャ**&#x200B;の[!DNL Adobe Commerce]では、（[!DNL Cloud Console]または[!DNL Cloud CLI]）の`ADMIN_URL`環境変数を使用して管理者URLを変更する必要があります。 [!DNL Admin]からの設定の変更は、オンプレミスのインストールにのみ適用されます。 オンプレミスのインストールの場合は、[&#x200B; カスタム管理者URLを使用](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ja#use-a-custom-admin-url)します。
+**クラウドインフラストラクチャ**&#x200B;の[!DNL Adobe Commerce]では、（[!DNL Cloud Console]または[!DNL Cloud CLI]）の`ADMIN_URL`環境変数を使用して管理者URLを変更する必要があります。 [!DNL Admin]からの設定の変更は、オンプレミスのインストールにのみ適用されます。 オンプレミスのインストールの場合は、[ カスタム管理者URLを使用](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url)します。
 
 Adobeでは、インストール後に管理者URLの環境レベル変数を変更することをお勧めします。 クローンされた`master`環境から分岐する前に、セキュリティ上の理由から、この設定を構成します。 `master` ブランチから作成されたすべてのブランチは、継承をfalseに設定しない限り、環境レベルの変数とその値を継承します。
 
@@ -60,12 +55,12 @@ Adobeでは、インストール後に管理者URLの環境レベル変数を変
 
 ##### 統合環境
 
-[Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=ja)から、次の新しい変数を追加します。
+[Cloud Console](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html)から、次の新しい変数を追加します。
 
 - **名前：** `ADMIN_URL`
 - **値：**&#x200B;新しい管理者URL （例：`magento_A8v10`）
 
-- 詳細な手順については、開発者向けドキュメントの「[環境変数を追加](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=ja#configure-environment)」または「[環境変数](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=ja)」を参照してください。
+- 詳細な手順については、開発者向けドキュメントの「[環境変数を追加](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-environment)」または「[環境変数](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html)」を参照してください。
 
 ##### [!DNL Cloud Console]で管理者URLを設定
 
@@ -83,7 +78,7 @@ Adobeでは、インストール後に管理者URLの環境レベル変数を変
 
 ##### ステージングと実稼動が[!DNL Cloud Console]で利用できない場合
 
-ステージング環境または実稼動環境の`ADMIN_URL`変数の追加を要求する[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。 ステージングと実稼動が[!DNL Cloud Console]からアクセスできる場合は、[統合環境](#integration-environment)で説明されているように、変数を追加します。
+ステージング環境または実稼動環境の`ADMIN_URL`変数の追加を要求する[ サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。 ステージングと実稼動が[!DNL Cloud Console]からアクセスできる場合は、[統合環境](#integration-environment)で説明されているように、変数を追加します。
 
 #### オプション B: [!DNL Cloud CLI]を使用して管理者URLを変更する
 
@@ -96,8 +91,9 @@ magento-cloud variable:update ADMIN_URL --value newAdmin_A8v10 -e master --inher
 ```
 
 - **再デプロイメント：** [!DNL Cloud CLI]トリガーの`ADMIN_URL`変数を、環境の再デプロイメントに変更します。
-- **継承：**&#x200B;変数はデフォルトで継承されます。 値が子環境に継承されないようにするには、図に示すように`--inheritable false` オプションを使用します。 詳しくは、[変数レベルの表示](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=ja#visibility)を参照してください。
+- **継承：**&#x200B;変数はデフォルトで継承されます。 値が子環境に継承されないようにするには、図に示すように`--inheritable false` オプションを使用します。 詳しくは、[変数レベルの表示](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility)を参照してください。
 
 >[!NOTE]
 >
 >`ADMIN_URL`の値には、文字（a ～ z、A ～ Z）、数字（0 ～ 9）、およびアンダースコア文字（_）を使用できます。 スペースやその他の文字は使用できません。
+
