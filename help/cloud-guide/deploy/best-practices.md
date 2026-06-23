@@ -18,7 +18,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
 ht-degree: 0%
@@ -207,3 +207,4 @@ ht-degree: 0%
 `SCD_ON_DEMAND`変数を使用して静的コンテンツ生成を有効にし、[`post_deploy` フック &#x200B;](../application/hooks-property.md)を設定して、キャッシュをクリアし、コンテナが接続の受け入れを開始した&#x200B;_後_&#x200B;にキャッシュをプリロード（ウォーム）し、_通常の受信トラフィック中に_&#x200B;します。
 
 ビルドおよびデプロイ ログを確認するには、[&#x200B; ログの表示](../test/log-locations.md#view-and-manage-logs)を参照してください。
+

@@ -12,7 +12,7 @@ feature_v2:
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 688
 ht-degree: 0%
@@ -205,3 +205,4 @@ ht-degree: 0%
 ## リモート環境の操作
 
 SSH キー[&#128279;](../development/secure-connections.md)を[&#x200B; セットアップした後、ローカル ワークスペースからリモート環境](../development/secure-connections.md#connect-to-a-remote-environment)に接続し、プロジェクト サービスと対話して設定を変更できます。
+
