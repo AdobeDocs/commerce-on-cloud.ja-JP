@@ -4,9 +4,13 @@ description: ' [!DNL Commerce]  アプリケーション設定ファイルでwor
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
 TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 357
@@ -53,7 +57,7 @@ workers:
 
 `size`、`relationships`、`access`、`disk`および`mount`、および`variables` プロパティの定義は、明示的に上書きされない限り、ワーカーによって継承されます。
 
-次のプロパティは、[ トップレベル設定](properties.md)を上書きするために最もよく使用されます。
+次のプロパティは、[&#x200B; トップレベル設定](properties.md)を上書きするために最もよく使用されます。
 
 - `size` – 単一のバックグラウンド プロセスに割り当てるリソースの数を減らします
 - `variables` - アプリケーションの実行方法を変更するように指示します

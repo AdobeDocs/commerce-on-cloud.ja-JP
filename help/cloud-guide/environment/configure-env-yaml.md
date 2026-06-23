@@ -5,10 +5,14 @@ feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
 exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
 TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 706
@@ -22,11 +26,11 @@ ht-degree: 0%
 
 >[!TIP]
 >
->YAML ファイルでは大文字と小文字が区別され、タブは使用できません。 `.magento.env.yaml` ファイル全体で一貫したインデントを使用するように注意してください。そうしないと、設定が期待どおりに動作しない可能性があります。 ドキュメントとサンプルファイルの例では、_2つのスペース_&#x200B;のインデントが使用されています。 [ece-tools validate コマンド ](#validate-configuration-file)を使用して、設定を確認します。
+>YAML ファイルでは大文字と小文字が区別され、タブは使用できません。 `.magento.env.yaml` ファイル全体で一貫したインデントを使用するように注意してください。そうしないと、設定が期待どおりに動作しない可能性があります。 ドキュメントとサンプルファイルの例では、_2つのスペース_&#x200B;のインデントが使用されています。 [ece-tools validate コマンド &#x200B;](#validate-configuration-file)を使用して、設定を確認します。
 
 ## ファイル構造
 
-`.magento.env.yaml` ファイルには、`stage`と`log`の2つのセクションがあります。 `stage` セクションは、[ クラウド展開プロセス ](../deploy/process.md)のフェーズで発生するアクションを制御します。
+`.magento.env.yaml` ファイルには、`stage`と`log`の2つのセクションがあります。 `stage` セクションは、[&#x200B; クラウド展開プロセス &#x200B;](../deploy/process.md)のフェーズで発生するアクションを制御します。
 
 - `stage` - 「ステージ」セクションを使用して、デプロイメントの次のステージの特定のアクションを定義します。
    - `global` - ビルド、デプロイ、デプロイ後の両方のフェーズでアクションを制御します。 ビルド、デプロイ、デプロイ後のセクションでこれらの設定を上書きできます。
@@ -36,18 +40,18 @@ ht-degree: 0%
 - `log` - ログセクションを使用して、通知タイプと詳細レベルを含む[通知](set-up-notifications.md)を設定します。
    - `slack` - Slack ボットに送信するメッセージを設定します。
    - `email` - 1人以上のメール受信者に送信するメールを設定します。
-   - [ ログハンドラー](log-handlers.md) - リモートのログサーバーに送信されるハードウェアおよびソフトウェアのアプリケーションメッセージを設定します。
+   - [&#x200B; ログハンドラー](log-handlers.md) - リモートのログサーバーに送信されるハードウェアおよびソフトウェアのアプリケーションメッセージを設定します。
 
 ### 環境変数
 
-`ece-tools` パッケージは、[ クラウド変数](variables-cloud.md)、[!DNL Cloud Console]で設定された変数、`.magento.env.yaml`設定ファイルの値に基づいて、`env.php` ファイルの値を設定します。 `.magento.env.yaml` ファイルの環境変数は、既存のCommerce設定を上書きしてCloud環境をカスタマイズします。 デフォルト値が`Not Set`の場合、`ece-tools` パッケージは&#x200B;**NO** アクションを実行し、[!DNL Commerce]のデフォルトまたはMAGENTO_CLOUD_RELATIONSHIPS コンフィギュレーションの値を使用します。 デフォルト値が設定されている場合、`ece-tools` パッケージはそのデフォルト値を設定するように動作します。
+`ece-tools` パッケージは、[&#x200B; クラウド変数](variables-cloud.md)、[!DNL Cloud Console]で設定された変数、`.magento.env.yaml`設定ファイルの値に基づいて、`env.php` ファイルの値を設定します。 `.magento.env.yaml` ファイルの環境変数は、既存のCommerce設定を上書きしてCloud環境をカスタマイズします。 デフォルト値が`Not Set`の場合、`ece-tools` パッケージは&#x200B;**NO** アクションを実行し、[!DNL Commerce]のデフォルトまたはMAGENTO_CLOUD_RELATIONSHIPS コンフィギュレーションの値を使用します。 デフォルト値が設定されている場合、`ece-tools` パッケージはそのデフォルト値を設定するように動作します。
 
 次のトピックには、`.magento.env.yaml` ファイルで使用できるすべての変数のデフォルト値が設定されているかどうかなどの詳細な定義が含まれています。
 
-- [ グローバル ](variables-global.md) – 変数は、ビルド、デプロイ、デプロイ後の各フェーズのアクションを制御します
-- [ ビルド ](variables-build.md) – 変数はビルドアクションを制御します
-- [ デプロイ ](variables-deploy.md) – 変数がデプロイアクションを制御します
-- [ デプロイ後](variables-post-deploy.md) – 変数はデプロイ後のアクションを制御します
+- [&#x200B; グローバル &#x200B;](variables-global.md) – 変数は、ビルド、デプロイ、デプロイ後の各フェーズのアクションを制御します
+- [&#x200B; ビルド &#x200B;](variables-build.md) – 変数はビルドアクションを制御します
+- [&#x200B; デプロイ &#x200B;](variables-deploy.md) – 変数がデプロイアクションを制御します
+- [&#x200B; デプロイ後](variables-post-deploy.md) – 変数はデプロイ後のアクションを制御します
 
 ### CLIからの設定ファイルの作成
 

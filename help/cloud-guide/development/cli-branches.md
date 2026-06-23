@@ -5,9 +5,13 @@ role: Developer
 feature: Cloud, Install
 exl-id: d67e8802-8137-451f-b468-8b788afb01ea
 TQID: https://experienceleague.adobe.com/hCfTF-Vl9LLKgUet4hS3JZN3kX7ZF6BDJ4tsYnr44Fs
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 688
@@ -17,13 +21,13 @@ ht-degree: 0%
 
 # CLIを使用した分岐の管理
 
-`magento-cloud` CLIをインストールするには、[Cloud CLI リファレンス ](../dev-tools/cloud-cli-overview.md)を参照してください。 `magento-cloud` CLIをインストールし、クラウドインフラストラクチャへのリモートアクセス用にSSH キーを設定したら、`magento-cloud` CLI コマンドを使用してプロジェクトの環境を管理できます。 環境アーキテクチャについて詳しくは、[ スターターアーキテクチャ ](../architecture/starter-architecture.md)または[ プロアーキテクチャ ](../architecture/pro-architecture.md)を参照してください。
+`magento-cloud` CLIをインストールするには、[Cloud CLI リファレンス &#x200B;](../dev-tools/cloud-cli-overview.md)を参照してください。 `magento-cloud` CLIをインストールし、クラウドインフラストラクチャへのリモートアクセス用にSSH キーを設定したら、`magento-cloud` CLI コマンドを使用してプロジェクトの環境を管理できます。 環境アーキテクチャについて詳しくは、[&#x200B; スターターアーキテクチャ &#x200B;](../architecture/starter-architecture.md)または[&#x200B; プロアーキテクチャ &#x200B;](../architecture/pro-architecture.md)を参照してください。
 
 [!DNL Cloud Console]を使用してブランチと環境を管理するには、[を使用してブランチを管理 [!DNL Cloud Console]](../project/console-branches.md)を参照してください。
 
 ## CLI コマンドの使用
 
-`magento-cloud` CLI コマンドは、Git コマンドに似ています。 プロジェクトに接続し、環境を管理するために使用できます。 任意のディレクトリからコマンドを実行できますが、プロジェクト ディレクトリからコマンドを実行することをお勧めします。 プロジェクトディレクトリから実行する場合、`-p <project-ID>` パラメーターを省略できます。 [Cloud CLI リファレンス ](../dev-tools/cloud-cli-overview.md)を参照してください。
+`magento-cloud` CLI コマンドは、Git コマンドに似ています。 プロジェクトに接続し、環境を管理するために使用できます。 任意のディレクトリからコマンドを実行できますが、プロジェクト ディレクトリからコマンドを実行することをお勧めします。 プロジェクトディレクトリから実行する場合、`-p <project-ID>` パラメーターを省略できます。 [Cloud CLI リファレンス &#x200B;](../dev-tools/cloud-cli-overview.md)を参照してください。
 
 ## プロジェクトの複製
 
@@ -31,11 +35,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Git コマンドの中には、Adobe Commerce on cloud インフラストラクチャプロジェクトでアクションを実行できないものもあります。 例えば、Git コマンドを使用してブランチを作成できますが、新しい環境を作成してアクティブ化することはできません。 環境を&#x200B;_アクティブ_&#x200B;にするには、`magento-cloud environment:branch <branch-name>` コマンドを使用して環境を作成する必要があります。 または、[!DNL Cloud Console]を使用してアクティブな環境を作成することもできます。 [Cloud CLI リファレンス ](../dev-tools/cloud-cli-overview.md#git-commands)を参照してください。
+>Git コマンドの中には、Adobe Commerce on cloud インフラストラクチャプロジェクトでアクションを実行できないものもあります。 例えば、Git コマンドを使用してブランチを作成できますが、新しい環境を作成してアクティブ化することはできません。 環境を&#x200B;_アクティブ_&#x200B;にするには、`magento-cloud environment:branch <branch-name>` コマンドを使用して環境を作成する必要があります。 または、[!DNL Cloud Console]を使用してアクティブな環境を作成することもできます。 [Cloud CLI リファレンス &#x200B;](../dev-tools/cloud-cli-overview.md#git-commands)を参照してください。
 
 **プロジェクト `master`環境**&#x200B;を複製するには：
 
-1. [ ファイルシステム所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) アカウントでローカル ワークステーションにログインします。
+1. [&#x200B; ファイルシステム所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) アカウントでローカル ワークステーションにログインします。
 
 1. Web サーバーまたは仮想ホスト _docroot_ ディレクトリに変更します。
 
@@ -110,7 +114,7 @@ ht-degree: 0%
    composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
    ```
 
-1. [_オプション_]&#x200B;環境の[ バックアップ ](../storage/snapshots.md)を作成します。
+1. [_オプション_]&#x200B;環境の[&#x200B; バックアップ &#x200B;](../storage/snapshots.md)を作成します。
 
 ### 分岐を結合
 
@@ -140,7 +144,7 @@ ht-degree: 0%
 >
 >プロジェクトの`master` ブランチは削除できません。
 
-このタスクを実行するには、プロジェクト管理者、環境管理者、またはアカウント所有者である必要があります。 [ クラウドプロジェクトへのユーザーアクセスの管理](../project/user-access.md)を参照してください。
+このタスクを実行するには、プロジェクト管理者、環境管理者、またはアカウント所有者である必要があります。 [&#x200B; クラウドプロジェクトへのユーザーアクセスの管理](../project/user-access.md)を参照してください。
 
 環境を削除すると、環境は&#x200B;_非アクティブ_&#x200B;に設定されます。 コードは引き続きGit ブランチで利用できますが、サービスやデータベースは含まれていません。 環境を完全に削除するには、対応するリモート Git ブランチも削除する必要があります。
 
@@ -200,5 +204,5 @@ ht-degree: 0%
 
 ## リモート環境の操作
 
-SSH キー](../development/secure-connections.md)を[ セットアップした後、ローカル ワークスペースからリモート環境](../development/secure-connections.md#connect-to-a-remote-environment)に[接続し、プロジェクト サービスと対話して設定を変更できます。
+SSH キー[&#128279;](../development/secure-connections.md)を[&#x200B; セットアップした後、ローカル ワークスペースからリモート環境](../development/secure-connections.md#connect-to-a-remote-environment)に接続し、プロジェクト サービスと対話して設定を変更できます。
 

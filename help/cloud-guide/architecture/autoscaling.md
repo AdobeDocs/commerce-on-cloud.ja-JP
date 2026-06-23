@@ -5,10 +5,15 @@ feature: Cloud, Auto Scaling
 topic: Architecture
 exl-id: 11bfde40-79d1-4d51-9233-150c4cfb80fd
 TQID: https://experienceleague.adobe.com/uL--0lHHJ-4SN3BkFU8reAefWhpMQOLBRVG7fX3jTM8
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
@@ -18,7 +23,7 @@ ht-degree: 0%
 
 # 自動スケーリング
 
-自動スケーリングは、最適なパフォーマンスと合理的なコストを維持するために、クラウドインフラストラクチャにリソースを自動的に追加または削除します。 現在、この機能は、[拡張アーキテクチャ ](scaled-architecture.md)で構成されたプロジェクトでのみ使用できます。
+自動スケーリングは、最適なパフォーマンスと合理的なコストを維持するために、クラウドインフラストラクチャにリソースを自動的に追加または削除します。 現在、この機能は、[拡張アーキテクチャ &#x200B;](scaled-architecture.md)で構成されたプロジェクトでのみ使用できます。
 
 ## Web サーバーノード
 
@@ -33,12 +38,12 @@ ht-degree: 0%
 
 ## New Relicのしきい値の監視
 
-[New Relic サービス ](../monitor/new-relic-service.md)を使用して、ホスト数やCPUの使用状況など、特定のしきい値を監視できます。 次のNew Relic クエリでは、例えば`cluster-id`に対してのみ変数表記を使用しています。
+[New Relic サービス &#x200B;](../monitor/new-relic-service.md)を使用して、ホスト数やCPUの使用状況など、特定のしきい値を監視できます。 次のNew Relic クエリでは、例えば`cluster-id`に対してのみ変数表記を使用しています。
 
 >[!TIP]
 >
 >クエリの作成に関する詳細は、_New Relic_ ドキュメントの[NRQL構文、句、関数](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/nrql-syntax-clauses-functions/)を参照してください。
-> クエリを使用して、[New Relic ダッシュボード ](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/)を構築します。
+> クエリを使用して、[New Relic ダッシュボード &#x200B;](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/)を構築します。
 
 ### ホスト数
 
@@ -75,7 +80,7 @@ Adobe Commerce オンクラウド インフラストラクチャ プロジェク
 
 ### 負荷テスト
 
-Adobeでは、最初にCloud プロジェクト _ステージング_ クラスターで自動スケーリングが有効になります。 環境で負荷テストを実行して完了すると、Adobeは実稼動クラスターで自動スケーリングを有効にします。 負荷テストに関するガイダンスについては、[ パフォーマンステスト ](../launch/checklist.md#performance-testing)を参照してください。
+Adobeでは、最初にCloud プロジェクト _ステージング_ クラスターで自動スケーリングが有効になります。 環境で負荷テストを実行して完了すると、Adobeは実稼動クラスターで自動スケーリングを有効にします。 負荷テストに関するガイダンスについては、[&#x200B; パフォーマンステスト &#x200B;](../launch/checklist.md#performance-testing)を参照してください。
 
 ### IP許可リストに加える
 
