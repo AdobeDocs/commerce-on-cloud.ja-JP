@@ -24,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->実稼動環境を更新する前に、ステージング環境の変更をテストすることが重要です。 これらの環境の設定を更新するヘルプについては、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信してください。
+>実稼動環境を更新する前に、ステージング環境の変更をテストすることが重要です。 これらの環境の設定を更新するヘルプについては、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信してください。
 
 1. `.magento.app.yaml` ファイルの[`web` プロパティ &#x200B;](web-property.md)でTTL時間（秒単位）を指定します。 `expires` キーは`locations`の下、または`"/media"`と`"/static"`の下に追加できます。
 

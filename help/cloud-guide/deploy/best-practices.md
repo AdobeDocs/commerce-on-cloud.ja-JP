@@ -77,7 +77,7 @@ ht-degree: 0%
 
 - **サービスのバージョンと関係、および接続する機能を確認する**
 
-  アプリケーションで使用可能なサービスを確認し、最新の互換性のあるバージョンを使用していることを確認します。 推奨バージョンについては、_インストールガイド_&#x200B;の[&#x200B; サービス関係](../services/services-yaml.md#service-relationships)および[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)を参照してください。
+  アプリケーションで使用可能なサービスを確認し、最新の互換性のあるバージョンを使用していることを確認します。 推奨バージョンについては、_インストールガイド_&#x200B;の[&#x200B; サービス関係](../services/services-yaml.md#service-relationships)および[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
 
 - **ステージングおよび実稼動にデプロイする前に、ローカルおよび統合環境でテストします**
 
@@ -133,7 +133,7 @@ ht-degree: 0%
 このフェーズでは、コードベースを構築し、`.magento.app.yaml`の`build` セクションでフックを実行します。 デフォルトのビルドフックは`php ./vendor/bin/ece-tools` コマンドで、次の操作を実行します。
 
 - `vendor/magento/ece-patches`にパッチ、および`m2-hotfixes`にプロジェクト固有のオプションのパッチを適用します
-- コードと、`bin/magento setup:di:compile`を使用して[依存関係インジェクション &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)設定（つまり、`generated/` ディレクトリで、`generated/code`と`generated/metapackage`が含まれる）を再生成します。
+- コードと、`bin/magento setup:di:compile`を使用して[依存関係インジェクション &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary)設定（つまり、`generated/` ディレクトリで、`generated/code`と`generated/metapackage`が含まれる）を再生成します。
 - [`app/etc/config.php`](../store/store-settings.md) ファイルがコードベースに存在するかどうかを確認します。 Adobe Commerceは、ビルド段階でこのファイルを検出せず、モジュールと拡張機能のリストを含む場合、このファイルを自動生成します。 ビルド段階が存在する場合は、通常どおり続行し、GZIPを使用して静的ファイルを圧縮してデプロイします。これにより、デプロイメント段階でのダウンタイムが減少します。 ファイル圧縮のカスタマイズまたは無効化について詳しくは、[&#x200B; ビルドオプション &#x200B;](../environment/variables-build.md)を参照してください。
 
 >[!WARNING]
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ### フェーズ 4：スラグとクラスターのデプロイ
 
-アプリケーションとすべての[&#x200B; バックエンド &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) サービスのプロビジョニングは次のとおりです。
+アプリケーションとすべての[&#x200B; バックエンド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary) サービスのプロビジョニングは次のとおりです。
 
 - Web サーバー、OpenSearch、[!DNL RabbitMQ]などのコンテナ内の各サービスをマウントします
 - 読み取り/書き込みファイルシステムをマウントします（高可用性の分散型ストレージグリッドにマウント）
@@ -186,13 +186,13 @@ ht-degree: 0%
 
 デプロイメントフックは2つあります。 `pre-deploy.php` フックは、ビルドフックで生成されたリソースとコードの必要なクリーンアップと取得を完了します。 `php ./vendor/bin/ece-tools deploy` フックは、一連のコマンドとスクリプトを実行します。
 
-- Adobe Commerceが&#x200B;**インストールされていない**&#x200B;場合は、`bin/magento setup:install`でインストールし、デプロイメント設定、`app/etc/env.php`およびRedisやweb サイト URLなどの指定された環境のデータベースを更新します。 **重要：** セットアップ中に[初回デプロイメント &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html)を完了すると、Adobe Commerceがすべての環境にインストールされ、デプロイされました。
+- Adobe Commerceが&#x200B;**インストールされていない**&#x200B;場合は、`bin/magento setup:install`でインストールし、デプロイメント設定、`app/etc/env.php`およびRedisやweb サイト URLなどの指定された環境のデータベースを更新します。 **重要：** セットアップ中に[初回デプロイメント &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=ja)を完了すると、Adobe Commerceがすべての環境にインストールされ、デプロイされました。
 
 - Adobe Commerce **がインストールされている**&#x200B;場合は、必要なアップグレードを実行します。 デプロイメントスクリプトは、`bin/magento setup:upgrade`を実行して、（拡張機能またはコアコードの更新後に必要となる）データベーススキーマとデータを更新し、環境のデプロイメント設定、`app/etc/env.php`、およびデータベースも更新します。 最後に、デプロイメントスクリプトによってAdobe Commerce キャッシュがクリアされます。
 
 - スクリプトは、オプションでコマンド `magento setup:static-content:deploy`を使用して静的web コンテンツを生成します。
 
-- 静的コンテンツのデプロイメント戦略に対して、スコープ（`-s` フラグ、ビルドスクリプト）をデフォルト設定`quick`で使用します。 環境変数[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)を使用して、戦略をカスタマイズできます。 これらのオプションと機能について詳しくは、[静的ファイルのデプロイメント戦略](../deploy/static-content.md)および[静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)の`-s` フラグを参照してください。
+- 静的コンテンツのデプロイメント戦略に対して、スコープ（`-s` フラグ、ビルドスクリプト）をデフォルト設定`quick`で使用します。 環境変数[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)を使用して、戦略をカスタマイズできます。 これらのオプションと機能について詳しくは、[静的ファイルのデプロイメント戦略](../deploy/static-content.md)および[静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja)の`-s` フラグを参照してください。
 
 >[!NOTE]
 >

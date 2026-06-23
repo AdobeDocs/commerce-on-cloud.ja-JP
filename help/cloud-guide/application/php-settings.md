@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # PHP設定
 
-`.magento.app.yaml` ファイルで実行する[&#x200B; バージョンのPHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)を選択できます。
+`.magento.app.yaml` ファイルで実行する[&#x200B; バージョンのPHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を選択できます。
 
 ```yaml
 name: mymagento
@@ -71,7 +71,7 @@ realpath_cache_ttl = 7200
 
 >[!NOTE]
 >
->推奨されるPHP設定のリストについては、_インストールガイド_&#x200B;の[必須PHP設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)を参照してください。
+>推奨されるPHP設定のリストについては、_インストールガイド_&#x200B;の[必須PHP設定](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ja)を参照してください。
 
 ### カスタム PHP設定の確認
 
@@ -126,7 +126,7 @@ php -m
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-PHP モジュールの要件は、Adobe Commerce バージョンに関連付けられています。 [PHPの要件](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html)を参照してください。
+PHP モジュールの要件は、Adobe Commerce バージョンに関連付けられています。 [PHPの要件](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=ja)を参照してください。
 
 ### 拡張機能サポート
 
@@ -144,7 +144,7 @@ sourceguardian.restrict_unencoded = "1"
 
 SourceGuardian ドキュメント [&#128279;](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf)の セクション 3.5を参照してください。 _これはPDF_&#x200B;へのリンクです。
 
-すべての実稼動環境およびPro ステージング環境でこれらのPHP拡張機能をインストールする方法については、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信してください。 更新した`.magento/services.yaml` ファイル、更新したPHP バージョンの`.magento.app.yaml` ファイル、および追加のPHP拡張機能を含めます。 実稼働環境への変更の場合は、48時間以上の通知が必要です。 クラウドインフラチームがプロジェクトを更新するのに最大48時間かかります。
+すべての実稼動環境およびPro ステージング環境でこれらのPHP拡張機能をインストールする方法については、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信してください。 更新した`.magento/services.yaml` ファイル、更新したPHP バージョンの`.magento.app.yaml` ファイル、および追加のPHP拡張機能を含めます。 実稼働環境への変更の場合は、48時間以上の通知が必要です。 クラウドインフラチームがプロジェクトを更新するのに最大48時間かかります。
 
 >[!WARNING]
 >
