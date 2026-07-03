@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # [!DNL RabbitMQ] サービスの設定
 
-[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
 
 MQFは[RabbitMQ](https://www.rabbitmq.com/)をメッセージングブローカーとして使用し、メッセージを送受信するためのスケーラブルなプラットフォームを提供します。 また、未配信のメッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ]は、Advanced Message Queuing Protocol （AMQP） 0.9.1仕様に基づいています。
 
@@ -163,7 +163,7 @@ PHP アプリケーションを使用してRabbitMQに接続するには、ソ�
 
 ## [!DNL RabbitMQ] サービスのトラブルシューティング
 
-「[Adobe Commerce CloudでRabbitMQに接続できません](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688)」を参照してください。
+「[Adobe Commerce CloudでRabbitMQに接続できません](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27688)」を参照してください。
 
 ## [!DNL RabbitMQ] サービスをアップグレードしています
 
@@ -173,4 +173,4 @@ PHP アプリケーションを使用してRabbitMQに接続するには、ソ�
 >
 >アップグレードまたはダウングレードを含むRabbitMQ サービスバージョンを変更した後、環境を再デプロイします。 デプロイメント中、Adobe Commerceは、必要なRabbitMQ キュー、交換、バインディングを再作成するセットアップタスクを実行します。
 >
->一般的なサービスのアップグレード手順については、[&#x200B; サービスバージョンの変更](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)を参照してください。
+>一般的なサービスのアップグレード手順については、[&#x200B; サービスバージョンの変更](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)を参照してください。
