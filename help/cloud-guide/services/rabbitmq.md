@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: c43a709ee9c3b974cef08e36170dbb2ab240564f
 workflow-type: tm+mt
-source-wordcount: 541
+source-wordcount: 572
 ht-degree: 0%
 
 ---
@@ -170,5 +170,7 @@ PHP アプリケーションを使用してRabbitMQに接続するには、ソ�
 >[!IMPORTANT]
 >
 >統合環境で[!DNL RabbitMQ]をアップグレードする場合は、バージョンをスキップしないでください。 サポートされているのは[&#x200B; シーケンシャルアップグレード &#x200B;](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability)のみです（例えば、3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1など）。各バージョンバンプは、クラウド環境のデプロイメントを成功させるために実際に対応する必要があります。
+>
+>アップグレードまたはダウングレードを含むRabbitMQ サービスバージョンを変更した後、環境を再デプロイします。 デプロイメント中、Adobe Commerceは、必要なRabbitMQ キュー、交換、バインディングを再作成するセットアップタスクを実行します。
 >
 >一般的なサービスのアップグレード手順については、[&#x200B; サービスバージョンの変更](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)を参照してください。
