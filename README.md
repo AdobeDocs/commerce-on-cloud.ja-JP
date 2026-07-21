@@ -1,7 +1,7 @@
 ---
-source-git-commit: 55206749cd121ef6d6139a71af6ff905d4109859
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 このサイトには、Cloud Infrastructure上のCommerceの最新の開発者向けドキュメントが含まれています。
 
-- [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview)
-- [&#x200B; クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/start/overview)の基本を学ぶ
+- [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [ クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)の基本を学ぶ
 
 ## AdobeオープンSource行動規範
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Adobe コンテンツへのコントリビューションについて
 
-[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction)を参照してください。
+[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)を参照してください。
 
 貢献の方法は、貢献するユーザーと変更の種類によって異なります。
 
@@ -34,13 +34,13 @@ Adobe コミュニティに参加していて、新しい記事を作成した�
 
 ### Adobe社員の主な変化
 
-テクニカルライター、プログラムマネージャー、またはAdobe Experience Cloud ソリューションのプロダクトチームの開発者で、技術記事の投稿や作成を担当する場合は、`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.ja-JP`のプライベートリポジトリを使用する必要があります。
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、開発者であり、技術記事の投稿や作成を担当する仕事がある場合は、`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`にあるプライベートリポジトリを使用する必要があります。
 
 ## ツールと設定
 
 コミュニティのコントリビューターは、GitHub UIを使用して基本的な編集をおこなったり、リポジトリをフォークして主要なコントリビューションを作成したりできます。
 
-詳しくは、[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction)を参照してください。
+詳しくは、[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)を参照してください。
 
 ## Markdownを使用してトピックを書式設定する方法
 
@@ -70,7 +70,7 @@ Adobe コミュニティに参加していて、新しい記事を作成した�
 >**メモ：**
 >
 >- テンプレート化されたコンテンツを生成するには、ターミナルのコマンドラインで作業する必要があります。
->- レンダリングスクリプトを実行するには、Rubyがインストールされている必要があります。 必要なバージョンについては、[_jekyll/.ruby-version] (_jekyll/.ruby-version)を参照してください。
+>- レンダリングスクリプトを実行するには、Rubyがインストールされている必要があります。 必要なバージョンについては、[_jekyll/.ruby-version](_jekyll/.ruby-version)を参照してください。
 
 テンプレート化されたコンテンツのファイル構造については、次を参照してください。
 
@@ -83,8 +83,8 @@ Adobe コミュニティに参加していて、新しい記事を作成した�
 
 1. テキストエディターで、`_jekyll/_data` ディレクトリのデータファイルを開きます。 例：
 
-   - [Cloud CLI リファレンス &#x200B;](help/templated/cloud-cli-ref.md): `_jekyll/_data/cloud-cli-ref.yaml`
-   - [&#x200B; クラウドパッケージ &#x200B;](help/templated/cloud-packages.md): `_jekyll/_data/cloud-packages.yaml`
+   - [Cloud CLI リファレンス ](help/templated/cloud-cli-ref.md): `_jekyll/_data/cloud-cli-ref.yaml`
+   - [ クラウドパッケージ ](help/templated/cloud-packages.md): `_jekyll/_data/cloud-packages.yaml`
    - [ECE ツール参照](help/templated/ece-tools.md): `_jekyll/_data/ece-tools.yaml`
 
 2. 既存のYAML構造を使用して、エントリを作成します。
@@ -130,11 +130,13 @@ Adobe コミュニティに参加していて、新しい記事を作成した�
    git push
    ```
 
-[&#x200B; データファイル &#x200B;](https://jekyllrb.com/docs/datafiles)、[液体フィルター](https://jekyllrb.com/docs/liquid/filters/)およびその他の機能について詳しくは、Jekyllのドキュメントを参照してください。
+[ データファイル ](https://jekyllrb.com/docs/datafiles)、[液体フィルター](https://jekyllrb.com/docs/liquid/filters/)およびその他の機能について詳しくは、Jekyllのドキュメントを参照してください。
 
 ## 使用可能なレイク タスク
 
-このリポジトリは、`adobe-comdox-exl-rake-tasks` gemが提供するrake タスクを使用します。 使用可能なすべてのタスクを表示するには、次を実行します。
+このリポジトリは、によって提供されるrake タスクを使用します
+[`adobe-comdox-exl-rake-tasks`](https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks)
+gem.使用可能なすべてのタスクを表示するには、次を実行します。
 
 ```bash
 cd _jekyll
@@ -155,10 +157,11 @@ bundle exec rake --tasks
 
 ### フックの機能
 
-- ステージングされた画像ファイルを自動検出（PNG、JPG、JPEG、GIF、SVG）
-- `image_optim`を実行して画像を圧縮および最適化
+- ステージングされた画像ファイルを自動検出（PNG、JPEG、GIF、SVG）
+- `image_optim`を実行してラスター画像（PNG、JPEG、GIF）を圧縮および最適化
 - 最適化された画像を自動的にリステージ
-- コミットされたすべての画像が適切に最適化されていることを確認します
+- コミットされたすべてのラスター画像が適切に最適化されていることを確認します
+- ステージングされたSVGをサイズ制限に照らし合わせてチェックし、SVGが制限を超えた場合にコミットを中止します
 
 ### Adobe Workfrontの利点
 
