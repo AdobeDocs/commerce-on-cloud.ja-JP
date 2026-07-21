@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: e7db7e06142322898d7d9a28ae0dd06458fdcf6d
 workflow-type: tm+mt
-source-wordcount: 3542
+source-wordcount: 3580
 ht-degree: 0%
 
 ---
@@ -40,7 +40,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.11 {#latest}
+## v2002.2.12 {#latest}
+
+リリース日：2026年7月20日（PT）
+
+- ![新しいアイコン &#x200B;](../../assets/new.svg) **RabbitMQ** - RabbitMQ 4.3のサポートを追加しました。<!-- MCLOUD-15088 -->
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **Redis Lua設定** - `USE_LUA_ON_GC`のサポートを追加し、`LUA_KEY`を廃止しました。<!-- MCLOUD-15048 -->
+- ![fix icon](../../assets/fix.svg) **Symfony L2 cache**-Fixed ece-toolsとAdobe Commerce 2.4.9 キャッシュ設定の互換性<!-- MCLOUD-15114 -->
+
+## v2002.2.11
 
 リリース日：2026年5月6日（PT）
 
@@ -347,11 +355,11 @@ ht-degree: 0%
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg)処理のビルド、デプロイ、デプロイ後に追加のエラーチェックを追加し、既存のチェックを改善しました。
 
-   - エラーコード 2026：ビルド フェーズで生成された一部のデータをマウントされたディレクトリに復元できませんでした
+  - エラーコード 2026：ビルド フェーズで生成された一部のデータをマウントされたディレクトリに復元できませんでした
 
-   - エラーコード 3004 - バックアップ ファイルを作成できません
+  - エラーコード 3004 - バックアップ ファイルを作成できません
 
-   - エラーコード 102 - `env.php` ファイルが書き込み可能でない場合に発生する問題を確認するための追加チェックを追加しました<!--MCLOUD-6221-->
+  - エラーコード 102 - `env.php` ファイルが書き込み可能でない場合に発生する問題を確認するための追加チェックを追加しました<!--MCLOUD-6221-->
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **QUALITY_PATCHES**&#x200B;環境変数を追加して、デプロイメントプロセス中に適用する1つ以上の品質パッチを指定しました。 [&#x200B; ビルド変数](../environment/variables-build.md#quality_patches)を参照してください。<!--MCLOUD-6375-->
 
@@ -361,75 +369,75 @@ ht-degree: 0%
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **インフラストラクチャの更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **改善のログ記録** – 終了コードを重大なデプロイエラーに割り当て、エラーメッセージ通知とログイベントで終了コードを公開することで、ログ追跡機能を改善しました。 e-tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を参照してください。<!-- MCLOUD-5637, 5531-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **改善のログ記録** – 終了コードを重大なデプロイエラーに割り当て、エラーメッセージ通知とログイベントで終了コードを公開することで、ログ追跡機能を改善しました。 e-tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を参照してください。<!-- MCLOUD-5637, 5531-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) データベース ダンプ （`vendor/bin/ece-tools db-dump`）のプロセスを改善し、ログ メッセージを更新して、データベース ダンプ操作がアプリケーションをメンテナンスモードに切り替え、コンシューマーのキュー処理を停止し、ダンプが開始される前にcron ジョブを無効にすることを明確にしました。<!--MCLOUD-5324, MCLOUD-2062-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) データベース ダンプ （`vendor/bin/ece-tools db-dump`）のプロセスを改善し、ログ メッセージを更新して、データベース ダンプ操作がアプリケーションをメンテナンスモードに切り替え、コンシューマーのキュー処理を停止し、ダンプが開始される前にcron ジョブを無効にすることを明確にしました。<!--MCLOUD-5324, MCLOUD-2062-->
 
-   - ![&#x200B; アイコンを修正](../../assets/fix.svg) ステージング環境と実稼動環境にデプロイする際に、プロジェクト URLが正しく更新されるように問題を修正しました。 現在、`ece-tools`は、プロジェクトのルート設定で`primary:true`属性が設定されたルートのURLを使用しています。 [変数のデプロイ &#x200B;](../environment/variables-deploy.md#update_urls)を参照してください。<!--MCLOUD-5883-->
+  - ![&#x200B; アイコンを修正](../../assets/fix.svg) ステージング環境と実稼動環境にデプロイする際に、プロジェクト URLが正しく更新されるように問題を修正しました。 現在、`ece-tools`は、プロジェクトのルート設定で`primary:true`属性が設定されたルートのURLを使用しています。 [変数のデプロイ &#x200B;](../environment/variables-deploy.md#update_urls)を参照してください。<!--MCLOUD-5883-->
 
-   - ![修正アイコン &#x200B;](../../assets/fix.svg) パッチを適用するための`generate.xml` ビルドシナリオワークフローを更新しました。 Adobe Commerceを更新して、`di:compile`と`module:refresh`の手順が失敗する可能性がある問題を修正するには、パッチを早めに適用する必要があります。<!--MCLOUD-5941-->
+  - ![修正アイコン &#x200B;](../../assets/fix.svg) パッチを適用するための`generate.xml` ビルドシナリオワークフローを更新しました。 Adobe Commerceを更新して、`di:compile`と`module:refresh`の手順が失敗する可能性がある問題を修正するには、パッチを早めに適用する必要があります。<!--MCLOUD-5941-->
 
-   - ![&#x200B; アイコンの修正](../../assets/fix.svg) インストールプロセスで、`Crypt key missing` エラーが誤って返される問題を修正しました。 `crypt/key`値は、インストール中に自動的に生成されます。<!--MCLOUD-6120-->
+  - ![&#x200B; アイコンの修正](../../assets/fix.svg) インストールプロセスで、`Crypt key missing` エラーが誤って返される問題を修正しました。 `crypt/key`値は、インストール中に自動的に生成されます。<!--MCLOUD-6120-->
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **サービスの更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) PHP 7.4およびMariaDB 10.4のサポートを追加しました。<!--MAGECLOUD-2957, MCLOUD-4144-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) PHP 7.4およびMariaDB 10.4のサポートを追加しました。<!--MAGECLOUD-2957, MCLOUD-4144-->
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **環境変数の更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **SCD_USE_BALER**&#x200B;変数を追加して、Adobe Commerce on cloud インフラストラクチャのビルドプロセス中にJavaScript バンドル用のBaler モジュールを有効にしました。 [&#x200B; ビルド変数](../environment/variables-build.md#scd_use_baler)の変数の説明を参照してください。<!-- MCLOUD-3456, MCLOUD-3457-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **SCD_USE_BALER**&#x200B;変数を追加して、Adobe Commerce on cloud インフラストラクチャのビルドプロセス中にJavaScript バンドル用のBaler モジュールを有効にしました。 [&#x200B; ビルド変数](../environment/variables-build.md#scd_use_baler)の変数の説明を参照してください。<!-- MCLOUD-3456, MCLOUD-3457-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) Adobe Commerce 2.3.5以降のRedis キャッシュ用のRedis バックエンドモデルを設定するために、**REDIS_BACKEND**&#x200B;環境変数を追加しました。 変数の説明については、[変数のデプロイ &#x200B;](../environment/variables-deploy.md#redis_backend)を参照してください。<!--MCLOUD-5721, MCLOUD-5865-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) Adobe Commerce 2.3.5以降のRedis キャッシュ用のRedis バックエンドモデルを設定するために、**REDIS_BACKEND**&#x200B;環境変数を追加しました。 変数の説明については、[変数のデプロイ &#x200B;](../environment/variables-deploy.md#redis_backend)を参照してください。<!--MCLOUD-5721, MCLOUD-5865-->
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **CLI コマンドの更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg)次のCLI コマンドを、詳細なログ記録のオプション付きで更新しました。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg)次のCLI コマンドを、詳細なログ記録のオプション付きで更新しました。
 
-      - `app:config:dump`
-      - `app:config:import`
-      - `module:enable`
+    - `app:config:dump`
+    - `app:config:import`
+    - `module:enable`
 
-     各呼び出しのログレベルは、`.magento.env.yaml` ファイルの[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)変数の設定によって決まります。<!--MCLOUD-3503-->
+    各呼び出しのログレベルは、`.magento.env.yaml` ファイルの[`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands)変数の設定によって決まります。<!--MCLOUD-3503-->
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **検証の改善**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **Elasticsearch 7.xの互換性チェック** - Elasticsearch 7.x ソフトウェアの互換性チェック用のElasticsearch検証を更新しました。<!--MCLOUD-5542-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **Elasticsearch 7.xの互換性チェック** - Elasticsearch 7.x ソフトウェアの互換性チェック用のElasticsearch検証を更新しました。<!--MCLOUD-5542-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **サービスのバージョンとEOL検証チェック**&#x200B;を更新しました。インストール済みのサービスのバージョンをAdobe Commerce 2.4に照らし合わせてチェックするための検証を更新しました。 要件。<!--MCLOUD-6144-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **サービスのバージョンとEOL検証チェック**&#x200B;を更新しました。インストール済みのサービスのバージョンをAdobe Commerce 2.4に照らし合わせてチェックするための検証を更新しました。 要件。<!--MCLOUD-6144-->
 
-   - ![&#x200B; アイコンの修正](../../assets/fix.svg)次のデプロイ後の警告メッセージが`.magento.app.yaml` ファイルに`post-deploy` フック設定がない場合にのみ表示されるように、検証の問題を修正しました。
+  - ![&#x200B; アイコンの修正](../../assets/fix.svg)次のデプロイ後の警告メッセージが`.magento.app.yaml` ファイルに`post-deploy` フック設定がない場合にのみ表示されるように、検証の問題を修正しました。
 
-     ```text
-     Your application does not have the "post_deploy" hook enabled.
-     ```
+    ```text
+    Your application does not have the "post_deploy" hook enabled.
+    ```
 
-     <!--MCLOUD-4077-->
+    <!--MCLOUD-4077-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **Zend Framework依存関係の検証を追加** - Laminas プロジェクトに移行したZend Frameworkのコンポーザー依存関係の検証を追加しました。 必要な依存関係がない場合は、ビルドプロセス中に次のエラーメッセージが表示されます。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **Zend Framework依存関係の検証を追加** - Laminas プロジェクトに移行したZend Frameworkのコンポーザー依存関係の検証を追加しました。 必要な依存関係がない場合は、ビルドプロセス中に次のエラーメッセージが表示されます。
 
-     ```text
-     Required configuration is missing from the autoload section of the composer.json file.
-     Add ("Laminas\Mvc\Controller\Zend\": "setupsrc/ Zend/Mvc/Controller/") to
-     the `autoload -> psr-4` section. Then, re-run the "composer update" command locally, and
-     commit the updated composer.json and composer.lock files.
-     ```
+    ```text
+    Required configuration is missing from the autoload section of the composer.json file.
+    Add ("Laminas\Mvc\Controller\Zend\": "setupsrc/ Zend/Mvc/Controller/") to
+    the `autoload -> psr-4` section. Then, re-run the "composer update" command locally, and
+    commit the updated composer.json and composer.lock files.
+    ```
 
-     [Zend Frameworkの依存関係の確認](../development/commerce-version.md#verify-zend-framework-composer-dependencies)を参照してください。<!--MCLOUD-4094-->
+    [Zend Frameworkの依存関係の確認](../development/commerce-version.md#verify-zend-framework-composer-dependencies)を参照してください。<!--MCLOUD-4094-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **追加された`env.php` ファイルとデータ**&#x200B;の検証 – インストールおよびアップグレードのプロセス中に`env.php` ファイルとデータのチェックを追加しました。<!--MCLOUD-5991-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **追加された`env.php` ファイルとデータ**&#x200B;の検証 – インストールおよびアップグレードのプロセス中に`env.php` ファイルとデータのチェックを追加しました。<!--MCLOUD-5991-->
 
-      - インストールに`env.php` ファイルが見つからず、`crypt/key`値が`.magento.app.yaml` ファイルで指定されていない場合、デプロイメントは次の通知で失敗します。
+    - インストールに`env.php` ファイルが見つからず、`crypt/key`値が`.magento.app.yaml` ファイルで指定されていない場合、デプロイメントは次の通知で失敗します。
 
-        ```text
-        The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
-        ```
+      ```text
+      The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
+      ```
 
-      - インストールに`env.php` ファイルが含まれていない場合、または設定に1つのキャッシュの種類しか含まれていない場合は、`cron:enable` コマンドがアップグレードプロセス中に実行され、すべての`cache_types`を含むファイルが復元されます。 次の通知がログに追加されます。
+    - インストールに`env.php` ファイルが含まれていない場合、または設定に1つのキャッシュの種類しか含まれていない場合は、`cron:enable` コマンドがアップグレードプロセス中に実行され、すべての`cache_types`を含むファイルが復元されます。 次の通知がログに追加されます。
 
-        ```text
-        Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
-        Required data will be restored from environment configurations and from the .magento.env.yaml file.
-        ```
+      ```text
+      Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
+      Required data will be restored from environment configurations and from the .magento.env.yaml file.
+      ```
 
 ## v2002.1.0
 
@@ -437,17 +445,17 @@ ht-degree: 0%
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **インフラストラクチャの更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce用Cloud Docker用の個別のパッケージを追加しました** - Docker パッケージを`ece-tools` パッケージから切り離して、コードの品質を維持し、独立したリリースを提供しました。 `ece-tools`に関連する更新と修正は、[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub リポジトリから管理されます。<!--MAGECLOUD-2927-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce用Cloud Docker用の個別のパッケージを追加しました** - Docker パッケージを`ece-tools` パッケージから切り離して、コードの品質を維持し、独立したリリースを提供しました。 `ece-tools`に関連する更新と修正は、[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub リポジトリから管理されます。<!--MAGECLOUD-2927-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **パッチ機能を更新** - パッチ機能をECE-Tools パッケージから別の[magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージに移動しました。 デプロイメント中、`ece-tools`は新しいパッケージを使用してパッチを適用します。 [Cloud パッチリリースノート &#x200B;](cloud-patches.md)を参照してください。<!--MAGECLOUD-4567-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **パッチ機能を更新** - パッチ機能をECE-Tools パッケージから別の[magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージに移動しました。 デプロイメント中、`ece-tools`は新しいパッケージを使用してパッチを適用します。 [Cloud パッチリリースノート &#x200B;](cloud-patches.md)を参照してください。<!--MAGECLOUD-4567-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **Composerの依存関係**&#x200B;を更新 – `magento/magento-cloud-docker` パッケージの依存関係を持つクラウドインフラストラクチャ上のAdobe Commerceの`composer.json` ファイルを更新しました。 現在、`ece-tools`には、[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)内のすべてのパッケージの依存関係が含まれています。 これらのパッケージは、`ece-tools`をインストールまたは更新すると、自動的にインストールおよび更新されます。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **Composerの依存関係**&#x200B;を更新 – `magento/magento-cloud-docker` パッケージの依存関係を持つクラウドインフラストラクチャ上のAdobe Commerceの`composer.json` ファイルを更新しました。 現在、`ece-tools`には、[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)内のすべてのパッケージの依存関係が含まれています。 これらのパッケージは、`ece-tools`をインストールまたは更新すると、自動的にインストールおよび更新されます。
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **シナリオベースのデプロイメントのサポート**—<!--MAGECLOUD-4101-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) XML設定ファイルを使用して、ビルド、デプロイ、デプロイ後のプロセスをカスタマイズし、デフォルト設定を上書きまたはカスタマイズできるようになりました。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) XML設定ファイルを使用して、ビルド、デプロイ、デプロイ後のプロセスをカスタマイズし、デフォルト設定を上書きまたはカスタマイズできるようになりました。
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **`.magento.app.yaml`**&#x200B;の`hooks`設定を変更しました。シナリオベースのデプロイメントをサポートするように`hooks`設定形式を更新しました。 以前のECE-Tools 2002.0.x リリースの従来の形式は、引き続きサポートされています。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。 [&#x200B; シナリオベースのデプロイメント &#x200B;](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)を参照してください。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **`.magento.app.yaml`**&#x200B;の`hooks`設定を変更しました。シナリオベースのデプロイメントをサポートするように`hooks`設定形式を更新しました。 以前のECE-Tools 2002.0.x リリースの従来の形式は、引き続きサポートされています。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。 [&#x200B; シナリオベースのデプロイメント &#x200B;](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks)を参照してください。
 
 >[!NOTE]
 >
@@ -455,13 +463,13 @@ ht-degree: 0%
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **サービスの更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) PHP 7.3のサポートを追加しました。<!--MAGECLOUD-4022-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) PHP 7.3のサポートを追加しました。<!--MAGECLOUD-4022-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) RabbitMQ 3.8.<!--MAGECLOUD-4674-->のサポートを追加しました
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) RabbitMQ 3.8.<!--MAGECLOUD-4674-->のサポートを追加しました
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg)各サービスのインストール済みサービスのバージョンをEOL日に照らし合わせて確認するための検証を追加しました。 現在、サービスのバージョンが終了日から3か月以内の場合は通知が表示され、終了日が過去の場合は警告が表示されます。<!--MAGECLOUD-4076-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg)各サービスのインストール済みサービスのバージョンをEOL日に照らし合わせて確認するための検証を追加しました。 現在、サービスのバージョンが終了日から3か月以内の場合は通知が表示され、終了日が過去の場合は警告が表示されます。<!--MAGECLOUD-4076-->
 
-   - ![&#x200B; アイコンの修正](../../assets/fix.svg) Elasticsearchの設定に関する問題を修正し、すべての環境で正しいElasticsearch設定が行われるようにしました。<!--MAGECLOUD-4474-->
+  - ![&#x200B; アイコンの修正](../../assets/fix.svg) Elasticsearchの設定に関する問題を修正し、すべての環境で正しいElasticsearch設定が行われるようにしました。<!--MAGECLOUD-4474-->
 
 >[!NOTE]
 >
@@ -469,21 +477,21 @@ ht-degree: 0%
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **環境変数の更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg)特定の製品ページのキャッシュのプリロードをサポートするために、`WARM_UP_PAGES`環境変数の機能を拡張しました。 展開された定義については、[展開した後の変数](../environment/variables-post-deploy.md#warm_up_pages) トピックを参照してください。<!--MAGECLOUD-4444-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg)特定の製品ページのキャッシュのプリロードをサポートするために、`WARM_UP_PAGES`環境変数の機能を拡張しました。 展開された定義については、[展開した後の変数](../environment/variables-post-deploy.md#warm_up_pages) トピックを参照してください。<!--MAGECLOUD-4444-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) `<magento_root>/var/report/` ディレクトリのエラーレポート データ管理を簡素化するために、`ERROR_REPORT_DIR_NESTING_LEVEL`環境変数を追加しました。 [&#x200B; ビルド変数](../environment/variables-build.md#error_report_dir_nesting_level) トピックの変数の説明を参照してください。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) `<magento_root>/var/report/` ディレクトリのエラーレポート データ管理を簡素化するために、`ERROR_REPORT_DIR_NESTING_LEVEL`環境変数を追加しました。 [&#x200B; ビルド変数](../environment/variables-build.md#error_report_dir_nesting_level) トピックの変数の説明を参照してください。
 
-   - ![修正アイコン &#x200B;](../../assets/fix.svg) `SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT`および`STATIC_CONTENT_SYMLINK`環境変数を削除しました。 [下位互換性のない変更](backward-incompatible-changes.md#environment-configuration-changes)を参照してください。<!--MAGECLOUD-4407, MAGECLOUD-3873-->
+  - ![修正アイコン &#x200B;](../../assets/fix.svg) `SCD_EXCLUDE_THEMES`、`STATIC_CONTENT_THREADS`、`DO_DEPLOY_STATIC_CONTENT`および`STATIC_CONTENT_SYMLINK`環境変数を削除しました。 [下位互換性のない変更](backward-incompatible-changes.md#environment-configuration-changes)を参照してください。<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
-   - ![修正アイコン &#x200B;](../../assets/fix.svg) `_merge` オプションを使用せずに`ELASTICSUITE_CONFIGURATION` デプロイ変数を設定すると、デフォルト設定が期待どおりに上書きされるように、Elastic Suite設定プロセスの問題を修正しました。<!--MAGECLOUD-4388-->
+  - ![修正アイコン &#x200B;](../../assets/fix.svg) `_merge` オプションを使用せずに`ELASTICSUITE_CONFIGURATION` デプロイ変数を設定すると、デフォルト設定が期待どおりに上書きされるように、Elastic Suite設定プロセスの問題を修正しました。<!--MAGECLOUD-4388-->
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **CLI コマンドの更新**—
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **新しいcron コマンド** - `cron:disable`および`cron:enable` コマンドを使用して、Adobe Commerce on cloud infrastructure environmentでcron処理を手動で管理できるようになりました。 disable コマンドを使用して、アクティブなすべてのcron プロセスを停止し、すべてのcron ジョブを無効にします。 準備ができたら、enable コマンドを使用してcron ジョブを再度有効にします。 「[cron ジョブを無効にする](../application/crons-property.md#disable-cron-jobs)」を参照してください。
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **新しいcron コマンド** - `cron:disable`および`cron:enable` コマンドを使用して、Adobe Commerce on cloud infrastructure environmentでcron処理を手動で管理できるようになりました。 disable コマンドを使用して、アクティブなすべてのcron プロセスを停止し、すべてのcron ジョブを無効にします。 準備ができたら、enable コマンドを使用してcron ジョブを再度有効にします。 「[cron ジョブを無効にする](../application/crons-property.md#disable-cron-jobs)」を参照してください。
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **エラーレポートの改善** - ECE-Tools処理中に発生するCLI コマンドのエラーに関するログの改善が追加されました。<!--MAGECLOUD-4849-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **エラーレポートの改善** - ECE-Tools処理中に発生するCLI コマンドのエラーに関するログの改善が追加されました。<!--MAGECLOUD-4849-->
 
-   - ![新しいアイコン &#x200B;](../../assets/new.svg) **非推奨のビルドコマンドを削除** – 次のビルドコマンドを削除しました：`m2-ece-build`、`m2-ece-deploy`、`m2-ece-scd-dump`、および`ece-tools docker` コマンドの名前を`ece-docker`に変更しました。 [下位互換性のない変更](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->を参照してください
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **非推奨のビルドコマンドを削除** – 次のビルドコマンドを削除しました：`m2-ece-build`、`m2-ece-deploy`、`m2-ece-scd-dump`、および`ece-tools docker` コマンドの名前を`ece-docker`に変更しました。 [下位互換性のない変更](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->を参照してください
 
 - ![新しいアイコン &#x200B;](../../assets/new.svg)非推奨の`build_options.ini` ファイルを削除し、ファイルが存在する場合にビルドを失敗する検証を追加しました。 ビルドオプションを設定するには、[.magento.env.yaml](../environment/configure-env-yaml.md) ファイルを使用します。
 
