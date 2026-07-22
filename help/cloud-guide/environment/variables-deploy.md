@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
+source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
 workflow-type: tm+mt
-source-wordcount: 2575
+source-wordcount: 2798
 ht-degree: 0%
 
 ---
@@ -792,6 +792,52 @@ stage:
   deploy:
     UPDATE_URLS: false
 ```
+
+## `USE_LUA`
+
+- **Default**—`false`
+- **バージョン** - Adobe Commerce 2.4.7以降
+
+デフォルトのキャッシュフロントエンドの`env.php`の`use_lua` キャッシュバックエンドオプションを制御します（`symfony_l2` バックエンドを使用する場合は、`stale_cache_enabled` フロントエンドのリモートバックエンドオプション）。 このオプションは`page_cache` フロントエンドには適用されません。
+
+Adobe サポートが明示的に指示しない限り、デフォルト値`false`を使用します。
+
+```yaml
+stage:
+  deploy:
+    USE_LUA: false
+```
+
+>[!WARNING]
+>
+>Adobe Commerce 2.4.7および2.4.8では、`USE_LUA: true`を設定すると、キャッシュが破損し、GraphQLのキャッシュミスの問題が発生する可能性があります。
+>
+>Adobe Commerce 2.4.9以降では、Commerce バージョンにValkey キャッシュ設定ガイダンスを使用し、新しいデプロイメントに`USE_LUA`を使用しないでください。 デフォルトおよびページキャッシュ [&#128279;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)については、Redisの設定を参照してください。
+
+## `LUA_KEY`
+
+`LUA_KEY`変数は非推奨です。 `LUA_KEY`が`.magento.env.yaml`に含まれている場合は、移行時に削除します。 代わりに`USE_LUA`変数と`USE_LUA_ON_GC`変数を使用してください。
+
+## `USE_LUA_ON_GC`
+
+- **Default**—`true`
+- **バージョン** - Adobe Commerce 2.4.8以降
+
+デフォルトのキャッシュフロントエンドの`env.php`の`use_lua_on_gc` キャッシュバックエンドオプションを制御します（および、`symfony_l2` バックエンドを使用する場合は、`stale_cache_enabled` フロントエンドのリモートバックエンドオプション）。 このオプションは`page_cache` フロントエンドには適用されません。
+
+`backend_clean_cache` cron ジョブ中にアトミックキャッシュタグのクリーンアップを保持するには、デフォルト値`true`を使用します。
+
+```yaml
+stage:
+  deploy:
+    USE_LUA_ON_GC: true
+```
+
+>[!WARNING]
+>
+>Adobe Commerce 2.4.8では、`USE_LUA_ON_GC: false`を設定すると、タグベースのキャッシュ無効化がサイレントで失敗し、完全なキャッシュのフラッシュが必要になる場合があります。
+>
+>2.4.9以降では、インストールされているバージョンの[&#x200B; キャッシュサービスガイダンス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)に従います。
 
 ## `VERBOSE_COMMANDS`
 
