@@ -4,16 +4,12 @@ description: ビルドおよびクラウドインフラストラクチャへの�
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
 TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
 workflow-type: tm+mt
-source-wordcount: 855
+source-wordcount: 849
 ht-degree: 0%
 
 ---
@@ -28,7 +24,6 @@ ht-degree: 0%
 | [`crons`](crons-property.md) | スペックの更新とcron ジョブのスケジュール | — | いいえ |
 | [`dependencies`](#dependencies) | 追加の依存関係を有効にする | `php:composer/composer: '2.2.4'` | いいえ |
 | [`disk`](#disk) | 永続的なディスクサイズを定義 | `5120` | はい |
-| [`firewall`](firewall-property.md) | （スターターのみ）アウトバウンドトラフィックの制御 | — | いいえ |
 | [`hooks`](hooks-property.md) | ビルド、デプロイ、デプロイ後のフェーズのシェルコマンドをカスタマイズする | — | いいえ |
 | [`mounts`](#mounts) | パスの設定 | パス：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | いいえ |
 | [`name`](#name) | アプリケーション名の定義 | `mymagento` | はい |
@@ -99,7 +94,7 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 ```
 
-Composerについて詳しくは、[必要なパッケージ &#x200B;](../development/overview.md#required-packages)を参照してください。
+Composerについて詳しくは、[必要なパッケージ ](../development/overview.md#required-packages)を参照してください。
 
 ## `dependencies`
 
@@ -148,7 +143,7 @@ disk: 5120
 
 >[!NOTE]
 >
->Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
+>Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
 >
 >ステージングまたは実稼動環境のディスクストレージを一時的に増やすことはできません。このプロセスは元に戻すことができません。
 
@@ -173,7 +168,7 @@ relationships:
     rabbitmq: "rabbitmq:rabbitmq"
 ```
 
-現在サポートされているサービスの種類とエンドポイントの完全なリストについては、[&#x200B; サービス &#x200B;](../services/services-yaml.md)を参照してください。
+現在サポートされているサービスの種類とエンドポイントの完全なリストについては、[ サービス ](../services/services-yaml.md)を参照してください。
 
 ## `mounts`
 
@@ -199,7 +194,7 @@ mounts:
 
 >[!NOTE]
 >
->Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
+>Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
 
 マウント webを場所の[`web`](web-property.md) ブロックに追加することで、マウント webにアクセスできるようにできます。
 
