@@ -5,23 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: a7cd55b31bf909047e449e5f984fcb082706c2b9
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
 workflow-type: tm+mt
-source-wordcount: 2904
+source-wordcount: 2965
 ht-degree: 0%
 
 ---
@@ -38,114 +28,120 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 >[!NOTE]
 >
->プロジェクトにパッチを適用する手順については、[&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
+>プロジェクトにパッチを適用する手順については、[ パッチの適用](../development/apply-patches.md)を参照してください。
 
 `magento/magento-cloud-patches` パッケージでは、次のバージョン シーケンスが使用されています：`<major>.<minor>.<patch>`
 
 <!--Add release notes below-->
 
-## v1.1.15 {#latest}
+## v1.1.16 {#latest}
+
+リリース日：2026年7月23日（PT）
+
+- ![fix icon](../../assets/fix.svg) **Symfony L2 キャッシュのパフォーマンスと信頼性の向上** - symfony_l2用のキャッシュタグストレージの最適化、TTL ベースの再生ロックによるキャッシュ無効化の改善、古いキャッシュエントリの排除を目的とした適切なL1 タグクリーンアップ、およびRedis/Valkey圧縮（compress_data）をデフォルトで有効にして、従来のキャッシュ実装との整合性を維持しながらメモリ消費ととトラフィックををを削減します。<!-- ACP2E-5132 -->
+
+## v1.1.15
 
 リリース日：2026年7月14日（PT）
 
-- ![修正アイコン &#x200B;](../../assets/fix.svg) **セキュリティの改善** – 最新のセキュリティ パッチを適用しました。<!--MCLOUD-15066 -->
+- ![修正アイコン ](../../assets/fix.svg) **セキュリティの改善** – 最新のセキュリティ パッチを適用しました。<!--MCLOUD-15066 -->
 
 ## v1.1.14
 
 リリース日：2026年5月6日（PT）
 
-- ![修正アイコン &#x200B;](../../assets/fix.svg) **パッチバージョンの表示** – クラウド環境での修正クラウドパッチバージョンの表示<!--MCLOUD-14221 -->
-- ![&#x200B; アイコンの修正](../../assets/fix.svg) **PHPUnit クリーンアップ** – 固定PHPUnit通知<!--MCLOUD-14717 -->
-- ![新しいアイコン &#x200B;](../../assets/new.svg)**化粧品の修正** – 化粧品の改善を追加しました。<!--MCLOUD-14686 -->
+- ![修正アイコン ](../../assets/fix.svg) **パッチバージョンの表示** – クラウド環境での修正クラウドパッチバージョンの表示<!--MCLOUD-14221 -->
+- ![ アイコンの修正](../../assets/fix.svg) **PHPUnit クリーンアップ** – 固定PHPUnit通知<!--MCLOUD-14717 -->
+- ![新しいアイコン ](../../assets/new.svg)**化粧品の修正** – 化粧品の改善を追加しました。<!--MCLOUD-14686 -->
 
 ## v1.1.13
 
 リリース日：2026年3月5日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **PHP 8.5** - PHP 8.5のサポートを追加しました。<!-- MCLOUD-14181 -->
+- ![新しいアイコン ](../../assets/new.svg) **PHP 8.5** - PHP 8.5のサポートを追加しました。<!-- MCLOUD-14181 -->
 - ![fix icon](../../assets/fix.svg) **PHP 8.x**&#x200B;の機能テストを更新しました。従来のPHP 7.x テストを削除し、PHP 8.1と8.2の新しいテストカバレッジを追加し、Adobe Commerce バージョンを更新しました。<!-- MCLOUD-14203 -->
 
 ## v1.1.12
 
 リリース日：2025年11月13日（PT）
 
-- ![&#x200B; アイコンを修正](../../assets/fix.svg) **Symfony パッケージ** – 最新のSymfony YAML パッケージのサポートを追加しました。<!-- MCLOUD-14020 -->
-- ![fix icon](../../assets/fix.svg) **Patch** - JSの縮小とバンドルが有効になっている場合、[&#x200B; チェックアウトの修正が失敗する](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27997)問題について、*Commerce ナレッジベース*&#x200B;で説明しています。
-- ![&#x200B; アイコンの修正](../../assets/fix.svg) **カテゴリ表示**&#x200B;の改善 – MCLOUD-13752: カテゴリ表示の改善<!-- MCLOUD-13752 | MCLOUD-14139  -->
+- ![ アイコンを修正](../../assets/fix.svg) **Symfony パッケージ** – 最新のSymfony YAML パッケージのサポートを追加しました。<!-- MCLOUD-14020 -->
+- ![fix icon](../../assets/fix.svg) **Patch** - JSの縮小とバンドルが有効になっている場合、[ チェックアウトの修正が失敗する](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997)問題について、*Commerce ナレッジベース*&#x200B;で説明しています。
+- ![ アイコンの修正](../../assets/fix.svg) **カテゴリ表示**&#x200B;の改善 – MCLOUD-13752: カテゴリ表示の改善<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
 
 リリース日：2025年9月9日（PT）
 
-- ![修正アイコン &#x200B;](../../assets/fix.svg) **WebAPI**-CVE-2025-54236.<!-- MCLOUD-14016 -->の修正
+- ![修正アイコン ](../../assets/fix.svg) **WebAPI**-CVE-2025-54236.<!-- MCLOUD-14016 -->の修正
 
 ## v1.1.10
 
 リリース日：2025年8月7日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **PHP 8.4** – 機能テストを追加しました。<!-- MCLOUD-13312 -->
+- ![新しいアイコン ](../../assets/new.svg) **PHP 8.4** – 機能テストを追加しました。<!-- MCLOUD-13312 -->
 
 ## v1.1.9
 
 リリース日：2025年6月9日（PT）
 
-- ![&#x200B; アイコンの修正](../../assets/fix.svg) **カテゴリ表示の改善** – カテゴリ表示の改善<!-- MCLOUD-13752	 - -->
-- ![&#x200B; アイコンの修正](../../assets/fix.svg) **管理者キャッシュの改善**-Improve-admin-cache-efficiency CVE-2025-47110.<!-- MCLOUD-13753	 - -->
+- ![ アイコンの修正](../../assets/fix.svg) **カテゴリ表示の改善** – カテゴリ表示の改善<!-- MCLOUD-13752	 - -->
+- ![ アイコンの修正](../../assets/fix.svg) **管理者キャッシュの改善**-Improve-admin-cache-efficiency CVE-2025-47110.<!-- MCLOUD-13753	 - -->
 
 ## v1.1.8
 
 リリース日：2025年6月3日（PT）
 
-- ![&#x200B; アイコンの修正](../../assets/fix.svg) **2.4.8**&#x200B;との互換性を向上させるために、2.4.8<!-- MCLOUD-13707	 - -->との互換性を向上させるために、サードパーティ製ライブラリを更新しました
+- ![ アイコンの修正](../../assets/fix.svg) **2.4.8**&#x200B;との互換性を向上させるために、2.4.8<!-- MCLOUD-13707	 - -->との互換性を向上させるために、サードパーティ製ライブラリを更新しました
 
 ## v1.1.7
 
 リリース日：2025年5月5日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce 2.4.4から2.4.8**&#x200B;へのパッチを更新しました。これは、1.1.7<!-- MCLOUD-13619 -->にリリースされた[CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)のパッチです
+- ![新しいアイコン ](../../assets/new.svg) **Commerce 2.4.4から2.4.8**&#x200B;へのパッチを更新しました。これは、1.1.7<!-- MCLOUD-13619 -->にリリースされた[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch)のパッチです
 
 ## v1.1.6
 
 リリース日：2025年4月24日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチを更新しました。これは、1.1.4<!-- MCLOUD-13240 -->にリリースされた[CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)のパッチです
+- ![新しいアイコン ](../../assets/new.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチを更新しました。これは、1.1.4<!-- MCLOUD-13240 -->にリリースされた[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)のパッチです
 
 ## v1.1.5
 
 リリース日：2025年4月15日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **B2B 1.5.2**&#x200B;のパッチを追加 – B2B モジュール 1.5.2およびMariaDB 10.6<!-- MCLOUD-13605	-->を使用したACP2E-3833の問題を修正
+- ![新しいアイコン ](../../assets/new.svg) **B2B 1.5.2**&#x200B;のパッチを追加 – B2B モジュール 1.5.2およびMariaDB 10.6<!-- MCLOUD-13605	-->を使用したACP2E-3833の問題を修正
 
 ## v1.1.4
 
 リリース日：2025年2月13日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチが追加されました。この更新プログラムは、[CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)にパッチを適用します。<!-- MCLOUD-13240	 - -->
+- ![新しいアイコン ](../../assets/new.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチが追加されました。この更新プログラムは、[CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08)にパッチを適用します。<!-- MCLOUD-13240	 - -->
 
 ## v1.1.3
 
 リリース日：2025年2月6日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **PHP 8.4** - PHP 8.4のサポートを追加しました。<!-- MCLOUD-13149	 - -->
+- ![新しいアイコン ](../../assets/new.svg) **PHP 8.4** - PHP 8.4のサポートを追加しました。<!-- MCLOUD-13149	 - -->
 
 ## v1.1.2
 
 リリース日：2024年11月5日（PT）
 
-- ![fix icon](../../assets/fix.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチが追加されました。このアップデートにより、B2B モジュールを使用する際のAdobe Commerceに関する重要な[CVE-2024-45115](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73)脆弱性が修正されました。<!-- MCLOUD-12980 - -->
+- ![fix icon](../../assets/fix.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチが追加されました。このアップデートにより、B2B モジュールを使用する際のAdobe Commerceに関する重要な[CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73)脆弱性が修正されました。<!-- MCLOUD-12980 - -->
 
 ## v1.1.1
 
 リリース日：2024年11月5日（PT）
 
-- ![fix icon](../../assets/fix.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチが追加されました。このアップデートは、重要な[CVE-2024-34102](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicStingの脆弱性<!-- MCLOUD-12980 - -->にパッチを適用します。
+- ![fix icon](../../assets/fix.svg) **Commerce 2.4.4から2.4.7**&#x200B;へのパッチが追加されました。このアップデートは、重要な[CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicStingの脆弱性<!-- MCLOUD-12980 - -->にパッチを適用します。
 
 ## v1.1.0
 
 リリース日：2024年10月7日（PT）
 
 - ![fix icon](../../assets/fix.svg) **リファクタリング コード** – 古いPHP バージョン（7.4、7.3、7.2）および関連ライブラリのサポートを削除しました。<!-- MCLOUD-9278 - -->
-- ![&#x200B; アイコンの修正](../../assets/fix.svg) **Monolog バージョン**&#x200B;のアップグレード - monolog 3.6.<!-- MCLOUD-12855 - -->のサポートを追加しました
+- ![ アイコンの修正](../../assets/fix.svg) **Monolog バージョン**&#x200B;のアップグレード - monolog 3.6.<!-- MCLOUD-12855 - -->のサポートを追加しました
 - ![fix icon](../../assets/fix.svg) **Patch for Application Server**:GraphQL Application Serverの既知の問題を解決します。 具体的には、バージョン 2.4.7の`CatalogGraphQl\\Model\\Config\\AttributeReader`には、古い属性の設定に基づいてGraphQL リクエストが応答を取得する可能性があるバグが含まれていました。<!-- ACPT-1876 -->
 
 ## v1.0.27
@@ -158,7 +154,7 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2024年4月8日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **PHP** — PHP 8.3のサポートを追加しました。
+- ![新しいアイコン ](../../assets/new.svg) **PHP** — PHP 8.3のサポートを追加しました。
 
 ## v1.0.25
 
@@ -185,8 +181,8 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 - **拡張QPT CLI ウィザード/出力** - QPT CLI ウィザード/出力に警告を追加しました。依存関係がある場合は、パッチの詳細と要件を確認してください。<!-- ACP2E-1963 -->
 - **Commerce 2.4.6のパッチを追加しました：**
-   - `regexp cache tag`検証を修正しました。<!-- MCLOUD-10226 -->
-   - 同じデプロイメント設定が読み込まれる回数を減らすことにより、パフォーマンスが向上しました。<!-- MCLOUD-10604 -->
+  - `regexp cache tag`検証を修正しました。<!-- MCLOUD-10226 -->
+  - 同じデプロイメント設定が読み込まれる回数を減らすことにより、パフォーマンスが向上しました。<!-- MCLOUD-10604 -->
 - **Commerce 2.3.7から2.4.6**&#x200B;へのパッチを追加しました。`catalog_product_entity_*` テーブルに対して、増分1ではなくランダム値による増分が発生する問題を修正しました。<!-- MCLOUD-10032 -->
 - **Commerce 2.4.0のパッチを2.4.6**&#x200B;に追加しました。管理者からJS/CSS キャッシュをフラッシュする際に発生した`The file can't be deleted. Warning!unlink: No such file or directory`というエラーを修正しました。<!-- MCLOUD-10279 -->
 
@@ -216,7 +212,7 @@ Adobe Commerce 2.4.5のクリティカルパッチ：
 
 - **Braintree支払いを使用した注文に関する問題** – 管理者が新しい注文や再注文を行うことができない重大な問題を解決します。<!-- MCLOUD-9137 -->
 
-Braintree支払いが有効になっている場合、[管理者は注文/再注文を作成できません](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=ja)を参照してください。
+Braintree支払いが有効になっている場合、[管理者は注文/再注文を作成できません](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html)を参照してください。
 
 ## v1.0.17
 
@@ -232,7 +228,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 未認証のリモート コード実行の原因となる&#x200B;**critical**&#x200B;脆弱性を解決するためのパッチを更新しました。<!-- MCLOUD-8479 -->
 
-[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html)を参照してください。
+[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)を参照してください。
 
 ## v1.0.15
 
@@ -249,7 +245,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 **critical**&#x200B;脆弱性を解決するためのパッチを追加しました。これにより、未認証のリモート コードが実行されます。<!-- MCLOUD-8461 -->
 
-[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html)を参照してください。
+[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)を参照してください。
 
 ## v1.0.13
 
@@ -265,7 +261,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
-- **API レート制限に関する問題** – このパッチは、Web APIが配列内の20個を超えるアイテムを含むリクエストを処理できないようにデフォルトのレート制限を修正します。 このパッチは、レート制限のデフォルト値を上げます。 Adobe Commerce [2.4.3 リリースノート &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting)を参照してください。<!-- MC-43048 -->
+- **API レート制限に関する問題** – このパッチは、Web APIが配列内の20個を超えるアイテムを含むリクエストを処理できないようにデフォルトのレート制限を修正します。 このパッチは、レート制限のデフォルト値を上げます。 Adobe Commerce [2.4.3 リリースノート ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting)を参照してください。<!-- MC-43048 -->
 
 ## v1.0.11
 
@@ -275,7 +271,7 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **Paypal チェックアウトパッチ** – 以前に配置された注文価格が表示されるPayPal ExpressのAdobe Commerce 2.3.7の問題を修正します。<!--MC-42674-->
 
-- **パッチカテゴリのサポート** – 品質パッチに割り当てられたパッチカテゴリとオリジンソースの処理のサポートを追加しました。 このカテゴリを使用すると、[品質パッチツール &#x200B;](https://github.com/magento/quality-patches)とサイト全体の分析ツール（SWAT）を使用する際に、フィルターと並べ替えを使用してパッチをより迅速に見つけることができます。<!--MC-38577-->
+- **パッチカテゴリのサポート** – 品質パッチに割り当てられたパッチカテゴリとオリジンソースの処理のサポートを追加しました。 このカテゴリを使用すると、[品質パッチツール ](https://github.com/magento/quality-patches)とサイト全体の分析ツール（SWAT）を使用する際に、フィルターと並べ替えを使用してパッチをより迅速に見つけることができます。<!--MC-38577-->
 
 ## v1.0.10
 
@@ -315,17 +311,17 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 リリース日：
 
 - **Adobe Commerce 2.3.0 ～ 2.3.4**&#x200B;のRedis パッチ – コミュニケーションを最適化し、パフォーマンスを向上
-   - RedisとAdobe Commerce間のネットワーク転送のサイズを小さくする
-   - Redisの読み込みと書き込み操作に関する競合条件の修正
-   - 保存時のエラーを処理するためのベース キャッシュ アダプターの書き換え
-   - Redis CPUの消費量を減らす<!--MCLOUD-6139-->
+  - RedisとAdobe Commerce間のネットワーク転送のサイズを小さくする
+  - Redisの読み込みと書き込み操作に関する競合条件の修正
+  - 保存時のエラーを処理するためのベース キャッシュ アダプターの書き換え
+  - Redis CPUの消費量を減らす<!--MCLOUD-6139-->
 
 - **Adobe Commerce 2.3.0 ～ 2.3.5**&#x200B;のRedis パッチ – パフォーマンスの向上とエラーの修正
-   - キャッシュロックの実装を修正して、無限ロックを防ぐ
-   - 現在のロック機構を改善する
-   - 署名済みロックを実装して、並列リクエストからのロック解除を防ぐ
-   - Redis書き込み操作で発生する次のエラーを修正します：`OOM command not allowed when used memory > maxmemory`
-   - 製品の更新中に実行される`cat_p` タグによるクリーンキャッシュの処理を修正<!--MCLOUD-6110-->
+  - キャッシュロックの実装を修正して、無限ロックを防ぐ
+  - 現在のロック機構を改善する
+  - 署名済みロックを実装して、並列リクエストからのロック解除を防ぐ
+  - Redis書き込み操作で発生する次のエラーを修正します：`OOM command not allowed when used memory > maxmemory`
+  - 製品の更新中に実行される`cat_p` タグによるクリーンキャッシュの処理を修正<!--MCLOUD-6110-->
 
 - このモジュールを含まないAdobe Commerce v2.2.6または2.3.5を使用して、必要な`amzn/amazon-pay-module` パッチをAdobe Commerce クラウドインフラストラクチャプロジェクトに適用する際にエラーが発生する問題を修正しました。 モジュールがインストールされていない場合、パッチ適用プロセスは`amzn/amazon-pay-module` パッチをスキップします。<!--MCLOUD-6588-->
 
@@ -369,9 +365,9 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **magento/magento-cloud-patches**&#x200B;の互換性アップデート
 
-   - Adobe Commerce 2.4以降のリリースとの互換性を保つため、`composer.json` ファイルの`symfony`および`semver` バージョンの制約を更新しました。<!--MAGECLOUD-5127-->
+  - Adobe Commerce 2.4以降のリリースとの互換性を保つため、`composer.json` ファイルの`symfony`および`semver` バージョンの制約を更新しました。<!--MAGECLOUD-5127-->
 
-   - 2002.0.22以降の2002.0.x リリースと互換性を保つため、`composer.json`の制約を更新しました。`ece-tools`
+  - 2002.0.22以降の2002.0.x リリースと互換性を保つため、`composer.json`の制約を更新しました。`ece-tools`
 
 - **PayPal Express Checkout** - 2020年2月12日に公開されたこのパッチは、PayPal Express Checkoutでの注文に影響する問題を解決します。注文の配送先住所で、配送ページのドロップダウンメニューから選択するのではなく、テキストフィールドに手動で入力された国の地域を指定します。 パッチの完全な説明については、パッチのダウンロードページを参照してください。
 
@@ -389,9 +385,9 @@ magento/magento-cloud-patches v1.0.1 リリースのソフトウェアダウン�
 
 - **cron デッドロックを修正し、cron ロックを改善**—
 
-   - `cron_schedule` テーブルのステータス値が正しくないため、一部のcron ジョブが実行されない問題を修正しました。 ここでは、Adobe Commerce ロックフレームワークを使用して、`cron_schedule` テーブルを使用する代わりに、cron ジョブのステータスを確認および更新します。 エラーステータスで終了したCron ジョブは、24時間待つのではなく、次のcron実行時に再試行されます。
+  - `cron_schedule` テーブルのステータス値が正しくないため、一部のcron ジョブが実行されない問題を修正しました。 ここでは、Adobe Commerce ロックフレームワークを使用して、`cron_schedule` テーブルを使用する代わりに、cron ジョブのステータスを確認および更新します。 エラーステータスで終了したCron ジョブは、24時間待つのではなく、次のcron実行時に再試行されます。
 
-   - `cron_schedule` テーブルのデータの更新中にデッドロックを回避するために、_再試行_&#x200B;操作を追加します。
+  - `cron_schedule` テーブルのデータの更新中にデッドロックを回避するために、_再試行_&#x200B;操作を追加します。
 
 - **Magento Open Source 2.x**&#x200B;のすべての利用可能なパッチを含めるように`magento/magento-cloud-patches`を更新しました – magento/magento-cloud-patches パッケージを更新して、ソフトウェアのダウンロードページで利用可能なすべてのMagento Open Source 2.x パッチを含めました。 以前にAdobe Commerce on cloud infrastructure プロジェクトにMagento Open Sourceのパッチをコピーした場合は、それらを削除して競合を回避します。<!--MAGECLOUD-4606-->
 
