@@ -4,16 +4,12 @@ description: Adobe Commerce on Cloud Infrastructureのバックエンドキャ�
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
 TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 988a098ec800616898a4ad0ab460a09ec64c4fc3
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: a12aa37d41a68df2fd4c84b589a08e128e5ec103
 workflow-type: tm+mt
-source-wordcount: 259
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io)は、Adobe Commerceがデフォルトで使用する`Zend Framework Zend_Cache_Backend_File`に代わるオプションのバックエンドキャッシュソリューションです。 Commerce バージョン 2.4.9以降または2.4.5-p16、2.4.6-p14、2.4.7-p9および2.4.8-p4以降のリリースでデフォルトを上書きする場合は、Valkeyを使用する必要があります。
 
-_実装プレイブックのベストプラクティスガイド_&#x200B;の「[Valkey](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}の設定」を参照してください。
+_実装プレイブックのベストプラクティスガイド_&#x200B;の「[Valkey](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"}の設定」を参照してください。
 
 {{service-instruction}}
 
@@ -58,13 +54,17 @@ _実装プレイブックのベストプラクティスガイド_&#x200B;の「[
         VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
    ```
 
+   >[!TIP]
+   >
+   >Adobe Commerce 2.4.9以降では、`VALKEY_BACKEND: symfony_l2`を設定することで、`RemoteSynchronizedCache`の代わりに最新のSymfony Cache ベースのL2 キャッシュ実装を使用できます。 _変数のデプロイ_&#x200B;のリファレンスの[`VALKEY_BACKEND`](../environment/variables-deploy.md#valkey_backend)を参照してください。
+
 1. コード変更を追加、コミット、プッシュします。
 
    ```bash
    git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
-1. [&#x200B; サービス関係を確認します](services-yaml.md#service-relationships)。
+1. [ サービス関係を確認します](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 

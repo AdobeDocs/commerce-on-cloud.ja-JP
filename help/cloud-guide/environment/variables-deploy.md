@@ -6,26 +6,20 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
 TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
 workflow-type: tm+mt
-source-wordcount: 2798
+source-wordcount: 3031
 ht-degree: 0%
 
 ---
 
 # 変数のデプロイ
 
-次の&#x200B;_デプロイ_&#x200B;変数は、デプロイフェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`deploy` ステージに挿入します。
+次の&#x200B;_デプロイ_&#x200B;変数は、デプロイフェーズのアクションを制御し、[ グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`deploy` ステージに挿入します。
 
 ```yaml
 stage:
@@ -74,7 +68,7 @@ stage:
             database: 11
 ```
 
-次の例では、_設定ガイド_&#x200B;で定義されている[Redis プリロード機能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html?lang=ja#redis-preload-feature)を使用しています。
+次の例では、_設定ガイド_&#x200B;で定義されている[Redis プリロード機能](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache.html#redis-preload-feature)を使用しています。
 
 ```yaml
 stage:
@@ -109,7 +103,7 @@ stage:
 - **Default**—`true`
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-ビルドまたはデプロイのフェーズで生成された[静的コンテンツファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja)のクリーニングを有効または無効にします。 開発時のデフォルト値&#x200B;_true_&#x200B;をベストプラクティスとして使用します。
+ビルドまたはデプロイのフェーズで生成された[静的コンテンツファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)のクリーニングを有効または無効にします。 開発時のデフォルト値&#x200B;_true_&#x200B;をベストプラクティスとして使用します。
 
 - **`true`** – 更新された静的コンテンツをデプロイする前に、既存のすべての静的コンテンツを削除します。
 - **`false`** – 生成されたコンテンツに新しいバージョンが含まれている場合にのみ、デプロイメントは既存の静的コンテンツファイルを上書きします。
@@ -122,7 +116,7 @@ stage:
     CLEAN_STATIC_FILES: false
 ```
 
-デプロイ前に静的ビューファイルをクリーンアップしないと、以前のバージョンを削除せずに既存のファイルにアップデートをデプロイすると問題が発生する可能性があります。 [静的ファイルのフォールバック &#x200B;](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) ルールにより、ディレクトリに同じファイルの複数のバージョンが含まれている場合、フォールバック操作で間違ったファイルが表示される可能性があります。
+デプロイ前に静的ビューファイルをクリーンアップしないと、以前のバージョンを削除せずに既存のファイルにアップデートをデプロイすると問題が発生する可能性があります。 [静的ファイルのフォールバック ](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) ルールにより、ディレクトリに同じファイルの複数のバージョンが含まれている場合、フォールバック操作で間違ったファイルが表示される可能性があります。
 
 ## `CRON_CONSUMERS_RUNNER`
 
@@ -168,7 +162,7 @@ stage:
       consumers: []
 ```
 
-デフォルトでは、デプロイメントプロセスは`env.php` ファイルのすべての設定を上書きします。 オンプレミス Adobe Commerceについては、_Commerce設定ガイド_&#x200B;の「[&#x200B; メッセージキューの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html?lang=ja)」を参照してください。
+デフォルトでは、デプロイメントプロセスは`env.php` ファイルのすべての設定を上書きします。 オンプレミス Adobe Commerceについては、_Commerce設定ガイド_&#x200B;の「[ メッセージキューの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html)」を参照してください。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -198,7 +192,7 @@ stage:
 
 >[!WARNING]
 >
->`.magento.env.yaml` ファイルではなく[!DNL Cloud Console]を通じて`CRYPT_KEY`値を設定し、お使いの環境のソースコードリポジトリでキーを公開しないようにします。 [環境とプロジェクト変数の設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html?lang=ja#configure-environment)を参照してください。
+>`.magento.env.yaml` ファイルではなく[!DNL Cloud Console]を通じて`CRYPT_KEY`値を設定し、お使いの環境のソースコードリポジトリでキーを公開しないようにします。 [環境とプロジェクト変数の設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/project/overview.html#configure-environment)を参照してください。
 
 インストールプロセスなしでデータベースを環境から別の環境に移動する場合は、対応する暗号化情報が必要です。 Adobe Commerceは、[!DNL Cloud Console]で設定された暗号化キーの値を`env.php` ファイルの`crypt/key`値として使用します。
 
@@ -207,7 +201,7 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-`.magento.app.yaml` ファイルの[関係プロパティ &#x200B;](../application/properties.md#relationships)でデータベースを定義した場合、デプロイメント用にデータベース接続をカスタマイズできます。
+`.magento.app.yaml` ファイルの[関係プロパティ ](../application/properties.md#relationships)でデータベースを定義した場合、デプロイメント用にデータベース接続をカスタマイズできます。
 
 ```yaml
 stage:
@@ -289,7 +283,7 @@ stage:
 
 >[!NOTE]
 >
->3つのノード（[Scaled Architecture](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上の3つのサービスノード）を持つPro ステージング/実稼動クラスターでは、`indices_settings`を次のように設定する必要があります。
+>3つのノード（[Scaled Architecture](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture#service-tier)上の3つのサービスノード）を持つPro ステージング/実稼動クラスターでは、`indices_settings`を次のように設定する必要があります。
 >
 >```yaml
 >           indices_settings:
@@ -318,7 +312,7 @@ stage:
 
 >[!NOTE]
 >
->Adobe Commerceでの[!DNL Elastic Suite] プラグインの使用またはトラブルシューティングについて詳しくは、[[!DNL Elastic Suite]  ドキュメント &#x200B;](https://github.com/Smile-SA/elasticsuite)を参照してください。
+>Adobe Commerceでの[!DNL Elastic Suite] プラグインの使用またはトラブルシューティングについて詳しくは、[[!DNL Elastic Suite]  ドキュメント ](https://github.com/Smile-SA/elasticsuite)を参照してください。
 
 ## `ENABLE_GOOGLE_ANALYTICS`
 
@@ -467,7 +461,7 @@ stage:
 
 >[!NOTE]
 >
->`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`をRedis バックエンドモデルとして指定して[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`をRedis バックエンドモデルとして指定して[L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
 
 ## `REDIS_USE_SLAVE_CONNECTION`
 
@@ -495,17 +489,21 @@ stage:
 ## `VALKEY_BACKEND`
 
 - **Default**—`Cm_Cache_Backend_Redis`
-- **バージョン** - Adobe Commerce 2.8.0以降
+- **バージョン** - Adobe Commerce 2.4.8以降
 
 `VALKEY_BACKEND`は、Valkey キャッシュのバックエンド モデル設定を指定します。
 
-Adobe Commerce バージョン 2.8.0以降には、次のバックエンドモデルが含まれています。
+Adobe Commerce バージョン 2.4.8以降には、次のバックエンドモデルが含まれています。
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-次の例は、`VALKEY_BACKEND`を設定する方法を示しています。
+Adobe Commerce 2.4.9以降では、最新のSymfony Cache ベースのL2 キャッシュ実装を可能にする`symfony_l2` バックエンドモデルもサポートしています。
+
+### リモート同期キャッシュの設定
+
+Adobe Commerce 2.4.8の場合、次の例では、`VALKEY_BACKEND`をリモート同期キャッシュに設定する方法について説明します。
 
 ```yaml
 stage:
@@ -514,9 +512,23 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
+Valkey バックエンドモデルとしてリモート同期キャッシュを指定すると、[L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html)が有効になり、`ece-tools`はキャッシュ設定を自動的に生成します。 [設定ファイルの例](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#configuration-example)を参照してください。 設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+
+### 最新のSymfony L2 キャッシュ実装の設定
+
+Adobe Commerce 2.4.9以降では、次の例では、最新のSymfony L2 キャッシュ実装に`VALKEY_BACKEND`を設定する方法について説明します。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: symfony_l2
+```
+
+Valkey バックエンドモデルとして`symfony_l2`を指定すると、[L2 キャッシュ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html){target="_blank"}が有効になり、`ece-tools`は、`default` フロントエンドと`stale_cache_enabled` フロントエンドを含むValkey サービス接続の詳細からL2 キャッシュ設定を自動的に生成します。 `CACHE_CONFIGURATION`の定義はオプションで、ローカルキャッシュディレクトリなどの特定のバックエンドオプションをカスタマイズするためにのみ必要です。 カスタマイズの例については、_Adobe Commerce Configuration Guide_&#x200B;の[Modern Symfony L2 cache implementation](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#modern-symfony-l2-cache-implementation){target="_blank"}および&#x200B;_Implementation Playbook_&#x200B;の[Configure Symfony L2 cache](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}を参照してください。
+
 >[!NOTE]
 >
->Valkey バックエンドモデルとして`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`を指定して[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>Adobe Commerce 2.4.9には、キャッシュ・タグ・ストレージ、無効化、圧縮などのSymfony L2 キャッシュの機能強化が含まれており、ACP2E-5132 パッチの適用、ディスク I/Oの削減、古いキャッシュ・エントリの排除、メモリとネットワークのオーバーヘッドの削減が実現されています。 _Adobe Commerce Configuration Guide_&#x200B;の[Enhanced Symfony L2 cache performance and reliability](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html#enhanced-symfony-l2-cache-performance-and-reliability)を参照してください。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 
@@ -651,7 +663,7 @@ stage:
 - **Default**—`quick`
 - **バージョン** - Adobe Commerce 2.2.0以降
 
-静的コンテンツの[&#x200B; デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html?lang=ja)をカスタマイズできます。 [静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja)を参照してください。
+静的コンテンツの[ デプロイメント戦略](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html)をカスタマイズできます。 [静的ビューファイルのデプロイ ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html)を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_&#x200B;を使用します。
 
@@ -812,7 +824,7 @@ stage:
 >
 >Adobe Commerce 2.4.7および2.4.8では、`USE_LUA: true`を設定すると、キャッシュが破損し、GraphQLのキャッシュミスの問題が発生する可能性があります。
 >
->Adobe Commerce 2.4.9以降では、Commerce バージョンにValkey キャッシュ設定ガイダンスを使用し、新しいデプロイメントに`USE_LUA`を使用しないでください。 デフォルトおよびページキャッシュ [&#128279;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)については、Redisの設定を参照してください。
+>Adobe Commerce 2.4.9以降では、Commerce バージョンにValkey キャッシュ設定ガイダンスを使用し、新しいデプロイメントに`USE_LUA`を使用しないでください。 デフォルトおよびページキャッシュ ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)については、[Redisの設定を参照してください。
 
 ## `LUA_KEY`
 
@@ -837,7 +849,7 @@ stage:
 >
 >Adobe Commerce 2.4.8では、`USE_LUA_ON_GC: false`を設定すると、タグベースのキャッシュ無効化がサイレントで失敗し、完全なキャッシュのフラッシュが必要になる場合があります。
 >
->2.4.9以降では、インストールされているバージョンの[&#x200B; キャッシュサービスガイダンス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)に従います。
+>2.4.9以降では、インストールされているバージョンの[ キャッシュサービスガイダンス ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)に従います。
 
 ## `VERBOSE_COMMANDS`
 
