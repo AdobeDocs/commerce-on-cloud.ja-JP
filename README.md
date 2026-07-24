@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 このサイトには、Cloud Infrastructure上のCommerceの最新の開発者向けドキュメントが含まれています。
 
-- [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview)
-- [&#x200B; クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/start/overview)の基本を学ぶ
+- [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [ クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)の基本を学ぶ
 
 ## AdobeオープンSource行動規範
 
@@ -34,7 +34,7 @@ Adobe コミュニティに参加していて、新しい記事を作成した�
 
 ### Adobe社員の主な変化
 
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、開発者であり、技術記事の投稿や作成を担当する仕事がある場合は、`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.ja-JP`にあるプライベートリポジトリを使用する必要があります。
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、開発者であり、技術記事の投稿や作成を担当する仕事がある場合は、`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`にあるプライベートリポジトリを使用する必要があります。
 
 ## ツールと設定
 
@@ -70,7 +70,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 >**メモ：**
 >
 >- テンプレート化されたコンテンツを生成するには、ターミナルのコマンドラインで作業する必要があります。
->- レンダリングスクリプトを実行するには、Rubyがインストールされている必要があります。 必要なバージョンについては、[_jekyll/.ruby-version] (_jekyll/.ruby-version)を参照してください。
+>- レンダリングスクリプトを実行するには、Rubyがインストールされている必要があります。 必要なバージョンについては、[_jekyll/.ruby-version](_jekyll/.ruby-version)を参照してください。
 
 テンプレート化されたコンテンツのファイル構造については、次を参照してください。
 
@@ -83,8 +83,8 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 1. テキストエディターで、`_jekyll/_data` ディレクトリのデータファイルを開きます。 例：
 
-   - [Cloud CLI リファレンス &#x200B;](help/templated/cloud-cli-ref.md): `_jekyll/_data/cloud-cli-ref.yaml`
-   - [&#x200B; クラウドパッケージ &#x200B;](help/templated/cloud-packages.md): `_jekyll/_data/cloud-packages.yaml`
+   - [Cloud CLI リファレンス ](help/templated/cloud-cli-ref.md): `_jekyll/_data/cloud-cli-ref.yaml`
+   - [ クラウドパッケージ ](help/templated/cloud-packages.md): `_jekyll/_data/cloud-packages.yaml`
    - [ECE ツール参照](help/templated/ece-tools.md): `_jekyll/_data/ece-tools.yaml`
 
 2. 既存のYAML構造を使用して、エントリを作成します。
@@ -130,7 +130,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
    git push
    ```
 
-[&#x200B; データファイル &#x200B;](https://jekyllrb.com/docs/datafiles)、[液体フィルター](https://jekyllrb.com/docs/liquid/filters/)およびその他の機能について詳しくは、Jekyllのドキュメントを参照してください。
+[ データファイル ](https://jekyllrb.com/docs/datafiles)、[液体フィルター](https://jekyllrb.com/docs/liquid/filters/)およびその他の機能について詳しくは、Jekyllのドキュメントを参照してください。
 
 ## 使用可能なレイク タスク
 
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### フックの機能
 
-- ステージングされた画像ファイルを自動検出（PNG、JPEG、GIF、SVG）
-- `image_optim`を実行してラスター画像（PNG、JPEG、GIF）を圧縮および最適化
+- ステージングされた画像ファイルを自動的に検出（`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`）
+- `image_optim`を実行してラスター画像（`.png`、`.jpeg`、`.jpg`、`.gif`）を圧縮および最適化します
 - 最適化された画像を自動的にリステージ
 - コミットされたすべてのラスター画像が適切に最適化されていることを確認します
-- ステージングされたSVGをサイズ制限に照らし合わせてチェックし、SVGが制限を超えた場合にコミットを中止します
+- ステージングされたSVGをサイズ制限に照らし合わせてチェックし、サイズが大きすぎるSVGが`help/`から参照されている場合はコミットを中止します（そうでない場合は警告するだけです）
 
 ### Adobe Workfrontの利点
 
