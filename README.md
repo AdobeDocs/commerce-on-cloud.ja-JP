@@ -9,8 +9,8 @@ ht-degree: 0%
 
 このサイトには、Cloud Infrastructure上のCommerceの最新の開発者向けドキュメントが含まれています。
 
-- [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [&#x200B; クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)の基本を学ぶ
+- [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview)
+- [&#x200B; クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/start/overview)の基本を学ぶ
 
 ## AdobeオープンSource行動規範
 
@@ -34,7 +34,7 @@ Adobe コミュニティに参加していて、新しい記事を作成した�
 
 ### Adobe社員の主な変化
 
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、開発者であり、技術記事の投稿や作成を担当する仕事がある場合は、`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`にあるプライベートリポジトリを使用する必要があります。
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、開発者であり、技術記事の投稿や作成を担当する仕事がある場合は、`https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.ja-JP`にあるプライベートリポジトリを使用する必要があります。
 
 ## ツールと設定
 
