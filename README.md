@@ -10,7 +10,7 @@ ht-degree: 0%
 このサイトには、Cloud Infrastructure上のCommerceの最新の開発者向けドキュメントが含まれています。
 
 - [Commerce オンクラウドインフラストラクチャガイド](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [ クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)の基本を学ぶ
+- [&#x200B; クラウドインフラストラクチャ上のCommerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)の基本を学ぶ
 
 ## AdobeオープンSource行動規範
 
@@ -70,7 +70,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 >**メモ：**
 >
 >- テンプレート化されたコンテンツを生成するには、ターミナルのコマンドラインで作業する必要があります。
->- レンダリングスクリプトを実行するには、Rubyがインストールされている必要があります。 必要なバージョンについては、[_jekyll/.ruby-version](_jekyll/.ruby-version)を参照してください。
+>- レンダリングスクリプトを実行するには、Rubyがインストールされている必要があります。 必要なバージョンについては、[_jekyll/.ruby-version] (_jekyll/.ruby-version)を参照してください。
 
 テンプレート化されたコンテンツのファイル構造については、次を参照してください。
 
@@ -83,8 +83,8 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 1. テキストエディターで、`_jekyll/_data` ディレクトリのデータファイルを開きます。 例：
 
-   - [Cloud CLI リファレンス ](help/templated/cloud-cli-ref.md): `_jekyll/_data/cloud-cli-ref.yaml`
-   - [ クラウドパッケージ ](help/templated/cloud-packages.md): `_jekyll/_data/cloud-packages.yaml`
+   - [Cloud CLI リファレンス &#x200B;](help/templated/cloud-cli-ref.md): `_jekyll/_data/cloud-cli-ref.yaml`
+   - [&#x200B; クラウドパッケージ &#x200B;](help/templated/cloud-packages.md): `_jekyll/_data/cloud-packages.yaml`
    - [ECE ツール参照](help/templated/ece-tools.md): `_jekyll/_data/ece-tools.yaml`
 
 2. 既存のYAML構造を使用して、エントリを作成します。
@@ -130,7 +130,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
    git push
    ```
 
-[ データファイル ](https://jekyllrb.com/docs/datafiles)、[液体フィルター](https://jekyllrb.com/docs/liquid/filters/)およびその他の機能について詳しくは、Jekyllのドキュメントを参照してください。
+[&#x200B; データファイル &#x200B;](https://jekyllrb.com/docs/datafiles)、[液体フィルター](https://jekyllrb.com/docs/liquid/filters/)およびその他の機能について詳しくは、Jekyllのドキュメントを参照してください。
 
 ## 使用可能なレイク タスク
 
