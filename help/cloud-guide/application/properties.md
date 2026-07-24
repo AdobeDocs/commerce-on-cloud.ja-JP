@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
 workflow-type: tm+mt
-source-wordcount: 855
+source-wordcount: 849
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 0%
 | [`crons`](crons-property.md) | スペックの更新とcron ジョブのスケジュール | — | いいえ |
 | [`dependencies`](#dependencies) | 追加の依存関係を有効にする | `php:composer/composer: '2.2.4'` | いいえ |
 | [`disk`](#disk) | 永続的なディスクサイズを定義 | `5120` | はい |
-| [`firewall`](firewall-property.md) | （スターターのみ）アウトバウンドトラフィックの制御 | — | いいえ |
 | [`hooks`](hooks-property.md) | ビルド、デプロイ、デプロイ後のフェーズのシェルコマンドをカスタマイズする | — | いいえ |
 | [`mounts`](#mounts) | パスの設定 | パス：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | いいえ |
 | [`name`](#name) | アプリケーション名の定義 | `mymagento` | はい |

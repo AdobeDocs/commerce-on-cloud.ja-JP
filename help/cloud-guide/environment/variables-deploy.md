@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c16f4ad68bb3d57f021c552f7aca2d2ee2e8c365
+source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
 workflow-type: tm+mt
-source-wordcount: 2798
+source-wordcount: 3031
 ht-degree: 0%
 
 ---
@@ -495,17 +495,21 @@ stage:
 ## `VALKEY_BACKEND`
 
 - **Default**—`Cm_Cache_Backend_Redis`
-- **バージョン** - Adobe Commerce 2.8.0以降
+- **バージョン** - Adobe Commerce 2.4.8以降
 
 `VALKEY_BACKEND`は、Valkey キャッシュのバックエンド モデル設定を指定します。
 
-Adobe Commerce バージョン 2.8.0以降には、次のバックエンドモデルが含まれています。
+Adobe Commerce バージョン 2.4.8以降には、次のバックエンドモデルが含まれています。
 
 - `Cm_Cache_Backend_Redis`
 - `\Magento\Framework\Cache\Backend\Redis`
 - `\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`
 
-次の例は、`VALKEY_BACKEND`を設定する方法を示しています。
+Adobe Commerce 2.4.9以降では、最新のSymfony Cache ベースのL2 キャッシュ実装を可能にする`symfony_l2` バックエンドモデルもサポートしています。
+
+### リモート同期キャッシュの設定
+
+Adobe Commerce 2.4.8の場合、次の例では、`VALKEY_BACKEND`をリモート同期キャッシュに設定する方法について説明します。
 
 ```yaml
 stage:
@@ -514,9 +518,23 @@ stage:
   VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
+Valkey バックエンドモデルとしてリモート同期キャッシュを指定すると、[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja)が有効になり、`ece-tools`はキャッシュ設定を自動的に生成します。 [設定ファイルの例](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example)を参照してください。 設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+
+### 最新のSymfony L2 キャッシュ実装の設定
+
+Adobe Commerce 2.4.9以降では、次の例では、最新のSymfony L2 キャッシュ実装に`VALKEY_BACKEND`を設定する方法について説明します。
+
+```yaml
+stage:
+  deploy:
+    VALKEY_BACKEND: symfony_l2
+```
+
+Valkey バックエンドモデルとして`symfony_l2`を指定すると、[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja){target="_blank"}が有効になり、`ece-tools`は、`default` フロントエンドと`stale_cache_enabled` フロントエンドを含むValkey サービス接続の詳細からL2 キャッシュ設定を自動的に生成します。 `CACHE_CONFIGURATION`の定義はオプションで、ローカルキャッシュディレクトリなどの特定のバックエンドオプションをカスタマイズするためにのみ必要です。 カスタマイズの例については、_Adobe Commerce Configuration Guide_&#x200B;の[Modern Symfony L2 cache implementation](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#modern-symfony-l2-cache-implementation){target="_blank"}および&#x200B;_Implementation Playbook_&#x200B;の[Configure Symfony L2 cache](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration#configure-symfony-l2-cache){target="_blank"}を参照してください。
+
 >[!NOTE]
 >
->Valkey バックエンドモデルとして`\Magento\Framework\Cache\Backend\RemoteSynchronizedCache`を指定して[L2 キャッシュ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja)を有効にすると、`ece-tools`はキャッシュ設定を自動的に生成します。 _Adobe Commerce設定ガイド_&#x200B;の[設定ファイル &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#configuration-example)の例を参照してください。 生成されたキャッシュ設定を上書きするには、[CACHE_CONFIGURATION](#cache_configuration) デプロイ変数を使用します。
+>Adobe Commerce 2.4.9には、キャッシュ・タグ・ストレージ、無効化、圧縮などのSymfony L2 キャッシュの機能強化が含まれており、ACP2E-5132 パッチの適用、ディスク I/Oの削減、古いキャッシュ・エントリの排除、メモリとネットワークのオーバーヘッドの削減が実現されています。 _Adobe Commerce Configuration Guide_&#x200B;の[Enhanced Symfony L2 cache performance and reliability](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/level-two-cache.html?lang=ja#enhanced-symfony-l2-cache-performance-and-reliability)を参照してください。
 
 ## `VALKEY_USE_SLAVE_CONNECTION`
 

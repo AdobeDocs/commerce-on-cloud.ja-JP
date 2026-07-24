@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: a7cd55b31bf909047e449e5f984fcb082706c2b9
+source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
 workflow-type: tm+mt
-source-wordcount: 2904
+source-wordcount: 2965
 ht-degree: 0%
 
 ---
@@ -44,7 +44,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.15 {#latest}
+## v1.1.16 {#latest}
+
+リリース日：2026年7月23日（PT）
+
+- ![fix icon](../../assets/fix.svg) **Symfony L2 キャッシュのパフォーマンスと信頼性の向上** - symfony_l2用のキャッシュタグストレージの最適化、TTL ベースの再生ロックによるキャッシュ無効化の改善、古いキャッシュエントリの排除を目的とした適切なL1 タグクリーンアップ、およびRedis/Valkey圧縮（compress_data）をデフォルトで有効にして、従来のキャッシュ実装との整合性を維持しながらメモリ消費ととトラフィックををを削減します。<!-- ACP2E-5132 -->
+
+## v1.1.15
 
 リリース日：2026年7月14日（PT）
 
@@ -185,8 +191,8 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 - **拡張QPT CLI ウィザード/出力** - QPT CLI ウィザード/出力に警告を追加しました。依存関係がある場合は、パッチの詳細と要件を確認してください。<!-- ACP2E-1963 -->
 - **Commerce 2.4.6のパッチを追加しました：**
-   - `regexp cache tag`検証を修正しました。<!-- MCLOUD-10226 -->
-   - 同じデプロイメント設定が読み込まれる回数を減らすことにより、パフォーマンスが向上しました。<!-- MCLOUD-10604 -->
+  - `regexp cache tag`検証を修正しました。<!-- MCLOUD-10226 -->
+  - 同じデプロイメント設定が読み込まれる回数を減らすことにより、パフォーマンスが向上しました。<!-- MCLOUD-10604 -->
 - **Commerce 2.3.7から2.4.6**&#x200B;へのパッチを追加しました。`catalog_product_entity_*` テーブルに対して、増分1ではなくランダム値による増分が発生する問題を修正しました。<!-- MCLOUD-10032 -->
 - **Commerce 2.4.0のパッチを2.4.6**&#x200B;に追加しました。管理者からJS/CSS キャッシュをフラッシュする際に発生した`The file can't be deleted. Warning!unlink: No such file or directory`というエラーを修正しました。<!-- MCLOUD-10279 -->
 
@@ -315,17 +321,17 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 リリース日：
 
 - **Adobe Commerce 2.3.0 ～ 2.3.4**&#x200B;のRedis パッチ – コミュニケーションを最適化し、パフォーマンスを向上
-   - RedisとAdobe Commerce間のネットワーク転送のサイズを小さくする
-   - Redisの読み込みと書き込み操作に関する競合条件の修正
-   - 保存時のエラーを処理するためのベース キャッシュ アダプターの書き換え
-   - Redis CPUの消費量を減らす<!--MCLOUD-6139-->
+  - RedisとAdobe Commerce間のネットワーク転送のサイズを小さくする
+  - Redisの読み込みと書き込み操作に関する競合条件の修正
+  - 保存時のエラーを処理するためのベース キャッシュ アダプターの書き換え
+  - Redis CPUの消費量を減らす<!--MCLOUD-6139-->
 
 - **Adobe Commerce 2.3.0 ～ 2.3.5**&#x200B;のRedis パッチ – パフォーマンスの向上とエラーの修正
-   - キャッシュロックの実装を修正して、無限ロックを防ぐ
-   - 現在のロック機構を改善する
-   - 署名済みロックを実装して、並列リクエストからのロック解除を防ぐ
-   - Redis書き込み操作で発生する次のエラーを修正します：`OOM command not allowed when used memory > maxmemory`
-   - 製品の更新中に実行される`cat_p` タグによるクリーンキャッシュの処理を修正<!--MCLOUD-6110-->
+  - キャッシュロックの実装を修正して、無限ロックを防ぐ
+  - 現在のロック機構を改善する
+  - 署名済みロックを実装して、並列リクエストからのロック解除を防ぐ
+  - Redis書き込み操作で発生する次のエラーを修正します：`OOM command not allowed when used memory > maxmemory`
+  - 製品の更新中に実行される`cat_p` タグによるクリーンキャッシュの処理を修正<!--MCLOUD-6110-->
 
 - このモジュールを含まないAdobe Commerce v2.2.6または2.3.5を使用して、必要な`amzn/amazon-pay-module` パッチをAdobe Commerce クラウドインフラストラクチャプロジェクトに適用する際にエラーが発生する問題を修正しました。 モジュールがインストールされていない場合、パッチ適用プロセスは`amzn/amazon-pay-module` パッチをスキップします。<!--MCLOUD-6588-->
 
@@ -369,9 +375,9 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **magento/magento-cloud-patches**&#x200B;の互換性アップデート
 
-   - Adobe Commerce 2.4以降のリリースとの互換性を保つため、`composer.json` ファイルの`symfony`および`semver` バージョンの制約を更新しました。<!--MAGECLOUD-5127-->
+  - Adobe Commerce 2.4以降のリリースとの互換性を保つため、`composer.json` ファイルの`symfony`および`semver` バージョンの制約を更新しました。<!--MAGECLOUD-5127-->
 
-   - 2002.0.22以降の2002.0.x リリースと互換性を保つため、`composer.json`の制約を更新しました。`ece-tools`
+  - 2002.0.22以降の2002.0.x リリースと互換性を保つため、`composer.json`の制約を更新しました。`ece-tools`
 
 - **PayPal Express Checkout** - 2020年2月12日に公開されたこのパッチは、PayPal Express Checkoutでの注文に影響する問題を解決します。注文の配送先住所で、配送ページのドロップダウンメニューから選択するのではなく、テキストフィールドに手動で入力された国の地域を指定します。 パッチの完全な説明については、パッチのダウンロードページを参照してください。
 
@@ -389,9 +395,9 @@ magento/magento-cloud-patches v1.0.1 リリースのソフトウェアダウン�
 
 - **cron デッドロックを修正し、cron ロックを改善**—
 
-   - `cron_schedule` テーブルのステータス値が正しくないため、一部のcron ジョブが実行されない問題を修正しました。 ここでは、Adobe Commerce ロックフレームワークを使用して、`cron_schedule` テーブルを使用する代わりに、cron ジョブのステータスを確認および更新します。 エラーステータスで終了したCron ジョブは、24時間待つのではなく、次のcron実行時に再試行されます。
+  - `cron_schedule` テーブルのステータス値が正しくないため、一部のcron ジョブが実行されない問題を修正しました。 ここでは、Adobe Commerce ロックフレームワークを使用して、`cron_schedule` テーブルを使用する代わりに、cron ジョブのステータスを確認および更新します。 エラーステータスで終了したCron ジョブは、24時間待つのではなく、次のcron実行時に再試行されます。
 
-   - `cron_schedule` テーブルのデータの更新中にデッドロックを回避するために、_再試行_&#x200B;操作を追加します。
+  - `cron_schedule` テーブルのデータの更新中にデッドロックを回避するために、_再試行_&#x200B;操作を追加します。
 
 - **Magento Open Source 2.x**&#x200B;のすべての利用可能なパッチを含めるように`magento/magento-cloud-patches`を更新しました – magento/magento-cloud-patches パッケージを更新して、ソフトウェアのダウンロードページで利用可能なすべてのMagento Open Source 2.x パッチを含めました。 以前にAdobe Commerce on cloud infrastructure プロジェクトにMagento Open Sourceのパッチをコピーした場合は、それらを削除して競合を回避します。<!--MAGECLOUD-4606-->
 

@@ -24,9 +24,9 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
 workflow-type: tm+mt
-source-wordcount: 807
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Adobe Commerce オンクラウドインフラストラクチャには、スタ�
 |          | スターター | Pro |
 | -------- | --------------------| ------------------ |
 | 主な機能 | <ul><li>[すべてのAdobe Commerce機能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ja)</li><li>PayPal オンボーディングツール</li><li>[Commerce レポート &#x200B;](https://business.adobe.com/jp/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[すべてのAdobe Commerce機能](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=ja)</li><li>PayPal オンボーディングツール</li><li>[Commerce レポート &#x200B;](https://business.adobe.com/jp/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[B2B モジュール &#x200B;](https://business.adobe.com/jp/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
-| インフラストラクチャとデプロイメント | <ul><li>無制限のユーザーを持つ継続的なクラウド統合ツール</li><li>Fastlyのコンテンツ配信ネットワーク（CDN）、画像最適化（IO）を活用し、余裕のある帯域幅でセキュリティを強化。 Web Application Firewall （WAF）サービスは、本番環境でのみ利用できます。</li><li>[New Relic](../monitor/new-relic-service.md) APM （Performance Monitoring）、3つのブランチ：`master`および任意の2つ<br>Adobe Commerce用に最適化されたPlatform as a Service （PaaS）の本番環境、ステージング環境、開発環境（合計4つのアクティブ環境）</li><li>出力フィルタリング（アウトバウンドファイアウォール）</li></ul> | <ul><li>無制限のユーザーを持つ継続的なクラウド統合ツール</li><li>Fastlyのコンテンツ配信ネットワーク（CDN）、画像最適化（IO）を活用し、余裕のある帯域幅でセキュリティを強化。 Web Application Firewall （WAF）サービスは、本番環境でのみ利用できます。</li><li>ステージングと実稼動環境の[New Relic](../monitor/new-relic-service.md) Infrastructure on Production + APM （Performance Monitoring）。 Adobe Commerceの[管理済みアラートポリシー](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)は、サイトパフォーマンスに影響を与えるアプリケーションとインフラストラクチャの問題をプロアクティブに通知するためのモニタリングのベストプラクティスを実装します。</li><li>Adobe Commerce用に最適化された[Integration development](pro-architecture.md#integration-environment)環境（合計アクティブ環境2つ）に基づくPaaS （Platform as a Service） ベース</li><li>IaaS （Infrastructure as a Service）：ステージング環境と本番環境用の専用仮想インフラストラクチャ</li></ul> |
+| インフラストラクチャとデプロイメント | <ul><li>無制限のユーザーを持つ継続的なクラウド統合ツール</li><li>Fastlyのコンテンツ配信ネットワーク（CDN）、画像最適化（IO）を活用し、余裕のある帯域幅でセキュリティを強化。 Web Application Firewall （WAF）サービスは、本番環境でのみ利用できます。</li><li>[New Relic](../monitor/new-relic-service.md) APM （Performance Monitoring）、3つのブランチ：`master`および任意の2つ<br>Adobe Commerce用に最適化されたPlatform as a Service （PaaS）の本番環境、ステージング環境、開発環境（合計4つのアクティブ環境）</li></ul> | <ul><li>無制限のユーザーを持つ継続的なクラウド統合ツール</li><li>Fastlyのコンテンツ配信ネットワーク（CDN）、画像最適化（IO）を活用し、余裕のある帯域幅でセキュリティを強化。 Web Application Firewall （WAF）サービスは、本番環境でのみ利用できます。</li><li>ステージングと実稼動環境の[New Relic](../monitor/new-relic-service.md) Infrastructure on Production + APM （Performance Monitoring）。 Adobe Commerceの[管理済みアラートポリシー](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)は、サイトパフォーマンスに影響を与えるアプリケーションとインフラストラクチャの問題をプロアクティブに通知するためのモニタリングのベストプラクティスを実装します。</li><li>Adobe Commerce用に最適化された[Integration development](pro-architecture.md#integration-environment)環境（合計アクティブ環境2つ）に基づくPaaS （Platform as a Service） ベース</li><li>IaaS （Infrastructure as a Service）：ステージング環境と本番環境用の専用仮想インフラストラクチャ</li></ul> |
 | 可用性の高いインフラストラクチャ | | エンタープライズグレードの信頼性と可用性を提供するために、基盤となるInfrastructure as a Service （IaaS）で3台のサーバーをセットアップした[高可用性アーキテクチャ &#x200B;](pro-architecture.md#redundant-hardware) |
 | 専用ハードウェア | | 基盤となるIaaS （Infrastructure as a Service）内の分離された専用ハードウェアにより、より高レベルの信頼性と可用性を提供します |
 | 年中無休のメールサポート | コアアプリケーションとクラウドインフラストラクチャの監視と電子メールのサポートを24時間年中無休で提供 | コアアプリケーションとクラウドインフラストラクチャの監視と電子メールのサポートを24時間年中無休で提供 |
@@ -67,7 +67,7 @@ Adobe Commerce オンクラウドインフラストラクチャには、スタ�
 
 - **統合** – 統合環境は、データベース、web サーバー、キャッシュ、一部のサービス、環境変数、設定を含むテスト可能な環境を提供します。 ステージング環境にマージする前に、コードを開発、デプロイ、テストできます。
 
-   - _非アクティブ_ - `integration`環境に基づいて非アクティブな分岐を無制限に設定できますが、アクティブな分岐は1つだけです（`integration`を含まない）。
+  - _非アクティブ_ - `integration`環境に基づいて非アクティブな分岐を無制限に設定できますが、アクティブな分岐は1つだけです（`integration`を含まない）。
 
 - **ステージング** - ステージング環境はプリプロダクションテスト用で、データベース、web サーバー、キャッシュ、サードパーティサービス、環境変数、設定、およびFastlyなどのサービスが含まれます。
 
