@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -11,11 +11,11 @@ ht-degree: 0%
 
 ## フックの機能
 
-- **ステージングされた画像ファイル（**）を自動検出（PNG、JPEG、GIF、SVG）
-- **`image_optim`**&#x200B;を実行してラスター画像（PNG、JPEG、GIF）を圧縮および最適化する
+- **ステージングされた画像ファイル （`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`）を自動的に**&#x200B;検出
+- **`image_optim`**&#x200B;を実行して、ラスター画像（`.png`、`.jpeg`、`.jpg`、`.gif`）を圧縮および最適化します
 - **最適化された画像**&#x200B;を自動的に再ステージング
 - **コミットされたすべてのラスター画像**&#x200B;が適切に最適化されていることを確認します
-- **ステージング済みSVG**&#x200B;をサイズ制限に照らし合わせて確認し、SVGが制限を超えた場合はコミットを中止します
+- **ステージング済みSVG**&#x200B;をサイズ制限に照らし合わせて確認し、サイズが大きすぎるSVGが`help/`内の任意のファイルから参照されている場合は、コミットを中止します（それ以外の場合は警告します）
 
 ## Adobe Workfrontの利点
 
@@ -78,9 +78,18 @@ chmod +x .githooks/*
 
 ```bash
 Found 1 staged image(s). Running optimization...
-Optimizing: path/to/your/image.png
-Re-staged optimized image: path/to/your/image.png
-Image optimization complete!
+
+Checking images ...
+path/to/your/image.png    100.00%
+Pre-commit image checks complete!
+```
+
+### ユニットテスト
+
+このフックのSVG リンク検出ロジック（オーバーサイズのSVGが`help/`から参照されているかどうかを判断する）は、Rubyのバンドルされた`minitest`のみを必要とするユニットテストでカバーされています。宝石や`_jekyll`の設定は必要ありません。
+
+```bash
+ruby .githooks/test/svg_link_checker_test.rb
 ```
 
 ## 画像ガイドライン
@@ -88,16 +97,18 @@ Image optimization complete!
 - **PNG**: スクリーンショットとUI要素に使用（自動的に最適化されます）
 - **JPEG**：写真用に使用（自動最適化されます）
 - **GIF**: アニメーションに使用（自動的に最適化されます）
-- **SVG**: アイコンとシンプルなグラフィックに使用します（最適化されていませんが、サイズ制限に照らし合わせてチェックされます。制限を超えるとコミットに失敗します）
+- **SVG**: アイコンとシンプルなグラフィックに使用します（最適化されていませんが、サイズ制限に照らし合わせてチェックされます。サイズが大きすぎるSVGが`help/`からリンクされている場合にのみ、コミットが失敗します）
 
-プリコミットフックは、コミット時にPNG、JPEG、GIFの画像を自動的に最適化し、ステージングされたSVGをサイズ制限（140 KB）に照らし合わせてチェックします。
+プリコミットフックは、コミット時に`.png`、`.jpeg`/`.jpg`および`.gif`画像を自動的に最適化し、ステージングされたSVGをサイズ制限（140 KB）に照らし合わせてチェックします。
 
-ステージングされたSVGが制限を超えた場合、コミットは中止されます。 代わりにPNGに変換します。
+ステージングされたSVGが制限を超え、`help/`のファイルから参照されている場合、コミットは中止されます。 サイズが大きすぎるSVGが`help/`内のどこにも参照されていない場合、フックは警告のみを出力し、コミットは続行されます。 代わりに、特大のSVGをPNGに変換します。
 
 ```bash
 cd _jekyll
-bundle exec rake images:svg_to_png path=path/to/image.svg
+bundle exec rake images:svg_to_png path=../help/assets/image.svg
 ```
+
+パスは`_jekyll`からの相対パスなので、`help/`の下の画像は`../help/...`として参照されます。
 
 ## 手作業による最適化
 
@@ -128,13 +139,13 @@ bundle exec rake images:optimize path=../path/to/images
 ### 最適化の失敗
 
 - `bundle install`が`_jekyll` ディレクトリで実行されたことを確認します
-- `adobe-comdox-exl-rake-tasks` gemがインストールされていることを確認します（`image_optim`を提供）
+- `adobe-comdox-exl-rake-tasks` gemがインストールされていることを確認します（フックが実行する`images:optimize`、`images:check_size`、`images:svg_to_png` レイク タスクを提供します）
 - `.image_optim.yml`設定ファイルを確認します
 
 ### SVGがサイズ制限を超えています
 
-- ステージングされたSVGが140 KBを超えると、コミットは中止されます
-- SVGをPNGに変換：`cd _jekyll && bundle exec rake images:svg_to_png path=path/to/image.svg`
+- ステージングされたSVGが140 KBを超え、`help/`のファイルから参照されている場合、コミットは中止されます（そうでない場合、フックは警告を発し、コミットが続行されます）
+- SVGをPNGに変換：`cd _jekyll && bundle exec rake images:svg_to_png path=../help/assets/image.svg` （パスは`_jekyll`に対する相対パスであるため、`help/`の下の画像は`../help/...`として参照されます）
 - 次に、SVGの代わりにPNGをステージングし、再度コミットします
 
 ### パフォーマンスの問題
@@ -149,14 +160,14 @@ bundle exec rake images:optimize path=../path/to/images
 3. **最適化**：各ステージングされたPNG、JPEG、またはGIFで`image_optim`を実行します
 4. **再ステージング**：最適化された画像をステージング領域に自動的に追加します
 5. **SVG サイズ チェック**：各ステージング済みSVGを140 KBのサイズ制限と比較します
-6. **コミットの続行**：最適化が成功し、SVGがサイズ制限を超えない場合、コミットは通常どおりに続行されます。そうでない場合、コミットは中止されます
+6. **コミットの続行**：最適化が成功し、`help/`からオーバーサイズのSVGが参照されていない場合、コミットは正常に続行されます。そうでない場合、コミットは中止されます（オーバーサイズのSVGは`help/`から参照されていないため、警告がトリガーされます）
 
 ## サポートされる画像形式
 
 - **PNG** （`.png`） – 可逆圧縮と非可逆圧縮
 - **JPEG** （`.jpg`, `.jpeg`） – メタデータクリーンアップによる非可逆圧縮
 - **GIF** （`.gif`） – アニメーションと静的最適化
-- **SVG** （`.svg`） – 最適化されていませんが（画質を保持するために現状のままコミットします）、140 KBのサイズ制限に照らし合わせてチェックします。制限を超えると、コミットは中止されます
+- **SVG** （`.svg`） – 最適化されていませんが（品質を保持するために現状のままコミットします）、140 KBのサイズ制限に対してチェックされます。制限を超え、SVGが`help/`から参照されている場合は、コミットは中止されます（そうでない場合は、フックのみが警告します）
 
 ## ベストプラクティス
 

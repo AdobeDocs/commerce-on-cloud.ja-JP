@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
+source-git-commit: 3d3df68ab5e1781974348190b30372c0b8169d1d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -157,11 +157,11 @@ bundle exec rake --tasks
 
 ### フックの機能
 
-- ステージングされた画像ファイルを自動検出（PNG、JPEG、GIF、SVG）
-- `image_optim`を実行してラスター画像（PNG、JPEG、GIF）を圧縮および最適化
+- ステージングされた画像ファイルを自動的に検出（`.png`、`.jpeg`、`.jpg`、`.gif`、`.svg`）
+- `image_optim`を実行してラスター画像（`.png`、`.jpeg`、`.jpg`、`.gif`）を圧縮および最適化します
 - 最適化された画像を自動的にリステージ
 - コミットされたすべてのラスター画像が適切に最適化されていることを確認します
-- ステージングされたSVGをサイズ制限に照らし合わせてチェックし、SVGが制限を超えた場合にコミットを中止します
+- ステージングされたSVGをサイズ制限に照らし合わせてチェックし、サイズが大きすぎるSVGが`help/`から参照されている場合はコミットを中止します（そうでない場合は警告するだけです）
 
 ### Adobe Workfrontの利点
 
