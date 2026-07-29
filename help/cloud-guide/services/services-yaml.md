@@ -4,19 +4,13 @@ description: Adobe Commerce クラウドインフラストラクチャで使用�
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
 workflow-type: tm+mt
-source-wordcount: 1136
+source-wordcount: 1186
 ht-degree: 0%
 
 ---
@@ -27,9 +21,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`.magento/services.yaml` ファイルは、プロジェクトの`.magento` ディレクトリ内でローカルに管理されます。 この設定は、統合環境で必要なサービスバージョンを定義するためのビルドプロセス中にのみアクセスされ、デプロイメントが完了すると削除されるので、サーバー上で見つかりません。
+>`.magento/services.yaml` ファイルは、プロジェクトの`.magento` ディレクトリ内でローカルに管理されます。 デプロイメント時に、Adobe Commerce オンクラウドインフラストラクチャは、この設定を使用して、ターゲット環境でサポートされているサービスをプロビジョニングします。 デプロイ後に`.magento` ディレクトリがリモート サーバーから削除されるので、デプロイされた環境に`services.yaml`が見つかりません。
 
 デプロイ スクリプトは、`.magento` ディレクトリの設定ファイルを使用して、設定されたサービスを使用して環境をプロビジョニングします。 サービスは、`.magento.app.yaml` ファイルの[`relationships`](../application/properties.md#relationships) プロパティに含まれている場合、アプリケーションで利用できるようになります。 `services.yaml` ファイルには、_type_&#x200B;と&#x200B;_disk_&#x200B;の値が含まれています。 サービスの種類は、サービス _name_&#x200B;および&#x200B;_version_&#x200B;を定義します。
+
+`.magento/services.yaml`のサービス設定は、`composer.json`で定義され、`composer.lock`でロックされているPHPおよびComposer パッケージの依存関係とは別になっています。
+
+## サービスの変更が適用される場所
 
 サービス設定を変更すると、更新されたサービスを使用して環境をプロビジョニングするデプロイメントが発生します。これは、次の環境に影響します。
 
@@ -40,36 +38,41 @@ ht-degree: 0%
 
 ## デフォルトサービスとサポート対象サービス
 
-クラウドインフラストラクチャは、次のサービスをサポートおよびデプロイします。
+Adobe Commerce on cloud infrastructureでは、プロジェクトに設定できる次のサービスがサポートされています。
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
+- [バルキー](valkey.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->例えば、使用可能なバージョン [&#128279;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)間でRabbitMQを順次 アップグレードする必要があります。例えば、3.9から4.1に直接アップグレードすることはできません
+>例えば、使用可能なバージョン ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)間でRabbitMQを順次[ アップグレードする必要があります。例えば、3.9から4.1に直接アップグレードすることはできません
 >
 >新しいバージョンのRabbitMQにアップグレードした後、完全なデプロイメントをトリガーして、カスタムメッセージキューがRabbitMQで再作成されるようにします。
 
-現在の[&#x200B; デフォルト `services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)では、デフォルトバージョンとディスク値を表示できます。 次のサンプルは、`services.yaml`設定ファイルで定義された`mysql`、`redis`、`opensearch`または`elasticsearch`、`rabbitmq`および`activemq-artemis` サービスを示しています。
+## 設定済みのサービスとバージョンの表示
+
+現在のテンプレート [`services.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
+
+次の例は、`services.yaml`設定ファイルのサービス定義を示しています。
 
 ```yaml
 mysql:
-    type: mysql:10.4
+    type: mysql:11.8
     disk: 5120
 
-redis:
-    type: redis:6.2
+cache:
+    type: valkey:9.0
 
 opensearch:
-    type: opensearch:2  # minor version not required; uses latest
+    type: opensearch:3  # minor version not required; uses latest
     disk: 1024
 
 rabbitmq:
-    type: rabbitmq:3.9
+    type: rabbitmq:4.3
     disk: 1024
 
 activemq-artemis:
@@ -142,9 +145,9 @@ mysql:
 
 すべてのサービス関係の設定データは、[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)環境変数から取得できます。 設定データには、サービス名、タイプ、バージョンと、ポート番号やログイン資格情報などの必要な接続の詳細が含まれます。
 
-**ローカル環境の関係を確認するには**:
+**ローカル開発環境からのリレーションシップを検証するには**:
 
-1. ローカル環境で、アクティブな環境の関係を表示します。
+1. ローカル開発環境から、アクティブな環境のリレーションシップを表示します。
 
    ```bash
    magento-cloud relationships
@@ -160,7 +163,7 @@ mysql:
    ...
            type: 'redis:7.0'
            port: 6379
-   elasticsearch:
+   opensearch:
        -
    ...
            type: 'opensearch:2'
@@ -168,7 +171,7 @@ mysql:
    database:
        -
    ...
-           type: 'mysql:10.6'
+           type: 'mysql:11.8'
            port: 3306
    ```
 
@@ -192,7 +195,7 @@ mysql:
 
 ## サービスバージョン
 
-Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
+Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)を参照してください。
 
 ### ソフトウェアのEOL チェック
 
@@ -201,7 +204,7 @@ Adobe Commerce on cloud infrastructureのサービスバージョンと互換性
 - サービスのバージョンがEOL日から3か月以内の場合、デプロイログに通知が表示されます。
 - EOL日が過去の場合は、警告通知が表示されます。
 
-ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル &#x200B;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
+ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル ](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
 
 ### OpenSearchに移行
 
@@ -213,7 +216,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 インストール済みのサービスのバージョンは、Cloud環境にデプロイされているAdobe Commerceのバージョンと互換性を保つためにアップグレードできます。
 
-インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [&#x200B; ダウングレードサービスバージョン &#x200B;](#downgrade-version)を参照してください。
+インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [ ダウングレードサービスバージョン ](#downgrade-version)を参照してください。
 
 ### インストール済みサービスのバージョンのアップグレード
 
@@ -225,7 +228,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
    ```yaml
    mysql:
-       type: mysql:10.3
+       type: mysql:11.8
        disk: 2048
    ```
 
@@ -233,7 +236,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
    ```yaml
    mysql:
-       type: mysql:10.4
+       type: mysql:12.3
        disk: 5120
    ```
 
@@ -244,7 +247,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
    ```
 
    ```bash
-   git commit -m "Upgrade MySQL from MariaDB 10.3 to 10.4."
+   git commit -m "Upgrade MySQL from MariaDB 11.8 to 12.3."
    ```
 
    ```bash
