@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
 workflow-type: tm+mt
-source-wordcount: 1136
+source-wordcount: 1186
 ht-degree: 0%
 
 ---
@@ -27,9 +27,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`.magento/services.yaml` ファイルは、プロジェクトの`.magento` ディレクトリ内でローカルに管理されます。 この設定は、統合環境で必要なサービスバージョンを定義するためのビルドプロセス中にのみアクセスされ、デプロイメントが完了すると削除されるので、サーバー上で見つかりません。
+>`.magento/services.yaml` ファイルは、プロジェクトの`.magento` ディレクトリ内でローカルに管理されます。 デプロイメント時に、Adobe Commerce オンクラウドインフラストラクチャは、この設定を使用して、ターゲット環境でサポートされているサービスをプロビジョニングします。 デプロイ後に`.magento` ディレクトリがリモート サーバーから削除されるので、デプロイされた環境に`services.yaml`が見つかりません。
 
 デプロイ スクリプトは、`.magento` ディレクトリの設定ファイルを使用して、設定されたサービスを使用して環境をプロビジョニングします。 サービスは、`.magento.app.yaml` ファイルの[`relationships`](../application/properties.md#relationships) プロパティに含まれている場合、アプリケーションで利用できるようになります。 `services.yaml` ファイルには、_type_&#x200B;と&#x200B;_disk_&#x200B;の値が含まれています。 サービスの種類は、サービス _name_&#x200B;および&#x200B;_version_&#x200B;を定義します。
+
+`.magento/services.yaml`のサービス設定は、`composer.json`で定義され、`composer.lock`でロックされているPHPおよびComposer パッケージの依存関係とは別になっています。
+
+## サービスの変更が適用される場所
 
 サービス設定を変更すると、更新されたサービスを使用して環境をプロビジョニングするデプロイメントが発生します。これは、次の環境に影響します。
 
@@ -40,10 +44,11 @@ ht-degree: 0%
 
 ## デフォルトサービスとサポート対象サービス
 
-クラウドインフラストラクチャは、次のサービスをサポートおよびデプロイします。
+Adobe Commerce on cloud infrastructureでは、プロジェクトに設定できる次のサービスがサポートされています。
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
+- [バルキー](valkey.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
@@ -54,22 +59,26 @@ ht-degree: 0%
 >
 >新しいバージョンのRabbitMQにアップグレードした後、完全なデプロイメントをトリガーして、カスタムメッセージキューがRabbitMQで再作成されるようにします。
 
-現在の[&#x200B; デフォルト `services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)では、デフォルトバージョンとディスク値を表示できます。 次のサンプルは、`services.yaml`設定ファイルで定義された`mysql`、`redis`、`opensearch`または`elasticsearch`、`rabbitmq`および`activemq-artemis` サービスを示しています。
+## 設定済みのサービスとバージョンの表示
+
+現在のテンプレート [`services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
+
+次の例は、`services.yaml`設定ファイルのサービス定義を示しています。
 
 ```yaml
 mysql:
-    type: mysql:10.4
+    type: mysql:11.8
     disk: 5120
 
-redis:
-    type: redis:6.2
+cache:
+    type: valkey:9.0
 
 opensearch:
-    type: opensearch:2  # minor version not required; uses latest
+    type: opensearch:3  # minor version not required; uses latest
     disk: 1024
 
 rabbitmq:
-    type: rabbitmq:3.9
+    type: rabbitmq:4.3
     disk: 1024
 
 activemq-artemis:
@@ -142,9 +151,9 @@ mysql:
 
 すべてのサービス関係の設定データは、[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)環境変数から取得できます。 設定データには、サービス名、タイプ、バージョンと、ポート番号やログイン資格情報などの必要な接続の詳細が含まれます。
 
-**ローカル環境の関係を確認するには**:
+**ローカル開発環境からのリレーションシップを検証するには**:
 
-1. ローカル環境で、アクティブな環境の関係を表示します。
+1. ローカル開発環境から、アクティブな環境のリレーションシップを表示します。
 
    ```bash
    magento-cloud relationships
@@ -160,7 +169,7 @@ mysql:
    ...
            type: 'redis:7.0'
            port: 6379
-   elasticsearch:
+   opensearch:
        -
    ...
            type: 'opensearch:2'
@@ -168,7 +177,7 @@ mysql:
    database:
        -
    ...
-           type: 'mysql:10.6'
+           type: 'mysql:11.8'
            port: 3306
    ```
 
@@ -225,7 +234,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
    ```yaml
    mysql:
-       type: mysql:10.3
+       type: mysql:11.8
        disk: 2048
    ```
 
@@ -233,7 +242,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
    ```yaml
    mysql:
-       type: mysql:10.4
+       type: mysql:12.3
        disk: 5120
    ```
 
@@ -244,7 +253,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
    ```
 
    ```bash
-   git commit -m "Upgrade MySQL from MariaDB 10.3 to 10.4."
+   git commit -m "Upgrade MySQL from MariaDB 11.8 to 12.3."
    ```
 
    ```bash
