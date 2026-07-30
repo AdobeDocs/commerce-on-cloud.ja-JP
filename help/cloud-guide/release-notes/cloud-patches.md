@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
+source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
 workflow-type: tm+mt
-source-wordcount: 2965
+source-wordcount: 3019
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.16 {#latest}
+## v1.1.17 {#latest}
+
+リリース日：2026年7月29日（PT）
+
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **最適化されたSymfony L2 キャッシュのパフォーマンス、信頼性、およびタグ管理** - キャッシュのスケーラビリティの向上、不要なファイルシステム I/Oの削減、キャッシュの一貫性の向上、古いタグメンバーシップの解決、冗長なリモート書き込み、およびL1 キャッシュの削除のクリーンアップ。<!-- ACP2E-5132 -->
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **セキュリティの機能強化** - 2026年7月の分離セキュリティパッチの互換性が向上しました。<!-- AC-17674 -->
+
+## v1.1.16
 
 リリース日：2026年7月23日（PT）
 
