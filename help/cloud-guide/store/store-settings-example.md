@@ -14,7 +14,7 @@ ht-degree: 0%
 
 この例では、構成管理を使用して、すべての環境でストア設定の一貫性を維持する方法を示します。
 
-この例では、[ ストア設定](store-settings.md)で定義されている次の手順を使用します。
+この例では、[&#x200B; ストア設定](store-settings.md)で定義されている次の手順を使用します。
 
 1. 統合環境ストア管理者に設定を入力します。
 1. `config.php` ファイルを作成し、ローカル ワークステーションに転送します。
@@ -39,12 +39,12 @@ _静的ファイル最適化_&#x200B;とは、JavaScriptとカスケーディン
 
 これらの設定管理タスクを完了するには、次の手順を実行する必要があります。
 
-* [環境「管理者」 ](../project/user-access.md)権限を持つプロジェクトリーダーの役割
+* [環境「管理者」 &#x200B;](../project/user-access.md)権限を持つプロジェクトリーダーの役割
 * 統合、ステージング、実稼動環境の管理者URLと資格情報
 
 ## Commerce Adminの設定
 
-統合環境では、管理者にログインして、ストア、web サイト、モジュールまたは拡張機能、静的ファイルの最適化、静的コンテンツ展開に関連するシステム値のシステム設定設定を変更できます。 [設定データ ](store-settings.md#scd-performance)を参照してください。
+統合環境では、管理者にログインして、ストア、web サイト、モジュールまたは拡張機能、静的ファイルの最適化、静的コンテンツ展開に関連するシステム値のシステム設定設定を変更できます。 [設定データ &#x200B;](store-settings.md#scd-performance)を参照してください。
 
 **ロケールと静的ファイルの最適化設定を変更するには**:
 
@@ -53,10 +53,10 @@ _静的ファイル最適化_&#x200B;とは、JavaScriptとカスケーディン
 1. ページナビゲーションで、**ロケールオプション**&#x200B;を展開します。
 1. **ロケール** リストから、ロケールを変更します。 後で変更し直すことができます。
 
-   ![ ロケールの変更](../../assets/locale-options.png)
+   ![&#x200B; ロケールの変更](../../assets/locale-options.png)
 
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[ キャッシュをフラッシュします](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュします](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 1. Adminからログアウトします。
 
 ## 値をエクスポートし、config.phpをローカルシステムに転送する
@@ -120,7 +120,7 @@ _静的ファイル最適化_&#x200B;とは、JavaScriptとカスケーディン
 git add app/etc/config.php && git commit -m "Add system-specific configuration" && git push origin master
 ```
 
-ステージングおよび実稼動環境へのコードのデプロイメントを完了します。 スターターの場合は、`staging`および`master`分岐にプッシュします。 デプロイメントコマンドについて詳しくは、[ ストアのデプロイ ](../deploy/staging-production.md)を参照してください。
+ステージングおよび実稼動環境へのコードのデプロイメントを完了します。 スターターの場合は、`staging`および`master`分岐にプッシュします。 デプロイメントコマンドについて詳しくは、[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)を参照してください。
 
 すべての環境でデプロイメントが完了するのを待ちます。
 
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 右側のペインで、**JavaScript Settings**&#x200B;を展開します。
 1. **JavaScript ファイルの結合** リストから、**はい**&#x200B;をクリックします。
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[ キャッシュをフラッシュします](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュします](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
 1. Adminからログアウトします。
 
 dump コマンドを再度実行すると、新しい設定がファイルに追加されます。
