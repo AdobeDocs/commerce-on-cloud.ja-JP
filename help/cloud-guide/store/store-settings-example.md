@@ -56,7 +56,7 @@ _静的ファイル最適化_&#x200B;とは、JavaScriptとカスケーディン
    ![&#x200B; ロケールの変更](../../assets/locale-options.png)
 
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュします](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュします](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management)。
 1. Adminからログアウトします。
 
 ## 値をエクスポートし、config.phpをローカルシステムに転送する
@@ -159,7 +159,7 @@ git add app/etc/config.php && git commit -m "Add system-specific configuration" 
 1. 右側のペインで、**JavaScript Settings**&#x200B;を展開します。
 1. **JavaScript ファイルの結合** リストから、**はい**&#x200B;をクリックします。
 1. 「**設定を保存**」をクリックします。
-1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュします](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management)。
+1. プロンプトが表示されたら、[&#x200B; キャッシュをフラッシュします](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/cache-management)。
 1. Adminからログアウトします。
 
 dump コマンドを再度実行すると、新しい設定がファイルに追加されます。
