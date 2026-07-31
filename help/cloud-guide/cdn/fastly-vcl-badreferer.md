@@ -4,17 +4,12 @@ description: FastlyEdgeディクショナリとカスタム VCL スニペット�
 feature: Cloud, Configuration, Security
 exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
 TQID: https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+last-update: 2025-01-29
+source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
 workflow-type: tm+mt
 source-wordcount: 725
 ht-degree: 0%
@@ -69,7 +64,7 @@ Edge ディクショナリは、VCL スニペット処理中にVCL関数にア�
 
 1. ページ上部の通知に従ってキャッシュを更新します。
 
-Edge ディクショナリについて詳しくは、Fastly ドキュメントの[Edge ディクショナリの作成と使用](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api)および[&#x200B; カスタム VCL スニペット &#x200B;](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api#custom-vcl-examples)を参照してください。
+Edge ディクショナリについて詳しくは、Fastly ドキュメントの[Edge ディクショナリの作成と使用](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api)および[ カスタム VCL スニペット ](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api#custom-vcl-examples)を参照してください。
 
 ## リファラースパムをブロックするためのカスタム VCL スニペットの作成
 
@@ -89,7 +84,7 @@ Edge ディクショナリについて詳しくは、Fastly ドキュメント�
 
 - `name` — VCL スニペットの名前。 この例では、`block_bad_referrer`を使用しました。
 
-- `dynamic` – 値0は、Fastly設定のバージョン管理されたVCLにアップロードする[通常のスニペット &#x200B;](https://docs.fastly.com/en/guides/using-regular-vcl-snippets)を示します。
+- `dynamic` – 値0は、Fastly設定のバージョン管理されたVCLにアップロードする[通常のスニペット ](https://docs.fastly.com/en/guides/using-regular-vcl-snippets)を示します。
 
 - `priority` — VCL スニペットが実行されるタイミングを決定します。 このスニペットコードを実行する優先度は`5`です。このスニペットコードを実行すると、デフォルトのMagento VCL スニペット （`magentomodule_*`）のいずれかが優先度50に割り当てられます。 スニペットを実行するタイミングに応じて、各カスタムスニペットの優先度を50より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
 
@@ -101,7 +96,7 @@ Edge ディクショナリについて詳しくは、Fastly ドキュメント�
 
 - [管理者](#add-the-custom-vcl-snippet)からカスタム VCL スニペットを追加します。 管理者にアクセスできる場合は、この方法をお勧めします。 （[Fastly バージョン 1.2.58](fastly-configuration.md#upgrade)以降が必要です）
 
-- JSON コードの例をファイル （例：`allowlist.json`）に保存し、Fastly API[&#128279;](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)を使用して アップロードします。 管理者にアクセスできない場合は、この方法を使用します。
+- JSON コードの例をファイル （例：`allowlist.json`）に保存し、Fastly API](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api)を使用して[ アップロードします。 管理者にアクセスできない場合は、この方法を使用します。
 
 ## カスタム VCL スニペットの追加
 
@@ -134,7 +129,7 @@ Edge ディクショナリについて詳しくは、Fastly ドキュメント�
 
 1. 「**作成**」をクリックします。
 
-   ![&#x200B; カスタムリファラーブロック VCL スニペットの作成](/help/assets/cdn/fastly-create-referrer-block-snippet.png)
+   ![ カスタムリファラーブロック VCL スニペットの作成](/help/assets/cdn/fastly-create-referrer-block-snippet.png)
 
 1. ページが再読み込みされたら、「*Fastly設定*」セクションの「**VCLをFastly**&#x200B;にアップロード」をクリックします。
 
