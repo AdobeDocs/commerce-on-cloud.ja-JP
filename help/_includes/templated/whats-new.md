@@ -1,7 +1,7 @@
 ---
-source-git-commit: cb26cb9e3bf8b7d7c75509d8e3c3c02be439a3f4
+source-git-commit: d552a3e05d9cc81ceb546815c12aa52e7a9b1b40
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '223'
 ht-degree: 2%
 
 ---
@@ -95,28 +95,6 @@ ht-degree: 2%
         テクニカル
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/17ecf47f8cad5dcb53ef92b32377a7074e16bb52">コミット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年6月1日（PT）
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>説明</th>
-      <th>タイプ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>オンプレミスのElasticsearch サポートステートメントが<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Elasticsearch サポートの警告</a>で削除されました。</p>
-</td>
-      <td>
-        テクニカル
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/65898d2007d69d5bd3b8a9eabb9872ced98b8ffc">コミット</a></td>
     </tr>
   </tbody>
 </table>
