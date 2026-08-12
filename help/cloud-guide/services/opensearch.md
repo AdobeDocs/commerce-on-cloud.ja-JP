@@ -4,14 +4,10 @@ description: Adobe Commerce オンクラウドインフラストラクチャでO
 feature: Cloud, Search, Services
 exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
 TQID: https://experienceleague.adobe.com/DIH1i-hJKlsoFFmDsws-w6iuJ56B7dcdiJP5Zh1iRII
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 788
 ht-degree: 0%
@@ -20,7 +16,7 @@ ht-degree: 0%
 
 # OpenSearch サービスの設定
 
-[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearchのライセンス変更に続く、Elasticsearch 7.10.2のオープンソース フォークです。 GitHubの[OpenSource プロジェクト &#x200B;](https://github.com/opensearch-project)を参照してください。 [必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)には、サポートされているバージョンが一覧表示されます。
+[OpenSearch](https://www.opensearch.org) サービスは、Elasticsearchのライセンス変更に続く、Elasticsearch 7.10.2のオープンソース フォークです。 GitHubの[OpenSource プロジェクト ](https://github.com/opensearch-project)を参照してください。 [必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)には、サポートされているバージョンが一覧表示されます。
 
 {{elasticsearch-support}}
 
@@ -35,7 +31,7 @@ OpenSearchなら、あらゆるソースやフォーマットからデータを�
 
 >[!TIP]
 >
->[&#x200B; ライブサーチ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce/live-search/overview)を使用していないCloud Infrastructure プロジェクトのAdobe Commerceの場合、Adobeでは、サードパーティの検索ツールにフォールバックオプションを提供するように[!DNL OpenSearch]を設定することをお勧めします。 ただし、[!DNL OpenSearch]と[!DNL Live Search]の両方を同じCommerce インスタンスで有効にすることはできません。
+>[ ライブサーチ ](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview)を使用していないCloud Infrastructure プロジェクトのAdobe Commerceの場合、Adobeでは、サードパーティの検索ツールにフォールバックオプションを提供するように[!DNL OpenSearch]を設定することをお勧めします。 ただし、[!DNL OpenSearch]と[!DNL Live Search]の両方を同じCommerce インスタンスで有効にすることはできません。
 
 **OpenSearch**&#x200B;を有効にするには：
 
@@ -47,7 +43,7 @@ OpenSearchなら、あらゆるソースやフォーマットからデータを�
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境でOpenSearch バージョンを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境でOpenSearch バージョンを変更するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket)を送信する必要があります。
 
 1. `.magento.app.yaml` ファイルの`relationships` プロパティを設定または検証します。
 
@@ -70,7 +66,7 @@ OpenSearchなら、あらゆるソースやフォーマットからデータを�
    git push origin <branch-name>
    ```
 
-   これらの変更が環境にどのような影響を与えるかについては、[&#x200B; サービスの設定](services-yaml.md)を参照してください。
+   これらの変更が環境にどのような影響を与えるかについては、[ サービスの設定](services-yaml.md)を参照してください。
 
 1. デプロイメントプロセスが完了したら、SSHを使用してリモート環境にログインします。
 
@@ -100,7 +96,7 @@ Adobe Commerce on cloud infrastructure プロジェクトをインストール�
 
 - **プロジェクトのアップグレード** – 新しいアプリケーション バージョンのOpenSearch PHP クライアントが、クラウド インフラストラクチャにインストールされているOpenSearch サービス バージョンと互換性があることを確認します。
 
-サービスのバージョンと互換性のサポートは、クラウドインフラストラクチャでテストおよびデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、_インストールガイド_&#x200B;の[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
+サービスのバージョンと互換性のサポートは、クラウドインフラストラクチャでテストおよびデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、_インストールガイド_&#x200B;の[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)を参照してください。
 
 **OpenSearch ソフトウェアの互換性を確認するには**:
 
@@ -182,7 +178,7 @@ OpenSearch サービスを再起動する必要がある場合は、Adobe Commer
 
 ## 追加の検索設定
 
-- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイ間でカスタム検索設定を保持できます。 [変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration)を参照してください。
+- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイ間でカスタム検索設定を保持できます。 [変数のデプロイ ](../environment/variables-deploy.md#search_configuration)を参照してください。
 
 - プロジェクトにOpenSearch サービスを設定したら、Admin UIを使用してOpenSearch接続をテストし、Adobe CommerceのOpenSearch設定をカスタマイズします。
 
@@ -192,12 +188,12 @@ OpenSearch サービスを再起動する必要がある場合は、Adobe Commer
 
 >[!NOTE]
 >
->これは、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターにプラグインをインストールするには、[&#x200B; サポートリクエストを送信](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)してください。
+>これは、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターにプラグインをインストールするには、[ サポートリクエストを送信](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)してください。
 
 
 ```yaml
 opensearch:
-    type: opensearch:2
+    type: opensearch:3
     disk: 1024
     configuration:
         plugins:
@@ -205,7 +201,7 @@ opensearch:
             - analysis-phonetic
 ```
 
-プラグインについて詳しくは、[OpenSearch プロジェクト &#x200B;](https://github.com/opensearch-project)を参照してください。
+プラグインについて詳しくは、[OpenSearch プロジェクト ](https://github.com/opensearch-project)を参照してください。
 
 ### OpenSearchのプラグインを削除
 
@@ -216,7 +212,7 @@ opensearch:
 
 >[!NOTE]
 >
->この変更は、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターでプラグインを削除するには、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信する必要があります。
+>この変更は、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターでプラグインを削除するには、[ サポートチケット ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信する必要があります。
 
 1. OpenSearch プラグインのエントリを`.magento/services.yaml` ファイルから削除します。
 1. コード変更を追加、コミット、プッシュします。
