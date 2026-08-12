@@ -4,10 +4,16 @@ description: Adobe Commerce クラウドインフラストラクチャで使用�
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 1186
@@ -49,13 +55,13 @@ Adobe Commerce on cloud infrastructureでは、プロジェクトに設定でき
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->例えば、使用可能なバージョン ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)間でRabbitMQを順次[ アップグレードする必要があります。例えば、3.9から4.1に直接アップグレードすることはできません
+>例えば、使用可能なバージョン [&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)間でRabbitMQを順次 アップグレードする必要があります。例えば、3.9から4.1に直接アップグレードすることはできません
 >
 >新しいバージョンのRabbitMQにアップグレードした後、完全なデプロイメントをトリガーして、カスタムメッセージキューがRabbitMQで再作成されるようにします。
 
 ## 設定済みのサービスとバージョンの表示
 
-現在のテンプレート [`services.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
+現在のテンプレート [`services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
 
 次の例は、`services.yaml`設定ファイルのサービス定義を示しています。
 
@@ -204,7 +210,7 @@ Adobe Commerce on cloud infrastructureのサービスバージョンと互換性
 - サービスのバージョンがEOL日から3か月以内の場合、デプロイログに通知が表示されます。
 - EOL日が過去の場合は、警告通知が表示されます。
 
-ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル ](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
+ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル &#x200B;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
 
 ### OpenSearchに移行
 
@@ -216,7 +222,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 インストール済みのサービスのバージョンは、Cloud環境にデプロイされているAdobe Commerceのバージョンと互換性を保つためにアップグレードできます。
 
-インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [ ダウングレードサービスバージョン ](#downgrade-version)を参照してください。
+インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [&#x200B; ダウングレードサービスバージョン &#x200B;](#downgrade-version)を参照してください。
 
 ### インストール済みサービスのバージョンのアップグレード
 
