@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
+source-git-commit: 643134d5bf2ab03b0c9cace884e9a020a2aebdb7
 workflow-type: tm+mt
-source-wordcount: 3019
+source-wordcount: 3054
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.17 {#latest}
+## v1.1.18 {#latest}
+
+リリース日：2026年8月11日（PT）
+
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **パッチ処理の改善** - `composer.json` `replace`経由で削除されたモジュールを対象としたハンクをパッチがスキップし、残りのインストール済み部分を引き続き適用できるようになりました。<!-- MCLOUD-15325 -->
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **セキュリティの改善** – 最新のセキュリティ パッチを適用しました。<!--MCLOUD-15035 -->
+
+## v1.1.17
 
 リリース日：2026年7月29日（PT）
 
