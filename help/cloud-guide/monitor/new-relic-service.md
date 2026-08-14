@@ -10,9 +10,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 83bab481da52667e8ffb81563109429c7c6b65dd
 workflow-type: tm+mt
-source-wordcount: 456
+source-wordcount: 457
 ht-degree: 0%
 
 ---
@@ -52,4 +52,4 @@ Adobe Commerce on cloud インフラストラクチャプロジェクトには�
 
 ## New Relic Log Management
 
-すべてのクラウドインフラプロジェクトには、[New Relic ログ管理](log-management.md)が含まれます。 このサービスは、ステージング環境と実稼動環境のすべてのログデータを集約し、一元化されたログ管理ダッシュボードに表示するように事前設定されています。
+すべてのPro クラウドインフラプロジェクトには、[New Relic ログ管理](log-management.md)が含まれます。 このサービスは、ステージング環境と実稼動環境のすべてのログデータを集約し、一元化されたログ管理ダッシュボードに表示するように事前設定されています。
