@@ -23,7 +23,7 @@ ht-degree: 3%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.12の後に<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。 バージョン番号以外の変更は行われませんでした。</p>
+      <td><p>ECE-Tools リリース v2002.2.12の後に<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。 バージョン番号以外の変更は行われませんでした。</p>
 </td>
       <td>
         テクニカル
