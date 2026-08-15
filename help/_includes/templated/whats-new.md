@@ -1,7 +1,7 @@
 ---
-source-git-commit: c99769c36020dea4b7321c791fd47ee162075ef3
+source-git-commit: e89fcc1e14016d767941719e5835cee3c744a339
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '78'
 ht-degree: 3%
 
 ---
@@ -29,28 +29,6 @@ ht-degree: 3%
         テクニカル
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/136f8312d1c125a49538ee050394c722ab68d9b6">コミット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年6月15日（PT）
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>説明</th>
-      <th>タイプ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>より明確な前提条件、Cloud Consoleの招待状の状態、再デプロイメントのガイダンス、および関連するトラブルシューティングを使用して、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/project/user-access"> ユーザーアクセスの管理</a>を更新しました。</p>
-</td>
-      <td>
-        フィードバック
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">コミット</a></td>
     </tr>
   </tbody>
 </table>
