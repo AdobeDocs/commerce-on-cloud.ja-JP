@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 956405dea6be29d239b663f5eebb19a8e043354d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 2927
+source-wordcount: 2969
 ht-degree: 0%
 
 ---
@@ -44,12 +44,19 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.18 {#latest}
+## v1.1.19 {#latest}
+
+リリース日：2026年8月19日（PT）
+
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **パッチの信頼性** – 信頼性の高いCloud デプロイメントのパッチ処理が改善されました。<!-- MCLOUD-15325/ACSEC-561/MCLOUD-15451/MCLOUD-15455 -->
+- ![&#x200B; アイコン &#x200B;](../../assets/fix.svg) **キャッシュの改善** - RedisおよびValkey スレーブ接続の拡張Symfony_l2 キャッシュのサポートと、関連するキャッシュ、タグインデックス、プリロード、静的デプロイメントの問題を解決しました…<!-- MCLOUD-15433 -->
+
+## v1.1.18
 
 リリース日：2026年8月11日（PT）
 
 - ![修正アイコン &#x200B;](../../assets/fix.svg) **パッチ処理の改善** - `composer.json` `replace`経由で削除されたモジュールを対象としたハンクをパッチがスキップし、残りのインストール済み部分を引き続き適用できるようになりました。<!-- MCLOUD-15325 -->
-- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-92](https://helpx.adobe.com/jp/security/products/magento/apsb26-92.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15035 -->
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -252,7 +259,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 未認証のリモート コード実行の原因となる&#x200B;**critical**&#x200B;脆弱性を解決するためのパッチを更新しました。<!-- MCLOUD-8479 -->
 
-[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html)を参照してください。
+[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)を参照してください。
 
 ## v1.0.15
 
@@ -269,7 +276,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 **critical**&#x200B;脆弱性を解決するためのパッチを追加しました。これにより、未認証のリモート コードが実行されます。<!-- MCLOUD-8461 -->
 
-[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html)を参照してください。
+[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)を参照してください。
 
 ## v1.0.13
 

@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: e7db7e06142322898d7d9a28ae0dd06458fdcf6d
+source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
 workflow-type: tm+mt
-source-wordcount: 3580
+source-wordcount: 3631
 ht-degree: 0%
 
 ---
@@ -40,7 +40,13 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v2002.2.12 {#latest}
+## v2002.2.13 {#latest}
+
+リリース日：2026年8月19日（PT）
+
+- ![&#x200B; アイコンを修正](../../assets/fix.svg) **キャッシュの改善** RedisおよびValkey スレーブ接続の拡張Symfony_l2 キャッシュのサポートと、関連するキャッシュ、タグインデックス、プリロード、静的デプロイメントの問題を解決しました。<!-- MCLOUD-15433 -->
+
+## v2002.2.12
 
 リリース日：2026年7月20日（PT）
 
@@ -291,7 +297,7 @@ ht-degree: 0%
 
 - ![新しいicon](../../assets/new.svg) **新しいSCD_NO_PARENT環境変数** – 親テーマの静的コンテンツの生成を管理するために`SCD_NO_PARENT`環境変数（Adobe Commerce >=2.4.2）を追加しました。<!--MCLOUD-7284-->
 
-- ![&#x200B; アイコン &#x200B;](../../assets/fix.svg)を修正&#x200B;**メモリ制限とコマンド** - `cloud.log` ファイルのサイズがPHP memory_limitを超えると、`php vendor/bin/ece-tools` コマンドが機能しない問題を修正しました。`cloud.log` ファイル全体をメモリに読み込む代わりに、ログファイルからより小さなデータのサブセットのみを読み取るようになりました。
+- ![&#x200B; アイコン &#x200B;](../../assets/fix.svg)を修正&#x200B;**メモリ制限とコマンド** - `cloud.log` ファイルのサイズがPHP memory_limitを超えると、`php vendor/bin/ece-tools` コマンドが機能しない問題を修正しました。 `cloud.log` ファイル全体をメモリに読み込む代わりに、ログファイルからより小さなデータのサブセットのみを読み取るようになりました。
   <!--MCLOUD-7275-->
   <!--MCLOUD-7400-->
 
