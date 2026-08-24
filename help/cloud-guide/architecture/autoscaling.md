@@ -31,14 +31,14 @@ ht-degree: 0%
 
 ## 自動スケーリングを有効にする
 
-[!DNL Adobe Commerce on cloud infrastructure] プロジェクトの水平方向または垂直方向の自動スケーリングを有効または無効にするには、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 チケットで次の理由を選択します。
+[!DNL Adobe Commerce on cloud infrastructure] プロジェクトの水平方向または垂直方向の自動スケーリングを有効または無効にするには、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。 チケットで次の理由を選択します。
 
 - **連絡先の理由**: インフラストラクチャの変更リクエスト
 - **Adobe Commerce インフラストラクチャの連絡先の理由**：その他のインフラストラクチャの変更リクエスト
 
 >[!IMPORTANT]
 >
->自動スケーリング機能は、予期せぬイベントをキャプチャします。 自動スケーリングが有効になっている場合でも、今後のイベントが予想される場合は、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)に進むことをお勧めします。
+>自動スケーリング機能は、予期せぬイベントをキャプチャします。 自動スケーリングが有効になっている場合でも、今後のイベントが予想される場合は、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)に進むことをお勧めします。
 
 ### 負荷テスト
 
