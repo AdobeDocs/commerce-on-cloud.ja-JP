@@ -104,7 +104,7 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **メモ**：管理者からベース URLを更新することもできます。 _Adobe Commerce ストアおよび購入エクスペリエンスガイド_&#x200B;の[&#x200B; ストア URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)を参照してください。
+   **メモ**：管理者からベース URLを更新することもできます。 _Adobe Commerce ストアおよび購入エクスペリエンスガイド_&#x200B;の[&#x200B; ストア URL](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls)を参照してください。
 
 1. サイトが更新されるまで数分待ちます。
 
@@ -118,7 +118,7 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
 
 - [送信メールテストを完了しました](../project/outgoing-emails.md)
 
-- [管理者資格情報とベース管理者URLのセキュアな設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [管理者資格情報とベース管理者URLのセキュアな設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-admin)
 
 - [Web用のすべての画像を最適化する](../cdn/fastly-image-optimization.md)
 
@@ -150,9 +150,9 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
 
 - [セキュリティスキャンの設定](overview.md#set-up-the-security-scan-tool)
 
-- [管理者ユーザーのセキュアな設定](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [管理者ユーザーのセキュアな設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-admin)
 
-- [管理者URLのセキュアな設定](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [管理者URLのセキュアな設定](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Adobe Commerce on cloud infrastructure プロジェクトで使用されなくなったユーザーを削除](../project/user-access.md)
 
