@@ -58,7 +58,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一部と�
 
 >[!NOTE]
 >
->Let&#39;s Encrypt証明書を使用せずに、独自の拡張検証SSL証明書を会社にデプロイする場合は、CTAまたは[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)してください。
+>Let&#39;s Encrypt証明書を使用せずに、独自の拡張検証SSL証明書を会社にデプロイする場合は、CTAまたは[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)してください。
 
 ## セキュリティスキャンツールの設定
 
@@ -84,7 +84,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一部と�
 >
 >Adobeでは、調査結果の調査中に最高のサービス品質を確保するために、セキュリティスキャンツールを他のサードパーティツールよりも使用することをお勧めします。
 
-セキュリティスキャンツールの設定と使用について詳しくは、[&#x200B; ユーザーガイド &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)を参照してください。 通常、UAT （ユーザー受け入れテスト）を開始すると、このツールの使用を開始します。
+セキュリティスキャンツールの設定と使用について詳しくは、[&#x200B; ユーザーガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-scan)を参照してください。 通常、UAT （ユーザー受け入れテスト）を開始すると、このツールの使用を開始します。
 
 スキャンする各サイトは、「セキュリティスキャン」タブから登録する必要があります。 登録プロセス中に、スキャンを開始する前に免責事項に同意する必要があります。 スケジュールと、各スキャンが完了したときにユーザーが通知を受け取ることを許可する両方を制御します。 特定の定期的な日時に対してスキャンをスケジュールしたり、必要に応じてスキャンをオンデマンドで実行したりできます。
 

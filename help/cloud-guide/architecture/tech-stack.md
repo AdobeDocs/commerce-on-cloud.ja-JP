@@ -36,7 +36,7 @@ Adobe Commerce on cloud インフラストラクチャは、次に示す5つの�
 
 1. [**Cloud Infrastructure**](pro-architecture.md): Adobe Commerce on Cloud Infrastructure Pro プロジェクトのInfrastructure as a Service （IaaS）基盤として、Amazon Web Services（AWS）またはMicrosoft Azureのいずれかを選択します。
 
-   Adobeでは、バーチャルコンピューティングリソース（vCPU）の使用状況を定期的に分析し、長期的な使用状況を最適化し、vCPUの年間最大許容値を超えるリスクを軽減するために、リソースを自動的に割り当てます。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて[一時的なアップサイズをリクエスト &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)する必要があります。
+   Adobeでは、バーチャルコンピューティングリソース（vCPU）の使用状況を定期的に分析し、長期的な使用状況を最適化し、vCPUの年間最大許容値を超えるリスクを軽減するために、リソースを自動的に割り当てます。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて[一時的なアップサイズをリクエスト &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)する必要があります。
 
 1. [**Platform as a Service**](cloud-architecture.md)：各Adobe Commerce クラウド インフラストラクチャ プロジェクトでは、サービスの開発、テスト、および統合用のPlatform as a Service （PaaS）統合環境が提供されます。
 1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce on cloud インフラストラクチャは、PHP、MySQL （MariaDB）、Redis、メッセージキューサービス（[!DNL RabbitMQ]または[!DNL ActiveMQ]）、サポートされている検索エンジンテクノロジーを含む、事前プロビジョニング済みのインフラストラクチャを提供します。

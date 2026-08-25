@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Variables プロパティ
 
-アプリケーションベースの環境変数を使用して、ストア設定をカスタマイズできます。 これらの変数は特定の構文を使用します。 _構成ガイド_&#x200B;の「[構成設定を上書き](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings)」を参照してください。
+アプリケーションベースの環境変数を使用して、ストア設定をカスタマイズできます。 これらの変数は特定の構文を使用します。 _構成ガイド_&#x200B;の「[構成設定を上書き](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/paths/override-config-settings)」を参照してください。
 
 [!DNL Commerce] アプリケーションの特定のバージョンには、`.magento.app.yaml` ファイルに含まれる次の環境変数が必要です。
 

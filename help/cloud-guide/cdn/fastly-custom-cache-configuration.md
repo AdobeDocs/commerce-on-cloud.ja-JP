@@ -202,7 +202,7 @@ Fastlyは、Varnish Configuration Language （VCL）のカスタマイズされ�
 
 - スタータープロジェクトの場合は、[!DNL Cloud Console]の「[!UICONTROL Domains]」タブで「プロジェクト URL」に移動して、プロジェクト URLを追加します。
 
-- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、ドメインをクラウドプロジェクト設定に追加します。 サポートチームはまた、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
+- Pro プロジェクトの場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、ドメインをクラウドプロジェクト設定に追加します。 サポートチームはまた、Adobe Commerce Fastly アカウント設定を更新して、ドメインを追加します。
 
 **管理者**&#x200B;からFastly ドメイン設定を管理するには：
 

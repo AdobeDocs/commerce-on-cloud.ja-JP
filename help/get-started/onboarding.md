@@ -28,7 +28,7 @@ AdobeでCommerce オンクラウドインフラストラクチャのサブスク
 
 ## Cloud アカウントにサインアップ
 
-Adobe Commerce on cloud infrastructure アカウントをお持ちでない場合は、[&#x200B; セールス &#x200B;](https://business.adobe.com/products/magento/get-demo.html)にお問い合わせください。 サインアップすると、Adobeがアカウントを作成し、プロジェクトのインターフェイスにアクセスする方法を説明するウェルカムメールを送信します。 このメールには、アカウントにログインし、最初のプロジェクト設定を完了するためのリンクが含まれています。
+Adobe Commerce on cloud infrastructure アカウントをお持ちでない場合は、[&#x200B; セールス &#x200B;](https://business.adobe.com/jp/products/magento/get-demo.html)にお問い合わせください。 サインアップすると、Adobeがアカウントを作成し、プロジェクトのインターフェイスにアクセスする方法を説明するウェルカムメールを送信します。 このメールには、アカウントにログインし、最初のプロジェクト設定を完了するためのリンクが含まれています。
 
 ## プロジェクトにアクセスしてユーザーを追加
 
@@ -40,7 +40,7 @@ Adobe Commerce on cloud infrastructure アカウントをお持ちでない場�
 
 ### 共有アカウントアクセス
 
-ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスにより、信頼できる従業員やサービスプロバイダーは、ヘルプセンターを使用して、Adobe Commerce on cloud infrastructure プロジェクトに関連するサポートチケットを送信および追跡できます。 設定の手順については、ヘルプセンターの「[共有アクセス &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access)」の記事を参照してください。
+ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスにより、信頼できる従業員やサービスプロバイダーは、ヘルプセンターを使用して、Adobe Commerce on cloud infrastructure プロジェクトに関連するサポートチケットを送信および追跡できます。 設定の手順については、ヘルプセンターの「[共有アクセス &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access)」の記事を参照してください。
 
 ### [!DNL Cloud Console]
 
@@ -48,7 +48,7 @@ Adobe Commerce on cloud infrastructure アカウントをお持ちでない場�
 
 ## Adobe ステータスに登録
 
-[&#x200B; ステータス ページ &#x200B;](https://status.adobe.com/products/503473)から、クラウド インフラストラクチャ プラットフォーム環境上のAdobe Commerceと関連サービスに関する最新情報を入手します。
+[&#x200B; ステータス ページ &#x200B;](https://status.adobe.com/jp/products/503473)から、クラウド インフラストラクチャ プラットフォーム環境上のAdobe Commerceと関連サービスに関する最新情報を入手します。
 
 このページでは、Adobe Commerceのコンポーネントとサービスのステータスに続いて、インシデントレポート、サービスアップグレード、計画的な停止、予定されているメンテナンスに関する通知が表示されます。 プロジェクトに取り組んでいる人は誰でも、Adobe Commerceのステータスサイトに登録して、イベント通知やアップデートをメールやSlackで受け取ることができます。 地域やイベント別に特定の商品をトラッキングするように、Adobe ステータスのサブスクリプションをカスタマイズできます。
 

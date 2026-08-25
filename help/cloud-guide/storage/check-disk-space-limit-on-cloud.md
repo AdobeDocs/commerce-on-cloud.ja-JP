@@ -21,4 +21,4 @@ ht-degree: 0%
 
 ## 関連トピックス
 
-開発者向けドキュメントの[&#x200B; ディスク容量の管理](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en)。
+開発者向けドキュメントの[&#x200B; ディスク容量の管理](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en)。

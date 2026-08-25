@@ -121,7 +121,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Pro ステージング環境およびPro実稼動環境では、固定ファイル名のログファイルに対して、自動ログのローテーション、圧縮、削除が有効になります。 各ログファイルタイプには、回転パターンとライフタイムがあります。
 >環境のログのローテーションと圧縮されたログの有効期間の詳細については、`/etc/logrotate.conf`および`/etc/logrotate.d/<various>`を参照してください。
->Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
+>Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
 
 >[!TIP]
 >
@@ -232,7 +232,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
+ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
 
 ## アプリケーションログ
 
@@ -270,7 +270,7 @@ Pro ステージング環境および実稼動環境の場合、デプロイ、�
 
 アーカイブされたログファイルは、圧縮前に元のファイルが配置されていたディレクトリに常に保存されます。
 
-[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?support-tab=home#support)を送信して、ログの保持期間またはログローテーション設定の変更を要求できます。 保持期間を最大365日まで延長したり、ストレージ クォータを節約するために期間を短縮したり、logrotate設定に追加のログパスを追加したりできます。 これらの変更は、Pro ステージングおよび実稼動クラスターで使用できます。
+[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support)を送信して、ログの保持期間またはログローテーション設定の変更を要求できます。 保持期間を最大365日まで延長したり、ストレージ クォータを節約するために期間を短縮したり、logrotate設定に追加のログパスを追加したりできます。 これらの変更は、Pro ステージングおよび実稼動クラスターで使用できます。
 
 例えば、`var/log/mymodule` ディレクトリにログを保存するためのカスタムパスを作成する場合、このパスのログローテーションをリクエストできます。 ただし、現在のインフラストラクチャでは、ログのローテーションを適切に設定するために、Adobeに一貫したファイル名が必要です。 Adobeでは、設定の問題を回避するために、ログ名の一貫性を維持することをお勧めします。
 

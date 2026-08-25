@@ -42,7 +42,7 @@ _APM &amp; Services_ ページで、**概要**&#x200B;を選択して、アプ�
 
 >[!TIP]
 >
->このデータを使用してアプリケーションパフォーマンスの問題をトラブルシューティングする方法について詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の「[New Relicを使用したパフォーマンスのトラブルシューティング」を参照してください。](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-40830)
+>このデータを使用してアプリケーションパフォーマンスの問題をトラブルシューティングする方法について詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の「[New Relicを使用したパフォーマンスのトラブルシューティング」を参照してください。](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-40830)
 
 ## アラートの管理によるパフォーマンスの監視
 
@@ -58,7 +58,7 @@ Adobeには、パフォーマンス指標を追跡するためのAdobe Commerce 
 | MariaDB クエリのロード | NRI | Pro |
 | Redis メモリ | NRI | Pro |
 
-サイト基盤やアプリケーションの状況がアラートのしきい値をトリガーすると、New Relicがアラート通知を送信して、問題に積極的に対処できるようになります。 アラートのしきい値の詳細と、アラートをトリガーした問題を解決するためのトラブルシューティング手順については、_Adobe Commerce ヘルプセンター_&#x200B;の「[Adobe Commerceのアラートの管理](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)」を参照してください。
+サイト基盤やアプリケーションの状況がアラートのしきい値をトリガーすると、New Relicがアラート通知を送信して、問題に積極的に対処できるようになります。 アラートのしきい値の詳細と、アラートをトリガーした問題を解決するためのトラブルシューティング手順については、_Adobe Commerce ヘルプセンター_&#x200B;の「[Adobe Commerceのアラートの管理](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)」を参照してください。
 
 >[!TIP]
 >
@@ -88,7 +88,7 @@ Adobeには、パフォーマンス指標を追跡するためのAdobe Commerce 
 
      >[!NOTE]
      >
-     >Adobe Commerce _ポリシーの_&#x200B;管理アラートが使用できない場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Adobe Commerceの管理アラート &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)を参照してください。
+     >Adobe Commerce _ポリシーの_&#x200B;管理アラートが使用できない場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Adobe Commerceの管理アラート &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)を参照してください。
 
 1. 「**[!UICONTROL Alert conditions]**」タブをクリックして、ポリシーで定義されたアラート条件を確認します。
 

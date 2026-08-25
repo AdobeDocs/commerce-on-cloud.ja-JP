@@ -29,7 +29,7 @@ ht-degree: 0%
 
 Adobeがクラウドインフラストラクチャプロジェクトをプロビジョニングすると、ライセンス所有者は、New Relicから、New Relic アカウントにアクセスするための資格情報と手順が記載されたメールを受け取ります。 電子メールが届かない場合は、ライセンス所有者の電子メールアドレスを使用してNew Relicのパスワードをリセットします。
 
-ライセンス所有者が変更され、新しいライセンス所有者が現在New Relicにアクセスできない場合は、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
+ライセンス所有者が変更され、新しいライセンス所有者が現在New Relicにアクセスできない場合は、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)。
 
 ## ユーザーアクセスの管理（管理者の役割）
 
@@ -55,7 +55,7 @@ _New Relic_ ドキュメントの[User management](https://docs.newrelic.com/doc
 
 >[!NOTE]
 >
->**Pro環境**&#x200B;は、New Relic サービスを使用するように事前設定されており、有効にする手順と接続手順をスキップできます。 New Relic APMがステージング環境と実稼働環境にインストールされていない場合、またはNew Relic インフラストラクチャが実稼働環境で利用できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してインストールをリクエストしてください。
+>**Pro環境**&#x200B;は、New Relic サービスを使用するように事前設定されており、有効にする手順と接続手順をスキップできます。 New Relic APMがステージング環境と実稼働環境にインストールされていない場合、またはNew Relic インフラストラクチャが実稼働環境で利用できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してインストールをリクエストしてください。
 
 Starter環境の場合、`.magento.app.yaml` ファイルを確認して、`runtime` セクションにNew Relic拡張機能が含まれていることを確認する必要があります。 拡張機能が設定されていない場合は、以下を追加します。
 
@@ -75,7 +75,7 @@ Cloud環境をNew Relicに接続するには、New Relic ライセンスキー�
 
 - **スタータープロジェクト**&#x200B;の場合、最大&#x200B;_3_&#x200B;環境をサポートするNew Relic ライセンスキーがあります。 環境設定にキーを手動で追加する必要があります。 スターター環境は、New Relic サービスを使用するように事前にプロビジョニングされていません。
 
-Starter環境の場合は、New Relic ライセンスキーを環境設定に追加して、New Relic統合を有効にします。 ステージング環境および実稼動環境と、選択した1つの環境にキーを追加します。 設定にはNew Relic ライセンスキーのみが必要です。 その他の設定オプションに関する情報については、_New Relic ユーザーガイド_&#x200B;の[Adobe Commerce レポート &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)のトピックを参照してください。
+Starter環境の場合は、New Relic ライセンスキーを環境設定に追加して、New Relic統合を有効にします。 ステージング環境および実稼動環境と、選択した1つの環境にキーを追加します。 設定にはNew Relic ライセンスキーのみが必要です。 その他の設定オプションに関する情報については、_New Relic ユーザーガイド_&#x200B;の[Adobe Commerce レポート &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)のトピックを参照してください。
 
 {{redeploy-warning}}
 
@@ -83,7 +83,7 @@ Starter環境の場合は、New Relic ライセンスキーを環境設定に追
 >
 >- Adobe Commerce アカウントページ、またはプロジェクトに関連付けられているNew Relic ライセンスのログイン資格情報
 >- 構成するスターター環境への[管理者レベルのアクセス &#x200B;](../project/user-access.md)
->- 環境の[管理者](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions)にアクセスするための資格情報
+>- 環境の[管理者](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/user-accounts/permissions)にアクセスするための資格情報
 
 **Starter環境用にNew Relicを設定するには**:
 
@@ -116,7 +116,7 @@ Starter環境の場合は、New Relic ライセンスキーを環境設定に追
      magento-cloud variable:update php:newrelic.license --value <newrelic-license-key>
      ```
 
-   オプションで、[Commerce管理者](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)から追加できます。
+   オプションで、[Commerce管理者](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)から追加できます。
 
 1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインして、Adobe Commerce環境からデータを表示できることを確認します。 [&#x200B; パフォーマンスの調査](investigate-performance.md)を参照してください。
 
@@ -162,4 +162,4 @@ Adobe Commerce on cloud infrastructure プロジェクトのNew Relic アカウ�
 
 3. **サポートが必要ですか？** 既存のオーナーまたは管理者が支援できない場合は、[Adobe Commerce パートナーシップ オーナーのアカウント &#x200B;](https://account.newrelic.com/accounts/1311131/users)にアクセスできるAdobe Commerce ユーザーは、自分に代わってユーザーを追加できます。
 
-詳しくは、[New Relic サービスの概要](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)を参照してください。
+詳しくは、[New Relic サービスの概要](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)を参照してください。

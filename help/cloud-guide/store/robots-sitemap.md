@@ -57,7 +57,7 @@ Adobe Commerce クラウド基盤では、`var`、`pub/media`、`pub/static`、`
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 

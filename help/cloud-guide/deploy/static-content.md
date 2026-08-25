@@ -52,8 +52,8 @@ ht-degree: 0%
 静的コンテンツを生成するには、テーマとロケールにアクセスする必要があります。 Adobe Commerceは、ビルド段階でアクセス可能なファイルシステムにテーマを保存しますが、Adobe Commerceはデータベースにロケールを保存します。 データベースは、ビルド フェーズ中に&#x200B;_not_&#x200B;利用できます。 ビルド段階で静的コンテンツを生成するには、`ece-tools` パッケージの`config:dump` コマンドを使用して、ロケールをファイルシステムに移動する必要があります。 ロケールを読み取り、`app/etc/config.php` ファイルに保存します。
 
 >[!NOTE]
->`ece-tools` パッケージで`config:dump` コマンドを実行すると、`config.php` ファイル [にダンプされた設定は、管理者ダッシュボード &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879)でロック（グレー表示）されます。 管理者でこれらの設定を更新する唯一の方法は、ファイルから設定をローカルに削除し、プロジェクトを再デプロイすることです。
->さらに、新しいストア/ストアグループ/web サイトをインスタンスに追加するたびに、`config:dump` コマンドを実行して、データベースが同期していることを確認する必要があります。 `config.php` ファイルにダンプする設定[を選択することもできます](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)。
+>`ece-tools` パッケージで`config:dump` コマンドを実行すると、`config.php` ファイル [にダンプされた設定は、管理者ダッシュボード &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-26879)でロック（グレー表示）されます。 管理者でこれらの設定を更新する唯一の方法は、ファイルから設定をローカルに削除し、プロジェクトを再デプロイすることです。
+>さらに、新しいストア/ストアグループ/web サイトをインスタンスに追加するたびに、`config:dump` コマンドを実行して、データベースが同期していることを確認する必要があります。 `config.php` ファイルにダンプする設定[を選択することもできます](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)。
 >フィールドがグレー表示されていても、この手順の実行が無視されているため、`config.php` ファイルからストア/ストアグループ/web サイト設定を削除すると、ダンプされていない新しいエンティティが次のデプロイメントのデータベースから削除されます。
 
 **ビルド**&#x200B;でSCDを生成するようにプロジェクトを設定するには：

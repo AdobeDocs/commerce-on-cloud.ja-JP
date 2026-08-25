@@ -55,11 +55,11 @@ Adobe CLAを1回送信するだけで済むため、以前に送信したこと�
 
 ## セキュリティの問題
 
-セキュリティ上の問題は、この問題トラッカーで報告しないでください。 代わりに、[&#x200B; セキュリティのエキスパートに問題を報告してください](https://helpx.adobe.com/security/alertus.html)
+セキュリティ上の問題は、この問題トラッカーで報告しないでください。 代わりに、[&#x200B; セキュリティのエキスパートに問題を報告してください](https://helpx.adobe.com/jp/security/alertus.html)
 
 ## 新機能ハイライト
 
-変更によって新しいトピック、重要な更新、または修正がハイライト表示される必要がある場合は、プルリクエストの本文から[新機能](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new)に簡単な説明を追加できます。
+変更によって新しいトピック、重要な更新、または修正がハイライト表示される必要がある場合は、プルリクエストの本文から[新機能](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview#whats-new)に簡単な説明を追加できます。
 
 新機能ハイライトを追加するには：
 
@@ -103,4 +103,4 @@ Adobe CLAを1回送信するだけで済むため、以前に送信したこと�
 1. `whatsnew`部分は`whatsnew` タグから開始し、プルリクエスト本文の最後にある必要があります。
 1. 変更内容の説明には、作業リンクが含まれている必要があります。 リンクが正しいことを確認し、意図されたトピックにつながってください。 トピックが新しい場合は、プルリクエストをマージして新しいトピックを公開した後、リンクが機能していることを確認します。 プルリクエストがマージされた後にリンクを修正しても問題ありません。
 
-例えば、リポジトリ内のクローズしたプルリクエストで検索して、既存のハイライトがどのようにフォーマットされているかを確認し、[新機能](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview#whats-new)と比較して、ドキュメントでどのように表示されるかを確認します。
+例えば、リポジトリ内のクローズしたプルリクエストで検索して、既存のハイライトがどのようにフォーマットされているかを確認し、[新機能](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview#whats-new)と比較して、ドキュメントでどのように表示されるかを確認します。

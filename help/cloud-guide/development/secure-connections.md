@@ -38,7 +38,7 @@ Secure Shell （SSH）は、リモートサーバーやシステムに安全に�
 
 ## アカウントにSSH公開鍵を追加する
 
-Adobe Commerce on cloud infrastructure アカウントにSSH公開鍵を追加または更新した後、アカウント上のすべてのアクティブな環境[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)を再デプロイして鍵をインストールします。
+Adobe Commerce on cloud infrastructure アカウントにSSH公開鍵を追加または更新した後、アカウント上のすべてのアクティブな環境[&#128279;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)を再デプロイして鍵をインストールします。
 
 アカウントにSSH キーを追加するには、Cloud CLIまたは[!DNL Cloud Console]のいずれかの方法を使用します。
 
@@ -164,10 +164,10 @@ sFTPを設定する場合は、SSH アクセス環境コマンドの情報を使
 
 **スターター環境とPro統合環境**&#x200B;の場合は、特定のディレクトリへのアクセス用に[追加`mount`](../application/properties.md#mounts)を検討することもできます。 マウントを`.magento.app.yaml` ファイルに追加します。 書き込み可能なディレクトリの一覧については、[&#x200B; プロジェクト構造](../project/file-structure.md)を参照してください。 このマウントポイントは、これらの環境でのみ機能します。
 
-**Pro ステージング環境および実稼動環境**&#x200B;の場合、環境へのSSH アクセス権がない場合は、[sFTP アクセスをリクエストするためにAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信し、特定のフォルダーへのアクセス用のマウントポイント（例：`pub/media`）を送信する必要があります。
+**Pro ステージング環境および実稼動環境**&#x200B;の場合、環境へのSSH アクセス権がない場合は、[sFTP アクセスをリクエストするためにAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信し、特定のフォルダーへのアクセス用のマウントポイント（例：`pub/media`）を送信する必要があります。
 
 >[!NOTE]
->Pro ステージングおよび実稼動の場合、sFTP接続が&#x200B;**not**&#x200B;を[Cloud プロジェクト &#x200B;](../project/user-access.md)に追加する必要がある&#x200B;_汎用_ ユーザーの場合、**公開鍵**&#x200B;を添付して[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 **秘密のSSH キーを入力しないでください。**
+>Pro ステージングおよび実稼動の場合、sFTP接続が&#x200B;**not**&#x200B;を[Cloud プロジェクト &#x200B;](../project/user-access.md)に追加する必要がある&#x200B;_汎用_ ユーザーの場合、**公開鍵**&#x200B;を添付して[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 **秘密のSSH キーを入力しないでください。**
 
 ## SSH トンネリング
 
