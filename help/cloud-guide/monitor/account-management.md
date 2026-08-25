@@ -5,11 +5,19 @@ feature: Cloud, Observability
 role: Admin
 exl-id: 7aeedd12-7a81-47eb-a82f-3079e16ecb06
 TQID: https://experienceleague.adobe.com/JUx2wo00f8bfp-XZ-eaTGlHjYL6gUH-M0BtNWEg9MgU
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-subfeature_v2: id: d9ced453-36f4-4eb5-b2f3-1d593e32476b
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+subfeature_v2:
+  - id: d9ced453-36f4-4eb5-b2f3-1d593e32476b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 958
@@ -31,7 +39,7 @@ Adobeがクラウドインフラストラクチャプロジェクトをプロビ
 
 **New Relicのユーザー管理にアクセスするには**:
 
-1. [New Relic アカウント ](https://login.newrelic.com/login)にログインします。
+1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインします。
 
 1. 左下のナビゲーションからユーザー名を選択します。
 
@@ -47,7 +55,7 @@ _New Relic_ ドキュメントの[User management](https://docs.newrelic.com/doc
 
 >[!NOTE]
 >
->**Pro環境**&#x200B;は、New Relic サービスを使用するように事前設定されており、有効にする手順と接続手順をスキップできます。 New Relic APMがステージング環境と実稼働環境にインストールされていない場合、またはNew Relic インフラストラクチャが実稼働環境で利用できない場合は、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してインストールをリクエストしてください。
+>**Pro環境**&#x200B;は、New Relic サービスを使用するように事前設定されており、有効にする手順と接続手順をスキップできます。 New Relic APMがステージング環境と実稼働環境にインストールされていない場合、またはNew Relic インフラストラクチャが実稼働環境で利用できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してインストールをリクエストしてください。
 
 Starter環境の場合、`.magento.app.yaml` ファイルを確認して、`runtime` セクションにNew Relic拡張機能が含まれていることを確認する必要があります。 拡張機能が設定されていない場合は、以下を追加します。
 
@@ -63,18 +71,18 @@ runtime:
 
 Cloud環境をNew Relicに接続するには、New Relic ライセンスキーを環境に追加します。
 
-- **Pro プロジェクト**&#x200B;の場合、Adobeはプロビジョニングプロセス中に実稼動環境とステージング環境にライセンスキーを追加します。 [New Relic アカウント ](https://login.newrelic.com/login)にログインして、Adobe Commerce on cloud infrastructure サイトとNew Relic間の接続性を確認できます。
+- **Pro プロジェクト**&#x200B;の場合、Adobeはプロビジョニングプロセス中に実稼動環境とステージング環境にライセンスキーを追加します。 [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインして、Adobe Commerce on cloud infrastructure サイトとNew Relic間の接続性を確認できます。
 
 - **スタータープロジェクト**&#x200B;の場合、最大&#x200B;_3_&#x200B;環境をサポートするNew Relic ライセンスキーがあります。 環境設定にキーを手動で追加する必要があります。 スターター環境は、New Relic サービスを使用するように事前にプロビジョニングされていません。
 
-Starter環境の場合は、New Relic ライセンスキーを環境設定に追加して、New Relic統合を有効にします。 ステージング環境および実稼動環境と、選択した1つの環境にキーを追加します。 設定にはNew Relic ライセンスキーのみが必要です。 その他の設定オプションに関する情報については、_New Relic ユーザーガイド_&#x200B;の[Adobe Commerce レポート ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)のトピックを参照してください。
+Starter環境の場合は、New Relic ライセンスキーを環境設定に追加して、New Relic統合を有効にします。 ステージング環境および実稼動環境と、選択した1つの環境にキーを追加します。 設定にはNew Relic ライセンスキーのみが必要です。 その他の設定オプションに関する情報については、_New Relic ユーザーガイド_&#x200B;の[Adobe Commerce レポート &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)のトピックを参照してください。
 
 {{redeploy-warning}}
 
 >[!PREREQUISITES]
 >
 >- Adobe Commerce アカウントページ、またはプロジェクトに関連付けられているNew Relic ライセンスのログイン資格情報
->- 構成するスターター環境への[管理者レベルのアクセス ](../project/user-access.md)
+>- 構成するスターター環境への[管理者レベルのアクセス &#x200B;](../project/user-access.md)
 >- 環境の[管理者](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions)にアクセスするための資格情報
 
 **Starter環境用にNew Relicを設定するには**:
@@ -83,7 +91,7 @@ Starter環境の場合は、New Relic ライセンスキーを環境設定に追
 
    **[!DNL Cloud Console]メソッド**:
 
-   - クラウドプロジェクト [ アカウントページ ](https://accounts.magento.cloud/user)を開きます。
+   - クラウドプロジェクト [&#x200B; アカウントページ &#x200B;](https://accounts.magento.cloud/user)を開きます。
 
    - 「_プロジェクト_」タブで、自分のプロジェクトを見つけます。
 
@@ -110,7 +118,7 @@ Starter環境の場合は、New Relic ライセンスキーを環境設定に追
 
    オプションで、[Commerce管理者](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)から追加できます。
 
-1. [New Relic アカウント ](https://login.newrelic.com/login)にログインして、Adobe Commerce環境からデータを表示できることを確認します。 [ パフォーマンスの調査](investigate-performance.md)を参照してください。
+1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインして、Adobe Commerce環境からデータを表示できることを確認します。 [&#x200B; パフォーマンスの調査](investigate-performance.md)を参照してください。
 
 ### ライセンスキーの削除
 
@@ -148,10 +156,10 @@ New Relicのライセンスキーは、3つのアクティブな環境でのみ�
 
 Adobe Commerce on cloud infrastructure プロジェクトのNew Relic アカウントオーナーを変更するには、次の手順を実行します。
 
-1. **New Relic UIでオーナー**&#x200B;を変更します。 New Relic ドキュメントの「[ アカウント所有者を変更](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/account-user-mgmt-tutorial/)」を参照してください。
+1. **New Relic UIでオーナー**&#x200B;を変更します。 New Relic ドキュメントの「[&#x200B; アカウント所有者を変更](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/account-user-mgmt-tutorial/)」を参照してください。
 
-2. **ユーザーがアカウントにまだ登録していない場合は、最初に** ユーザーを追加します。 New Relic ドキュメントの[ ユーザーの追加と更新](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-ui-and-tasks/#add-users)を参照してください。
+2. **ユーザーがアカウントにまだ登録していない場合は、最初に** ユーザーを追加します。 New Relic ドキュメントの[&#x200B; ユーザーの追加と更新](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-management-ui-and-tasks/#add-users)を参照してください。
 
-3. **サポートが必要ですか？** 既存のオーナーまたは管理者が支援できない場合は、[Adobe Commerce パートナーシップ オーナーのアカウント ](https://account.newrelic.com/accounts/1311131/users)にアクセスできるAdobe Commerce ユーザーは、自分に代わってユーザーを追加できます。
+3. **サポートが必要ですか？** 既存のオーナーまたは管理者が支援できない場合は、[Adobe Commerce パートナーシップ オーナーのアカウント &#x200B;](https://account.newrelic.com/accounts/1311131/users)にアクセスできるAdobe Commerce ユーザーは、自分に代わってユーザーを追加できます。
 
 詳しくは、[New Relic サービスの概要](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service)を参照してください。

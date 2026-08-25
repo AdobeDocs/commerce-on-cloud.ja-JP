@@ -5,10 +5,16 @@ feature: Cloud, Security
 topic: Security
 exl-id: b5a24fcd-9b43-4ec9-8a0c-52956a74e45e
 TQID: https://experienceleague.adobe.com/nYBr0uvw1SZPSQqAU6uHTiitjZ0kcudsLdWagiWRLP8
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 319
@@ -29,7 +35,7 @@ Adobe Commerce リポジトリにアクセスし、Adobe Commerce on cloud infra
 
 Adobeでは、認証情報が誤って公開されるのを防ぐため、[環境変数](#composer-auth-environment-variable) メソッドをクラウドプロジェクトで使用することをお勧めします。
 
-ローカル開発ファイル方式は、Cloud Docker for Commerceを認証ツールとして使用する場合に最適ですが、`auth.json` ファイルをパブリック Git ベースのリポジトリにアップロードしないように注意してください。 `auth.json` ファイルを[`.gitignore` ファイル ](../project/file-structure.md#ignoring-files)に追加できます。
+ローカル開発ファイル方式は、Cloud Docker for Commerceを認証ツールとして使用する場合に最適ですが、`auth.json` ファイルをパブリック Git ベースのリポジトリにアップロードしないように注意してください。 `auth.json` ファイルを[`.gitignore` ファイル &#x200B;](../project/file-structure.md#ignoring-files)に追加できます。
 
 >[!ENDSHADEBOX]
 
@@ -40,7 +46,7 @@ Adobeでは、認証情報が誤って公開されるのを防ぐため、[環�
 1. プロジェクトのルートディレクトリに`auth.json` ファイルがない場合は、ファイルを作成します。
 
    - テキストエディターを使用して、プロジェクトのルートディレクトリに`auth.json` ファイルを作成します。
-   - [ サンプル `auth.json`](https://github.com/magento/magento2/blob/2.3/auth.json.sample)の内容を新しい`auth.json` ファイルにコピーします。
+   - [&#x200B; サンプル `auth.json`](https://github.com/magento/magento2/blob/2.3/auth.json.sample)の内容を新しい`auth.json` ファイルにコピーします。
 
 1. `<public-key>`と`<private-key>`をAdobe Commerce認証情報に置き換えます。
 
@@ -63,9 +69,9 @@ Adobeでは、認証情報が誤って公開されるのを防ぐため、[環�
 
 **環境変数を使用して認証キーを追加するには**:
 
-1. _[!DNL Cloud Console]_で、プロジェクトナビゲーションの右側にある設定アイコンをクリックします。
+1. _[!DNL Cloud Console]_&#x200B;で、プロジェクトナビゲーションの右側にある設定アイコンをクリックします。
 
-   ![ プロジェクトの設定](../../assets/icon-configure.png){width="36"}
+   ![&#x200B; プロジェクトの設定](../../assets/icon-configure.png){width="36"}
 
 1. _プロジェクト設定_ リストで、**[!UICONTROL Variables]**&#x200B;をクリックします。
 

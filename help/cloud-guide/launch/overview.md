@@ -3,10 +3,20 @@ title: サイトの起動
 description: サイト立ち上げの準備を開始する方法を説明します。
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: c32adafa-ed01-4b31-997e-2413013911b0
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 970
@@ -30,7 +40,7 @@ ht-degree: 0%
 
 - 統合環境では、FastlyやNew Relicなど、ステージング環境や実稼動環境で使用できる一部のサービスはサポートされていません。
 
-- 読み込み、負荷、パフォーマンス、サイトアセットのステージングに関する様々なツールを使用して、サイトを[完全にテスト ](../test/guidance.md)します。
+- 読み込み、負荷、パフォーマンス、サイトアセットのステージングに関する様々なツールを使用して、サイトを[完全にテスト &#x200B;](../test/guidance.md)します。
 
 - 統合環境では、テストデータが入力されたデータベースのみが存在し、実稼動環境に一致しない場合があるため、ステージング環境または実稼動環境でテストを行うと、追加のエラーや予期しない動作が発生する場合があります。
 
@@ -44,7 +54,7 @@ ht-degree: 0%
 
 - SSL/TLS証明書
 
-Adobe Commerce on cloud infrastructure サブスクリプションの一部として、Adobeは、Let&#39;s Encryptが発行するDomain-Validated SSL/TLS証明書を提供します。 Pro実稼動、ステージング、およびスタータープロダクション （`master`）の各環境には、その環境内のすべてのドメインとサブドメインをカバーする一意の証明書があります。 これらの証明書はプロビジョニングされ、開発と実稼動用にDNS設定を更新した後に、サイトに自動的にアップロードされます。 [SSL/TLS証明書のプロビジョニング ](../cdn/fastly-configuration.md#provision-ssltls-certificates)を参照してください。
+Adobe Commerce on cloud infrastructure サブスクリプションの一部として、Adobeは、Let&#39;s Encryptが発行するDomain-Validated SSL/TLS証明書を提供します。 Pro実稼動、ステージング、およびスタータープロダクション （`master`）の各環境には、その環境内のすべてのドメインとサブドメインをカバーする一意の証明書があります。 これらの証明書はプロビジョニングされ、開発と実稼動用にDNS設定を更新した後に、サイトに自動的にアップロードされます。 [SSL/TLS証明書のプロビジョニング &#x200B;](../cdn/fastly-configuration.md#provision-ssltls-certificates)を参照してください。
 
 >[!NOTE]
 >
@@ -64,7 +74,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一部と�
 >
 >これらのIP アドレスをネットワークファイアウォールルールの許可リストに追加し、ツールがサイトをスキャンできるようにします。 このツールは、ポート 80とポート 443にのみリクエストを投稿します。
 
-セキュリティスキャンツールを使用すると、ストアサイトを定期的に監視し、既知のセキュリティリスク、マルウェア、旧式のソフトウェアに関するアップデートを受け取ることができます。 このツールは、クラウドインフラストラクチャ上のAdobe Commerceのすべての実装とバージョンで利用できる無料のサービスです。 [Commerce Marketplace アカウント ](https://account.magento.com/customer/account/login)からツールにアクセスします。
+セキュリティスキャンツールを使用すると、ストアサイトを定期的に監視し、既知のセキュリティリスク、マルウェア、旧式のソフトウェアに関するアップデートを受け取ることができます。 このツールは、クラウドインフラストラクチャ上のAdobe Commerceのすべての実装とバージョンで利用できる無料のサービスです。 [Commerce Marketplace アカウント &#x200B;](https://account.magento.com/customer/account/login)からツールにアクセスします。
 
 - サイトのセキュリティステータスと適用されたセキュリティアップデートの監視
 
@@ -74,7 +84,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一部と�
 >
 >Adobeでは、調査結果の調査中に最高のサービス品質を確保するために、セキュリティスキャンツールを他のサードパーティツールよりも使用することをお勧めします。
 
-セキュリティスキャンツールの設定と使用について詳しくは、[ ユーザーガイド ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)を参照してください。 通常、UAT （ユーザー受け入れテスト）を開始すると、このツールの使用を開始します。
+セキュリティスキャンツールの設定と使用について詳しくは、[&#x200B; ユーザーガイド &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)を参照してください。 通常、UAT （ユーザー受け入れテスト）を開始すると、このツールの使用を開始します。
 
 スキャンする各サイトは、「セキュリティスキャン」タブから登録する必要があります。 登録プロセス中に、スキャンを開始する前に免責事項に同意する必要があります。 スケジュールと、各スキャンが完了したときにユーザーが通知を受け取ることを許可する両方を制御します。 特定の定期的な日時に対してスキャンをスケジュールしたり、必要に応じてスキャンをオンデマンドで実行したりできます。
 
@@ -89,7 +99,7 @@ Visbot/2.0 (+http://www.visvo.com/en/webmasters.jsp;bot@visvo.com)
 
 ## サイトをスキャン
 
-1. [Commerce Marketplace アカウント ](https://account.magento.com/customer/account/login)にアクセスします。
+1. [Commerce Marketplace アカウント &#x200B;](https://account.magento.com/customer/account/login)にアクセスします。
 
 1. 「セキュリティスキャン」タブをクリックし、「**セキュリティスキャンに移動**」を選択します。
 

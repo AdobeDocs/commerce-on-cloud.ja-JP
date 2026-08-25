@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## コントリビューターガイドのドキュメント
 
-[ コントリビューターガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
+[&#x200B; コントリビューターガイド &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
 
 ## よくある質問と？
 
@@ -41,7 +41,7 @@ Adobe CLAを1回送信するだけで済むため、以前に送信したこと�
 見つける必要がありました。 [GitHubのプルリクエストドキュメントを読む](https://docs.github.com/articles/about-pull-requests/)
 プルリクエストの送信について詳しくは、こちらを参照してください。
 
-最後に、[ プルリクエストテンプレート ](PULL_REQUEST_TEMPLATE.md)に従ってください。
+最後に、[&#x200B; プルリクエストテンプレート &#x200B;](PULL_REQUEST_TEMPLATE.md)に従ってください。
 プルリクエストを送信しています！
 
 ## コントリビューターからコミッターへ
@@ -55,7 +55,7 @@ Adobe CLAを1回送信するだけで済むため、以前に送信したこと�
 
 ## セキュリティの問題
 
-セキュリティ上の問題は、この問題トラッカーで報告しないでください。 代わりに、[ セキュリティのエキスパートに問題を報告してください](https://helpx.adobe.com/security/alertus.html)
+セキュリティ上の問題は、この問題トラッカーで報告しないでください。 代わりに、[&#x200B; セキュリティのエキスパートに問題を報告してください](https://helpx.adobe.com/security/alertus.html)
 
 ## 新機能ハイライト
 

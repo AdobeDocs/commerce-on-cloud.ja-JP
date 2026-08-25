@@ -4,10 +4,16 @@ description: Adobe Commerce on cloud infrastructure プロジェクトで、画�
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
 TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 860
@@ -17,7 +23,7 @@ ht-degree: 0%
 
 # 静的コンテンツの導入戦略
 
-静的コンテンツのデプロイメント（SCD）は、画像、スクリプト、CSS、ビデオ、テーマ、ロケール、web ページなど、生成するコンテンツの量と、コンテンツを生成するタイミングに応じて、ストアのデプロイメントプロセスに大きな影響を与えます。 例えば、デフォルトの戦略では、サイトがメンテナンスモードの[ デプロイフェーズ ](process.md#deploy-phase-deploy-phase)中に静的コンテンツが生成されますが、このデプロイメント戦略では、マウントされた`pub/static` ディレクトリにコンテンツを直接書き込むのに時間がかかります。 ニーズに応じて、デプロイメント時間を短縮するのに役立つオプションや戦略がいくつかあります。
+静的コンテンツのデプロイメント（SCD）は、画像、スクリプト、CSS、ビデオ、テーマ、ロケール、web ページなど、生成するコンテンツの量と、コンテンツを生成するタイミングに応じて、ストアのデプロイメントプロセスに大きな影響を与えます。 例えば、デフォルトの戦略では、サイトがメンテナンスモードの[&#x200B; デプロイフェーズ &#x200B;](process.md#deploy-phase-deploy-phase)中に静的コンテンツが生成されますが、このデプロイメント戦略では、マウントされた`pub/static` ディレクトリにコンテンツを直接書き込むのに時間がかかります。 ニーズに応じて、デプロイメント時間を短縮するのに役立つオプションや戦略がいくつかあります。
 
 ## JavaScriptとHTMLのコンテンツを最適化
 
@@ -41,12 +47,12 @@ ht-degree: 0%
 
 ### ビルド時のSCDの設定
 
-最小化されたHTMLを使用してビルド段階で静的コンテンツを生成することは、[**ダウンタイムがゼロ**&#x200B;のデプロイ ](reduce-downtime.md)に最適な設定であり、**理想的な状態**&#x200B;とも呼ばれます。 マウントされたドライブにファイルをコピーする代わりに、`./init/pub/static` ディレクトリからシンボリックリンクを作成します。
+最小化されたHTMLを使用してビルド段階で静的コンテンツを生成することは、[**ダウンタイムがゼロ**&#x200B;のデプロイ &#x200B;](reduce-downtime.md)に最適な設定であり、**理想的な状態**&#x200B;とも呼ばれます。 マウントされたドライブにファイルをコピーする代わりに、`./init/pub/static` ディレクトリからシンボリックリンクを作成します。
 
 静的コンテンツを生成するには、テーマとロケールにアクセスする必要があります。 Adobe Commerceは、ビルド段階でアクセス可能なファイルシステムにテーマを保存しますが、Adobe Commerceはデータベースにロケールを保存します。 データベースは、ビルド フェーズ中に&#x200B;_not_&#x200B;利用できます。 ビルド段階で静的コンテンツを生成するには、`ece-tools` パッケージの`config:dump` コマンドを使用して、ロケールをファイルシステムに移動する必要があります。 ロケールを読み取り、`app/etc/config.php` ファイルに保存します。
 
 >[!NOTE]
->`ece-tools` パッケージで`config:dump` コマンドを実行すると、`config.php` ファイル [にダンプされた設定は、管理者ダッシュボード ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879)でロック（グレー表示）されます。 管理者でこれらの設定を更新する唯一の方法は、ファイルから設定をローカルに削除し、プロジェクトを再デプロイすることです。
+>`ece-tools` パッケージで`config:dump` コマンドを実行すると、`config.php` ファイル [にダンプされた設定は、管理者ダッシュボード &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26879)でロック（グレー表示）されます。 管理者でこれらの設定を更新する唯一の方法は、ファイルから設定をローカルに削除し、プロジェクトを再デプロイすることです。
 >さらに、新しいストア/ストアグループ/web サイトをインスタンスに追加するたびに、`config:dump` コマンドを実行して、データベースが同期していることを確認する必要があります。 `config.php` ファイルにダンプする設定[を選択することもできます](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)。
 >フィールドがグレー表示されていても、この手順の実行が無視されているため、`config.php` ファイルからストア/ストアグループ/web サイト設定を削除すると、ダンプされていない新しいエンティティが次のデプロイメントのデータベースから削除されます。
 
@@ -59,7 +65,7 @@ ht-degree: 0%
    magento-cloud ssh
    ```
 
-1. ロケールをファイルシステムに移動してから、[`config.php` ファイル ](../development/commerce-version.md#create-a-configphp-file)を更新します。
+1. ロケールをファイルシステムに移動してから、[`config.php` ファイル &#x200B;](../development/commerce-version.md#create-a-configphp-file)を更新します。
 
 1. `.magento.env.yaml`設定ファイルには、次の値を含める必要があります。
 
@@ -67,9 +73,9 @@ ht-degree: 0%
    - ビルド ステージの[SKIP_SCD](../environment/variables-build.md#skip_scd)は`false`です
    - [SCD_STRATEGY](../environment/variables-build.md#scd_strategy)は`compact`です
 
-1. `.magento.app.yaml` ファイルの[ デプロイ後のフック ](../application/hooks-property.md)の設定を確認します。
+1. `.magento.app.yaml` ファイルの[&#x200B; デプロイ後のフック &#x200B;](../application/hooks-property.md)の設定を確認します。
 
-1. 理想的な状態](smart-wizards.md)の[ スマートウィザードを実行して、設定を確認します。
+1. 理想的な状態[&#128279;](smart-wizards.md)の スマートウィザードを実行して、設定を確認します。
 
    ```bash
    php ./vendor/bin/ece-tools wizard:ideal-state

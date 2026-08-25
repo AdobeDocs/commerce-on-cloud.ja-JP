@@ -9,10 +9,17 @@ last-substantial-update: 2026-06-11
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
 TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 1694
@@ -44,7 +51,7 @@ ht-degree: 0%
 
 >[!PREREQUISITES]
 >
->- Adobe IDの登録済みユーザー。 ユーザーは[Adobe アカウント ](https://account.adobe.com)に登録し、Cloud プロジェクトに追加する前に[Cloud アカウント ](https://console.adobecommerce.com)を初期化する必要があります。
+>- Adobe IDの登録済みユーザー。 ユーザーは[Adobe アカウント &#x200B;](https://account.adobe.com)に登録し、Cloud プロジェクトに追加する前に[Cloud アカウント &#x200B;](https://console.adobecommerce.com)を初期化する必要があります。
 >- **管理者**&#x200B;の役割を割り当てられたユーザーは、`magento-cloud` CLIでユーザーを管理できません。 **アカウント所有者**&#x200B;の役割を付与されたユーザーのみがユーザーを管理できます。
 
 ## CLIによるユーザーの管理
@@ -150,7 +157,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. _アクセス_ ビューで、**[!UICONTROL Add]**&#x200B;をクリックします。
 
-1. _[!UICONTROL Add User]_フォームに入力します。
+1. _[!UICONTROL Add User]_&#x200B;フォームに入力します。
 
    - ユーザーのメールアドレスを入力します。
 
@@ -186,7 +193,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!NOTE]
 >
->[!DNL Cloud Console]には、[!DNL Legacy Cloud Console] （`https://<region-id>.magento.cloud/projects/<project_id>`）よりも招待状の状態が明示的に表示されます。 表示されるユーザーまたは招待エントリは、ユーザーがすべての環境にすぐにアクセスできるとは限りません。 SSH キーの設定やその他の伝搬手順が必要な場合があります。 [ ユーザー認証要件](#user-authentication-requirements)を参照してください。
+>[!DNL Cloud Console]には、[!DNL Legacy Cloud Console] （`https://<region-id>.magento.cloud/projects/<project_id>`）よりも招待状の状態が明示的に表示されます。 表示されるユーザーまたは招待エントリは、ユーザーがすべての環境にすぐにアクセスできるとは限りません。 SSH キーの設定やその他の伝搬手順が必要な場合があります。 [&#x200B; ユーザー認証要件](#user-authentication-requirements)を参照してください。
 
 ## ユーザー認証の要件
 
@@ -198,7 +205,7 @@ Adobe Commerce on cloud infrastructure プロジェクトでMFAの適用が有�
 
 - **TFA**&#x200B;を有効にする – 2要素認証を設定することで、セキュリティとコンプライアンスの基準を満たします。 [MFAの適用](multi-factor-authentication.md)で構成されたプロジェクトでは、SSHを使用してプロジェクトにアクセスするアカウントにTFAが必要です。
 
-- **SSH キーを有効にする** – クラウドインフラストラクチャのソースコード リポジトリでAdobe Commerceへのアクセスを必要とするユーザーは、アカウントでSSH キーを有効にする必要があります。 [ セキュア接続](../development/secure-connections.md)を参照してください。
+- **SSH キーを有効にする** – クラウドインフラストラクチャのソースコード リポジトリでAdobe Commerceへのアクセスを必要とするユーザーは、アカウントでSSH キーを有効にする必要があります。 [&#x200B; セキュア接続](../development/secure-connections.md)を参照してください。
 
 - **API トークンを作成**：ユーザーは、環境へのSSH アクセスに使用されるAPI トークンを生成する必要があります。 自動化されたプロセスの認証ワークフローを有効にするには、トークンが必要です。
 
@@ -217,7 +224,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
 **ユーザーアカウントでTFAを有効にするには**:
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 
@@ -251,7 +258,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
      >[!WARNING]
      >
-     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
+     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
 
 1. TFA設定が完了したら、**保存**&#x200B;をクリックしてアカウントを更新します。
 
@@ -265,7 +272,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
 Adobe Commerce on cloud infrastructure アカウントのTFA設定は、_マイプロファイル_ ページの&#x200B;_セキュリティ_ セクションから管理できます。
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 
@@ -290,7 +297,7 @@ MFAの適用が有効になっているプロジェクトでは、マシンユ�
 
 **API トークンを作成するには**:
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 
@@ -298,7 +305,7 @@ MFAの適用が有効になっているプロジェクトでは、マシンユ�
 
 1. **[!UICONTROL Create API token]**&#x200B;をクリックして、名前を入力します。例えば、API トークンを使用するマシンユーザーまたは自動プロセスと一致する名前を指定します。
 
-   「![Cloud Console API トークン」タブと「API トークン名を作成」フィールド ](../../assets/api-token-name.png)
+   「![Cloud Console API トークン」タブと「API トークン名を作成」フィールド &#x200B;](../../assets/api-token-name.png)
 
 1. **[!UICONTROL Create API token]**&#x200B;をクリックします。
 

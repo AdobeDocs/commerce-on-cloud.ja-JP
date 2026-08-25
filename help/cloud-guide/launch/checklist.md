@@ -3,10 +3,18 @@ title: チェックリストを起動
 description: サイト立ち上げ時のチェックリストの項目を確認する。
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 1180
@@ -16,17 +24,17 @@ ht-degree: 0%
 
 # チェックリストを起動
 
-実稼動環境にデプロイする前に、[Launch チェックリスト ](../../assets/adobe-commerce-cloud-prelaunch-checklist.pdf)をダウンロードし、これらの手順を使用して、必要なすべての設定とテストが完了したことを確認します。 StarterとProのデプロイメントプロセスの概要（[ ストアのデプロイ ](../deploy/staging-production.md)）を参照してください。
+実稼動環境にデプロイする前に、[Launch チェックリスト &#x200B;](../../assets/adobe-commerce-cloud-prelaunch-checklist.pdf)をダウンロードし、これらの手順を使用して、必要なすべての設定とテストが完了したことを確認します。 StarterとProのデプロイメントプロセスの概要（[&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)）を参照してください。
 
 ## 本番環境での完全テスト
 
-サイト、ストア、環境のあらゆる側面をテストするには、[ デプロイメントのテスト ](../test/staging-and-production.md)を参照してください。 これらのテストには、Fastlyの検証、ユーザー受け入れテスト（UAT）およびパフォーマンステストが含まれます。
+サイト、ストア、環境のあらゆる側面をテストするには、[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md)を参照してください。 これらのテストには、Fastlyの検証、ユーザー受け入れテスト（UAT）およびパフォーマンステストが含まれます。
 
 ## TLSとFastly
 
 Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供しています。 FastlyがHTTPS経由で安全なトラフィックを提供するには、この証明書が必要です。
 
-この証明書を使用するには、Adobeがドメインの検証を完了し、証明書を環境に適用できるように、DNS設定を更新する必要があります。 各環境には、その環境にデプロイされたAdobe Commerce on cloud infrastructure サイトのドメインをカバーする一意の証明書があります。 [Fastlyのセットアップ プロセス ](../cdn/fastly-configuration.md)中に完了し、設定を更新することをお勧めします。
+この証明書を使用するには、Adobeがドメインの検証を完了し、証明書を環境に適用できるように、DNS設定を更新する必要があります。 各環境には、その環境にデプロイされたAdobe Commerce on cloud infrastructure サイトのドメインをカバーする一意の証明書があります。 [Fastlyのセットアップ プロセス &#x200B;](../cdn/fastly-configuration.md)中に完了し、設定を更新することをお勧めします。
 
 ## 実稼動設定を使用したDNS設定の更新
 
@@ -40,7 +48,7 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
 
   通常、顧客テクニカルアドバイザーと協力して、ストアに必要なすべてのトップレベルドメインとサブドメインを追加します。 実稼動環境のドメインを追加または変更するには、[Adobe Commerce サポートチケットを送信](https://support.magento.com/hc/en-us/articles/360019088251)してください。 プロジェクト設定が更新されたという確認を待ちます。
 
-  スタータープロジェクトでは、ドメインをプロジェクトに追加する必要があります。 [ ドメインの管理](../cdn/fastly-custom-cache-configuration.md#manage-domains)を参照してください。
+  スタータープロジェクトでは、ドメインをプロジェクトに追加する必要があります。 [&#x200B; ドメインの管理](../cdn/fastly-custom-cache-configuration.md#manage-domains)を参照してください。
 
 - 本番環境用にプロビジョニングされたSSL/TLS証明書。
 
@@ -96,7 +104,7 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **メモ**：管理者からベース URLを更新することもできます。 _Adobe Commerce ストアおよび購入エクスペリエンスガイド_&#x200B;の[ ストア URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)を参照してください。
+   **メモ**：管理者からベース URLを更新することもできます。 _Adobe Commerce ストアおよび購入エクスペリエンスガイド_&#x200B;の[&#x200B; ストア URL](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)を参照してください。
 
 1. サイトが更新されるまで数分待ちます。
 
