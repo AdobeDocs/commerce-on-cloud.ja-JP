@@ -1,20 +1,14 @@
 ---
 title: ローンチステップ
-description: サイトの立ち上げを完了する方法を説明します。
+description: サポートチケット、DNS カットオーバー、サイト検証など、Adobe Commerce クラウドインフラストラクチャストアを立ち上げるための最後の手順を完了する方法について説明します。
 exl-id: e7a3cd6b-32de-4fd0-9fbd-da8299e77114
 TQID: https://experienceleague.adobe.com/Nl8YFJUZUkxtsm0eqBgJklsTysKuUE31PkEDsJmvBMU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 347
+source-wordcount: 363
 ht-degree: 0%
 
 ---
@@ -45,7 +39,7 @@ Adobe Commerce サポートに連絡し、サイト立ち上げ（公開開始�
 
 ## ライブストアのテスト
 
-ライブストアでいくつかのUAT テストを完了して、すべてが読み込まれ、アクションが正しく完了していることを確認します。 テストの一覧については、[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md#complete-uat-testing)を参照してください。
+ライブストアでいくつかのUAT テストを完了して、すべてが読み込まれ、アクションが正しく完了していることを確認します。 テストの一覧については、[ デプロイメントのテスト ](../test/staging-and-production.md#complete-uat-testing)を参照してください。
 
 ## 起動後
 
