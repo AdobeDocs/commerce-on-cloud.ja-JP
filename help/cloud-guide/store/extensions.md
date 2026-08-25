@@ -4,19 +4,13 @@ description: Adobe Commerce on cloud infrastructureでの拡張機能のイン�
 feature: Cloud, Extensions, Upgrade
 exl-id: 88c5ea06-fe79-4105-8b67-f16e9ef06210
 TQID: https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 672
+source-wordcount: 675
 ht-degree: 0%
 
 ---
@@ -39,11 +33,11 @@ Adobe Commerce アプリケーション機能を拡張するには、[Commerce M
 
 1. 右上隅で、ユーザー名をクリックし、**マイプロファイル**&#x200B;を選択します。
 
-   ![&#x200B; マーケットプレイスアカウントにアクセス &#x200B;](../../assets/marketplace/my-profile.png)
+   ![ マーケットプレイスアカウントにアクセス ](../../assets/marketplace/my-profile.png)
 
 1. _自分のアカウント_ ページで、**自分の購入履歴**&#x200B;をクリックします。
 
-   ![&#x200B; マーケットプレイス購入履歴](../../assets/marketplace/my-purchases.png)
+   ![ マーケットプレイス購入履歴](../../assets/marketplace/my-purchases.png)
 
 1. _購入履歴_ ページで、購入したモジュールを選択し、**技術情報**&#x200B;をクリックします。
 
@@ -61,7 +55,7 @@ Adobe Commerce アプリケーション機能を拡張するには、[Commerce M
 
 ## 拡張機能のインストール
 
-Adobeでは、拡張機能を実装に追加する際に、開発ブランチで作業することをお勧めします。 拡張機能をインストールすると、拡張機能の名前（`<VendorName>_<ComponentName>`）が[`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=ja) ファイルに自動的に挿入されます。 ファイルを直接編集する必要はありません。
+Adobeでは、拡張機能を実装に追加する際に、開発ブランチで作業することをお勧めします。 拡張機能をインストールすると、拡張機能の名前（`<VendorName>_<ComponentName>`）が[`app/etc/config.php`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/deployment-files) ファイルに自動的に挿入されます。 ファイルを直接編集する必要はありません。
 
 **拡張機能をインストールするには**:
 
@@ -167,7 +161,7 @@ Composerを使用して拡張機能を追加すると、デプロイメントプ
 
 ## 拡張機能のアップグレード
 
-続行する前に、拡張機能のコンポーザー名とバージョンが必要です。 また、拡張機能がプロジェクトとAdobe Commerceのバージョンと互換性があることを確認します。 特に、[開始する前に、必要なPHP バージョン &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を確認してください。
+続行する前に、拡張機能のコンポーザー名とバージョンが必要です。 また、拡張機能がプロジェクトとAdobe Commerceのバージョンと互換性があることを確認します。 特に、[開始する前に、必要なPHP バージョン ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を確認してください。
 
 **拡張機能を更新するには**:
 
@@ -201,4 +195,4 @@ Composerを使用して拡張機能を追加すると、デプロイメントプ
    git push origin <branch-names>
    ```
 
-エラーが発生した場合は、[&#x200B; コンポーネントエラーからの回復](../deploy/recover-failed-deployment.md)を参照してください。 Adobe Commerceでの拡張機能の使用について詳しくは、_管理者ガイド_&#x200B;の[拡張機能](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=ja)を参照してください。
+エラーが発生した場合は、[ コンポーネントエラーからの回復](../deploy/recover-failed-deployment.md)を参照してください。 Adobe Commerceでの拡張機能の使用について詳しくは、_管理者ガイド_&#x200B;の[拡張機能](https://experienceleague.adobe.com/en/docs/commerce-admin/start/resources/extensions)を参照してください。

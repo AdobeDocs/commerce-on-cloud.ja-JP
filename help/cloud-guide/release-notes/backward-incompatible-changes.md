@@ -5,17 +5,12 @@ feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
 TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 822
+source-wordcount: 823
 ht-degree: 0%
 
 ---
@@ -28,7 +23,7 @@ ht-degree: 0%
 
 以前は`ece-tools` パッケージに含まれていた一部の機能が、個別のパッケージで提供されるようになりました。 これらのパッケージは、`ece-tools`のコンポーザー依存関係です。これらは、e ツールのインストールまたは更新時に自動的にインストールおよび更新されます。
 
-新しいアーキテクチャは、インストールプロセスやアップデートプロセスに影響を与えることはありません。 ただし、Adobe Commerce on cloud infrastructure プロジェクトを使用する場合は、コマンドの構文やプロセスを変更する必要がある場合があります。 詳しくは、後方互換性のない次の変更情報と[Cloud Tools Suite リリースノート &#x200B;](cloud-tools-suite.md)を参照してください。
+新しいアーキテクチャは、インストールプロセスやアップデートプロセスに影響を与えることはありません。 ただし、Adobe Commerce on cloud infrastructure プロジェクトを使用する場合は、コマンドの構文やプロセスを変更する必要がある場合があります。 詳しくは、後方互換性のない次の変更情報と[Cloud Tools Suite リリースノート ](cloud-tools-suite.md)を参照してください。
 
 ### サービスバージョン要件の変更
 
@@ -36,7 +31,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->PHPのバージョン要件が変更されたため、`ece-tools` 2002.1.0では、Adobe Commerce 2.1.15以降を実行しているクラウドインフラストラクチャプロジェクト上のAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合は、`ece-tools` 2002.1.0に更新する前に[&#x200B; アップグレード &#x200B;](../development/commerce-version.md)する必要があります。
+>PHPのバージョン要件が変更されたため、`ece-tools` 2002.1.0では、Adobe Commerce 2.1.15以降を実行しているクラウドインフラストラクチャプロジェクト上のAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合は、`ece-tools` 2002.1.0に更新する前に[ アップグレード ](../development/commerce-version.md)する必要があります。
 
 ### 環境設定の変更
 
@@ -67,7 +62,7 @@ ht-degree: 0%
 
 ## クラウドパッチの変更
 
-- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[&#x200B; ソフトウェアのダウンロード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=ja) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
+- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[ ソフトウェアのダウンロード ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
 
 - **パッチ適用コマンドの更新** – パッチを適用するコマンドを`vendor/bin/ece-tools` ディレクトリから`vendor/bin/ece-patches` ディレクトリに移動しました。 このコマンドを使用してパッチを手動で適用する場合は、新しいパスを使用します。
 
@@ -83,45 +78,45 @@ ht-degree: 0%
 
 - **Commerce用Cloud Docker コマンドの変更**-
 
-   - **Docker ビルド操作のCommerce コマンド用Cloud Dockerの更新**-Commerce コマンド用Cloud Dockerを`vendor/bin/ece-tools` ディレクトリから`vendor/bin/ece-docker` ディレクトリに移動しました。 新しいパスを使用するようにスクリプトとコマンドを更新します。
+  - **Docker ビルド操作のCommerce コマンド用Cloud Dockerの更新**-Commerce コマンド用Cloud Dockerを`vendor/bin/ece-tools` ディレクトリから`vendor/bin/ece-docker` ディレクトリに移動しました。 新しいパスを使用するようにスクリプトとコマンドを更新します。
 
-     `ece-tools` 2002.1.0にアップグレードした後、次のコマンドを使用して、使用可能な`ece-docker` コマンドを表示します。
+    `ece-tools` 2002.1.0にアップグレードした後、次のコマンドを使用して、使用可能な`ece-docker` コマンドを表示します。
 
-     ```bash
-     php ./vendor/bin/ece-docker list
-     ```
+    ```bash
+    php ./vendor/bin/ece-docker list
+    ```
 
-   - **Cloud docker-compose コマンドの更新** – コマンドファイルへのパスの名前を`./bin/docker`から`./bin/magento-docker`に変更しました。 新しいパスを使用するようにスクリプトとコマンドを更新します。
+  - **Cloud docker-compose コマンドの更新** – コマンドファイルへのパスの名前を`./bin/docker`から`./bin/magento-docker`に変更しました。 新しいパスを使用するようにスクリプトとコマンドを更新します。
 
-   - **Cron コンテナがデフォルトのDocker設定に含まれなくなりました** – 次に、`ece-docker build:compose` コマンドに`--with-cron` オプションを追加して、Cron コンテナをDocker環境設定に含める必要があります。 _Cloud Docker for Commerce_ ガイドの「[Cron ジョブの管理](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)」を参照してください。
+  - **Cron コンテナがデフォルトのDocker設定に含まれなくなりました** – 次に、`ece-docker build:compose` コマンドに`--with-cron` オプションを追加して、Cron コンテナをDocker環境設定に含める必要があります。 _Cloud Docker for Commerce_ ガイドの「[Cron ジョブの管理](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs)」を参照してください。
 
-     cron ジョブを持つ以前に生成されたコンテナを持つスクリプトが、cron コンテナを持たなくなりました。
+    cron ジョブを持つ以前に生成されたコンテナを持つスクリプトが、cron コンテナを持たなくなりました。
 
-   - **一時コンテナを使用** – 以前のバージョンでは、`bin/magento-docker` コマンド操作で作成されたコンテナは削除されなかったため、他の操作に使用できました。 これで、`magento-docker` コマンドは、コマンドの完了後に作成したコンテナをすべて削除します。
+  - **一時コンテナを使用** – 以前のバージョンでは、`bin/magento-docker` コマンド操作で作成されたコンテナは削除されなかったため、他の操作に使用できました。 これで、`magento-docker` コマンドは、コマンドの完了後に作成したコンテナをすべて削除します。
 
-     docker-compose操作によって作成されたコンテナを保持する場合は、`bin/magento-docker` コマンドの代わりに`docker-compose run` コマンドを使用します。
+    docker-compose操作によって作成されたコンテナを保持する場合は、`bin/magento-docker` コマンドの代わりに`docker-compose run` コマンドを使用します。
 
-   - **デプロイ後のフックの実行**- `cloud-deploy` コマンドは、デプロイ後のフックを実行しなくなりました。 デプロイ後にデプロイ後のフックを実行するには、新しい`cloud-post-deploy` コマンドを使用します。 スクリプトを更新して、デプロイ後のフックを実行するコマンドを追加します。
+  - **デプロイ後のフックの実行**- `cloud-deploy` コマンドは、デプロイ後のフックを実行しなくなりました。 デプロイ後にデプロイ後のフックを実行するには、新しい`cloud-post-deploy` コマンドを使用します。 スクリプトを更新して、デプロイ後のフックを実行するコマンドを追加します。
 
-     ```shell
-     bin/magento-docker ece-deploy
-     bin/magento-docker ece-post-deploy
-     ```
+    ```shell
+    bin/magento-docker ece-deploy
+    bin/magento-docker ece-post-deploy
+    ```
 
-     または、`docker-compose` コマンドを直接使用する場合は、デプロイ コマンドの後に`docker-compose run deploy cloud-post-deploy` コマンドを実行します。
+    または、`docker-compose` コマンドを直接使用する場合は、デプロイ コマンドの後に`docker-compose run deploy cloud-post-deploy` コマンドを実行します。
 
 - **データベースを更新しています**- データベースコンテナは`magento-db`の永続的なDocker ボリュームに保存されるようになりました。 Docker環境を更新すると、データベースは自動的に削除されなくなります。 必要に応じて、次のいずれかのコマンドを使用して手動で削除します。
 
-   - `magento-db` コンテナを削除します。
+  - `magento-db` コンテナを削除します。
 
-     ```bash
-     docker volume rm magento-db
-     ```
+    ```bash
+    docker volume rm magento-db
+    ```
 
-   - Docker コンテナをシャットダウンする際に、関連するすべてのボリュームを削除します。
+  - Docker コンテナをシャットダウンする際に、関連するすべてのボリュームを削除します。
 
-     ```bash
-     docker-compose down -v
-     ```
+    ```bash
+    docker-compose down -v
+    ```
 
 - **アーカイブ ファイルとバックアップ ファイルの同期設定を上書きする**-docker-syncまたはmutagenを使用する場合、アーカイブ ファイルとバックアップ ファイルの同期が行われなくなりました（SQL、GZ、ZIP、BZ2）。 これらのファイルタイプのデフォルトのファイル同期は、ファイル名を別の拡張子で終わるように変更することで上書きできます。 例：`synchronize-me.zip-backup`

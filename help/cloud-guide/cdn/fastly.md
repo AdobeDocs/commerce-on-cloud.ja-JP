@@ -4,26 +4,14 @@ description: Adobe Commerce on cloud インフラストラクチャに含まれ�
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
 exl-id: 429b6762-0b01-438b-a962-35376306895b
 TQID: https://experienceleague.adobe.com/Lq2rzR14xlcj5y3ycfAWGHEKAIxboekZX8YtyOJPQXA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-subfeature_v2:
-  - id: f2261633-201d-46c5-8a66-999e70527a83
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: bd989d82-1e15-4534-88db-f1f51dd77ffaid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2: id: f2261633-201d-46c5-8a66-999e70527a83
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1667
+source-wordcount: 1650
 ht-degree: 0%
 
 ---
@@ -32,7 +20,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Cloud PlatformにデプロイされたAdobe Commerce サイトのPCI認定を維持するには、Starter メインブランチ、Pro実稼動、およびPro ステージング環境でFastlyをセットアップします。 ヘッドレス実装でAdobe Commerceを使用する場合は、GraphQLの応答をキャッシュするためにFastlyを使用することを強くお勧めします。 *GraphQL デベロッパーガイド*&#x200B;の「[Fastly](https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly)でのキャッシュ」を参照してください。
+>Cloud PlatformにデプロイされたAdobe Commerce サイトのPCI認定を維持するには、Starter メインブランチ、Pro実稼動、およびPro ステージング環境でFastlyをセットアップします。 ヘッドレス実装でAdobe Commerceを使用する場合は、GraphQLの応答をキャッシュするためにFastlyを使用することを強くお勧めします。 *GraphQL デベロッパーガイド*&#x200B;の「[Fastly](https://developer.adobe.com/commerce/webapi/graphql/usage/caching#caching-with-fastly)でのキャッシュ」を参照してください。
 
 Fastlyは、Adobe Commerceのクラウドインフラプロジェクト向けに、コンテンツ配信処理を最適化および保護するために次のサービスを提供しています。 これらのサービスは、Adobe Commerce on cloud インフラストラクチャに含まれており、追加費用はかかりません。
 
@@ -40,27 +28,27 @@ Fastlyは、Adobe Commerceのクラウドインフラプロジェクト向けに
 
 - **キャッシュ管理**：帯域幅の負荷とコストを削減するために設定したバックエンド データセンターに、サイト ページ、アセット、CSSなどをキャッシュします
 
-   - [Fastly カスタム VCL スニペット &#x200B;](fastly-vcl-custom-snippets.md) （Varnish 2.1準拠）を使用して、リクエストに対するキャッシュの応答方法を変更します
+  - [Fastly カスタム VCL スニペット ](fastly-vcl-custom-snippets.md) （Varnish 2.1準拠）を使用して、リクエストに対するキャッシュの応答方法を変更します
 
-   - [GeoIP サービス サポートの設定](fastly-custom-cache-configuration.md#configure-geoip-handling)
+  - [GeoIP サービス サポートの設定](fastly-custom-cache-configuration.md#configure-geoip-handling)
 
-   - [暗号化されていないリクエストをTLSに強制的に送信する](fastly-custom-cache-configuration.md#force-tls)
+  - [暗号化されていないリクエストをTLSに強制的に送信する](fastly-custom-cache-configuration.md#force-tls)
 
-   - [Fastlyのタイムアウト &#x200B;](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定をカスタマイズして、一括操作リクエストに対する503件の応答を防ぎます
+  - [Fastlyのタイムアウト ](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定をカスタマイズして、一括操作リクエストに対する503件の応答を防ぎます
 
-   - [&#x200B; カスタムエラー応答ページを作成](fastly-custom-response.md)
+  - [ カスタムエラー応答ページを作成](fastly-custom-response.md)
 
 - **セキュリティ** - Adobe Commerce サイトに対してFastly サービスを有効にした後、サイトとネットワークを保護するために追加のセキュリティ機能を利用できます。
 
-   - [Web Application Firewall](fastly-waf-service.md) （WAF）：本番Adobe Commerceをクラウド インフラストラクチャ サイトおよびネットワーク上で損傷させる前に、悪意のあるトラフィックをブロックするためのPCI準拠の保護を提供するマネージド web アプリケーション ファイアウォール サービス。 WAF サービスは、ProおよびStarter Production環境でのみ使用できます。
+  - [Web Application Firewall](fastly-waf-service.md) （WAF）：本番Adobe Commerceをクラウド インフラストラクチャ サイトおよびネットワーク上で損傷させる前に、悪意のあるトラフィックをブロックするためのPCI準拠の保護を提供するマネージド web アプリケーション ファイアウォール サービス。 WAF サービスは、ProおよびStarter Production環境でのみ使用できます。
 
-   - [分散型サービス拒否（DDoS）保護](#ddos-protection) - Ping of Death、スマーフ攻撃、その他のICMP ベースのフラッド攻撃などの一般的なレイヤ 3および4攻撃に対する組み込みのDDoS保護機能。 組み込みの保護には、レイヤ 7攻撃に対する保護は含まれていません。 [DDoS保護対策](#ddos-protection)を参照してください。
+  - [分散型サービス拒否（DDoS）保護](#ddos-protection) - Ping of Death、スマーフ攻撃、その他のICMP ベースのフラッド攻撃などの一般的なレイヤ 3および4攻撃に対する組み込みのDDoS保護機能。 組み込みの保護には、レイヤ 7攻撃に対する保護は含まれていません。 [DDoS保護対策](#ddos-protection)を参照してください。
 
-   - [SSL/TLS証明書](fastly-configuration.md#provision-ssltls-certificates):Fastly サービスでは、HTTPS経由で安全なトラフィックを提供するためにSSL/TLS証明書が必要です。
+  - [SSL/TLS証明書](fastly-configuration.md#provision-ssltls-certificates):Fastly サービスでは、HTTPS経由で安全なトラフィックを提供するためにSSL/TLS証明書が必要です。
 
-     Adobe Commerceでは、ステージング環境と実稼動環境ごとにドメイン検証済みのLet&#39;s Encrypt SSL/TLS証明書を提供しています。 Adobe Commerceは、Fastlyの設定プロセスにおいて、ドメインの検証と証明書のプロビジョニングを完了します。
+    Adobe Commerceでは、ステージング環境と実稼動環境ごとにドメイン検証済みのLet&#39;s Encrypt SSL/TLS証明書を提供しています。 Adobe Commerceは、Fastlyの設定プロセスにおいて、ドメインの検証と証明書のプロビジョニングを完了します。
 
-- **オリジンクローキング** – すべてのトラフィックがFastlyを経由することを保証し、オリジンサーバーへの直接アクセスをブロックするセキュリティ機能。 以下の「[発信元のクローキング &#x200B;](#origin-cloaking)」セクションを参照してください。
+- **オリジンクローキング** – すべてのトラフィックがFastlyを経由することを保証し、オリジンサーバーへの直接アクセスをブロックするセキュリティ機能。 以下の「[発信元のクローキング ](#origin-cloaking)」セクションを参照してください。
 
 - **[画像の最適化](fastly-image-optimization.md)** - サーバーがより効率的に注文とコンバージョンを処理できるように、画像処理とサイズ変更の負荷をFastly サービスにオフロードします。
 
@@ -108,9 +96,9 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ## Fastly CDN module for Magento 2
 
-クラウドインフラストラクチャ上のAdobe Commerce用Fastly サービスでは、次の環境にインストールされているMagento 2&rbrack;用の&lbrack;Fastly CDN モジュールを使用します：Pro ステージングおよび実稼動、スタータープロダクション（`master` ブランチ）。
+クラウドインフラストラクチャ上のAdobe Commerce用Fastly サービスでは、次の環境にインストールされているMagento 2]用の[Fastly CDN モジュールを使用します：Pro ステージングおよび実稼動、スタータープロダクション（`master` ブランチ）。
 
-Adobe Commerce プロジェクトの最初のプロビジョニングまたはアップグレード時に、Adobeは最新バージョンのFastly CDN モジュールをステージング環境および実稼動環境にインストールします。 Fastlyがモジュールの更新をリリースすると、環境の管理者に通知が届きます。 Adobeでは、最新リリースを使用するように環境を更新することをお勧めします。 [Fastlyのアップグレード &#x200B;](fastly-configuration.md#upgrade-the-fastly-module)を参照してください。
+Adobe Commerce プロジェクトの最初のプロビジョニングまたはアップグレード時に、Adobeは最新バージョンのFastly CDN モジュールをステージング環境および実稼動環境にインストールします。 Fastlyがモジュールの更新をリリースすると、環境の管理者に通知が届きます。 Adobeでは、最新リリースを使用するように環境を更新することをお勧めします。 [Fastlyのアップグレード ](fastly-configuration.md#upgrade-the-fastly-module)を参照してください。
 
 ## Fastlyのサービスアカウントと認証情報
 
@@ -122,13 +110,13 @@ Adobe Commerce on cloud インフラストラクチャプロジェクトには�
 
 ### Fastly API トークンの変更
 
-Adobe Commerce サポートチケットを送信して、新しいFastly API トークン資格情報[が検証に失敗した場合、期限切れになった場合、または侵害されたと思われる場合に発行します](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)。
+Adobe Commerce サポートチケットを送信して、新しいFastly API トークン資格情報[が検証に失敗した場合、期限切れになった場合、または侵害されたと思われる場合に発行します](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials)。
 
 新しいトークンを受け取ったら、新しいトークンを使用するようにステージング環境または実稼動環境を更新します。
 
 **Fastly API トークン資格情報を変更するには**:
 
-1. 新しいFastly API資格情報をリクエストする[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信します。
+1. 新しいFastly API資格情報をリクエストする[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
 
    Adobe Commerce on cloud インフラストラクチャプロジェクト IDと、新しい資格情報を必要とする環境を含めます。
 
@@ -176,18 +164,16 @@ DDOS保護機能は、Fastly CDN サービスに組み込まれています。 A
 
 >[!NOTE]
 >
->レイヤ 7攻撃に対する保護は、Adobe Commerceと統合されたFastly CDN サービスではカバーされていません。 レイヤ 7攻撃に対する保護のヒントについては、*Adobe Commerce ナレッジベース*&#x200B;の[DDoS攻撃の確認](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli)および[悪意のある攻撃をブロックする方法](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)を参照してください。
+>レイヤ 7攻撃に対する保護は、Adobe Commerceと統合されたFastly CDN サービスではカバーされていません。 レイヤ 7攻撃に対する保護のヒントについては、*Adobe Commerce ナレッジベース*&#x200B;の[悪意のある攻撃をブロックする方法](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level)を参照してください。
 
 <!--Link definitions-->
 
-[Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
-
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=ja
+[Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching#caching-with-fastly
 
 [Fastly CDN module for Magento 2]: https://github.com/fastly/fastly-magento2
 
 [Fastly サポートチケット]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=ja
+[How to block malicious traffic]: https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level
 
 [ドメインの操作]: https://docs.fastly.com/en/guides/working-with-domains

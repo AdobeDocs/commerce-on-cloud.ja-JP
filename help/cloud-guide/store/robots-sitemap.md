@@ -4,16 +4,12 @@ description: Adobe Commerce on cloud infrastructureにサイトマップと検�
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
 TQID: https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 612
+source-wordcount: 616
 ht-degree: 0%
 
 ---
@@ -30,7 +26,7 @@ Adobe Commerce クラウド基盤では、`var`、`pub/media`、`pub/static`、`
 
 `robots.txt` ファイルは、オンデマンドで`robots.txt` コンテンツを生成し、データベースに保存するため、生成する必要はありません。 `<domain.your.project>/robots.txt`または`<domain.your.project>/robots` リンクを使用すると、ブラウザーでコンテンツを表示できます。
 
-これには、ECE-Tools バージョン 2002.0.12以降と、更新された`.magento.app.yaml` ファイルが必要です。 これらのルールの例については、[magento-cloud リポジトリ &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49)を参照してください。
+これには、ECE-Tools バージョン 2002.0.12以降と、更新された`.magento.app.yaml` ファイルが必要です。 これらのルールの例については、[magento-cloud リポジトリ ](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49)を参照してください。
 
 **バージョン 2.2以降**&#x200B;で`sitemap.xml` ファイルを生成するには：
 
@@ -57,15 +53,15 @@ Adobe Commerce クラウド基盤では、`var`、`pub/media`、`pub/static`、`
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 
-ドメインが異なり、個別のサイトマップが必要な場合は、VCLを作成して適切なサイトマップにルーティングできます。 前述のように、管理パネルで`sitemap.xml` ファイルを生成し、カスタム Fastly VCL スニペットを作成してリダイレクトを管理します。 [&#x200B; カスタム Fastly VCL スニペット &#x200B;](../cdn/fastly-vcl-custom-snippets.md)を参照してください。
+ドメインが異なり、個別のサイトマップが必要な場合は、VCLを作成して適切なサイトマップにルーティングできます。 前述のように、管理パネルで`sitemap.xml` ファイルを生成し、カスタム Fastly VCL スニペットを作成してリダイレクトを管理します。 [ カスタム Fastly VCL スニペット ](../cdn/fastly-vcl-custom-snippets.md)を参照してください。
 
 >[!NOTE]
 >
-> カスタム VCL スニペットは、Admin UIまたはFastly APIを使用してアップロードできます。 [&#x200B; カスタム VCL スニペットの例とチュートリアル &#x200B;](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code)を参照してください。
+> カスタム VCL スニペットは、Admin UIまたはFastly APIを使用してアップロードできます。 [ カスタム VCL スニペットの例とチュートリアル ](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code)を参照してください。
 
 ### リダイレクトにFastly VCL スニペットを使用する
 

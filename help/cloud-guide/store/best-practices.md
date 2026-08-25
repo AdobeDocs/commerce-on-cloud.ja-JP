@@ -4,37 +4,30 @@ description: Adobe Commerce on cloud infrastructureでストアを構成する�
 feature: Cloud, Best Practices
 exl-id: ae7da73b-f874-4623-bf29-821ee0a00eb9
 TQID: https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1178
+source-wordcount: 1185
 ht-degree: 0%
 
 ---
 
 # ストア設定のベストプラクティス
 
-ストア、サイト、およびweb サイトの設定について詳しくは、[Adobe Commerce ユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=ja)を参照してください。 このページでは、ストアやサイトを構成するためのベストプラクティス、役立つ情報、ガイドラインを紹介し、長期的にバージョン間で投稿するための追加コンテンツを提供します。
+ストア、サイト、およびweb サイトの設定について詳しくは、[Adobe Commerce ユーザーガイド ](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)を参照してください。 このページでは、ストアやサイトを構成するためのベストプラクティス、役立つ情報、ガイドラインを紹介し、長期的にバージョン間で投稿するための追加コンテンツを提供します。
 
 ## マーケティング施策とプロモーション
 
 この情報は、Adobe Commerce on cloud infrastructure 2.1.Xおよび2.2.Xに役立ちます。
 
-キャンペーンとプロモーションを作成するには、[&#x200B; コンテンツステージング &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=ja)でオプションと設定を作成します。 この機能を使用すると、顧客販売のためにキャンペーンを公開する前に、キャンペーンを作成およびプレビューできます。 次の情報が役立ちます。 詳しい手順については、リンクされたAdobe Commerce ユーザーガイドの内容を参照してください。
+キャンペーンとプロモーションを作成するには、[ コンテンツステージング ](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging)でオプションと設定を作成します。 この機能を使用すると、顧客販売のためにキャンペーンを公開する前に、キャンペーンを作成およびプレビューできます。 次の情報が役立ちます。 詳しい手順については、リンクされたAdobe Commerce ユーザーガイドの内容を参照してください。
 
 _キャンペーン_&#x200B;は、季節ごとのセールスや新製品ラインなどのマーケティングイベントです。 各キャンペーンには、カスタムテーマ、コンテンツのブロック、コンテンツを制御および表示するウィジェット、価格ルールに関連するプロモーションなどが含まれます。 キャンペーンの広範な性質により、コンテンツのステージングを通じて開始日と終了日を設定してキャンペーンを作成します。
 
-_プロモーション_&#x200B;では、割引、1回限りのオファー、クーポン、初回購入者へのインセンティブなどが提供されます。 これらのプロモーションは、_価格規則_&#x200B;として作成し、顧客に購入を促すための条件、割引、オプションを設定します。 [&#x200B; ショッピングカート &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=ja)または[&#x200B; カタログ &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=ja)で価格ルールを作成し、バナーや報酬ポイントなどのオプションを追加できます。 プロモーションの施策をスケジュールし、新製品ラインや季節の売上などの主要イベントに価格ルールを適用することができます。
+_プロモーション_&#x200B;では、割引、1回限りのオファー、クーポン、初回購入者へのインセンティブなどが提供されます。 これらのプロモーションは、_価格規則_&#x200B;として作成し、顧客に購入を促すための条件、割引、オプションを設定します。 [ ショッピングカート ](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart)または[ カタログ ](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog)で価格ルールを作成し、バナーや報酬ポイントなどのオプションを追加できます。 プロモーションの施策をスケジュールし、新製品ラインや季節の売上などの主要イベントに価格ルールを適用することができます。
 
 プロモーションとキャンペーンの作成、更新、管理に役立つヒントを以下に示します。
 
@@ -47,7 +40,7 @@ _プロモーション_&#x200B;では、割引、1回限りのオファー、ク
 
 この情報は、Adobe Commerce on cloud infrastructure 2.1.Xおよび2.2.Xに役立ちます。
 
-通常、製品の[詳細価格](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=ja)は、管理者の&#x200B;**製品** > **カタログ**&#x200B;領域から設定できます。 ステージング済みコンテンツを使用して、プロモーションとキャンペーンに価格を追加するには、いくつかの追加ステップを完了します。
+通常、製品の[詳細価格](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/pricing/pricing-advanced)は、管理者の&#x200B;**製品** > **カタログ**&#x200B;領域から設定できます。 ステージング済みコンテンツを使用して、プロモーションとキャンペーンに価格を追加するには、いくつかの追加ステップを完了します。
 
 詳細な価格設定を編集し、コンテンツステージングを更新するには：
 
@@ -60,17 +53,17 @@ _プロモーション_&#x200B;では、割引、1回限りのオファー、ク
 1. プロモーションを保存します。 非アクティブな初期キャンペーンが作成されます。
 1. キャンペーンの特別価格、プロモーション名、通常価格、予定日付範囲を確認するには、「プレビュー」を使用します。
 
-その他の手順については、「[&#x200B; カタログ価格ルールの変更をスケジュール &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=ja)」の手順に進むことができます。 「**次へ**」をクリックして、手順を順を追って説明します。
+その他の手順については、「[ カタログ価格ルールの変更をスケジュール ](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes)」の手順に進むことができます。 「**次へ**」をクリックして、手順を順を追って説明します。
 
 ## 価格ルール
 
 プライスルールには、マーケティングの想像力のように、ロジックや条件が無制限に含まれます。 人気のある例には、「Buy One Get One Free」、「Buy One Get One 50% Off」、「100 ドル以上の注文で25 ドル OFF」などがあります。
 
-価格規則を作成するには、[Adobe Commerce ユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=ja)を参照してください。
+価格規則を作成するには、[Adobe Commerce ユーザーガイド ](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create)を参照してください。
 
 次に、初回注文のみ割引の価格ルールを作成する例を示します。 この割引では、次の操作を行う必要があります。
 
-* 条件が[顧客セグメント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/customers/segments/customer-segment-price-rule)の価格ルールを作成します。合計注文数が1未満です
+* 条件が[顧客セグメント ](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule)の価格ルールを作成します。合計注文数が1未満です
 * この顧客セグメントを条件として買い物かごルールに追加します
 * オプション – 特定のSKUまたはカテゴリーの製品に割引を適用するための条件やルールを追加して、集中的な購入に使用できます
 
@@ -90,15 +83,15 @@ Adobe Commerce on cloud infrastructureを1回実装して、複数のストア�
 
 * 英語とスペイン語のロケール用に1つのストアと2つのビューを持つ単一のweb サイト。 記事データ、顧客、チェックアウト、ショッピングカートはすべて共有されます。
 
-  ![&#x200B; ストアの例1](../../assets/example-store1.png)
+  ![ ストアの例1](../../assets/example-store1.png)
 
 * 女性用の衣料品店を持つ単一のweb サイトには、英語とスペイン語の2つのビューがあります。 子供服のお店は、英語で単一のストアビューが含まれています。 記事データ、顧客、チェックアウト、ショッピングカートはすべて共有されます。 ストアには、異なるドメインとテーマがある場合があります。
 
-  ![&#x200B; ストアの例2](../../assets/example-store2.png)
+  ![ ストアの例2](../../assets/example-store2.png)
 
 * 衣料品用と家庭用品用のふたつのweb サイト。カタログや別々の記事、顧客データ、ショッピングカートが異なる。 各web サイトには、記事、顧客データ、チェックアウト、ショッピングカートなどを共有する複数の実店舗とビューを持つことができます。
 
-  ![&#x200B; ストアの例3](../../assets/example-store3.png)
+  ![ ストアの例3](../../assets/example-store3.png)
 
 >[!WARNING]
 >

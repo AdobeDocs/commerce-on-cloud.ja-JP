@@ -5,19 +5,13 @@ feature: Cloud, Observability
 topic: Performance
 exl-id: b9d806c4-f659-4e10-8dcb-b320a61de5e1
 TQID: https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 896
 ht-degree: 0%
 
 ---
@@ -28,7 +22,7 @@ New Relicは、PHP エージェントを使用して、インフラストラク�
 
 _APM &amp; Services_ ページで、**概要**&#x200B;を選択して、アプリケーションに関する取引情報を表示します。 このビューは、潜在的な障害を特定し、アプリケーションとサービスの全体的な健全性を確認するのに役立ちます。
 
-![Cloud プロジェクト New Relicの概要ページ &#x200B;](../../assets/new-relic/dashboard.png)
+![Cloud プロジェクト New Relicの概要ページ ](../../assets/new-relic/dashboard.png)
 
 このビューから、応答が遅い、ボトルネック、アプリケーションスループット、web エラーなどが発生したトランザクションを追跡できます。
 
@@ -42,7 +36,7 @@ _APM &amp; Services_ ページで、**概要**&#x200B;を選択して、アプ�
 
 >[!TIP]
 >
->このデータを使用してアプリケーションパフォーマンスの問題をトラブルシューティングする方法について詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の「[New Relicを使用したパフォーマンスのトラブルシューティング」を参照してください。](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=ja)
+>このデータを使用してアプリケーションパフォーマンスの問題をトラブルシューティングする方法について詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の「[New Relicを使用したパフォーマンスのトラブルシューティング」を参照してください。](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-40830)
 
 ## アラートの管理によるパフォーマンスの監視
 
@@ -58,21 +52,21 @@ Adobeには、パフォーマンス指標を追跡するためのAdobe Commerce 
 | MariaDB クエリのロード | NRI | Pro |
 | Redis メモリ | NRI | Pro |
 
-サイト基盤やアプリケーションの状況がアラートのしきい値をトリガーすると、New Relicがアラート通知を送信して、問題に積極的に対処できるようになります。 アラートのしきい値の詳細と、アラートをトリガーした問題を解決するためのトラブルシューティング手順については、_Adobe Commerce ヘルプセンター_&#x200B;の「[Adobe Commerceのアラートの管理](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=ja)」を参照してください。
+サイト基盤やアプリケーションの状況がアラートのしきい値をトリガーすると、New Relicがアラート通知を送信して、問題に積極的に対処できるようになります。 アラートのしきい値の詳細と、アラートをトリガーした問題を解決するためのトラブルシューティング手順については、_Adobe Commerce ヘルプセンター_&#x200B;の「[Adobe Commerceのアラートの管理](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)」を参照してください。
 
 >[!TIP]
 >
->Pro ステージング環境と統合環境およびスターター環境の場合は、[&#x200B; ヘルス通知](../integrations/health-notifications.md)を使用してディスク容量を監視します。
+>Pro ステージング環境と統合環境およびスターター環境の場合は、[ ヘルス通知](../integrations/health-notifications.md)を使用してディスク容量を監視します。
 
 >[!PREREQUISITES]
 >
 >- **New Relic資格情報**—Cloud プロジェクトのNew Relic アカウントにログインするための資格情報
 >- **アクティブなNew Relic統合** – お使いのCloud環境がNew Relicに接続されていることを確認します
->- **ワークフロー通知**：アラート通知を受信するように、少なくとも1つの[&#x200B; ワークフロー](#set-up-a-workflow-for-notifications)を設定します
+>- **ワークフロー通知**：アラート通知を受信するように、少なくとも1つの[ ワークフロー](#set-up-a-workflow-for-notifications)を設定します
 
 **Adobe Commerce ポリシーの管理対象アラートを確認するには**:
 
-1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインします。
+1. [New Relic アカウント ](https://login.newrelic.com/login)にログインします。
 
 1. Adobe Commerce _ポリシーの_&#x200B;管理済みアラートを探します。
 
@@ -88,7 +82,7 @@ Adobeには、パフォーマンス指標を追跡するためのAdobe Commerce 
 
      >[!NOTE]
      >
-     >Adobe Commerce _ポリシーの_&#x200B;管理アラートが使用できない場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Adobe Commerceの管理アラート &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=ja)を参照してください。
+     >Adobe Commerce _ポリシーの_&#x200B;管理アラートが使用できない場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Adobe Commerceの管理アラート ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)を参照してください。
 
 1. 「**[!UICONTROL Alert conditions]**」タブをクリックして、ポリシーで定義されたアラート条件を確認します。
 
@@ -100,7 +94,7 @@ Managed Alerts for Adobe Commerce ポリシーに含まれるアラートは変�
 
 >[!TIP]
 >
->アラート、アラートポリシーおよびワークフローの詳細については、_New Relic_ ドキュメントの[&#x200B; アラートの概要](https://docs.newrelic.com/docs/alerts/overview/)を参照してください。
+>アラート、アラートポリシーおよびワークフローの詳細については、_New Relic_ ドキュメントの[ アラートの概要](https://docs.newrelic.com/docs/alerts/overview/)を参照してください。
 
 ## 通知用ワークフローの設定
 
@@ -110,7 +104,7 @@ New Relicには、電子メール、Slack、PagerDuty、webhookなど、様々�
 
 **ワークフローを設定するには**:
 
-1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインします。
+1. [New Relic アカウント ](https://login.newrelic.com/login)にログインします。
 
 1. ワークフローを作成します。
 
@@ -132,7 +126,7 @@ New Relicには、電子メール、Slack、PagerDuty、webhookなど、様々�
 
 1. **[!UICONTROL Activate workflow]**&#x200B;をクリックします。
 
-[&#x200B; ワークフロー](https://docs.newrelic.com/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows/)に関するNew Relicのドキュメントを参照してください。
+[ ワークフロー](https://docs.newrelic.com/docs/alerts-applied-intelligence/applied-intelligence/incident-workflows/incident-workflows/)に関するNew Relicのドキュメントを参照してください。
 
 >[!WARNING]
 >

@@ -4,19 +4,13 @@ description: Adobe Commerce on cloud infrastructure用のバックエンドキ�
 feature: Cloud, Cache, Services
 exl-id: be6f2462-0878-47e3-b906-ebdd4aa319f2
 TQID: https://experienceleague.adobe.com/Q3w1Y1sRuQSwqmbxGfEBavrvHe0ecI9qWJjsfVc2yPU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9e1fd3699623816ea3368816820daf799a43284f
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 388
+source-wordcount: 392
 ht-degree: 0%
 
 ---
@@ -27,7 +21,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Redis キャッシュは、Adobe Commerce 2.4.9、または2.4.5-p16、2.4.6-p14、2.4.7-p9、および2.4.8-p4以降のパッチリリースではサポートされていません。 Redisがサポートされていないキャッシュ設定にはValkeyを使用します。 リリース別のサポートされているキャッシュサービスについては、[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
+>Redis キャッシュは、Adobe Commerce 2.4.9、または2.4.5-p16、2.4.6-p14、2.4.7-p9、および2.4.8-p4以降のパッチリリースではサポートされていません。 Redisがサポートされていないキャッシュ設定にはValkeyを使用します。 リリース別のサポートされているキャッシュサービスについては、[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 {{service-instruction}}
 
@@ -64,13 +58,13 @@ ht-degree: 0%
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable redis service" && git push origin <branch-name>
    ```
 
-1. [&#x200B; サービス関係を確認します](services-yaml.md#service-relationships)。
+1. [ サービス関係を確認します](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 
 ## Redis設定のカスタマイズ
 
-Redis設定のカスタマイズについて詳しくは、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[Redis](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)の設定」を参照してください。
+Redis設定のカスタマイズについて詳しくは、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)の設定」を参照してください。
 
 ## Redis CLIの使用
 
@@ -147,6 +141,6 @@ echo $MAGENTO_CLOUD_RELATIONSHIPS | base64 -d | json_pp
 Redisの問題のトラブルシューティングについては、次のAdobe Commerce サポート記事を参照してください。
 
 - [Redis問題の遅延管理者のログインまたはチェックアウト](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [拡張Redis キャッシュ実装Adobe Commerce 2.3.5以降](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=ja)
-- [Adobe Commerceの管理されたアラート：Redis メモリ警告アラート](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=ja)
-- [Adobe Commerceのマネージドアラート：Redis メモリクリティカルアラート](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=ja)
+- [拡張Redis キャッシュ実装Adobe Commerce 2.3.5以降](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)
+- [Adobe Commerceの管理されたアラート：Redis メモリ警告アラート](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
+- [Adobe Commerceのマネージドアラート：Redis メモリクリティカルアラート](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)

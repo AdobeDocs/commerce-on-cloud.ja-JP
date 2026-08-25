@@ -4,26 +4,20 @@ description: コマンドラインインターフェイスを使用してディ�
 feature: Cloud, Storage
 exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
 TQID: https://experienceleague.adobe.com/645o-d3ZvMtaYOwy0IKwAjSxUyUgkrI36OGLWtZR--g
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 801
+source-wordcount: 806
 ht-degree: 0%
 
 ---
 
 # ディスク容量の管理
 
-クラウドプロジェクトの合計ストレージ容量は、[&#x200B; アカウントページ &#x200B;](https://accounts.magento.cloud/user)のAdobe Commerce on cloud infrastructure contractで確認できます。 アカウントの各プロジェクトカードには、_環境_&#x200B;の数、_ストレージ_&#x200B;容量（GB）、_ユーザー_&#x200B;の数が表示されます。 または、次のCloud コマンドを使用することもできます。
+クラウドプロジェクトの合計ストレージ容量は、[ アカウントページ ](https://accounts.magento.cloud/user)のAdobe Commerce on cloud infrastructure contractで確認できます。 アカウントの各プロジェクトカードには、_環境_&#x200B;の数、_ストレージ_&#x200B;容量（GB）、_ユーザー_&#x200B;の数が表示されます。 または、次のCloud コマンドを使用することもできます。
 
 ```bash
 magento-cloud subscription:info | grep storage
@@ -139,12 +133,12 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク領域の割り当て
 
-2つの[設定ファイル &#x200B;](../environment/overview.md)が、クラウド環境のディスク領域の割り当てを制御します。`.magento.app.yaml` ファイルと`.magento/services.yaml` ファイルです。 各ファイルには、`disk` プロパティが含まれています。このプロパティは、それぞれの設定のディスクサイズ値をMB単位で定義します。 ディスク領域の割り当てを変更できるのは、Pro統合環境とスターター環境のみです。
+2つの[設定ファイル ](../environment/overview.md)が、クラウド環境のディスク領域の割り当てを制御します。`.magento.app.yaml` ファイルと`.magento/services.yaml` ファイルです。 各ファイルには、`disk` プロパティが含まれています。このプロパティは、それぞれの設定のディスクサイズ値をMB単位で定義します。 ディスク領域の割り当てを変更できるのは、Pro統合環境とスターター環境のみです。
 
 >[!IMPORTANT]
 >
->- Pro実稼動環境およびステージング環境の場合、ディスク領域の割り当てを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 Pro実稼動環境とステージング環境のサイズの増加は、一定の間隔でのみ発生する可能性があるため、現在のディスク容量の使用状況に応じて、サポートではディスク容量の割り当てを最低10 GB増やすことをお勧めします。 割り当てが完了すると、Pro ステージングと実稼動環境のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配布することはできません。 ファイルのストレージ容量を増やすには、MySQLに割り当てられているディスク容量を減らします。
->- AWSでホストされているPro実稼動環境とステージング環境には、ディスク容量の増加に適用される[必須の6時間のクールダウン &#x200B;](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html)があります。 マウント上のディスク容量を増やした後、そのマウント上でディスク容量を再び増やすには、6時間待つ必要があります。
+>- Pro実稼動環境およびステージング環境の場合、ディスク領域の割り当てを変更するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 Pro実稼動環境とステージング環境のサイズの増加は、一定の間隔でのみ発生する可能性があるため、現在のディスク容量の使用状況に応じて、サポートではディスク容量の割り当てを最低10 GB増やすことをお勧めします。 割り当てが完了すると、Pro ステージングと実稼動環境のストレージの増加を元に戻すことはできません。 ストレージをリソース間で再割り当てまたは再配布することはできません。 ファイルのストレージ容量を増やすには、MySQLに割り当てられているディスク容量を減らします。
+>- AWSでホストされているPro実稼動環境とステージング環境には、ディスク容量の増加に適用される[必須の6時間のクールダウン ](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html)があります。 マウント上のディスク容量を増やした後、そのマウント上でディスク容量を再び増やすには、6時間待つ必要があります。
 
 ### アプリケーションディスク領域
 
@@ -200,7 +194,7 @@ Filesystem                                    Size  Used Avail Use% Mounted on
 
 ## ディスク容量の監視
 
-Pro実稼動環境では、New RelicのManaged Alerts for Adobe Commerceアラートポリシーを使用して、ディスク容量やその他のパフォーマンス指標を監視できます。 詳しくは、[管理済みアラートを使用したパフォーマンスの監視](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)を参照してください。 詳細なガイダンスについては、[&#x200B; データベースのパフォーマンスの問題を解決するためのベストプラクティス &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=ja)を参照してください。
+Pro実稼動環境では、New RelicのManaged Alerts for Adobe Commerceアラートポリシーを使用して、ディスク容量やその他のパフォーマンス指標を監視できます。 詳しくは、[管理済みアラートを使用したパフォーマンスの監視](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts)を参照してください。 詳細なガイダンスについては、[ データベースのパフォーマンスの問題を解決するためのベストプラクティス ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues)を参照してください。
 
 ## スペースが残りません
 

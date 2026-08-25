@@ -4,16 +4,12 @@ description: Adobe Commerce on cloud infrastructure環境に対する受信HTTPS
 feature: Cloud, Configuration, Routes
 exl-id: f0d6eefa-1122-4753-8a7c-1fa0c77590f0
 TQID: https://experienceleague.adobe.com/4EUSHNE6YAfXk4e7ooGRjZiICgHueLKrEA-tDskIPl0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 910
+source-wordcount: 915
 ht-degree: 0%
 
 ---
@@ -109,7 +105,7 @@ https://refactorcss-oy3m2pq-mswy7hzcuhcjw.us.magentosite.cloud/
 
 >[!NOTE]
 >
->Cloud プロジェクトで複数のストアをサポートしている場合は、[複数のweb サイトまたはストア &#x200B;](../store/multiple-sites.md)のルート設定手順に従います。
+>Cloud プロジェクトで複数のストアをサポートしている場合は、[複数のweb サイトまたはストア ](../store/multiple-sites.md)のルート設定手順に従います。
 
 ### 末尾のスラッシュ
 
@@ -176,7 +172,7 @@ TLS経由ですべてのページを提供します。 この設定では、暗�
       upstream: "mymagento:http"
   ```
 
-- ステージング環境と実稼動環境の場合は、管理UIから「[FastlyにTLSを強制](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=ja)」オプションを有効にします。 このオプションを使用すると、FastlyはHTTPSへのリダイレクトを処理するので、`routes.yaml`設定を更新する必要はありません。
+- ステージング環境と実稼動環境の場合は、管理UIから「[FastlyにTLSを強制](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls)」オプションを有効にします。 このオプションを使用すると、FastlyはHTTPSへのリダイレクトを処理するので、`routes.yaml`設定を更新する必要はありません。
 
 ## ルートオプション
 
@@ -186,9 +182,9 @@ TLS経由ですべてのページを提供します。 この設定では、暗�
 | ---------------- | ----------- |
 | `type: upstream` | アプリケーションを提供します。 また、アプリケーションの名前（`.magento.app.yaml`で定義されているように）の後に`:http` エンドポイントを指定する`upstream` プロパティもあります。 |
 | `type: redirect` | 別のルートにリダイレクトします。 その後に`to` プロパティが続きます。このプロパティは、テンプレートによって識別される別のルートへのHTTP リダイレクトです。 |
-| `cache:` | ルート [&#128279;](caching.md)の キャッシュを制御します。 |
-| `redirects:` | [&#x200B; リダイレクトルール &#x200B;](redirects.md)を制御します。 |
-| `ssi:` | [&#x200B; サーバーサイド インクルード &#x200B;](server-side-includes.md)の有効化を制御します。 |
+| `cache:` | ルート ](caching.md)の[ キャッシュを制御します。 |
+| `redirects:` | [ リダイレクトルール ](redirects.md)を制御します。 |
+| `ssi:` | [ サーバーサイド インクルード ](server-side-includes.md)の有効化を制御します。 |
 
 ## シンプルなルート
 
@@ -323,7 +319,7 @@ Magento Cloud Routes:
 
 ## リダイレクトとキャッシュ
 
-詳細については、[&#x200B; リダイレクト &#x200B;](redirects.md)で説明しているように、_部分リダイレクト_&#x200B;などの複雑なリダイレクトルールを管理し、ルートベースの[&#x200B; キャッシュ &#x200B;](caching.md)のルールを指定できます。
+詳細については、[ リダイレクト ](redirects.md)で説明しているように、_部分リダイレクト_&#x200B;などの複雑なリダイレクトルールを管理し、ルートベースの[ キャッシュ ](caching.md)のルールを指定できます。
 
 ```yaml
 https://www.{default}/:

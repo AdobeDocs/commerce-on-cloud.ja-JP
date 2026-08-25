@@ -4,17 +4,12 @@ description: Adobe Commerce on cloud infrastructure用に複数のweb サイト�
 feature: Cloud, Configuration, Routes, Site Navigation
 exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
 TQID: https://experienceleague.adobe.com/532nrO6XkiqiNDfRMT6gZ4mVRqlv5PszegPJLuemmyc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1094
+source-wordcount: 1105
 ht-degree: 0%
 
 ---
@@ -45,7 +40,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->サイトベース URLにストアビューを追加するには、複数のディレクトリを作成する必要はありません。 _設定ガイド_&#x200B;の「[&#x200B; ストアコードをベース URL](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ja)に追加する」を参照してください。
+>サイトベース URLにストアビューを追加するには、複数のディレクトリを作成する必要はありません。 _設定ガイド_&#x200B;の「[ ストアコードをベース URL](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)に追加する」を参照してください。
 
 ## ドメインの追加
 
@@ -55,15 +50,15 @@ https://store.com/second/
 
 - プロ向けステージングと本番用
 
-  新しいドメインをFastlyに追加するか、[&#x200B; ドメインの管理](../cdn/fastly-custom-cache-configuration.md#manage-domains)を参照するか、サポートチケットを開いてサポートをリクエストしてください。 さらに、クラスターに新しいドメインを追加するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
+  新しいドメインをFastlyに追加するか、[ ドメインの管理](../cdn/fastly-custom-cache-configuration.md#manage-domains)を参照するか、サポートチケットを開いてサポートをリクエストしてください。 さらに、クラスターに新しいドメインを追加するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
 
 - スタータープロダクションのみ
 
-  新しいドメインをFastlyに追加します。サポートをリクエストするには、[&#x200B; ドメインの管理](../cdn/fastly-custom-cache-configuration.md#manage-domains)または[Adobe Commerce サポートチケットの送信](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を参照してください。 さらに、[!DNL Cloud Console]の&#x200B;**ドメイン** タブに新しいドメインを追加する必要があります：`https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  新しいドメインをFastlyに追加します。サポートをリクエストするには、[ ドメインの管理](../cdn/fastly-custom-cache-configuration.md#manage-domains)または[Adobe Commerce サポートチケットの送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を参照してください。 さらに、[!DNL Cloud Console]の&#x200B;**ドメイン** タブに新しいドメインを追加する必要があります：`https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## ローカルインストールの設定
 
-複数のストアを使用するようにローカルインストールを設定するには、_設定ガイド_&#x200B;の[複数のweb サイトまたはストア &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=ja)を参照してください。
+複数のストアを使用するようにローカルインストールを設定するには、_設定ガイド_&#x200B;の[複数のweb サイトまたはストア ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-overview)を参照してください。
 
 複数のストアを使用するローカルインストールを正常に作成してテストしたら、統合環境を準備する必要があります。
 
@@ -222,7 +217,7 @@ https://store.com/second/
 
 ### Web サイト、ストア、ストアビューを設定する
 
-_管理UI_&#x200B;で、Adobe Commerce **Web サイト**、**ストア**、**ストアビュー**&#x200B;を設定します。 _設定ガイド_&#x200B;の「[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=ja)管理者に複数のweb サイト、ストア、ストアビューを設定する」を参照してください。
+_管理UI_&#x200B;で、Adobe Commerce **Web サイト**、**ストア**、**ストアビュー**&#x200B;を設定します。 _設定ガイド_&#x200B;の「](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/multi-sites/ms-admin)管理者に複数のweb サイト、ストア、ストアビューを設定する」を参照してください。[
 
 ローカルインストールを設定する際には、管理者から表示されるweb サイト、ストア、ストアビューの同じ名前とコードを使用することが重要です。 `magento-vars.php` ファイルを更新する際には、これらの値が必要です。
 
@@ -234,7 +229,7 @@ NGINX仮想ホストを設定する代わりに、プロジェクトルートデ
 
 1. テキストエディターで`magento-vars.php` ファイルを開きます。
 
-   [&#x200B; デフォルトの`magento-vars.php` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/magento-vars.php)は次のようになります。
+   [ デフォルトの`magento-vars.php` ファイル ](https://github.com/magento/magento-cloud/blob/master/magento-vars.php)は次のようになります。
 
    ```php
    <?php
@@ -278,8 +273,8 @@ NGINX仮想ホストを設定する代わりに、プロジェクトルートデ
    - `example.com` - _web サイト_&#x200B;のベース URL
    - `default` – お客様の&#x200B;_web サイト_&#x200B;または&#x200B;_ストアビュー_&#x200B;の一意のコード
    - `store` – 次のいずれかの値を持つ：
-      - `website` - ストアフロントに&#x200B;_web サイト_&#x200B;を読み込みます
-      - `store` - ストアフロントに&#x200B;_ストアビュー_&#x200B;を読み込む
+     - `website` - ストアフロントに&#x200B;_web サイト_&#x200B;を読み込みます
+     - `store` - ストアフロントに&#x200B;_ストアビュー_&#x200B;を読み込む
 
    一意のドメインを使用する複数のサイトの場合：
 
@@ -356,7 +351,7 @@ NGINX仮想ホストを設定する代わりに、プロジェクトルートデ
 
 ## ステージングおよび実稼動へのデプロイ
 
-ステージングおよび実稼動環境[&#128279;](../deploy/staging-production.md)への デプロイのデプロイメントプロセスに従います。 Starter環境とPro環境の場合は、[!DNL Cloud Console]を使用して、環境全体にコードをプッシュします。
+ステージングおよび実稼動環境](../deploy/staging-production.md)への[ デプロイのデプロイメントプロセスに従います。 Starter環境とPro環境の場合は、[!DNL Cloud Console]を使用して、環境全体にコードをプッシュします。
 
 Adobeでは、実稼動環境にプッシュする前に、ステージング環境で完全にテストすることをお勧めします。 統合環境でコードを変更し、環境全体にデプロイするプロセスを再度開始します。
 

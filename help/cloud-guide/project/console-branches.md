@@ -5,28 +5,21 @@ role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1638
+source-wordcount: 1642
 ht-degree: 0%
 
 ---
 
 # [!DNL Cloud Console]で分岐を管理
 
-環境は、[!DNL Cloud Console]または`magento-cloud` CLIのいずれかを使用して管理できます。 プロジェクトファイルはGit リポジトリに保存されます。 Git コマンドを使用してコードを管理できますが、`magento-cloud` CLIはプラットフォーム機能を操作するように設計されていますが、Git コマンドは操作できません。 Cloud CLI トピックの[Git コマンド &#x200B;](../dev-tools/cloud-cli-overview.md#git-commands)を参照してください。
+環境は、[!DNL Cloud Console]または`magento-cloud` CLIのいずれかを使用して管理できます。 プロジェクトファイルはGit リポジトリに保存されます。 Git コマンドを使用してコードを管理できますが、`magento-cloud` CLIはプラットフォーム機能を操作するように設計されていますが、Git コマンドは操作できません。 Cloud CLI トピックの[Git コマンド ](../dev-tools/cloud-cli-overview.md#git-commands)を参照してください。
 
 このトピックでは、[!DNL Cloud Console]を使用して次の操作を行う方法について説明します。
 
@@ -45,9 +38,9 @@ ht-degree: 0%
 - Starterの場合は、`master` ブランチから`staging` ブランチを作成し、開発用に`staging`からブランチを作成します。
 - Proの場合は、`Integration`環境から開発ブランチを作成します。
 
-お客様のアカウントでは、限られた数の![&#x200B; アクティブなブランチ &#x200B;](../../assets/icon-active.png){width="32"} （アクティブ）と無制限の数の![非アクティブなブランチ &#x200B;](../../assets/icon-inactive.png){width="32"} （非アクティブ）開発ブランチをサポートしています。 [!DNL Cloud Console]またはCloud CLIのみを使用してブランチを追加または削除することで、アクティブなブランチと非アクティブなブランチを管理します。 ブランチを削除する前に、ブランチを非アクティブ化します。このブランチは、_環境_ リストに&#x200B;_非アクティブ_&#x200B;として残ります。 後でブランチを再アクティブ化するか、環境設定またはCloud CLIを使用して[&#x200B; ブランチ &#x200B;](../dev-tools/cloud-cli-overview.md#)を削除できます。
+お客様のアカウントでは、限られた数の![ アクティブなブランチ ](../../assets/icon-active.png){width="32"} （アクティブ）と無制限の数の![非アクティブなブランチ ](../../assets/icon-inactive.png){width="32"} （非アクティブ）開発ブランチをサポートしています。 [!DNL Cloud Console]またはCloud CLIのみを使用してブランチを追加または削除することで、アクティブなブランチと非アクティブなブランチを管理します。 ブランチを削除する前に、ブランチを非アクティブ化します。このブランチは、_環境_ リストに&#x200B;_非アクティブ_&#x200B;として残ります。 後でブランチを再アクティブ化するか、環境設定またはCloud CLIを使用して[ ブランチ ](../dev-tools/cloud-cli-overview.md#)を削除できます。
 
-開発用に追加のアクティブ環境が必要な場合は、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信してください。
+開発用に追加のアクティブ環境が必要な場合は、[ サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してください。
 
 **ブランチを追加するには**:
 
@@ -63,7 +56,7 @@ ht-degree: 0%
 
 1. **[!UICONTROL Branch]**&#x200B;をクリックします。
 
-   ![&#x200B; ブランチを作成](../../assets/button-branch.png){width="150"}
+   ![ ブランチを作成](../../assets/button-branch.png){width="150"}
 
 1. 「_分岐から…_」フォームに、分岐名を入力します。
 
@@ -107,7 +100,7 @@ git push -o "environment.Parent=<parent branch>" <origin> <branch>
 
 環境（またはブランチ）の同期は`git pull origin <parent>`と同じです。 更新されたコードは、親環境から同期できます。 この機能は、[!DNL Cloud Console]を通じてすべてのStarterおよびPro環境で使用できます。
 
-Pro プランの場合、ステージングおよび実稼動から`master` ブランチに同期できます。 この同期では、データではなくコードの取得とプッシュのみが行われます。 データを同期するには、データベースデータをダンプして、別の環境のデータベースにプッシュします。 [静的ファイルとデータの移行とデプロイ &#x200B;](/help/cloud-guide/deploy/staging-production.md#migrate-static-files)を参照してください。
+Pro プランの場合、ステージングおよび実稼動から`master` ブランチに同期できます。 この同期では、データではなくコードの取得とプッシュのみが行われます。 データを同期するには、データベースデータをダンプして、別の環境のデータベースにプッシュします。 [静的ファイルとデータの移行とデプロイ ](/help/cloud-guide/deploy/staging-production.md#migrate-static-files)を参照してください。
 
 **環境を同期するには**:
 
@@ -168,7 +161,7 @@ Pro プランの場合、ステージングおよび実稼動から`master` ブ�
 
 1. 環境を選択します。
 
-   環境ビューには[&#x200B; アクティビティリスト &#x200B;](activity-stream.md)が表示され、_最近_&#x200B;件のイベント、同期、結合、分岐、バックアップなどのアクションごとに1つのエントリが表示されます。 完全なデプロイメント履歴については、**すべて**&#x200B;をクリックしてください。
+   環境ビューには[ アクティビティリスト ](activity-stream.md)が表示され、_最近_&#x200B;件のイベント、同期、結合、分岐、バックアップなどのアクションごとに1つのエントリが表示されます。 完全なデプロイメント履歴については、**すべて**&#x200B;をクリックしてください。
 
 1. ビルドログを表示するには、アカウントのデプロイメントレコードごとに「成功」または「失敗」リンクを選択します。
 
@@ -182,7 +175,7 @@ Adobe Commerce on cloud インフラストラクチャプロジェクトには�
 
 プライベート GitHub リポジトリにデプロイメントキーを追加するには、そのリポジトリの管理者である必要があります。 GitHubでは、デプロイキーを1つのリポジトリにのみ使用できます。
 
-プロジェクトが複数のリポジトリにアクセスすることを希望する場合は、SSH キーを自動ユーザーアカウントに添付できます。 このアカウントは人間が使用していないため、[&#x200B; マシンユーザー](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys)と呼ばれます。 マシンアカウントを共同作業者として追加するか、リポジトリにアクセスできるチームにマシンユーザーを追加します。
+プロジェクトが複数のリポジトリにアクセスすることを希望する場合は、SSH キーを自動ユーザーアカウントに添付できます。 このアカウントは人間が使用していないため、[ マシンユーザー](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys)と呼ばれます。 マシンアカウントを共同作業者として追加するか、リポジトリにアクセスできるチームにマシンユーザーを追加します。
 
 >[!INFO]
 >
@@ -262,7 +255,7 @@ GitHubでは、デプロイキーはデフォルトで読み取り専用です�
 
 >[!WARNING]
 >
->**次の方法を使用してPro ステージング環境と実稼動環境を保護しないでください。**&#x200B;これにより、Fastlyのキャッシュが破損します。 Fastly Adobe Commerce用CDNで利用可能な[&#x200B; ブロッキング &#x200B;](../cdn/fastly-vcl-blocking.md)機能を使用します。
+>**次の方法を使用してPro ステージング環境と実稼動環境を保護しないでください。**&#x200B;これにより、Fastlyのキャッシュが破損します。 Fastly Adobe Commerce用CDNで利用可能な[ ブロッキング ](../cdn/fastly-vcl-blocking.md)機能を使用します。
 
 **環境を保護するには**:
 
