@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +206,7 @@ ht-degree: 0%
 
 リリース日：2022年10月27日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **Adobe Commerce**&#x200B;のAdobe I/O Eventsのサポートを追加しました。 拡張機能の開発者は、[Adobe I/O Events](https://developer.adobe.com/events/docs/) フレームワークを使用して、[Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/)用に作成されたアプリケーションにCommerce イベント情報をCloud インスタンスから送信できるようになりました。 Adobe Commerce用Adobe I/O Eventsは、パートナープレビューで表示されています。<!-- CEXT-932 -->
+- ![新しいアイコン &#x200B;](../../assets/new.svg) **Adobe Commerce**&#x200B;のAdobe I/O Eventsのサポートを追加しました。 拡張機能の開発者は、[Adobe I/O Events](https://developer.adobe.com/events/docs/) フレームワークを使用して、[Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)用に作成されたアプリケーションにCommerce イベント情報をCloud インスタンスから送信できるようになりました。 Adobe Commerce用Adobe I/O Eventsは、パートナープレビューで表示されています。<!-- CEXT-932 -->
 - ![新しいアイコン &#x200B;](../../assets/new.svg) **OPcache設定のバリデーター** – 除外されたパスのOPcache設定を確認するバリデーターを追加しました。<!-- MCLOUD-9485 -->
 - ![fix icon](../../assets/fix.svg) **GraphQL キャッシュ設定**&#x200B;の問題を修正しました。ECE-Toolsは`app/etc/env.php` ファイルの`cache`設定にGraphQL `id_salt`の値を保持するようになりました。<!-- MCLOUD-9486 -->
 

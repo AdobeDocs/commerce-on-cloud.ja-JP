@@ -15,24 +15,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1020
+source-wordcount: 1024
 ht-degree: 0%
 
 ---
 
 # Commerce バージョンのアップグレード
 
-Adobe Commerce コードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照して、最新のソフトウェアバージョン要件を確認してください。
+Adobe Commerce コードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照して、最新のソフトウェアバージョン要件を確認してください。
 
 環境タイプ（開発、ステージング、実稼動）に応じて、アップグレード タスクには次のものが含まれます。
 
 - サードパーティ製の拡張機能を、サポートされている最新バージョンにアップグレードします。
 - Pro プロジェクトの場合、ステージング環境と実稼動環境でサービスをインストールまたは更新するには、Adobe Commerce サポートチケットを送信する必要があります。
 - 開発/統合/PR ブランチの場合：
-   - 新しいバージョンのAdobe Commerceとの互換性を確保するために、MariaDB （MySQL）、OpenSearch、RabbitMQ、およびRedisの新しいバージョンで`.magento/services.yaml` ファイルを更新します。
-   - フックと環境変数の新しい設定で`.magento.app.yaml` ファイルを更新します。
+  - 新しいバージョンのAdobe Commerceとの互換性を確保するために、MariaDB （MySQL）、OpenSearch、RabbitMQ、およびRedisの新しいバージョンで`.magento/services.yaml` ファイルを更新します。
+  - フックと環境変数の新しい設定で`.magento.app.yaml` ファイルを更新します。
 
 {{upgrade-tip}}
 
@@ -156,7 +156,7 @@ Adobe Commerce バージョン 2.4.4以降の`composer.json` ファイルを更�
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信し、Adobe Commerce サポートと協力して、新しいバージョンにまだ適用できるパッチを確認します。 該当しないパッチを`m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)を送信し、Adobe Commerce サポートと協力して、新しいバージョンにまだ適用できるパッチを確認します。 該当しないパッチを`m2-hotfixes` ディレクトリから削除します。
 
    - `.magento.env.yaml` ファイルに適用されている[品質パッチ ]がある場合は、新しいバージョンにまだ適用できるかどうかを確認します。 `.magento.env.yaml` ファイルの`QUALITY_PATCHES` セクションから該当しないパッチを削除します。
 

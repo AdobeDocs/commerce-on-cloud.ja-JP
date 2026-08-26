@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 414
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ _ビルド_ フェーズでは、設定ファイルで定義されたサービ�
 
 ## ![&#x200B; デプロイ フェーズ &#x200B;](../../assets/status-deploy.png) デプロイ フェーズ
 
-_デプロイ_ フェーズでは、着信要求を一時的に保留し、サイトを[&#x200B; メンテナンスモード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=ja)に移行します。 デプロイフェーズでは、新しいコンテナを使用し、ファイルシステムをマウントした後、ネットワーク接続を開き、`.magento.app.yaml` ファイルの`relationships` セクションで定義されたサービスをアクティブ化し、`.magento.app.yaml` ファイルで定義されたデプロイフックを実行します。 `.magento.app.yaml` ファイルで定義されているディレクトリを除き、すべてが&#x200B;_読み取り専用_&#x200B;です。 デフォルトでは、[`mounts` プロパティ &#x200B;](../application/properties.md#mounts)には次のディレクトリが含まれています。
+_デプロイ_ フェーズでは、着信要求を一時的に保留し、サイトを[&#x200B; メンテナンスモード &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/setup/application-modes)に移行します。 デプロイフェーズでは、新しいコンテナを使用し、ファイルシステムをマウントした後、ネットワーク接続を開き、`.magento.app.yaml` ファイルの`relationships` セクションで定義されたサービスをアクティブ化し、`.magento.app.yaml` ファイルで定義されたデプロイフックを実行します。 `.magento.app.yaml` ファイルで定義されているディレクトリを除き、すべてが&#x200B;_読み取り専用_&#x200B;です。 デフォルトでは、[`mounts` プロパティ &#x200B;](../application/properties.md#mounts)には次のディレクトリが含まれています。
 
 - `app/etc` - `env.php`および`config.php`設定ファイルが含まれています
 - `pub/media` – 製品やカテゴリなど、すべてのメディアデータが含まれます

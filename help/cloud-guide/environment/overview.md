@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 280
+source-wordcount: 284
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Commerce on cloud インフラストラクチャの環境には、Adobe Co
 
 ## Pro環境の設定の更新
 
-Adobe Commerce on cloud infrastructure Proのステージング環境および実稼動環境では、ローカル開発環境の多くの設定オプションを更新し、変更を確定してこれらの環境に適用できます。 ただし、次の設定オプションを更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
+Adobe Commerce on cloud infrastructure Proのステージング環境および実稼動環境では、ローカル開発環境の多くの設定オプションを更新し、変更を確定してこれらの環境に適用できます。 ただし、次の設定オプションを更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
 
 - `.magento/services.yaml` ファイル内のサービスをインストールまたは更新します。
 - `.magento.app.yaml` ファイルの`mounts`および`disk` プロパティの設定を変更します。

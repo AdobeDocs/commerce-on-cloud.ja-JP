@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Adobe Commerce バージョン 2.2以降を使用している場合、Configurat
 
 ステージング環境と統合環境で使用するテストデータとして実稼動データを書き出すには、次の手順を実行します。
 
-- [Adobe Commerce暗号化キーを使用して、お客様とストアデータの保護されたバックアップを書き出す際に、](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja) CLI コマンドを実行する（推奨）
+- [Adobe Commerce暗号化キーを使用して、お客様とストアデータの保護されたバックアップを書き出す際に、](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/run-support-utilities) CLI コマンドを実行する（推奨）
 
 - データの生成と書き出しを行うための[&#x200B; データ収集](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/tools/support#data-collector) ツール
 
@@ -185,7 +185,7 @@ Adobe Commerce バージョン 2.2以降を使用している場合、Configurat
 
 >[!NOTE]
 >
->データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [&#x200B; サポートユーティリティの使用](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=ja)や、顧客データを削除するスクリプトの開発など、いくつかのオプションがあります。
+>データを別の環境にプッシュする前に、データのサニタイズを検討する必要があります。 [&#x200B; サポートユーティリティの使用](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/run-support-utilities)や、顧客データを削除するスクリプトの開発など、いくつかのオプションがあります。
 
 >[!WARNING]
 >

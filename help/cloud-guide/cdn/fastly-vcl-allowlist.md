@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 873
+source-wordcount: 874
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Edge ACLは、サイトへのアクセスを管理するためのIP アドレス
 }
 ```
 
-この例から[&#x200B; カスタムスニペット &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=ja#add-the-custom-vcl-snippet)を作成する前に、値を確認して、変更が必要かどうかを判断してください。 次に、それぞれのフィールドに各値を入力します。例えば、「`type`」を「タイプ」フィールドに、「`content`」をコンテンツフィールドに入力します。
+この例から[&#x200B; カスタムスニペット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist#add-the-custom-vcl-snippet)を作成する前に、値を確認して、変更が必要かどうかを判断してください。 次に、それぞれのフィールドに各値を入力します。例えば、「`type`」を「タイプ」フィールドに、「`content`」をコンテンツフィールドに入力します。
 
 - `name` — VCL スニペットの名前。 この例では、`allowlist`です。
 

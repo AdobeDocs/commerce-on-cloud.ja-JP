@@ -1,6 +1,6 @@
 ---
 title: サイトの起動
-description: サイト立ち上げの準備を開始する方法を説明します。
+description: チェックリスト、ベストプラクティス、ステージングおよび実稼動テストなど、Adobe Commerce クラウドインフラストラクチャでのサイトの立ち上げに備える方法について説明します。
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
 product_v2:
@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 966
+source-wordcount: 984
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Adobe Commerce on cloud infrastructure サブスクリプションの一部と�
 
 >[!NOTE]
 >
->Let&#39;s Encrypt証明書を使用せずに、独自の拡張検証SSL証明書を会社にデプロイする場合は、CTAまたは[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)してください。
+>Let&#39;s Encrypt証明書を使用せずに、独自の拡張検証SSL証明書を会社にデプロイする場合は、CTAまたは[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)してください。
 
 ## セキュリティスキャンツールの設定
 

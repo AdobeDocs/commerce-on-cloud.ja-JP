@@ -1,6 +1,6 @@
 ---
 title: チェックリストを起動
-description: サイト立ち上げ時のチェックリストの項目を確認する。
+description: Adobe Commerce クラウドインフラストラクチャのローンチチェックリストを確認して、実稼動にデプロイする前に設定、テスト、およびFastlyのセットアップを確認します。
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
 product_v2:
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 1155
+source-wordcount: 1194
 ht-degree: 0%
 
 ---
@@ -85,7 +85,8 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
 
 >[!IMPORTANT]
 >
->[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**セクション 2.4**）のDNS手順では、>_CNAME レコードは他のデータと共存できません。言い換えれば、suzy.podunk.xxがsue.podunk.xxのエイリアスである場合、suzy.podunk.eduのMX レコード、A レコード、さらにはTXT レコードも持つことはできません。_
+>[RFC1034](https://www.rfc-editor.org/rfc/rfc1912) （**セクション 2.4**）のDNS手順には、次の内容が記載されています。
+>_CNAME レコードは、他のどのデータとも共存できません。 言い換えれば、suzy.podunk.xxがsue.podunk.xxのエイリアスである場合、suzy.podunk.eduのMX レコード、A レコード、さらにはTXT レコードも持つことはできません。_
 >
 >このため、DNS レコードは、サブドメインの場合は`CNAME`とapex ドメイン （ルート ドメイン）の場合は`A`と入力する必要があります。 このルールを破棄すると、MXやNSなどの他のレコードを追加する機能が失われるため、メールサービスやDNSの伝搬が中断される可能性があります。 一部のDNS プロバイダーは、内部カスタマイズを使用することによってこれを回避できますが、標準に従うことで、安定性と柔軟性（DNS プロバイダーの変更など）が確保されます。
 
@@ -103,7 +104,7 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **メモ**：管理者からベース URLを更新することもできます。 _Adobe Commerce ストアおよび購入エクスペリエンスガイド_&#x200B;の[&#x200B; ストア URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=ja)を参照してください。
+   **メモ**：管理者からベース URLを更新することもできます。 _Adobe Commerce ストアおよび購入エクスペリエンスガイド_&#x200B;の[&#x200B; ストア URL](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls)を参照してください。
 
 1. サイトが更新されるまで数分待ちます。
 
@@ -155,7 +156,7 @@ Adobeでは、各環境にLet&#39;s Encrypt SSL/TLS証明書を提供してい�
 
 - [Adobe Commerce on cloud infrastructure プロジェクトで使用されなくなったユーザーを削除](../project/user-access.md)
 
-- [二段階認証の設定](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [二段階認証の設定](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication)
 
 ## パフォーマンス監視
 

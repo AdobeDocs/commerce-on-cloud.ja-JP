@@ -21,9 +21,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 405
+source-wordcount: 413
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Commerce on cloud インフラストラクチャは、次に示す5つの�
 
 1. [**Cloud Infrastructure**](pro-architecture.md): Adobe Commerce on Cloud Infrastructure Pro プロジェクトのInfrastructure as a Service （IaaS）基盤として、Amazon Web Services（AWS）またはMicrosoft Azureのいずれかを選択します。
 
-   Adobeでは、バーチャルコンピューティングリソース（vCPU）の使用状況を定期的に分析し、長期的な使用状況を最適化し、vCPUの年間最大許容値を超えるリスクを軽減するために、リソースを自動的に割り当てます。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて[一時的なアップサイズをリクエスト &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ja)する必要があります。
+   Adobeでは、バーチャルコンピューティングリソース（vCPU）の使用状況を定期的に分析し、長期的な使用状況を最適化し、vCPUの年間最大許容値を超えるリスクを軽減するために、リソースを自動的に割り当てます。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて[一時的なアップサイズをリクエスト &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)する必要があります。
 
 1. [**Platform as a Service**](cloud-architecture.md)：各Adobe Commerce クラウド インフラストラクチャ プロジェクトでは、サービスの開発、テスト、および統合用のPlatform as a Service （PaaS）統合環境が提供されます。
 1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce on cloud インフラストラクチャは、PHP、MySQL （MariaDB）、Redis、メッセージキューサービス（[!DNL RabbitMQ]または[!DNL ActiveMQ]）、サポートされている検索エンジンテクノロジーを含む、事前プロビジョニング済みのインフラストラクチャを提供します。

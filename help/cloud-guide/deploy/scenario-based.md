@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.xのリリースには、新しい[&#x200B; フック設定](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=ja)形式があります。 2002.0.x リリース `ece-tools`の従来の形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
+>`ece-tools` 2002.1.xのリリースには、新しい[&#x200B; フック設定](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)形式があります。 2002.0.x リリース `ece-tools`の従来の形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
 
 ## シナリオステップの確認
 
@@ -92,9 +92,9 @@ hooks:
 
   この例では、シナリオには次の優先度があります。
 
-   1. `vendor/vendor-name/module-name/deploy2.xml`
-   1. `vendor/vendor-name/module-name/deploy.xml`
-   1. `scenario/deploy.xml` （既定またはベースライン シナリオ）
+  1. `vendor/vendor-name/module-name/deploy2.xml`
+  1. `vendor/vendor-name/module-name/deploy.xml`
+  1. `scenario/deploy.xml` （既定またはベースライン シナリオ）
 
 - 優先度の高いシナリオのステップは、他のシナリオの同じ名前のステップを上書きします。 設定に新しい手順が追加されます。 例えば（C → B → A）のように、各シナリオが右から左に優先順位付けされる2つ以上のシナリオに対しても同じルールが適用されます。
 

@@ -1,6 +1,6 @@
 ---
 title: Commerceの管理パネルにアクセス
-description: Commerce管理パネルにアクセスする方法について説明します。
+description: Adobe Commerce クラウドインフラストラクチャプロジェクトへの管理者アクセスを保護する方法、ライセンス所有者のパスワードをリセットする方法、および管理者パネルにログインする方法について説明します。
 recommendations: noDisplay, catalog
 exl-id: 827417b0-9048-44d8-8c82-07befba476c7
 TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 379
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Commerce管理パネルへの管理アクセス権を持つユーザーは、ユ
 
 >[!TIP]
 >
->パスワードのリセットに失敗した場合、または管理者パネルにログインできない場合、管理者アクセス権を持つユーザーはSSHを使用してプロジェクトに接続し、`admin:user:create` CLI コマンドを使用して管理者ユーザーを追加できます。 _インストールガイド_&#x200B;の「[管理者アカウントの作成、編集、ロック解除](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=ja)」を参照してください。
+>パスワードのリセットに失敗した場合、または管理者パネルにログインできない場合、管理者アクセス権を持つユーザーはSSHを使用してプロジェクトに接続し、`admin:user:create` CLI コマンドを使用して管理者ユーザーを追加できます。 _インストールガイド_&#x200B;の「[管理者アカウントの作成、編集、ロック解除](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/tutorials/admin)」を参照してください。
 
 ## サイトの健全性を監視
 

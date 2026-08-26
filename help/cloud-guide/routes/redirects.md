@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 705
+source-wordcount: 706
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Adobe Commerce on cloud infrastructure プロジェクトの場合、`routes.yaml` ファイルで多数の非regex リダイレクトと書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが32 KB以上の場合は、正規表現でないリダイレクトをオフロードし、Fastlyに書き換えます。 _Adobe Commerce ヘルプセンター_&#x200B;の「[正規表現でないリダイレクトをNginx （ルート） &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=ja)ではなくFastlyにオフロードする」を参照してください。
+>Adobe Commerce on cloud infrastructure プロジェクトの場合、`routes.yaml` ファイルで多数の非regex リダイレクトと書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが32 KB以上の場合は、正規表現でないリダイレクトをオフロードし、Fastlyに書き換えます。 _Adobe Commerce ヘルプセンター_&#x200B;の「[正規表現でないリダイレクトをNginx （ルート） &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)ではなくFastlyにオフロードする」を参照してください。
 
 ## ルート全体のリダイレクト
 

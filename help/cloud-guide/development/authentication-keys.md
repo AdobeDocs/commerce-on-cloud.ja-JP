@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 318
+source-wordcount: 319
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 Adobe Commerce リポジトリにアクセスし、Adobe Commerce on cloud infrastructure プロジェクトのインストールコマンドとアップデートコマンドを有効にするには、認証キーが必要です。 Composerの認証情報を指定する方法は2つあります。
 
-- **認証ファイル** - Adobe Commerce on cloud infrastructure ルートディレクトリにAdobe Commerce [認証資格情報](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=ja)を含むファイル。
+- **認証ファイル** - Adobe Commerce on cloud infrastructure ルートディレクトリにAdobe Commerce [認証資格情報](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/prerequisites/authentication-keys)を含むファイル。
 - **環境変数**:Adobe Commerce on cloud infrastructure プロジェクトで認証キーを設定し、偶発的な露出を防ぐための環境変数。
 
 >[!BEGINSHADEBOX]

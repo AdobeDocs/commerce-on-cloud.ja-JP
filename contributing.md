@@ -1,106 +1,106 @@
 ---
-source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
+source-git-commit: eab32e2f5155e3aa6c0924fa332cbef6e4dc502d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 # 貢献
 
-ご協力いただきありがとうございます。
+ご協力いただきありがとうございます！
 
-このプロジェクトに投稿する際のガイドラインを次に示します。
+以下は、このプロジェクトに貢献する際に従うべき一連のガイドラインです。
 
 ## 行動規範
 
-このプロジェクトはアドビ[行動規範](code-of-conduct.md)を遵守しています。参加することにより、
-この行動規範を遵守することが求められます。 受け入れがたい行動を見かけた場合は
+このプロジェクトは、Adobe [行動規範](code-of-conduct.md)に準拠しています。 参加することで，
+あなたはこの暗号を守るべきだ。 許容できない動作を次に報告してください
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com)。
 
-## 投稿者ガイドドキュメント
+## コントリビューターガイドのドキュメント
 
-詳しくは、[&#x200B; 投稿者ガイド &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja) を参照してください。
+[&#x200B; コントリビューターガイド &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
 
-## 質問がある場合
+## よくある質問と？
 
-まず、イシューを入力します。 このプロジェクトの既存のコミッターは、次の項目に到達するよう取り組みます
-イシュースレッド内のプロジェクトの方向性とイシューの解決策に関する合意
-（該当する場合）。
+問題を報告することから始めます。 このプロジェクトの既存のコミッターは
+プロジェクトの方向性に関するコンセンサスと、イシュースレッド内のイシューソリューション
+（適切な場合）。
 
-## コントリビューター使用許諾契約
+## コントリビューターライセンス契約
 
-このプロジェクトへのサードパーティ投稿者には、署名済みの投稿者が関連付けられている必要があります
-使用許諾契約。 これにより、Adobeに投稿を再配布する権限が付与されます
-プロジェクトの一環として。 [&#x200B; アドビの CLA に署名してください &#x200B;](https://opensource.adobe.com/cla.html)。 あなた
-Adobe CLA の送信は 1 回だけでかまいません。したがって、以前に送信したことがある場合は、
-行ってもよろしい。
+このプロジェクトへのすべての第三者による寄付には、署名済みの寄稿者が同行する必要があります
+ライセンス契約： これにより、Adobeにコントリビューションを再配布する権限が付与されます
+必要だということです。 [CLAに署名](https://opensource.adobe.com/cla.html)。 あなた
+Adobe CLAを1回送信するだけで済むため、以前に送信したことがある場合，
+行くといいね。
 
 ## コードレビュー
 
-すべての送信は、プルリクエスト形式でおこなわれ、レビューする必要があります
-プロジェクト コミッター別 [GitHub のプルリクエストドキュメントをお読みください &#x200B;](https://docs.github.com/articles/about-pull-requests/)
-プルリクエストの送信に関する詳細情報。
+すべての提出物はプルリクエストの形式で提出され、レビューする必要があります
+見つける必要がありました。 [GitHubのプルリクエストドキュメントを読む](https://docs.github.com/articles/about-pull-requests/)
+プルリクエストの送信について詳しくは、こちらを参照してください。
 
-最後に、次の場合は [&#x200B; プルリクエストテンプレート &#x200B;](PULL_REQUEST_TEMPLATE.md) に従ってください
+最後に、[&#x200B; プルリクエストテンプレート &#x200B;](PULL_REQUEST_TEMPLATE.md)に従ってください。
 プルリクエストを送信しています！
 
-## 投稿者からコミッターへ
+## コントリビューターからコミッターへ
 
-アドビはコミュニティからの投稿を歓迎しています。 コントリビューターから一歩進みたい場合
-そして、プロジェクトにおける完全な書き込みアクセス権と発言権を持つコミッターになる必要があります
-プロジェクトに招待される。 既存のコミッターは、内部ノミネーションを採用しています
-招待状の前に怠惰なコンセンサス（沈黙は承認）に到達しなければならないプロセス
-が発行されました。 自分に適性があり、さらに深く関わりたいと思われるなら、
-自由に既存のコミッターに連絡して、それについて話し合ってください。
+私たちのコミュニティからの寄付が大好きです！ コントリビューターから一歩進んで
+プロジェクトで完全な書き込みアクセスと発言権を持つコミッターになるには、次のことが必要です
+プロジェクトに招待されます。 既存のコミッターは内部指名を採用する
+招待する前に遅延コンセンサスに達する必要があるプロセス（無音は承認です）
+が発行されます。 自分が適格であり、もっと深く関わりたいと思うのであれば，
+ぜひ既存のコミッターにご連絡いただき、それについてご相談ください。
 
-## セキュリティ上の問題
+## セキュリティの問題
 
-セキュリティ上の問題は、このイシュートラッカーでは報告しないでください。 代わりに、[&#x200B; セキュリティの専門家に問題を提起してください &#x200B;](https://helpx.adobe.com/jp/security/alertus.html)
+セキュリティ上の問題は、この問題トラッカーで報告しないでください。 代わりに、[&#x200B; セキュリティのエキスパートに問題を報告してください](https://helpx.adobe.com/jp/security/alertus.html)
 
-## 新機能
+## 新機能ハイライト
 
-変更によって、強調表示する必要のある新しいトピック、重要な更新、修正が導入された場合は、プルリクエストの本文から [&#x200B; 新機能 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-cloud-service/user-guide/overview#whats-new) のセクションに簡単な説明を追加できます。
+変更によって新しいトピック、重要な更新、または修正がハイライト表示される必要がある場合は、プルリクエストの本文から[新機能](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview#whats-new)に簡単な説明を追加できます。
 
-新機能のハイライトを追加するには：
+新機能ハイライトを追加するには：
 
-1. `whatsnew` タグと適切な説明を、最後にプルリクエスト本文に含めます。 説明には、変更に関するコンテキストと、ターゲットのトピックまたはトピックへのリンクを指定する必要があります。 次の形式を使用します（コードブロックの引用符は表示専用であり、プルリクエスト本文に含めないでください）。
+1. 最後に、プルリクエスト本文に適切な説明を含めた`whatsnew` タグを含めます。 説明では、変更に関するコンテキストと、ターゲットのトピックまたはトピックへのリンクを提供する必要があります。 次の形式を使用します（コードブロックの引用符は表現用のみです。プルリクエスト本文には含めないでください）。
 
    ```text
    whatsnew
-   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html).
+   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html).
    ```
 
-   または、複数のトピックがある場合は、次の操作を行います。
+   または、複数のトピックがある場合：
 
    ```text
    whatsnew
-   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/third-target-topic.html).
+   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/third-target-topic.html).
    ```
 
    複数のハイライトにリストを使用することもできます。
 
    ```text
    whatsnew
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
    ```text
    whatsnew
    The following changes were made to the documentation:
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
-1. 変更のタイプを示す、サポートされるラベルを追加します。 サポートされているラベルには、変更のタイプごとに次のようなラベルが含まれています。
+1. 変更のタイプを示すサポートされているラベルを追加します。 サポートされているラベルには、次のような変更の各タイプのラベルが含まれます。
 
    - `new-topic` – 新しいトピック用
-   - `major-update` - コンテンツ、構造、機能に大幅な変更を含む可能性のある大規模な更新の場合
-   - `technical` - メジャーアップデートとは見なされないが、注意が必要な技術的な変更
+   - `major-update` - コンテンツ、構造、または機能の大幅な変更が含まれる可能性があるメジャーアップデートの場合
+   - `technical` - メジャーアップデートとは見なされないが、注意が必要な技術変更の場合
 
 **重要：**
 
-1. `whatsnew` 部は、`whatsnew` タグから始めて、プルリクエスト本文の最後になければなりません。
-1. 変更の説明には、作業リンクを含める必要があります。 リンクが正しいことを確認し、目的のトピックに導いてください。 トピックが新規の場合は、プルリクエストを結合して新しいトピックを公開した後、リンクが機能していることを確認します。 プルリクエストが結合された後は、リンクを修正しても問題ありません。
+1. `whatsnew`部分は`whatsnew` タグから開始し、プルリクエスト本文の最後にある必要があります。
+1. 変更内容の説明には、作業リンクが含まれている必要があります。 リンクが正しいことを確認し、意図されたトピックにつながってください。 トピックが新しい場合は、プルリクエストをマージして新しいトピックを公開した後、リンクが機能していることを確認します。 プルリクエストがマージされた後にリンクを修正しても問題ありません。
 
-例えば、リポジトリ内でクローズドなプルリクエストを検索して既存のハイライトの書式を確認し、[&#x200B; 新機能 &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-cloud-service/user-guide/overview#whats-new) の節と比較して、ドキュメントにどのように表示されるかを確認します。
+例えば、リポジトリ内のクローズしたプルリクエストで検索して、既存のハイライトがどのようにフォーマットされているかを確認し、[新機能](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview#whats-new)と比較して、ドキュメントでどのように表示されるかを確認します。

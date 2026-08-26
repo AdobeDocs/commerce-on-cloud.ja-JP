@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 172
+source-wordcount: 173
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Commerceへようこそ！
 
 - [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League）:Commerce プロジェクトの計画、実装、操作、アップグレード、保守
+- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce) （Adobe Experience League）:Commerce プロジェクトの計画、実装、操作、アップグレード、保守
 
 >[!TIP]
 >

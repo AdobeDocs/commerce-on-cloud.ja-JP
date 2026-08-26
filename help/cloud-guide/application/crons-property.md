@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1190
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ ht-degree: 0%
 
 Adobe Commerceは`crons` プロパティを使用して、繰り返し作業をスケジュールします。 特定のタスクを特定の時間帯に実行するようにスケジュールを設定するのに最適です。 読み取り専用の環境の性質により、Adobe Commerce on cloud infrastructure プロジェクトのweb インスタンスで一度に1つのcron ジョブのみを実行できます。 長時間実行しているタスクを、キューに登録されている小さなタスクに分割することをお勧めします。 または、[&#x200B; ワーカーインスタンス &#x200B;](workers-property.md)を構築することもできます。
 
-Adobeでは、`crons`を[&#x200B; ファイルシステム所有者](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=ja)として実行することをお勧めします。 _not_&#x200B;は、`crons`を`root`として、またはweb サーバーユーザーとして実行します。
+Adobeでは、`crons`を[&#x200B; ファイルシステム所有者](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions)として実行することをお勧めします。 _not_&#x200B;は、`crons`を`root`として、またはweb サーバーユーザーとして実行します。
 
-この設定は、複数のデフォルトのcron ジョブを持つAdobe Commerceのオンプレミスのデプロイメントとは異なります。 _設定ガイド_&#x200B;の「[cron ジョブの設定](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ja)」を参照してください。
+この設定は、複数のデフォルトのcron ジョブを持つAdobe Commerceのオンプレミスのデプロイメントとは異なります。 _設定ガイド_&#x200B;の「[cron ジョブの設定](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs)」を参照してください。
 
 ## cron ジョブの設定
 
@@ -66,7 +66,7 @@ Adobe Commerceでは、ステージング環境と実稼動環境でセルフサ
 
    >[!NOTE]
    >
-   >`crontab -l` コマンドで`Command not found` エラーが返された場合（Pro ステージング環境および実稼動環境のみ）、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信して、プロジェクトで自動crons セルフサービス設定オプションを有効にする必要があります。
+   >`crontab -l` コマンドで`Command not found` エラーが返された場合（Pro ステージング環境および実稼動環境のみ）、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、プロジェクトで自動crons セルフサービス設定オプションを有効にする必要があります。
 
 次の例は、デフォルトの`crons`設定のみを持つ環境の`crontab`出力を示しています。
 
@@ -97,8 +97,8 @@ Adobe Commerceは、`crons`仕様（仕様）に5値式を使用しています�
 
 一部の例：
 
-- `00 */3 * * *`は、最初の1分（午前12:00、午前3:00、午前6:00）に3時間ごとに実行されます
-- `20 */8 * * *`は20分（午前12:20、午前8:20、午後4:20）に8時間ごとに実行されます
+- `00 */3 * * *`は、最初の1分（午前12時、午前3時、午前6時）に3時間ごとに実行されます
+- `20 */8 * * *`は、8時間ごとに1分20秒（午前12時20分、午前8時20分、午後4時20分）に実行されます
 - `00 00 * * *`が1日1回、午前0時に実行されます
 - `00 * * * 1`は週1回、月曜日の午前0時に実行されます。
 
@@ -134,7 +134,7 @@ Adobe Commerce on cloud infrastructure platformでは、[`.magento.app.yaml`](..
 >
 >スターター環境とPro `integration`環境の場合、最小間隔は5分に1回です。 Pro ステージング環境および実稼動環境の場合、最小間隔は1分あたり1回です。 デフォルトの最小値より多くの頻度を設定することはできません。
 
-Adobe Commerce Pro プロジェクトでは、`.magento.app.yaml` ファイルを使用してステージング環境と実稼動環境にカスタム cron ジョブを追加する前に、[自動cron機能](#set-up-cron-jobs)をプロジェクトで有効にする必要があります。 この機能が有効になっていない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信して自動実行を有効にします。
+Adobe Commerce Pro プロジェクトでは、`.magento.app.yaml` ファイルを使用してステージング環境と実稼動環境にカスタム cron ジョブを追加する前に、[自動cron機能](#set-up-cron-jobs)をプロジェクトで有効にする必要があります。 この機能が有効になっていない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して自動実行を有効にします。
 
 **カスタム cron ジョブを追加するには**:
 
@@ -208,7 +208,7 @@ cron処理情報は、各環境のアプリケーションレベルのログフ�
 
 cron関連の問題のトラブルシューティングについては、次のAdobe Commerce サポート記事を参照してください。
 
-- [Cron タスクは、他のグループからタスクをロックします](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=ja)
+- [Cron タスクは、他のグループからタスクをロックします](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups)
 
-- [クラウド上でスタックしたcron ジョブを手動でリセットする](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=ja)
+- [クラウド上でスタックしたcron ジョブを手動でリセットする](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud)
 

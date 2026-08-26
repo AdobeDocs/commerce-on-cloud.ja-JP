@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 788
+source-wordcount: 799
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ OpenSearchなら、あらゆるソースやフォーマットからデータを�
        disk: 1024
    ```
 
-   Pro プロジェクトの場合、ステージング環境と実稼動環境でOpenSearch バージョンを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
+   Pro プロジェクトの場合、ステージング環境と実稼動環境でOpenSearch バージョンを変更するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
 
 1. `.magento.app.yaml` ファイルの`relationships` プロパティを設定または検証します。
 
@@ -100,7 +100,7 @@ Adobe Commerce on cloud infrastructure プロジェクトをインストール�
 
 - **プロジェクトのアップグレード** – 新しいアプリケーション バージョンのOpenSearch PHP クライアントが、クラウド インフラストラクチャにインストールされているOpenSearch サービス バージョンと互換性があることを確認します。
 
-サービスのバージョンと互換性のサポートは、クラウドインフラストラクチャでテストおよびデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、_インストールガイド_&#x200B;の[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
+サービスのバージョンと互換性のサポートは、クラウドインフラストラクチャでテストおよびデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 サポートされているバージョンの一覧については、_インストールガイド_&#x200B;の[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 **OpenSearch ソフトウェアの互換性を確認するには**:
 
@@ -192,7 +192,7 @@ OpenSearch サービスを再起動する必要がある場合は、Adobe Commer
 
 >[!NOTE]
 >
->これは、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターにプラグインをインストールするには、[&#x200B; サポートリクエストを送信](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)してください。
+>これは、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターにプラグインをインストールするには、[&#x200B; サポートリクエストを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)してください。
 
 
 ```yaml
@@ -216,7 +216,7 @@ opensearch:
 
 >[!NOTE]
 >
->この変更は、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターでプラグインを削除するには、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case)を送信する必要があります。
+>この変更は、統合環境とスターター環境にのみ適用されます。 Pro ステージングまたは実稼動クラスターでプラグインを削除するには、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)を送信する必要があります。
 
 1. OpenSearch プラグインのエントリを`.magento/services.yaml` ファイルから削除します。
 1. コード変更を追加、コミット、プッシュします。

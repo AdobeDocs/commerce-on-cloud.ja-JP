@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1186
+source-wordcount: 1187
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ mysql:
 
 ## サービスバージョン
 
-Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
+Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 ### ソフトウェアのEOL チェック
 

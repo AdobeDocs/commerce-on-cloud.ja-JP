@@ -17,9 +17,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1798
+source-wordcount: 1799
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Adobe Commerce on cloud infrastructureは、[AWS PrivateLink](https://aws.amazon
 
 >[!TIP]
 >
->PrivateLinkは、データベースやファイル転送などのHTTP （S）以外の統合の接続を保護するのに最適です。 アプリケーションをAdobe Commerce APIと統合する場合は、_Adobe API Mesh for Adobe Developer App Builder_&#x200B;で[API Mesh](https://developer.adobe.com/graphql-mesh-gateway/gateway/create-mesh/)を作成する方法を参照してください。
+>PrivateLinkは、データベースやファイル転送などのHTTP （S）以外の統合の接続を保護するのに最適です。 アプリケーションをAdobe Commerce APIと統合する場合は、_Adobe API Mesh for Adobe Developer App Builder_&#x200B;で[API Mesh](https://developer.adobe.com/graphql-mesh-gateway/mesh/basic/)を作成する方法を参照してください。
 
 ## 機能とサポート
 
@@ -40,9 +40,9 @@ Adobe Commerce クラウドインフラストラクチャプロジェクト向�
 - AdobeとCustomer VPCで利用可能なエンドポイントサービス間の一方向または双方向のコミュニケーションをサポートします。
 - サービス支援：
 
-   - Adobe Commerce on cloud infrastructure環境で必要なポートを開きます
-   - お客様とAdobe VPCの最初の接続を確立する
-   - イネーブルメント中の接続の問題のトラブルシューティング
+  - Adobe Commerce on cloud infrastructure環境で必要なポートを開きます
+  - お客様とAdobe VPCの最初の接続を確立する
+  - イネーブルメント中の接続の問題のトラブルシューティング
 
 ## 制限
 
@@ -51,8 +51,8 @@ Adobe Commerce クラウドインフラストラクチャプロジェクト向�
 - Adobe Commerce サポートでは、初期イネーブルメント以外のAWS PrivateLinkの問題のトラブルシューティングは扱いません。
 - お客様は、独自のVPCの管理に関連するコストについて責任を負います。
 - プラットフォーム別&#x200B;**HTTPS プロトコル （ポート 443）のサポート：**
-   - **Azure プライベートリンク**: [Fastly オリジンのクローキング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=ja)により、HTTPS プロトコル（ポート 443）を使用してクラウドインフラストラクチャ上のAdobe Commerceに接続できません。
-   - **AWS PrivateLink**: HTTPS プロトコル （ポート 443）接続がサポートされています。
+  - **Azure プライベートリンク**: [Fastly オリジンのクローキング &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/cdn/fastly)により、HTTPS プロトコル（ポート 443）を使用してクラウドインフラストラクチャ上のAdobe Commerceに接続できません。
+  - **AWS PrivateLink**: HTTPS プロトコル （ポート 443）接続がサポートされています。
 - PrivateDNSは使用できません。
 
 ## PrivateLink接続タイプ
@@ -66,8 +66,8 @@ Adobe Commerce on cloud infrastructure環境に最適なPrivateLink接続タイ�
 - **単方向PrivateLink** – この設定を選択すると、Adobe Commerce on cloud インフラストラクチャ ストアから安全にデータを取得できます。
 - **双方向PrivateLink** – この設定を選択すると、Adobe Commerce on cloud infrastructure環境以外のシステムとの間で安全な接続を確立できます。 双方向オプションには、次の2つの接続が必要です。
 
-   - お客様のVPCとAdobe VPCのつながり
-   - Adobe VPCとVPCのつながり
+  - お客様のVPCとAdobe VPCのつながり
+  - Adobe VPCとVPCのつながり
 
 >[!TIP]
 >
@@ -106,12 +106,12 @@ PrivateLinkの有効化に必要な次のデータを収集します。
 - クラスターIDを指定します。SSHを使用してリモートにログインし、次のコマンドを使用します：`cat /etc/platform_cluster`
 - 外部サービスをAdobe Commerce Pro クラスターに接続するには、次のものが必要です。
 
-   - 新しい外部プライベートエンドポイントに公開するPro クラスター上のポートのリスト
-   - プライベートエンドポイント接続のAzure サブスクリプション IDの一覧
+  - 新しい外部プライベートエンドポイントに公開するPro クラスター上のポートのリスト
+  - プライベートエンドポイント接続のAzure サブスクリプション IDの一覧
 
 - Adobe Commerce Pro クラスターを外部サービスに接続するには、次の操作が必要です。
 
-   - ターゲットサービスのリソース IDのリスト。 外部プライベートリンクサービス IDは、次のようになります。
+  - ターゲットサービスのリソース IDのリスト。 外部プライベートリンクサービス IDは、次のようになります。
 
   ```text
   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{svcNameID}
@@ -142,12 +142,12 @@ PrivateLinkの有効化に必要な次のデータを収集します。
    - **Adobe**&#x200B;は、Adobe アカウント プリンシパル（AWSまたはAzure アカウントのルートユーザー）を提供し、お客様のVPC エンドポイントサービスへのアクセスをリクエストします。
    - **お客様**&#x200B;は、お客様のVPCのエンドポイントサービスへのAdobe アクセスを有効にします。 これは、Adobe アカウント プリンシパルが、**Endpoint service access granted**&#x200B;の前提条件で前述したように`arn:aws:iam::402592597372:root`へのアクセス権を持っていることを前提としています。
 
-      - Adobe アカウントから開始されたリクエストを受け入れるように、顧客エンドポイントサービス設定を更新します。 手順については、Cloud Platformのドキュメントを参照してください。
+     - Adobe アカウントから開始されたリクエストを受け入れるように、顧客エンドポイントサービス設定を更新します。 手順については、Cloud Platformのドキュメントを参照してください。
 
-         - AWSについては、[ エンドポイントサービスに対する権限の追加と削除]を参照してください。
-         - Azureについては、[ プライベートエンドポイント接続の管理]を参照してください
+       - AWSについては、[ エンドポイントサービスに対する権限の追加と削除]を参照してください。
+       - Azureについては、[ プライベートエンドポイント接続の管理]を参照してください
 
-      - Adobeに、お客様のVPCのエンドポイントサービス名を指定します。
+     - Adobeに、お客様のVPCのエンドポイントサービス名を指定します。
 
    - **Adobe**&#x200B;は、customer endpoint serviceをAdobe platform アカウント（AWSまたはAzure）に追加し、customer VPCへの接続リクエストをトリガーします。
    - **お客様**&#x200B;は、設定を完了するためにAdobeからの接続リクエストを承認します。
@@ -219,7 +219,7 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 
 ## PrivateLink設定の変更
 
-[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信して、既存のPrivateLink設定を変更します。 例えば、次のような変更をリクエストできます。
+[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、既存のPrivateLink設定を変更します。 例えば、次のような変更をリクエストできます。
 
 - Adobe Commerce on cloud infrastructure Proの実稼動環境またはステージング環境からPrivateLink接続を削除します。
 - Adobe エンドポイントサービスにアクセスするためのCustomer Cloud Platform アカウント番号を変更します。
@@ -241,14 +241,14 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 PrivateLinkの設定手順については、Cloud Platformのドキュメントを参照してください。
 
 - **AWS PrivateLink ドキュメント**
-   - [ ネットワーク ロード バランサーの作成]
-   - [ エンドポイントサービス設定を作成]
-   - [ インターフェイス エンドポイントの作成]
-   - [ インターフェイス エンドポイント ライフサイクル ]
+  - [ ネットワーク ロード バランサーの作成]
+  - [ エンドポイントサービス設定を作成]
+  - [ インターフェイス エンドポイントの作成]
+  - [ インターフェイス エンドポイント ライフサイクル ]
 
 - **Azure PrivateLink ドキュメント**
-   - [ ロードバランサーの作成]
-   - [Azure プライベートリンク ワークフロー]
+  - [ ロードバランサーの作成]
+  - [Azure プライベートリンク ワークフロー]
 
 <!--Link definitions-->
 

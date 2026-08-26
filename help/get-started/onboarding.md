@@ -11,9 +11,9 @@ feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: 517
+source-wordcount: 521
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Adobe Commerce on cloud infrastructure アカウントをお持ちでない場�
 
 ### 共有アカウントアクセス
 
-ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスにより、信頼できる従業員やサービスプロバイダーは、ヘルプセンターを使用して、Adobe Commerce on cloud infrastructure プロジェクトに関連するサポートチケットを送信および追跡できます。 設定の手順については、ヘルプセンターの「[共有アクセス &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#shared-access)」の記事を参照してください。
+ライセンス所有者は、アカウントの共有アクセスを設定できます。 共有アクセスにより、信頼できる従業員やサービスプロバイダーは、ヘルプセンターを使用して、Adobe Commerce on cloud infrastructure プロジェクトに関連するサポートチケットを送信および追跡できます。 設定の手順については、ヘルプセンターの「[共有アクセス &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#shared-access)」の記事を参照してください。
 
 ### [!DNL Cloud Console]
 

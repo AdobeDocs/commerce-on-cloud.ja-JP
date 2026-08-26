@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 768
+source-wordcount: 860
 ht-degree: 0%
 
 ---
@@ -52,9 +52,9 @@ ht-degree: 0%
 静的コンテンツを生成するには、テーマとロケールにアクセスする必要があります。 Adobe Commerceは、ビルド段階でアクセス可能なファイルシステムにテーマを保存しますが、Adobe Commerceはデータベースにロケールを保存します。 データベースは、ビルド フェーズ中に&#x200B;_not_&#x200B;利用できます。 ビルド段階で静的コンテンツを生成するには、`ece-tools` パッケージの`config:dump` コマンドを使用して、ロケールをファイルシステムに移動する必要があります。 ロケールを読み取り、`app/etc/config.php` ファイルに保存します。
 
 >[!NOTE]
->`ece-tools` パッケージで`config:dump` コマンドを実行すると、管理ダッシュボード [&#128279;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin)で`config.php` ファイル にダンプされた設定がロック（グレー表示）されます。管理者でこれらの設定を更新する唯一の方法は、ファイルから削除してプロジェクトを再デプロイすることです。
->さらに、新しいストア/ストアグループ/web サイトをインスタンスに追加するたびに、`config:dump` コマンドを実行して、データベースが同期していることを確認する必要があります。`config.php` ファイルにダンプする設定[を選択することもできます](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)。
-> フィールドがグレー表示されているのに、この手順の実行を怠っているため、`config.php` ファイルからストア/ストアグループ/web サイト設定を削除すると、ダンプされていない新しいエンティティが次のデプロイメントでデータベースから削除されます。
+>`ece-tools` パッケージで`config:dump` コマンドを実行すると、`config.php` ファイル [にダンプされた設定は、管理者ダッシュボード &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-26879)でロック（グレー表示）されます。 管理者でこれらの設定を更新する唯一の方法は、ファイルから設定をローカルに削除し、プロジェクトを再デプロイすることです。
+>さらに、新しいストア/ストアグループ/web サイトをインスタンスに追加するたびに、`config:dump` コマンドを実行して、データベースが同期していることを確認する必要があります。 `config.php` ファイルにダンプする設定[を選択することもできます](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en)。
+>フィールドがグレー表示されていても、この手順の実行が無視されているため、`config.php` ファイルからストア/ストアグループ/web サイト設定を削除すると、ダンプされていない新しいエンティティが次のデプロイメントのデータベースから削除されます。
 
 **ビルド**&#x200B;でSCDを生成するようにプロジェクトを設定するには：
 

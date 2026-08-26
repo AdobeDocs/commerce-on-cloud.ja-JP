@@ -14,9 +14,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1071
+source-wordcount: 1079
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ Adobe Commerce on cloud infrastructure アカウントにSSH公開鍵を追加�
 
 ## sFTP
 
-Adobe Commerce クラウドインフラストラクチャでは、SSH認証を使用したsFTP （セキュア FTP）を使用した環境へのアクセスがサポートされています。 sFTPのSSH キー認証をサポートするクライアントを使用し、公開SSH キーを使用します。 公開SSH キーをターゲット環境に追加する必要があります。 スターター環境とPro統合環境の場合は、 [!DNL Cloud Console][&#128279;](#add-your-ssh-key-using-the-project-web-interface)経由で追加できます。
+Adobe Commerce クラウドインフラストラクチャでは、SSH認証を使用したsFTP （セキュア FTP）を使用した環境へのアクセスがサポートされています。 sFTPのSSH キー認証をサポートするクライアントを使用し、公開SSH キーを使用します。 公開SSH キーをターゲット環境に追加する必要があります。 スターター環境とPro統合環境の場合は、 [!DNL Cloud Console]&#x200B;[&#128279;](#add-your-ssh-key-using-the-project-web-interface)経由で追加できます。
 
 読み取り専用のsFTP接続は&#x200B;_サポートされていません_。sFTP アクセスは、デフォルトで&#x200B;_書き込み_&#x200B;権限で提供されます。
 
@@ -164,10 +164,10 @@ sFTPを設定する場合は、SSH アクセス環境コマンドの情報を使
 
 **スターター環境とPro統合環境**&#x200B;の場合は、特定のディレクトリへのアクセス用に[追加`mount`](../application/properties.md#mounts)を検討することもできます。 マウントを`.magento.app.yaml` ファイルに追加します。 書き込み可能なディレクトリの一覧については、[&#x200B; プロジェクト構造](../project/file-structure.md)を参照してください。 このマウントポイントは、これらの環境でのみ機能します。
 
-**Pro ステージング環境および実稼動環境**&#x200B;の場合、環境へのSSH アクセス権がない場合は、[sFTP アクセスをリクエストするためにAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信し、特定のフォルダーへのアクセス用のマウントポイント（例：`pub/media`）を送信する必要があります。
+**Pro ステージング環境および実稼動環境**&#x200B;の場合、環境へのSSH アクセス権がない場合は、[sFTP アクセスをリクエストするためにAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信し、特定のフォルダーへのアクセス用のマウントポイント（例：`pub/media`）を送信する必要があります。
 
 >[!NOTE]
->Pro ステージングおよび実稼動の場合、sFTP接続が&#x200B;**not**&#x200B;を[Cloud プロジェクト &#x200B;](../project/user-access.md)に追加する必要がある&#x200B;_汎用_ ユーザーの場合、**公開鍵**&#x200B;を添付して[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 **秘密のSSH キーを入力しないでください。**
+>Pro ステージングおよび実稼動の場合、sFTP接続が&#x200B;**not**&#x200B;を[Cloud プロジェクト &#x200B;](../project/user-access.md)に追加する必要がある&#x200B;_汎用_ ユーザーの場合、**公開鍵**&#x200B;を添付して[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 **秘密のSSH キーを入力しないでください。**
 
 ## SSH トンネリング
 

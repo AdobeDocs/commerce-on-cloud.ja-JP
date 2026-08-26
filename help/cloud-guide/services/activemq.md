@@ -13,16 +13,16 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 631
+source-wordcount: 632
 ht-degree: 0%
 
 ---
 
 # [!DNL ActiveMQ] サービスの設定
 
-[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
 
 MQFは[ActiveMQ Artemis](https://activemq.apache.org/components/artemis/)をメッセージングブローカーとして使用でき、メッセージを送受信するためのスケーラブルなプラットフォームを提供します。 また、未配信のメッセージを保存するメカニズムも含まれています。 [!DNL ActiveMQ Artemis]は、メッセージ用のSTOMP （Streaming Text Oriented Messaging Protocol） プロトコルをサポートしています。
 

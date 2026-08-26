@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 361
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ワーカーは、Pro ステージング環境と実稼動環境でのみ使用できます。 プロ統合環境とスターター環境では、[CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner)変数を選択して使用できます。
 
-Pro ステージングまたは実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信し](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)次の情報を含めます。
+Pro ステージングまたは実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信し](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)次の情報を含めます。
 
 - プロジェクト ID
 - 環境ID

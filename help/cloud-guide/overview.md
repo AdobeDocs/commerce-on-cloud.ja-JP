@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-08-14
-source-git-commit: 95e742c5e1fcdc3f95457a70527a41a5b5a3b677
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 323
+source-wordcount: 324
 ht-degree: 3%
 
 ---
@@ -74,7 +74,7 @@ Commerce on cloud インフラストラクチャガイドでは、Adobe Commerce
 
 - [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/commerce.html?lang=ja) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
+- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
 
 {{$include /help/_includes/templated/whats-new.md}}
 

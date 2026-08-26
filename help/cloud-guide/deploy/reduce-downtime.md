@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 502
+source-wordcount: 503
 ht-degree: 0%
 
 ---
 
 # ダウンタイムのゼロ導入
 
-Adobe Commerce on cloud infrastructureは、デプロイメントフェーズ中に&#x200B;[_maintenance_ モード &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=ja#production-mode)でアプリケーションを実行します。デプロイメントが完了するまで、サイトはオフラインになります。 実稼動サイトがメンテナンスモードになる時間は、サイトのサイズ、デプロイメント中に適用される変更回数、静的コンテンツのデプロイメントの設定によって異なります。 プロジェクトは、**ゼロ**&#x200B;のダウンタイム効果でデプロイするように設定できます。
+Adobe Commerce on cloud infrastructureは、デプロイメントフェーズ中に&#x200B;[_maintenance_ モード &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode)でアプリケーションを実行します。デプロイメントが完了するまで、サイトはオフラインになります。 実稼動サイトがメンテナンスモードになる時間は、サイトのサイズ、デプロイメント中に適用される変更回数、静的コンテンツのデプロイメントの設定によって異なります。 プロジェクトは、**ゼロ**&#x200B;のダウンタイム効果でデプロイするように設定できます。
 
 デプロイメントプロセス中、すべての接続は、アクティブなセッションと保留中のアクション（カートへの追加やチェックアウトなど）を保持するために、最大5分間キューに入れます。 デプロイメント後、キューは解放され、接続は中断なく続行されます。 この&#x200B;_接続保留_&#x200B;を利用してデプロイメントを&#x200B;_0_&#x200B;のダウンタイムに短縮するには、最も効率的なデプロイ戦略を使用するようにプロジェクトを設定する必要があります。
 

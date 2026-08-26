@@ -16,9 +16,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2234
+source-wordcount: 2254
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Adobe Commerce管理者からFastly CDN サービスを設定し、Fastly API �
 
 Adobe Commerceクラウドインフラストラクチャでは、Fastly管理者ダッシュボードに直接アクセスすることはできません。
 
-Adobe Commerce管理者を使用して、お使いの環境のFastly設定を確認し、更新します。 AdminでFastly機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja)を送信します。
+Adobe Commerce管理者を使用して、お使いの環境のFastly設定を確認し、更新します。 AdminでFastly機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)を送信します。
 
 ## Fastly認証情報を取得
 
@@ -75,9 +75,9 @@ Cloud Starter プロジェクトで、Cloud ConsoleまたはCloud CLIを使用�
 
 - [!DNL Cloud Console]から、[環境設定](../project/overview.md#configure-environment)で次の環境変数を確認します。
 
-   - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
+  - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
-   - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
+  - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
 
 - ローカルワークスペースのコマンドラインから、`magento-cloud` CLIを使用して[Fastly環境変数を一覧表示およびレビュー](../environment/variables-cloud.md#viewing-environment-variables)します。
 
@@ -198,12 +198,12 @@ Fastlyの初期設定プロセスでは、次のURLを使用して、ステー�
 
 - プロステージングおよび実稼動用：
 
-   - `mcprod.<your-domain>.com`
-   - `mcstaging.<your-domain>.com`
+  - `mcprod.<your-domain>.com`
+  - `mcstaging.<your-domain>.com`
 
 - スタータープロダクションのみ：
 
-   - `mcprod.<your-domain>.com`
+  - `mcprod.<your-domain>.com`
 
 これらのデフォルトのプリプロダクション URLは、プロジェクトのプロビジョニング後に使用できます。 `"your-domain"`の値は、オンボーディングプロセス中に指定したドメイン名です。
 
@@ -350,4 +350,4 @@ Adobeでは、ステージング環境および実稼動環境のFastly モジ�
 
 >[!TIP]
 >
-> Adobe Commerce環境でFastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastlyのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter)を参照してください。
+> Adobe Commerce環境でFastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastlyのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-29661)を参照してください。

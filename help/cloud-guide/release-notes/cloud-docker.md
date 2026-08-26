@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 4509
 ht-degree: 0%
@@ -475,7 +475,7 @@ ht-degree: 0%
 
   - ![新しいアイコン &#x200B;](../../assets/new.svg) **データベース ポートをホスト**&#x200B;に公開するサービス構成オプションを追加しました。`--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` オプションを使用して、`docker-compose.yml` ファイルを作成する際にデータベース ポートをホストに公開します。`bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-  - ![新しいアイコン &#x200B;](../../assets/new.svg) **新しいデプロイ後コマンド** – 以前は、`cloud-deploy` コマンドを使用してAdobe CommerceをCloud Docker コンテナにデプロイした後、`.magento.app.yaml` ファイルで定義されたデプロイ後フックが自動的に実行されていました。 これで、デプロイ後にデプロイ後のフックを実行するには、別の`cloud-post-deploy` コマンドを発行する必要があります。 [developer](https://developer.adobe.com/commerce/cloud-tools/docker/deploy)および[実稼動](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) モードの最新の起動手順を参照してください。<!--MAGECLOUD-3996-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **新しいデプロイ後コマンド** – 以前は、`cloud-deploy` コマンドを使用してAdobe CommerceをCloud Docker コンテナにデプロイした後、`.magento.app.yaml` ファイルで定義されたデプロイ後フックが自動的に実行されていました。 これで、デプロイ後にデプロイ後のフックを実行するには、別の`cloud-post-deploy` コマンドを発行する必要があります。 [developer](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/)および[実稼動](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode) モードの最新の起動手順を参照してください。<!--MAGECLOUD-3996-->
 
   - ![新しいアイコン &#x200B;](../../assets/new.svg) ビルドコンテナとデプロイコンテナの`./bin/magento-docker` コマンドに`--rm` オプションを追加しました。 これにより、タスクが完了した後にコンテナが削除されます。<!--MAGECLOUD-4205-->
 

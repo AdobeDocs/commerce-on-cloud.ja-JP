@@ -11,16 +11,16 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 85
+source-wordcount: 86
 ht-degree: 0%
 
 ---
 
 # Variables プロパティ
 
-アプリケーションベースの環境変数を使用して、ストア設定をカスタマイズできます。 これらの変数は特定の構文を使用します。 _構成ガイド_&#x200B;の「[構成設定を上書き](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=ja)」を参照してください。
+アプリケーションベースの環境変数を使用して、ストア設定をカスタマイズできます。 これらの変数は特定の構文を使用します。 _構成ガイド_&#x200B;の「[構成設定を上書き](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/paths/override-config-settings)」を参照してください。
 
 [!DNL Commerce] アプリケーションの特定のバージョンには、`.magento.app.yaml` ファイルに含まれる次の環境変数が必要です。
 

@@ -3,9 +3,9 @@ title: Adobe Commerceの高度なセキュリティ
 description: Advanced Securityが、Adobe Commerce on Cloud Infrastructureにボット管理、高度なレート制限、およびレイヤ 7 DDoS対策をどのように追加するかをご覧ください。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 0b3ef117f85c990c2a01ecb655c930b8c4f61acb
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2482'
 ht-degree: 0%
 
 ---
@@ -254,7 +254,7 @@ Adobeとカスタマーセキュリティの責任の詳細については、[�
 
 1. お客様のプロジェクトの[!DNL Advanced Security]について詳しくは、Adobe アカウントチームまたはAdobeの営業担当者にお問い合わせください。
 
-1. [!DNL Advanced Security]を購入した後、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)し、[!DNL Advanced Security]の有効化をリクエストします。 [!DNL Adobe Commerce on Cloud Infrastructure] プロジェクト IDと、有効化が必要な環境（実稼動環境やステージングなど）を含めます。
+1. [!DNL Advanced Security]を購入した後、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)し、[!DNL Advanced Security]の有効化をリクエストします。 [!DNL Adobe Commerce on Cloud Infrastructure] プロジェクト IDと、有効化が必要な環境（実稼動環境やステージングなど）を含めます。
 
 1. Adobeは、Fastly サービスで[!DNL Advanced Security]をアクティブ化し、初期の保護ポリシーを設定します。 イネーブルメントは、通常、チケット提出から数営業日以内に完了します。
 
@@ -262,7 +262,7 @@ Adobeとカスタマーセキュリティの責任の詳細については、[�
 
 >[!NOTE]
 >
->[!DNL Advanced Security]への設定の変更には、現在[&#x200B; サポートチケットの送信](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。
+>[!DNL Advanced Security]への設定の変更には、現在[&#x200B; サポートチケットの送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。
 
 ## 制限
 

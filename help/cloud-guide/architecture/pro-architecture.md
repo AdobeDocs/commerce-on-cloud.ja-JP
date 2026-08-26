@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1587
+source-wordcount: 1619
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 統合環境で最高のパフォーマンスを発揮するには、次のベストプラクティスに従います。
 
-- カタログサイズの制限 – 参考までに、サンプルデータには約2,048の製品が含まれています。カタログサイズを4,000～5,000個程度に減らしてみてください。
+- カタログサイズの制限 – 参考までに、サンプルデータには約2,048の製品が含まれています。 カタログサイズを4,000～5,000個程度に減らしてみてください。
 カタログ内の製品数を確認するには、次のMySQL クエリを実行します。
 
   ```sql
@@ -155,10 +155,10 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - **GlusterFS** – すべての静的ファイルのデプロイと4つのディレクトリマウントとの同期を管理するファイルサーバー：
 
-   - `var`
-   - `pub/media`
-   - `pub/static`
-   - `app/etc`
+  - `var`
+  - `pub/media`
+  - `pub/static`
+  - `app/etc`
 
 - **Redis** - 1つのアクティブなサーバーと、他の2つのサーバーのみをレプリカとして使用するVMごとに1台のサーバー
 
@@ -225,4 +225,4 @@ Pro クラスターのサイズと&#x200B;_compute_&#x200B;の設定は、選択
 
 冗長なアーキテクチャにより、Adobeのクラウドインフラストラクチャは、ダウンタイムなしでアップグレードできます。 アップスケーリングの場合、3つのインスタンスのそれぞれは、サイトの操作に影響を与えることなく、容量をアップグレードするために回転します。 例えば、制約がデータベースレベルではなくPHP レベルにある場合は、既存のクラスターに追加のweb サーバーを追加できます。 これにより、_水平方向のスケーリング_&#x200B;が提供され、データベースレベルの余分なCPUによって提供される垂直方向のスケーリングを補完します。 [拡張アーキテクチャ &#x200B;](scaled-architecture.md)を参照してください。
 
-イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=ja)を参照してください。
+イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)を参照してください。

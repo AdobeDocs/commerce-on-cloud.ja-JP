@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 696
+source-wordcount: 705
 ht-degree: 0%
 
 ---
@@ -26,29 +26,29 @@ ht-degree: 0%
 
 - **互換性の問題を確認**-
 
-   - カスタムテーマが新しいAdobe Commerce バージョンと互換性があることを確認します
+  - カスタムテーマが新しいAdobe Commerce バージョンと互換性があることを確認します
 
-   - サードパーティおよびカスタム拡張機能をアップグレードした後、デプロイする前に`magento-cloud local:build` コマンドを使用してComposerの依存関係を検証し、[互換性のアップグレード ツール &#x200B;](#use-the-upgrade-compatibility-tool)を実行して、現在のバージョンとターゲットバージョン間のコードレベルの非互換性を特定します。 次に、[&#x200B; アップグレード互換性ツール &#x200B;](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool)を使用して、統合、ステージング、実稼動にデプロイする前に、コードレベルの非互換性を特定し、優先順位を付けます。
+  - サードパーティおよびカスタム拡張機能をアップグレードした後、デプロイする前に`magento-cloud local:build` コマンドを使用してComposerの依存関係を検証し、[互換性のアップグレード ツール &#x200B;](#use-the-upgrade-compatibility-tool)を実行して、現在のバージョンとターゲットバージョン間のコードレベルの非互換性を特定します。 次に、[&#x200B; アップグレード互換性ツール &#x200B;](https://fluffyjaws.adobe.com/#use-the-upgrade-compatibility-tool)を使用して、統合、ステージング、実稼動にデプロイする前に、コードレベルの非互換性を特定し、優先順位を付けます。
 
-   - Adobe Commerce リリースノートと拡張機能ドキュメントを確認して、アップグレードされたAdobe Commerceのバージョンと拡張機能に関連する既知の機能上の問題やバグに対処するために必要な回避策や設定変更を実装していることを確認します。
+  - Adobe Commerce リリースノートと拡張機能ドキュメントを確認して、アップグレードされたAdobe Commerceのバージョンと拡張機能に関連する既知の機能上の問題やバグに対処するために必要な回避策や設定変更を実装していることを確認します。
 
-   - インストールされているサービスのバージョンが新しいAdobe Commerceのバージョンと互換性があることを確認し、必要に応じてサービスをアップグレードします。 [&#x200B; サービス &#x200B;](../services/services-yaml.md)を参照してください。
+  - インストールされているサービスのバージョンが新しいAdobe Commerceのバージョンと互換性があることを確認し、必要に応じてサービスをアップグレードします。 [&#x200B; サービス &#x200B;](../services/services-yaml.md)を参照してください。
 
-   - データベースをテストして、Adobe Commerceのバージョンと拡張機能のアップデートによって発生した問題に対処します。
+  - データベースをテストして、Adobe Commerceのバージョンと拡張機能のアップデートによって発生した問題に対処します。
 
-   - リモート環境にデプロイする前に、必要な環境固有の設定の更新を行います。
+  - リモート環境にデプロイする前に、必要な環境固有の設定の更新を行います。
 
-   - 検索サービスのバージョンがPHP クライアントバージョンと互換性があることを確認します。 [Elasticsearchの設定](../services/elasticsearch.md)または[OpenSearchの設定](../services/opensearch.md)を参照してください。
+  - 検索サービスのバージョンがPHP クライアントバージョンと互換性があることを確認します。 [Elasticsearchの設定](../services/elasticsearch.md)または[OpenSearchの設定](../services/opensearch.md)を参照してください。
 
 - **リモート環境のデータベース接続と利用可能なストレージを確認する**-
 
-   - SSHを使用してリモートサーバーにログインし、MySQL データベースへの接続を確認します。 [&#x200B; データベースへの接続](../services/mysql.md#connect-to-the-database)を参照してください。
+  - SSHを使用してリモートサーバーにログインし、MySQL データベースへの接続を確認します。 [&#x200B; データベースへの接続](../services/mysql.md#connect-to-the-database)を参照してください。
 
-   - リモート環境で使用可能なストレージを確認します。`disk free` コマンドを使用して、クラウド環境で使用可能なディスク領域を表示および管理します。 [&#x200B; ディスク領域の管理](../storage/manage-disk-space.md)を参照してください。
+  - リモート環境で使用可能なストレージを確認します。`disk free` コマンドを使用して、クラウド環境で使用可能なディスク領域を表示および管理します。 [&#x200B; ディスク領域の管理](../storage/manage-disk-space.md)を参照してください。
 
-      - アップグレードされたデータベースのサイズを確認し、`services.yaml` ファイルに十分なディスク領域が割り当てられていることを確認します。
+    - アップグレードされたデータベースのサイズを確認し、`services.yaml` ファイルに十分なディスク領域が割り当てられていることを確認します。
 
-      - ディスク領域を解放します。キャッシュをクリアし、デプロイする前に`/log`および`/tmp` ディレクトリをクリーニングします。
+    - ディスク領域を解放します。キャッシュをクリアし、デプロイする前に`/log`および`/tmp` ディレクトリをクリーニングします。
 
 - **ローカル環境と統合環境でアップグレードを計画し、正常に実行します。ステージング環境にデプロイする前に**- アップグレード後に、デプロイメントをテストして問題を解決します。
 
@@ -56,14 +56,14 @@ ht-degree: 0%
 
 - **アップグレード後のタスクを完了**-
 
-   - SSHを使用してリモートサーバーにログインし、次の点を確認します。
+  - SSHを使用してリモートサーバーにログインし、次の点を確認します。
 
-      - インデクサーステータスを確認し、必要に応じてインデックスを再作成します。 _設定ガイド_&#x200B;の「[&#x200B; インデクサーの管理](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=ja)」を参照してください。
+    - インデクサーステータスを確認し、必要に応じてインデックスを再作成します。 _設定ガイド_&#x200B;の「[&#x200B; インデクサーの管理](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/manage-indexers)」を参照してください。
 
-      - Adobe Commerce データベースの`cron` ログと`cron_schedule` テーブルを確認して、cron ステータスを確認し、必要に応じてcron ジョブを再実行します。
-_設定ガイド_&#x200B;の[&#x200B; ログ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=ja#logging)を参照してください。
+    - Adobe Commerce データベースの`cron` ログと`cron_schedule` テーブルを確認して、cron ステータスを確認し、必要に応じてcron ジョブを再実行します。
+      _設定ガイド_&#x200B;の「[&#x200B; ログ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs#logging)」を参照してください。
 
-   - ステージング環境および実稼動環境でのアップグレード後のユーザー受け入れテスト UATを完了し、サードパーティおよびカスタム拡張機能のアップグレードに関連する問題を修正します。
+  - ステージング環境および実稼動環境でのアップグレード後のユーザー受け入れテスト UATを完了し、サードパーティおよびカスタム拡張機能のアップグレードに関連する問題を修正します。
 
 ## 互換性のアップグレード ツールの使用
 

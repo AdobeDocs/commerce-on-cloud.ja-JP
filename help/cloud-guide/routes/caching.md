@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 430
+source-wordcount: 431
 ht-degree: 0%
 
 ---
@@ -139,7 +139,7 @@ cache:
 
 Cookieには次の制限があります。
 
-- システムには最大&#x200B;**50 Cookie**&#x200B;が設定されています。 それ以外の場合は、`Unable to send the cookie. Maximum number of cookies would be exceeded`例外がスローされます。 Cookieの数を200に増やすには、[品質パッチツール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-learn/tutorials/tools/quality-patch-tool)を使用して[MDVA-12304 パッチ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=ja)を適用します。
+- システムには最大&#x200B;**50 Cookie**&#x200B;が設定されています。 それ以外の場合は、`Unable to send the cookie. Maximum number of cookies would be exceeded`例外がスローされます。 Cookieの数を200に増やすには、[品質パッチツール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-learn/tutorials/tools/quality-patch-tool)を使用して[MDVA-12304 パッチ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)を適用します。
 - 最大Cookie サイズは&#x200B;**4096 バイト**&#x200B;です。 それ以外の場合は、`Unable to send the cookie. Size of '%name' is %size bytes`例外がスローされます。
 
 ### `default_ttl`

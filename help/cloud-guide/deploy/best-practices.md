@@ -18,9 +18,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1982
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 - **サービスのバージョンと関係、および接続する機能を確認する**
 
-  アプリケーションで使用可能なサービスを確認し、最新の互換性のあるバージョンを使用していることを確認します。 推奨バージョンについては、_インストールガイド_&#x200B;の[&#x200B; サービス関係](../services/services-yaml.md#service-relationships)および[必要システム構成](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=ja)を参照してください。
+  アプリケーションで使用可能なサービスを確認し、最新の互換性のあるバージョンを使用していることを確認します。 推奨バージョンについては、_インストールガイド_&#x200B;の[&#x200B; サービス関係](../services/services-yaml.md#service-relationships)および[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 - **ステージングおよび実稼動にデプロイする前に、ローカルおよび統合環境でテストします**
 
@@ -95,11 +95,11 @@ ht-degree: 0%
 
   実稼動にデプロイする前に、次のタスクを実行します。
 
-   - [SSH](../development/secure-connections.md)を使用して、実稼動環境内のすべての3つのノードに接続できることを確認してください。
+  - [SSH](../development/secure-connections.md)を使用して、実稼動環境内のすべての3つのノードに接続できることを確認してください。
 
-   - インデクサーがスケジュール _で_&#x200B;更新に設定されていることを確認します。 _拡張機能デベロッパーガイド_&#x200B;の[&#x200B; インデックス作成モード &#x200B;](https://developer.adobe.com/commerce/php/development/components/indexing/)を参照してください。
+  - インデクサーがスケジュール _で_&#x200B;更新に設定されていることを確認します。 _拡張機能デベロッパーガイド_&#x200B;の[&#x200B; インデックス作成モード &#x200B;](https://developer.adobe.com/commerce/php/development/components/indexing/)を参照してください。
 
-   - 実稼動コード内の環境固有の変数を更新し、サービスの可用性と互換性を確認し、その他の必要な設定変更を行うことで、環境を準備します。
+  - 実稼動コード内の環境固有の変数を更新し、サービスの可用性と互換性を確認し、その他の必要な設定変更を行うことで、環境を準備します。
 
 - **デプロイ プロセスを監視**
 
@@ -186,13 +186,13 @@ ht-degree: 0%
 
 デプロイメントフックは2つあります。 `pre-deploy.php` フックは、ビルドフックで生成されたリソースとコードの必要なクリーンアップと取得を完了します。 `php ./vendor/bin/ece-tools deploy` フックは、一連のコマンドとスクリプトを実行します。
 
-- Adobe Commerceが&#x200B;**インストールされていない**&#x200B;場合は、`bin/magento setup:install`でインストールし、デプロイメント設定、`app/etc/env.php`およびRedisやweb サイト URLなどの指定された環境のデータベースを更新します。 **重要：** セットアップ中に[初回デプロイメント &#x200B;](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=ja)を完了すると、Adobe Commerceがすべての環境にインストールされ、デプロイされました。
+- Adobe Commerceが&#x200B;**インストールされていない**&#x200B;場合は、`bin/magento setup:install`でインストールし、デプロイメント設定、`app/etc/env.php`およびRedisやweb サイト URLなどの指定された環境のデータベースを更新します。 **重要：** セットアップ中に[初回デプロイメント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/overview)を完了すると、Adobe Commerceがすべての環境にインストールされ、デプロイされました。
 
 - Adobe Commerce **がインストールされている**&#x200B;場合は、必要なアップグレードを実行します。 デプロイメントスクリプトは、`bin/magento setup:upgrade`を実行して、（拡張機能またはコアコードの更新後に必要となる）データベーススキーマとデータを更新し、環境のデプロイメント設定、`app/etc/env.php`、およびデータベースも更新します。 最後に、デプロイメントスクリプトによってAdobe Commerce キャッシュがクリアされます。
 
 - スクリプトは、オプションでコマンド `magento setup:static-content:deploy`を使用して静的web コンテンツを生成します。
 
-- 静的コンテンツのデプロイメント戦略に対して、スコープ（`-s` フラグ、ビルドスクリプト）をデフォルト設定`quick`で使用します。 環境変数[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)を使用して、戦略をカスタマイズできます。 これらのオプションと機能について詳しくは、[静的ファイルのデプロイメント戦略](../deploy/static-content.md)および[静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=ja)の`-s` フラグを参照してください。
+- 静的コンテンツのデプロイメント戦略に対して、スコープ（`-s` フラグ、ビルドスクリプト）をデフォルト設定`quick`で使用します。 環境変数[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)を使用して、戦略をカスタマイズできます。 これらのオプションと機能について詳しくは、[静的ファイルのデプロイメント戦略](../deploy/static-content.md)および[静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)の`-s` フラグを参照してください。
 
 >[!NOTE]
 >

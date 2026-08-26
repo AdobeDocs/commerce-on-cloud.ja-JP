@@ -14,16 +14,16 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: c43a709ee9c3b974cef08e36170dbb2ab240564f
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 573
 ht-degree: 0%
 
 ---
 
 # [!DNL RabbitMQ] サービスの設定
 
-[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=ja)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
 
 MQFは[RabbitMQ](https://www.rabbitmq.com/)をメッセージングブローカーとして使用し、メッセージを送受信するためのスケーラブルなプラットフォームを提供します。 また、未配信のメッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ]は、Advanced Message Queuing Protocol （AMQP） 0.9.1仕様に基づいています。
 

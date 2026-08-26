@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 774
+source-wordcount: 775
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ stage:
 - **既定**-_設定なし_
 - **バージョン** - Adobe Commerce 2.4.4以降
 
-`true`に設定すると、CommerceのWebhookを有効にします。 Webhookは、App Builder ランタイムアクションやサードパーティの在庫管理システムなどの外部エンドポイントで実行されます。 [_Webhook ガイド_](https://developer.adobe.com/commerce/extensibility/webhooks)では、この機能について詳しく説明しています。
+`true`に設定すると、CommerceのWebhookを有効にします。 Webhookは、App Builder ランタイムアクションやサードパーティの在庫管理システムなどの外部エンドポイントで実行されます。 [_Webhook ガイド_](https://developer.adobe.com/commerce/extensibility/webhooks/)では、この機能について詳しく説明しています。
 
 ```yaml
 stage:
@@ -167,8 +167,8 @@ stage:
 ## `SKIP_HTML_MINIFICATION`
 
 - **既定**:
-   - `true` - `ece-tools` 2002.0.13以降
-   - `false` – 以前のバージョン `ece-tools`の場合
+  - `true` - `ece-tools` 2002.0.13以降
+  - `false` – 以前のバージョン `ece-tools`の場合
 - **バージョン** - Adobe Commerce 2.1.4以降
 
 ビルド ステージの最後にある`<magento_root>/init/` ディレクトリへの静的ビューファイルのコピーを有効または無効にします。 `true`に設定されている場合、ファイルはコピーされず、HTMLの縮小はリクエストに応じて利用できます。 この値を`true`に設定すると、ステージング環境と実稼動環境にデプロイする際のダウンタイムが短縮されます。
@@ -189,7 +189,7 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=ja) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
+Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/security/xframe-options) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
 
 - `DENY` - ページはフレーム内に表示できません。
 - `SAMEORIGIN` – （デフォルトのAdobe Commerce設定） ページは、ページ自体と同じオリジンのフレームでのみ表示できます。

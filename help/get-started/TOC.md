@@ -5,9 +5,9 @@ user-guide-description: クラウド インフラストラクチャで [!DNL Com
 feature: Cloud
 product: magento
 recommendations: noDisplay, noCatalog
-source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
+source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
@@ -21,4 +21,4 @@ ht-degree: 0%
 + [&#x200B; [!DNL Cloud Console]にログイン](cloud-console.md)
 + [ストアフロントへのアクセス](access-storefront.md)
 + [開発のための準備](prepare-workspace.md)
-+ [クラウドインフラストラクチャガイドに戻る](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/overview.html?lang=ja)
++ [クラウドインフラストラクチャガイドに戻る](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/overview)

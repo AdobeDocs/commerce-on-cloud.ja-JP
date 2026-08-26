@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 849
+source-wordcount: 857
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ disk: 5120
 
 >[!NOTE]
 >
->Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
+>Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
 >
 >ステージングまたは実稼動環境のディスクストレージを一時的に増やすことはできません。このプロセスは元に戻すことができません。
 
@@ -198,7 +198,7 @@ mounts:
 
 >[!NOTE]
 >
->Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
+>Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
 
 マウント webを場所の[`web`](web-property.md) ブロックに追加することで、マウント webにアクセスできるようにできます。
 

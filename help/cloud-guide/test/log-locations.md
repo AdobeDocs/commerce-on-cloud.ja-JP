@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1287
+source-wordcount: 1369
 ht-degree: 0%
 
 ---
@@ -119,9 +119,9 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 
 >[!TIP]
 >
->Pro ステージング環境およびPro実稼動環境では、固定ファイル名のログファイルに対して、自動ログのローテーション、圧縮、削除が有効になります。各ログファイルタイプには、回転パターンとライフタイムがあります。
->環境のログのローテーションと圧縮されたログの有効期間に関する詳細は、`/etc/logrotate.conf`と`/etc/logrotate.d/<various>`で確認できます。
->Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=ja#submit-ticket)を送信する必要があります。
+>Pro ステージング環境およびPro実稼動環境では、固定ファイル名のログファイルに対して、自動ログのローテーション、圧縮、削除が有効になります。 各ログファイルタイプには、回転パターンとライフタイムがあります。
+>環境のログのローテーションと圧縮されたログの有効期間の詳細については、`/etc/logrotate.conf`および`/etc/logrotate.d/<various>`を参照してください。
+>Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
 
 >[!TIP]
 >
@@ -232,7 +232,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=ja)を参照してください。
+ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
 
 ## アプリケーションログ
 
