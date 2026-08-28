@@ -11,7 +11,7 @@ ht-degree: 0%
 
 - Fastly CDNを使用するように環境を設定する必要があります。 [Fastly サービスの設定](/help/cloud-guide/cdn/fastly-configuration.md)を参照してください。
 
-- Magento 2用Fastly CDN モジュールの最新バージョンを実行していることを確認します。 [Fastly モジュールのアップグレード ](/help/cloud-guide/cdn/fastly-configuration.md#upgrade-fastly-module)を参照してください。
+- Magento 2用Fastly CDN モジュールの最新バージョンを実行していることを確認します。 [Fastly モジュールのアップグレード &#x200B;](/help/cloud-guide/cdn/fastly-configuration.md#upgrade-fastly-module)を参照してください。
 
 - Fastly サービスの環境設定を確認します。 [Fastly キャッシュの確認](/help/cloud-guide/launch/checklist.md#verify-fastly-caching)を参照してください。
 
