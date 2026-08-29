@@ -232,5 +232,5 @@ MySQLの問題のトラブルシューティングについては、次のAdobe 
 
 - [MySQLの低速なクエリとプロセスを確認する](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
 - [クラウドでのデータベースダンプの作成](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
-- [データ移行ツールのトラブルシューティング](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+- [データ移行ツールのトラブルシューティング](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=ja)
 - [Adobe Commerceのアップグレード：compactからdynamic tables 2.2.x、2.3.xから2.4.xへの移行](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)
