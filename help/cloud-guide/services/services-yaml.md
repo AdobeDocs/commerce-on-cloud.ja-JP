@@ -1,33 +1,27 @@
 ---
 title: サービスの設定
-description: Adobe Commerce クラウドインフラストラクチャで使用されるサービスを設定する方法について説明します。
+description: MySQL、Redis、Elasticsearchなど、Adobe Commerceのクラウドインフラストラクチャで使用されるサービスを設定する方法について説明します。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 660f62d8bb809675ec872da2e87301308d333ba8
 workflow-type: tm+mt
-source-wordcount: 1187
+source-wordcount: 1176
 ht-degree: 0%
 
 ---
 
 # サービスの設定
 
-`services.yaml` ファイルは、MySQL、Redis、ElasticsearchまたはOpenSearchなど、Adobe Commerceでクラウドインフラストラクチャ上でサポートおよび使用されるサービスを定義します。 外部サービスプロバイダーに加入する必要はありません。
+`services.yaml` ファイルは、MySQL、RedisまたはValkey、ElasticsearchまたはOpenSearchなど、Adobe Commerceがクラウドインフラストラクチャ上でサポートおよび使用するサービスを定義します。 外部サービスプロバイダーに加入する必要はありません。
 
 >[!NOTE]
 >
->`.magento/services.yaml` ファイルは、プロジェクトの`.magento` ディレクトリ内でローカルに管理されます。 デプロイメント時に、Adobe Commerce オンクラウドインフラストラクチャは、この設定を使用して、ターゲット環境でサポートされているサービスをプロビジョニングします。 デプロイ後に`.magento` ディレクトリがリモート サーバーから削除されるので、デプロイされた環境に`services.yaml`が見つかりません。
+>`.magento/services.yaml` ファイルは、プロジェクトの`.magento` ディレクトリ内でローカルに管理されます。 デプロイメント時に、Adobe Commerce オンクラウドインフラストラクチャは、この設定を使用して、ターゲット環境でサポートされているサービスをプロビジョニングします。 `.magento` ディレクトリはデプロイ後にリモート サーバーから削除されるので、`services.yaml`はデプロイされた環境には存在しません。
 
 デプロイ スクリプトは、`.magento` ディレクトリの設定ファイルを使用して、設定されたサービスを使用して環境をプロビジョニングします。 サービスは、`.magento.app.yaml` ファイルの[`relationships`](../application/properties.md#relationships) プロパティに含まれている場合、アプリケーションで利用できるようになります。 `services.yaml` ファイルには、_type_&#x200B;と&#x200B;_disk_&#x200B;の値が含まれています。 サービスの種類は、サービス _name_&#x200B;および&#x200B;_version_&#x200B;を定義します。
 
@@ -40,7 +34,7 @@ ht-degree: 0%
 - 実稼動環境`master`を含むすべてのスターター環境
 - Pro統合環境
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## デフォルトサービスとサポート対象サービス
 
@@ -48,20 +42,19 @@ Adobe Commerce on cloud infrastructureでは、プロジェクトに設定でき
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
-- [バルキー](valkey.md)
-- [Redis](redis.md)
+- [Redis](redis.md)または[Valkey](valkey.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->例えば、使用可能なバージョン [&#128279;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)間でRabbitMQを順次 アップグレードする必要があります。例えば、3.9から4.1に直接アップグレードすることはできません
+>[使用可能なバージョン間でRabbitMQを順次アップグレード ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
 >
->新しいバージョンのRabbitMQにアップグレードした後、完全なデプロイメントをトリガーして、カスタムメッセージキューがRabbitMQで再作成されるようにします。
+>新しいバージョンにアップグレードした後、カスタムメッセージキューがRabbitMQで再作成されるようにするには、完全なデプロイメントをトリガーします。
 
 ## 設定済みのサービスとバージョンの表示
 
-現在のテンプレート [`services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
+現在のテンプレート [`services.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
 
 次の例は、`services.yaml`設定ファイルのサービス定義を示しています。
 
@@ -88,7 +81,7 @@ activemq-artemis:
 
 ## サービス値
 
-サービス IDとサービス タイプ設定`type: <name>:<version>`を指定する必要があります。 サービスで永続ストレージを使用する場合は、ディスク値を指定する必要があります。
+サービス IDとサービス タイプ設定`type: <name>:<version>`を指定してください。 サービスで永続ストレージを使用する場合は、ディスク値を指定する必要があります。
 
 次の形式を使用します。
 
@@ -100,29 +93,29 @@ activemq-artemis:
 
 ### `service-id`
 
-`service-id`値は、プロジェクト内のサービスを識別します。 小文字の英数字のみを使用できます：`a` ～ `z`、および`0` ～ `9` （例：`redis`）。
+`service-id`値は、プロジェクト内のサービスを識別します。 小文字の英数字のみを使用できます：`a` ～ `z`、および`0` ～ `9` （例：`valkey`）。
 
 この&#x200B;_service-id_&#x200B;値は、`.magento.app.yaml`設定ファイルの[`relationships`](../application/properties.md#relationships) プロパティで使用されます。
 
 ```yaml
 relationships:
-    redis: "<name>:redis"
+    valkey: "valkey:valkey"
 ```
 
-各サービスタイプの複数のインスタンスに名前を付けることができます。 例えば、複数のRedis インスタンス（セッション用に1つ、キャッシュ用に1つ）を使用できます。
+各サービスタイプの複数のインスタンスに名前を付けることができます。 例えば、複数のValkey インスタンスを使用できます。1つはセッション用、1つはキャッシュ用です。
 
 ```yaml
-redis:
-    type: redis:<version>
+valkey:
+    type: valkey:<version>
 
-redis2:
-    type: redis:<version>
+valkey2:
+    type: valkey:<version>
 ```
 
-`services.yaml` ファイル **のサービスの名前を変更すると、次の**&#x200B;が完全に削除されます。
+`services.yaml` ファイル内のサービスの名前を変更します。
 
 - 指定した新しい名前のサービスを作成する前の既存のサービス。
-- サービスの既存のデータはすべて削除されます。 Adobeでは、既存のサービスの名前を変更する前に、[Starter環境](../storage/snapshots.md)をバックアップすることを強くお勧めします。
+- サービスの既存のデータはすべて削除されます。 Adobeでは、既存のサービスの名前を変更する前に、[Starter環境](../storage/snapshots.md)をバックアップすることをお勧めします。
 
 ### `type`
 
@@ -135,7 +128,7 @@ mysql:
 
 ### `disk`
 
-`disk`値は、サービスに割り当てる永続的なディスク ストレージのサイズ （MB）を指定します。 MySQLなどの永続ストレージを使用するサービスでは、ディスク値を提供する必要があります。 Redisなどの永続ストレージの代わりにメモリを使用するサービスでは、ディスク値は必要ありません。
+`disk`値は、サービスに割り当てる永続的なディスク ストレージのサイズ （MB）を指定します。 MySQLなどの永続ストレージを使用するサービスでは、ディスク値を提供する必要があります。 Valkeyなどの永続ストレージの代わりにメモリを使用するサービスでは、ディスク値は必要ありません。
 
 ```yaml
 mysql:
@@ -143,7 +136,7 @@ mysql:
     disk: 5120
 ```
 
-プロジェクトごとの現在のデフォルトのストレージ容量は5 GB、つまり512 0MBです。 この金額は、アプリケーションとその各サービスの間で配布できます。
+プロジェクトごとの現在のデフォルトのストレージ容量は5 GB、つまり5120 MBです。 この金額は、アプリケーションとその各サービスの間で配布できます。
 
 ## サービスとの関係
 
@@ -151,7 +144,7 @@ mysql:
 
 すべてのサービス関係の設定データは、[`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md)環境変数から取得できます。 設定データには、サービス名、タイプ、バージョンと、ポート番号やログイン資格情報などの必要な接続の詳細が含まれます。
 
-**ローカル開発環境からのリレーションシップを検証するには**:
+### ローカル開発環境からの関係を確認する
 
 1. ローカル開発環境から、アクティブな環境のリレーションシップを表示します。
 
@@ -164,10 +157,10 @@ mysql:
    >簡略化されたサンプル応答
 
    ```yaml
-   redis:
+   valkey:
        -
    ...
-           type: 'redis:7.0'
+           type: 'valkey:8.0'
            port: 6379
    opensearch:
        -
@@ -181,7 +174,7 @@ mysql:
            port: 3306
    ```
 
-**リモート環境での関係を確認するには**:
+### リモート環境での関係の確認
 
 1. SSHを使用してリモート環境にログインします。
 
@@ -197,11 +190,11 @@ mysql:
    php ./vendor/bin/ece-tools env:config:show services
    ```
 
-1. 応答から`service`と`type`を確認してください。 応答は、IP アドレスとポート番号、必要なユーザー名とパスワードの資格情報などの接続情報を提供します。
+1. 応答から`service`と`type`を確認してください。 応答は、IP アドレス、ポート番号、必要なユーザー名およびパスワード資格情報などの接続情報を提供します。
 
 ## サービスバージョン
 
-Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
+クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンと異なる場合がある、クラウドインフラストラクチャ上のAdobe Commerceのサービスバージョンと互換性のサポートが判断されます。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 ### ソフトウェアのEOL チェック
 
@@ -210,7 +203,7 @@ Adobe Commerce on cloud infrastructureのサービスバージョンと互換性
 - サービスのバージョンがEOL日から3か月以内の場合、デプロイログに通知が表示されます。
 - EOL日が過去の場合は、警告通知が表示されます。
 
-ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル &#x200B;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
+ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル ](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
 
 ### OpenSearchに移行
 
@@ -222,7 +215,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 インストール済みのサービスのバージョンは、Cloud環境にデプロイされているAdobe Commerceのバージョンと互換性を保つためにアップグレードできます。
 
-インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [&#x200B; ダウングレードサービスバージョン &#x200B;](#downgrade-version)を参照してください。
+インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [ ダウングレードサービスバージョン ](#downgrade-version)を参照してください。
 
 ### インストール済みサービスのバージョンのアップグレード
 
@@ -270,7 +263,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 サービスのバージョンを変更する場合は、`services.yaml` ファイルのサービス設定を更新し、`.magento.app.yaml` ファイルの関係を更新する必要があります。
 
-**既存のサービスの名前を変更してサービスのバージョンをダウングレードするには**:
+#### 既存のサービスの名前を変更して、サービスのバージョンをダウングレード
 
 1. `.magento/services.yaml` ファイル内の既存のサービスの名前を変更し、バージョンを変更します。
 
@@ -314,7 +307,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 1. コード変更を追加、コミット、プッシュします。
 
-**サービスを作成してサービスをダウングレードするには**:
+#### サービスの作成によるサービスのダウングレード
 
 1. ダウングレードされたバージョン仕様を使用して、プロジェクトの`services.yaml` ファイルにサービス定義を追加します。 次の例の&#x200B;_mysql2_&#x200B;を参照してください。
 
@@ -329,7 +322,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
        disk: 5120
    ```
 
-1. 新しいサービスを使用するように、`.magento.app.yaml` ファイルの関係設定を変更します。
+1. 新しいサービスを使用するには、`.magento.app.yaml` ファイルの関係設定を変更します。
 
    > 元の`.magento.app.yaml`設定
 
