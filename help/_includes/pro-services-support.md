@@ -11,11 +11,11 @@ ht-degree: 0%
 
 ステージングまたは実稼動環境でPro サービスのアップグレードをリクエストして完了するには、次の手順に従います。
 
-1. **環境`Staging`および`Production`環境のみ**&#x200B;で[&#x200B; サービス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)をインストールまたは更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
+1. **環境`Staging`および`Production`環境のみ**&#x200B;で[&#x200B; サービス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)をインストールまたは更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
 
    チケットで、必要なサービス変更を指定し、更新された`.magento.app.yaml`および`.magento/services.yaml` ファイルを含め、対象のPHP バージョンをメモします。
 
-   PHPのバージョン、Composerのアップデート、拡張機能、環境設定は、セルフサービスの変更です。 Adobeでは、PHPのバージョンに対応するようにNew Relic agentをアップデートする必要がある場合があります。 _アプリケーション設定_&#x200B;の[PHP設定](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings)を参照してください。
+   PHPのバージョン、Composerのアップデート、拡張機能、環境設定は、セルフサービスの変更です。 Adobeでは、PHPのバージョンに対応するようにNew Relic agentをアップデートする必要がある場合があります。 _アプリケーション設定_&#x200B;の[PHP設定](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/php-settings)を参照してください。
 
    >[!IMPORTANT]
    >

@@ -24,7 +24,7 @@ ht-degree: 0%
 
 # Commerce バージョンのアップグレード
 
-Adobe Commerce コードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照して、最新のソフトウェアバージョン要件を確認してください。
+Adobe Commerce コードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照して、最新のソフトウェアバージョン要件を確認してください。
 
 環境タイプ（開発、ステージング、実稼動）に応じて、アップグレード タスクには次のものが含まれます。
 
@@ -142,7 +142,7 @@ Adobeでは、アップグレードの前にインスタンスのバックアッ
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2Bを使用している場合は、`composer.json` ファイルを[&#x200B; サポートされているバージョン &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)のCommerceに更新します。
+1. B2Bを使用している場合は、`composer.json` ファイルを[&#x200B; サポートされているバージョン &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/product-availability#adobe-authored-extensions)のCommerceに更新します。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -156,15 +156,15 @@ Adobeでは、アップグレードの前にインスタンスのバックアッ
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)を送信し、Adobe Commerce サポートと協力して、新しいバージョンにまだ適用できるパッチを確認します。 該当しないパッチを`m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)を送信し、Adobe Commerce サポートと協力して、新しいバージョンにまだ適用できるパッチを確認します。 該当しないパッチを`m2-hotfixes` ディレクトリから削除します。
 
    - `.magento.env.yaml` ファイルに適用されている[品質パッチ ]がある場合は、新しいバージョンにまだ適用できるかどうかを確認します。 `.magento.env.yaml` ファイルの`QUALITY_PATCHES` セクションから該当しないパッチを削除します。
 
-   **方法1**: [品質パッチのリリースノートで該当するバージョンを確認する](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**: [品質パッチのリリースノートで該当するバージョンを確認する](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**: [使用可能なパッチとステータスを表示](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**: [使用可能なパッチとステータスを表示](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**: [&#x200B; パッチの検索](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)
+   **方法3**: [&#x200B; パッチの検索](https://experienceleague.adobe.com/ja/tools/commerce-quality-patches)
 
 
 1. コードの変更を追加、コミット、プッシュします。

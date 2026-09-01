@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->2020年6月5日より前にプロビジョニングされたプロジェクトには、複数の小さい統合環境がありました。 テストと開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストしてください。 詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の[Integration Environment リクエスト &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27242)の記事を参照してください。
+>2020年6月5日より前にプロビジョニングされたプロジェクトには、複数の小さい統合環境がありました。 テストと開発に大規模な統合環境が必要な場合は、拡張統合環境へのアップグレードをリクエストしてください。 詳しくは、_Adobe Commerce ヘルプセンター_&#x200B;の[Integration Environment リクエスト &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27242)の記事を参照してください。
 
 ## 結合オプション {#merge-options}
 
@@ -41,15 +41,15 @@ ht-degree: 0%
 >一部の&#x200B;**Pro プロジェクト**&#x200B;では、`routes.yaml` ファイルのルート設定と`.magento.app.yaml` ファイルのcron設定を更新するために、Adobe サポートの支援が必要です。 Adobeでは、まず統合環境でYAML設定の変更をすべて行って検証し、その後ステージング環境にデプロイすることをお勧めします。
 >
 >
->再展開後に変更がステージングサイトに反映されず、ログに関連するエラーメッセージがない場合は、**Adobe Commerce サポートチケット [&#128279;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を**&#x200B;送信する必要があります。 チケットで、試した設定の変更を明確に説明し、更新されたYAML設定ファイルをチケットに添付します。
+>再展開後に変更がステージングサイトに反映されず、ログに関連するエラーメッセージがない場合は、**Adobe Commerce サポートチケット [&#128279;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を**&#x200B;送信する必要があります。 チケットで、試した設定の変更を明確に説明し、更新されたYAML設定ファイルをチケットに添付します。
 
 ## プロバックアップ {#pro-backups}
 
 >[!TIP]
 >
->Pro ステージング環境および実稼動環境で特定のバックアップを取得するには、[&#x200B; チケットの日付、時刻、タイムゾーンを記載したAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
+>Pro ステージング環境および実稼動環境で特定のバックアップを取得するには、[&#x200B; チケットの日付、時刻、タイムゾーンを記載したAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
 >
->Adobeは、自動バックアップから任意の環境を&#x200B;**not**&#x200B;復元します。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[&#x200B; ステージングまたは実稼動からのDB スナップショットの復元](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)を参照してください。
+>Adobeは、自動バックアップから任意の環境を&#x200B;**not**&#x200B;復元します。 ステージングまたは実稼動スナップショットを復元する方法を選択する方法については、[&#x200B; ステージングまたは実稼動からのDB スナップショットの復元](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production)を参照してください。
 
 ## 再展開の警告 {#redeploy-warning}
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Pro実稼動環境とステージング環境のサービス構成を変更するには、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)してください。 スケジュール要件と顧客の可用性に関するガイダンスについては、_サービスの設定_&#x200B;の[Pro サービス サポート &#x200B;](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)を参照してください。
+>Pro実稼動環境とステージング環境のサービス構成を変更するには、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)してください。 スケジュール要件と顧客の可用性に関するガイダンスについては、_サービスの設定_&#x200B;の[Pro サービス サポート &#x200B;](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support)を参照してください。
 
 ## サービスの変更 {#service-change-tip}
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->デプロイメントが停止している場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
+>デプロイメントが停止している場合は、_Adobe Commerce ヘルプセンター_&#x200B;の[Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
 
 ## ECE-Toolsへのアップデート {#ece-tools-package}
 
