@@ -1,26 +1,18 @@
 ---
 title: プロアーキテクチャ
-description: Pro アーキテクチャでサポートされている環境について説明します。
+description: マスター、インテグレーション、ステージング、実稼動環境、クラスターのスケーリングとバックアップなど、Pro環境アーキテクチャについて説明します。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
 TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 1619
+source-wordcount: 1621
 ht-degree: 0%
 
 ---
@@ -46,6 +38,8 @@ Adobe Commerce on cloud infrastructure Proのアーキテクチャは、スト�
 | New Relic サービスを含む | いいえ | APM | APM + NRI |
 | 自動バックアップ | いいえ | はい | はい |
 
+**APM**&#x200B;は、[!DNL New Relic's] アプリケーションパフォーマンス監視を参照します。
+
 >[!NOTE]
 >
 >Adobeには、ローカルのCloud Docker環境にデプロイするためのCloud Docker for Commerce ツールが用意されています。これにより、Adobe Commerce プロジェクトを開発およびテストできます。 [Docker開発](../dev-tools/cloud-docker.md)を参照してください。
@@ -64,11 +58,11 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - `master` ブランチに基づいて&#x200B;**not** ブランチを作成します。 統合環境を使用して、開発用のアクティブなブランチを作成します。
 
-- 開発、UAT、またはパフォーマンス テストに`master`環境を使用しないでください
+- 開発、ユーザー受け入れテスト （UAT）、またはパフォーマンス テストに`master`環境を使用しないでください
 
 ### 統合環境
 
-統合環境は、PaaSと呼ばれるサーバーのグリッド上のLinux コンテナ（LXC）で実行されます。 各環境には、サイトをテストするためのweb サーバーとデータベースが含まれています。 AWSとAzureのIP アドレスの一覧については、[地域IP アドレス &#x200B;](../project/regional-ip-addresses.md)を参照してください。
+統合環境は、PaaSと呼ばれるサーバーのグリッド上のLinux コンテナ（LXC）で実行されます。 各環境には、サイトをテストするためのweb サーバーとデータベースが含まれています。 AWSとAzureのIP アドレスの一覧については、[地域IP アドレス ](../project/regional-ip-addresses.md)を参照してください。
 
 **推奨されるユースケース：**
 
@@ -99,11 +93,11 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - 統合環境アーキテクチャがステージング環境と実稼動環境アーキテクチャと一致しません
 
-- 開発テスト、パフォーマンステストまたはユーザー受け入れテスト （UAT）に`integration`環境を使用しないでください
+- 開発テスト、パフォーマンステスト、またはUATに`integration`環境を使用しないでください
 
 - Adobe Commerce機能のB2B テストに`integration`環境を使用しないでください
 
-- 統合環境のデータベースをデータベース実稼動またはステージングから復元することはできません
+- 統合環境のデータベースを実稼動環境またはステージングデータベースから復元することはできません
 
 {{enhanced-integration-envs}}
 
@@ -127,7 +121,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - cron設定のカスタマイズとcron ジョブのテスト
 
-[&#x200B; デプロイメントワークフロー](pro-develop-deploy-workflow.md#deployment-workflow)および[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md)を参照してください。
+[ デプロイメントワークフロー](pro-develop-deploy-workflow.md#deployment-workflow)および[ デプロイメントのテスト ](../test/staging-and-production.md)を参照してください。
 
 **注意事項：**
 
@@ -139,7 +133,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 ### 本番環境
 
-本番環境では、パブリック対応の単一およびマルチサイトのストアフロントを実行できます。 この環境は、冗長で高可用性のノードを備えた専用のIaaS ハードウェア上で動作し、顧客の継続的なアクセスとフェイルオーバー保護を実現します。 本番環境には、ステージング環境のすべてのサービスに加えて、[New Relic Infrastructure （NRI） &#x200B;](../monitor/new-relic-service.md#new-relic-infrastructure) サービスが含まれます。このサービスは、アプリケーションデータとパフォーマンス分析に自動的に接続して、動的なサーバーモニタリングを提供します。
+本番環境では、パブリック対応の単一およびマルチサイトのストアフロントを実行できます。 この環境は、冗長で高可用性のノードを備えた専用のIaaS ハードウェア上で動作し、顧客の継続的なアクセスとフェイルオーバー保護を実現します。 本番環境には、ステージング環境のすべてのサービスに加えて、[New Relic Infrastructure （NRI） ](../monitor/new-relic-service.md#new-relic-infrastructure) サービスが含まれます。このサービスは、アプリケーションデータとパフォーマンス分析に自動的に接続して、動的なサーバーモニタリングを提供します。
 
 **ご注意：**
 
@@ -160,17 +154,15 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
   - `pub/static`
   - `app/etc`
 
-- **Redis** - 1つのアクティブなサーバーと、他の2つのサーバーのみをレプリカとして使用するVMごとに1台のサーバー
+- **Redis**&#x200B;または&#x200B;**Valkey** - 1つのVMにつき1つのサーバーがあり、1つのサーバーはアクティブで、他の2つのサーバーはレプリカとして使用されます。
 
-- **Elasticsearch**：クラウドインフラストラクチャ 2.2から2.4.3-p2でAdobe Commerceを検索
-
-- **OpenSearch**：クラウドインフラストラクチャ 2.3.7-p3、2.4.3-p2、2.4.4以降でAdobe Commerceを検索します
+- **OpenSearch**：クラウドインフラストラクチャ 2.4.4以降でAdobe Commerceを検索します
 
 - **Galera**：ノードごとに1つのMariaDB MySQL データベースを持つデータベースクラスターで、各データベースの一意のIDに対して3つの自動増分設定が設定されている
 
 次の図は、実稼動環境で使用されるテクノロジーを示しています。
 
-![実稼動テクノロジースタック &#x200B;](../../assets/az-stack-diagram.png)
+![実稼動テクノロジースタック ](../../assets/az-stack-diagram.png)
 
 ## 冗長ハードウェア
 
@@ -191,11 +183,11 @@ Adobe Commerce オンクラウド基盤では、各Pro プロジェクトを3つ
 
 >[!NOTE]
 >
->マウントされたボリュームには、[書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれます。また、`app/` ディレクトリの一部も含まれません。 他のファイルについては、[&#x200B; ビルドおよびデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
+>マウントされたボリュームには、[書き込み可能なマウント ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれているか、参照されており、`app/` ディレクトリの一部が含まれていません。 他のファイルについては、[ ビルドおよびデプロイメントプロセス ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
 
 {{pro-backups}}
 
-CLI コマンドを使用して、ステージング環境および実稼動環境用のデータベースの&#x200B;**手動バックアップ**&#x200B;を作成できます。 [&#x200B; データベースのバックアップ &#x200B;](../storage/database-dump.md)を参照してください。 `integration`環境の場合、Adobeでは、Adobe Commerce on cloud infrastructure プロジェクトにアクセスした後、大きな変更を適用する前の最初の手順として、バックアップを作成することをお勧めします。 [&#x200B; バックアップ管理](../storage/snapshots.md)を参照してください。
+CLI コマンドを使用して、ステージング環境および実稼動環境用のデータベースの&#x200B;**手動バックアップ**&#x200B;を作成できます。 [ データベースのバックアップ ](../storage/database-dump.md)を参照してください。 `integration`環境の場合、Adobeでは、Adobe Commerce on cloud infrastructure プロジェクトにアクセスした後、大きな変更を適用する前の最初の手順として、バックアップを作成することをお勧めします。 [ バックアップ管理](../storage/snapshots.md)を参照してください。
 
 ### リカバリーポイントの目標
 
@@ -213,16 +205,16 @@ Adobeは、次のデータ保持ポリシーに従って自動バックアップ
 | 8週目から12週目 | 1週間に1回のバックアップ |
 | 3 ～ 5か月 | 月に1回のバックアップ |
 
-このポリシーは、クラウドインフラストラクチャのプランによって異なる場合があります。
+このポリシーは、クラウドインフラストラクチャのプランによって異なります。
 
 ### 目標復旧時間
 
-RTOはストレージのサイズによって異なります。 大きなEBS ボリュームの場合、復元に時間がかかります。 復元時間は、データベースのサイズによって異なる場合があります。 詳しくは、Adobe カスタマーサクセスマネージャーにお問い合わせください。
+RTOはストレージのサイズによって異なります。 大きなEBS ボリュームの場合、復元に時間がかかります。 復元時間は、データベースのサイズによって異なります。 詳しくは、Adobe カスタマーサクセスマネージャーにお問い合わせください。
 
 ## プロクラスターの拡大・縮小
 
 Pro クラスターのサイズと&#x200B;_compute_&#x200B;の設定は、選択したクラウドプロバイダー（AWS、Azure）、リージョン、およびサービスの依存関係によって異なります。 Adobeのクラウドインフラストラクチャは、Pro クラスターを拡張して、需要の変化に応じたトラフィックの期待やサービス要件に対応できます。
 
-冗長なアーキテクチャにより、Adobeのクラウドインフラストラクチャは、ダウンタイムなしでアップグレードできます。 アップスケーリングの場合、3つのインスタンスのそれぞれは、サイトの操作に影響を与えることなく、容量をアップグレードするために回転します。 例えば、制約がデータベースレベルではなくPHP レベルにある場合は、既存のクラスターに追加のweb サーバーを追加できます。 これにより、_水平方向のスケーリング_&#x200B;が提供され、データベースレベルの余分なCPUによって提供される垂直方向のスケーリングを補完します。 [拡張アーキテクチャ &#x200B;](scaled-architecture.md)を参照してください。
+冗長なアーキテクチャにより、Adobeのクラウドインフラストラクチャは、ダウンタイムなしでアップグレードできます。 アップスケーリングの場合、3つのインスタンスのそれぞれは、サイトの操作に影響を与えることなく、容量をアップグレードするために回転します。 例えば、制約がデータベースレベルではなくPHP レベルにある場合は、既存のクラスターに追加のweb サーバーを追加できます。 これにより、_水平方向のスケーリング_&#x200B;が提供され、データベースレベルの余分なCPUによって提供される垂直方向のスケーリングを補完します。 [拡張アーキテクチャ ](scaled-architecture.md)を参照してください。
 
-イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)を参照してください。
+イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)を参照してください。
