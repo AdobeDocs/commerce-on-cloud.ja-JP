@@ -23,7 +23,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.13の後に<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。</p>
+      <td><p>ECE-Tools リリース v2002.2.13の後に<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。</p>
 </td>
       <td>
         テクニカル
@@ -31,7 +31,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">コミット</a></td>
     </tr>
     <tr>
-      <td><p>Cloud Infrastructure上のAdobe Commerceに<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動拡張</a>の可用性を追加しました。</p>
+      <td><p>Cloud Infrastructure上のAdobe Commerceに<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動拡張</a>の可用性を追加しました。</p>
 </td>
       <td>
         メジャーアップデート
@@ -53,7 +53,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.12の後に<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。 バージョン番号以外の変更は行われませんでした。</p>
+      <td><p>ECE-Tools リリース v2002.2.12の後に<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。 バージョン番号以外の変更は行われませんでした。</p>
 </td>
       <td>
         テクニカル
