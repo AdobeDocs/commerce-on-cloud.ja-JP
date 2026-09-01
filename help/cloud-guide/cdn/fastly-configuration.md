@@ -53,7 +53,7 @@ Adobe Commerce管理者からFastly CDN サービスを設定し、Fastly API �
 
 Adobe Commerceクラウドインフラストラクチャでは、Fastly管理者ダッシュボードに直接アクセスすることはできません。
 
-Adobe Commerce管理者を使用して、お使いの環境のFastly設定を確認し、更新します。 AdminでFastly機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)を送信します。
+Adobe Commerce管理者を使用して、お使いの環境のFastly設定を確認し、更新します。 AdminでFastly機能を使用して問題を解決できない場合は、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide)を送信します。
 
 ## Fastly認証情報を取得
 
@@ -89,7 +89,7 @@ Cloud Starter プロジェクトで、Cloud ConsoleまたはCloud CLIを使用�
 
 - ステージング環境または実稼動環境のFastly資格情報が見つからない場合は、Adobe カスタマーテクニカルアドバイザー（CTA）にお問い合わせください。
 
-- [Fastly資格情報の検証中にエラーが発生しました](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
+- [Fastly資格情報の検証中にエラーが発生しました](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)。
 
 ## 資格情報の保護
 
@@ -169,7 +169,7 @@ Fastly モジュールを有効にした後、デフォルトの[VCL コード &
 
 ## SSL/TLS証明書のプロビジョニング
 
-Adobeでは、Fastlyからの安全なHTTPS トラフィックを提供するために、Domain-Validated Let&#39;s Encrypt SSL/TLS証明書を提供しています。 Adobeは、Pro実稼動環境、ステージング環境およびStarter実稼動環境ごとに1つの証明書を提供し、その環境のすべてのドメインを保護します。 指定された証明書について詳しくは、[&#x200B; クラウドインフラストラクチャ上のAdobe CommerceのAdobe SSL （TLS）証明書](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)を参照してください。
+Adobeでは、Fastlyからの安全なHTTPS トラフィックを提供するために、Domain-Validated Let&#39;s Encrypt SSL/TLS証明書を提供しています。 Adobeは、Pro実稼動環境、ステージング環境およびStarter実稼動環境ごとに1つの証明書を提供し、その環境のすべてのドメインを保護します。 指定された証明書について詳しくは、[&#x200B; クラウドインフラストラクチャ上のAdobe CommerceのAdobe SSL （TLS）証明書](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq)を参照してください。
 
 >[!NOTE]
 >
@@ -273,7 +273,7 @@ Fastlyの初期設定プロセスでは、次のURLを使用して、ステー�
 
    >[!NOTE]
    >
-   >Cloud CLIを使用する代わりに、[管理者](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)からベース URLを更新できます
+   >Cloud CLIを使用する代わりに、[管理者](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/site-store/store-urls)からベース URLを更新できます
 
 1. Web ブラウザーを再起動します。
 
@@ -350,4 +350,4 @@ Adobeでは、ステージング環境および実稼動環境のFastly モジ�
 
 >[!TIP]
 >
-> Adobe Commerce環境でFastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastlyのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29661)を参照してください。
+> Adobe Commerce環境でFastly サービスに関する問題が発生した場合は、[Adobe Commerce Fastlyのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-29661)を参照してください。

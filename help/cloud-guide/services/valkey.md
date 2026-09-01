@@ -98,7 +98,7 @@ git push origin <branch-name>
 
 ## Valkey設定のカスタマイズ
 
-キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
+キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
 
 ## サービス関係の確認
 

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security]は、[!DNL Adobe Commerce on Cloud Infrastructure]と連携して、オンラインストアを高速で利用しやすく、安全に保つ製品です。 これらの機能は、売上を保護し、ダウンタイムを削減し、トラフィックイベントや自動攻撃のピーク時には顧客の信頼を維持するのに役立ちます。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]には、[&#x200B; レイヤ 3および4 DDoS対策](./fastly.md#ddos-protection)と[Web Application Firewall （WAF） &#x200B;](./fastly-waf-service.md)が組み込まれています。 [共有責任モデル &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)の下では、レイヤ 7 DDoS検出、ボット保護、およびプロアクティブ IP ブロッキングが加盟店の責任であり、[!DNL Adobe Commerce Advanced Security]が対処するように設計されています。
+[!DNL Adobe Commerce on Cloud Infrastructure]には、[&#x200B; レイヤ 3および4 DDoS対策](./fastly.md#ddos-protection)と[Web Application Firewall （WAF） &#x200B;](./fastly-waf-service.md)が組み込まれています。 [共有責任モデル &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/security-and-compliance/shared-responsibility)の下では、レイヤ 7 DDoS検出、ボット保護、およびプロアクティブ IP ブロッキングが加盟店の責任であり、[!DNL Adobe Commerce Advanced Security]が対処するように設計されています。
 
 [!DNL Advanced Security]は、Fastlyを搭載したエッジ セキュリティ機能を通じてストアフロント保護を拡張します。この機能は、ネットワーク エッジでのスケーラビリティ、パフォーマンス、セキュリティを組み合わせた統合エッジ プラットフォームの一部として、ボット管理、高度なレート制限、およびレイヤ 7 DDoS保護機能を提供します。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 >
 >2026年第3四半期末まで、お客様はボット管理ルールを直接変更または管理することはできません。
 >
->ルールの追加、変更、調整については、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?support-tab=home#support)を通じてAdobe Commerce サポートにお問い合わせください。 サポートチームは、要求された変更を実装します。
+>ルールの追加、変更、調整については、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support)を通じてAdobe Commerce サポートにお問い合わせください。 サポートチームは、要求された変更を実装します。
 >
 >Fastlyは、2026年第4四半期以降、Commerceの管理パネルでボット管理ルールを管理できるアドオン機能をリリースする予定です。
 
@@ -216,7 +216,7 @@ CDN ログには、Signal Sciences （Bot Protection / Next-Generation WAF）の
 - **コンプライアンス ツール** - PCI スキャン、SOC コンプライアンス レポート、規制監査ツール。
 - **アプリケーションレベルの強化** - トークンベースのAPI認証、クエリパラメーターの正規化、およびキャッシュ戦略の設計。
 
-Adobeとカスタマーセキュリティの責任の詳細については、[共有責任モデル &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)を参照してください。
+Adobeとカスタマーセキュリティの責任の詳細については、[共有責任モデル &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/security-and-compliance/shared-responsibility)を参照してください。
 
 ## 一般的な攻撃パターンと保護
 
@@ -254,7 +254,7 @@ Adobeとカスタマーセキュリティの責任の詳細については、[�
 
 1. お客様のプロジェクトの[!DNL Advanced Security]について詳しくは、Adobe アカウントチームまたはAdobeの営業担当者にお問い合わせください。
 
-1. [!DNL Advanced Security]を購入した後、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)し、[!DNL Advanced Security]の有効化をリクエストします。 [!DNL Adobe Commerce on Cloud Infrastructure] プロジェクト IDと、有効化が必要な環境（実稼動環境やステージングなど）を含めます。
+1. [!DNL Advanced Security]を購入した後、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)し、[!DNL Advanced Security]の有効化をリクエストします。 [!DNL Adobe Commerce on Cloud Infrastructure] プロジェクト IDと、有効化が必要な環境（実稼動環境やステージングなど）を含めます。
 
 1. Adobeは、Fastly サービスで[!DNL Advanced Security]をアクティブ化し、初期の保護ポリシーを設定します。 イネーブルメントは、通常、チケット提出から数営業日以内に完了します。
 
@@ -262,7 +262,7 @@ Adobeとカスタマーセキュリティの責任の詳細については、[�
 
 >[!NOTE]
 >
->[!DNL Advanced Security]への設定の変更には、現在[&#x200B; サポートチケットの送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。
+>[!DNL Advanced Security]への設定の変更には、現在[&#x200B; サポートチケットの送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。
 
 ## 制限
 
