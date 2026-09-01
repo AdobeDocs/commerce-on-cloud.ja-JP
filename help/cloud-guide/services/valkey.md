@@ -4,10 +4,17 @@ description: Redisの置き換えやキャッシュバックエンド設定の�
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
 TQID: https://experienceleague.adobe.com/-aBnwClJGQlRkEfugtChxbjLObLzTu0xl1IvkYUVRsk
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
 workflow-type: tm+mt
 source-wordcount: 701
@@ -44,7 +51,7 @@ cache:
   type: valkey:8.0
 ```
 
-例のバージョンは普遍的ではありません。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のCloud テンプレートによって異なります。 現在のプロジェクトテンプレートで指定されたバージョンを使用します。 詳しくは、[ サービスの設定](services-yaml.md#service-versions)を参照してください。
+例のバージョンは普遍的ではありません。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のCloud テンプレートによって異なります。 現在のプロジェクトテンプレートで指定されたバージョンを使用します。 詳しくは、[&#x200B; サービスの設定](services-yaml.md#service-versions)を参照してください。
 
 >[!WARNING]
 >
@@ -91,7 +98,7 @@ git push origin <branch-name>
 
 ## Valkey設定のカスタマイズ
 
-キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
+キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
 
 ## サービス関係の確認
 
@@ -148,7 +155,7 @@ printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
   | jq '{valkey: .valkey}'
 ```
 
-サービス関係について詳しくは、[ サービスの設定](services-yaml.md)を参照してください。
+サービス関係について詳しくは、[&#x200B; サービスの設定](services-yaml.md)を参照してください。
 
 ## Valkey CLIの使用
 
@@ -209,4 +216,4 @@ Valkey server v=<installed-version> ...
 
 `cache` サービスがValkeyとして設定されている場合でも、デプロイ前のキャッシュクリーンのエラーで、エラーコード `[107]` （`clean-redis-cache`）と`Connection to Redis` メッセージが表示される可能性があります。 `ece-tools`は、バッキング キャッシュ サービスがRedisであるかValkeyであるかに関係なく、このエラーコードとメッセージをキャッシュ クリーン ステップに使用します。
 
-関係ホストの`Name or service not known`などのDNS エラーが原因で発生した場合、サービス関係が利用可能になる前にデプロイ手順が実行されるか、`.magento.app.yaml`の関係名が`.magento/services.yaml`のサービス IDと一致しません。 [ サービス関係の確認](#verify-the-service-relationship)を参照してください。
+関係ホストの`Name or service not known`などのDNS エラーが原因で発生した場合、サービス関係が利用可能になる前にデプロイ手順が実行されるか、`.magento.app.yaml`の関係名が`.magento/services.yaml`のサービス IDと一致しません。 [&#x200B; サービス関係の確認](#verify-the-service-relationship)を参照してください。

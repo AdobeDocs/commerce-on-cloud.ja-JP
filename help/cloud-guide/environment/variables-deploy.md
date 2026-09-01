@@ -6,10 +6,16 @@ recommendations: noDisplay, catalog
 role: Developer
 exl-id: 980ec809-8c68-450a-9db5-29c5674daa16
 TQID: https://experienceleague.adobe.com/TNuUxXzCiXnKefww0DmKbjfJygEz2HFG-0PjCsCy2nA
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
 source-wordcount: 3106
@@ -19,7 +25,7 @@ ht-degree: 0%
 
 # 変数のデプロイ
 
-次の&#x200B;_デプロイ_&#x200B;変数は、デプロイフェーズのアクションを制御し、[ グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`deploy` ステージに挿入します。
+次の&#x200B;_デプロイ_&#x200B;変数は、デプロイフェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`deploy` ステージに挿入します。
 
 ```yaml
 stage:
@@ -42,11 +48,11 @@ stage:
 
 `VALKEY_BACKEND`または`REDIS_BACKEND`を使用して、サポートされているキャッシュまたはL2の実装を正確なAdobe Commerce リリースに合わせて選択します。 `CACHE_CONFIGURATION`を使用して、接続再試行、読み取りタイムアウト、キャッシュ プレフィックス、プリロード キーなどのオプションをカスタマイズします。
 
-サポートされるバックエンドとキャッシュサービスの組み合わせは、Commerceのリリースとパッチレベルによって異なります。 Redisは、Adobe Commerce 2.4.9または2.4.5-p16、2.4.6-p14、2.4.7-p9、および2.4.8-p4以降のパッチリリースではサポートされていません。 Valkeyは、[ システム要件](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)が必要とするリリースに使用します。
+サポートされるバックエンドとキャッシュサービスの組み合わせは、Commerceのリリースとパッチレベルによって異なります。 Redisは、Adobe Commerce 2.4.9または2.4.5-p16、2.4.6-p14、2.4.7-p9、および2.4.8-p4以降のパッチリリースではサポートされていません。 Valkeyは、[&#x200B; システム要件](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)が必要とするリリースに使用します。
 
 >[!NOTE]
 >
->RedisおよびValkey サービス設定ガイダンスの詳細については、[ValkeyおよびRedis サービス設定のベストプラクティス ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)を参照してください
+>RedisおよびValkey サービス設定ガイダンスの詳細については、[ValkeyおよびRedis サービス設定のベストプラクティス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)を参照してください
 
 デフォルトでは、デプロイメントプロセスによって、対応するキャッシュ設定が上書きされます。 指定された値を生成された設定と結合するには、`_merge`を`true`に設定します。
 
@@ -119,7 +125,7 @@ stage:
 
 - **Default**—`true`
 
-ビルドまたはデプロイのフェーズで生成された[静的コンテンツファイル ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)のクリーニングを有効または無効にします。 開発時のデフォルト値&#x200B;_true_&#x200B;をベストプラクティスとして使用します。
+ビルドまたはデプロイのフェーズで生成された[静的コンテンツファイル &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)のクリーニングを有効または無効にします。 開発時のデフォルト値&#x200B;_true_&#x200B;をベストプラクティスとして使用します。
 
 - **`true`** – 更新された静的コンテンツをデプロイする前に、既存のすべての静的コンテンツを削除します。
 - **`false`** – 生成されたコンテンツに新しいバージョンが含まれている場合にのみ、デプロイメントは既存の静的コンテンツファイルを上書きします。
@@ -132,7 +138,7 @@ stage:
     CLEAN_STATIC_FILES: false
 ```
 
-デプロイ前に静的ビューファイルをクリーンアップしないと、以前のバージョンを削除せずに既存のファイルにアップデートをデプロイすると問題が発生する可能性があります。 [静的ファイルのフォールバック ](https://developer.adobe.com/commerce/frontend-core/guide/css/preprocess#clean-static-view-files) ルールにより、ディレクトリに同じファイルの複数のバージョンが含まれている場合、フォールバック操作で間違ったファイルが表示される可能性があります。
+デプロイ前に静的ビューファイルをクリーンアップしないと、以前のバージョンを削除せずに既存のファイルにアップデートをデプロイすると問題が発生する可能性があります。 [静的ファイルのフォールバック &#x200B;](https://developer.adobe.com/commerce/frontend-core/guide/css/preprocess#clean-static-view-files) ルールにより、ディレクトリに同じファイルの複数のバージョンが含まれている場合、フォールバック操作で間違ったファイルが表示される可能性があります。
 
 ## `CRON_CONSUMERS_RUNNER`
 
@@ -176,7 +182,7 @@ stage:
       consumers: []
 ```
 
-デフォルトでは、デプロイメントプロセスは`env.php` ファイル内の対応する設定を上書きします。 オンプレミス Adobe Commerceについては、_Commerce設定ガイド_&#x200B;の「[ メッセージキューの管理](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)」を参照してください。
+デフォルトでは、デプロイメントプロセスは`env.php` ファイル内の対応する設定を上書きします。 オンプレミス Adobe Commerceについては、_Commerce設定ガイド_&#x200B;の「[&#x200B; メッセージキューの管理](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues)」を参照してください。
 
 ## `CONSUMERS_WAIT_FOR_MAX_MESSAGES`
 
@@ -212,7 +218,7 @@ stage:
 
 - **既定**—_設定なし_
 
-`.magento.app.yaml` ファイルの[関係プロパティ ](../application/properties.md#relationships)でデータベースを定義した場合、デプロイメント用にデータベース接続をカスタマイズできます。
+`.magento.app.yaml` ファイルの[関係プロパティ &#x200B;](../application/properties.md#relationships)でデータベースを定義した場合、デプロイメント用にデータベース接続をカスタマイズできます。
 
 ```yaml
 stage:
@@ -322,7 +328,7 @@ stage:
 
 >[!NOTE]
 >
->Adobe Commerceでの[!DNL Elastic Suite] プラグインの使用またはトラブルシューティングについて詳しくは、[[!DNL Elastic Suite]  ドキュメント ](https://github.com/Smile-SA/elasticsuite)を参照してください。
+>Adobe Commerceでの[!DNL Elastic Suite] プラグインの使用またはトラブルシューティングについて詳しくは、[[!DNL Elastic Suite]  ドキュメント &#x200B;](https://github.com/Smile-SA/elasticsuite)を参照してください。
 
 ## `ENABLE_GOOGLE_ANALYTICS`
 
@@ -666,7 +672,7 @@ stage:
 
 - **Default**—`quick`
 
-静的コンテンツの[ デプロイメント戦略](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)をカスタマイズできます。 [静的ビューファイルのデプロイ ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)を参照してください。
+静的コンテンツの[&#x200B; デプロイメント戦略](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy)をカスタマイズできます。 [静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)を参照してください。
 
 複数のロケールがある場合は、次のオプション _のみ_&#x200B;を使用します。
 
@@ -851,7 +857,7 @@ stage:
 >
 >Adobe Commerce 2.4.8では、`USE_LUA_ON_GC: false`を設定すると、タグベースのキャッシュ無効化がサイレントで失敗し、完全なキャッシュのフラッシュが必要になる場合があります。
 >
->2.4.9以降では、インストールされているバージョンの[ キャッシュサービスガイダンス ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)に従います。
+>2.4.9以降では、インストールされているバージョンの[&#x200B; キャッシュサービスガイダンス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/redis/redis-pg-cache)に従います。
 
 ## `VERBOSE_COMMANDS`
 

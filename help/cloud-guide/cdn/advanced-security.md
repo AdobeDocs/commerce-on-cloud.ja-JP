@@ -14,7 +14,7 @@ ht-degree: 0%
 
 [!DNL Adobe Commerce Advanced Security]は、[!DNL Adobe Commerce on Cloud Infrastructure]と連携して、オンラインストアを高速で利用しやすく、安全に保つ製品です。 これらの機能は、売上を保護し、ダウンタイムを削減し、トラフィックイベントや自動攻撃のピーク時には顧客の信頼を維持するのに役立ちます。
 
-[!DNL Adobe Commerce on Cloud Infrastructure]には、[ レイヤ 3および4 DDoS対策](./fastly.md#ddos-protection)と[Web Application Firewall （WAF） ](./fastly-waf-service.md)が組み込まれています。 [共有責任モデル ](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)の下では、レイヤ 7 DDoS検出、ボット保護、およびプロアクティブ IP ブロッキングが加盟店の責任であり、[!DNL Adobe Commerce Advanced Security]が対処するように設計されています。
+[!DNL Adobe Commerce on Cloud Infrastructure]には、[&#x200B; レイヤ 3および4 DDoS対策](./fastly.md#ddos-protection)と[Web Application Firewall （WAF） &#x200B;](./fastly-waf-service.md)が組み込まれています。 [共有責任モデル &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)の下では、レイヤ 7 DDoS検出、ボット保護、およびプロアクティブ IP ブロッキングが加盟店の責任であり、[!DNL Adobe Commerce Advanced Security]が対処するように設計されています。
 
 [!DNL Advanced Security]は、Fastlyを搭載したエッジ セキュリティ機能を通じてストアフロント保護を拡張します。この機能は、ネットワーク エッジでのスケーラビリティ、パフォーマンス、セキュリティを組み合わせた統合エッジ プラットフォームの一部として、ボット管理、高度なレート制限、およびレイヤ 7 DDoS保護機能を提供します。
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->現在、[!DNL Advanced Security]設定でサポートチケットの送信が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。 詳しくは、[ リクエスト  [!DNL Advanced Security]](#request-advanced-security)を参照してください。
+>現在、[!DNL Advanced Security]設定でサポートチケットの送信が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。 詳しくは、[&#x200B; リクエスト  [!DNL Advanced Security]](#request-advanced-security)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -42,7 +42,7 @@ ht-degree: 0%
 >
 >2026年第3四半期末まで、お客様はボット管理ルールを直接変更または管理することはできません。
 >
->ルールの追加、変更、調整については、[ サポートチケット ](https://experienceleague.adobe.com/home?support-tab=home#support)を通じてAdobe Commerce サポートにお問い合わせください。 サポートチームは、要求された変更を実装します。
+>ルールの追加、変更、調整については、[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?support-tab=home#support)を通じてAdobe Commerce サポートにお問い合わせください。 サポートチームは、要求された変更を実装します。
 >
 >Fastlyは、2026年第4四半期以降、Commerceの管理パネルでボット管理ルールを管理できるアドオン機能をリリースする予定です。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 ## ボットの保護とNGWAF アクティビティの監視
 
-CDN ログは、お客様のNew Relic アカウントに自動的に転送されます。 詳細については、[ ログ管理](../monitor/log-management.md)を参照してください。
+CDN ログは、お客様のNew Relic アカウントに自動的に転送されます。 詳細については、[&#x200B; ログ管理](../monitor/log-management.md)を参照してください。
 
 CDN ログには、Signal Sciences （Bot Protection / Next-Generation WAF）の組み込みのテレメトリが含まれており、お客様はNew Relic内で直接セキュリティイベントを監視できます。
 
@@ -164,9 +164,9 @@ CDN ログには、Signal Sciences （Bot Protection / Next-Generation WAF）の
 
 | シナリオ | 推奨されるアプローチ |
 |---|---|
-| 単一のIPまたは識別可能なIPの小さなセットが、web サイトに次々とリクエストを送っています | Commerce管理者またはFastly APIを使用してIPをブロックします。 組み込みの[ レイヤー3/4 DDoS保護機能](./fastly.md#ddos-protection)と既存の[IP保護ブロックリスト](./fastly-vcl-blocking.md) VCL スニペットを使用します。 |
-| SQL インジェクション、クロスサイトスクリプティング（XSS）またはその他のOWASPの上位10個の脅威をブロックする必要があります | 含まれている[WAF サービス ](./fastly-waf-service.md)は、これらの脅威を自動的にブロックします。 |
-| DDoS攻撃パターンは、基本的なVCL ブロッキングルールで制御できます | Adobe Commerceで既に利用可能な既存の[ カスタム VCL スニペット ](./fastly-vcl-custom-snippets.md)を使用します。 |
+| 単一のIPまたは識別可能なIPの小さなセットが、web サイトに次々とリクエストを送っています | Commerce管理者またはFastly APIを使用してIPをブロックします。 組み込みの[&#x200B; レイヤー3/4 DDoS保護機能](./fastly.md#ddos-protection)と既存の[IP保護ブロックリスト](./fastly-vcl-blocking.md) VCL スニペットを使用します。 |
+| SQL インジェクション、クロスサイトスクリプティング（XSS）またはその他のOWASPの上位10個の脅威をブロックする必要があります | 含まれている[WAF サービス &#x200B;](./fastly-waf-service.md)は、これらの脅威を自動的にブロックします。 |
+| DDoS攻撃パターンは、基本的なVCL ブロッキングルールで制御できます | Adobe Commerceで既に利用可能な既存の[&#x200B; カスタム VCL スニペット &#x200B;](./fastly-vcl-custom-snippets.md)を使用します。 |
 
 ### 代替保護を使用する場合
 
@@ -216,7 +216,7 @@ CDN ログには、Signal Sciences （Bot Protection / Next-Generation WAF）の
 - **コンプライアンス ツール** - PCI スキャン、SOC コンプライアンス レポート、規制監査ツール。
 - **アプリケーションレベルの強化** - トークンベースのAPI認証、クエリパラメーターの正規化、およびキャッシュ戦略の設計。
 
-Adobeとカスタマーセキュリティの責任の詳細については、[共有責任モデル ](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)を参照してください。
+Adobeとカスタマーセキュリティの責任の詳細については、[共有責任モデル &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)を参照してください。
 
 ## 一般的な攻撃パターンと保護
 
@@ -228,7 +228,7 @@ Adobeとカスタマーセキュリティの責任の詳細については、[�
 | 特定のURLやAPIに対する攻撃は、多数のIPに分散しています | DDoS + ボット | **[!DNL Advanced Security]**：高度なレート制限は、URLごとにリクエスト量を制限します。 ボット管理は、分散したボットトラフィックを識別してブロックします。 |
 | 適切な認証なしにREST API エンドポイントに対する自動攻撃 | ボット + DDoS | API エンドポイントでトークンベースの認証が使用されていることを確認します。 トークンが侵害された場合は、認証情報をローテーションします。 **[!DNL Advanced Security]**：高度なレート制限により、公開されたエンドポイントを保護できます。 |
 | 操作されたクエリパラメーターを使用したキャッシュバスティング攻撃 | ボット + DDoS | キャッシュキーから必須ではないクエリパラメーターを除外します。 アプリケーションレベルでのクエリパラメータの正規化と制限。 **[!DNL Advanced Security]**: ボット管理は、自動キャッシュ バスト トラフィックを検出してブロックします。 |
-| SQL インジェクションまたはクロスサイトスクリプティング（XSS）の試行 | WAF | 含まれている[WAF サービス ](./fastly-waf-service.md)は、管理されたセキュリティ ルールを使用して、これらの脅威を自動的にブロックします。 |
+| SQL インジェクションまたはクロスサイトスクリプティング（XSS）の試行 | WAF | 含まれている[WAF サービス &#x200B;](./fastly-waf-service.md)は、管理されたセキュリティ ルールを使用して、これらの脅威を自動的にブロックします。 |
 
 ### WAFのブロック動作
 
@@ -262,7 +262,7 @@ Adobeとカスタマーセキュリティの責任の詳細については、[�
 
 >[!NOTE]
 >
->[!DNL Advanced Security]への設定の変更には、現在[ サポートチケットの送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。
+>[!DNL Advanced Security]への設定の変更には、現在[&#x200B; サポートチケットの送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)が必要です。 管理UIによるセルフサービス設定は、今後のリリースで計画されています。
 
 ## 制限
 
