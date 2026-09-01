@@ -4,21 +4,13 @@ description: スターターアーキテクチャでサポートされている�
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
 TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
 workflow-type: tm+mt
-source-wordcount: 1007
+source-wordcount: 1010
 ht-degree: 0%
 
 ---
@@ -37,13 +29,13 @@ Adobe Commerce on cloud infrastructure スターターアーキテクチャで�
 
 次の図は、スターター環境の階層関係を示しています。
 
-![&#x200B; スタータープロジェクトの概要](../../assets/starter/architecture.png)
+![ スタータープロジェクトの概要](../../assets/starter/architecture.png)
 
 ## 本番環境
 
 実稼動環境は、Adobe Commerceをパブリッシュ対応の単一およびマルチサイトストアフロントを実行するクラウドインフラストラクチャにデプロイするためのソースコードを提供します。 実稼動環境では、`master` ブランチのコードを使用して、web サーバー、データベース、設定済みサービス、およびアプリケーションコードを設定および有効にします。
 
-`production`環境は読み取り専用なので、`integration`環境を使用してコードを変更し、`integration`から`staging`までのアーキテクチャ全体にデプロイし、最後に`production`環境にデプロイします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)および[&#x200B; サイトの立ち上げ](../launch/overview.md)を参照してください。
+`production`環境は読み取り専用なので、`integration`環境を使用してコードを変更し、`integration`から`staging`までのアーキテクチャ全体にデプロイし、最後に`production`環境にデプロイします。 [ ストアのデプロイ ](../deploy/staging-production.md)および[ サイトの立ち上げ](../launch/overview.md)を参照してください。
 
 Adobeでは、`production`環境にデプロイされる`master` ブランチにプッシュする前に、`staging` ブランチで完全にテストすることをお勧めします。
 
@@ -55,7 +47,7 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 >[!WARNING]
 >
->Adobeでは、実稼動環境にデプロイする前に、ステージング環境のすべてのマーチャントと顧客のインタラクションをテストすることをお勧めします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)および[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md)を参照してください。
+>Adobeでは、実稼動環境にデプロイする前に、ステージング環境のすべてのマーチャントと顧客のインタラクションをテストすることをお勧めします。 [ ストアのデプロイ ](../deploy/staging-production.md)および[ デプロイメントのテスト ](../test/staging-and-production.md)を参照してください。
 
 ## 統合環境
 
@@ -79,7 +71,7 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 統合環境で最高のパフォーマンスを発揮するには、次のベストプラクティスに従います。
 
-- カタログサイズの制限 – 参考までに、サンプルデータには約2,048の製品が含まれています。カタログサイズを4,000～5,000個程度に減らしてみてください。
+- カタログサイズの制限 – 参考までに、サンプルデータには約2,048の製品が含まれています。 カタログサイズを4,000～5,000個程度に減らしてみてください。
 カタログ内の製品数を確認するには、次のMySQL クエリを実行します。
 
   ```sql
@@ -104,13 +96,12 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 - HTTP キャッシュとCDN向けFastly
 - 複数のワーカーを持つ1つのインスタンスであるPHP-FPMに話しかけるNginx web サーバー
-- Redis サーバー
-- Adobe Commerce 2.2から2.4.3-p2までのカタログ検索のためのElasticsearch
-- OpenSearch Adobe Commerce 2.3.7-p3、2.4.3-p2、および2.4.4以降のカタログ検索
+- Redis サーバーまたはValkey サーバー
+- OpenSearch for catalog search for Adobe Commerce 2.4.4以降
 
 ### サービス
 
-Adobe Commerce on cloud infrastructureは、現在、PHP、MySQL （MariaDB）、Elasticsearch（Adobe Commerce 2.2 ～ 2.4.3-p2）、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4以降）、Redis、および[!DNL RabbitMQ]のサービスをサポートしています。
+Adobe Commerce クラウドインフラストラクチャでは、現在、PHP、MySQL （MariaDB）、OpenSearch （2.4.4以降）、RedisまたはValkey、および[!DNL RabbitMQ]のサービスをサポートしています。
 
 各サービスは、個別の安全なコンテナで実行されます。 コンテナは、プロジェクト内で一緒に管理されます。 次のような一部のサービスが標準です。
 
@@ -130,7 +121,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 - [MySQL](../services/mysql.md)
 
-- [Redis](../services/redis.md)
+- [Redis](../services/redis.md)または[Valkey](../services/valkey.md)
 
 - [RabbitMQ](../services/rabbitmq.md)
 
@@ -138,7 +129,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 - [OpenSearch](../services/opensearch.md)
 
-ステージング環境と本番環境では、CDNとキャッシュにFastlyを使用します。 最新バージョンのFastly CDN拡張機能は、プロジェクトの最初のプロビジョニング中にインストールされます。 拡張機能をアップグレードして、最新のバグ修正と機能強化を取得できます。 Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)のFastly CDN モジュールを参照してください。 また、パフォーマンス モニタリング用に[New Relic](../monitor/account-management.md)にアクセスできます。
+ステージング環境と本番環境では、CDNとキャッシュにFastlyを使用します。 最新バージョンのFastly CDN拡張機能は、プロジェクトの最初のプロビジョニング中にインストールされます。 拡張機能をアップグレードして、最新のバグ修正と機能強化を取得できます。 Magento 2](https://github.com/fastly/fastly-magento2)の[Fastly CDN モジュールを参照してください。 また、パフォーマンス モニタリング用に[New Relic](../monitor/account-management.md)にアクセスできます。
 
 以下のファイルを使用して、実装で使用するソフトウェアのバージョンを設定します。
 
@@ -150,7 +141,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 ### バックアップと災害復旧
 
-データベースとファイルシステムのバックアップは、[!DNL Cloud Console]またはCLIを使用して作成できます。 [&#x200B; バックアップ管理](../storage/snapshots.md)を参照してください。
+データベースとファイルシステムのバックアップは、[!DNL Cloud Console]またはCLIを使用して作成できます。 [ バックアップ管理](../storage/snapshots.md)を参照してください。
 
 ## 開発のための準備
 

@@ -4,27 +4,20 @@ description: クラウドインフラストラクチャで使用可能なログ�
 last-substantial-update: 2023-05-23T00:00:00.000Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
 TQID: https://experienceleague.adobe.com/VAsmOv6sBa37A2IAubUnWd4UAMRIuKTNt8JGKNJlrCI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
 
 # ログの表示と管理
 
-クラウドインフラストラクチャプロジェクト上のAdobe Commerceのログは、[&#x200B; フックのビルドとデプロイ &#x200B;](../application/hooks-property.md)、クラウドサービス、Adobe Commerce アプリケーションに関する問題のトラブルシューティングに役立ちます。
+クラウドインフラストラクチャプロジェクト上のAdobe Commerceのログは、[ フックのビルドとデプロイ ](../application/hooks-property.md)、クラウドサービス、Adobe Commerce アプリケーションに関する問題のトラブルシューティングに役立ちます。
 
 ファイルシステム、[!DNL Cloud Console]および`magento-cloud` CLIからログを表示できます。
 
@@ -52,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Secure Shell （SSH）を使用してCommerce アプリケーションのリモート環境ログにアクセスする手順については、[&#x200B; リモート環境へのセキュアな接続](../development/secure-connections.md)を参照してください。
+>Secure Shell （SSH）を使用してCommerce アプリケーションのリモート環境ログにアクセスする手順については、[ リモート環境へのセキュアな接続](../development/secure-connections.md)を参照してください。
 
 #### 方法1:grepを使用して検索する
 
@@ -121,7 +114,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >Pro ステージング環境およびPro実稼動環境では、固定ファイル名のログファイルに対して、自動ログのローテーション、圧縮、削除が有効になります。 各ログファイルタイプには、回転パターンとライフタイムがあります。
 >環境のログのローテーションと圧縮されたログの有効期間の詳細については、`/etc/logrotate.conf`および`/etc/logrotate.d/<various>`を参照してください。
->Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
+>Pro ステージング環境およびPro実稼動環境の場合、ログローテーション設定の変更を求めるには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。
 
 >[!TIP]
 >
@@ -155,7 +148,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->Cloud環境を設定する際に、ビルドとデプロイのアクション用に[&#x200B; ログベースのSlackとメール通知](../environment/set-up-notifications.md)を設定できます。
+>Cloud環境を設定する際に、ビルドとデプロイのアクション用に[ ログベースのSlackとメール通知](../environment/set-up-notifications.md)を設定できます。
 
 次のログは、すべてのCloud プロジェクトに共通の場所を持ちます。
 
@@ -232,7 +225,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools[&#128279;](../dev-tools/error-reference.md)の エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
+ほとんどのエラーメッセージには、説明と提案されたアクションが含まれています。 ECE-Tools](../dev-tools/error-reference.md)の[ エラーメッセージ参照を使用して、エラーコードを調べて詳細なガイダンスを得ることができます。 詳しいガイダンスについては、[Adobe Commerce デプロイメントのトラブルシューティング ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29640)を参照してください。
 
 ## アプリケーションログ
 
@@ -240,8 +233,8 @@ type: warning
 
 | ログファイル | スターターとプロの統合 | 説明 |
 | ------------------- | --------------------------- | ------------------------------------------------- |
-| **ログのデプロイ** | `/var/log/deploy.log` | [&#x200B; デプロイ フック &#x200B;](../application/hooks-property.md)のアクティビティ。 |
-| **デプロイ後のログ** | `/var/log/post_deploy.log` | [&#x200B; デプロイ後のフック &#x200B;](../application/hooks-property.md)のアクティビティ。 |
+| **ログのデプロイ** | `/var/log/deploy.log` | [ デプロイ フック ](../application/hooks-property.md)のアクティビティ。 |
+| **デプロイ後のログ** | `/var/log/post_deploy.log` | [ デプロイ後のフック ](../application/hooks-property.md)のアクティビティ。 |
 | **Cron ログ** | `/var/log/cron.log` | cron ジョブからの出力。 |
 | **Nginx アクセス ログ** | `/var/log/access.log` | Nginxの開始時に、見つからないディレクトリと除外されたファイルタイプに対するHTTP エラーが発生します。 |
 | **Nginx エラーログ** | `/var/log/error.log` | Nginxに関連する設定エラーのデバッグに役立つ起動メッセージ。 |
@@ -270,7 +263,7 @@ Pro ステージング環境および実稼動環境の場合、デプロイ、�
 
 アーカイブされたログファイルは、圧縮前に元のファイルが配置されていたディレクトリに常に保存されます。
 
-[&#x200B; サポートチケット &#x200B;](https://experienceleague.adobe.com/home?lang=ja&support-tab=home#support)を送信して、ログの保持期間またはログローテーション設定の変更を要求できます。 保持期間を最大365日まで延長したり、ストレージ クォータを節約するために期間を短縮したり、logrotate設定に追加のログパスを追加したりできます。 これらの変更は、Pro ステージングおよび実稼動クラスターで使用できます。
+[ サポートチケット ](https://experienceleague.adobe.com/home?support-tab=home#support)を送信して、ログの保持期間またはログローテーション設定の変更を要求できます。 保持期間を最大365日まで延長したり、ストレージ クォータを節約するために期間を短縮したり、logrotate設定に追加のログパスを追加したりできます。 これらの変更は、Pro ステージングおよび実稼動クラスターで使用できます。
 
 例えば、`var/log/mymodule` ディレクトリにログを保存するためのカスタムパスを作成する場合、このパスのログローテーションをリクエストできます。 ただし、現在のインフラストラクチャでは、ログのローテーションを適切に設定するために、Adobeに一貫したファイル名が必要です。 Adobeでは、設定の問題を回避するために、ログ名の一貫性を維持することをお勧めします。
 
@@ -283,6 +276,7 @@ Pro ステージング環境および実稼動環境の場合、デプロイ、�
 各サービスは個別のコンテナで実行されるため、サービスログは統合環境では使用できません。 Adobe Commerce クラウドインフラストラクチャでは、統合環境でのみweb サーバーコンテナにアクセスできます。 次のサービスログの場所は、Pro実稼動環境とステージング環境用です。
 
 - **Redis ログ**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Valkey log**: `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Elasticsearch ログ**: `/var/log/elasticsearch/elasticsearch.log`
 - **Java ガベージコレクションログ**: `/var/log/elasticsearch/gc.log`
 - **メールログ**: `/var/log/mail.log`
@@ -300,4 +294,4 @@ Pro ステージング環境および実稼動環境の場合、デプロイ、�
 
 Pro実稼動環境およびステージング環境では、プロジェクトに統合された[New Relic ログ管理](../monitor/log-management.md)を使用して、Adobe Commerce on cloud infrastructure プロジェクトに関連付けられたすべてのログから集約されたログデータを管理します。
 
-New Relic Logs アプリケーションは、クラウドインフラストラクチャの実稼動環境とステージング環境でAdobe Commerceをトラブルシューティングおよび監視するための一元化されたログ管理ダッシュボードを提供します。 また、ダッシュボードでは、Fastly CDN、Image Optimization、web アプリケーションファイアウォール（WAF）サービスのログデータへのアクセスも提供されます。 [New Relic サービス &#x200B;](../monitor/new-relic-service.md)を参照してください。
+New Relic Logs アプリケーションは、クラウドインフラストラクチャの実稼動環境とステージング環境でAdobe Commerceをトラブルシューティングおよび監視するための一元化されたログ管理ダッシュボードを提供します。 また、ダッシュボードでは、Fastly CDN、Image Optimization、web アプリケーションファイアウォール（WAF）サービスのログデータへのアクセスも提供されます。 [New Relic サービス ](../monitor/new-relic-service.md)を参照してください。
