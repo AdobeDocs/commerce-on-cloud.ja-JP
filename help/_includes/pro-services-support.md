@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ステージングまたは実稼動環境でPro サービスのアップグレードをリクエストして完了するには、次の手順に従います。
 
-1. **環境`Staging`および`Production`環境のみ**&#x200B;で[ サービス ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)をインストールまたは更新するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
+1. **環境`Staging`および`Production`環境のみ**&#x200B;で[&#x200B; サービス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml)をインストールまたは更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
 
    チケットで、必要なサービス変更を指定し、更新された`.magento.app.yaml`および`.magento/services.yaml` ファイルを含め、対象のPHP バージョンをメモします。
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Pro プロジェクトの場合、本番環境でのサービスのアップグレードには、事前のスケジュール設定と、Adobeサポートによる2部構成の確認プロセスも必要です。 [Pro サービスのサポート ](#pro-services-support)を参照してください。
+>Pro プロジェクトの場合、本番環境でのサービスのアップグレードには、事前のスケジュール設定と、Adobeサポートによる2部構成の確認プロセスも必要です。 [Pro サービスのサポート &#x200B;](#pro-services-support)を参照してください。
 
 ### メンテナンスモード
 
