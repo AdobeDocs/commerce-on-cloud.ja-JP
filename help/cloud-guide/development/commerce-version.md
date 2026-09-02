@@ -4,18 +4,12 @@ description: クラウドインフラストラクチャ環境でAdobe Commerce �
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
 TQID: https://experienceleague.adobe.com/XCHw9c0bX8UE8LLmFOYjMFRLTaIk8sT57dESptRTUXs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+last-update: 2026-09-01
+source-git-commit: 0f88ef7d75bc2a02eb7988dc815071c5894a4662
 workflow-type: tm+mt
 source-wordcount: 1050
 ht-degree: 0%
@@ -24,7 +18,7 @@ ht-degree: 0%
 
 # Commerce バージョンのアップグレード
 
-Adobe Commerce コードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照して、最新のソフトウェアバージョン要件を確認してください。
+Adobe Commerce コードベースを新しいバージョンにアップグレードできます。 環境をアップグレードする前に、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照して、最新のソフトウェアバージョン要件を確認してください。
 
 環境タイプ（開発、ステージング、実稼動）に応じて、アップグレード タスクには次のものが含まれます。
 
@@ -40,7 +34,7 @@ Adobe Commerce コードベースを新しいバージョンにアップグレ�
 
 ## 設定ファイル
 
-クラウドインフラストラクチャまたはアプリケーション上のAdobe Commerceのデフォルト設定の変更を考慮するには、アプリケーションをアップグレードする前にプロジェクト設定ファイルを更新します。 最新のデフォルトは、[magento-cloud GitHub リポジトリ &#x200B;](https://github.com/magento/magento-cloud)にあります。
+クラウドインフラストラクチャまたはアプリケーション上のAdobe Commerceのデフォルト設定の変更を考慮するには、アプリケーションをアップグレードする前にプロジェクト設定ファイルを更新します。 最新のデフォルトは、[magento-cloud GitHub リポジトリ ](https://github.com/magento/magento-cloud)にあります。
 
 ### composer.json
 
@@ -110,23 +104,23 @@ Adobeでは、アップグレードの前にインスタンスのバックアッ
 
 1. SSHを使用してリモート環境にログインします。
 
-1. [&#x200B; データベースダンプ &#x200B;](../storage/database-dump.md)を作成します。 DB ダンプのターゲットディレクトリを選択するには、`--dump-directory` オプションを使用します。
+1. [ データベースダンプ ](../storage/database-dump.md)を作成します。 DB ダンプのターゲットディレクトリを選択するには、`--dump-directory` オプションを使用します。
 
    ```bash
    vendor/bin/ece-tools db-dump
    ```
 
-   ダンプ操作により、リモート プロジェクト ディレクトリに`dump-<timestamp>.sql.gz` アーカイブ ファイルが作成されます。 [&#x200B; データベースのバックアップ &#x200B;](../storage/database-dump.md)を参照してください。
+   ダンプ操作により、リモート プロジェクト ディレクトリに`dump-<timestamp>.sql.gz` アーカイブ ファイルが作成されます。 [ データベースのバックアップ ](../storage/database-dump.md)を参照してください。
 
 ## アプリケーションのアップグレード
 
-アプリケーションをアップグレードする前に、最新のソフトウェアバージョン要件について、[&#x200B; サービスバージョン &#x200B;](../services/services-yaml.md#service-versions)の情報を確認してください。
+アプリケーションをアップグレードする前に、最新のソフトウェアバージョン要件について、[ サービスバージョン ](../services/services-yaml.md#service-versions)の情報を確認してください。
 
 **アプリケーションのバージョン**&#x200B;をアップグレードするには：
 
 1. ローカル ワークステーションで、プロジェクト ディレクトリに移動します。
 
-1. ターゲット アップグレード バージョンの[&#x200B; バージョン制約](overview.md#cloud-metapackage)を設定します。 この手順は、ターゲットバージョンが既存の制約の範囲外にある場合にのみ必要です。
+1. ターゲット アップグレード バージョンの[ バージョン制約](overview.md#cloud-metapackage)を設定します。 この手順は、ターゲットバージョンが既存の制約の範囲外にある場合にのみ必要です。
 
    ```bash
    composer require-commerce "magento/magento-cloud-metapackage":">=CURRENT_VERSION <NEXT_VERSION" --no-update
@@ -134,7 +128,7 @@ Adobeでは、アップグレードの前にインスタンスのバックアッ
 
    >[!NOTE]
    >
-   >バージョン制約の構文を使用して、`ece-tools` パッケージを正常に更新する必要があります。 アップグレードに使用している[&#x200B; アプリケーションテンプレート &#x200B;](https://github.com/magento/magento-cloud/blob/master/composer.json)のバージョンの`composer.json` ファイルにバージョン制約があります。
+   >バージョン制約の構文を使用して、`ece-tools` パッケージを正常に更新する必要があります。 アップグレードに使用している[ アプリケーションテンプレート ](https://github.com/magento/magento-cloud/blob/master/composer.json)のバージョンの`composer.json` ファイルにバージョン制約があります。
 
 1. コア Commerce アップグレード バージョンで`composer.json` ファイルを更新します。
 
@@ -142,7 +136,7 @@ Adobeでは、アップグレードの前にインスタンスのバックアッ
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. B2Bを使用している場合は、`composer.json` ファイルを[&#x200B; サポートされているバージョン &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/product-availability#adobe-authored-extensions)のCommerceに更新します。
+1. B2Bを使用している場合は、`composer.json` ファイルを[ サポートされているバージョン ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions)のCommerceに更新します。
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -156,15 +150,15 @@ Adobeでは、アップグレードの前にインスタンスのバックアッ
 
 1. 現在適用されているパッチを確認します。
 
-   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)を送信し、Adobe Commerce サポートと協力して、新しいバージョンにまだ適用できるパッチを確認します。 該当しないパッチを`m2-hotfixes` ディレクトリから削除します。
+   - `m2-hotfixes` ディレクトリにパッチがインストールされている場合、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case)を送信し、Adobe Commerce サポートと協力して、新しいバージョンにまだ適用できるパッチを確認します。 該当しないパッチを`m2-hotfixes` ディレクトリから削除します。
 
    - `.magento.env.yaml` ファイルに適用されている[品質パッチ ]がある場合は、新しいバージョンにまだ適用できるかどうかを確認します。 `.magento.env.yaml` ファイルの`QUALITY_PATCHES` セクションから該当しないパッチを削除します。
 
-   **方法1**: [品質パッチのリリースノートで該当するバージョンを確認する](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **方法1**: [品質パッチのリリースノートで該当するバージョンを確認する](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **方法2**: [使用可能なパッチとステータスを表示](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **方法2**: [使用可能なパッチとステータスを表示](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**: [&#x200B; パッチの検索](https://experienceleague.adobe.com/ja/tools/commerce-quality-patches)
+   **方法3**: [ パッチの検索](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)
 
 
 1. コードの変更を追加、コミット、プッシュします。
@@ -219,7 +213,7 @@ Adobeでは、サイト起動プロセスにアップグレードされた拡張
 
 >[!NOTE]
 >
->アプリケーションのバージョンをアップグレードすると、アップグレードプロセスが[Fastly CDN モジュール &#x200B;](../cdn/fastly.md#fastly-cdn-module-for-magento-2)の最新バージョンに自動的に更新されます。
+>アプリケーションのバージョンをアップグレードすると、アップグレードプロセスが[Fastly CDN モジュール ](../cdn/fastly.md#fastly-cdn-module-for-magento-2)の最新バージョンに自動的に更新されます。
 
 ## アップグレードのトラブルシューティング
 
@@ -243,7 +237,7 @@ Exception printing is disabled by default for security reasons.
 
 1. `./app/var/report/<error number>` ファイルを開きます。
 
-1. [&#x200B; ログを調べ](../test/log-locations.md)問題の原因を特定します。
+1. [ ログを調べ](../test/log-locations.md)問題の原因を特定します。
 
 1. コードの変更を追加、コミット、プッシュします。
 
