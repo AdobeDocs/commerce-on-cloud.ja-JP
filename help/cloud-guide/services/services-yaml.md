@@ -55,7 +55,7 @@ Adobe Commerce on cloud infrastructureでは、プロジェクトに設定でき
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[使用可能なバージョン間でRabbitMQを順次アップグレード &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
+>[使用可能なバージョン間でRabbitMQを順次アップグレード &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
 >
 >新しいバージョンにアップグレードした後、カスタムメッセージキューがRabbitMQで再作成されるようにするには、完全なデプロイメントをトリガーします。
 
@@ -201,7 +201,7 @@ mysql:
 
 ## サービスバージョン
 
-クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンと異なる場合がある、クラウドインフラストラクチャ上のAdobe Commerceのサービスバージョンと互換性のサポートが判断されます。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
+クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンと異なる場合がある、クラウドインフラストラクチャ上のAdobe Commerceのサービスバージョンと互換性のサポートが判断されます。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 ### ソフトウェアのEOL チェック
 
