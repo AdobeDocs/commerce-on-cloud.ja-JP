@@ -1,6 +1,6 @@
 ---
 title: Commerce用のクラウドパッチ
-description: Cloud Patches パッケージの最新の改善点のリストを参照してください。
+description: セキュリティの修正、キャッシュの機能強化、パッチの信頼性の更新など、Cloud Patches for Commerce パッケージの最新の機能強化について説明します。
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2969
+source-wordcount: 2978
 ht-degree: 0%
 
 ---
@@ -300,7 +300,7 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **B2B レイヤーナビゲーションパッチの適用による問題を修正** – この修正により、ストアビューを切り替えた後に検索ページに表示される`Undefined offset` エラーが解決されました。<!--MCLOUD-5287-->
 
-- **Paypal チェックアウトパッチ** – 以前に配置された注文価格が表示されるPayPal ExpressのAdobe Commerce 2.3.7の問題を修正します。<!--MC-42674-->
+- **PayPal チェックアウトパッチ** – 以前に配置された注文価格が表示されるPayPal ExpressのAdobe Commerce 2.3.7の問題を修正します。<!--MC-42674-->
 
 - **パッチカテゴリのサポート** – 品質パッチに割り当てられたパッチカテゴリとオリジンソースの処理のサポートを追加しました。 このカテゴリを使用すると、[品質パッチツール &#x200B;](https://github.com/magento/quality-patches)とサイト全体の分析ツール（SWAT）を使用する際に、フィルターと並べ替えを使用してパッチをより迅速に見つけることができます。<!--MC-38577-->
 

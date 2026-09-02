@@ -1,6 +1,6 @@
 ---
 title: Commerce on Cloud Infrastructure
-description: クラウドインフラストラクチャー上で Commerce を構築、デプロイ、管理する方法を学びます。
+description: AWSおよびAzure リージョン全体でホストされる安全なPlatform as a Service （PaaS）であるCloud Infrastructure上のAdobe Commerceの構築、デプロイ、管理について説明します。
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
 product_v2:
@@ -17,18 +17,18 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-08-28
-source-git-commit: 646dc40e0fe48293665e15b01a0f581adae3568d
+source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 3%
+source-wordcount: 356
+ht-degree: 0%
 
 ---
 
 # Commerce on Cloud Infrastructure
 
-Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で[!DNL Commerce] アプリケーションを構築、デプロイ、管理するための&#x200B;**セルフサービス** アプローチを備えた自動ホスティングプラットフォームです。 Adobe Commerce on cloud infrastructureには、オンプレミスのAdobe CommerceおよびMagento Open Source プラットフォームとは一線を画す追加機能が搭載されています。
+Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で[!DNL Commerce] アプリケーションを構築、デプロイ、管理するための&#x200B;**セルフサービス** アプローチを備えた自動ホスティングプラットフォームです。 Adobe Commerce on cloud infrastructureには、オンプレミスのAdobe CommerceおよびMagento Open Source プラットフォームとは異なる次の機能が搭載されています。
 
-- PHP、MySQL （MariaDB）、Redis、メッセージキューサービス（[!DNL RabbitMQ]または[!DNL ActiveMQ]）、サポートされる検索エンジンテクノロジーを含む、事前プロビジョニング済みのインフラストラクチャ。
+- PHP、MySQL （MariaDB）、RedisまたはValkey、メッセージキューサービス（[!DNL RabbitMQ]または[!DNL ActiveMQ]）、サポートされている検索エンジンテクノロジーを含む、事前プロビジョニング済みのインフラストラクチャ。
 - Platform as a Service （PaaS）環境でコード変更をプッシュするたびに、効率的な迅速な開発と継続的なデプロイメントを実現する自動ビルドとデプロイを備えたGit ベースのワークフロー。
 - 高度にカスタマイズ可能な環境設定ファイルとコマンドラインインターフェイス（CLI）ツールの管理とデプロイ。
 - Amazon Web Services（AWS）ホスティングは、オンライン販売と小売業のための拡張性と安全性の高い環境を提供します。
@@ -58,7 +58,7 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 >[!NOTE]
 >
-> 中国とロシアのオンプレミスのみ。
+> Adobe Commerce on cloud infrastructureは、中国またはロシアでは利用できません。 これらの国では、オンプレミスのデプロイメントのみがサポートされています。
 
 ## Azure地域
 
@@ -66,7 +66,7 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 >[!NOTE]
 >
-> 中国とロシアのオンプレミスのみ。 統合環境を必要とするすべてのマーチャントは、米国の地域を使用する必要があります。
+> オンプレミスでのデプロイメントのみが中国およびロシアでサポートされています。 統合環境を必要とするすべてのマーチャントは、米国の地域を使用する必要があります。
 
 ## Adobe Commerce ドキュメント
 

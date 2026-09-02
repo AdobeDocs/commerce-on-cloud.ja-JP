@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 739
+source-wordcount: 783
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Adobe Commerce on cloud infrastructureのサービスバージョンと互換性
 
    - `services.yaml` ファイルのElasticsearch サービスのバージョンを、Elasticsearch PHP クライアントと互換性のあるバージョンに変更します。
 
-     {{pro-update-service}}
+     Pro サービスのアップグレードのスケジュール要件と顧客可用性に関するガイダンスについては、_Configure services_&#x200B;の[Pro サービスのサポート &#x200B;](services-yaml.md#pro-services-support)を参照してください。
 
 ## Elasticsearch サービスを再起動します
 
@@ -231,7 +231,7 @@ elasticsearch:
 ```
 
 Elastic Suite サードパーティプラグインを使用する場合は、`ece-tools` パッケージ [&#128279;](../dev-tools/update-package.md)をバージョン 2002.0.19以降に更新する必要があります。
-Elastic Suiteを設定する際に、設定設定を`ELASTICSUITE_CONFIGURATION` デプロイ変数に追加します。この設定は、デプロイメント間で設定を保存します。
+Elastic Suiteを設定する際に、設定設定を`ELASTICSUITE_CONFIGURATION` デプロイ変数に追加します。 この設定は、デプロイメント間で設定を保存します。
 
 ### Elasticsearchのプラグインの削除
 

@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
@@ -283,6 +283,7 @@ Pro ステージング環境および実稼動環境の場合、デプロイ、�
 各サービスは個別のコンテナで実行されるため、サービスログは統合環境では使用できません。 Adobe Commerce クラウドインフラストラクチャでは、統合環境でのみweb サーバーコンテナにアクセスできます。 次のサービスログの場所は、Pro実稼動環境とステージング環境用です。
 
 - **Redis ログ**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Valkey log**: `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Elasticsearch ログ**: `/var/log/elasticsearch/elasticsearch.log`
 - **Java ガベージコレクションログ**: `/var/log/elasticsearch/gc.log`
 - **メールログ**: `/var/log/mail.log`

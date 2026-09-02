@@ -12,9 +12,9 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 344
+source-wordcount: 340
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 | `MAGENTO_CLOUD_ROUTES` | 環境`.magento/routes.yaml` ファイルで定義されたルートを記述します。 |
 | `MAGENTO_CLOUD_TREE_ID` | アプリケーションのツリーID。GitのツリーのSHAに対応します。 |
 | `MAGENTO_CLOUD_VARIABLES` | キーと値のペア （`"key":"value"`など）を持つbase64 エンコードされたJSON オブジェクト。 |
-| `MAGENTO_CLOUD_LOCKS_DIR` | クラウドインフラストラクチャ上のロックプロバイダーのマウントポイントへのパスを提供します。 ロックプロバイダーは、重複したcron ジョブとcron グループの起動を防ぎます。<br><br> `file`および`db` ロックプロバイダーのみがサポートされています。<br><br>**Proの実稼動環境とステージング環境**&#x200B;は、`file` ロックプロバイダーにデフォルトで設定されています。 この値は変更できません。<br><br>**Pro統合およびスターター環境**&#x200B;は、`MAGENTO_CLOUD_LOCKS_DIR`変数を使用しません。 `db` ロックプロバイダーはデフォルトで適用されます。 `.magento.env.yaml` ファイルの`[LOCK_PROVIDER](variables-deploy.md#lock_provider`環境デプロイ変数を更新することで、デフォルト値を変更できます。 |
+| `MAGENTO_CLOUD_LOCKS_DIR` | クラウドインフラストラクチャ上のロックプロバイダーのマウントポイントへのパスを提供します。 ロックプロバイダーは、重複したcron ジョブとcron グループの起動を防ぎます。<br><br> `file`および`db` ロックプロバイダーのみがサポートされています。<br><br>**Proの実稼動環境とステージング環境**&#x200B;は、`file` ロックプロバイダーにデフォルトで設定されています。 この値は変更できません。<br><br>**Pro統合およびスターター環境**&#x200B;は、`MAGENTO_CLOUD_LOCKS_DIR`変数を使用しません。 `db` ロックプロバイダーはデフォルトで適用されます。 `.magento.env.yaml` ファイルの[`LOCK_PROVIDER`](variables-deploy.md#lock_provider)環境デプロイ変数を更新することで、デフォルト値を変更できます。 |
 
 >[!WARNING]
 >
@@ -43,7 +43,7 @@ ht-degree: 0%
 >
 >![環境変数の例](../../assets/set-env-variable-ui.png)
 
-値は時間の経過とともに変化する可能性があるため、実行時に変数を検査し、それを使用してアプリケーションを設定するのが最善です。 例えば、`MAGENTO_CLOUD_RELATIONSHIPS`変数を使用して、環境関連の関係を次のように取得します。
+値は時間の経過とともに変化する可能性があるので、実行時に変数を調べ、それを使用してアプリケーションを設定します。 例えば、`MAGENTO_CLOUD_RELATIONSHIPS`変数を使用して、環境関連の関係を次のように取得します。
 
 ```php
 <?php

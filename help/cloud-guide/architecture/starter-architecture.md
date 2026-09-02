@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
+source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
 workflow-type: tm+mt
-source-wordcount: 1007
+source-wordcount: 1010
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 統合環境で最高のパフォーマンスを発揮するには、次のベストプラクティスに従います。
 
-- カタログサイズの制限 – 参考までに、サンプルデータには約2,048の製品が含まれています。カタログサイズを4,000～5,000個程度に減らしてみてください。
+- カタログサイズの制限 – 参考までに、サンプルデータには約2,048の製品が含まれています。 カタログサイズを4,000～5,000個程度に減らしてみてください。
 カタログ内の製品数を確認するには、次のMySQL クエリを実行します。
 
   ```sql
@@ -104,13 +104,12 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 - HTTP キャッシュとCDN向けFastly
 - 複数のワーカーを持つ1つのインスタンスであるPHP-FPMに話しかけるNginx web サーバー
-- Redis サーバー
-- Adobe Commerce 2.2から2.4.3-p2までのカタログ検索のためのElasticsearch
-- OpenSearch Adobe Commerce 2.3.7-p3、2.4.3-p2、および2.4.4以降のカタログ検索
+- Redis サーバーまたはValkey サーバー
+- OpenSearch for catalog search for Adobe Commerce 2.4.4以降
 
 ### サービス
 
-Adobe Commerce on cloud infrastructureは、現在、PHP、MySQL （MariaDB）、Elasticsearch（Adobe Commerce 2.2 ～ 2.4.3-p2）、OpenSearch （2.3.7-p3、2.4.3-p2、2.4.4以降）、Redis、および[!DNL RabbitMQ]のサービスをサポートしています。
+Adobe Commerce クラウドインフラストラクチャでは、現在、PHP、MySQL （MariaDB）、OpenSearch （2.4.4以降）、RedisまたはValkey、および[!DNL RabbitMQ]のサービスをサポートしています。
 
 各サービスは、個別の安全なコンテナで実行されます。 コンテナは、プロジェクト内で一緒に管理されます。 次のような一部のサービスが標準です。
 
@@ -130,7 +129,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 - [MySQL](../services/mysql.md)
 
-- [Redis](../services/redis.md)
+- [Redis](../services/redis.md)または[Valkey](../services/valkey.md)
 
 - [RabbitMQ](../services/rabbitmq.md)
 

@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 859
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->これはローカルツールであり、Unix ベースのオペレーティングシステムでのみサポートされています。 Windowsはサポートされていません。 このページで説明されている方法を使用して、クラウド環境（読み取り専用）にインストールすることはできません。 次のいずれかの&#x200B;**デプロイメントワークフロー**&#x200B;を介して、クラウド環境にモジュールのみをインストールできます。
+>このローカルツールは、Unix ベースのオペレーティングシステムでのみサポートされています。 Windowsはサポートされていません。 このページで説明されている方法を使用して、クラウド環境（読み取り専用）にインストールすることはできません。 次のいずれかの&#x200B;**デプロイメントワークフロー**&#x200B;を介して、クラウド環境にモジュールのみをインストールできます。
 >
 >- [Pro デプロイメントワークフロー](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
 >- [&#x200B; スターターデプロイメントワークフロー](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
@@ -105,7 +105,11 @@ magento-cloud environment:list
 
 ### 環境の再デプロイ
 
-プッシュ通知を使用せずに再デプロイメントをトリガーします。 再デプロイする環境を確認して確認します。 保留状態のビルドがある場合は、redeployを使用しないでください。
+プッシュ通知を使用せずに再デプロイメントをトリガーします。 再デプロイする環境を確認して確認します。
+
+>[!CAUTION]
+>
+>保留状態のビルドがある場合は、redeployを使用しないでください。
 
 ```bash
 magento-cloud environment:redeploy
@@ -121,7 +125,7 @@ Are you sure you want to redeploy the environment <environment-name>? [Y/n]
 
 ## Git コマンド
 
-これらのコマンドのいくつかはGit コマンドに似ていることにお気づきでしょう。 `magento-cloud` コマンドは、追加機能を使用して、Git ベースのCloud プロジェクトに直接接続します。 `magento-cloud` CLIを使用せずにブランチを作成した場合、ブランチは「アクティブ化」されず、リモート環境に変更をプッシュしても自動的にビルドされません。 `magento-cloud` CLI コマンドには、アクティブ化が含まれています。
+これらのコマンドのいくつかは、Git コマンドに似ています。 `magento-cloud` コマンドは、追加機能を使用して、Git ベースのCloud プロジェクトに直接接続します。 `magento-cloud` CLIを使用せずにブランチを作成した場合、ブランチは「アクティブ化」されず、リモート環境に変更をプッシュしても自動的にビルドされません。 `magento-cloud` CLI コマンドには、アクティブ化が含まれています。
 
 ブランチを作成するには、`magento-cloud` コマンドを使用して、ブランチをアクティブ化します。
 
@@ -184,13 +188,13 @@ git commit --allow-empty -m "redeploy" && git push <branch-name>
    magento-cloud environment:checkout <environment-ID>
    ```
 
-   Git コマンドはGit ブランチをチェックアウトするだけです。 `magento-cloud checkout` コマンドはブランチをチェックアウトし、アクティブな環境に切り替えます。
+   Git コマンドはGit ブランチのみをチェックアウトします。 `magento-cloud checkout` コマンドはブランチをチェックアウトし、アクティブな環境に切り替えます。
 
    >[!TIP]
    >
    >環境ブランチは、`magento-cloud environment:branch <environment-name> <parent-environment-ID>` コマンド構文を使用して作成できます。 環境ブランチの作成とアクティブ化にはさらに時間がかかる場合があります。
 
-1. 環境IDを使用して、更新されたコードをローカルに取り込みます。 環境ブランチが新しい場合、これは必要ありません。
+1. 環境IDを使用して、更新されたコードをローカル環境に取り込みます。 環境ブランチが新しい場合、この手順は必要ありません。
 
    ```bash
    git pull origin <environment-ID>

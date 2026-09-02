@@ -1,6 +1,6 @@
 ---
 title: パッチを適用
-description: Adobe Commerce on cloud infrastructure プロジェクトでパッチを適用する方法を説明します。
+description: ECE-ToolsとQuality Patches Toolを使用して、Adobe Commerce on Cloud Infrastructure プロジェクトに必須、オプション、およびカスタムパッチを適用する方法について説明します。
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
 workflow-type: tm+mt
-source-wordcount: 911
+source-wordcount: 922
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **ローカル開発環境で個別のパッチを適用するには**:
 
-1. `.magento.env.yaml` ファイルに「QUALITY_PATCHES」変数を追加し、その下に必要なパッチをリストします。
+1. `QUALITY_PATCHES`変数を`.magento.env.yaml` ファイルに追加し、その下に必要なパッチを一覧表示します。
 
    ```yaml
    stage:
@@ -194,7 +194,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 **クラウド環境にカスタムパッチを適用してテストするには**:
 
-1. プロジェクトのルートで、`m2-hotfixes`という名前のディレクトリが存在しない場合は作成します
+1. プロジェクトのルートで、`m2-hotfixes`という名前のディレクトリが存在しない場合は、そのディレクトリを作成します。
 
    ```bash
    mkdir m2-hotfixes

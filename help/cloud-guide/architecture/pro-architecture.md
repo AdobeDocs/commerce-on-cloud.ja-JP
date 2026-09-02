@@ -1,6 +1,6 @@
 ---
 title: プロアーキテクチャ
-description: Pro アーキテクチャでサポートされている環境について説明します。
+description: マスター、インテグレーション、ステージング、実稼動環境、クラスターのスケーリングとバックアップなど、Pro環境アーキテクチャについて説明します。
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 1619
+source-wordcount: 1621
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Adobe Commerce on cloud infrastructure Proのアーキテクチャは、スト�
 | New Relic サービスを含む | いいえ | APM | APM + NRI |
 | 自動バックアップ | いいえ | はい | はい |
 
+**APM**&#x200B;は、[!DNL New Relic's] アプリケーションパフォーマンス監視を参照します。
+
 >[!NOTE]
 >
 >Adobeには、ローカルのCloud Docker環境にデプロイするためのCloud Docker for Commerce ツールが用意されています。これにより、Adobe Commerce プロジェクトを開発およびテストできます。 [Docker開発](../dev-tools/cloud-docker.md)を参照してください。
@@ -64,7 +66,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - `master` ブランチに基づいて&#x200B;**not** ブランチを作成します。 統合環境を使用して、開発用のアクティブなブランチを作成します。
 
-- 開発、UAT、またはパフォーマンス テストに`master`環境を使用しないでください
+- 開発、ユーザー受け入れテスト （UAT）、またはパフォーマンス テストに`master`環境を使用しないでください
 
 ### 統合環境
 
@@ -99,11 +101,11 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - 統合環境アーキテクチャがステージング環境と実稼動環境アーキテクチャと一致しません
 
-- 開発テスト、パフォーマンステストまたはユーザー受け入れテスト （UAT）に`integration`環境を使用しないでください
+- 開発テスト、パフォーマンステスト、またはUATに`integration`環境を使用しないでください
 
 - Adobe Commerce機能のB2B テストに`integration`環境を使用しないでください
 
-- 統合環境のデータベースをデータベース実稼動またはステージングから復元することはできません
+- 統合環境のデータベースを実稼動環境またはステージングデータベースから復元することはできません
 
 {{enhanced-integration-envs}}
 
@@ -160,11 +162,9 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
   - `pub/static`
   - `app/etc`
 
-- **Redis** - 1つのアクティブなサーバーと、他の2つのサーバーのみをレプリカとして使用するVMごとに1台のサーバー
+- **Redis**&#x200B;または&#x200B;**Valkey** - 1つのVMにつき1つのサーバーがあり、1つのサーバーはアクティブで、他の2つのサーバーはレプリカとして使用されます。
 
-- **Elasticsearch**：クラウドインフラストラクチャ 2.2から2.4.3-p2でAdobe Commerceを検索
-
-- **OpenSearch**：クラウドインフラストラクチャ 2.3.7-p3、2.4.3-p2、2.4.4以降でAdobe Commerceを検索します
+- **OpenSearch**：クラウドインフラストラクチャ 2.4.4以降でAdobe Commerceを検索します
 
 - **Galera**：ノードごとに1つのMariaDB MySQL データベースを持つデータベースクラスターで、各データベースの一意のIDに対して3つの自動増分設定が設定されている
 
@@ -191,7 +191,7 @@ Adobe Commerce オンクラウド基盤では、各Pro プロジェクトを3つ
 
 >[!NOTE]
 >
->マウントされたボリュームには、[書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれます。また、`app/` ディレクトリの一部も含まれません。 他のファイルについては、[&#x200B; ビルドおよびデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
+>マウントされたボリュームには、[書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれているか、参照されており、`app/` ディレクトリの一部が含まれていません。 他のファイルについては、[&#x200B; ビルドおよびデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
 
 {{pro-backups}}
 
@@ -213,11 +213,11 @@ Adobeは、次のデータ保持ポリシーに従って自動バックアップ
 | 8週目から12週目 | 1週間に1回のバックアップ |
 | 3 ～ 5か月 | 月に1回のバックアップ |
 
-このポリシーは、クラウドインフラストラクチャのプランによって異なる場合があります。
+このポリシーは、クラウドインフラストラクチャのプランによって異なります。
 
 ### 目標復旧時間
 
-RTOはストレージのサイズによって異なります。 大きなEBS ボリュームの場合、復元に時間がかかります。 復元時間は、データベースのサイズによって異なる場合があります。 詳しくは、Adobe カスタマーサクセスマネージャーにお問い合わせください。
+RTOはストレージのサイズによって異なります。 大きなEBS ボリュームの場合、復元に時間がかかります。 復元時間は、データベースのサイズによって異なります。 詳しくは、Adobe カスタマーサクセスマネージャーにお問い合わせください。
 
 ## プロクラスターの拡大・縮小
 

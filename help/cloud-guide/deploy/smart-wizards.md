@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 326
+source-wordcount: 328
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 スマートウィザードは、クラウド設定がベストプラクティスに従っているかどうかを判断するのに役立ちます。 使用可能なウィザードは、次の設定に役立ちます。
 
 - 導入のダウンタイムを最小限に抑える理想的な状態
-- データベースとRedisの負荷分散設定
+- データベースとRedisまたはValkeyの負荷分散設定
 - オンデマンド、ビルドステージ、デプロイメントステージのための静的コンテンツデプロイメント（SCD）
 
 各スマートウィザードコマンドは、確認応答と、適切な設定の推奨事項を提供します。

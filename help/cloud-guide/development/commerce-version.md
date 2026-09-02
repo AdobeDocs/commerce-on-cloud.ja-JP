@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
@@ -29,18 +29,18 @@ Adobe Commerce コードベースを新しいバージョンにアップグレ�
 環境タイプ（開発、ステージング、実稼動）に応じて、アップグレード タスクには次のものが含まれます。
 
 - サードパーティ製の拡張機能を、サポートされている最新バージョンにアップグレードします。
-- Pro プロジェクトの場合、ステージング環境と実稼動環境でサービスをインストールまたは更新するには、Adobe Commerce サポートチケットを送信する必要があります。
-- 開発/統合/PR ブランチの場合：
-  - 新しいバージョンのAdobe Commerceとの互換性を確保するために、MariaDB （MySQL）、OpenSearch、RabbitMQ、およびRedisの新しいバージョンで`.magento/services.yaml` ファイルを更新します。
-  - フックと環境変数の新しい設定で`.magento.app.yaml` ファイルを更新します。
+- MariaDB （MySQL）、OpenSearch、RabbitMQ、RedisまたはValkeyに必要なサービスバージョンで`.magento/services.yaml` ファイルを更新して、対象のAdobe Commerce バージョンとの互換性を維持します。
+  - 開発/統合/PR ブランチの場合、これらの変更は環境設定の一部として直接使用されます。
+  - Pro ステージング環境および実稼動環境の場合、Adobe Commerce サポートは実際のサービスのインストールまたは更新を実行しますが、その内容はデプロイメント中に検証されるため、`.magento/services.yaml`を最新の状態に保ち、完全かつ有効にしておく必要があります。
+- フックと環境変数の新しい設定で`.magento.app.yaml` ファイルを更新します。
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## 設定ファイル
 
-アプリケーションをアップグレードする前に、クラウドインフラストラクチャまたはアプリケーション上のAdobe Commerceのデフォルト設定の変更を考慮して、プロジェクト設定ファイルを更新する必要があります。 最新のデフォルトは、[magento-cloud GitHub リポジトリ &#x200B;](https://github.com/magento/magento-cloud)にあります。
+クラウドインフラストラクチャまたはアプリケーション上のAdobe Commerceのデフォルト設定の変更を考慮するには、アプリケーションをアップグレードする前にプロジェクト設定ファイルを更新します。 最新のデフォルトは、[magento-cloud GitHub リポジトリ &#x200B;](https://github.com/magento/magento-cloud)にあります。
 
 ### composer.json
 
@@ -84,7 +84,7 @@ Adobe Commerce バージョン 2.4.4以降の`composer.json` ファイルを更�
 
 ## 環境バックアップ
 
-アップグレードの前にインスタンスのバックアップを作成することをお勧めします。 統合環境、ステージング環境および実稼動環境をバックアップするには、次の手順を実行します。
+Adobeでは、アップグレードの前にインスタンスのバックアップを作成することをお勧めします。 統合環境、ステージング環境および実稼動環境をバックアップするには、次の手順を実行します。
 
 **統合環境データベースとコード**&#x200B;をバックアップするには：
 
@@ -164,7 +164,7 @@ Adobe Commerce バージョン 2.4.4以降の`composer.json` ファイルを更�
 
    **方法2**: [使用可能なパッチとステータスを表示](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **方法3**: [&#x200B; パッチの検索](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)
+   **方法3**: [&#x200B; パッチの検索](https://experienceleague.adobe.com/ja/tools/commerce-quality-patches)
 
 
 1. コードの変更を追加、コミット、プッシュします。
@@ -185,7 +185,7 @@ Adobe Commerce バージョン 2.4.4以降の`composer.json` ファイルを更�
 
    コンポーザーのマーシャルが新しいバージョンのAdobe Commerceに属するファイル。これらの同じファイルの古いバージョンを上書きします。 現在、Adobe Commerceではマーシャリングは無効になっているので、マーシャリングされたファイルをソースコントロールに追加する必要があります。
 
-1. デプロイメントが完了するのを待ちます。
+1. アップグレードを完了するには、デプロイメントを待ちます。
 
 1. SSHを使用してログインし、バージョンを確認して、統合環境、ステージング環境、実稼動環境のアップグレードを確認します。
 
@@ -213,9 +213,9 @@ Marketplaceや他社のサイトで、サードパーティの拡張機能やモ
 
 1. 統合環境でプッシュしてテストします。
 
-1. ステージング環境にプッシュして、プリプロダクション環境でテストします。
+1. プリプロダクション環境でテストするには、ステージング環境にプッシュします。
 
-Adobeでは、サイト起動プロセスにアップグレードされた拡張機能を含め、実稼動環境&#x200B;_before_&#x200B;をアップグレードすることを強くお勧めします。
+Adobeでは、サイト起動プロセスにアップグレードされた拡張機能を含め、実稼動環境&#x200B;_before_&#x200B;をアップグレードすることをお勧めします。
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ Adobeでは、サイト起動プロセスにアップグレードされた拡張
 
 ## アップグレードのトラブルシューティング
 
-アップグレードに失敗した場合、ストアフロントまたは管理パネルにアクセスできないことを示すエラーメッセージがブラウザーに表示されます。
+アップグレードが失敗した場合、ストアフロントまたは管理パネルにアクセスできないことを示すエラーメッセージがブラウザーに表示されます。
 
 ```
 There has been an error processing your request

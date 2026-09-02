@@ -1,6 +1,6 @@
 ---
 title: Fastly サービスの設定
-description: Adobe Commerce プロジェクトにFastly サービスを設定および設定する方法について説明します。
+description: Fastly キャッシュ、VCL スニペット、ステージング環境および実稼動環境のWeb アプリケーションファイアウォール（WAF）の設定、設定、テスト方法について説明します。
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
@@ -16,9 +16,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2254
+source-wordcount: 2216
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Cloud Pro プロジェクトで、IaaS マウントされた共有ディレク�
 
    ステージング環境と実稼動環境には一意の資格情報があります。 各環境の資格情報を取得する必要があります。
 
-**Cloud スタータープロジェクトの資格情報を取得**:
+**Cloud Starter プロジェクトの資格情報を取得**:
 
 Cloud Starter プロジェクトで、Cloud ConsoleまたはCloud CLIを使用して資格情報を取得します。
 
@@ -111,27 +111,27 @@ Fastly サービスを有効にして設定するには、次のコンポーネ�
 
 {{admin-login-step}}
 
-1. **ストア** / 設定/**構成** / **詳細** / **システム**&#x200B;をクリックし、**フルページキャッシュ**&#x200B;を展開します。
+1. **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]**&#x200B;をクリックし、**[!UICONTROL Full Page Cache]**&#x200B;を展開します。
 
    ![展開してFastlyを選択](../../assets/cdn/fastly-menu.png)
 
-1. _Caching Application_ セクションで、**システム値**&#x200B;から選択範囲を削除し、ドロップダウンリストから&#x200B;**Fastly CDN**&#x200B;を選択します。
+1. _[!UICONTROL Caching Application]_&#x200B;セクションで、**[!UICONTROL Use system value]**&#x200B;から選択範囲を削除し、ドロップダウンリストから&#x200B;**[!UICONTROL Fastly CDN]**&#x200B;を選択します。
 
    ![Fastlyを選択](../../assets/cdn/fastly-enable-admin.png)
 
-1. **Fastly Configuration**&#x200B;を展開し、[&#x200B; キャッシングオプションを選択](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)します。
+1. **[!UICONTROL Fastly Configuration]**&#x200B;と[&#x200B; キャッシングオプションを選択](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module)を展開します。
 
-1. キャッシュオプションを設定したら、ページ上部の「**設定を保存**」をクリックします。
+1. キャッシュ オプションを設定したら、ページの上部にある&#x200B;**[!UICONTROL Save Config]**&#x200B;をクリックします。
 
 1. 通知に従ってキャッシュをクリアします。
 
-1. **Stores** > **Settings** > **Configuration** > **Advanced** > **System** > **Fastly Configuration**&#x200B;に戻って、Fastlyの設定を続行します。
+1. **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**&#x200B;に戻って、Fastlyの設定を続行します。
 
 ### Fastly認証情報をテストする
 
-1. 管理者で、**Stores** / 設定/**Configuration** / **Advanced** / **System** / **Fastly Configuration**&#x200B;に移動します。
+1. 管理者で、**[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**&#x200B;に移動します。
 
-1. 必要に応じて、プロジェクト環境の&#x200B;**Fastly サービス ID**&#x200B;と&#x200B;**API トークン**&#x200B;の値を追加します。
+1. 必要に応じて、プロジェクト環境の&#x200B;**[!UICONTROL Fastly service ID]**&#x200B;と&#x200B;**[!UICONTROL API token]**&#x200B;の値を追加します。
 
    ![Fastly資格情報の管理者](../../assets/cdn/fastly-credentials-admin-ui.png)
 
@@ -139,9 +139,9 @@ Fastly サービスを有効にして設定するには、次のコンポーネ�
    >
    >Fastly API トークンを作成するリンクを選択しないでください。 代わりに、Adobe[&#128279;](#get-fastly-credentials)が提供するFastly資格情報（サービス IDおよびAPI トークン）を使用してください。
 
-1. 「**資格情報をテスト**」をクリックします。
+1. **[!UICONTROL Test credentials]**&#x200B;をクリックします。
 
-1. テストが成功した場合は、**設定を保存**&#x200B;をクリックし、キャッシュをクリアします。
+1. テストが成功した場合は、**[!UICONTROL Save Config]**&#x200B;をクリックし、キャッシュをクリアします。
 
    テストが失敗した場合は、正しいサービス IDとAPI トークンの値が現在の環境の資格情報と一致していることを確認します。
 
@@ -161,7 +161,7 @@ Fastly モジュールを有効にした後、デフォルトの[VCL コード &
 
 **Fastly VCL**&#x200B;をアップロードするには：
 
-1. 次の図に示すように、_Fastly Configuration_ セクションで、**VCLをFastly**&#x200B;にアップロードをクリックします。
+1. 次の図に示すように、_[!UICONTROL Fastly Configuration]_&#x200B;セクションで、**[!UICONTROL Upload VCL to Fastly]**&#x200B;をクリックします。
 
    ![Magento VCLをFastlyにアップロード &#x200B;](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -190,7 +190,7 @@ Adobe Commerce環境でSSL/TLS証明書を有効にするには、Adobeの自動
 >
 >アクティブでない実稼動ドメインがある場合は、ドメインの検証にACME チャレンジ CNAME レコードを使用します。 DNS設定にレコードを早期に追加することで、Adobeはサイトの起動前に適切なドメインでSSL/TLS証明書をプロビジョニングできます。 実稼動環境に起動する前に、これらのプレースホルダーレコードをAdobeが提供するCNAME レコードに置き換える必要があります。
 
-ドメインの検証が完了すると、AdobeはLet&#39;s Encrypt TLS/SSL証明書をプロビジョニングし、ライブステージング環境または実稼動環境にアップロードします。 このプロセスには最大12時間かかる場合があります。 Adobeでは、サイト開発とサイト起動の遅延を防ぐために、DNS設定の更新を数日前に完了することをお勧めします。
+ドメインの検証が完了すると、AdobeはLet&#39;s Encrypt TLS/SSL証明書をプロビジョニングし、ライブステージング環境または実稼動環境にアップロードします。 このプロセスには最大12時間かかる場合があります。 Adobeでは、サイト開発とローンチの遅延を防ぐために、DNS設定の更新を数日前に完了することをお勧めします。
 
 ## 開発設定を使用したDNS設定の更新
 
@@ -297,7 +297,7 @@ DNS設定の変更が完了したら、[cURL](https://curl.se/) コマンドラ�
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. 応答で、[&#x200B; ヘッダー](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)を確認して、Fastlyが動作していることを確認します。 例えば、応答に次の一意のヘッダーが表示される必要があります。
+1. 応答で、[&#x200B; ヘッダー](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers)を確認して、Fastlyが動作していることを確認します。 例えば、応答の次の一意のヘッダーを参照してください。
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.228

@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 330a8bbd9298a28b5c007f4a79f684ce7adca9ff
 workflow-type: tm+mt
-source-wordcount: 857
+source-wordcount: 858
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 | [`hooks`](hooks-property.md) | ビルド、デプロイ、デプロイ後のフェーズのシェルコマンドをカスタマイズする | — | いいえ |
 | [`mounts`](#mounts) | パスの設定 | パス：<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | いいえ |
 | [`name`](#name) | アプリケーション名の定義 | `mymagento` | はい |
-| [`relationships`](#relationships) | マップサービス | サービス：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | いいえ |
+| [`relationships`](#relationships) | マップサービス | サービス：<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`または`valkey: "cache:valkey"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | いいえ |
 | [`runtime`](#runtime) | ランタイムプロパティには、[!DNL Commerce] アプリケーションで必要な拡張機能が含まれています。 | 拡張機能：<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | はい |
 | [`type`](#type-and-build) | ベースコンテナイメージの設定 | `php:8.3` | はい |
 | [`variables`](variables-property.md) | 特定のCommerce バージョンに対する環境変数の適用 | — | いいえ |

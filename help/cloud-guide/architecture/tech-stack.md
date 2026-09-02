@@ -21,9 +21,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 415
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Adobe Commerce on cloud インフラストラクチャは、次に示す5つの�
    Adobeでは、バーチャルコンピューティングリソース（vCPU）の使用状況を定期的に分析し、長期的な使用状況を最適化し、vCPUの年間最大許容値を超えるリスクを軽減するために、リソースを自動的に割り当てます。 特定の期間にサイトトラフィックの増加が予想される場合は、引き続きサポートチケットを開いて[一時的なアップサイズをリクエスト &#x200B;](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)する必要があります。
 
 1. [**Platform as a Service**](cloud-architecture.md)：各Adobe Commerce クラウド インフラストラクチャ プロジェクトでは、サービスの開発、テスト、および統合用のPlatform as a Service （PaaS）統合環境が提供されます。
-1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce on cloud インフラストラクチャは、PHP、MySQL （MariaDB）、Redis、メッセージキューサービス（[!DNL RabbitMQ]または[!DNL ActiveMQ]）、サポートされている検索エンジンテクノロジーを含む、事前プロビジョニング済みのインフラストラクチャを提供します。
+1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce on cloud インフラストラクチャは、PHP、MySQL （MariaDB）、RedisまたはValkey、メッセージキューサービス（[!DNL RabbitMQ]または[!DNL ActiveMQ]）、サポートされている検索エンジンテクノロジーを含む、事前プロビジョニング済みのインフラストラクチャを提供します。
 1. [**パフォーマンスツール**](../monitor/new-relic-service.md): New Relicのパフォーマンスツールを使用すると、クラウドインフラストラクチャプロジェクト上のAdobe Commerceからデータを収集、分析、表示することで、アプリケーションとインフラストラクチャをデバッグ、モニター、管理できます。
 1. [**コンテンツ配信ネットワーク （CDN）、Web アプリケーションファイアウォール （[!DNL WAF]）、および画像最適化（IO）**](../cdn/fastly.md):
 

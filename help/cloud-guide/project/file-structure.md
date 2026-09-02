@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Commerce on cloud インフラストラクチャプロジェクトには�
 | ファイル | 説明 |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | `www`をapex ドメインと`php` アプリケーションにリダイレクトしてHTTPを提供する設定ファイル。 [&#x200B; ルートの設定](../routes/routes-yaml.md)を参照してください。 |
-| `/.magento/services.yaml` | MySQL インスタンス（MariaDB）、Redis、OpenSearchまたはElasticsearchを定義する設定ファイル。 [&#x200B; サービスの設定](../services/services-yaml.md)を参照してください。 |
+| `/.magento/services.yaml` | MySQL インスタンス（MariaDB）、RedisまたはValkey、およびOpenSearchまたはElasticsearchを定義する設定ファイル。 [&#x200B; サービスの設定](../services/services-yaml.md)を参照してください。 |
 | `/app` | `code` フォルダーはカスタムモジュールに使用されます。 `design` フォルダーは[&#x200B; カスタムテーマ &#x200B;](../store/custom-theme.md)に使用されます。 `etc` フォルダーには、アプリケーションの設定ファイルが含まれています。 |
 | `/m2-hotfixes` | カスタムパッチに使用されます。 |
 | `/update` | サポートモジュールで使用されるサービスフォルダー。 |

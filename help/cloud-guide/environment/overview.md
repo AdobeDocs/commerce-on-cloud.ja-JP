@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 284
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Commerce on cloud インフラストラクチャの環境には、Adobe Co
 | [&#x200B; アプリケーション &#x200B;](../application/configure-app-yaml.md) | `.magento.app.yaml` | サービス、フック、cron ジョブなど、Adobe Commerceの構築とデプロイの方法を定義します。 |
 | [環境](configure-env-yaml.md) | `.magento.env.yaml` | 環境変数を使用して、プロステージングと実稼動環境を含むあらゆる環境でのビルドとデプロイのアクションの管理を一元化します。 |
 | [&#x200B; ルート &#x200B;](../routes/routes-yaml.md) | `.magento/routes.yaml` | キャッシュ、リダイレクト、サーバーサイドのインクルードを設定します。 |
-| [&#x200B; サービス &#x200B;](../services/services-yaml.md) | `.magento/services.yaml` | Adobe Commerceが使用するサービスを名前とバージョンで定義します。 例えば、このファイルには、MariaDB、PHP拡張機能、Redis、RabbitMQ、ElasticsearchまたはOpenSearchのバージョンが含まれます。 これらの変更をPro プランのステージング環境と実稼動環境にプッシュするには、サポートチケットを開く必要があります。 |
+| [&#x200B; サービス &#x200B;](../services/services-yaml.md) | `.magento/services.yaml` | Adobe Commerceが使用するサービスを名前とバージョンで定義します。 例えば、このファイルには、MariaDB、PHP拡張機能、RedisまたはValkey、RabbitMQ、ElasticsearchまたはOpenSearchのバージョンが含まれます。 これらの変更をPro プランのステージング環境と実稼動環境にプッシュするには、サポートチケットを開く必要があります。 |
 | [PHP設定](../application/php-settings.md#configure-php) | `php.ini` | プロジェクトに追加できるオプションのファイル。 このファイルに含まれる設定は、クラウドインフラストラクチャによって維持される設定に追加されます。 |
 
 {style="table-layout:auto"}
