@@ -1,8 +1,8 @@
 ---
-source-git-commit: d729c35577a141701e5aa20ad06ee2f7f3306ba6
+source-git-commit: d82eee385906c4cf6119a1b0b846f8f794163186
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 2%
+source-wordcount: '310'
+ht-degree: 1%
 
 ---
 # 新しいテンプレート
@@ -10,6 +10,36 @@ ht-degree: 2%
 ## 最新情報
 
 このページには、過去60日間に行われた変更が含まれます。 コピー編集などのマイナーな更新は、このリストから除外されます。
+
+### 2026年9月1日（PT）
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>説明</th>
+      <th>タイプ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>現在のバージョンとパッチレベルのサポートを反映するように、RedisとValkey サービスのドキュメントを更新し、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis">Redis サービスの設定</a>、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">Valkey サービスの設定</a>、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">変数のデプロイ </a>など、Cloud Guideのアーキテクチャとサービスページ全体にValkey参照を追加しました。</p>
+</td>
+      <td>
+        フィードバック、メジャーアップデート
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/89a9594b50dfeacc4e0e7765f195d9bade00413d">コミット</a></td>
+    </tr>
+    <tr>
+      <td><p>Commerceのアップグレードウィンドウ中のお客様の可用性に関する要件に関するガイダンスを追加し、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Commerce バージョンのアップグレード </a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml"> サービスの設定</a>で、Pro サービスのアップグレードリクエストとスケジューリングプロセスを明確にしました。</p>
+</td>
+      <td>
+        フィードバック
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ea46582388a9afaf94eb9ced6b61dbef0044370d">コミット</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2026年8月24日（PT）
 
@@ -23,7 +53,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.13の後に<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。</p>
+      <td><p>ECE-Tools リリース v2002.2.13の後に<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。</p>
 </td>
       <td>
         テクニカル
@@ -31,7 +61,7 @@ ht-degree: 2%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">コミット</a></td>
     </tr>
     <tr>
-      <td><p>Cloud Infrastructure上のAdobe Commerceに<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動拡張</a>の可用性を追加しました。</p>
+      <td><p>Cloud Infrastructure上のAdobe Commerceに<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動拡張</a>の可用性を追加しました。</p>
 </td>
       <td>
         メジャーアップデート
@@ -53,7 +83,7 @@ ht-degree: 2%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.12の後に<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。 バージョン番号以外の変更は行われませんでした。</p>
+      <td><p>ECE-Tools リリース v2002.2.12の後に<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。 バージョン番号以外の変更は行われませんでした。</p>
 </td>
       <td>
         テクニカル
