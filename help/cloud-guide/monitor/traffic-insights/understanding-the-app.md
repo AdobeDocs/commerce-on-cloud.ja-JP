@@ -18,7 +18,7 @@ ht-degree: 0%
 - **フルページキャッシュのパフォーマンス** – 製品詳細ページ（PDP）、製品リストページ（PLP）、およびコンテンツ管理システム（CMS）ページ用の動的なストアフロント HTMLが、エッジでどの程度効率的にキャッシュされるか。
 - **Bots Activity and Requests Analysis** – 既知のボットエージェント、ジオロケーション、IP/サブネット、URL、およびFastly Next-Gen Web Application Firewall （WAF）シグナルによって分類されたトラフィック。
 
-4つ目のアプリ内&#x200B;**ドキュメント** タブには、概念的なメモと[調査プレイブック ](investigation-playbook.md)が含まれています。
+4つ目のアプリ内&#x200B;**ドキュメント** タブには、概念的なメモと[調査プレイブック &#x200B;](investigation-playbook.md)が含まれています。
 
 ## このガイドは誰のためのものでしょうか？
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ページ上部のプラットフォームのコントロールから、アカウントと時間範囲を選択します。 オプションの&#x200B;**プロジェクト ID**&#x200B;を使用すると、グラフを特定のCloud プロジェクトにさらに絞り込むことができます。 マスターアカウントまたはパートナーシップの設定で、ドロップダウンでアカウントを表示できるからといって、そのアカウントをクエリできるわけではありません。 グラフで権限エラーが報告された場合は、New Relic Query Language （NRQL）にアクセスできるアカウントに切り替えます。
 
-フィルターを適用し続けることで、幅広い概要を集中的な調査に変えることができます。 ボット、IP、サブネット、国、コンテンツタイプなどのファセット列の値をクリックして、[ グローバルフィルター](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/filter-new-relic-one-dashboards-facets/#example-use)を追加します。 アクティブなフィルターはグリッドの上部に表示され、各タブのすべてのウィジェットに同時に適用されます。 範囲を広げるには、フィルターを削除します。
+フィルターを適用し続けることで、幅広い概要を集中的な調査に変えることができます。 ボット、IP、サブネット、国、コンテンツタイプなどのファセット列の値をクリックして、[&#x200B; グローバルフィルター](https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/filter-new-relic-one-dashboards-facets/#example-use)を追加します。 アクティブなフィルターはグリッドの上部に表示され、各タブのすべてのウィジェットに同時に適用されます。 範囲を広げるには、フィルターを削除します。
 
 **チュートリアル** - *合計帯域幅*&#x200B;が契約上の許容値を超えてトレンドになっているシナリオを検討し、それを実行しているユーザーを把握する必要があります。
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 1. リクエスト率、ステータスミックス、FPC ヒット率については、**既知のボットへの影響の詳細**&#x200B;をお読みください。
 1. ボットの発信元を確認するには、**国別の帯域幅**&#x200B;を確認してください。 ボットが何を取得しているかを確認するには、**帯域幅ごとのURL**&#x200B;を参照してください。
 1. トラフィックが1つのネットワークに集中している場合は、**IP サブネットによる統計**&#x200B;をクリックして、1つのブロック内のアドレス間で回転するアクターを確認します。
-1. これで、ターゲットを絞った緩和策を作成するために必要な誰が、何を、どこで作成するかを把握できました。 続行する方法については、[調査プレイブック ](investigation-playbook.md)を参照してください。
+1. これで、ターゲットを絞った緩和策を作成するために必要な誰が、何を、どこで作成するかを把握できました。 続行する方法については、[調査プレイブック &#x200B;](investigation-playbook.md)を参照してください。
 
 同じフィルタリング方法は、疑わしい国、単一のIP、コンテンツタイプ、URL パスセグメントなど、任意の開始ファセットから機能します。
 
@@ -51,10 +51,10 @@ ht-degree: 0%
 
 - **Bandwidth （BW）**&#x200B;は、一致する要求に対してCDNが提供した合計バイト数です。**応答ヘッダーと本文**&#x200B;の両方をカウントします。 契約許容量に対してカウントされる見出しコスト指標です。
 - **要求（条件）** は個別のリクエストの数ですが、Fastly [shielding](https://www.fastly.com/documentation/guides/concepts/shielding/)を有効にすると、1つのリクエストが次のそれぞれに1回ずつ&#x200B;**twice**&#x200B;記録されます。
-  - 内部シールド [Point of Presence （POP） ](https://www.fastly.com/documentation/guides/getting-started/concepts/using-fastlys-global-pop-network/)
+  - 内部シールド [Point of Presence （POP） &#x200B;](https://www.fastly.com/documentation/guides/getting-started/concepts/using-fastlys-global-pop-network/)
   - EDGE POP
     これは、応答がローカルのPOP キャッシュから直接取得されるか、シールド自体が送信者の場所のPOPとして機能しない限り発生します。 これらの`HIT,MISS`と`MISS,MISS`のケースをダブルカウントしないようにするために、アプリのクエリは`request_id` フィールドにわたって[`uniqueCount`](https://docs.newrelic.com/docs/nrql/nrql-syntax-clauses-functions/#func-uniqueCount)と集計されます。 これは、正確なカウントではなく、予想される誤差が&#x200B;**～5%**&#x200B;の近い&#x200B;**近似**&#x200B;を返します。
-- **CDN ネットワークセグメント**&#x200B;の圧縮が異なります。 クライアントに配信されたレスポンスは圧縮されますが、[Edge Side Includes （ESI） ](https://www.fastly.com/documentation/reference/vcl/statements/esi/)のサポートを維持するために、シールドからPOPへのトラフィックは[圧縮されていません](https://www.fastly.com/documentation/guides/concepts/compression/#compression-at-the-edge)。 したがって、キャッシュ ヒット率が低い場合、キャッシュされていないコンテンツは完全で圧縮されていないサイズで繰り返しシールドを横切る必要があるため、クライアントに接するセグメントよりも内部セグメントが膨らみます。 この圧縮が、**CDN ネットワークセグメント帯域幅** ウィジェットとFPC ヒット率が、同じ基本コストの2つのビューである理由です。
+- **CDN ネットワークセグメント**&#x200B;の圧縮が異なります。 クライアントに配信されたレスポンスは圧縮されますが、[Edge Side Includes （ESI） &#x200B;](https://www.fastly.com/documentation/reference/vcl/statements/esi/)のサポートを維持するために、シールドからPOPへのトラフィックは[圧縮されていません](https://www.fastly.com/documentation/guides/concepts/compression/#compression-at-the-edge)。 したがって、キャッシュ ヒット率が低い場合、キャッシュされていないコンテンツは完全で圧縮されていないサイズで繰り返しシールドを横切る必要があるため、クライアントに接するセグメントよりも内部セグメントが膨らみます。 この圧縮が、**CDN ネットワークセグメント帯域幅** ウィジェットとFPC ヒット率が、同じ基本コストの2つのビューである理由です。
 
 ## データの制限とパフォーマンス
 

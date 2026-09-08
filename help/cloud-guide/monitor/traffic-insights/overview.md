@@ -22,11 +22,11 @@ Adobe Commerce Traffic Insightsは、[!DNL Adobe Commerce on Cloud Infrastructur
 - **検索ボットとweb クローラーの負荷** – 検索エンジンまたはAI web クローラーがリクエストの不均衡なシェアを生成し、キャッシュ効率とオリジンの負荷に悪影響を与えます。 どの名前付きボットが最もアクティブで、何を取得するかを正確に確認します。
 - **悪意のあるスクリプトおよびスクレイパー** — スクレイピング、資格情報の詰め込み、カードテスト、偽アカウントの作成、またはレイヤ 7の不正使用。 Fastlyの次世代WAFシグナルと、疑わしいトラフィックの背後にあるIP、サブネット、国を特定します。
 
-いずれの場合も、アプリはトラフィックの&#x200B;*誰、何、どこで*&#x200B;を識別します。 CommerceおよびFastly設定の[Advanced Security](../../cdn/advanced-security.md) アドオンを使用して、Fastly VCL ルール、画像の最適化、キャッシュチューニング、レート制限、またはAdobeの設定を通じて、その情報に基づいてアクションを実行します。 [調査プレイブック ](investigation-playbook.md)では、これらの各問題について説明しています。
+いずれの場合も、アプリはトラフィックの&#x200B;*誰、何、どこで*&#x200B;を識別します。 CommerceおよびFastly設定の[Advanced Security](../../cdn/advanced-security.md) アドオンを使用して、Fastly VCL ルール、画像の最適化、キャッシュチューニング、レート制限、またはAdobeの設定を通じて、その情報に基づいてアクションを実行します。 [調査プレイブック &#x200B;](investigation-playbook.md)では、これらの各問題について説明しています。
 
 ## アプリへのアクセス
 
-- **ダイレクトリンク：** [Adobe Commerceトラフィックインサイト ](https://one.newrelic.com/a9a0c3b8-3844-4ca1-8bad-c6742747be47)。
+- **ダイレクトリンク：** [Adobe Commerceトラフィックインサイト &#x200B;](https://one.newrelic.com/a9a0c3b8-3844-4ca1-8bad-c6742747be47)。
 - **New Relic Oneのホーム画面** （one.newrelic.com）から – アカウントがアプリに登録されると、そのアカウントは独自のタイルとして表示されます。ホームページには&#x200B;**Adobe Commerce Traffic Insights**&#x200B;があります。
 - **上部の検索バー（クイック検索）**&#x200B;から、`Adobe Commerce Traffic Insights`を検索し、結果から選択します。
 - **アクセスを高速化するためにピン留めするには** - アプリのタイルまたはページヘッダーの星またはピン留めコントロールを使用して、お気に入りや左側のナビゲーションに追加します。 このコントロールの正確な場所は、アカウントで使用されているNew Relic UI バージョンによって異なります。
@@ -34,4 +34,4 @@ Adobe Commerce Traffic Insightsは、[!DNL Adobe Commerce on Cloud Infrastructur
 ## このガイドの内容
 
 - **[アプリの理解](understanding-the-app.md)** - トラフィックインサイトとは何か、フィルターを使用してアプリを操作する方法、数値の測定方法、データで分かることと分からないこと。
-- **[調査プレイブック](investigation-playbook.md)** - アプリが解決するために構築する3つの課題（帯域幅の超過、web クローラーの読み込み、悪意のあるトラフィック）に対する推奨アプローチです。 これらのそれぞれは、それを確認するグラフを参照し、手動による緩和が不十分な場合のAdobeのネイティブ [高度なセキュリティ ](../../cdn/advanced-security.md)のエスカレーションパスを指定します。
+- **[調査プレイブック](investigation-playbook.md)** - アプリが解決するために構築する3つの課題（帯域幅の超過、web クローラーの読み込み、悪意のあるトラフィック）に対する推奨アプローチです。 これらのそれぞれは、それを確認するグラフを参照し、手動による緩和が不十分な場合のAdobeのネイティブ [高度なセキュリティ &#x200B;](../../cdn/advanced-security.md)のエスカレーションパスを指定します。
