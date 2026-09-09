@@ -53,7 +53,7 @@ ht-degree: 4%
 | 104 |  | `.magento.env.yaml` ファイルを解析できませんでした | 設定が`./vendor/magento/ece-tools/config/schema.yaml` ファイルで定義されていません。 設定変数名が正しく、定義されていることを確認します。 |
 | 105 |  | `.magento.env.yaml` ファイルを読み取れません | `./.magento.env.yaml` ファイルを読み取れません。 ファイルの権限を確認します。 |
 | 106 |  | `.schema.yaml` ファイルを読み取れません |  |
-| 107 | pre-deploy: clean-redis-cache | Redis キャッシュのクリーニングに失敗しました | Redis キャッシュのクリーニングに失敗しました。 Redis キャッシュ設定が正しく、Redis サービスが使用可能であることを確認します。 [Redis サービスのセットアップ ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html)を参照してください。 |
+| 107 | pre-deploy: clean-redis-cache | Redis キャッシュのクリーニングに失敗しました | Redis キャッシュのクリーニングに失敗しました。 Redis キャッシュ設定が正しく、Redis サービスが使用可能であることを確認します。 [Redis サービスのセットアップ &#x200B;](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/redis.html)を参照してください。 |
 | 140 | pre-deploy: clean-valkey-cache | Valkey キャッシュのクリーニングに失敗しました | Valkey キャッシュのクリーニングに失敗しました。 Valkey キャッシュ設定が正しく、Valkey サービスが使用可能であることを確認します。 [Valkey サービスの設定](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/valkey.html)を参照してください。 |
 | 108 | pre-deploy: set-production-mode | コマンド `/bin/magento maintenance:enable`が失敗しました | 詳細については、`cloud.log`を確認してください。 コマンド出力の詳細については、`VERBOSE_COMMANDS: '-vvv'` オプションを`.magento.env.yaml` ファイルに追加してください。 |
 | 109 | validate-config | データベース設定が正しくない | `DATABASE_CONFIGURATION`環境変数が正しく設定されていることを確認してください。 |
