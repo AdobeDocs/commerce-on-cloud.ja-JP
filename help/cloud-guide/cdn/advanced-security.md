@@ -3,9 +3,9 @@ title: Adobe Commerceの高度なセキュリティ
 description: Advanced Securityが、Adobe Commerce on Cloud Infrastructureにボット管理、高度なレート制限、およびレイヤ 7 DDoS対策をどのように追加するかをご覧ください。
 feature: Cloud, Configuration, Security
 exl-id: 7aeb189f-be69-45d5-8163-4748424083c0
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '2487'
+source-wordcount: '2514'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 0%
 # [!DNL Adobe Commerce Advanced Security]
 
 [!DNL Adobe Commerce Advanced Security]は、[!DNL Adobe Commerce on Cloud Infrastructure]と連携して、オンラインストアを高速で利用しやすく、安全に保つ製品です。 これらの機能は、売上を保護し、ダウンタイムを削減し、トラフィックイベントや自動攻撃のピーク時には顧客の信頼を維持するのに役立ちます。
+
+>[!TIP]
+>
+>New Relicの[Adobe Commerce Traffic Insights](../monitor/traffic-insights/overview.md) アプリを使用して、Fastly トラフィックとボットのパターンを分析し、高度なセキュリティが適切かどうかを判断します。
 
 [!DNL Adobe Commerce on Cloud Infrastructure]には、[&#x200B; レイヤ 3および4 DDoS対策](./fastly.md#ddos-protection)と[Web Application Firewall （WAF） &#x200B;](./fastly-waf-service.md)が組み込まれています。 [共有責任モデル &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/security-and-compliance/shared-responsibility)の下では、レイヤ 7 DDoS検出、ボット保護、およびプロアクティブ IP ブロッキングが加盟店の責任であり、[!DNL Adobe Commerce Advanced Security]が対処するように設計されています。
 
