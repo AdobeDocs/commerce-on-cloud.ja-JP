@@ -4,12 +4,9 @@ description: ECE-ToolsとQuality Patches Toolを使用して、Adobe Commerce on
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 8b6f9dbc2010ec0afe5904490a2f6d6a22ad2b39
 workflow-type: tm+mt
 source-wordcount: 922
 ht-degree: 0%
@@ -18,18 +15,18 @@ ht-degree: 0%
 
 # パッチを適用
 
-Commerce[&#128279;](https://github.com/magento/magento-cloud-patches)および[Quality Patches Tool](https://github.com/magento/quality-patches)のCloud Patchesは、インストール済みのAdobe Commerce アプリケーションにパッチを配信します。
+`magento/magento-cloud-patches` Composer パッケージ（[Cloud Patches for Commerce リリースノート ](../release-notes/cloud-patches.md)を参照）と[Quality Patches Tool](https://github.com/magento/quality-patches)は、インストール済みのAdobe Commerce アプリケーションにパッチを配信します。
 
 - Cloud Patches for Commerce パッケージは、重要な修正を含む必要なパッチを提供します
-- 品質パッチは、下位互換性のない変更を含まない[個別のパッチ &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/release/planning/versioning-policy#individual-patch)として、オプションの影響の小さい品質の修正を提供します
+- 品質パッチは、下位互換性のない変更を含まない[個別のパッチ ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)として、オプションの影響の小さい品質の修正を提供します
 
-リリースされたパッチの完全なリストを確認するには、_Commerce Operations Tools Guide_&#x200B;の[使用可能なパッチ &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)を参照してください。
+リリースされたパッチの完全なリストを確認するには、_Commerce オペレーションツールガイド_&#x200B;の[利用可能なパッチ ](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)を参照してください。
 
 どちらのパッケージも、すべてのAdobe Commerce バージョンとCloud環境との統合を改善し、重要な修正、オプションの修正、およびカスタム修正の迅速な配信をサポートします。 これらのパッケージを使用して、Commerceで使用可能なすべての個々のパッチに関する一般的な情報を適用、取り消し、表示できます。
 
 >[!TIP]
 >
->Magento Open SourceおよびAdobe Commerce プロジェクト用のスタンドアロンパッケージとして、[Quality Patches Tool](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=ja)およびCommerce用Cloud Patchesを使用できます。 クラウド以外のプロジェクトには、品質パッチツールを使用することをお勧めします。
+>Magento Open SourceおよびAdobe Commerce プロジェクトの独立したパッケージとして、[Quality Patches Tool](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)およびCommerceのCloud Patchesを使用できます。 Adobeでは、Cloud プロジェクト以外のプロジェクトに対してQuality Patches Toolを使用することをお勧めします。
 
 リモート環境に変更をデプロイすると、`ece-tools` パッケージは`magento/magento-cloud-patches`と`magento/quality-patches`を使用して保留中のパッチを確認し、次の順序で自動的に適用します。
 
@@ -39,7 +36,9 @@ Commerce[&#128279;](https://github.com/magento/magento-cloud-patches)および[Q
 
 >[!NOTE]
 >
->`ece-tools` パッケージまたはCloud Patches for Commerce パッケージを更新すると、次にプロジェクトをデプロイするときに最新の必要なパッチが適用されるか、`ece-patches apply` CLI コマンドを使用してすばやくデプロイし、Cloud Environmentを再デプロイできます。 デプロイメントプロセス中に[必要なパッチ &#x200B;](https://github.com/magento/magento-cloud-patches/tree/develop/patches)をスキップすることはできません。
+>Commerce パッケージの`ece-tools`またはCloud Patchesを更新すると、次回のデプロイメント時に最新の必須パッチが適用されます。 または、`ece-patches apply` CLI コマンドを使用して、デプロイ前にクラウド環境でローカルにパッチを適用および検証します。 デプロイメントプロセス中に必要なパッチをスキップすることはできません。
+>
+>Adobe Commerce EEの使用権限を持つお客様のみが、`repo.magento.com`のCommerce Composer リポジトリから[Cloud Patches for Commerce パッケージ ](../release-notes/cloud-patches.md)をダウンロードできます。
 
 ## 前提条件
 
@@ -100,8 +99,8 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 - **種類**:
   - `Optional` – 品質パッチツールとCloud Patches パッケージのすべてのパッチは、Adobe CommerceおよびMagento Open Sourceのインストールではオプションです。 Adobe Commerce on cloud infrastructureの場合、すべてのパッチはオプションです。
   - `Required` - Cloud Patches for Commerce パッケージのすべてのパッチは、Cloudのお客様に必要です。
-  - `Deprecated` – 個別のパッチは非推奨とマークされており、適用した場合は元に戻すことをお勧めします。 非推奨（廃止予定）のパッチを元に戻すと、ステータス テーブルに表示されなくなります。
-  - `Custom` - 「m2-hotfixes」ディレクトリのすべてのパッチ。
+  - `Deprecated` – 個別のパッチは非推奨としてマークされます。 Adobeでは、適用した場合は元に戻すことをお勧めします。 非推奨パッチを元に戻すと、ステータス テーブルに表示されなくなります。
+  - `Custom` - `m2-hotfixes` ディレクトリのすべてのパッチ。
 
 - **ステータス**:
   - `Applied` - パッチが適用されました。
@@ -152,7 +151,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 >[!WARNING]
 >
->実稼動環境にデプロイする前に、統合環境またはステージング環境のすべてのパッチをテストすることを強くお勧めします。
+>Adobeでは、実稼動環境にデプロイする前に、インテグレーション環境またはステージング環境のすべてのパッチをテストすることをお勧めします。
 
 **リモート環境でパッチを適用するには**:
 
@@ -246,7 +245,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 ## Cloud以外のプロジェクトへのパッチの適用
 
-Magento Open SourceおよびAdobe Commerce プロジェクトに[品質パッチツール &#x200B;](https://github.com/magento/quality-patches)を使用します。
+Magento Open SourceおよびAdobe Commerce プロジェクトに[品質パッチツール ](https://github.com/magento/quality-patches)を使用します。
 
 ## ローカル環境でパッチを元に戻す
 
