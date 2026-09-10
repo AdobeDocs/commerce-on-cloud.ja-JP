@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +461,7 @@ ht-degree: 0%
 
   - ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce用Cloud Docker用の個別のパッケージを追加しました** - Docker パッケージを`ece-tools` パッケージから切り離して、コードの品質を維持し、独立したリリースを提供しました。 `ece-tools`に関連する更新と修正は、[magento-cloud-docker](https://github.com/magento/magento-cloud-docker) GitHub リポジトリから管理されます。<!--MAGECLOUD-2927-->
 
-  - ![新しいアイコン &#x200B;](../../assets/new.svg) **パッチ機能を更新** - パッチ機能をECE-Tools パッケージから別の[magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージに移動しました。 デプロイメント中、`ece-tools`は新しいパッケージを使用してパッチを適用します。 [Cloud パッチリリースノート &#x200B;](cloud-patches.md)を参照してください。<!--MAGECLOUD-4567-->
+  - ![新しいアイコン &#x200B;](../../assets/new.svg) **パッチ機能を更新** - パッチ機能をECE-Tools パッケージから別の`magento-cloud-patches` パッケージに移動しました。 デプロイメント中、`ece-tools`は新しいパッケージを使用してパッチを適用します。 [Cloud パッチリリースノート &#x200B;](cloud-patches.md)を参照してください。<!--MAGECLOUD-4567-->
 
   - ![新しいアイコン &#x200B;](../../assets/new.svg) **Composerの依存関係**&#x200B;を更新 – `magento/magento-cloud-docker` パッケージの依存関係を持つクラウドインフラストラクチャ上のAdobe Commerceの`composer.json` ファイルを更新しました。 現在、`ece-tools`には、[`Cloud Tools Suite for Commerce`](cloud-tools-suite.md)内のすべてのパッケージの依存関係が含まれています。 これらのパッケージは、`ece-tools`をインストールまたは更新すると、自動的にインストールおよび更新されます。
 

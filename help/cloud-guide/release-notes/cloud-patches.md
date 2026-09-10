@@ -19,16 +19,20 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 2b2dee7e34c753ad18c7df6886557de1e57508d6
+source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
 workflow-type: tm+mt
-source-wordcount: 3027
+source-wordcount: 3067
 ht-degree: 0%
 
 ---
 
 # Commerce用のクラウドパッチ
 
-[Cloud Patches](https://github.com/magento/magento-cloud-patches) パッケージには、すべてのAdobe Commerce バージョンとCloud環境との統合を改善し、重要な修正の迅速な提供をサポートする、必要なパッチのセットが用意されています。
+`magento/magento-cloud-patches` Composer パッケージには、すべてのAdobe Commerce バージョンとCloud環境の統合を改善し、重要な修正の迅速な提供をサポートする、必要なパッチのセットが用意されています。 Adobeは、このパッケージを`repo.magento.com`のCommerce Composer リポジトリを通じて配布します。
+
+>[!NOTE]
+>
+>バージョン 1.1.15以降、Adobeは`magento/magento-cloud-patches` パッケージを`repo.magento.com`のCommerce Composer リポジトリ経由でのみ配布します。 このパッケージをダウンロードするには、Adobe Commerce EE使用権限が必要です。
 
 Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依存関係であり、ECE-Tools パッケージのインストール時または更新時にインストールおよび更新されます。 また、CommerceのCloud Patchesをスタンドアロンパッケージとして使用して管理し、Cloud Platform上にないAdobe Commerce プロジェクトにパッチを適用することもできます。 これらのリリースノートでは、このパッケージの最新の機能強化について説明します。
 
@@ -54,7 +58,7 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2026年9月8日（PT）
 
-- ![修正アイコン &#x200B;](../../assets/fix.svg) **セキュリティの機能強化** - 2026年9月の隔離セキュリティパッチのサポートが含まれています。<!-- MCLOUD-15053 -->
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html)で参照されている2026年9月の隔離セキュリティパッチのサポートが含まれています。<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
@@ -68,7 +72,7 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 リリース日：2026年8月11日（PT）
 
 - ![修正アイコン &#x200B;](../../assets/fix.svg) **パッチ処理の改善** - `composer.json` `replace`経由で削除されたモジュールを対象としたハンクをパッチがスキップし、残りのインストール済み部分を引き続き適用できるようになりました。<!-- MCLOUD-15325 -->
-- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-92](https://helpx.adobe.com/security/products/magento/apsb26-92.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15035 -->
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-92](https://helpx.adobe.com/jp/security/products/magento/apsb26-92.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15035 -->
 
 ## v1.1.17
 
@@ -141,7 +145,7 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2025年5月5日（PT）
 
-- ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce 2.4.4から2.4.8**&#x200B;へのパッチを更新しました。これは、1.1.7<!-- MCLOUD-13619 -->にリリースされた[CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27148)のパッチです
+- ![新しいアイコン &#x200B;](../../assets/new.svg) **Commerce 2.4.4から2.4.8**&#x200B;へのパッチを更新 – このアップデートにより、1.1.7<!-- MCLOUD-13619 -->にリリースされた[CVE-2025-24434](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-27148)のパッチが修正されました
 
 ## v1.1.6
 
@@ -436,7 +440,7 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **Elasticsearch カタログのページネーション修正** —magento/magento-cloud-patches v1.0で配信されたElasticsearch カタログのページネーション パッチを、より効果的な修正に置き換えました。<!--MAGECLOUD-4847-->
 
-- **Page Builder パッチ** - Commerce 1.0.0のCloud パッチでは、Page Builder パッチがバンドルされ、既知のPage Builder Remote Code Execution （RCE）脆弱性に対処し、最初の修正はAdobe Commerce 2.3.3に基づいています。 これらのパッチは、Adobe Commerce 2.3.4に基づいてより安定した実装で更新されました。これには、問題を修正するための複数の最適化が含まれています。<!--MAGECLOUD-4884-->
+- **Page Builder パッチ** - Commerce 1.0.0のCloud パッチでは、Page Builder パッチがバンドルされ、既知のPage Builder Remote Code Execution （RCE）脆弱性に対処し、最初の修正はAdobe Commerce 2.3.3に基づいています。 これらのパッチは、Adobe Commerce 2.3.4に基づいてより安定した実装で更新され、問題を修正するための複数の最適化が含まれています。<!--MAGECLOUD-4884-->
 
   magento/magento-cloud-patches 1.0.0 パッケージがある場合でも、ページビルダーのRCE脆弱性の問題から保護されます。 1.0.1以降にアップデートした場合は、同じ修正をより適切に実装できます。
 
@@ -444,7 +448,7 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 リリース日：2019年11月14日（PT）
 
-このリリースは、[`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches) パッケージの最初のリリースです。これは、`ece-tools` パッケージバージョン 2002.0.22以降のリリースの新しい依存関係です。
+このリリースは、`magento/magento-cloud-patches` パッケージの最初のリリースです。これは、`ece-tools` パッケージバージョン 2002.0.22以降のリリースの新しい依存関係です。
 
 このリリースには、次のパッチと重要な修正が含まれています。
 

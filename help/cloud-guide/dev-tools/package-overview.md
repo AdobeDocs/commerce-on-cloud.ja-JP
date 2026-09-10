@@ -10,9 +10,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 32426a82db5a81306c1dcc670a8268a9f5959874
 workflow-type: tm+mt
-source-wordcount: 450
+source-wordcount: 449
 ht-degree: 0%
 
 ---
@@ -101,5 +101,5 @@ ece-tools[&#128279;](../release-notes/cloud-tools-suite.md)の リリースノ�
 
 ## Adobeのパッチとカスタムパッチ
 
-`ece-tools` パッケージには、[magento/magento-cloud-patches](https://github.com/magento/magento-cloud-patches) パッケージの依存関係が含まれています。このパッケージは、Adobeのパッチとホットフィックスを提供し、すべてのAdobe Commerce バージョンとCloud環境の統合を向上させ、重要な修正の迅速な提供をサポートします。 「」は、Adobe Commerce on cloud infrastructure プロジェクトに追加するカスタムパッチも提供します。 [&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
+`ece-tools` パッケージには、`magento/magento-cloud-patches` Composer パッケージの依存関係が含まれています（[Cloud Patches for Commerce リリースノート &#x200B;](../release-notes/cloud-patches.md)を参照）。このパッケージは、Adobe パッチとホットフィックスを提供し、すべてのAdobe Commerce バージョンとCloud環境の統合を向上させ、重要な修正の迅速な提供をサポートします。 また、このパッケージは、Adobe Commerce on cloud インフラストラクチャプロジェクトに追加するカスタムパッチも提供します。 [&#x200B; パッチの適用](../development/apply-patches.md)を参照してください。
 
