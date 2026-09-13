@@ -52,13 +52,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2026年9月8日（PT）
 
-- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-146](https://helpx.adobe.com/security/products/magento/apsb26-146.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15587 -->
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-146](https://helpx.adobe.com/jp/security/products/magento/apsb26-146.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15587 -->
 
 ## v1.1.20
 
 リリース日：2026年9月8日（PT）
 
-- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html)で参照されている2026年9月の隔離セキュリティパッチのサポートが含まれています。<!-- MCLOUD-15053 -->
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-138](https://helpx.adobe.com/jp/security/products/magento/apsb26-138.html)で参照されている2026年9月の隔離セキュリティパッチのサポートが含まれています。<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
@@ -275,7 +275,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 未認証のリモート コード実行の原因となる&#x200B;**critical**&#x200B;脆弱性を解決するためのパッチを更新しました。<!-- MCLOUD-8479 -->
 
-[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)を参照してください。
+[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html)を参照してください。
 
 ## v1.0.15
 
@@ -292,7 +292,7 @@ Adobe Commerce 2.3.3-p1以降のバージョンのクリティカルパッチ：
 
 **critical**&#x200B;脆弱性を解決するためのパッチを追加しました。これにより、未認証のリモート コードが実行されます。<!-- MCLOUD-8461 -->
 
-[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html)を参照してください。
+[Adobe セキュリティ情報APSB22-12](https://helpx.adobe.com/jp/security/products/magento/apsb22-12.html)を参照してください。
 
 ## v1.0.13
 
