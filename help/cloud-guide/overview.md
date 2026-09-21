@@ -24,8 +24,8 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-last-update: 2026-09-11
-source-git-commit: 17ac172f51966dedf3317d87cb9e49d3dd946f06
+last-update: 2026-09-18
+source-git-commit: 6b9cbce898860cf5d35c6ee81c9ee60841a2c304
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -39,13 +39,13 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 - 高度にカスタマイズ可能な環境設定ファイルとコマンドラインインターフェイス（CLI）ツールの管理とデプロイ。
 - Amazon Web Services（AWS）ホスティングは、オンライン販売と小売業のための拡張性と安全性の高い環境を提供します。
 
-![&#x200B; クラウドのメリット &#x200B;](../assets/CloudBenefits.svg)
+![ クラウドのメリット ](../assets/CloudBenefits.svg)
 
 >[!NOTE]
 >
->セキュリティについて詳しくは、[&#x200B; セキュリティ起動チェックリスト &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)を参照してください。
+>セキュリティについて詳しくは、[ セキュリティ起動チェックリスト ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration)を参照してください。
 
-[&#x200B; テクノロジースタック &#x200B;](architecture/tech-stack.md)の詳細を確認するか、[Commerceのクラウドアーキテクチャ &#x200B;](architecture/cloud-architecture.md)の特定の機能とサポート対象の製品について詳しく確認します。
+[ テクノロジースタック ](architecture/tech-stack.md)の詳細を確認するか、[Commerceのクラウドアーキテクチャ ](architecture/cloud-architecture.md)の特定の機能とサポート対象の製品について詳しく確認します。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -78,9 +78,9 @@ Adobe Commerce on cloud infrastructureは、クラウドネイティブ環境で
 
 Commerce on cloud インフラストラクチャガイドでは、Adobe Commerce アプリケーションに関する実務的な知識と理解を有していることを前提としています。 以下の[!DNL Commerce]開発者およびユーザーガイドを参照してください。
 
-- [Adobe Commerce開発者向けドキュメント &#x200B;](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
+- [Adobe Commerce開発者向けドキュメント ](https://developer.adobe.com/commerce/docs/) （Adobe Developer サイト）：高度な機能の開発、カスタマイズ、統合、拡張、使用
 
-- [Adobe Commerce ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
+- [Adobe Commerce ドキュメント ](https://experienceleague.adobe.com/en/docs/commerce) （Adobe Experience League） - [!DNL Commerce] プロジェクトの計画、実装、操作、アップグレード、保守
 
 {{$include /help/_includes/templated/whats-new.md}}
 
