@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Adobe コンテンツへのコントリビューションについて
 
-[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)を参照してください。
+[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction)を参照してください。
 
 貢献の方法は、貢献するユーザーと変更の種類によって異なります。
 
@@ -40,7 +40,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 コミュニティのコントリビューターは、GitHub UIを使用して基本的な編集をおこなったり、リポジトリをフォークして主要なコントリビューションを作成したりできます。
 
-詳しくは、[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction)を参照してください。
+詳しくは、[Adobe Docs Contributor Guide](https://experienceleague.adobe.com/ja/docs/contributor/contributor-guide/introduction)を参照してください。
 
 ## Markdownを使用してトピックを書式設定する方法
 
