@@ -63,13 +63,13 @@ Adobe Commerce on cloud infrastructureでは、プロジェクトに設定でき
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[使用可能なバージョン間でRabbitMQを順次アップグレード ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
+>[使用可能なバージョン間でRabbitMQを順次アップグレード &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
 >
 >新しいバージョンにアップグレードした後、カスタムメッセージキューがRabbitMQで再作成されるようにするには、完全なデプロイメントをトリガーします。
 
 ## 設定済みのサービスとバージョンの表示
 
-現在のテンプレート [`services.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
+現在のテンプレート [`services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
 
 次の例は、`services.yaml`設定ファイルのサービス定義を示しています。
 
@@ -218,7 +218,7 @@ mysql:
 - サービスのバージョンがEOL日から3か月以内の場合、デプロイログに通知が表示されます。
 - EOL日が過去の場合は、警告通知が表示されます。
 
-ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル ](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
+ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル &#x200B;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
 
 ### OpenSearchに移行
 
@@ -230,7 +230,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 インストール済みのサービスのバージョンは、Cloud環境にデプロイされているAdobe Commerceのバージョンと互換性を保つためにアップグレードできます。
 
-インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [ ダウングレードサービスバージョン ](#downgrade-version)を参照してください。
+インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [&#x200B; ダウングレードサービスバージョン &#x200B;](#downgrade-version)を参照してください。
 
 ### インストール済みサービスのバージョンのアップグレード
 
