@@ -3,25 +3,33 @@ title: サービスの設定
 description: MySQL、Redis、Elasticsearchなど、Adobe Commerceのクラウドインフラストラクチャで使用されるサービスを設定する方法について説明します。
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
+last-update: 2026-09-01
+TQID: 'https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-09-01
-source-git-commit: 205287e813ec7358273f95df87189b9b663679f5
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 1176
+source-wordcount: '1176'
 ht-degree: 0%
-
 ---
-
 # サービスの設定
 
 `services.yaml` ファイルは、MySQL、RedisまたはValkey、ElasticsearchまたはOpenSearchなど、Adobe Commerceがクラウドインフラストラクチャ上でサポートおよび使用するサービスを定義します。 外部サービスプロバイダーに加入する必要はありません。
@@ -55,13 +63,13 @@ Adobe Commerce on cloud infrastructureでは、プロジェクトに設定でき
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[使用可能なバージョン間でRabbitMQを順次アップグレード &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
+>[使用可能なバージョン間でRabbitMQを順次アップグレード ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service)。 例えば、3.9から4.1に直接アップグレードしないでください。
 >
 >新しいバージョンにアップグレードした後、カスタムメッセージキューがRabbitMQで再作成されるようにするには、完全なデプロイメントをトリガーします。
 
 ## 設定済みのサービスとバージョンの表示
 
-現在のテンプレート [`services.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
+現在のテンプレート [`services.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml)のサービス定義とディスク値の例を表示できます。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョンと現在のクラウドテンプレートによって異なります。
 
 次の例は、`services.yaml`設定ファイルのサービス定義を示しています。
 
@@ -201,7 +209,7 @@ mysql:
 
 ## サービスバージョン
 
-クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンと異なる場合がある、クラウドインフラストラクチャ上のAdobe Commerceのサービスバージョンと互換性のサポートが判断されます。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
+クラウドインフラストラクチャにデプロイおよびテストされたバージョンによって、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンと異なる場合がある、クラウドインフラストラクチャ上のAdobe Commerceのサービスバージョンと互換性のサポートが判断されます。 Adobeが特定のAdobe CommerceおよびMagento Open Source リリースでテストしたサードパーティ製ソフトウェアの依存関係の一覧については、_インストール_ ガイドの[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 ### ソフトウェアのEOL チェック
 
@@ -210,7 +218,7 @@ mysql:
 - サービスのバージョンがEOL日から3か月以内の場合、デプロイログに通知が表示されます。
 - EOL日が過去の場合は、警告通知が表示されます。
 
-ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル &#x200B;](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
+ストアのセキュリティを維持するには、インストール済みのソフトウェアのバージョンがEOLに達する前に更新する必要があります。 [ece-tools&#39; `eol.yaml` ファイル ](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml)でEOLの日付を確認できます。
 
 ### OpenSearchに移行
 
@@ -222,7 +230,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 インストール済みのサービスのバージョンは、Cloud環境にデプロイされているAdobe Commerceのバージョンと互換性を保つためにアップグレードできます。
 
-インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [&#x200B; ダウングレードサービスバージョン &#x200B;](#downgrade-version)を参照してください。
+インストール済みサービスのサービス バージョンを直接ダウンロードすることはできません。 ただし、必要なバージョンのサービスを作成できます。 [ ダウングレードサービスバージョン ](#downgrade-version)を参照してください。
 
 ### インストール済みサービスのバージョンのアップグレード
 
