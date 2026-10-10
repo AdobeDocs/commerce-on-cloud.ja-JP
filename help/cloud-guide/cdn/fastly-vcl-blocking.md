@@ -3,25 +3,31 @@ title: ブロック要求のカスタム VCL
 description: カスタム VCL スニペットを使用したEdge Access Control List （ACL）を使用して、IP アドレスで受信リクエストをブロックします。
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-TQID: https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg
+last-update: 2025-01-29
+TQID: 'https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 1026
+source-wordcount: '1026'
 ht-degree: 0%
-
 ---
-
 # ブロック要求のカスタム VCL
 
 Magento 2用のFastly CDN モジュールを使用して、ブロックするIP アドレスのリストを含むEdge ACLを作成できます。 そのリストをVCL スニペットと共に使用して、着信リクエストをブロックできます。 このコードは、受信リクエストのIP アドレスを確認します。 ACL リストに含まれるIP アドレスと一致する場合、Fastlyはリクエストによるサイトへのアクセスをブロックし、`403 Forbidden error`を返します。 他のすべてのクライアント IP アドレスにアクセスが許可されます。
@@ -51,7 +57,7 @@ VCL スニペットコードでは、名前でEdge ACLを参照します。
 
 >[!NOTE]
 >
->この例では、高度なユーザーがVCL コードスニペットを作成して、カスタムブロッキングルールを設定し、Fastly サービスにアップロードする方法を示します。 Magento向けFastly CDN 2 モジュールで利用可能な[&#x200B; ブロック &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)機能を使用すると、Adobe Commerce管理者の国に基づいてブロックリストまたは許可リストを設定できます。
+>この例では、高度なユーザーがVCL コードスニペットを作成して、カスタムブロッキングルールを設定し、Fastly サービスにアップロードする方法を示します。 Magento 2向けFastly CDN モジュールで利用可能な[&#x200B; ブロック &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md)機能を使用して、Adobe Commerce管理者から国に基づいてブロックリストまたは許可リストを設定できます。
 
 Edge ACLを定義したら、これを使用してVCL スニペットを作成し、ACLで指定されたIP アドレスへのアクセスをブロックできます。 ステージング環境と実稼動環境の両方で同じVCL スニペットを使用できますが、スニペットを各環境に個別にアップロードする必要があります。
 
@@ -71,7 +77,7 @@ Edge ACLを定義したら、これを使用してVCL スニペットを作成�
 
 - `name`: VCL スニペットの名前。 この例では、名前`blocklist`を使用しました。
 
-- `priority`: VCL スニペットが実行されるタイミングを決定します。 管理者要求が許可されたIP アドレスから送信されているかどうかを即座に実行して確認する優先度は`5`です。 スニペットは、デフォルトのMagento VCL スニペット（`magentomodule_*`）のいずれかが優先度50に割り当てられる前に実行されます。 スニペットを実行するタイミングに応じて、各カスタムスニペットの優先度を50より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
+- `priority`: VCL スニペットが実行されるタイミングを決定します。 管理者要求が許可されたIP アドレスから送信されているかどうかを即座に実行して確認する優先度は`5`です。 スニペットは、デフォルトのMagento VCL スニペット （`magentomodule_*`）のいずれかが優先度50に割り当てられる前に実行されます。 スニペットを実行するタイミングに応じて、各カスタムスニペットの優先度を50より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
 
 - `type`：生成されたVCL コード内のスニペットの場所を決定するVCL スニペットのタイプを指定します。 この例では、`vcl_recv` サブルーチンにVCL コードを挿入する`recv`を、ボイラープレート VCLの下および任意のオブジェクトの上に使用します。 スニペットの種類のリストについては、[Fastly VCL スニペットのリファレンス &#x200B;](https://docs.fastly.com/api/config#api-section-snippet)を参照してください。
 

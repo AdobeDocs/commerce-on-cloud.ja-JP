@@ -3,25 +3,31 @@ title: リクエストを許可するためのカスタム VCL
 description: Fastly Edge ACL リストとカスタム VCL スニペットを使用して、Adobe Commerceサイトの受信リクエストをフィルタリングし、IP アドレスによるアクセスを許可します。
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+last-update: 2026-08-25
+TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: '874'
 ht-degree: 0%
-
 ---
-
 # リクエストを許可するためのカスタム VCL
 
 カスタム VCL コードスニペットを使用してFastly EdgeのACL リストを使用し、受信リクエストをフィルタリングしたり、IP アドレスによるアクセスを許可したりできます。 ACL リストは、許可するIP アドレスを指定します。
@@ -91,7 +97,7 @@ Edge ACLは、サイトへのアクセスを管理するためのIP アドレス
 
 - `name` — VCL スニペットの名前。 この例では、`allowlist`です。
 
-- `priority` — VCL スニペットが実行されるタイミングを決定します。 管理者要求が許可されたIP アドレスから送信されているかどうかを即座に実行して確認する優先度は`5`です。 スニペットは、デフォルトのMagento VCL スニペット（`magentomodule_*`）のいずれかが優先度50に割り当てられる前に実行されます。 スニペットを実行するタイミングに応じて、各カスタムスニペットの優先度を50より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
+- `priority` — VCL スニペットが実行されるタイミングを決定します。 管理者要求が許可されたIP アドレスから送信されているかどうかを即座に実行して確認する優先度は`5`です。 スニペットは、デフォルトのMagento VCL スニペット （`magentomodule_*`）のいずれかが優先度50に割り当てられる前に実行されます。 スニペットを実行するタイミングに応じて、各カスタムスニペットの優先度を50より高くまたは低く設定します。 優先度の低いスニペットが最初に実行されます。
 
 - `type` - バージョン管理されたVCL コードにスニペットを挿入する場所を指定します。 このVCLは`recv` スニペット型で、デフォルトのFastly VCL コードの下、および任意のオブジェクトの上の`vcl_recv` サブルーチンにスニペット コードを追加します。
 
