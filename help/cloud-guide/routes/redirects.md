@@ -3,23 +3,30 @@ title: リダイレクト
 description: Adobe Commerce on cloud infrastructure プロジェクトのリダイレクションルールを管理する方法について説明します。
 feature: Cloud, Routes
 exl-id: f70a9035-bbae-4d23-bb7c-c0de6a7ccf6c
-TQID: https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI
+TQID: 'https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 706
+source-wordcount: '706'
 ht-degree: 0%
-
 ---
-
 # リダイレクト
 
 リダイレクトルールの管理は、web アプリケーションの一般的な要件です。特に、時間の経過とともに変更または削除された受信リンクを失いたくない場合に必要です。
@@ -34,7 +41,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Adobe Commerce on cloud infrastructure プロジェクトの場合、`routes.yaml` ファイルで多数の非regex リダイレクトと書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが32 KB以上の場合は、正規表現でないリダイレクトをオフロードし、Fastlyに書き換えます。 _Adobe Commerce ヘルプセンター_&#x200B;の「[正規表現でないリダイレクトをNginx （ルート） &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)ではなくFastlyにオフロードする」を参照してください。
+>Adobe Commerce on cloud infrastructure プロジェクトの場合、`routes.yaml` ファイルで多数の非regex リダイレクトと書き換えを設定すると、パフォーマンスの問題が発生する可能性があります。 `routes.yaml` ファイルが32 KB以上の場合は、正規表現でないリダイレクトをオフロードし、Fastlyに書き換えます。 _Adobe Commerce ヘルプセンター_&#x200B;の「[正規表現でないリダイレクトをNginx （ルート） ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes)ではなくFastlyにオフロードする」を参照してください。
 
 ## ルート全体のリダイレクト
 
@@ -77,7 +84,7 @@ http://{default}/:
   | `regexp` | オプションで、デフォルトは`false`です。 パス キーをPCRE正規表現として解釈するかどうかを指定します。 |
   | `prefix` | リダイレクトがパスとそのすべての子の両方に適用されるか、パス自体のみに適用されるかを指定します。 デフォルトは`true`です。 この値は、`regexp`が`true`の場合はサポートされていません。 |
   | `append_suffix` | 接尾辞がリダイレクトに引き継がれるかどうかを指定します。 デフォルトは`true`です。 この値は、`regexp` キーが`true`の場合はサポートされません。また、`prefix` キーが`false`の場合は*サポートされません。 |
-  | `code` | HTTP ステータスコードを指定します。 有効な状態コードは[`301` （永続的に移動） &#x200B;](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2)、[`302`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3)、[`307`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8)、および[`308`](https://www.rfc-editor.org/rfc/rfc7238)です。 デフォルトは`302`です。 |
+  | `code` | HTTP ステータスコードを指定します。 有効な状態コードは[`301` （永続的に移動） ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2)、[`302`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3)、[`307`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.8)、および[`308`](https://www.rfc-editor.org/rfc/rfc7238)です。 デフォルトは`302`です。 |
   | `expires` | オプションで、ブラウザーでリダイレクトをキャッシュする時間を指定します。 デフォルトは`redirects` キーの直下に定義された`expires`値ですが、このレベルでは、個々の部分リダイレクトのキャッシュ有効期限を微調整できます。 |
 
 ## 一部ルートリダイレクトの例

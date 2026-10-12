@@ -3,27 +3,37 @@ title: プロのプロジェクトワークフロー
 description: Pro開発およびデプロイメントワークフローの使用方法について説明します。
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-TQID: https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI
+TQID: 'https://experienceleague.adobe.com/bRmbWxABneX08LwTxhlUMFX2H7WbCqVg8DDS9RRxQNI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 subfeature_v2:
   - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 904
+source-wordcount: '904'
 ht-degree: 0%
-
 ---
-
 # プロのプロジェクトワークフロー
 
 Pro プロジェクトには、グローバル `master` ブランチと3つの主要な環境を持つ単一のGit リポジトリが含まれます。
@@ -32,11 +42,11 @@ Pro プロジェクトには、グローバル `master` ブランチと3つの�
 1. すべてのサービスをテストする&#x200B;**ステージング**&#x200B;環境
 1. 開発とテスト用の&#x200B;**統合**&#x200B;環境
 
-![Pro環境リスト &#x200B;](../../assets/pro-environments.png)
+![Pro環境リスト ](../../assets/pro-environments.png)
 
 これらの環境は`read-only`で、ローカル ワークスペースからのみプッシュされたブランチからのデプロイされたコード変更を受け付けています。
 
-次の図は、シンプルなGit分岐アプローチを使用したPro開発およびデプロイワークフローを示しています。 `integration`環境に基づくアクティブなブランチを使用して[develop](#development-workflow) コードを作成し、_プッシュ_&#x200B;および&#x200B;_リモートのアクティブなブランチとの間で_ コードの変更を取り込みます。 確認されたコードをデプロイするには、_リモートブランチを_ ベースブランチに結合し、その環境に対して[&#x200B; ビルドとデプロイ &#x200B;](#deployment-workflow)の自動プロセスをアクティブにします。
+次の図は、シンプルなGit分岐アプローチを使用したPro開発およびデプロイワークフローを示しています。 `integration`環境に基づくアクティブなブランチを使用して[develop](#development-workflow) コードを作成し、_プッシュ_&#x200B;および&#x200B;_リモートのアクティブなブランチとの間で_ コードの変更を取り込みます。 確認されたコードをデプロイするには、_リモートブランチを_ ベースブランチに結合し、その環境に対して[ ビルドとデプロイ ](#deployment-workflow)の自動プロセスをアクティブにします。
 
 ![Pro アーキテクチャ開発ワークフローの概要](../../assets/pro-dev-workflow.png)
 
@@ -49,7 +59,7 @@ The disk hosting /app/<cluster_ID> is full
 
 >[!NOTE]
 >
->どのPro環境でも、読み取り専用フォルダーの権限を変更することはできません。 この制限は、アプリケーションの整合性とセキュリティを保護します。 これらの読み取り専用ファイルシステムのフォルダー権限は変更できません。サポートでも変更できません。 変更は、アプリケーション環境のブランチから行い、ローカル開発環境にプッシュする必要があります。 詳しくは、「[Pro アーキテクチャ &#x200B;](pro-architecture.md) Pro環境の概要」を参照し、プロジェクトビューのPro環境リストの概要については「[[!DNL Cloud Console]](../project/overview.md#cloud-console)」を参照してください。
+>どのPro環境でも、読み取り専用フォルダーの権限を変更することはできません。 この制限は、アプリケーションの整合性とセキュリティを保護します。 これらの読み取り専用ファイルシステムのフォルダー権限は変更できません。サポートでも変更できません。 変更は、アプリケーション環境のブランチから行い、ローカル開発環境にプッシュする必要があります。 詳しくは、「[Pro アーキテクチャ ](pro-architecture.md) Pro環境の概要」を参照し、プロジェクトビューのPro環境リストの概要については「[[!DNL Cloud Console]](../project/overview.md#cloud-console)」を参照してください。
 
 ## 開発ワークフロー
 
@@ -75,7 +85,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - **構成管理ファイルの生成** – 一部の構成設定は、デプロイされた環境の&#x200B;_読み取り専用_&#x200B;です。
 
-- **ストアの設定** – 統合環境を使用してすべてのストア設定を完全に設定する必要があります。 **ストア管理者URL**&#x200B;は、_[!DNL Cloud Console]_&#x200B;の_&#x200B;統合&#x200B;_環境ビューにあります。
+- **ストアの設定** – 統合環境を使用してすべてのストア設定を完全に設定する必要があります。 **ストア管理者URL**&#x200B;は、_[!DNL Cloud Console]_の_&#x200B;統合&#x200B;_環境ビューにあります。
 
 ## デプロイメントワークフロー
 
@@ -105,7 +115,7 @@ The disk hosting /app/<cluster_ID> is full
 
 - トラフィックのルーティングの設定
 
-ビルドとデプロイのプロセスが完了すると、最新のコード変更と設定を使用してストアがオンラインになります。 [&#x200B; デプロイメントプロセス &#x200B;](../deploy/process.md)を参照してください。
+ビルドとデプロイのプロセスが完了すると、最新のコード変更と設定を使用してストアがオンラインになります。 [ デプロイメントプロセス ](../deploy/process.md)を参照してください。
 
 ### 統合に統合
 
@@ -115,7 +125,7 @@ The disk hosting /app/<cluster_ID> is full
 
 ステージングは、すべてのサービスと設定を可能な限り実稼動環境に近い状態で提供するプリプロダクション環境です。 すべてのサービスで詳細なテストを実行できるように、コードの変更を常に`integration`環境から`staging`環境にプッシュしてください。 ステージング環境を初めて使用する場合は、[Fastly CDN](../cdn/fastly.md)や[New Relic](../monitor/new-relic-service.md)などのサービスを設定する必要があります。 サンドボックスやテスト用の資格情報を使用して、支払いゲートウェイ、配送、通知などの重要なサービスを設定できます。
 
-ストアの本番環境の準備が整ったと感じるまで、すべてのサービスを徹底的にテストし、パフォーマンステストツールを検証し、管理者として顧客としてUAT テストを実行することをお勧めします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)を参照してください。
+ストアの本番環境の準備が整ったと感じるまで、すべてのサービスを徹底的にテストし、パフォーマンステストツールを検証し、管理者として顧客としてUAT テストを実行することをお勧めします。 [ ストアのデプロイ ](../deploy/staging-production.md)を参照してください。
 
 {{second-staging}}
 

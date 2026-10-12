@@ -4,26 +4,34 @@ description: クラウドインフラストラクチャ環境でAdobe Commerce�
 feature: Cloud, Security
 topic: Security
 exl-id: 90458fa8-42b0-4825-948e-56ef7884eb82
-TQID: https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw
+TQID: 'https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1084
+source-wordcount: '1084'
 ht-degree: 0%
-
 ---
-
 # SSH アクセスの多要素認証を有効にする
 
 セキュリティを強化するために、Adobe Commerce オンクラウドインフラストラクチャでは、クラウド環境へのSSH アクセスに対する認証要件を管理するための多要素認証（MFA）の適用が提供されます。
@@ -32,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->クラウドプロジェクトでは、デフォルトでMFAは有効になっていません。 Adobe Commerce オンクラウド インフラストラクチャ プロジェクトのアカウントオーナーは、これを有効にするには、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)する必要があります。 MFAが有効になっている場合、プロジェクト環境へのSSH アクセスのために、すべてのユーザーがAdobe Commerce on cloud infrastructure アカウントで2要素認証（TFA）を有効にする必要があります。
+>クラウドプロジェクトでは、デフォルトでMFAは有効になっていません。 Adobe Commerce オンクラウド インフラストラクチャ プロジェクトのアカウントオーナーは、これを有効にするには、[Adobe Commerce サポートチケットを送信](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)する必要があります。 MFAが有効になっている場合、プロジェクト環境へのSSH アクセスのために、すべてのユーザーがAdobe Commerce on cloud infrastructure アカウントで2要素認証（TFA）を有効にする必要があります。
 
 ## SSH アクセス用の証明書
 
@@ -118,7 +126,7 @@ MFAの適用が有効になっているプロジェクトの場合、SSH アク�
 
 **TFA ユーザーアカウント資格情報を使用してSSHを使用して接続するには**:
 
-1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
+1. アカウント ](https://console.adobecommerce.com)の[にログインします。
 
 1. ローカル ワークステーションで、`magento-cloud` CLIを使用してSSH証明書を生成します。
 
@@ -166,11 +174,11 @@ MFAの適用が有効になっているプロジェクトの場合、SSH アク�
 
 **TFA ユーザーアカウント資格情報を使用してSSHを使用して接続するには**:
 
-1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com)にログインし、TFAを使用して認証します。
+1. [ アカウント ](https://console.adobecommerce.com)にログインし、TFAを使用して認証します。
 
    >[!NOTE]
    >
-   >アカウントでTFAを有効にしていない場合は、有効にする必要があります。 「[&#x200B; クラウドアカウントでTFAを有効にする](user-access.md#enable-tfa-for-cloud-accounts)」を参照してください。
+   >アカウントでTFAを有効にしていない場合は、有効にする必要があります。 「[ クラウドアカウントでTFAを有効にする](user-access.md#enable-tfa-for-cloud-accounts)」を参照してください。
 
 1. ローカル ワークステーションで、`magento-cloud` CLIを使用してSSH証明書を生成します。
 
@@ -299,7 +307,7 @@ authenticated, but could not connect to service abcdef7uyxabce-master-7rqtabc--m
 
 **TFAの設定と認証を確認するには**:
 
-1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
+1. アカウント ](https://console.adobecommerce.com)の[にログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 

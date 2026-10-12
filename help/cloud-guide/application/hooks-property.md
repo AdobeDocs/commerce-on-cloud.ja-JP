@@ -1,23 +1,32 @@
 ---
 title: Hooks プロパティ
-description: ' [!DNL Commerce]  アプリケーション設定ファイルでhook プロパティを設定する方法の例を参照してください。'
+description: '[!DNL Commerce] アプリケーション設定ファイルでフック プロパティを設定する方法の例を参照してください。'
 feature: Cloud, Configuration, Build, Deploy
 exl-id: 56b7045c-fba5-43f1-b43e-4d438b8e0568
-TQID: https://experienceleague.adobe.com/Yc8fn-As9OmhlpQvb-M2gWRs20g5MQz7JtBG4cRQAV0
+TQID: 'https://experienceleague.adobe.com/Yc8fn-As9OmhlpQvb-M2gWRs20g5MQz7JtBG4cRQAV0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 318
+source-wordcount: '319'
 ht-degree: 0%
-
 ---
-
 # Hooks プロパティ
 
 ビルド、デプロイ、デプロイ後のフェーズでシェルコマンドを実行するには、`hooks` セクションを使用します。
@@ -26,7 +35,7 @@ ht-degree: 0%
 
 - **`deploy`** - アプリケーションのパッケージ化とデプロイの後に&#x200B;_コマンドを実行します。_&#x200B;この時点で他のサービスにアクセスできます。 既定の`php ./vendor/bin/ece-tools` コマンドは`app/etc` ディレクトリを正しい場所にコピーするため、カスタムコマンド _after_&#x200B;をデプロイ コマンドに追加して、カスタムコマンドの失敗を防ぐ必要があります。
 
-- **`post_deploy`** - アプリケーションのデプロイ後&#x200B;_コマンドを実行し、_&#x200B;後&#x200B;_コンテナが接続の受け入れを開始します。_`post_deploy` フックはキャッシュをクリアし、キャッシュをプリロード （ウォーミング）します。 [&#x200B; デプロイ後ステージ &#x200B;](../environment/variables-post-deploy.md)の`WARM_UP_PAGES`変数を使用して、ページのリストをカスタマイズできます。 これは必須ではありませんが、`SCD_ON_DEMAND`環境変数と連動して動作します。
+- **`post_deploy`** - アプリケーションのデプロイ後&#x200B;_コマンドを実行し、_&#x200B;後&#x200B;_コンテナが接続の受け入れを開始します。_`post_deploy` フックはキャッシュをクリアし、キャッシュをプリロード （ウォーミング）します。 [ デプロイ後ステージ ](../environment/variables-post-deploy.md)の`WARM_UP_PAGES`変数を使用して、ページのリストをカスタマイズできます。 これは必須ではありませんが、`SCD_ON_DEMAND`環境変数と連動して動作します。
 
 次の例は、`.magento.app.yaml` ファイルのデフォルト設定を示しています。 `ece-tools` コマンドの&#x200B;_前_&#x200B;の`build`、`deploy`または`post_deploy` セクションにCLI コマンドを追加します。
 

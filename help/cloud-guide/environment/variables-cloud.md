@@ -5,20 +5,23 @@ feature: Cloud, Configuration
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 82923b6f-221d-4902-a1b8-5ba6c7b3339a
-TQID: https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4
+TQID: 'https://experienceleague.adobe.com/Zk52OMqjrB74v9djO1PVOYd3wOS8EbdfL1rnqIdA8B4'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 340
+source-wordcount: '340'
 ht-degree: 0%
-
 ---
-
 # クラウド固有の変数
 
 クラウドインフラストラクチャ上のAdobe Commerceに固有の環境変数では、`MAGENTO_CLOUD_*`接頭辞が使用されます。
@@ -39,7 +42,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[[!DNL Cloud Console]](../project/overview.md)を使用して環境変数を[&#x200B; オーバーライド構成設定](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/paths/override-config-settings)に追加するには、次の例のように、変数名の前に`env:`を付ける必要があります。
+>[[!DNL Cloud Console]](../project/overview.md)を使用して環境変数を[ オーバーライド構成設定](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings)に追加するには、次の例のように、変数名の前に`env:`を付ける必要があります。
 >
 >![環境変数の例](../../assets/set-env-variable-ui.png)
 
@@ -60,7 +63,7 @@ ht-degree: 0%
 
 ## 環境変数の表示
 
-`ece-tools` パッケージ [&#128279;](../dev-tools/package-overview.md)のから`env:config:show` コマンドを使用して、現在の環境の変数のリストを表示できます。
+`ece-tools` パッケージ ](../dev-tools/package-overview.md)の[から`env:config:show` コマンドを使用して、現在の環境の変数のリストを表示できます。
 
 ```bash
 php ./vendor/bin/ece-tools env:config:show variables

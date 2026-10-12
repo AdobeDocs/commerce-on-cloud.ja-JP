@@ -3,28 +3,47 @@ title: ステージングおよび実稼動へのデプロイ
 description: Adobe Commerce on cloud インフラストラクチャコードをステージング環境および実稼動環境にデプロイして、さらにテストを行う方法について説明します。
 feature: Cloud, Console, Deploy, SCD, Storage
 exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
-TQID: https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM
+TQID: 'https://experienceleague.adobe.com/SJZ2BuPEe6QsgkPyODiZx6118qd6vxh72r3nVuPrLnM'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+    internal-label: Storefront
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+  - id: 125c1f49-aefd-5f34-a252-288937f95f6b
+    internal-label: Marketing Tools
 subfeature_v2:
   - id: b01a71b7-d17a-42b2-a9ac-af4b8d9d2ef5
+    internal-label: 2FA
+  - id: c4af0798-d497-5e6b-8380-19812c26d00a
+    internal-label: Console
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1374
+source-wordcount: '1374'
 ht-degree: 0%
-
 ---
-
 # ステージングおよび実稼動へのデプロイ
 
 デプロイと本番稼動のプロセスは、開発から始まり、ステージングに続き、本番稼動に移行して終了します。 Adobeは、構成の一貫性を確保するためのエンドツーエンドの環境ソリューションを提供します。 あらゆる環境で、ストアフロントへの直接URL アクセスと、CLI コマンドの管理者およびSSH アクセスがサポートされています。
@@ -33,7 +52,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Adobeでは、デプロイメントの前に環境の[&#x200B; バックアップ &#x200B;](../storage/snapshots.md)を作成することをお勧めします。
+>Adobeでは、デプロイメントの前に環境の[ バックアップ ](../storage/snapshots.md)を作成することをお勧めします。
 
 また、[New Relic](../monitor/track-deployments.md)でデプロイメントを追跡を有効にして、デプロイメントイベントを監視し、デプロイメント間のパフォーマンスを分析できます。
 
@@ -41,17 +60,17 @@ ht-degree: 0%
 
 Adobeでは、スタータープランの開発と展開を最大限にサポートするために、`master` ブランチから`staging` ブランチを作成することをお勧めします。 次に、4つのアクティブな環境のうち2つを準備します。実稼動用には`master`、ステージング用には`staging`。
 
-プロセスの詳細については、[&#x200B; スターターワークフローの開発とデプロイ &#x200B;](../architecture/starter-develop-deploy-workflow.md)を参照してください。
+プロセスの詳細については、[ スターターワークフローの開発とデプロイ ](../architecture/starter-develop-deploy-workflow.md)を参照してください。
 
 ## プロのデプロイメントフロー
 
 Proには、アクティブな2つのブランチ、グローバル `master` ブランチ、ステージング、実稼動ブランチを備えた大規模な統合環境が付属しています。 プロジェクトを作成すると、サイトの構築とデプロイのためにコードをブランチ、開発、プッシュする準備が整います。 統合環境には多数のブランチを含めることができますが、ステージング環境と実稼動環境には、各環境に対して1つのブランチしか含まれていません。
 
-プロセスの詳細については、[Pro ワークフローの開発とデプロイ &#x200B;](../architecture/pro-develop-deploy-workflow.md)を参照してください。
+プロセスの詳細については、[Pro ワークフローの開発とデプロイ ](../architecture/pro-develop-deploy-workflow.md)を参照してください。
 
 ## ステージングへのコードのデプロイ
 
-ステージング環境では、データベース、web サーバー、およびFastlyやNew Relicを含むすべてのサービスを含む、ほぼ実稼動環境を提供します。 ターミナルアプリケーションを使用して、[[!DNL Cloud Console]](../project/overview.md)または[Cloud CLI コマンド &#x200B;](../dev-tools/cloud-cli-overview.md)を通じて、完全にプッシュ、結合、デプロイできます。
+ステージング環境では、データベース、web サーバー、およびFastlyやNew Relicを含むすべてのサービスを含む、ほぼ実稼動環境を提供します。 ターミナルアプリケーションを使用して、[[!DNL Cloud Console]](../project/overview.md)または[Cloud CLI コマンド ](../dev-tools/cloud-cli-overview.md)を通じて、完全にプッシュ、結合、デプロイできます。
 
 ### [!DNL Cloud Console]を使用したコードのデプロイ
 
@@ -59,24 +78,24 @@ Proには、アクティブな2つのブランチ、グローバル `master` ブ
 
 **Pro プロジェクトの場合、統合ブランチをステージング**&#x200B;にデプロイします。
 
-1. [&#x200B; プロジェクトに](https://accounts.magento.cloud) ログインします。
+1. [ プロジェクトに](https://accounts.magento.cloud) ログインします。
 1. `integration` ブランチを選択します。
 1. 「**結合**」オプションを選択して、ステージングにデプロイします。
 
    ![結合](../../assets/button-merge.png){width="150"}
 
-1. ステージング環境のすべての[&#x200B; テスト &#x200B;](../test/staging-and-production.md)を完了します。
+1. ステージング環境のすべての[ テスト ](../test/staging-and-production.md)を完了します。
 1. ステージングの準備ができたら、**結合** オプションを選択して実稼動環境にデプロイします。
 
 **Starterの場合、開発ブランチをステージング**&#x200B;にデプロイします。
 
-1. [&#x200B; プロジェクトに](https://accounts.magento.cloud) ログインします。
+1. [ プロジェクトに](https://accounts.magento.cloud) ログインします。
 1. 準備されたコードブランチを選択します。
 1. 「**結合**」オプションを選択して、ステージングにデプロイします。
 
    ![結合](../../assets/button-merge.png){width="150"}
 
-1. ステージング環境のすべての[&#x200B; テスト &#x200B;](../test/staging-and-production.md)を完了します。
+1. ステージング環境のすべての[ テスト ](../test/staging-and-production.md)を完了します。
 1. ステージングの準備ができたら、**結合** オプションを選択して、実稼動環境（`master`）にデプロイします。
 
 ### コマンドラインを使用したコードのデプロイ
@@ -155,7 +174,7 @@ Cloud CLIには、コードをデプロイするコマンドが用意されて�
 
 ## 静的ファイルの移行
 
-[静的ファイル &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary)は`mounts`に保存されています。 ローカル環境などのソースマウントの場所から目的のマウントの場所にファイルを移行する方法は2つあります。 どちらの方法も`rsync` ユーティリティを使用しますが、Adobeでは、`magento-cloud` CLIを使用してローカル環境とリモート環境の間でファイルを移動することをお勧めします。 また、Adobeでは、ファイルをリモート ソースから別のリモート場所に移動する場合は、`rsync` メソッドを使用することをお勧めします。
+[静的ファイル ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)は`mounts`に保存されています。 ローカル環境などのソースマウントの場所から目的のマウントの場所にファイルを移行する方法は2つあります。 どちらの方法も`rsync` ユーティリティを使用しますが、Adobeでは、`magento-cloud` CLIを使用してローカル環境とリモート環境の間でファイルを移動することをお勧めします。 また、Adobeでは、ファイルをリモート ソースから別のリモート場所に移動する場合は、`rsync` メソッドを使用することをお勧めします。
 
 ### CLIを使用したファイルの移行
 
@@ -225,7 +244,7 @@ rsync -azvP <source> <destination>
 
 >[!NOTE]
 >
->リモートからリモート環境にメディアを直接転送するには、SSH エージェント転送を有効にする必要があります。[GitHub ガイダンス &#x200B;](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding)を参照してください。
+>リモートからリモート環境にメディアを直接転送するには、SSH エージェント転送を有効にする必要があります。[GitHub ガイダンス ](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding)を参照してください。
 
 **リモート環境からリモート環境に静的ファイルを直接移行するには（高速アプローチ）**:
 
@@ -261,7 +280,7 @@ rsync -azvP <source> <destination>
 >
 >統合環境データベースは開発テスト用に厳密に作成されており、ステージングおよび実稼動に移行しないデータを含めることができます。
 
-継続的インテグレーションのデプロイメントの場合、Adobe **はインテグレーションからステージングおよび実稼動へのデータの移行を**&#x200B;お勧めしません。 テストデータを渡したり、重要なデータを上書きしたりできます。 重要な設定はすべて、ビルドおよびデプロイ時に[設定ファイル &#x200B;](../store/store-settings.md)および`setup:upgrade` コマンドを使用して渡されます。
+継続的インテグレーションのデプロイメントの場合、Adobe **はインテグレーションからステージングおよび実稼動へのデータの移行を**&#x200B;お勧めしません。 テストデータを渡したり、重要なデータを上書きしたりできます。 重要な設定はすべて、ビルドおよびデプロイ時に[設定ファイル ](../store/store-settings.md)および`setup:upgrade` コマンドを使用して渡されます。
 
 >[!ENDSHADEBOX]
 
@@ -269,11 +288,11 @@ Adobe **では、すべてのサービスと設定を使用して、ほぼ実稼
 
 >[!NOTE]
 >
->リモートからリモート環境にメディアを直接転送するには、ssh エージェント転送を有効にする必要があります。[GitHub ガイダンス &#x200B;](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding)を参照してください。
+>リモートからリモート環境にメディアを直接転送するには、ssh エージェント転送を有効にする必要があります。[GitHub ガイダンス ](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/using-ssh-agent-forwarding)を参照してください。
 
 ### データベースのバックアップ
 
-データベースのバックアップを作成することをお勧めします。 次の手順では、[&#x200B; データベースをバックアップ &#x200B;](../storage/database-dump.md)のガイダンスを使用します。
+データベースのバックアップを作成することをお勧めします。 次の手順では、[ データベースをバックアップ ](../storage/database-dump.md)のガイダンスを使用します。
 
 **データベースをダンプするには**:
 
@@ -319,7 +338,7 @@ Adobe **では、すべてのサービスと設定を使用して、ほぼ実稼
 
 **データベースを削除して再作成するには**:
 
-1. リモート環境への[SSH トンネル &#x200B;](../development/secure-connections.md#ssh-tunneling)を確立します。
+1. リモート環境への[SSH トンネル ](../development/secure-connections.md#ssh-tunneling)を確立します。
 
 1. データベースサービスに接続します。
 

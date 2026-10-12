@@ -1,23 +1,27 @@
 ---
 title: 作業者
-description: ' [!DNL Commerce]  アプリケーション設定ファイルでworkers プロパティを設定する方法を説明します。'
+description: '[!DNL Commerce] アプリケーション設定ファイルでworkers プロパティを設定する方法を説明します。'
 feature: Cloud, Configuration
 exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
-TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
+TQID: 'https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: '362'
 ht-degree: 0%
-
 ---
-
 # Workers プロパティ
 
 実行中のNginx インスタンスを使用せずに、web インスタンスから独立して実行するワーカーを定義できます。ただし、ワーカーは、[!DNL Commerce] アプリケーションで使用されているのと同じネットワークストレージを使用します。 ルーターは公開リクエストをワーカーに転送できないため、（Node.jsまたはGoを使用して）ワーカーインスタンスにweb サーバーを設定する必要はありません。 これにより、ワーカーインスタンスは、バックグラウンドタスクや、デプロイメントをブロックするリスクがあるタスクを継続的に実行するのに最適になります。
@@ -26,7 +30,7 @@ ht-degree: 0%
 
 ワーカーは、Pro ステージング環境と実稼動環境でのみ使用できます。 プロ統合環境とスターター環境では、[CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner)変数を選択して使用できます。
 
-Pro ステージングまたは実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信し](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)次の情報を含めます。
+Pro ステージングまたは実稼動環境でワーカーを設定するには、[Adobe Commerce サポートチケットを送信し](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)次の情報を含めます。
 
 - プロジェクト ID
 - 環境ID
@@ -57,7 +61,7 @@ workers:
 
 `size`、`relationships`、`access`、`disk`および`mount`、および`variables` プロパティの定義は、明示的に上書きされない限り、ワーカーによって継承されます。
 
-次のプロパティは、[&#x200B; トップレベル設定](properties.md)を上書きするために最もよく使用されます。
+次のプロパティは、[ トップレベル設定](properties.md)を上書きするために最もよく使用されます。
 
 - `size` – 単一のバックグラウンド プロセスに割り当てるリソースの数を減らします
 - `variables` - アプリケーションの実行方法を変更するように指示します

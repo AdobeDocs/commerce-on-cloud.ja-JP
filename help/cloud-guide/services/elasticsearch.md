@@ -3,23 +3,33 @@ title: Elasticsearch サービスの設定
 description: Adobe CommerceのクラウドインフラストラクチャでElasticsearch サービスを有効にする方法について説明します。
 feature: Cloud, Search, Services
 exl-id: 238b9ed5-ce73-428f-9459-35de8573d5d8
-TQID: https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI
+TQID: 'https://experienceleague.adobe.com/RYv3SjF62YHhPtM9vFrlPD0MVwfPS7EIhHxQXaMEeuI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+subfeature_v2:
+  - id: a1d22079-48b9-5e69-9ee6-eb236068ef34
+    internal-label: Search
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 783
+source-wordcount: '783'
 ht-degree: 0%
-
 ---
-
 # Elasticsearch サービスの設定
 
 [Elasticsearch](https://www.elastic.co)は、あらゆるソースからデータを取り込み、任意の形式で検索してリアルタイムで視覚化できるオープンソース製品です。
@@ -64,7 +74,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
    git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable Elasticsearch" && git push origin <branch-name>
    ```
 
-   これらの変更が環境にどのような影響を与えるかについては、[&#x200B; サービス &#x200B;](services-yaml.md)を参照してください。
+   これらの変更が環境にどのような影響を与えるかについては、[ サービス ](services-yaml.md)を参照してください。
 
 1. デプロイメントプロセスが完了したら、SSHを使用してリモート環境にログインします。
 
@@ -94,7 +104,7 @@ Adobe Commerce バージョン 2.4.4以降については、[OpenSearch サー�
 
 - **プロジェクトのアップグレード** – 新しいアプリケーションのバージョンのElasticsearch PHP クライアントが、クラウドインフラストラクチャにインストールされているElasticsearch サービスのバージョンと互換性があることを確認します。
 
-Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 [&#x200B; サービスバージョン &#x200B;](services-yaml.md#service-versions)を参照してください。
+Adobe Commerce on cloud infrastructureのサービスバージョンと互換性のサポートは、クラウドインフラストラクチャにデプロイされたバージョンによって決まり、Adobe Commerce オンプレミスのデプロイメントでサポートされているバージョンとは異なる場合があります。 [ サービスバージョン ](services-yaml.md#service-versions)を参照してください。
 
 **Elasticsearch ソフトウェアの互換性を確認するには**:
 
@@ -204,7 +214,7 @@ Adobe Commerce on cloud infrastructureのサービスバージョンと互換性
 
    - `services.yaml` ファイルのElasticsearch サービスのバージョンを、Elasticsearch PHP クライアントと互換性のあるバージョンに変更します。
 
-     Pro サービスのアップグレードのスケジュール要件と顧客可用性に関するガイダンスについては、_Configure services_&#x200B;の[Pro サービスのサポート &#x200B;](services-yaml.md#pro-services-support)を参照してください。
+     Pro サービスのアップグレードのスケジュール要件と顧客可用性に関するガイダンスについては、_Configure services_&#x200B;の[Pro サービスのサポート ](services-yaml.md#pro-services-support)を参照してください。
 
 ## Elasticsearch サービスを再起動します
 
@@ -212,7 +222,7 @@ Adobe Commerce on cloud infrastructureのサービスバージョンと互換性
 
 ## 追加の検索設定
 
-- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイ間でカスタム検索設定を保持できます。 [変数のデプロイ &#x200B;](../environment/variables-deploy.md#search_configuration)を参照してください。
+- デフォルトでは、クラウド環境の検索設定は、デプロイするたびに再生成されます。 `SEARCH_CONFIGURATION` デプロイ変数を使用して、デプロイ間でカスタム検索設定を保持できます。 [変数のデプロイ ](../environment/variables-deploy.md#search_configuration)を参照してください。
 
 - プロジェクトにElasticsearch サービスを設定した後、管理者UIを使用してElasticsearch接続をテストし、Adobe CommerceのElasticsearch設定をカスタマイズします。
 
@@ -230,7 +240,7 @@ elasticsearch:
             - analysis-phonetic
 ```
 
-Elastic Suite サードパーティプラグインを使用する場合は、`ece-tools` パッケージ [&#128279;](../dev-tools/update-package.md)をバージョン 2002.0.19以降に更新する必要があります。
+Elastic Suite サードパーティプラグインを使用する場合は、`ece-tools` パッケージ ](../dev-tools/update-package.md)をバージョン 2002.0.19以降に[更新する必要があります。
 Elastic Suiteを設定する際に、設定設定を`ELASTICSUITE_CONFIGURATION` デプロイ変数に追加します。 この設定は、デプロイメント間で設定を保存します。
 
 ### Elasticsearchのプラグインの削除
@@ -269,5 +279,5 @@ Elastic Suiteを設定する際に、設定設定を`ELASTICSUITE_CONFIGURATION`
 
 >[!TIP]
 >
->Adobe CommerceでのElastic Suite プラグインの使用またはトラブルシューティングについて詳しくは、[Elastic Suite ドキュメント &#x200B;](https://github.com/Smile-SA/elasticsuite)を参照してください。
+>Adobe CommerceでのElastic Suite プラグインの使用またはトラブルシューティングについて詳しくは、[Elastic Suite ドキュメント ](https://github.com/Smile-SA/elasticsuite)を参照してください。
 

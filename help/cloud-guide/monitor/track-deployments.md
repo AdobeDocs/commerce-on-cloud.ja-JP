@@ -5,23 +5,32 @@ feature: Cloud, Deploy, Observability
 topic: Performance
 last-substantial-update: 2023-10-12T00:00:00.000Z
 exl-id: 3344314e-bed5-4b98-a2a1-a3a97f61ac85
-TQID: https://experienceleague.adobe.com/-zFiZWxwqEGvapQNrAYL6qgdqW6bzHDw1a1xoBVyJcE
+TQID: 'https://experienceleague.adobe.com/-zFiZWxwqEGvapQNrAYL6qgdqW6bzHDw1a1xoBVyJcE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: 4239b8a6-e74f-567d-a7a5-b98b9ead0ea4
+    internal-label: Observability
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Data collection
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 324
+source-wordcount: '324'
 ht-degree: 0%
-
 ---
-
 # デプロイメントの追跡
 
 New Relic _変更履歴_&#x200B;機能を有効にして、Commerce on cloud infrastructure プロジェクトのデプロイメントイベントを監視できます。
@@ -32,7 +41,7 @@ New Relic _変更履歴_&#x200B;機能を有効にして、Commerce on cloud inf
 >
 >- `NR_API_URL`: New Relic API エンドポイント、この場合はNerdGraph API URL `https://api.newrelic.com/graphql`
 >- `NR_API_KEY`: ユーザーキーを作成します。_New Relic_ ドキュメントの[New Relic API Keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys)を参照してください。
->- `NR_APP_GUID`: New Relicにデータをレポートするエンティティに一意のID （GUID）があります。 例えば、ステージング環境で有効にするには、New Relicの&#x200B;_ステージングエンティティ GUID_&#x200B;を使用して、ステージング環境`NR_APP_GUID` クラウド変数を調整します。 [New Relic エンティティについて学ぶ](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/)および[NerdGraph チュートリアル：_New Relic_ ドキュメントのエンティティ データ &#x200B;](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)の表示を参照してください。
+>- `NR_APP_GUID`: New Relicにデータをレポートするエンティティに一意のID （GUID）があります。 例えば、ステージング環境で有効にするには、New Relicの&#x200B;_ステージングエンティティ GUID_&#x200B;を使用して、ステージング環境`NR_APP_GUID` クラウド変数を調整します。 [New Relic エンティティについて学ぶ](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/)および[NerdGraph チュートリアル：_New Relic_ ドキュメントのエンティティ データ ](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)の表示を参照してください。
 
 ## トラックデプロイメントを有効にする
 
@@ -230,7 +239,7 @@ _スクリプト_&#x200B;統合を作成して、New RelicでCommerce プロジ�
    {"data":{"changeTrackingCreateDeployment":{"deploymentId":"some-deployment-id","entityGuid":"SomeGUIDhere"}}}
    ```
 
-1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインします。
+1. [New Relic アカウント ](https://login.newrelic.com/login)にログインします。
 
 1. エクスプローラーのナビゲーションメニューで、**[!UICONTROL APM & Services]**&#x200B;をクリックします。 環境[!UICONTROL Name]と[!UICONTROL Account]を選択します。
 

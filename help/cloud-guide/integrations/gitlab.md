@@ -3,21 +3,27 @@ title: GitLab統合
 description: Adobe Commerce on cloud インフラストラクチャプロジェクトをGitLabと統合する方法について説明します。
 feature: Cloud, Integration
 exl-id: 24c2156f-0629-4e89-b5b1-ca144d6bfdae
-TQID: https://experienceleague.adobe.com/WMHyRgeTet95WG-mQ8gqIxLMY4kwKRUop94MQ3mjtXc
+TQID: 'https://experienceleague.adobe.com/WMHyRgeTet95WG-mQ8gqIxLMY4kwKRUop94MQ3mjtXc'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cc04bd17-78d5-5120-8c3d-1b8a57e49280
+    internal-label: Integration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 791
+source-wordcount: '791'
 ht-degree: 0%
-
 ---
-
 # GitLab統合
 
 コードの変更をプッシュすると、環境を自動的に構築およびデプロイするようにGitLab リポジトリを設定できます。 この統合により、GitLab リポジトリとAdobe Commerce on cloud infrastructure アカウントが同期されます。
@@ -67,7 +73,7 @@ ht-degree: 0%
    git remote add origin git@gitlab.com:<user-name>/<repo-name>.git
    ```
 
-   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント &#x200B;](https://git-scm.com/docs/git-remote)を参照してください。
+   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント ](https://git-scm.com/docs/git-remote)を参照してください。
 
 1. GitLab リモートが正しく追加されていることを確認します。
 
@@ -154,7 +160,7 @@ magento-cloud integration:add --type=gitlab --project=<project-ID> --token=<your
 
 ### GitLabでWebhookを追加する
 
-プッシュリクエストや結合リクエストなどのイベントをCloud Git サーバーと通信するには、GitLab リポジトリ用のWebhook[&#128279;](https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#overview)を作成する必要があります
+プッシュリクエストや結合リクエストなどのイベントをCloud Git サーバーと通信するには、GitLab リポジトリ用のWebhook](https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#overview)を[作成する必要があります
 
 1. GitLab リポジトリで、「**設定**」タブをクリックします。
 
@@ -195,7 +201,7 @@ GitLab リポジトリに簡単な変更をプッシュしてテストするこ�
 
 ## Cloud ブランチの作成
 
-`magento-cloud` CLI `environment:push` コマンドを使用して、新しい環境を作成し、アクティブ化します。 [&#x200B; クラウドブランチの作成](bitbucket.md#create-a-cloud-branch)を参照してください。
+`magento-cloud` CLI `environment:push` コマンドを使用して、新しい環境を作成し、アクティブ化します。 [ クラウドブランチの作成](bitbucket.md#create-a-cloud-branch)を参照してください。
 
 ## 統合の削除
 

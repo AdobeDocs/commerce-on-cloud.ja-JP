@@ -5,24 +5,41 @@ feature: Cloud, Configuration, Build, Deploy, Eventing, Logs, SCD
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
-TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
+TQID: 'https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: 5594f40c-5dc7-522f-a0e0-f84045197b3c
+    internal-label: Eventing
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
+  - id: 3c398179-d35a-51ba-b317-6c5b95feef5e
+    internal-label: Logs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 775
+source-wordcount: '775'
 ht-degree: 0%
-
 ---
-
 # グローバル変数
 
 グローバル変数は、デプロイメントプロセス [!DNL Commerce]の各フェーズ（ビルド、デプロイ、デプロイ後）でのアクションを制御します。 グローバル変数は各フェーズに影響を与えるため、`.magento.env.yaml` ファイルの`global` ステージで設定する必要があります。
@@ -78,7 +95,7 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-コードを変更することなく、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントに失敗した場合、この変数を使用して、ログの精度をグローバルに増やすことができます。 [&#x200B; ログレベル &#x200B;](log-handlers.md#log-levels)を参照してください。 Logging ハンドラーの`min_level`値は、この設定を上書きします。
+コードを変更することなく、すべての出力ストリームの最小ログレベルを上書きします。これは、デプロイメントに関する問題のトラブルシューティングに役立ちます。 例えば、デプロイメントに失敗した場合、この変数を使用して、ログの精度をグローバルに増やすことができます。 [ ログレベル ](log-handlers.md#log-levels)を参照してください。 Logging ハンドラーの`min_level`値は、この設定を上書きします。
 
 ```yaml
 stage:
@@ -97,7 +114,7 @@ stage:
 
 ユーザー（SCD）から要求されたときに、静的コンテンツの生成を有効にします。 静的なオンデマンド型コンテンツは、デプロイメント時間を短縮するため、開発やテストのワークフローに最適です。
 
-[`post_deploy` フック &#x200B;](../application/hooks-property.md)を使用してキャッシュを事前に読み込むと、サイトのダウンタイムが短縮されます。 キャッシュ ウォーミングは、[!DNL Cloud Console]のステージング環境と実稼動環境を含むPro プロジェクトとスタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
+[`post_deploy` フック ](../application/hooks-property.md)を使用してキャッシュを事前に読み込むと、サイトのダウンタイムが短縮されます。 キャッシュ ウォーミングは、[!DNL Cloud Console]のステージング環境と実稼動環境を含むPro プロジェクトとスタータープロジェクトでのみ使用できます。 `SCD_ON_DEMAND`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 
 ```yaml
 stage:
@@ -189,14 +206,14 @@ stage:
 - **既定**—_設定なし_
 - **バージョン** - Adobe Commerce 2.1.4以降
 
-Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/ja/docs/commerce-operations/configuration-guide/security/xframe-options) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
+Adobe Commerce サイトの[`X-Frame-Options`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/security/xframe-options) ヘッダー設定を変更するには、`X_FRAME_CONFIGURATION`変数を使用します。 この設定は、ブラウザーが`<frame>`、`<iframe>`、または`<object>`でページをレンダリングする方法を制御します。 次のいずれかのオプションを使用します。
 
 - `DENY` - ページはフレーム内に表示できません。
 - `SAMEORIGIN` – （デフォルトのAdobe Commerce設定） ページは、ページ自体と同じオリジンのフレームでのみ表示できます。
 
 >[!WARNING]
 >
->Adobe Commerceでサポートされているブラウザーではサポートされなくなったため、`ALLOW-FROM <uri>` オプションは廃止されました。 [&#x200B; ブラウザーの互換性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)を参照してください。
+>Adobe Commerceでサポートされているブラウザーではサポートされなくなったため、`ALLOW-FROM <uri>` オプションは廃止されました。 [ ブラウザーの互換性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#Browser_compatibility)を参照してください。
 
 `X_FRAME_CONFIGURATION`環境変数を`.magento.env.yaml` ファイルの`global` ステージに追加します。
 

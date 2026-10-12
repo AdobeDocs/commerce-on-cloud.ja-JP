@@ -3,22 +3,31 @@ title: PayPal決済方法を設定する
 description: Adobe CommerceクラウドインフラストラクチャでPayPal支払い方法を設定する。
 feature: Cloud, Checkout, Payments
 exl-id: 577639f8-74a1-4bb2-96fc-72135252cbd1
-TQID: https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo
+TQID: 'https://experienceleague.adobe.com/wGyqg7fnVgAglBAqnaA0ak-JaBLHGn5-Bkj-jx8qwoo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 8cd50456-5eb0-5364-922a-f14161feb828
+    internal-label: Checkout
+  - id: 3dcbfa9e-51f8-569c-a0e4-7f59098f730f
+    internal-label: Payments
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 697
+source-wordcount: '697'
 ht-degree: 0%
-
 ---
-
 # PayPal決済方法を設定する
 
 Adobe Commerce オンクラウドインフラストラクチャには、PayPal Express チェックアウトアカウントを管理画面から直接設定するためのオンボーディングツールが用意されています。 このツールは、ECE 2.1.8以降で使用できます。 PayPal支払い方法の本番稼働中およびテストをより適切にサポートするには、サンドボックスまたは実稼動アカウント用にPayPal Express Checkout アカウントを有効にして設定します。
@@ -55,7 +64,7 @@ PayPal Express チェックアウトを設定するには：
 1. 環境の管理者にアクセスします。
 1. 左側のナビゲーションで、**ストア** > **設定**&#x200B;を選択し、**販売** > **支払い方法**&#x200B;を選択します。
 1. PayPalの場合は、**Configure**&#x200B;を選択します。 設定フィールドは、Express Checkout、Advertising PayPal Credit、BasicおよびAdvanced設定の拡張可能なセクションに表示されます。
-1. PayPal アカウントに接続します。 アカウントが接続されるまで、有効にするオプションは無効になります。 接続と制限に使用できる利用可能なアカウントとサポートされているアカウントについて詳しくは、[PayPal アカウント &#x200B;](#paypal-account)を参照してください。
+1. PayPal アカウントに接続します。 アカウントが接続されるまで、有効にするオプションは無効になります。 接続と制限に使用できる利用可能なアカウントとサポートされているアカウントについて詳しくは、[PayPal アカウント ](#paypal-account)を参照してください。
 
    * PayPal ライブアカウントを接続するには、「PayPalとつながる」をクリックし、プロンプトに従います。 ライブペイパルを使用して購入した顧客は、すべて完了し、ライブストアで顧客に積極的に請求されます。
    * テスト用にサンドボックスアカウントを接続するには、「サンドボックス認証情報」をクリックし、プロンプトに従います。 顧客に積極的に請求することなく、サンドボックス PayPal コンプリートを使用して購入する顧客。
@@ -68,7 +77,7 @@ PayPal Express チェックアウトを設定するには：
    * **サンドボックスモード**&#x200B;入力した資格情報がサンドボックス用であるかどうかを示すには、「はい」または「いいえ」を選択します。 実稼動資格情報を入力した場合は、「いいえ」を選択します。
    * **APIはプロキシを使用**&#x200B;は、「はい」または「いいえ」を選択して、システムがプロキシサーバーを使用してAdobe CommerceとPayPal支払いシステム間の接続を確立するかどうかを設定します。 「はい」の場合は、プロキシホストとポートを入力します。
 
-1. アカウントを設定するための詳細な情報と手順については、「[PayPal Express Checkout](https://experienceleague.adobe.com/ja/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （手順2）で始まる）必要な設定を完了」を参照してください。
+1. アカウントを設定するための詳細な情報と手順については、「[PayPal Express Checkout](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout) （手順2）で始まる）必要な設定を完了」を参照してください。
 
 アカウントが設定され、認証されている場合は、必須のPayPal設定でPayPal支払いオプションを有効または無効にできます。
 

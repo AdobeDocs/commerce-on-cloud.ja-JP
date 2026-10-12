@@ -3,26 +3,36 @@ title: スターターアーキテクチャ
 description: スターターアーキテクチャでサポートされている環境について説明します。
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
-TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
+TQID: 'https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 8465292300c871aaa85e57cbb25e7ae5358bcd2f
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1010
+source-wordcount: '1010'
 ht-degree: 0%
-
 ---
-
 # スターターアーキテクチャ
 
 Adobe Commerce on cloud infrastructure スターターアーキテクチャでは、初期プロジェクトコード、ステージング環境、および最大2つの統合環境を含む`master`環境を含む、最大&#x200B;**4**&#x200B;環境をサポートします。
@@ -37,13 +47,13 @@ Adobe Commerce on cloud infrastructure スターターアーキテクチャで�
 
 次の図は、スターター環境の階層関係を示しています。
 
-![&#x200B; スタータープロジェクトの概要](../../assets/starter/architecture.png)
+![ スタータープロジェクトの概要](../../assets/starter/architecture.png)
 
 ## 本番環境
 
 実稼動環境は、Adobe Commerceをパブリッシュ対応の単一およびマルチサイトストアフロントを実行するクラウドインフラストラクチャにデプロイするためのソースコードを提供します。 実稼動環境では、`master` ブランチのコードを使用して、web サーバー、データベース、設定済みサービス、およびアプリケーションコードを設定および有効にします。
 
-`production`環境は読み取り専用なので、`integration`環境を使用してコードを変更し、`integration`から`staging`までのアーキテクチャ全体にデプロイし、最後に`production`環境にデプロイします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)および[&#x200B; サイトの立ち上げ](../launch/overview.md)を参照してください。
+`production`環境は読み取り専用なので、`integration`環境を使用してコードを変更し、`integration`から`staging`までのアーキテクチャ全体にデプロイし、最後に`production`環境にデプロイします。 [ ストアのデプロイ ](../deploy/staging-production.md)および[ サイトの立ち上げ](../launch/overview.md)を参照してください。
 
 Adobeでは、`production`環境にデプロイされる`master` ブランチにプッシュする前に、`staging` ブランチで完全にテストすることをお勧めします。
 
@@ -55,7 +65,7 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 >[!WARNING]
 >
->Adobeでは、実稼動環境にデプロイする前に、ステージング環境のすべてのマーチャントと顧客のインタラクションをテストすることをお勧めします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)および[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md)を参照してください。
+>Adobeでは、実稼動環境にデプロイする前に、ステージング環境のすべてのマーチャントと顧客のインタラクションをテストすることをお勧めします。 [ ストアのデプロイ ](../deploy/staging-production.md)および[ デプロイメントのテスト ](../test/staging-and-production.md)を参照してください。
 
 ## 統合環境
 
@@ -137,7 +147,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 - [OpenSearch](../services/opensearch.md)
 
-ステージング環境と本番環境では、CDNとキャッシュにFastlyを使用します。 最新バージョンのFastly CDN拡張機能は、プロジェクトの最初のプロビジョニング中にインストールされます。 拡張機能をアップグレードして、最新のバグ修正と機能強化を取得できます。 Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)のFastly CDN モジュールを参照してください。 また、パフォーマンス モニタリング用に[New Relic](../monitor/account-management.md)にアクセスできます。
+ステージング環境と本番環境では、CDNとキャッシュにFastlyを使用します。 最新バージョンのFastly CDN拡張機能は、プロジェクトの最初のプロビジョニング中にインストールされます。 拡張機能をアップグレードして、最新のバグ修正と機能強化を取得できます。 Magento 2](https://github.com/fastly/fastly-magento2)の[Fastly CDN モジュールを参照してください。 また、パフォーマンス モニタリング用に[New Relic](../monitor/account-management.md)にアクセスできます。
 
 以下のファイルを使用して、実装で使用するソフトウェアのバージョンを設定します。
 
@@ -149,7 +159,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 ### バックアップと災害復旧
 
-データベースとファイルシステムのバックアップは、[!DNL Cloud Console]またはCLIを使用して作成できます。 [&#x200B; バックアップ管理](../storage/snapshots.md)を参照してください。
+データベースとファイルシステムのバックアップは、[!DNL Cloud Console]またはCLIを使用して作成できます。 [ バックアップ管理](../storage/snapshots.md)を参照してください。
 
 ## 開発のための準備
 

@@ -3,31 +3,44 @@ title: Redis サービスの設定
 description: Adobe Commerce on cloud infrastructure用のバックエンドキャッシュソリューションとしてRedisを設定および最適化する方法について説明します。
 feature: Cloud, Cache, Services
 exl-id: be6f2462-0878-47e3-b906-ebdd4aa319f2
-TQID: https://experienceleague.adobe.com/Q3w1Y1sRuQSwqmbxGfEBavrvHe0ecI9qWJjsfVc2yPU
+TQID: 'https://experienceleague.adobe.com/Q3w1Y1sRuQSwqmbxGfEBavrvHe0ecI9qWJjsfVc2yPU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: df2792f9d653c4561e4e40cbc71499095f63ff71
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 710
+source-wordcount: '710'
 ht-degree: 0%
-
 ---
-
 # Redis サービスの設定
 
 [Redis](https://redis.io)は、Adobe Commerceがデフォルトで使用する`Zend Framework Zend_Cache_Backend_File`に代わるオプションのバックエンドキャッシュソリューションです。
 
 >[!IMPORTANT]
 >
->Redis キャッシュは、2.4.5-p16、2.4.6-p14、2.4.7-p9、および2.4.8-p4以降のAdobe Commerce 2.4.9またはパッチリリースではサポートされていません。 Redisがサポートされていないキャッシュ設定には[Valkey](valkey.md)を使用してください。 リリース別のサポートされているキャッシュサービスについては、[必要システム構成](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
+>Redis キャッシュは、2.4.5-p16、2.4.6-p14、2.4.7-p9、および2.4.8-p4以降のAdobe Commerce 2.4.9またはパッチリリースではサポートされていません。 Redisがサポートされていないキャッシュ設定には[Valkey](valkey.md)を使用してください。 リリース別のサポートされているキャッシュサービスについては、[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 {{service-instruction}}
 
@@ -54,7 +67,7 @@ cache:
   type: redis:7.2
 ```
 
-例のバージョンは普遍的ではありません。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョン、パッチレベル、現在のCloud テンプレートによって異なります。 [&#x200B; システム要件](https://experienceleague.adobe.com/ja/docs/commerce-operations/installation-guide/system-requirements)と現在のプロジェクトテンプレートでサポートされている組み合わせを確認します。
+例のバージョンは普遍的ではありません。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョン、パッチレベル、現在のCloud テンプレートによって異なります。 [ システム要件](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)と現在のプロジェクトテンプレートでサポートされている組み合わせを確認します。
 
 ### サービス関係の設定
 
@@ -138,11 +151,11 @@ printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
   | jq '{redis: .redis}'
 ```
 
-サービス関係について詳しくは、[&#x200B; サービスの設定](services-yaml.md)を参照してください。
+サービス関係について詳しくは、[ サービスの設定](services-yaml.md)を参照してください。
 
 ## Redis設定のカスタマイズ
 
-キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
+キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
 
 ## Redis CLIの使用
 
@@ -203,11 +216,11 @@ Redis server v=<installed-version> ...
 
 Redisの問題のトラブルシューティングについては、次のAdobe Commerce サポート記事を参照してください。
 
-- [Adobe Commerceの管理されたアラート：Redis メモリ警告アラート](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
-- [Adobe Commerceのマネージドアラート：Redis メモリクリティカルアラート](https://experienceleague.adobe.com/ja/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
+- [Adobe Commerceの管理されたアラート：Redis メモリ警告アラート](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert)
+- [Adobe Commerceのマネージドアラート：Redis メモリクリティカルアラート](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert)
 
 ### キャッシュクリーンエラーは、Valkey設定のキャッシュでRedisを参照します
 
 `cache` サービスがValkeyとして設定されている場合でも、デプロイ前のキャッシュクリーンのエラーで、エラーコード `[107]` （`clean-redis-cache`）と`Connection to Redis` メッセージが表示される可能性があります。 `ece-tools`は、どのサービスが`cache`関係をサポートするかにかかわらず、キャッシュクリーン手順に対してこの従来のRedis指向エラーコードとメッセージを使用します。そのため、Redisがインストールされていることを示す文言はありません。
 
-関係ホストの`Name or service not known`などのDNS エラーが原因で発生した場合、サービス関係が利用可能になる前にデプロイ手順が実行されるか、`.magento.app.yaml`の関係名が`.magento/services.yaml`のサービス IDと一致しません。 [&#x200B; サービス関係の確認](#verify-the-service-relationship)を参照してください。
+関係ホストの`Name or service not known`などのDNS エラーが原因で発生した場合、サービス関係が利用可能になる前にデプロイ手順が実行されるか、`.magento.app.yaml`の関係名が`.magento/services.yaml`のサービス IDと一致しません。 [ サービス関係の確認](#verify-the-service-relationship)を参照してください。

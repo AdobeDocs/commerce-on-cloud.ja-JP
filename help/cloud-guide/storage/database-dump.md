@@ -3,21 +3,32 @@ title: データベースのバックアップ
 description: ECE ツールを使用して、Adobe Commerce on cloud インフラストラクチャプロジェクトのデータベースのバックアップを作成する方法を説明します。
 feature: Cloud, Iaas, Storage
 exl-id: 351f7691-3153-4b8a-83af-8b8895b93d98
-TQID: https://experienceleague.adobe.com/bT80HnUguAzsYdVx-kNcxJUyggLzzyfomXHdZvUAcrY
+TQID: 'https://experienceleague.adobe.com/bT80HnUguAzsYdVx-kNcxJUyggLzzyfomXHdZvUAcrY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: aa037b12-c774-5642-a947-459024feb1a2
+    internal-label: Storage
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 364
+source-wordcount: '364'
 ht-degree: 0%
-
 ---
-
 # データベースのバックアップ
 
 サービスとマウントからすべての環境データを取得しなくても、`ece-tools db-dump` コマンドを使用してデータベースのコピーを作成できます。 デフォルトでは、このコマンドは、環境設定で指定されているすべてのデータベース接続の`app/var/` ディレクトリにバックアップを作成します。 DB ダンプ操作は、アプリケーションをメンテナンスモードに切り替え、コンシューマーキュープロセスを停止し、ダンプが開始される前にcron ジョブを無効にします。
@@ -27,7 +38,7 @@ DB ダンプに関する次のガイドラインを検討します。
 - 実稼動環境の場合、Adobeでは、サイトがメンテナンスモードの場合に発生するサービスの中断を最小限に抑えるために、オフピーク時にデータベースダンプ操作を実行することをお勧めします。
 - ダンプ操作中にエラーが発生した場合、コマンドはダンプ ファイルを削除してディスク容量を節約します。 詳細については、ログを確認してください（`var/log/cloud.log`）。
 - Pro実稼動環境の場合、このコマンドは3つの高可用性ノードのうち&#x200B;_one_&#x200B;からのみダンプされるため、ダンプ中に別のノードに書き込まれた実稼動データがコピーされない可能性があります。 コマンドは、コマンドが複数のノードで実行されないように`var/dbdump.lock` ファイルを生成します。
-- すべての環境サービスのバックアップを作成する場合、Adobeでは[&#x200B; バックアップ &#x200B;](snapshots.md)を作成することをお勧めします。
+- すべての環境サービスのバックアップを作成する場合、Adobeでは[ バックアップ ](snapshots.md)を作成することをお勧めします。
 
 コマンドにデータベース名を追加することで、複数のデータベースをバックアップできます。 次の例では、`main`と`sales`の2つのデータベースをバックアップしています。
 
@@ -87,4 +98,4 @@ php vendor/bin/ece-tools db-dump main sales
 
 >[!TIP]
 >
->このデータを特定の環境にプッシュする場合は、[&#x200B; データと静的ファイルの移行](../deploy/staging-production.md#migrate-static-files)を参照してください。
+>このデータを特定の環境にプッシュする場合は、[ データと静的ファイルの移行](../deploy/staging-production.md#migrate-static-files)を参照してください。

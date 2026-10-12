@@ -3,36 +3,50 @@ title: クラウドインフラストラクチャのセキュリティ
 description: AdobeがAdobe Commerce オンクラウド基盤の安全性をどのように確保するかをご確認ください。
 feature: Cloud, Security
 exl-id: ae934401-2c32-427a-8162-98df9a047cd4
-TQID: https://experienceleague.adobe.com/3qXIdZWVJ-jxSodN8YGSzE2TOvMzlMKXHgRizgLVoHk
+TQID: 'https://experienceleague.adobe.com/3qXIdZWVJ-jxSodN8YGSzE2TOvMzlMKXHgRizgLVoHk'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+    internal-label: Compliance
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c32adafa-ed01-4b31-997e-2413013911b0
+    internal-label: Integrations
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 subfeature_v2:
   - id: bcbf87e7-9b75-4596-bffe-0f376b4c73a7
+    internal-label: GDPR
   - id: f2261633-201d-46c5-8a66-999e70527a83
+    internal-label: PCI
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Privacy
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1724
+source-wordcount: '1724'
 ht-degree: 0%
-
 ---
-
 # セキュリティ
 
-Adobe Commerce [Pro プランのアーキテクチャ &#x200B;](pro-architecture.md)は、安全性の高い環境を提供するように設計されています。 各顧客は、他の顧客とは分離された独自の隔離されたサーバー環境にデプロイされます。 本番環境のセキュリティに関する詳細は以下のとおりです。
+Adobe Commerce [Pro プランのアーキテクチャ ](pro-architecture.md)は、安全性の高い環境を提供するように設計されています。 各顧客は、他の顧客とは分離された独自の隔離されたサーバー環境にデプロイされます。 本番環境のセキュリティに関する詳細は以下のとおりです。
 
 ## Web ブラウザー
 
@@ -50,7 +64,7 @@ Fastlyは、コンテンツ配信ネットワーク（CDN）と分散型サー�
 
 WAF ルールは、ソフトウェアのパッチが適用される前に、Adobe Commerceがセキュリティ問題に「仮想パッチ」を適用できるように、新しい脆弱性を検出した場合にManaged Servicesによって更新されます。 FastlyのWAFでは、レート制限またはボット検出サービスは提供されていません。 必要に応じて、顧客はFastlyに対応したサードパーティ製ボット検出サービスのライセンスを取得できます。
 
-[Web Application Firewall （WAF） &#x200B;](../cdn/fastly-waf-service.md)を参照してください。
+[Web Application Firewall （WAF） ](../cdn/fastly-waf-service.md)を参照してください。
 
 ## 仮想プライベートクラウド
 
@@ -87,11 +101,11 @@ Adobeでは、コアアプリケーションのコードにセキュリティ上
 - OWASPZAP
 - andSqlMap
 
-これらのツールを使って、全コードベースを隔週でスキャンしています。 セキュリティパッチは、ダイレクトメール、アプリケーション内の通知、[&#x200B; セキュリティセンター](https://helpx.adobe.com/jp/security.html)で顧客に通知されます。
+これらのツールを使って、全コードベースを隔週でスキャンしています。 セキュリティパッチは、ダイレクトメール、アプリケーション内の通知、[ セキュリティセンター](https://helpx.adobe.com/security.html)で顧客に通知されます。
 
-顧客は、PCI ガイドラインに従って、これらのパッチがリリースから30日以内に、カスタマイズしたアプリケーションに適用されるようにしなければなりません。 Adobeでは、定期的にサイトを監視し、既知のセキュリティリスク、マルウェア、不正アクセスに関する最新情報を受け取ることができる[&#x200B; セキュリティスキャンツール &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-admin/systems/security/security-scan)も提供されています。 セキュリティスキャンツールは無料のサービスで、どのバージョンのAdobe Commerceでも実行できます。
+顧客は、PCI ガイドラインに従って、これらのパッチがリリースから30日以内に、カスタマイズしたアプリケーションに適用されるようにしなければなりません。 Adobeでは、定期的にサイトを監視し、既知のセキュリティリスク、マルウェア、不正アクセスに関する最新情報を受け取ることができる[ セキュリティスキャンツール ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)も提供されています。 セキュリティスキャンツールは無料のサービスで、どのバージョンのAdobe Commerceでも実行できます。
 
-セキュリティ研究者に脆弱性の特定と報告を促すために、Adobe Commerceには内部テストに加えて[&#x200B; バグ報奨金プログラム &#x200B;](https://hackerone.com/magento)があります。 さらに、お客様には、必要に応じて、アプリケーションの完全なソースコードが提供され、独自のレビューが行われます。
+セキュリティ研究者に脆弱性の特定と報告を促すために、Adobe Commerceには内部テストに加えて[ バグ報奨金プログラム ](https://hackerone.com/magento)があります。 さらに、お客様には、必要に応じて、アプリケーションの完全なソースコードが提供され、独自のレビューが行われます。
 
 ## 読み取り専用のファイルシステム
 
@@ -105,7 +119,7 @@ Adobeでは、コアアプリケーションのコードにセキュリティ上
 
 すべてのAWS アクティビティは、AWS CloudTrailに記録されます。 オペレーティングシステム、アプリケーションサーバー、データベースのログは、本番サーバーに保存され、バックアップサバーに保存されます。 ソースコードの変更はすべてGit リポジトリに記録されます。 デプロイメントの履歴は、Adobe Commerce [Project Web Interface](../project/overview.md)で確認できます。 サポートアクセスはすべてログに記録され、サポートセッションも記録されます。
 
-[&#x200B; ログの表示と管理](../test/log-locations.md)を参照してください。
+[ ログの表示と管理](../test/log-locations.md)を参照してください。
 
 ## 機密データ
 
@@ -129,7 +143,7 @@ GDPRでは、収集した個人を特定できる情報（名前、人種、生�
 
 >[!NOTE]
 >
->このページでは、GDPRに対して考慮すべき一般的な概要を説明します。 Adobe Commerceでの個人情報の保存方法について詳しくは、_[セキュリティおよびコンプライアンス ガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/security-and-compliance/overview)_&#x200B;を参照してください。 ビジネスが法的義務に準拠する方法を決定するには、弁護士に相談するか、[公式テキスト &#x200B;](https://eur-lex.europa.eu/eli/reg/2016/679/oj)を参照してください。
+>このページでは、GDPRに対して考慮すべき一般的な概要を説明します。 Adobe Commerceでの個人情報の保存方法について詳しくは、_[セキュリティおよびコンプライアンス ガイド ](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_&#x200B;を参照してください。 ビジネスが法的義務に準拠する方法を決定するには、弁護士に相談するか、[公式テキスト ](https://eur-lex.europa.eu/eli/reg/2016/679/oj)を参照してください。
 
 ## バックアップ
 
@@ -139,5 +153,5 @@ GDPRでは、収集した個人を特定できる情報（名前、人種、生�
 
 Managed Servicesのバックアップと復元のアプローチでは、高可用性アーキテクチャとシステム全体のバックアップを組み合わせて使用します。 各プロジェクトは、3つの個別のAWS可用性ゾーンに複製されます。各ゾーンには個別のデータセンターがあります。
 
-[&#x200B; スナップショットとバックアップ管理](../storage/snapshots.md)を参照してください。
+[ スナップショットとバックアップ管理](../storage/snapshots.md)を参照してください。
 

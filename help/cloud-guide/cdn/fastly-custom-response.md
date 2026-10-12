@@ -3,33 +3,39 @@ title: エラーおよびメンテナンスページのカスタマイズ
 description: Fastly オリジンサーバーへのリクエストが失敗したときに表示されるデフォルトのエラーページをカスタマイズする方法について説明します。
 feature: Cloud, Configuration, Security
 exl-id: 960195c7-5ee9-4134-8b0a-a251c5e6adf9
-TQID: https://experienceleague.adobe.com/EhK04rgGdkT3Tvd6wbefYjY9Yqozkzra4-ELdkH8sMo
+TQID: 'https://experienceleague.adobe.com/EhK04rgGdkT3Tvd6wbefYjY9Yqozkzra4-ELdkH8sMo'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 803
+source-wordcount: '803'
 ht-degree: 0%
-
 ---
-
 # エラーおよびメンテナンスページのカスタマイズ
 
 Fastly オリジンへのリクエストが失敗した場合、Fastlyは、ユーザーにとって混乱しやすい基本的なフォーマットと汎用的なメッセージを含むデフォルトの応答ページを返します。 例えば、Fastlyは、503 エラーが原因でFastly オリジンへのリクエストが失敗した場合、次のデフォルトのエラーページを返します。
 
-![Fastlyの既定のエラーページ &#x200B;](../../assets/cdn/fastly-503-example.png)
+![Fastlyの既定のエラーページ ](../../assets/cdn/fastly-503-example.png)
 
 次の例に示すように、Adobe Commerce ストア設定を更新して、一部のデフォルトのレスポンスページを、より使いやすいメッセージングとHTMLのスタイルを改善したページに置き換えることができます。
 
-![Fastly カスタムエラーページ &#x200B;](../../assets/cdn/fastly-new-error-page.png)
+![Fastly カスタムエラーページ ](../../assets/cdn/fastly-new-error-page.png)
 
 現在、Adobe Commerce on cloud infrastructure プロジェクトに対して、次のFastly応答ページをカスタマイズできます。
 
@@ -42,7 +48,7 @@ Fastly オリジンへのリクエストが失敗した場合、Fastlyは、ユ�
 
 - コンテンツには、最大65,535文字を含めることができます。
 - HTML ソース内のすべてのCSS インラインを指定します。
-- Fastlyがオフラインの場合でも表示されるように、base64を使用してHTML ページの画像をバンドルします。 css-tricks サイトの[&#x200B; データ URI](https://css-tricks.com/data-uris/)を参照してください。
+- Fastlyがオフラインの場合でも表示されるように、base64を使用してHTML ページの画像をバンドルします。 css-tricks サイトの[ データ URI](https://css-tricks.com/data-uris/)を参照してください。
 
 ## 503 エラーページのカスタマイズ
 
@@ -81,7 +87,7 @@ Fastly設定にカスタム応答ページを追加するには：
 
 1. カスタムレスポンスページのソースコードをコピーして、HTML フィールドに貼り付けます。
 
-   ![更新503 エラーページ &#x200B;](../../assets/cdn/fastly-customize-503-response.png)
+   ![更新503 エラーページ ](../../assets/cdn/fastly-customize-503-response.png)
 
 1. ページの上部にある「**アップロード**」を選択して、カスタマイズしたHTML ソースをFastly サーバーにアップロードします。
 
@@ -97,7 +103,7 @@ Fastly設定にカスタム応答ページを追加するには：
 
 Fastly オリジンへのリクエストが、[WAF](fastly-waf-service.md) ブロッキングイベントによって引き起こされた`403 Forbidden` エラーで失敗した場合、お客様には次のデフォルトのWAF エラーページが表示されます。
 
-![WAF エラーページ &#x200B;](../../assets/cdn/fastly-waf-403-error.png)
+![WAF エラーページ ](../../assets/cdn/fastly-waf-403-error.png)
 
 次のコードサンプルは、デフォルトページのHTML ソースを示しています。
 
@@ -133,7 +139,7 @@ Fastly設定メニューの「**カスタム合成ページ** > **WAFページ�
 
 1. 右側のペインで、**フルページキャッシュ** > **Fastly設定** > **カスタム合成ページ**&#x200B;を展開します。
 
-   ![WAF エラーページの編集オプション &#x200B;](../../assets/cdn/fastly-custom-synthetic-pages-edit-waf.png)
+   ![WAF エラーページの編集オプション ](../../assets/cdn/fastly-custom-synthetic-pages-edit-waf.png)
 
 1. 「**WAF ページを編集**」を選択します。
 
