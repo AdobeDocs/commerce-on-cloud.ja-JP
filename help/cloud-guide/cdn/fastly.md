@@ -64,15 +64,15 @@ Fastlyは、Adobe Commerceのクラウドインフラプロジェクト向けに
 
 - **キャッシュ管理**：帯域幅の負荷とコストを削減するために設定したバックエンド データセンターに、サイト ページ、アセット、CSSなどをキャッシュします
 
-  - [Fastly カスタム VCL スニペット ](fastly-vcl-custom-snippets.md) （Varnish 2.1準拠）を使用して、リクエストに対するキャッシュの応答方法を変更します
+  - [Fastly カスタム VCL スニペット &#x200B;](fastly-vcl-custom-snippets.md) （Varnish 2.1準拠）を使用して、リクエストに対するキャッシュの応答方法を変更します
 
   - [GeoIP サービス サポートの設定](fastly-custom-cache-configuration.md#configure-geoip-handling)
 
   - [暗号化されていないリクエストをTLSに強制的に送信する](fastly-custom-cache-configuration.md#force-tls)
 
-  - [Fastlyのタイムアウト ](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定をカスタマイズして、一括操作リクエストに対する503件の応答を防ぎます
+  - [Fastlyのタイムアウト &#x200B;](fastly-custom-cache-configuration.md#extend-fastly-timeout)設定をカスタマイズして、一括操作リクエストに対する503件の応答を防ぎます
 
-  - [ カスタムエラー応答ページを作成](fastly-custom-response.md)
+  - [&#x200B; カスタムエラー応答ページを作成](fastly-custom-response.md)
 
 - **セキュリティ** - Adobe Commerce サイトに対してFastly サービスを有効にした後、サイトとネットワークを保護するために追加のセキュリティ機能を利用できます。
 
@@ -84,7 +84,7 @@ Fastlyは、Adobe Commerceのクラウドインフラプロジェクト向けに
 
     Adobe Commerceでは、ステージング環境と実稼動環境ごとにドメイン検証済みのLet&#39;s Encrypt SSL/TLS証明書を提供しています。 Adobe Commerceは、Fastlyの設定プロセスにおいて、ドメインの検証と証明書のプロビジョニングを完了します。
 
-- **オリジンクローキング** – すべてのトラフィックがFastlyを経由することを保証し、オリジンサーバーへの直接アクセスをブロックするセキュリティ機能。 以下の「[発信元のクローキング ](#origin-cloaking)」セクションを参照してください。
+- **オリジンクローキング** – すべてのトラフィックがFastlyを経由することを保証し、オリジンサーバーへの直接アクセスをブロックするセキュリティ機能。 以下の「[発信元のクローキング &#x200B;](#origin-cloaking)」セクションを参照してください。
 
 - **[画像の最適化](fastly-image-optimization.md)** - サーバーがより効率的に注文とコンバージョンを処理できるように、画像処理とサイズ変更の負荷をFastly サービスにオフロードします。
 
@@ -132,9 +132,9 @@ mywebsite.com/rest/default/V1/inventory/source-items
 
 ## Magento 2用Fastly CDN モジュール
 
-クラウドインフラストラクチャ上のAdobe Commerce用Fastly サービスでは、次の環境にインストールされているMagento 2]用の[Fastly CDN モジュールを使用します：Pro ステージングおよび実稼動、スタータープロダクション（`master` ブランチ）。
+クラウドインフラストラクチャ上のAdobe Commerce用Fastly サービスでは、次の環境にインストールされているMagento 2&rbrack;用の&lbrack;Fastly CDN モジュールを使用します：Pro ステージングおよび実稼動、スタータープロダクション（`master` ブランチ）。
 
-Adobe Commerce プロジェクトの最初のプロビジョニングまたはアップグレード時に、Adobeは最新バージョンのFastly CDN モジュールをステージング環境および実稼動環境にインストールします。 Fastlyがモジュールの更新をリリースすると、環境の管理者に通知が届きます。 Adobeでは、最新リリースを使用するように環境を更新することをお勧めします。 [Fastlyのアップグレード ](fastly-configuration.md#upgrade-the-fastly-module)を参照してください。
+Adobe Commerce プロジェクトの最初のプロビジョニングまたはアップグレード時に、Adobeは最新バージョンのFastly CDN モジュールをステージング環境および実稼動環境にインストールします。 Fastlyがモジュールの更新をリリースすると、環境の管理者に通知が届きます。 Adobeでは、最新リリースを使用するように環境を更新することをお勧めします。 [Fastlyのアップグレード &#x200B;](fastly-configuration.md#upgrade-the-fastly-module)を参照してください。
 
 ## Fastlyのサービスアカウントと認証情報
 
@@ -152,7 +152,7 @@ Adobe Commerce サポートチケットを送信して、新しいFastly API ト
 
 **Fastly API トークン資格情報を変更するには**:
 
-1. 新しいFastly API資格情報をリクエストする[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
+1. 新しいFastly API資格情報をリクエストする[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信します。
 
    Adobe Commerce on cloud インフラストラクチャプロジェクト IDと、新しい資格情報を必要とする環境を含めます。
 

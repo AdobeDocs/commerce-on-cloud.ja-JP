@@ -50,7 +50,7 @@ New Relic Logs アプリケーションを使用して、集約されたログ�
 
 **New Relic Logs アプリケーションを使用するには**:
 
-1. [New Relic アカウント ](https://login.newrelic.com/login)にログインします。
+1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインします。
 
 1. エクスプローラーのナビゲーションメニューから「**ログ**」を選択します。
 
@@ -62,7 +62,7 @@ New Relic Logs アプリケーションを使用して、集約されたログ�
 
    ログファイルの名前は、`filePath`列に保存され、ログファイルへの完全なパスが表示されます。
 
-   ![Cloud プロジェクト New Relic サービスのログデータ ](../../assets/new-relic/var-log-query.png)
+   ![Cloud プロジェクト New Relic サービスのログデータ &#x200B;](../../assets/new-relic/var-log-query.png)
 
 1. Fastly ログデータを確認するには、_ログの検索_ フィールドにクエリ文字列`has: "client_ip"`を入力します。 次に、**[!UICONTROL Query logs]**&#x200B;をクリックします。
 
@@ -74,4 +74,4 @@ New Relic Logs アプリケーションを使用して、集約されたログ�
 >
 >クエリ ビューは、_保存ビュー_ ドロップダウンから保存できます。 **[!UICONTROL Create new]**&#x200B;をクリックし、名前を入力してオプションを選択し、**[!UICONTROL Save view]**&#x200B;をクリックします。
 >
->_New Relic Docs_ サイトの[ ログ管理の基本](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/)および[New Relic クエリ言語の概要](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/)を参照してください。
+>_New Relic Docs_ サイトの[&#x200B; ログ管理の基本](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/)および[New Relic クエリ言語の概要](https://docs.newrelic.com/docs/query-your-data/nrql-new-relic-query-language/get-started/introduction-nrql-new-relics-query-language/)を参照してください。

@@ -96,8 +96,8 @@ Fastly IO VCL スニペットをアップロードして、管理パネルから
 
    - **フィルター**&#x200B;のサイズ変更 – デフォルト設定（`Lancsoz3`）のままにするか、代替を選択します。 この設定では、サイズ変更された画像を配信するために使用するフィルターを指定します。 選択したフィルターに応じて、サイズ変更された画像のピクセル数を増減できます。
 
-     - `Lanczos3` （デフォルト） – 最高画質の画像を提供します。 画像内のエッジと線形の特徴を検出する能力を高め、可能な限り最良の再構成を提供するために&#x200B;_[!DNL sinc]_リサンプリングを使用します。
-     - `Lanczos2` - `Lancsoz3`と同じフィルターを使用しますが、_[!DNL sinc]_再サンプリング関数の精度が低くなります。
+     - `Lanczos3` （デフォルト） – 最高画質の画像を提供します。 画像内のエッジと線形の特徴を検出する能力を高め、可能な限り最良の再構成を提供するために&#x200B;_[!DNL sinc]_&#x200B;リサンプリングを使用します。
+     - `Lanczos2` - `Lancsoz3`と同じフィルターを使用しますが、_[!DNL sinc]_&#x200B;再サンプリング関数の精度が低くなります。
      - `Bicubic` – 画像を小さくすると、自然なシャープ効果が得られます。
      - `Bilinear` – 画像を大きくすると、自然なスムージング効果が得られます。
      - `Nearest` - ピクセルアートのサイズを変更すると、自然なピクセル化効果が得られます。
@@ -108,9 +108,9 @@ Fastly IO VCL スニペットをアップロードして、管理パネルから
 
    ![Fastly IOの深層画像最適化を有効にする](../../assets/cdn/fastly-io-deep-image-config.png)
 
-   深層画像最適化はデフォルトでオフになっています。 この機能が有効になっている場合、Adobe Commerceの組み込みのサイズ変更機能がオフになり、サイズ変更作業がFastly IO サービスにオフロードされます。 画像の最適化は、製品画像にのみ適用されます。 CMS画像のサイズは変更されません。 [Fastlyのドキュメント ](#deep-image-optimization)を参照してください。
+   深層画像最適化はデフォルトでオフになっています。 この機能が有効になっている場合、Adobe Commerceの組み込みのサイズ変更機能がオフになり、サイズ変更作業がFastly IO サービスにオフロードされます。 画像の最適化は、製品画像にのみ適用されます。 CMS画像のサイズは変更されません。 [Fastlyのドキュメント &#x200B;](#deep-image-optimization)を参照してください。
 
-1. 深層画像の最適化を有効にした後、[ アダプティブピクセル比](#adaptive-pixel-ratios)機能を有効にして、レスポンシブ web サイトでの使用に最適化された画像を生成します。
+1. 深層画像の最適化を有効にした後、[&#x200B; アダプティブピクセル比](#adaptive-pixel-ratios)機能を有効にして、レスポンシブ web サイトでの使用に最適化された画像を生成します。
 
    ![Fastly IO アダプティブピクセル比を有効にする](../../assets/cdn/fastly-io-config-adaptive-pixel.png)
 
@@ -174,7 +174,7 @@ Fastly IOのディープ画像最適化機能が有効になっている場合�
      alt="Fusion Backpack"/>
 ```
 
-`srcset` [ ブラウザーのサポート ](https://caniuse.com/#feat=srcset)および[仕様](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset)を参照してください。
+`srcset` [&#x200B; ブラウザーのサポート &#x200B;](https://caniuse.com/#feat=srcset)および[仕様](https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset)を参照してください。
 
 ## Fastly IOの検証
 

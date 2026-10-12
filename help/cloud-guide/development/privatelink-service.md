@@ -63,7 +63,7 @@ Adobe Commerce クラウドインフラストラクチャプロジェクト向�
 - Adobe Commerce サポートでは、初期イネーブルメント以外のAWS PrivateLinkの問題のトラブルシューティングは扱いません。
 - お客様は、独自のVPCの管理に関連するコストについて責任を負います。
 - プラットフォーム別&#x200B;**HTTPS プロトコル （ポート 443）のサポート：**
-  - **Azure プライベートリンク**: [Fastly オリジンのクローキング ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)により、HTTPS プロトコル（ポート 443）を使用してクラウドインフラストラクチャ上のAdobe Commerceに接続できません。
+  - **Azure プライベートリンク**: [Fastly オリジンのクローキング &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly)により、HTTPS プロトコル（ポート 443）を使用してクラウドインフラストラクチャ上のAdobe Commerceに接続できません。
   - **AWS PrivateLink**: HTTPS プロトコル （ポート 443）接続がサポートされています。
 - PrivateDNSは使用できません。
 
@@ -71,7 +71,7 @@ Adobe Commerce クラウドインフラストラクチャプロジェクト向�
 
 次のネットワーク図に示すように、PrivateLink接続タイプは2つあり、ストアとクラウド環境外でホストされている外部システムとの間で安全な通信を確立できます。
 
-![PrivateLink ネットワーク ダイアグラム ](../../assets/privatelink-architecture-diagram.png)
+![PrivateLink ネットワーク ダイアグラム &#x200B;](../../assets/privatelink-architecture-diagram.png)
 
 Adobe Commerce on cloud infrastructure環境に最適なPrivateLink接続タイプのいずれかを選択します。
 
@@ -133,7 +133,7 @@ PrivateLinkの有効化に必要な次のデータを収集します。
 
 次のワークフローでは、PrivateLinkとAdobe Commerce オンクラウドインフラストラクチャとの統合のイネーブルメントプロセスの概要を説明します。
 
-1. **お客様**&#x200B;が、件名`PrivateLink support for <company>`を含むPrivateLinkの有効化を要求するサポートチケットを送信しました。 チケットにイネーブルメント ](#prerequisites)に必要な[ データを含めます。 Adobeでは、サポートチケットを使用して、イネーブルメントプロセス中のコミュニケーションを調整します。
+1. **お客様**&#x200B;が、件名`PrivateLink support for <company>`を含むPrivateLinkの有効化を要求するサポートチケットを送信しました。 チケットにイネーブルメント [&#128279;](#prerequisites)に必要な データを含めます。 Adobeでは、サポートチケットを使用して、イネーブルメントプロセス中のコミュニケーションを調整します。
 
 1. **Adobe**&#x200B;は、Adobe VPCのエンドポイントサービスへの顧客アカウントアクセスを有効にします。
 
@@ -231,7 +231,7 @@ Telnet アプリケーションを使用して、VPC エンドポイントサー
 
 ## PrivateLink設定の変更
 
-[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、既存のPrivateLink設定を変更します。 例えば、次のような変更をリクエストできます。
+[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、既存のPrivateLink設定を変更します。 例えば、次のような変更をリクエストできます。
 
 - Adobe Commerce on cloud infrastructure Proの実稼動環境またはステージング環境からPrivateLink接続を削除します。
 - Adobe エンドポイントサービスにアクセスするためのCustomer Cloud Platform アカウント番号を変更します。

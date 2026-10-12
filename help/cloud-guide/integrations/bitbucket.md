@@ -68,7 +68,7 @@ ht-degree: 0%
    git remote add origin git@bitbucket.org:<user-name>/<repo-name>.git
    ```
 
-   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント ](https://git-scm.com/docs/git-remote)を参照してください。
+   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント &#x200B;](https://git-scm.com/docs/git-remote)を参照してください。
 
 1. Bitbucket リモートが正しく追加されていることを確認します。
 
@@ -222,7 +222,7 @@ magento-cloud integration:validate
 
 1. [[!DNL Cloud Console]](../project/overview.md)にログインし、コミットメッセージが表示され、プロジェクトがデプロイされていることを確認します。
 
-   ![Bitbucket統合のテスト ](../../assets/bitbucket-integration.png)
+   ![Bitbucket統合のテスト &#x200B;](../../assets/bitbucket-integration.png)
 
 ## Cloud ブランチの作成
 
@@ -289,7 +289,7 @@ Bitbucket統合では、Adobe Commerce on cloud インフラストラクチャ �
 
 Bitbucket サーバー統合を使用するには、次のものが必要です。
 
-- [Bitbucket アクセス トークン ](https://confluence.atlassian.com/bitbucketserver/http-access-tokens-939515499.html) - プロジェクト `read`のアクセスとリポジトリ `admin`のアクセスを許可するトークンを生成します
+- [Bitbucket アクセス トークン &#x200B;](https://confluence.atlassian.com/bitbucketserver/http-access-tokens-939515499.html) - プロジェクト `read`のアクセスとリポジトリ `admin`のアクセスを許可するトークンを生成します
 - [Bitbucket サーバーURL](https://confluence.atlassian.com/bitbucketserver/specify-the-bitbucket-base-url-776640392.html) - Bitbucket インスタンスのベース URLを追加します
 
 Cloud CLIを使用してBitbucket サーバーの統合手順を実行できますが、完全なコマンドは次のようになります。

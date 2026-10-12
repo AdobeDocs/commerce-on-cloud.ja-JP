@@ -42,7 +42,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[[!DNL Cloud Console]](../project/overview.md)を使用して環境変数を[ オーバーライド構成設定](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings)に追加するには、次の例のように、変数名の前に`env:`を付ける必要があります。
+>[[!DNL Cloud Console]](../project/overview.md)を使用して環境変数を[&#x200B; オーバーライド構成設定](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/override-config-settings)に追加するには、次の例のように、変数名の前に`env:`を付ける必要があります。
 >
 >![環境変数の例](../../assets/set-env-variable-ui.png)
 
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ## 環境変数の表示
 
-`ece-tools` パッケージ ](../dev-tools/package-overview.md)の[から`env:config:show` コマンドを使用して、現在の環境の変数のリストを表示できます。
+`ece-tools` パッケージ [&#128279;](../dev-tools/package-overview.md)のから`env:config:show` コマンドを使用して、現在の環境の変数のリストを表示できます。
 
 ```bash
 php ./vendor/bin/ece-tools env:config:show variables

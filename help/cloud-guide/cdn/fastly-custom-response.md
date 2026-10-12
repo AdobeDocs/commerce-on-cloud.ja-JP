@@ -31,11 +31,11 @@ ht-degree: 0%
 
 Fastly オリジンへのリクエストが失敗した場合、Fastlyは、ユーザーにとって混乱しやすい基本的なフォーマットと汎用的なメッセージを含むデフォルトの応答ページを返します。 例えば、Fastlyは、503 エラーが原因でFastly オリジンへのリクエストが失敗した場合、次のデフォルトのエラーページを返します。
 
-![Fastlyの既定のエラーページ ](../../assets/cdn/fastly-503-example.png)
+![Fastlyの既定のエラーページ &#x200B;](../../assets/cdn/fastly-503-example.png)
 
 次の例に示すように、Adobe Commerce ストア設定を更新して、一部のデフォルトのレスポンスページを、より使いやすいメッセージングとHTMLのスタイルを改善したページに置き換えることができます。
 
-![Fastly カスタムエラーページ ](../../assets/cdn/fastly-new-error-page.png)
+![Fastly カスタムエラーページ &#x200B;](../../assets/cdn/fastly-new-error-page.png)
 
 現在、Adobe Commerce on cloud infrastructure プロジェクトに対して、次のFastly応答ページをカスタマイズできます。
 
@@ -48,7 +48,7 @@ Fastly オリジンへのリクエストが失敗した場合、Fastlyは、ユ�
 
 - コンテンツには、最大65,535文字を含めることができます。
 - HTML ソース内のすべてのCSS インラインを指定します。
-- Fastlyがオフラインの場合でも表示されるように、base64を使用してHTML ページの画像をバンドルします。 css-tricks サイトの[ データ URI](https://css-tricks.com/data-uris/)を参照してください。
+- Fastlyがオフラインの場合でも表示されるように、base64を使用してHTML ページの画像をバンドルします。 css-tricks サイトの[&#x200B; データ URI](https://css-tricks.com/data-uris/)を参照してください。
 
 ## 503 エラーページのカスタマイズ
 
@@ -87,7 +87,7 @@ Fastly設定にカスタム応答ページを追加するには：
 
 1. カスタムレスポンスページのソースコードをコピーして、HTML フィールドに貼り付けます。
 
-   ![更新503 エラーページ ](../../assets/cdn/fastly-customize-503-response.png)
+   ![更新503 エラーページ &#x200B;](../../assets/cdn/fastly-customize-503-response.png)
 
 1. ページの上部にある「**アップロード**」を選択して、カスタマイズしたHTML ソースをFastly サーバーにアップロードします。
 
@@ -103,7 +103,7 @@ Fastly設定にカスタム応答ページを追加するには：
 
 Fastly オリジンへのリクエストが、[WAF](fastly-waf-service.md) ブロッキングイベントによって引き起こされた`403 Forbidden` エラーで失敗した場合、お客様には次のデフォルトのWAF エラーページが表示されます。
 
-![WAF エラーページ ](../../assets/cdn/fastly-waf-403-error.png)
+![WAF エラーページ &#x200B;](../../assets/cdn/fastly-waf-403-error.png)
 
 次のコードサンプルは、デフォルトページのHTML ソースを示しています。
 
@@ -139,7 +139,7 @@ Fastly設定メニューの「**カスタム合成ページ** > **WAFページ�
 
 1. 右側のペインで、**フルページキャッシュ** > **Fastly設定** > **カスタム合成ページ**&#x200B;を展開します。
 
-   ![WAF エラーページの編集オプション ](../../assets/cdn/fastly-custom-synthetic-pages-edit-waf.png)
+   ![WAF エラーページの編集オプション &#x200B;](../../assets/cdn/fastly-custom-synthetic-pages-edit-waf.png)
 
 1. 「**WAF ページを編集**」を選択します。
 

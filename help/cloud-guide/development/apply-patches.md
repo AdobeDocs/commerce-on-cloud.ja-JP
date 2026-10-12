@@ -24,12 +24,12 @@ ht-degree: 0%
 ---
 # パッチを適用
 
-`magento/magento-cloud-patches` Composer パッケージ（[Cloud Patches for Commerce リリースノート ](../release-notes/cloud-patches.md)を参照）と[Quality Patches Tool](https://github.com/magento/quality-patches)は、インストール済みのAdobe Commerce アプリケーションにパッチを配信します。
+`magento/magento-cloud-patches` Composer パッケージ（[Cloud Patches for Commerce リリースノート &#x200B;](../release-notes/cloud-patches.md)を参照）と[Quality Patches Tool](https://github.com/magento/quality-patches)は、インストール済みのAdobe Commerce アプリケーションにパッチを配信します。
 
 - Cloud Patches for Commerce パッケージは、重要な修正を含む必要なパッチを提供します
-- 品質パッチは、下位互換性のない変更を含まない[個別のパッチ ](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)として、オプションの影響の小さい品質の修正を提供します
+- 品質パッチは、下位互換性のない変更を含まない[個別のパッチ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch)として、オプションの影響の小さい品質の修正を提供します
 
-リリースされたパッチの完全なリストを確認するには、_Commerce オペレーションツールガイド_&#x200B;の[利用可能なパッチ ](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)を参照してください。
+リリースされたパッチの完全なリストを確認するには、_Commerce オペレーションツールガイド_&#x200B;の[利用可能なパッチ &#x200B;](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)を参照してください。
 
 どちらのパッケージも、すべてのAdobe Commerce バージョンとCloud環境との統合を改善し、重要な修正、オプションの修正、およびカスタム修正の迅速な配信をサポートします。 これらのパッケージを使用して、Commerceで使用可能なすべての個々のパッチに関する一般的な情報を適用、取り消し、表示できます。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 >
 >Commerce パッケージの`ece-tools`またはCloud Patchesを更新すると、次回のデプロイメント時に最新の必須パッチが適用されます。 または、`ece-patches apply` CLI コマンドを使用して、デプロイ前にクラウド環境でローカルにパッチを適用および検証します。 デプロイメントプロセス中に必要なパッチをスキップすることはできません。
 >
->Adobe Commerce EEの使用権限を持つお客様のみが、`repo.magento.com`のCommerce Composer リポジトリから[Cloud Patches for Commerce パッケージ ](../release-notes/cloud-patches.md)をダウンロードできます。
+>Adobe Commerce EEの使用権限を持つお客様のみが、`repo.magento.com`のCommerce Composer リポジトリから[Cloud Patches for Commerce パッケージ &#x200B;](../release-notes/cloud-patches.md)をダウンロードできます。
 
 ## 前提条件
 
@@ -254,7 +254,7 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 
 ## Cloud以外のプロジェクトへのパッチの適用
 
-Magento Open SourceおよびAdobe Commerce プロジェクトに[品質パッチツール ](https://github.com/magento/quality-patches)を使用します。
+Magento Open SourceおよびAdobe Commerce プロジェクトに[品質パッチツール &#x200B;](https://github.com/magento/quality-patches)を使用します。
 
 ## ローカル環境でパッチを元に戻す
 

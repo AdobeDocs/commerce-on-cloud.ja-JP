@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ## サービスと統合の設定
 
-リモート環境に対する特定のデプロイメント動作を管理する特定の[設定ファイル ](../environment/overview.md)があります。 これらのトピックは個別に確認できます。
+リモート環境に対する特定のデプロイメント動作を管理する特定の[設定ファイル &#x200B;](../environment/overview.md)があります。 これらのトピックは個別に確認できます。
 
 * [アプリケーションの展開](../application/configure-app-yaml.md)
 * [環境のビルドとデプロイのアクション](../environment/configure-env-yaml.md)

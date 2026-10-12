@@ -41,7 +41,7 @@ ht-degree: 0%
 ---
 # デプロイのベストプラクティス
 
-コードをリモート環境にマージする際にアクティブになるスクリプトをビルドおよびデプロイします。 これらのスクリプトでは、環境[設定ファイル ](../environment/overview.md)とアプリケーションコードを使用して、適切なデータとサービスを使用してクラウドインフラストラクチャをプロビジョニングします。 また、これらのスクリプトは、Adobe Commerce アプリケーション、サードパーティサービス、およびカスタム拡張機能をクラウド環境にインストールまたは更新するために使用されます。
+コードをリモート環境にマージする際にアクティブになるスクリプトをビルドおよびデプロイします。 これらのスクリプトでは、環境[設定ファイル &#x200B;](../environment/overview.md)とアプリケーションコードを使用して、適切なデータとサービスを使用してクラウドインフラストラクチャをプロビジョニングします。 また、これらのスクリプトは、Adobe Commerce アプリケーション、サードパーティサービス、およびカスタム拡張機能をクラウド環境にインストールまたは更新するために使用されます。
 
 ビルドとデプロイのプロセスは、プランごとに少しずつ異なります。
 
@@ -51,13 +51,13 @@ ht-degree: 0%
 
 ## プロセスの追跡
 
-ビルドおよびデプロイのアクションは、デプロイメントプロセス中にターミナルまたは[!DNL Cloud Console] ステータスメッセージ（`in-progress`、`pending`、`success`、または`failed`）を表示してリアルタイムで追跡できます。 ログファイルで詳細を表示できます。 [ ログの表示](../test/log-locations.md)を参照してください。
+ビルドおよびデプロイのアクションは、デプロイメントプロセス中にターミナルまたは[!DNL Cloud Console] ステータスメッセージ（`in-progress`、`pending`、`success`、または`failed`）を表示してリアルタイムで追跡できます。 ログファイルで詳細を表示できます。 [&#x200B; ログの表示](../test/log-locations.md)を参照してください。
 
 外部GitHub リポジトリを使用している場合、操作のログはGitHub セッションに表示されません。 ただし、外部リポジトリと[!DNL Cloud Console]のインターフェイスのアクティビティを引き続き実行できます。 [統合](../integrations/overview.md)を参照してください。
 
 >[!NOTE]
 >
->統合環境では、[!DNL Cloud Console]のデプロイ ログを表示できません。 この機能は、実稼動環境とステージング環境でのみ使用できます。 ただし、[ ビルドとデプロイ ](../test/log-locations.md#build-and-deploy-logs)のログを使用すると、任意の環境でデプロイメントの各フェーズのログを表示できます。 トラブルシューティング情報については、[ デプロイメントエラーリファレンス ](../dev-tools/error-reference.md)を参照してください。
+>統合環境では、[!DNL Cloud Console]のデプロイ ログを表示できません。 この機能は、実稼動環境とステージング環境でのみ使用できます。 ただし、[&#x200B; ビルドとデプロイ &#x200B;](../test/log-locations.md#build-and-deploy-logs)のログを使用すると、任意の環境でデプロイメントの各フェーズのログを表示できます。 トラブルシューティング情報については、[&#x200B; デプロイメントエラーリファレンス &#x200B;](../dev-tools/error-reference.md)を参照してください。
 
 [New Relic](../monitor/track-deployments.md)でデプロイメントを追跡を有効にして、デプロイメントイベントを監視し、デプロイメント間のパフォーマンスを分析できます。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 - **最新バージョンの`ece-tools` パッケージを実行していることを確認してください**
 
-  ECE-Tools](../release-notes/ece-tools-package.md)の[ リリースノートを参照してください。
+  ECE-Tools[&#128279;](../release-notes/ece-tools-package.md)の リリースノートを参照してください。
 
 - **ビルドとデプロイのプロセスに従う**
 
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 - **機密性の高い設定値とデータを環境固有の変数に保持**
 
-  これらの値には、Cloud CLI、[!DNL Cloud Console]、または`env.php` ファイルに追加された変数が含まれます。 [変数レベル ](../environment/variable-levels.md)を参照してください。
+  これらの値には、Cloud CLI、[!DNL Cloud Console]、または`env.php` ファイルに追加された変数が含まれます。 [変数レベル &#x200B;](../environment/variable-levels.md)を参照してください。
 
 - **すべてのコードが環境ブランチで利用できることを確認してください**
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 - **サービスのバージョンと関係、および接続する機能を確認する**
 
-  アプリケーションで使用可能なサービスを確認し、最新の互換性のあるバージョンを使用していることを確認します。 推奨バージョンについては、_インストールガイド_&#x200B;の[ サービス関係](../services/services-yaml.md#service-relationships)および[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
+  アプリケーションで使用可能なサービスを確認し、最新の互換性のあるバージョンを使用していることを確認します。 推奨バージョンについては、_インストールガイド_&#x200B;の[&#x200B; サービス関係](../services/services-yaml.md#service-relationships)および[必要システム構成](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)を参照してください。
 
 - **ステージングおよび実稼動にデプロイする前に、ローカルおよび統合環境でテストします**
 
@@ -99,11 +99,11 @@ ht-degree: 0%
 
   >[!TIP]
   >
-  >クラウドプロジェクトの設定が、静的コンテンツ展開（SCD）戦略を含む、ビルドおよびデプロイメント設定のベストプラクティスに従っていることを確認するために使用できる[ スマートウィザード ](../deploy/smart-wizards.md)のコマンドがあります。
+  >クラウドプロジェクトの設定が、静的コンテンツ展開（SCD）戦略を含む、ビルドおよびデプロイメント設定のベストプラクティスに従っていることを確認するために使用できる[&#x200B; スマートウィザード &#x200B;](../deploy/smart-wizards.md)のコマンドがあります。
 
 - **ローカル環境と統合環境でのテストを完了したら、ステージング環境でデプロイしてテストします**
 
-  [ ステージングおよび実稼動テスト ](../test/staging-and-production.md)を参照してください。
+  [&#x200B; ステージングおよび実稼動テスト &#x200B;](../test/staging-and-production.md)を参照してください。
 
 - **実稼動環境の設定を確認**
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 
   - [SSH](../development/secure-connections.md)を使用して、実稼動環境内のすべての3つのノードに接続できることを確認してください。
 
-  - インデクサーがスケジュール _で_&#x200B;更新に設定されていることを確認します。 _拡張機能デベロッパーガイド_&#x200B;の[ インデックス作成モード ](https://developer.adobe.com/commerce/php/development/components/indexing/)を参照してください。
+  - インデクサーがスケジュール _で_&#x200B;更新に設定されていることを確認します。 _拡張機能デベロッパーガイド_&#x200B;の[&#x200B; インデックス作成モード &#x200B;](https://developer.adobe.com/commerce/php/development/components/indexing/)を参照してください。
 
   - 実稼動コード内の環境固有の変数を更新し、サービスの可用性と互換性を確認し、その他の必要な設定変更を行うことで、環境を準備します。
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 ### フェーズ 1: コードと設定の検証
 
-最初にプロジェクトを設定すると、[ クラウドインフラストラクチャテンプレート ](https://github.com/magento/magento-cloud)によってコードファイルの基礎が提供されます。 このコード リポジトリは、`master` ブランチとしてプロジェクトに複製されます。
+最初にプロジェクトを設定すると、[&#x200B; クラウドインフラストラクチャテンプレート &#x200B;](https://github.com/magento/magento-cloud)によってコードファイルの基礎が提供されます。 このコード リポジトリは、`master` ブランチとしてプロジェクトに複製されます。
 
 - **Starter**—`master` ブランチは実稼動環境です。
 - **For Pro**—`master`は、統合環境のオリジン ブランチとして開始されます。
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 ローカルのワークスペースからリモートリポジトリにコードをプッシュすると、ビルドとデプロイのスクリプトが開始される前に、一連のチェックとコード検証が完了します。 組み込みのGit サーバーは、プッシュする内容を検証し、変更を加えます。 例えば、OpenSearch サービスを追加した場合、組み込みのGit サーバーは、クラスターのトポロジが適切に変更されていることを確認します。
 
-設定ファイルに構文エラーがある場合、Git サーバーはプッシュを拒否します。 [保護ブロック ](../development/protective-block.md)を参照してください。
+設定ファイルに構文エラーがある場合、Git サーバーはプッシュを拒否します。 [保護ブロック &#x200B;](../development/protective-block.md)を参照してください。
 
 このフェーズでは、依存関係を取得するために`composer install`も実行されます。
 
@@ -147,14 +147,14 @@ ht-degree: 0%
 このフェーズでは、コードベースを構築し、`.magento.app.yaml`の`build` セクションでフックを実行します。 デフォルトのビルドフックは`php ./vendor/bin/ece-tools` コマンドで、次の操作を実行します。
 
 - `vendor/magento/ece-patches`にパッチ、および`m2-hotfixes`にプロジェクト固有のオプションのパッチを適用します
-- コードと、`bin/magento setup:di:compile`を使用して[依存関係インジェクション ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)設定（つまり、`generated/` ディレクトリで、`generated/code`と`generated/metapackage`が含まれる）を再生成します。
-- [`app/etc/config.php`](../store/store-settings.md) ファイルがコードベースに存在するかどうかを確認します。 Adobe Commerceは、ビルド段階でこのファイルを検出せず、モジュールと拡張機能のリストを含む場合、このファイルを自動生成します。 ビルド段階が存在する場合は、通常どおり続行し、GZIPを使用して静的ファイルを圧縮してデプロイします。これにより、デプロイメント段階でのダウンタイムが減少します。 ファイル圧縮のカスタマイズまたは無効化について詳しくは、[ ビルドオプション ](../environment/variables-build.md)を参照してください。
+- コードと、`bin/magento setup:di:compile`を使用して[依存関係インジェクション &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)設定（つまり、`generated/` ディレクトリで、`generated/code`と`generated/metapackage`が含まれる）を再生成します。
+- [`app/etc/config.php`](../store/store-settings.md) ファイルがコードベースに存在するかどうかを確認します。 Adobe Commerceは、ビルド段階でこのファイルを検出せず、モジュールと拡張機能のリストを含む場合、このファイルを自動生成します。 ビルド段階が存在する場合は、通常どおり続行し、GZIPを使用して静的ファイルを圧縮してデプロイします。これにより、デプロイメント段階でのダウンタイムが減少します。 ファイル圧縮のカスタマイズまたは無効化について詳しくは、[&#x200B; ビルドオプション &#x200B;](../environment/variables-build.md)を参照してください。
 
 >[!WARNING]
 >
 >この時点では、クラスターは作成されていないので、データベースへの接続を試みたり、アクティブなデーモンプロセスがあると仮定したりしないでください。
 
-アプリケーションのビルド後、読み取り専用の&#x200B;**ファイルシステム**&#x200B;にマウントされます。 読み取り/書き込みを行う特定のマウントポイントを設定できます。 サーバーにFTP接続してモジュールを追加することはできません。 代わりに、ローカル リポジトリにコードを追加して`git push`を実行し、環境を構築およびデプロイする必要があります。 プロジェクト構造については、[ ローカルプロジェクトディレクトリ構造](../project/file-structure.md)を参照してください。
+アプリケーションのビルド後、読み取り専用の&#x200B;**ファイルシステム**&#x200B;にマウントされます。 読み取り/書き込みを行う特定のマウントポイントを設定できます。 サーバーにFTP接続してモジュールを追加することはできません。 代わりに、ローカル リポジトリにコードを追加して`git push`を実行し、環境を構築およびデプロイする必要があります。 プロジェクト構造については、[&#x200B; ローカルプロジェクトディレクトリ構造](../project/file-structure.md)を参照してください。
 
 ### フェーズ 3：スラグの準備
 
@@ -174,7 +174,7 @@ ht-degree: 0%
 
 ### フェーズ 4：スラグとクラスターのデプロイ
 
-アプリケーションとすべての[ バックエンド ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) サービスのプロビジョニングは次のとおりです。
+アプリケーションとすべての[&#x200B; バックエンド &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) サービスのプロビジョニングは次のとおりです。
 
 - Web サーバー、OpenSearch、[!DNL RabbitMQ]などのコンテナ内の各サービスをマウントします
 - 読み取り/書き込みファイルシステムをマウントします（高可用性の分散型ストレージグリッドにマウント）
@@ -196,17 +196,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->ファイル圧縮のカスタマイズまたは無効化について詳しくは、[変数のデプロイ ](../environment/variables-deploy.md)を参照してください。
+>ファイル圧縮のカスタマイズまたは無効化について詳しくは、[変数のデプロイ &#x200B;](../environment/variables-deploy.md)を参照してください。
 
 デプロイメントフックは2つあります。 `pre-deploy.php` フックは、ビルドフックで生成されたリソースとコードの必要なクリーンアップと取得を完了します。 `php ./vendor/bin/ece-tools deploy` フックは、一連のコマンドとスクリプトを実行します。
 
-- Adobe Commerceが&#x200B;**インストールされていない**&#x200B;場合は、`bin/magento setup:install`でインストールし、デプロイメント設定、`app/etc/env.php`およびRedisやweb サイト URLなどの指定された環境のデータベースを更新します。 **重要：** セットアップ中に[初回デプロイメント ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/overview)を完了すると、Adobe Commerceがすべての環境にインストールされ、デプロイされました。
+- Adobe Commerceが&#x200B;**インストールされていない**&#x200B;場合は、`bin/magento setup:install`でインストールし、デプロイメント設定、`app/etc/env.php`およびRedisやweb サイト URLなどの指定された環境のデータベースを更新します。 **重要：** セットアップ中に[初回デプロイメント &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/overview)を完了すると、Adobe Commerceがすべての環境にインストールされ、デプロイされました。
 
 - Adobe Commerce **がインストールされている**&#x200B;場合は、必要なアップグレードを実行します。 デプロイメントスクリプトは、`bin/magento setup:upgrade`を実行して、（拡張機能またはコアコードの更新後に必要となる）データベーススキーマとデータを更新し、環境のデプロイメント設定、`app/etc/env.php`、およびデータベースも更新します。 最後に、デプロイメントスクリプトによってAdobe Commerce キャッシュがクリアされます。
 
 - スクリプトは、オプションでコマンド `magento setup:static-content:deploy`を使用して静的web コンテンツを生成します。
 
-- 静的コンテンツのデプロイメント戦略に対して、スコープ（`-s` フラグ、ビルドスクリプト）をデフォルト設定`quick`で使用します。 環境変数[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)を使用して、戦略をカスタマイズできます。 これらのオプションと機能について詳しくは、[静的ファイルのデプロイメント戦略](../deploy/static-content.md)および[静的ビューファイルのデプロイ ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)の`-s` フラグを参照してください。
+- 静的コンテンツのデプロイメント戦略に対して、スコープ（`-s` フラグ、ビルドスクリプト）をデフォルト設定`quick`で使用します。 環境変数[`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy)を使用して、戦略をカスタマイズできます。 これらのオプションと機能について詳しくは、[静的ファイルのデプロイメント戦略](../deploy/static-content.md)および[静的ビューファイルのデプロイ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment)の`-s` フラグを参照してください。
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ ht-degree: 0%
 
 正常に展開すると、通常のアクセスを許可するメンテナンスモードが削除され、`app/etc/env.php`および`app/etc/config.php`設定ファイルのバックアップ （BAK） ファイルが作成されます。
 
-`SCD_ON_DEMAND`変数を使用して静的コンテンツ生成を有効にし、[`post_deploy` フック ](../application/hooks-property.md)を設定して、キャッシュをクリアし、コンテナが接続の受け入れを開始した&#x200B;_後_&#x200B;にキャッシュをプリロード（ウォーム）し、_通常の受信トラフィック中に_&#x200B;します。
+`SCD_ON_DEMAND`変数を使用して静的コンテンツ生成を有効にし、[`post_deploy` フック &#x200B;](../application/hooks-property.md)を設定して、キャッシュをクリアし、コンテナが接続の受け入れを開始した&#x200B;_後_&#x200B;にキャッシュをプリロード（ウォーム）し、_通常の受信トラフィック中に_&#x200B;します。
 
-ビルドおよびデプロイ ログを確認するには、[ ログの表示](../test/log-locations.md#view-and-manage-logs)を参照してください。
+ビルドおよびデプロイ ログを確認するには、[&#x200B; ログの表示](../test/log-locations.md#view-and-manage-logs)を参照してください。
 

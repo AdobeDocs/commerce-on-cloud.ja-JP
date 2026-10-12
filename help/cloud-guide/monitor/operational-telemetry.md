@@ -40,4 +40,4 @@ Operational Telemetry データにアクセスするか、サービスを無効�
 
 >[!NOTE]
 >
->サービスの詳細については、[運用上のテレメトリ ](https://www.aem.live/docs/operational-telemetry)を参照してください。
+>サービスの詳細については、[運用上のテレメトリ &#x200B;](https://www.aem.live/docs/operational-telemetry)を参照してください。

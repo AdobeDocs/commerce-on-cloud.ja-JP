@@ -63,7 +63,7 @@ ht-degree: 0%
 
 >[!PREREQUISITES]
 >
->- Adobe IDの登録済みユーザー。 ユーザーは[Adobe アカウント ](https://account.adobe.com)に登録し、Cloud プロジェクトに追加する前に[Cloud アカウント ](https://console.adobecommerce.com)を初期化する必要があります。
+>- Adobe IDの登録済みユーザー。 ユーザーは[Adobe アカウント &#x200B;](https://account.adobe.com)に登録し、Cloud プロジェクトに追加する前に[Cloud アカウント &#x200B;](https://console.adobecommerce.com)を初期化する必要があります。
 >- **管理者**&#x200B;の役割を割り当てられたユーザーは、`magento-cloud` CLIでユーザーを管理できません。 **アカウント所有者**&#x200B;の役割を付与されたユーザーのみがユーザーを管理できます。
 
 ## CLIによるユーザーの管理
@@ -169,7 +169,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 1. _アクセス_ ビューで、**[!UICONTROL Add]**&#x200B;をクリックします。
 
-1. _[!UICONTROL Add User]_フォームに入力します。
+1. _[!UICONTROL Add User]_&#x200B;フォームに入力します。
 
    - ユーザーのメールアドレスを入力します。
 
@@ -205,7 +205,7 @@ magento-cloud user:update alice@example.com -r production:a
 
 >[!NOTE]
 >
->[!DNL Cloud Console]には、[!DNL Legacy Cloud Console] （`https://<region-id>.magento.cloud/projects/<project_id>`）よりも招待状の状態が明示的に表示されます。 表示されるユーザーまたは招待エントリは、ユーザーがすべての環境にすぐにアクセスできるとは限りません。 SSH キーの設定やその他の伝搬手順が必要な場合があります。 [ ユーザー認証要件](#user-authentication-requirements)を参照してください。
+>[!DNL Cloud Console]には、[!DNL Legacy Cloud Console] （`https://<region-id>.magento.cloud/projects/<project_id>`）よりも招待状の状態が明示的に表示されます。 表示されるユーザーまたは招待エントリは、ユーザーがすべての環境にすぐにアクセスできるとは限りません。 SSH キーの設定やその他の伝搬手順が必要な場合があります。 [&#x200B; ユーザー認証要件](#user-authentication-requirements)を参照してください。
 
 ## ユーザー認証の要件
 
@@ -217,7 +217,7 @@ Adobe Commerce on cloud infrastructure プロジェクトでMFAの適用が有�
 
 - **TFA**&#x200B;を有効にする – 2要素認証を設定することで、セキュリティとコンプライアンスの基準を満たします。 [MFAの適用](multi-factor-authentication.md)で構成されたプロジェクトでは、SSHを使用してプロジェクトにアクセスするアカウントにTFAが必要です。
 
-- **SSH キーを有効にする** – クラウドインフラストラクチャのソースコード リポジトリでAdobe Commerceへのアクセスを必要とするユーザーは、アカウントでSSH キーを有効にする必要があります。 [ セキュア接続](../development/secure-connections.md)を参照してください。
+- **SSH キーを有効にする** – クラウドインフラストラクチャのソースコード リポジトリでAdobe Commerceへのアクセスを必要とするユーザーは、アカウントでSSH キーを有効にする必要があります。 [&#x200B; セキュア接続](../development/secure-connections.md)を参照してください。
 
 - **API トークンを作成**：ユーザーは、環境へのSSH アクセスに使用されるAPI トークンを生成する必要があります。 自動化されたプロセスの認証ワークフローを有効にするには、トークンが必要です。
 
@@ -236,7 +236,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
 **ユーザーアカウントでTFAを有効にするには**:
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 
@@ -270,7 +270,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
      >[!WARNING]
      >
-     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
+     >TFA アカウントへのアクセス権を失い、回復用コード リストを持っていない場合は、プロジェクト管理者に連絡するか、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信してTFA アプリケーションをリセットする必要があります。
 
 1. TFA設定が完了したら、**保存**&#x200B;をクリックしてアカウントを更新します。
 
@@ -284,7 +284,7 @@ Adobe Commerce on cloud infrastructureは、次のいずれかのアプリケー
 
 Adobe Commerce on cloud infrastructure アカウントのTFA設定は、_マイプロファイル_ ページの&#x200B;_セキュリティ_ セクションから管理できます。
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 
@@ -309,7 +309,7 @@ MFAの適用が有効になっているプロジェクトでは、マシンユ�
 
 **API トークンを作成するには**:
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 
@@ -317,7 +317,7 @@ MFAの適用が有効になっているプロジェクトでは、マシンユ�
 
 1. **[!UICONTROL Create API token]**&#x200B;をクリックして、名前を入力します。例えば、API トークンを使用するマシンユーザーまたは自動プロセスと一致する名前を指定します。
 
-   「![Cloud Console API トークン」タブと「API トークン名を作成」フィールド ](../../assets/api-token-name.png)
+   「![Cloud Console API トークン」タブと「API トークン名を作成」フィールド &#x200B;](../../assets/api-token-name.png)
 
 1. **[!UICONTROL Create API token]**&#x200B;をクリックします。
 

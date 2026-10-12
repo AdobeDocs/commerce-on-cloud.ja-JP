@@ -56,7 +56,7 @@ Adobe Commerceの各バージョンには、次の要素に基づいて異なる
 
 Adobe Commerce `2.3.5-p2`をインストールする場合は、`current_version`を`2.3.5`に、`next_version`を`2.3.6`に設定します。 制約`">=2.3.5 <2.3.6"`は、2.3.5の利用可能な最新のパッケージをインストールします。
 
-最新のメタパッケージ制約は、[`magento-cloud` テンプレート ](https://github.com/magento/magento-cloud/blob/master/composer.json)にいつでも見つけることができます。
+最新のメタパッケージ制約は、[`magento-cloud` テンプレート &#x200B;](https://github.com/magento/magento-cloud/blob/master/composer.json)にいつでも見つけることができます。
 
 次の例では、Adobe Commerce on cloud infrastructure メタパッケージの制約を、現在のバージョン 2.4.8以上のバージョンと次のバージョン 2.4.9未満のバージョンに設定します。
 

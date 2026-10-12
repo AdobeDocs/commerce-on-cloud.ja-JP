@@ -33,13 +33,13 @@ ht-degree: 0%
 # シナリオベースの展開
 
 `ece-tools` 2002.1.0以降では、シナリオベースのデプロイメント機能を使用して、デフォルトのデプロイメント動作をカスタマイズできます。
-この機能は、設定で**シナリオ**&#x200B;と&#x200B;**ステップ**&#x200B;を使用します。
+この機能は、設定で&#x200B;**シナリオ**&#x200B;と&#x200B;**ステップ**&#x200B;を使用します。
 
 - **シナリオ設定** – 各デプロイメントフックは&#x200B;*シナリオ*&#x200B;であり、デプロイメントタスクを完了するためのシーケンスと設定パラメーターを記述するXML設定ファイルです。 シナリオは、`.magento.app.yaml` ファイルの`hooks` セクションで設定します。
 
 - **手順の設定** – 各シナリオでは、デプロイメントタスクを完了するために必要な操作をプログラムによって記述する&#x200B;*手順*&#x200B;のシーケンスを使用します。 XML ベースのシナリオ設定ファイルで手順を設定します。
 
-クラウド インフラストラクチャ上のAdobe Commerceでは、`ece-tools` パッケージに[既定のシナリオ ](https://github.com/magento/ece-tools/tree/2002.1/scenario)と[既定の手順](https://github.com/magento/ece-tools/tree/2002.1/src/Step)のセットが用意されています。 カスタム XML設定ファイルを作成してデフォルト設定を上書きまたはカスタマイズすることで、デプロイメントの動作をカスタマイズできます。 また、シナリオと手順を使用して、カスタムモジュールからコードを実行することもできます。
+クラウド インフラストラクチャ上のAdobe Commerceでは、`ece-tools` パッケージに[既定のシナリオ &#x200B;](https://github.com/magento/ece-tools/tree/2002.1/scenario)と[既定の手順](https://github.com/magento/ece-tools/tree/2002.1/src/Step)のセットが用意されています。 カスタム XML設定ファイルを作成してデフォルト設定を上書きまたはカスタマイズすることで、デプロイメントの動作をカスタマイズできます。 また、シナリオと手順を使用して、カスタムモジュールからコードを実行することもできます。
 
 ## ビルドフックとデプロイフックを使用したシナリオの追加
 
@@ -61,7 +61,7 @@ hooks:
 
 >[!NOTE]
 >
->`ece-tools` 2002.1.xのリリースには、新しい[ フック設定](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)形式があります。 2002.0.x リリース `ece-tools`の従来の形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
+>`ece-tools` 2002.1.xのリリースには、新しい[&#x200B; フック設定](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property)形式があります。 2002.0.x リリース `ece-tools`の従来の形式は、引き続きサポートされます。 ただし、シナリオベースのデプロイメント機能を使用するには、新しい形式に更新する必要があります。
 
 ## シナリオステップの確認
 
@@ -239,7 +239,7 @@ hooks:
 
 >[!TIP]
 >
->`ece-tools` GitHub リポジトリの[ デフォルトのシナリオ ](https://github.com/magento/ece-tools/tree/2002.1/scenario)と[ デフォルトのステップ設定](https://github.com/magento/ece-tools/tree/2002.1/src/Step)を確認して、プロジェクトのビルド、デプロイ、デプロイ後のタスクに合わせてカスタマイズするシナリオとステップを決定できます。
+>`ece-tools` GitHub リポジトリの[&#x200B; デフォルトのシナリオ &#x200B;](https://github.com/magento/ece-tools/tree/2002.1/scenario)と[&#x200B; デフォルトのステップ設定](https://github.com/magento/ece-tools/tree/2002.1/src/Step)を確認して、プロジェクトのビルド、デプロイ、デプロイ後のタスクに合わせてカスタマイズするシナリオとステップを決定できます。
 
 ## カスタムモジュールを追加して`ece-tools`を拡張
 
@@ -291,7 +291,7 @@ hooks:
    </container>
    ```
 
-依存関係インジェクションについて詳しくは、[Symfony依存関係インジェクション ](https://symfony.com/doc/current/components/dependency_injection.html)を参照してください。
+依存関係インジェクションについて詳しくは、[Symfony依存関係インジェクション &#x200B;](https://symfony.com/doc/current/components/dependency_injection.html)を参照してください。
 
 <!-- link definitions -->
 

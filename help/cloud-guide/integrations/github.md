@@ -83,7 +83,7 @@ GitHub開発者設定で、従来の個人アクセストークンを作成し�
    git remote add origin git@github.com:<user-name>/<repo-name>.git
    ```
 
-   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント ](https://git-scm.com/docs/git-remote)を参照してください。
+   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント &#x200B;](https://git-scm.com/docs/git-remote)を参照してください。
 
 1. GitHub リモートが正しく追加されていることを確認します。
 

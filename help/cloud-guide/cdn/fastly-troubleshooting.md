@@ -42,7 +42,7 @@ ht-degree: 0%
 
 以下の情報を使用して、Adobe Commerce on cloud インフラストラクチャプロジェクト環境のMagento 2用Fastly CDN モジュールのトラブルシューティングと管理を行います。 例えば、応答ヘッダーの値とキャッシュ動作を調査して、Fastlyのサービスとパフォーマンスの問題を解決できます。
 
-Pro実稼動環境およびステージング環境では、[New Relic ログ ](../monitor/log-management.md)を使用して、Fastly CDNおよびWAF ログデータを表示および分析し、エラーとパフォーマンスの問題をトラブルシューティングできます。
+Pro実稼動環境およびステージング環境では、[New Relic ログ &#x200B;](../monitor/log-management.md)を使用して、Fastly CDNおよびWAF ログデータを表示および分析し、エラーとパフォーマンスの問題をトラブルシューティングできます。
 
 >[!NOTE]
 >
@@ -66,7 +66,7 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 次のリストを使用して、Adobe Commerce on cloud infrastructure環境のFastly サービス設定に関連する問題を特定し、トラブルシューティングします。
 
-- **ストアメニューが表示されないか、動作しません** – ライブサイト URLを使用する代わりに、オリジンサーバーへのリンクまたは一時リンクを直接使用しているか、[cURL コマンド ](#check-live-site-through-fastly)で`-H "host:URL"`を使用している可能性があります。 Fastlyをオリジンサーバーにバイパスすると、メインメニューが機能せず、ブラウザー側でキャッシュできる誤ったヘッダーが表示されます。
+- **ストアメニューが表示されないか、動作しません** – ライブサイト URLを使用する代わりに、オリジンサーバーへのリンクまたは一時リンクを直接使用しているか、[cURL コマンド &#x200B;](#check-live-site-through-fastly)で`-H "host:URL"`を使用している可能性があります。 Fastlyをオリジンサーバーにバイパスすると、メインメニューが機能せず、ブラウザー側でキャッシュできる誤ったヘッダーが表示されます。
 
 - **上部ナビゲーションが機能しない** – 上部ナビゲーションは、デフォルトのMagento Fastly VCL スニペットをアップロードする際に有効になるEdge Side Includes （ESI）処理に依存しています。 ナビゲーションが機能しない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
 
@@ -87,7 +87,7 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
   - Adobe Commerce on cloud infrastructure プロジェクト環境のFastly サービス設定のFastly資格情報が無効です
   - カスタム VCL スニペットの無効なコード
 
-  この問題を解決するには、Adobe Commerce ヘルプセンターの「[ クラウド上のFastly キャッシュのパージ中にエラーが発生しました](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-)」を参照してください。
+  この問題を解決するには、Adobe Commerce ヘルプセンターの「[&#x200B; クラウド上のFastly キャッシュのパージ中にエラーが発生しました](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-)」を参照してください。
 
 ## Fastlyの503 エラー
 
@@ -95,7 +95,7 @@ Fastlyが503個のタイムアウトエラーを返す場合は、エラーロ�
 
 >[!NOTE]
 >
->一括操作の実行中にタイムアウトが発生した場合は、管理者](fastly-custom-cache-configuration.md#extend-fastly-timeout)のFastly タイムアウトを[拡張できます。
+>一括操作の実行中にタイムアウトが発生した場合は、管理者[&#128279;](fastly-custom-cache-configuration.md#extend-fastly-timeout)のFastly タイムアウトを拡張できます。
 
 503 エラーが発生した場合は、実稼動環境またはステージング環境のエラーログとphp アクセスログを確認して、問題のトラブルシューティングを行います。
 
@@ -117,7 +117,7 @@ Fastlyが503個のタイムアウトエラーを返す場合は、エラーロ�
 
   503 エラーを返したURLのHTTP 200応答のログを検索します。 200件の回答が見つかった場合は、Adobe Commerceがエラーなくページを返したことを意味します。 これは、Fastly サービス設定で設定された`first_byte_timeout`値を超える間隔の後に問題が発生した可能性があることを示しています。
 
-503 エラーが発生すると、Fastlyはエラーとメンテナンスページで理由を返します。 [ カスタム応答ページ ](fastly-custom-response.md)のコードを追加すると、理由が表示されない場合があります。 デフォルトのエラーページで理由コードを表示するには、カスタムエラーページのHTML コードを削除します。
+503 エラーが発生すると、Fastlyはエラーとメンテナンスページで理由を返します。 [&#x200B; カスタム応答ページ &#x200B;](fastly-custom-response.md)のコードを追加すると、理由が表示されない場合があります。 デフォルトのエラーページで理由コードを表示するには、カスタムエラーページのHTML コードを削除します。
 
 **Fastly 503 エラーページを確認するには**:
 
@@ -129,7 +129,7 @@ Fastlyが503個のタイムアウトエラーを返す場合は、エラーロ�
 
 1. **Fastly Configuration** セクションで、**カスタム合成ページ**&#x200B;を展開します。次の図を参照してください。
 
-   ![ カスタム 503 エラーページ ](../../assets/cdn/fastly-custom-synthetic-pages-edit-html.png)
+   ![&#x200B; カスタム 503 エラーページ &#x200B;](../../assets/cdn/fastly-custom-synthetic-pages-edit-html.png)
 
 1. 「**HTMLを設定**」をクリックします。
 
@@ -147,7 +147,7 @@ Fastlyが503個のタイムアウトエラーを返す場合は、エラーロ�
 
 Adobe Commerce on cloud infrastructure プロジェクトのapex ドメインとサブドメインが、割り当てられたサービス IDを持つ既存のFastly アカウントに既に関連付けられている場合、Fastly設定を更新するまで起動できません。
 
-- 既存のFastly アカウントのapexおよびサブドメイン設定を更新します。 [複数のFastly アカウントと割り当てられたドメイン ](fastly.md#multiple-fastly-accounts-and-assigned-domains)を参照してください。
+- 既存のFastly アカウントのapexおよびサブドメイン設定を更新します。 [複数のFastly アカウントと割り当てられたドメイン &#x200B;](fastly.md#multiple-fastly-accounts-and-assigned-domains)を参照してください。
 
 - [Fastly](fastly-configuration.md#enable-fastly-caching)を有効にして設定し、[DNS設定](../launch/checklist.md#update-dns-configuration-with-production-settings)を完了します
 
@@ -159,7 +159,7 @@ Adobe Commerce on cloud infrastructure プロジェクトのapex ドメインと
 
 Fastly APIを使用して、ライブサイトから返された`Fastly-Magento-VCL-Uploaded`および`X-Cache`応答ヘッダーを確認します。
 
-Fastly API リクエストは、Fastly拡張機能を通じて渡され、オリジンサーバーから応答を取得します。 応答が誤ったヘッダーを返す場合は、[ オリジンサーバーを直接テストします](#bypass-fastly-cache-to-check-adobe-commerce-sites)。
+Fastly API リクエストは、Fastly拡張機能を通じて渡され、オリジンサーバーから応答を取得します。 応答が誤ったヘッダーを返す場合は、[&#x200B; オリジンサーバーを直接テストします](#bypass-fastly-cache-to-check-adobe-commerce-sites)。
 
 **応答ヘッダーを確認するには**:
 
@@ -179,7 +179,7 @@ Fastly API リクエストは、Fastly拡張機能を通じて渡され、オリ
    >
    >`--resolve` オプションでこのコマンドを使用するには、SSL/TLS証明書を介してFastlyでTLSを有効にし、キャッシュノードのIP アドレスを見つける必要があります。
 
-1. 応答で、[ ヘッダー](#check-cache-hit-and-miss-response-headers)を確認して、Fastlyが動作していることを確認します。 応答には、次の一意のヘッダーが表示されます。
+1. 応答で、[&#x200B; ヘッダー](#check-cache-hit-and-miss-response-headers)を確認して、Fastlyが動作していることを確認します。 応答には、次の一意のヘッダーが表示されます。
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.222
@@ -194,7 +194,7 @@ Fastly API リクエストは、Fastly拡張機能を通じて渡され、オリ
 
 ### Fastly キャッシュをバイパスしてAdobe Commerce サイトを確認する
 
-Fastly サービスが誤ったヘッダーを返す場合は、Fastly キャッシュをバイパスするリクエストを送信できるVCL スニペットを作成できます。 [Fastly キャッシュのバイパス ](fastly-vcl-bypass-to-origin.md)を参照してください。
+Fastly サービスが誤ったヘッダーを返す場合は、Fastly キャッシュをバイパスするリクエストを送信できるVCL スニペットを作成できます。 [Fastly キャッシュのバイパス &#x200B;](fastly-vcl-bypass-to-origin.md)を参照してください。
 
 VCL スニペットを追加したら、cURL コマンドを使用して、指定したIP アドレスからオリジンサーバーにリクエストを送信します。 次に、応答にエラーがないか確認します。
 
@@ -249,7 +249,7 @@ cURL コマンド出力の次の抜粋は、`Pragma`、`X-Magento-Tags`、およ
 
 >[!NOTE]
 >
->ヒットとミスについて詳しくは、Fastly ドキュメントの「[ シールドサービスを使用したキャッシュヒットとミスのヘッダーについて](https://docs.fastly.com/guides/performance-tuning/understanding-cache-hit-and-miss-headers-with-shielded-services)」を参照してください。
+>ヒットとミスについて詳しくは、Fastly ドキュメントの「[&#x200B; シールドサービスを使用したキャッシュヒットとミスのヘッダーについて](https://docs.fastly.com/guides/performance-tuning/understanding-cache-hit-and-miss-headers-with-shielded-services)」を参照してください。
 
 ### 応答ヘッダーで見つかったエラーを解決する
 
@@ -279,7 +279,7 @@ php bin/magento module:status Fastly_Cdn
 
 #### Fastly VCLがアップロードされていない
 
-Fastly VCLがアップロードされていない場合（`Fastly-Magento-VCL-Uploaded`: `false`）、管理者の「*VCL*&#x200B;をアップロード」オプションを使用してアップロードします。 [Fastly VCL スニペットのアップロード ](fastly-configuration.md#upload-vcl-to-fastly)を参照してください。
+Fastly VCLがアップロードされていない場合（`Fastly-Magento-VCL-Uploaded`: `false`）、管理者の「*VCL*&#x200B;をアップロード」オプションを使用してアップロードします。 [Fastly VCL スニペットのアップロード &#x200B;](fastly-configuration.md#upload-vcl-to-fastly)を参照してください。
 
 #### X-CacheにはMISSのみが含まれ、HITは含まれません
 
@@ -287,7 +287,7 @@ Fastly VCLがアップロードされていない場合（`Fastly-Magento-VCL-Up
 
 `X-Cache` ヘッダーが`MISS, MISS`で、`HIT`が含まれていない場合は、`curl` コマンドを再度実行して、ページが最近キャッシュからパージされていないことを確認します。
 
-同じ結果が得られた場合は、[`curl` コマンド ](#check-live-site-through-fastly)を使用し、[応答ヘッダー](#check-cache-hit-and-miss-response-headers)を確認します。
+同じ結果が得られた場合は、[`curl` コマンド &#x200B;](#check-live-site-through-fastly)を使用し、[応答ヘッダー](#check-cache-hit-and-miss-response-headers)を確認します。
 
 - `Pragma`は`cache`です
 - `X-Magento-Tags`が存在します
@@ -313,7 +313,7 @@ Fastly VCLがアップロードされていない場合（`Fastly-Magento-VCL-Up
 
    - 一度に1つの拡張機能を有効にし、設定を保存し、Adobe Commerce キャッシュをフラッシュします。
 
-   - [`curl` コマンド ](#check-live-site-through-fastly)を実行して、[応答ヘッダー](#check-cache-hit-and-miss-response-headers)を確認します。
+   - [`curl` コマンド &#x200B;](#check-live-site-through-fastly)を実行して、[応答ヘッダー](#check-cache-hit-and-miss-response-headers)を確認します。
 
    このプロセスを各拡張機能に対して繰り返します。 Fastly応答ヘッダーが表示されなくなった場合は、Fastlyで問題を引き起こす拡張機能を特定しました。
 

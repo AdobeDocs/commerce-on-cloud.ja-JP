@@ -35,7 +35,7 @@ ht-degree: 0%
 
 以前は`ece-tools` パッケージに含まれていた一部の機能が、個別のパッケージで提供されるようになりました。 これらのパッケージは、`ece-tools`のコンポーザー依存関係です。これらは、e ツールのインストールまたは更新時に自動的にインストールおよび更新されます。
 
-新しいアーキテクチャは、インストールプロセスやアップデートプロセスに影響を与えることはありません。 ただし、Adobe Commerce on cloud infrastructure プロジェクトを使用する場合は、コマンドの構文やプロセスを変更する必要がある場合があります。 詳しくは、後方互換性のない次の変更情報と[Cloud Tools Suite リリースノート ](cloud-tools-suite.md)を参照してください。
+新しいアーキテクチャは、インストールプロセスやアップデートプロセスに影響を与えることはありません。 ただし、Adobe Commerce on cloud infrastructure プロジェクトを使用する場合は、コマンドの構文やプロセスを変更する必要がある場合があります。 詳しくは、後方互換性のない次の変更情報と[Cloud Tools Suite リリースノート &#x200B;](cloud-tools-suite.md)を参照してください。
 
 ### サービスバージョン要件の変更
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->PHPのバージョン要件が変更されたため、`ece-tools` 2002.1.0では、Adobe Commerce 2.1.15以降を実行しているクラウドインフラストラクチャプロジェクト上のAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合は、`ece-tools` 2002.1.0に更新する前に[ アップグレード ](../development/commerce-version.md)する必要があります。
+>PHPのバージョン要件が変更されたため、`ece-tools` 2002.1.0では、Adobe Commerce 2.1.15以降を実行しているクラウドインフラストラクチャプロジェクト上のAdobe Commerceのみをサポートしています。 プロジェクトで以前のリリースを使用している場合は、`ece-tools` 2002.1.0に更新する前に[&#x200B; アップグレード &#x200B;](../development/commerce-version.md)する必要があります。
 
 ### 環境設定の変更
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ## クラウドパッチの変更
 
-- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[ ソフトウェアのダウンロード ](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
+- **ダウンロード済みのパッチを削除**- `magento/magento-cloud-patches` パッケージは、[&#x200B; ソフトウェアのダウンロード &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/commerce) ページから入手できるすべてのパッチをバンドルし、クラウドにデプロイするときに自動的に適用します。 ECE-Tools 2002.1.0以降にアップグレードした後にパッチの競合を防ぐには、Adobeから提供されたパッチのうち、手動でダウンロードしてプロジェクトに追加したものをすべて削除します。
 
 - **パッチ適用コマンドの更新** – パッチを適用するコマンドを`vendor/bin/ece-tools` ディレクトリから`vendor/bin/ece-patches` ディレクトリに移動しました。 このコマンドを使用してパッチを手動で適用する場合は、新しいパスを使用します。
 

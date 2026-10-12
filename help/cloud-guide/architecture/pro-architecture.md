@@ -82,7 +82,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 ### 統合環境
 
-統合環境は、PaaSと呼ばれるサーバーのグリッド上のLinux コンテナ（LXC）で実行されます。 各環境には、サイトをテストするためのweb サーバーとデータベースが含まれています。 AWSとAzureのIP アドレスの一覧については、[地域IP アドレス ](../project/regional-ip-addresses.md)を参照してください。
+統合環境は、PaaSと呼ばれるサーバーのグリッド上のLinux コンテナ（LXC）で実行されます。 各環境には、サイトをテストするためのweb サーバーとデータベースが含まれています。 AWSとAzureのIP アドレスの一覧については、[地域IP アドレス &#x200B;](../project/regional-ip-addresses.md)を参照してください。
 
 **推奨されるユースケース：**
 
@@ -141,7 +141,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 - cron設定のカスタマイズとcron ジョブのテスト
 
-[ デプロイメントワークフロー](pro-develop-deploy-workflow.md#deployment-workflow)および[ デプロイメントのテスト ](../test/staging-and-production.md)を参照してください。
+[&#x200B; デプロイメントワークフロー](pro-develop-deploy-workflow.md#deployment-workflow)および[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md)を参照してください。
 
 **注意事項：**
 
@@ -153,7 +153,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 ### 本番環境
 
-本番環境では、パブリック対応の単一およびマルチサイトのストアフロントを実行できます。 この環境は、冗長で高可用性のノードを備えた専用のIaaS ハードウェア上で動作し、顧客の継続的なアクセスとフェイルオーバー保護を実現します。 本番環境には、ステージング環境のすべてのサービスに加えて、[New Relic Infrastructure （NRI） ](../monitor/new-relic-service.md#new-relic-infrastructure) サービスが含まれます。このサービスは、アプリケーションデータとパフォーマンス分析に自動的に接続して、動的なサーバーモニタリングを提供します。
+本番環境では、パブリック対応の単一およびマルチサイトのストアフロントを実行できます。 この環境は、冗長で高可用性のノードを備えた専用のIaaS ハードウェア上で動作し、顧客の継続的なアクセスとフェイルオーバー保護を実現します。 本番環境には、ステージング環境のすべてのサービスに加えて、[New Relic Infrastructure （NRI） &#x200B;](../monitor/new-relic-service.md#new-relic-infrastructure) サービスが含まれます。このサービスは、アプリケーションデータとパフォーマンス分析に自動的に接続して、動的なサーバーモニタリングを提供します。
 
 **ご注意：**
 
@@ -182,7 +182,7 @@ Pro プロジェクトでは、`master` ブランチは実稼動環境でアク�
 
 次の図は、実稼動環境で使用されるテクノロジーを示しています。
 
-![実稼動テクノロジースタック ](../../assets/az-stack-diagram.png)
+![実稼動テクノロジースタック &#x200B;](../../assets/az-stack-diagram.png)
 
 ## 冗長ハードウェア
 
@@ -203,11 +203,11 @@ Adobe Commerce オンクラウド基盤では、各Pro プロジェクトを3つ
 
 >[!NOTE]
 >
->マウントされたボリュームには、[書き込み可能なマウント ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれているか、参照されており、`app/` ディレクトリの一部が含まれていません。 他のファイルについては、[ ビルドおよびデプロイメントプロセス ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
+>マウントされたボリュームには、[書き込み可能なマウント &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts)のみが含まれているか、参照されており、`app/` ディレクトリの一部が含まれていません。 他のファイルについては、[&#x200B; ビルドおよびデプロイメントプロセス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)によって作成/生成され、残りのファイルについてもGit リポジトリを確認する必要があります。
 
 {{pro-backups}}
 
-CLI コマンドを使用して、ステージング環境および実稼動環境用のデータベースの&#x200B;**手動バックアップ**&#x200B;を作成できます。 [ データベースのバックアップ ](../storage/database-dump.md)を参照してください。 `integration`環境の場合、Adobeでは、Adobe Commerce on cloud infrastructure プロジェクトにアクセスした後、大きな変更を適用する前の最初の手順として、バックアップを作成することをお勧めします。 [ バックアップ管理](../storage/snapshots.md)を参照してください。
+CLI コマンドを使用して、ステージング環境および実稼動環境用のデータベースの&#x200B;**手動バックアップ**&#x200B;を作成できます。 [&#x200B; データベースのバックアップ &#x200B;](../storage/database-dump.md)を参照してください。 `integration`環境の場合、Adobeでは、Adobe Commerce on cloud infrastructure プロジェクトにアクセスした後、大きな変更を適用する前の最初の手順として、バックアップを作成することをお勧めします。 [&#x200B; バックアップ管理](../storage/snapshots.md)を参照してください。
 
 ### リカバリーポイントの目標
 
@@ -235,6 +235,6 @@ RTOはストレージのサイズによって異なります。 大きなEBS ボ
 
 Pro クラスターのサイズと&#x200B;_compute_&#x200B;の設定は、選択したクラウドプロバイダー（AWS、Azure）、リージョン、およびサービスの依存関係によって異なります。 Adobeのクラウドインフラストラクチャは、Pro クラスターを拡張して、需要の変化に応じたトラフィックの期待やサービス要件に対応できます。
 
-冗長なアーキテクチャにより、Adobeのクラウドインフラストラクチャは、ダウンタイムなしでアップグレードできます。 アップスケーリングの場合、3つのインスタンスのそれぞれは、サイトの操作に影響を与えることなく、容量をアップグレードするために回転します。 例えば、制約がデータベースレベルではなくPHP レベルにある場合は、既存のクラスターに追加のweb サーバーを追加できます。 これにより、_水平方向のスケーリング_&#x200B;が提供され、データベースレベルの余分なCPUによって提供される垂直方向のスケーリングを補完します。 [拡張アーキテクチャ ](scaled-architecture.md)を参照してください。
+冗長なアーキテクチャにより、Adobeのクラウドインフラストラクチャは、ダウンタイムなしでアップグレードできます。 アップスケーリングの場合、3つのインスタンスのそれぞれは、サイトの操作に影響を与えることなく、容量をアップグレードするために回転します。 例えば、制約がデータベースレベルではなくPHP レベルにある場合は、既存のクラスターに追加のweb サーバーを追加できます。 これにより、_水平方向のスケーリング_&#x200B;が提供され、データベースレベルの余分なCPUによって提供される垂直方向のスケーリングを補完します。 [拡張アーキテクチャ &#x200B;](scaled-architecture.md)を参照してください。
 
 イベントやその他の理由でトラフィックが大幅に増加すると予想される場合は、一時的なキャパシティの増加をリクエストできます。 _Commerce ヘルプセンター_&#x200B;の[一時的なアップサイズをリクエストする方法](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/how-to-request-temporary-adobe-commerce-on-cloud-infrastructure-upsize)を参照してください。

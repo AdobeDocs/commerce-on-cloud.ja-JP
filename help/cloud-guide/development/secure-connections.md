@@ -42,7 +42,7 @@ Secure Shell （SSH）は、リモートサーバーやシステムに安全に�
 
 ## アカウントにSSH公開鍵を追加する
 
-Adobe Commerce on cloud infrastructure アカウントにSSH公開鍵を追加または更新した後、アカウント上のすべてのアクティブな環境](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)を[再デプロイして鍵をインストールします。
+Adobe Commerce on cloud infrastructure アカウントにSSH公開鍵を追加または更新した後、アカウント上のすべてのアクティブな環境[&#128279;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy)を再デプロイして鍵をインストールします。
 
 アカウントにSSH キーを追加するには、Cloud CLIまたは[!DNL Cloud Console]のいずれかの方法を使用します。
 
@@ -152,7 +152,7 @@ Adobe Commerce on cloud infrastructure アカウントにSSH公開鍵を追加�
 
 ## sFTP
 
-Adobe Commerce クラウドインフラストラクチャでは、SSH認証を使用したsFTP （セキュア FTP）を使用した環境へのアクセスがサポートされています。 sFTPのSSH キー認証をサポートするクライアントを使用し、公開SSH キーを使用します。 公開SSH キーをターゲット環境に追加する必要があります。 スターター環境とPro統合環境の場合は、 [!DNL Cloud Console]](#add-your-ssh-key-using-the-project-web-interface)経由で[追加できます。
+Adobe Commerce クラウドインフラストラクチャでは、SSH認証を使用したsFTP （セキュア FTP）を使用した環境へのアクセスがサポートされています。 sFTPのSSH キー認証をサポートするクライアントを使用し、公開SSH キーを使用します。 公開SSH キーをターゲット環境に追加する必要があります。 スターター環境とPro統合環境の場合は、 [!DNL Cloud Console]&#x200B;[&#128279;](#add-your-ssh-key-using-the-project-web-interface)経由で追加できます。
 
 読み取り専用のsFTP接続は&#x200B;_サポートされていません_。sFTP アクセスは、デフォルトで&#x200B;_書き込み_&#x200B;権限で提供されます。
 
@@ -166,12 +166,12 @@ sFTPを設定する場合は、SSH アクセス環境コマンドの情報を使
 
 クライアントによっては、sFTPのSSH認証を完了するために追加のオプションが必要になる場合があります。 選択したクライアントのドキュメントを確認します。
 
-**スターター環境とPro統合環境**&#x200B;の場合は、特定のディレクトリへのアクセス用に[追加`mount`](../application/properties.md#mounts)を検討することもできます。 マウントを`.magento.app.yaml` ファイルに追加します。 書き込み可能なディレクトリの一覧については、[ プロジェクト構造](../project/file-structure.md)を参照してください。 このマウントポイントは、これらの環境でのみ機能します。
+**スターター環境とPro統合環境**&#x200B;の場合は、特定のディレクトリへのアクセス用に[追加`mount`](../application/properties.md#mounts)を検討することもできます。 マウントを`.magento.app.yaml` ファイルに追加します。 書き込み可能なディレクトリの一覧については、[&#x200B; プロジェクト構造](../project/file-structure.md)を参照してください。 このマウントポイントは、これらの環境でのみ機能します。
 
-**Pro ステージング環境および実稼動環境**&#x200B;の場合、環境へのSSH アクセス権がない場合は、[sFTP アクセスをリクエストするためにAdobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信し、特定のフォルダーへのアクセス用のマウントポイント（例：`pub/media`）を送信する必要があります。
+**Pro ステージング環境および実稼動環境**&#x200B;の場合、環境へのSSH アクセス権がない場合は、[sFTP アクセスをリクエストするためにAdobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信し、特定のフォルダーへのアクセス用のマウントポイント（例：`pub/media`）を送信する必要があります。
 
 >[!NOTE]
->Pro ステージングおよび実稼動の場合、sFTP接続が&#x200B;**not**&#x200B;を[Cloud プロジェクト ](../project/user-access.md)に追加する必要がある&#x200B;_汎用_ ユーザーの場合、**公開鍵**&#x200B;を添付して[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 **秘密のSSH キーを入力しないでください。**
+>Pro ステージングおよび実稼動の場合、sFTP接続が&#x200B;**not**&#x200B;を[Cloud プロジェクト &#x200B;](../project/user-access.md)に追加する必要がある&#x200B;_汎用_ ユーザーの場合、**公開鍵**&#x200B;を添付して[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 **秘密のSSH キーを入力しないでください。**
 
 ## SSH トンネリング
 
@@ -189,7 +189,7 @@ magento-cloud login
 magento-cloud tunnel:list
 ```
 
-トンネルを構築するには、[ アプリケーション名](../application/properties.md#name)を知っている必要があります。 CLIを使用してアプリケーション名を確認できます。
+トンネルを構築するには、[&#x200B; アプリケーション名](../application/properties.md#name)を知っている必要があります。 CLIを使用してアプリケーション名を確認できます。
 
 ```bash
 magento-cloud apps
@@ -235,4 +235,4 @@ mysql --host=127.0.0.1 --user='<database-username>' --pass='<user-password>' --d
 
 #### MySQL資格情報の取得
 
-環境変数`$MAGENTO_CLOUD_RELATIONSHIPS`の`database` プロパティからMySQL ログイン資格情報を取得します。 ローカル環境またはリモート環境で情報を取得する手順については、[ サービス関係](../services/services-yaml.md#service-relationships)を参照してください。
+環境変数`$MAGENTO_CLOUD_RELATIONSHIPS`の`database` プロパティからMySQL ログイン資格情報を取得します。 ローカル環境またはリモート環境で情報を取得する手順については、[&#x200B; サービス関係](../services/services-yaml.md#service-relationships)を参照してください。

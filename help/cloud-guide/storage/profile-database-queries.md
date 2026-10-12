@@ -28,7 +28,7 @@ ht-degree: 0%
 
 **データベース クエリ プロファイリングを有効にするには**:
 
-1. [ データベース ](../services/mysql.md#connect-to-the-database)にログインします。
+1. [&#x200B; データベース &#x200B;](../services/mysql.md#connect-to-the-database)にログインします。
 
 1. プロファイルを有効にします。
 

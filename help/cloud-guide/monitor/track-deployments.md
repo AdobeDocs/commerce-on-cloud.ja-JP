@@ -41,7 +41,7 @@ New Relic _変更履歴_&#x200B;機能を有効にして、Commerce on cloud inf
 >
 >- `NR_API_URL`: New Relic API エンドポイント、この場合はNerdGraph API URL `https://api.newrelic.com/graphql`
 >- `NR_API_KEY`: ユーザーキーを作成します。_New Relic_ ドキュメントの[New Relic API Keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys)を参照してください。
->- `NR_APP_GUID`: New Relicにデータをレポートするエンティティに一意のID （GUID）があります。 例えば、ステージング環境で有効にするには、New Relicの&#x200B;_ステージングエンティティ GUID_&#x200B;を使用して、ステージング環境`NR_APP_GUID` クラウド変数を調整します。 [New Relic エンティティについて学ぶ](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/)および[NerdGraph チュートリアル：_New Relic_ ドキュメントのエンティティ データ ](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)の表示を参照してください。
+>- `NR_APP_GUID`: New Relicにデータをレポートするエンティティに一意のID （GUID）があります。 例えば、ステージング環境で有効にするには、New Relicの&#x200B;_ステージングエンティティ GUID_&#x200B;を使用して、ステージング環境`NR_APP_GUID` クラウド変数を調整します。 [New Relic エンティティについて学ぶ](https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/what-entity-new-relic/)および[NerdGraph チュートリアル：_New Relic_ ドキュメントのエンティティ データ &#x200B;](https://docs.newrelic.com/docs/apis/nerdgraph/examples/nerdgraph-entities-api-tutorial/)の表示を参照してください。
 
 ## トラックデプロイメントを有効にする
 
@@ -239,7 +239,7 @@ _スクリプト_&#x200B;統合を作成して、New RelicでCommerce プロジ�
    {"data":{"changeTrackingCreateDeployment":{"deploymentId":"some-deployment-id","entityGuid":"SomeGUIDhere"}}}
    ```
 
-1. [New Relic アカウント ](https://login.newrelic.com/login)にログインします。
+1. [New Relic アカウント &#x200B;](https://login.newrelic.com/login)にログインします。
 
 1. エクスプローラーのナビゲーションメニューで、**[!UICONTROL APM & Services]**&#x200B;をクリックします。 環境[!UICONTROL Name]と[!UICONTROL Account]を選択します。
 

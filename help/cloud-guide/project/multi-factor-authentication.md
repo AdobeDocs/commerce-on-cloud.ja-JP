@@ -126,7 +126,7 @@ MFAの適用が有効になっているプロジェクトの場合、SSH アク�
 
 **TFA ユーザーアカウント資格情報を使用してSSHを使用して接続するには**:
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. ローカル ワークステーションで、`magento-cloud` CLIを使用してSSH証明書を生成します。
 
@@ -174,11 +174,11 @@ MFAの適用が有効になっているプロジェクトの場合、SSH アク�
 
 **TFA ユーザーアカウント資格情報を使用してSSHを使用して接続するには**:
 
-1. [ アカウント ](https://console.adobecommerce.com)にログインし、TFAを使用して認証します。
+1. [&#x200B; アカウント &#x200B;](https://console.adobecommerce.com)にログインし、TFAを使用して認証します。
 
    >[!NOTE]
    >
-   >アカウントでTFAを有効にしていない場合は、有効にする必要があります。 「[ クラウドアカウントでTFAを有効にする](user-access.md#enable-tfa-for-cloud-accounts)」を参照してください。
+   >アカウントでTFAを有効にしていない場合は、有効にする必要があります。 「[&#x200B; クラウドアカウントでTFAを有効にする](user-access.md#enable-tfa-for-cloud-accounts)」を参照してください。
 
 1. ローカル ワークステーションで、`magento-cloud` CLIを使用してSSH証明書を生成します。
 
@@ -307,7 +307,7 @@ authenticated, but could not connect to service abcdef7uyxabce-master-7rqtabc--m
 
 **TFAの設定と認証を確認するには**:
 
-1. アカウント ](https://console.adobecommerce.com)の[にログインします。
+1. アカウント [&#128279;](https://console.adobecommerce.com)のにログインします。
 
 1. 右上のアカウントメニューで、**[!UICONTROL My Profile]**&#x200B;をクリックします。
 

@@ -111,7 +111,7 @@ hooks:
         composer --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
 ```
 
-Composerについて詳しくは、[必要なパッケージ ](../development/overview.md#required-packages)を参照してください。
+Composerについて詳しくは、[必要なパッケージ &#x200B;](../development/overview.md#required-packages)を参照してください。
 
 ## `dependencies`
 
@@ -160,7 +160,7 @@ disk: 5120
 
 >[!NOTE]
 >
->Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
+>Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
 >
 >ステージングまたは実稼動環境のディスクストレージを一時的に増やすことはできません。このプロセスは元に戻すことができません。
 
@@ -185,7 +185,7 @@ relationships:
     rabbitmq: "rabbitmq:rabbitmq"
 ```
 
-現在サポートされているサービスの種類とエンドポイントの完全なリストについては、[ サービス ](../services/services-yaml.md)を参照してください。
+現在サポートされているサービスの種類とエンドポイントの完全なリストについては、[&#x200B; サービス &#x200B;](../services/services-yaml.md)を参照してください。
 
 ## `mounts`
 
@@ -211,7 +211,7 @@ mounts:
 
 >[!NOTE]
 >
->Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
+>Pro ステージング環境および実稼動環境の場合、アプリケーションの`mounts`および`disk`設定を更新するには、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信する必要があります。 チケットを送信するときは、必要な設定変更を示し、更新されたバージョンの`.magento.app.yaml` ファイルを含めてください。
 
 マウント webを場所の[`web`](web-property.md) ブロックに追加することで、マウント webにアクセスできるようにできます。
 

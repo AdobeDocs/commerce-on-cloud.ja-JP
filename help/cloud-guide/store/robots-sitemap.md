@@ -39,7 +39,7 @@ Adobe Commerce クラウド基盤では、`var`、`pub/media`、`pub/static`、`
 
 `robots.txt` ファイルは、オンデマンドで`robots.txt` コンテンツを生成し、データベースに保存するため、生成する必要はありません。 `<domain.your.project>/robots.txt`または`<domain.your.project>/robots` リンクを使用すると、ブラウザーでコンテンツを表示できます。
 
-これには、ECE-Tools バージョン 2002.0.12以降と、更新された`.magento.app.yaml` ファイルが必要です。 これらのルールの例については、[magento-cloud リポジトリ ](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49)を参照してください。
+これには、ECE-Tools バージョン 2002.0.12以降と、更新された`.magento.app.yaml` ファイルが必要です。 これらのルールの例については、[magento-cloud リポジトリ &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml#L43-L49)を参照してください。
 
 **バージョン 2.2以降**&#x200B;で`sitemap.xml` ファイルを生成するには：
 
@@ -66,15 +66,15 @@ Adobe Commerce クラウド基盤では、`var`、`pub/media`、`pub/static`、`
 
 >[!NOTE]
 >
->`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット ](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
+>`<domain.your.project>/robots.txt` ファイルで`404 error`が生成された場合、[Adobe Commerce サポートチケット &#x200B;](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket)を送信して、`/robots.txt`から`/media/robots.txt`へのリダイレクトを削除します。
 
 ## Fastly VCL スニペットを使用した書き換え
 
-ドメインが異なり、個別のサイトマップが必要な場合は、VCLを作成して適切なサイトマップにルーティングできます。 前述のように、管理パネルで`sitemap.xml` ファイルを生成し、カスタム Fastly VCL スニペットを作成してリダイレクトを管理します。 [ カスタム Fastly VCL スニペット ](../cdn/fastly-vcl-custom-snippets.md)を参照してください。
+ドメインが異なり、個別のサイトマップが必要な場合は、VCLを作成して適切なサイトマップにルーティングできます。 前述のように、管理パネルで`sitemap.xml` ファイルを生成し、カスタム Fastly VCL スニペットを作成してリダイレクトを管理します。 [&#x200B; カスタム Fastly VCL スニペット &#x200B;](../cdn/fastly-vcl-custom-snippets.md)を参照してください。
 
 >[!NOTE]
 >
-> カスタム VCL スニペットは、Admin UIまたはFastly APIを使用してアップロードできます。 [ カスタム VCL スニペットの例とチュートリアル ](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code)を参照してください。
+> カスタム VCL スニペットは、Admin UIまたはFastly APIを使用してアップロードできます。 [&#x200B; カスタム VCL スニペットの例とチュートリアル &#x200B;](../cdn/fastly-vcl-custom-snippets.md#example-vcl-snippet-code)を参照してください。
 
 ### リダイレクトにFastly VCL スニペットを使用する
 

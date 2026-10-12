@@ -87,7 +87,7 @@ ht-degree: 0%
 
 ## Composerを使用したテーマのインストール
 
-Composerを使用したテーマのインストールは、Composerを使用した他の拡張機能のインストールと同じです。 詳しくは、[ モジュールのインストール、管理、アップグレード ](extensions.md)を参照してください。
+Composerを使用したテーマのインストールは、Composerを使用した他の拡張機能のインストールと同じです。 詳しくは、[&#x200B; モジュールのインストール、管理、アップグレード &#x200B;](extensions.md)を参照してください。
 
 Composerを使用してテーマをインストールするには：
 
@@ -123,4 +123,4 @@ Composerを使用してテーマをインストールするには：
 
 ## 複数のテーマ
 
-ロケールごとに異なるテーマなど、複数のテーマを使用する場合は、テーマのデプロイメントをカスタマイズするために`SCD_MATRIX`環境変数を確認してください。 [環境設定](../environment/configure-env-yaml.md)の[ ビルド ](../environment/variables-build.md#scd_matrix)または[ デプロイ ](../environment/variables-deploy.md#scd_matrix)のステージを参照してください。
+ロケールごとに異なるテーマなど、複数のテーマを使用する場合は、テーマのデプロイメントをカスタマイズするために`SCD_MATRIX`環境変数を確認してください。 [環境設定](../environment/configure-env-yaml.md)の[&#x200B; ビルド &#x200B;](../environment/variables-build.md#scd_matrix)または[&#x200B; デプロイ &#x200B;](../environment/variables-deploy.md#scd_matrix)のステージを参照してください。

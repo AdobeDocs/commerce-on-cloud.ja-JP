@@ -73,7 +73,7 @@ ht-degree: 0%
    git remote add origin git@gitlab.com:<user-name>/<repo-name>.git
    ```
 
-   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント ](https://git-scm.com/docs/git-remote)を参照してください。
+   リモート接続の既定の名前は`origin`または`magento`です。 `origin`が存在する場合は、別の名前を選択するか、既存の参照の名前を変更または削除できます。 [git-remote ドキュメント &#x200B;](https://git-scm.com/docs/git-remote)を参照してください。
 
 1. GitLab リモートが正しく追加されていることを確認します。
 
@@ -160,7 +160,7 @@ magento-cloud integration:add --type=gitlab --project=<project-ID> --token=<your
 
 ### GitLabでWebhookを追加する
 
-プッシュリクエストや結合リクエストなどのイベントをCloud Git サーバーと通信するには、GitLab リポジトリ用のWebhook](https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#overview)を[作成する必要があります
+プッシュリクエストや結合リクエストなどのイベントをCloud Git サーバーと通信するには、GitLab リポジトリ用のWebhook[&#128279;](https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#overview)を作成する必要があります
 
 1. GitLab リポジトリで、「**設定**」タブをクリックします。
 
@@ -201,7 +201,7 @@ GitLab リポジトリに簡単な変更をプッシュしてテストするこ�
 
 ## Cloud ブランチの作成
 
-`magento-cloud` CLI `environment:push` コマンドを使用して、新しい環境を作成し、アクティブ化します。 [ クラウドブランチの作成](bitbucket.md#create-a-cloud-branch)を参照してください。
+`magento-cloud` CLI `environment:push` コマンドを使用して、新しい環境を作成し、アクティブ化します。 [&#x200B; クラウドブランチの作成](bitbucket.md#create-a-cloud-branch)を参照してください。
 
 ## 統合の削除
 

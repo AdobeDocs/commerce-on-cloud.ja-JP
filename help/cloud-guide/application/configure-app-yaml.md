@@ -31,12 +31,12 @@ ht-degree: 0%
 
 `.magento.app.yaml` ファイルは、アプリケーションのビルドおよびデプロイ方法を制御します。 Adobe Commerce on cloud infrastructureは、プロジェクトごとに複数のアプリケーションをサポートしていますが、通常、プロジェクトには、リポジトリのルートに`.magento.app.yaml` ファイルが含まれた1つのアプリケーションがあります。
 
-`.magento.app.yaml`には多くのデフォルト値があります。[ サンプル `.magento.app.yaml` ファイル ](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml)を参照してください。 インストール済みのバージョンについては、常に`.magento.app.yaml`を確認してください。 このファイルは、Adobe Commerce on cloud infrastructureのバージョンによって異なる場合があります。
+`.magento.app.yaml`には多くのデフォルト値があります。[&#x200B; サンプル `.magento.app.yaml` ファイル &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento.app.yaml)を参照してください。 インストール済みのバージョンについては、常に`.magento.app.yaml`を確認してください。 このファイルは、Adobe Commerce on cloud infrastructureのバージョンによって異なる場合があります。
 
 `.magento.app.yaml` ファイルを使用して、次の設定値を定義します。
 
-- [ プロパティ ](properties.md) - アプリケーションインスタンスのプロパティ値を定義します。
-- [変数プロパティ ](variables-property.md) - [!DNL Commerce] アプリケーション バージョンに必要な環境変数を確認します。
+- [&#x200B; プロパティ &#x200B;](properties.md) - アプリケーションインスタンスのプロパティ値を定義します。
+- [変数プロパティ &#x200B;](variables-property.md) - [!DNL Commerce] アプリケーション バージョンに必要な環境変数を確認します。
 - [PHP設定](php-settings.md) - ランタイム PHP オプションを設定します。
 - [静的ファイルのキャッシュを設定](set-cache.md) - メディアと静的ファイルのキャッシュ TTLを設定します。
 

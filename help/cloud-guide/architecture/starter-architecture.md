@@ -47,13 +47,13 @@ Adobe Commerce on cloud infrastructure スターターアーキテクチャで�
 
 次の図は、スターター環境の階層関係を示しています。
 
-![ スタータープロジェクトの概要](../../assets/starter/architecture.png)
+![&#x200B; スタータープロジェクトの概要](../../assets/starter/architecture.png)
 
 ## 本番環境
 
 実稼動環境は、Adobe Commerceをパブリッシュ対応の単一およびマルチサイトストアフロントを実行するクラウドインフラストラクチャにデプロイするためのソースコードを提供します。 実稼動環境では、`master` ブランチのコードを使用して、web サーバー、データベース、設定済みサービス、およびアプリケーションコードを設定および有効にします。
 
-`production`環境は読み取り専用なので、`integration`環境を使用してコードを変更し、`integration`から`staging`までのアーキテクチャ全体にデプロイし、最後に`production`環境にデプロイします。 [ ストアのデプロイ ](../deploy/staging-production.md)および[ サイトの立ち上げ](../launch/overview.md)を参照してください。
+`production`環境は読み取り専用なので、`integration`環境を使用してコードを変更し、`integration`から`staging`までのアーキテクチャ全体にデプロイし、最後に`production`環境にデプロイします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)および[&#x200B; サイトの立ち上げ](../launch/overview.md)を参照してください。
 
 Adobeでは、`production`環境にデプロイされる`master` ブランチにプッシュする前に、`staging` ブランチで完全にテストすることをお勧めします。
 
@@ -65,7 +65,7 @@ Adobeでは、`master`から`staging`という名前のブランチを作成す�
 
 >[!WARNING]
 >
->Adobeでは、実稼動環境にデプロイする前に、ステージング環境のすべてのマーチャントと顧客のインタラクションをテストすることをお勧めします。 [ ストアのデプロイ ](../deploy/staging-production.md)および[ デプロイメントのテスト ](../test/staging-and-production.md)を参照してください。
+>Adobeでは、実稼動環境にデプロイする前に、ステージング環境のすべてのマーチャントと顧客のインタラクションをテストすることをお勧めします。 [&#x200B; ストアのデプロイ &#x200B;](../deploy/staging-production.md)および[&#x200B; デプロイメントのテスト &#x200B;](../test/staging-and-production.md)を参照してください。
 
 ## 統合環境
 
@@ -147,7 +147,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 - [OpenSearch](../services/opensearch.md)
 
-ステージング環境と本番環境では、CDNとキャッシュにFastlyを使用します。 最新バージョンのFastly CDN拡張機能は、プロジェクトの最初のプロビジョニング中にインストールされます。 拡張機能をアップグレードして、最新のバグ修正と機能強化を取得できます。 Magento 2](https://github.com/fastly/fastly-magento2)の[Fastly CDN モジュールを参照してください。 また、パフォーマンス モニタリング用に[New Relic](../monitor/account-management.md)にアクセスできます。
+ステージング環境と本番環境では、CDNとキャッシュにFastlyを使用します。 最新バージョンのFastly CDN拡張機能は、プロジェクトの最初のプロビジョニング中にインストールされます。 拡張機能をアップグレードして、最新のバグ修正と機能強化を取得できます。 Magento 2[&#128279;](https://github.com/fastly/fastly-magento2)のFastly CDN モジュールを参照してください。 また、パフォーマンス モニタリング用に[New Relic](../monitor/account-management.md)にアクセスできます。
 
 以下のファイルを使用して、実装で使用するソフトウェアのバージョンを設定します。
 
@@ -159,7 +159,7 @@ Adobe Commerce on cloud infrastructureは、Debian GNU/Linux オペレーティ�
 
 ### バックアップと災害復旧
 
-データベースとファイルシステムのバックアップは、[!DNL Cloud Console]またはCLIを使用して作成できます。 [ バックアップ管理](../storage/snapshots.md)を参照してください。
+データベースとファイルシステムのバックアップは、[!DNL Cloud Console]またはCLIを使用して作成できます。 [&#x200B; バックアップ管理](../storage/snapshots.md)を参照してください。
 
 ## 開発のための準備
 

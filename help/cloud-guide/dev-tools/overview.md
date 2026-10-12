@@ -40,7 +40,7 @@ Adobeには、Commerce向けのCloud Tools Suiteが用意されています。�
 
 - [Cloud CLI](cloud-cli-overview.md) - `magento-cloud` CLIを使用して、クラウドプロジェクトと環境の管理、ルーチンの実行、自動化タスクの実行を行います。
 - [Cloud Docker for Commerce](cloud-docker.md):ローカル開発、テスト、自動化タスク用にAdobe CommerceをDocker環境にデプロイします。
-- [Cloud パッチ ](../development/apply-patches.md) - パッチを適用して、CommerceのバージョンをCloud環境と統合し、重要な修正を迅速に行います。
-- [ECE-Tools パッケージ ](package-overview.md)：設定を管理し、Adobe Commerce アプリケーションをビルドして、リモート クラウド環境にデプロイします。
+- [Cloud パッチ &#x200B;](../development/apply-patches.md) - パッチを適用して、CommerceのバージョンをCloud環境と統合し、重要な修正を迅速に行います。
+- [ECE-Tools パッケージ &#x200B;](package-overview.md)：設定を管理し、Adobe Commerce アプリケーションをビルドして、リモート クラウド環境にデプロイします。
 - [統合](../integrations/overview.md) – 通知、webhook、Git ベースのサービスなどの一般的な開発ツールを統合します。
 

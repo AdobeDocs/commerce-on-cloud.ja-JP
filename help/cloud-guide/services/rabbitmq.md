@@ -31,7 +31,7 @@ ht-degree: 0%
 ---
 # [!DNL RabbitMQ] サービスの設定
 
-[Message Queue Framework （MQF） ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)は、[ モジュール ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
+[Message Queue Framework （MQF） &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework)は、[&#x200B; モジュール &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module)がメッセージをキューに公開できるようにするAdobe Commerce内のシステムです。 また、メッセージを非同期的に受信する消費者も定義します。
 
 MQFは[RabbitMQ](https://www.rabbitmq.com/)をメッセージングブローカーとして使用し、メッセージを送受信するためのスケーラブルなプラットフォームを提供します。 また、未配信のメッセージを保存するメカニズムも含まれています。 [!DNL RabbitMQ]は、Advanced Message Queuing Protocol （AMQP） 0.9.1仕様に基づいています。
 
@@ -76,7 +76,7 @@ MQFは[RabbitMQ](https://www.rabbitmq.com/)をメッセージングブローカ�
    git push origin <branch-name>
    ```
 
-1. [ サービス関係を確認します](services-yaml.md#service-relationships)。
+1. [&#x200B; サービス関係を確認します](services-yaml.md#service-relationships)。
 
 {{service-change-tip}}
 
@@ -177,8 +177,8 @@ PHP アプリケーションを使用してRabbitMQに接続するには、ソ�
 
 >[!IMPORTANT]
 >
->統合環境で[!DNL RabbitMQ]をアップグレードする場合は、バージョンをスキップしないでください。 サポートされているのは[ シーケンシャルアップグレード ](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability)のみです（例えば、3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1など）。各バージョンバンプは、クラウド環境のデプロイメントを成功させるために実際に対応する必要があります。
+>統合環境で[!DNL RabbitMQ]をアップグレードする場合は、バージョンをスキップしないでください。 サポートされているのは[&#x200B; シーケンシャルアップグレード &#x200B;](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability)のみです（例えば、3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1など）。各バージョンバンプは、クラウド環境のデプロイメントを成功させるために実際に対応する必要があります。
 >
 >アップグレードまたはダウングレードを含むRabbitMQ サービスバージョンを変更した後、環境を再デプロイします。 デプロイメント中、Adobe Commerceは、必要なRabbitMQ キュー、交換、バインディングを再作成するセットアップタスクを実行します。
 >
->一般的なサービスのアップグレード手順については、[ サービスバージョンの変更](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)を参照してください。
+>一般的なサービスのアップグレード手順については、[&#x200B; サービスバージョンの変更](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version)を参照してください。

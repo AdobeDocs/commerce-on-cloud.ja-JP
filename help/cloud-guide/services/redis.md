@@ -67,7 +67,7 @@ cache:
   type: redis:7.2
 ```
 
-例のバージョンは普遍的ではありません。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョン、パッチレベル、現在のCloud テンプレートによって異なります。 [ システム要件](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)と現在のプロジェクトテンプレートでサポートされている組み合わせを確認します。
+例のバージョンは普遍的ではありません。 実際のデフォルトバージョンとサポートされているサービスバージョンは、Adobe Commerceのバージョン、パッチレベル、現在のCloud テンプレートによって異なります。 [&#x200B; システム要件](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)と現在のプロジェクトテンプレートでサポートされている組み合わせを確認します。
 
 ### サービス関係の設定
 
@@ -151,11 +151,11 @@ printf '%s' "$MAGENTO_CLOUD_RELATIONSHIPS" \
   | jq '{redis: .redis}'
 ```
 
-サービス関係について詳しくは、[ サービスの設定](services-yaml.md)を参照してください。
+サービス関係について詳しくは、[&#x200B; サービスの設定](services-yaml.md)を参照してください。
 
 ## Redis設定のカスタマイズ
 
-キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス ](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
+キャッシュ、セッション、L2、およびレプリカ接続に関する推奨事項については、_実装プレイブックのベストプラクティスガイド_&#x200B;の「[ValkeyとRedis サービス設定のベストプラクティス &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration)」を参照してください。
 
 ## Redis CLIの使用
 
@@ -223,4 +223,4 @@ Redisの問題のトラブルシューティングについては、次のAdobe 
 
 `cache` サービスがValkeyとして設定されている場合でも、デプロイ前のキャッシュクリーンのエラーで、エラーコード `[107]` （`clean-redis-cache`）と`Connection to Redis` メッセージが表示される可能性があります。 `ece-tools`は、どのサービスが`cache`関係をサポートするかにかかわらず、キャッシュクリーン手順に対してこの従来のRedis指向エラーコードとメッセージを使用します。そのため、Redisがインストールされていることを示す文言はありません。
 
-関係ホストの`Name or service not known`などのDNS エラーが原因で発生した場合、サービス関係が利用可能になる前にデプロイ手順が実行されるか、`.magento.app.yaml`の関係名が`.magento/services.yaml`のサービス IDと一致しません。 [ サービス関係の確認](#verify-the-service-relationship)を参照してください。
+関係ホストの`Name or service not known`などのDNS エラーが原因で発生した場合、サービス関係が利用可能になる前にデプロイ手順が実行されるか、`.magento.app.yaml`の関係名が`.magento/services.yaml`のサービス IDと一致しません。 [&#x200B; サービス関係の確認](#verify-the-service-relationship)を参照してください。
