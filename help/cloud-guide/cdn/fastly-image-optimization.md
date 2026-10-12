@@ -3,23 +3,30 @@ title: Fastlyの画像最適化
 description: Fastlyの画像最適化を有効にして設定することで、Adobe Commerce サイトの画像配信を最適化し、画像管理を簡素化する方法について説明します。
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
-TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
+TQID: 'https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 4ca54350-01cb-5b22-8966-5f2873dc6d90
+    internal-label: Media
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1211
+source-wordcount: '1290'
 ht-degree: 0%
-
 ---
-
 # Fastlyの画像最適化
 
 Fastly画像最適化（Fastly IO）は、リアルタイムの画像操作と最適化を提供し、画像配信を高速化し、レスポンシブ web アプリケーションの画像ソースセットのメンテナンスを簡素化します。 Fastly IOを設定すると、次の画像最適化機能が提供されます。
@@ -89,11 +96,11 @@ Fastly IO VCL スニペットをアップロードして、管理パネルから
 
    - **フィルター**&#x200B;のサイズ変更 – デフォルト設定（`Lancsoz3`）のままにするか、代替を選択します。 この設定では、サイズ変更された画像を配信するために使用するフィルターを指定します。 選択したフィルターに応じて、サイズ変更された画像のピクセル数を増減できます。
 
-      - `Lanczos3` （デフォルト） – 最高画質の画像を提供します。 画像内のエッジと線形の特徴を検出する能力を高め、可能な限り最良の再構成を提供するために&#x200B;_[!DNL sinc]_&#x200B;リサンプリングを使用します。
-      - `Lanczos2` - `Lancsoz3`と同じフィルターを使用しますが、_[!DNL sinc]_&#x200B;再サンプリング関数の精度が低くなります。
-      - `Bicubic` – 画像を小さくすると、自然なシャープ効果が得られます。
-      - `Bilinear` – 画像を大きくすると、自然なスムージング効果が得られます。
-      - `Nearest` - ピクセルアートのサイズを変更すると、自然なピクセル化効果が得られます。
+     - `Lanczos3` （デフォルト） – 最高画質の画像を提供します。 画像内のエッジと線形の特徴を検出する能力を高め、可能な限り最良の再構成を提供するために&#x200B;_[!DNL sinc]_&#x200B;リサンプリングを使用します。
+     - `Lanczos2` - `Lancsoz3`と同じフィルターを使用しますが、_[!DNL sinc]_&#x200B;再サンプリング関数の精度が低くなります。
+     - `Bicubic` – 画像を小さくすると、自然なシャープ効果が得られます。
+     - `Bilinear` – 画像を大きくすると、自然なスムージング効果が得られます。
+     - `Nearest` - ピクセルアートのサイズを変更すると、自然なピクセル化効果が得られます。
 
 1. Fastly サービスのIO設定設定を指定したら、**キャンセル**&#x200B;を選択してFastly設定設定に戻ります。
 
@@ -119,14 +126,14 @@ Fastly IO VCL スニペットをアップロードして、管理パネルから
 非可逆変換を強制する利点は、より小さな画像が提供されることです。
 例えば、PNGの代わりにJPEGまたはWEBp形式を使用すると、Fastly IO設定で指定された品質レベルに応じて、サイズが60～70%縮小される場合があります。
 
-画像の最適化で選択した画質レベルに応じて、画像の視覚的な違いが表示される場合があります。 例えば、Alphaのチャンネル/透明度は、テーマの背景色を使用した深層画像の最適化を使用しない限り、白い背景に削除されて置き換えられます。
+画像の最適化で選択した画質レベルに応じて、画像の視覚的な違いが表示される場合があります。 例えば、テーマの背景色を使用した深層画像最適化を使用しない限り、アルファチャンネル/透明度は削除され、白い背景に置き換えられます。
 
 非可逆変換（`WebP Auto? = No`）をオフにすると、Fastly IOは互換性のあるブラウザーのJPEG画像のみをWEBP形式に変更します。 他の画像タイプは変更されません。 例えば、元の画像がPNGの場合、Fastly IO サービスの出力はPNGになります。
 
 ### 高度な画像最適化
 
-深層画像最適化はデフォルトでオフになっています。このオプションを有効にすると、組み込みのAdobe Commerceのサイズ変更がオフになり、Fastly IO サービスに完全にオフロードされます。
-この機能では、_製品_&#x200B;の画像のサイズのみが変更されます。CMS画像のサイズは変更されません。
+深層画像最適化はデフォルトでオフになっています。 このオプションを有効にすると、組み込みのAdobe Commerceのサイズ変更がオフになり、Fastly IO サービスに完全にオフロードされます。
+この機能では、_製品_&#x200B;の画像のサイズのみが変更されます。 CMS画像のサイズは変更されません。
 
 ディープ画像の最適化を有効にすると、テーマで定義されているすべての画像に背景色の定義が追加されます。 その結果、WebP画像はWebPの可逆からWebPの非可逆に切り替わります。 可逆画像と非可逆画像の大きな違いの1つは、非可逆画像がPNG画像からアルファチャンネルをドロップし、はるかに小さい画像を配信することです。 ただし、透明部分のある画像は、背景が異なる製品ページやキャンペーンページでは奇妙に見える場合があります。
 

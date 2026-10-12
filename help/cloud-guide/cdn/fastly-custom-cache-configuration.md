@@ -3,24 +3,39 @@ title: キャッシュ設定のカスタマイズ
 description: Fastly サービスの設定が完了した後に、キャッシュ設定を確認してカスタマイズする方法について説明します。
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-TQID: https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU
+TQID: 'https://experienceleague.adobe.com/X7N0dITHF7mzdFUrwQ1JlUYKweLcTibTclWETf3P5SU'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Implementation
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2130
+source-wordcount: '2130'
 ht-degree: 0%
-
 ---
-
 # キャッシュ設定のカスタマイズ
 
 ステージング環境と実稼動環境でFastly サービスを設定してテストした後、キャッシュ設定設定を確認してカスタマイズします。 例えば、設定を更新して、TLSがHTTP リクエストをFastlyにリダイレクトし、パージ設定を更新し、開発中にサイトをパスワードで保護するための基本認証を有効にすることができます。
@@ -29,11 +44,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Fastly キャッシュを設定するための利用可能な管理オプションは、Magento 2用Fastly CDN Moduleのどのバージョンがインストールされているかによって異なります。 Adobeでは、[&#x200B; ステージング環境と実稼動環境のFastly モジュール &#x200B;](fastly-configuration.md#upgrade)を最新バージョンにアップグレードすることをお勧めします。 最新の情報については、Fastly CDN for Magento2 モジュールの[&#x200B; リリースノート &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)を参照してください。
+>Fastly キャッシュを設定するための利用可能な管理オプションは、Magento 2用Fastly CDN モジュールのどのバージョンがインストールされているかによって異なります。 Adobeでは、[&#x200B; ステージング環境と実稼動環境のFastly モジュール &#x200B;](fastly-configuration.md#upgrade)を最新バージョンにアップグレードすることをお勧めします。 最新の情報については、Fastly CDN for Magento2 モジュール [&#128279;](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md)の リリースノートを参照してください。
 
 ## TLSを強制
 
-Fastlyは、暗号化されていない要求（HTTP）をFastlyにリダイレクトするための&#x200B;_Force TLS_ オプションを提供します。 ステージング環境または実稼動環境に[有効なSSL/TLS証明書](fastly-configuration.md#provision-ssltls-certificates)をプロビジョニングした後、ストアのFastly設定を更新して、TLSを強制オプションを有効にすることができます。 Magento 2 _向け_ Fastly CDN Moduleのドキュメントの[Force TLS ガイド &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)を参照してください。
+Fastlyは、暗号化されていない要求（HTTP）をFastlyにリダイレクトするための&#x200B;_Force TLS_ オプションを提供します。 ステージング環境または実稼動環境に[有効なSSL/TLS証明書](fastly-configuration.md#provision-ssltls-certificates)をプロビジョニングした後、ストアのFastly設定を更新して、TLSを強制オプションを有効にすることができます。 Magento 2 _向け_ Fastly CDN モジュールに関するドキュメントの「[Force TLS ガイド &#x200B;](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md)」を参照してください。
 
 >[!NOTE]
 >
@@ -73,7 +88,7 @@ VCL ファイルを生成するための管理パスを`app/etc/env.php`設定�
 
 ## 消去オプションの設定
 
-Fastlyは、商品カテゴリ、商品アセット、コンテンツをパージするオプションなど、Magentoのキャッシュ管理ページに複数のタイプのパージのオプションを提供します。 有効にすると、Fastlyはイベントを監視して、それらのキャッシュを自動的にパージします。 「パージ」オプションを無効にした場合は、キャッシュ管理ページで更新を完了した後、Fastly キャッシュを手動でパージできます。
+Fastlyは、商品カテゴリ、商品アセット、コンテンツをパージするオプションなど、Magentoのキャッシュ管理ページに複数のタイプのパージオプションを提供します。 有効にすると、Fastlyはイベントを監視して、それらのキャッシュを自動的にパージします。 「パージ」オプションを無効にした場合は、キャッシュ管理ページで更新を完了した後、Fastly キャッシュを手動でパージできます。
 
 パージのオプションには、次のものがあります。
 

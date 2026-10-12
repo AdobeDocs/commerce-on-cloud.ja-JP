@@ -3,26 +3,41 @@ title: Fastlyのトラブルシューティング
 description: Adobe CommerceのFastly CDN モジュールとサービスのトラブルシューティングと管理方法について説明します。
 feature: Cloud, Configuration, Cache, Services
 exl-id: 69954ef9-9ece-411e-934e-814a56542290
-TQID: https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c
+TQID: 'https://experienceleague.adobe.com/2TJ-5byRz5seZ1tpd4FXjZ6JfeaqtKs6ZQlv81Lkr7c'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1911
+source-wordcount: '1911'
 ht-degree: 0%
-
 ---
-
 # Fastlyのトラブルシューティング
 
 以下の情報を使用して、Adobe Commerce on cloud インフラストラクチャプロジェクト環境のMagento 2用Fastly CDN モジュールのトラブルシューティングと管理を行います。 例えば、応答ヘッダーの値とキャッシュ動作を調査して、Fastlyのサービスとパフォーマンスの問題を解決できます。
@@ -53,11 +68,11 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
 - **ストアメニューが表示されないか、動作しません** – ライブサイト URLを使用する代わりに、オリジンサーバーへのリンクまたは一時リンクを直接使用しているか、[cURL コマンド &#x200B;](#check-live-site-through-fastly)で`-H "host:URL"`を使用している可能性があります。 Fastlyをオリジンサーバーにバイパスすると、メインメニューが機能せず、ブラウザー側でキャッシュできる誤ったヘッダーが表示されます。
 
-- **上部ナビゲーションが機能しない** – 上部ナビゲーションは、デフォルトのEdge Fastly VCL スニペットをアップロードするときに有効になるMagento Side Includes （ESI）処理に依存しています。 ナビゲーションが機能しない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
+- **上部ナビゲーションが機能しない** – 上部ナビゲーションは、デフォルトのMagento Fastly VCL スニペットをアップロードする際に有効になるEdge Side Includes （ESI）処理に依存しています。 ナビゲーションが機能しない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
 
-- **Geo-location/GeoIPが機能しません**— デフォルトのMagento Fastly VCL スニペットは、国コードをURLに追加します。 国コードが機能しない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
+- **Geo-location/GeoIPが機能しません**— デフォルトのMagento Fastly VCL スニペットでは、国コードがURLに追加されます。 国コードが機能しない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
 
-- **ページがキャッシュされていません** – デフォルトでは、Fastlyは`Set-Cookies` ヘッダーを持つページをキャッシュしません。 Adobe Commerceは、キャッシュ可能なページでもCookieを設定します（TTL > 0）。 デフォルトのMagento Fastly VCLは、キャッシュ可能なページでこれらのCookieを削除します。 ページがキャッシュされていない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
+- **ページがキャッシュされていません** – デフォルトでは、Fastlyは`Set-Cookies` ヘッダーを持つページをキャッシュしません。 Adobe Commerceは、キャッシュ可能なページでもCookieを設定します（TTL > 0）。 デフォルトのMagento Fastly VCLでは、キャッシュ可能なページでこれらのCookieが削除されます。 ページがキャッシュされていない場合は、[Fastly VCL](fastly-configuration.md#upload-vcl-to-fastly)をアップロードし、サイトを再確認します。
 
   この問題は、テンプレート内のページブロックがキャッシュ不可とマークされている場合にも発生する可能性があります。 この場合、問題はサードパーティ製のモジュールまたは拡張機能がAdobe Commerce ヘッダーをブロックまたは削除したことが原因である可能性が高くなります。 この問題を解決するには、「[X-Cache contains only MISS, no HIT](#x-cache-contains-only-miss-no-hit)」を参照してください。
 
@@ -69,8 +84,8 @@ log {"syslog"} req.service_id {" my_logging_endpoint_name :: "}
 
   この問題は、次のいずれかの問題が原因で発生する可能性があります。
 
-   - Adobe Commerce on cloud infrastructure プロジェクト環境のFastly サービス設定のFastly資格情報が無効です
-   - カスタム VCL スニペットの無効なコード
+  - Adobe Commerce on cloud infrastructure プロジェクト環境のFastly サービス設定のFastly資格情報が無効です
+  - カスタム VCL スニペットの無効なコード
 
   この問題を解決するには、Adobe Commerce ヘルプセンターの「[&#x200B; クラウド上のFastly キャッシュのパージ中にエラーが発生しました](https://support.magento.com/hc/en-us/articles/115001853194-Error-purging-Fastly-cache-on-Cloud-The-purge-request-was-not-processed-successfully-)」を参照してください。
 
@@ -250,7 +265,7 @@ php bin/magento module:status Fastly_Cdn
 
 返されたステータスに基づいて、次の手順に従ってFastly設定を更新します。
 
-- `Module does not exist` - モジュールが存在しない場合は、[統合ブランチでFastly CDN Module for Magento 2をインストールして](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)設定します。 インストールが完了したら、モジュールを有効にして設定します。 [Fastlyの設定](fastly-configuration.md)を参照してください。
+- `Module does not exist` - モジュールが存在しない場合は、[統合ブランチでMagento 2用のFastly CDN モジュールをインストールして](https://github.com/fastly/fastly-magento2/blob/master/Documentation/INSTALLATION.md)設定します。 インストールが完了したら、モジュールを有効にして設定します。 [Fastlyの設定](fastly-configuration.md)を参照してください。
 
 - `Module is disabled` - Fastly モジュールが無効になっている場合は、ローカル環境の`integration` ブランチで環境設定を更新して有効にします。 次に、ステージングと実稼動に変更をプッシュします。 [拡張機能の管理](../store/extensions.md#install-an-extension)を参照してください。
 
@@ -292,7 +307,7 @@ Fastly VCLがアップロードされていない場合（`Fastly-Magento-VCL-Up
 
 1. **システム**/**ツール**/**キャッシュ管理**&#x200B;をクリックします。
 
-1. 「**Magento キャッシュをフラッシュ**」をクリックします。
+1. 「**Magento Cacheをフラッシュ**」をクリックします。
 
 1. Fastly ヘッダーに問題が発生する可能性がある各拡張機能について、次の手順を実行します。
 

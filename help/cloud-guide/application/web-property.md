@@ -1,23 +1,27 @@
 ---
 title: Web プロパティ
-description: Web プロパティの設定方法については、 [!DNL Commerce]  アプリケーション設定ファイルの例を参照してください。
+description: '[!DNL Commerce] アプリケーション設定ファイルでweb プロパティを設定する方法の例を参照してください。'
 feature: Cloud, Configuration
 exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
-TQID: https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8
+TQID: 'https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 462
+source-wordcount: '463'
 ht-degree: 0%
-
 ---
-
 # Web プロパティ
 
 `web` プロパティは、アプリケーションをWeb （HTTP）に公開する方法を定義し、web アプリケーションがコンテンツを提供する方法を決定し、各場所&#x200B;_ブロック_&#x200B;にルールを設定することで、アプリケーションコンテナが受信リクエストにどのように応答するかを制御します。 ブロックは、スラッシュ （`/`）で始まる絶対パスを表します。

@@ -5,20 +5,28 @@ feature: Cloud, Configuration, Cache
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 42523ff9-d8ca-470a-ac7b-d2ce21edd830
-TQID: https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg
+TQID: 'https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 516
+source-wordcount: '516'
 ht-degree: 0%
-
 ---
-
 # デプロイ後の変数
 
 次の&#x200B;_デプロイ後_&#x200B;変数は、デプロイ後フェーズのアクションを制御し、[&#x200B; グローバル変数](variables-global.md)から値を継承して上書きできます。 これらの変数を`.magento.env.yaml` ファイルの`post-deploy` ステージに挿入します。
@@ -104,54 +112,54 @@ stage:
   <entity_type>:<pattern|url|product_sku>:<store_id|store_code>
   ```
 
-   - `entity_type`：使用可能なバリアント `category`、`cms-page`、`product`、`store-page`
-   - `pattern|url|product_sku`: `regexp` パターンまたは完全一致`url`を使用してURLをフィルタリングするか、すべてのページにアスタリスク （\*）を使用します。 `product` エンティティタイプに製品SKUを使用
-   - `store_id|store_code`: ストアのIDまたはコード、またはすべてのストアのアスタリスク （\*）を使用します。複数のストア IDまたはコードを`|`で区切って渡すことができます
+  - `entity_type`：使用可能なバリアント `category`、`cms-page`、`product`、`store-page`
+  - `pattern|url|product_sku`: `regexp` パターンまたは完全一致`url`を使用してURLをフィルタリングするか、すべてのページにアスタリスク （\*）を使用します。 `product` エンティティタイプに製品SKUを使用
+  - `store_id|store_code`: ストアのIDまたはコード、またはすべてのストアのアスタリスク （\*）を使用します。複数のストア IDまたはコードを`|`で区切って渡すことができます
 
   次の例では、これらの条件に基づいて、`category`および`cms-page`のエンティティタイプをキャッシュします。
-   - id `1`を持つストアのすべてのカテゴリ ページ
-   - コード `store1`と`store2`を持つストアのすべてのカテゴリ ページ
-   - コード `store_en`を持つストアのカテゴリ ページ `cars`
-   - すべてのストアのCMS ページ `contact`
-   - id `1`と`2`を持つストアのCMS ページ `contact`
-   - `car_`を含み、ID 2のストアの`html`で終わるカテゴリーページ
-   - コード `store_gb`を持つストアの`tires_`を含むカテゴリ ページ
+  - id `1`を持つストアのすべてのカテゴリ ページ
+  - コード `store1`と`store2`を持つストアのすべてのカテゴリ ページ
+  - コード `store_en`を持つストアのカテゴリ ページ `cars`
+  - すべてのストアのCMS ページ `contact`
+  - id `1`と`2`を持つストアのCMS ページ `contact`
+  - `car_`を含み、ID 2のストアの`html`で終わるカテゴリーページ
+  - コード `store_gb`を持つストアの`tires_`を含むカテゴリ ページ
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "category:*:1"
-           - "category:*:store1|store2"
-           - "category:cars:store_en"
-           - "cms-page:contact:*"
-           - "cms-page:contact:1|2"
-           - "category:|car_.*?\\.html$|:2"
-           - "category:|tires_.*|:store_gb"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "category:*:1"
+          - "category:*:store1|store2"
+          - "category:cars:store_en"
+          - "cms-page:contact:*"
+          - "cms-page:contact:1|2"
+          - "category:|car_.*?\\.html$|:2"
+          - "category:|tires_.*|:store_gb"
+    ```
 
   次の例では、これらの条件に基づいて`product` エンティティタイプをキャッシュします。
-   - 全店舗のすべての商品（パフォーマンスの問題を回避するために、プログラムで1店舗あたり100個に制限されています）
-   - ストア `store1`のすべての製品
-   - すべてのストアの`sku1`を含む商品
-   - コード `store1`と`store2`のストアの`sku1`を持つ商品
-   - コード `store1`と`store2`のストアの`sku1`、`sku2`および`sku3`の製品
+  - 全店舗のすべての商品（パフォーマンスの問題を回避するために、プログラムで1店舗あたり100個に制限されています）
+  - ストア `store1`のすべての製品
+  - すべてのストアの`sku1`を含む商品
+  - コード `store1`と`store2`のストアの`sku1`を持つ商品
+  - コード `store1`と`store2`のストアの`sku1`、`sku2`および`sku3`の製品
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "product:*:*"
-           - "product:*:store1"
-           - "product:sku1:*"
-           - "product:sku1:store1|store2"
-           - "product:sku1|sku2|sku3:store1|store2"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "product:*:*"
+          - "product:*:store1"
+          - "product:sku1:*"
+          - "product:sku1:store1|store2"
+          - "product:sku1|sku2|sku3:store1|store2"
+    ```
 
   次の例では、これらの条件に基づいて`store-page` エンティティタイプをキャッシュします。
-   - すべてのストアのページ `/contact-us`
-   - id `1`のストアのページ `/contact-us`
-   - コード `code1`と`code2`を持つストアのページ `/contact-us`
+  - すべてのストアのページ `/contact-us`
+  - id `1`のストアのページ `/contact-us`
+  - コード `code1`と`code2`を持つストアのページ `/contact-us`
 
   ```yaml
         stage:
