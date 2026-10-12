@@ -174,7 +174,7 @@ Cloud CLIには、コードをデプロイするコマンドが用意されて�
 
 ## 静的ファイルの移行
 
-[静的ファイル &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary)は`mounts`に保存されています。 ローカル環境などのソースマウントの場所から目的のマウントの場所にファイルを移行する方法は2つあります。 どちらの方法も`rsync` ユーティリティを使用しますが、Adobeでは、`magento-cloud` CLIを使用してローカル環境とリモート環境の間でファイルを移動することをお勧めします。 また、Adobeでは、ファイルをリモート ソースから別のリモート場所に移動する場合は、`rsync` メソッドを使用することをお勧めします。
+[静的ファイル &#x200B;](https://experienceleague.adobe.com/ja/docs/commerce-operations/implementation-playbook/glossary)は`mounts`に保存されています。 ローカル環境などのソースマウントの場所から目的のマウントの場所にファイルを移行する方法は2つあります。 どちらの方法も`rsync` ユーティリティを使用しますが、Adobeでは、`magento-cloud` CLIを使用してローカル環境とリモート環境の間でファイルを移動することをお勧めします。 また、Adobeでは、ファイルをリモート ソースから別のリモート場所に移動する場合は、`rsync` メソッドを使用することをお勧めします。
 
 ### CLIを使用したファイルの移行
 
