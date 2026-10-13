@@ -25,9 +25,9 @@ role_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
     internal-label: Data collection
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: f25bd014c1b6f546d3395db1691128b3e63bfa85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '555'
 ht-degree: 0%
 ---
 # 開発概要
@@ -54,7 +54,7 @@ Composerは、プロジェクトに必要なライブラリと依存関係を`ve
 
 {style="table-layout:auto"}
 
-更新されたコードを追加、コミット、プッシュすると、デプロイメントプロセスは[&#x200B; ビルド段階](../deploy/process.md#build-phase-build-phase)中に`composer install` コマンドを自動的に実行します。
+更新されたコードを追加、コミット、プッシュすると、デプロイメントプロセスは[ ビルド段階](../deploy/process.md#build-phase-build-phase)中に`composer install` コマンドを自動的に実行します。
 
 ### クラウドメタパッケージ
 
@@ -74,13 +74,12 @@ Adobe Commerce on cloud infrastructureは、`magento/product-enterprise-edition`
 
 - **vendor/magento/ece-tools** - `ece-tools` パッケージは、Adobe Commerce バージョン 2.1.4以降と互換性があり、Adobe Commerce on cloud infrastructure プロジェクトの管理に使用できる豊富な機能を提供します。 コードの管理やプロジェクトの自動ビルドとデプロイに役立つスクリプトとAdobe Commerce on cloud infrastructure コマンドが含まれています。 [`ece-tools` パッケージの概要](../dev-tools/package-overview.md)を参照してください。
 - **vendor/magento/product-enterprise-edition**：このメタパッケージには、モジュール、フレームワーク、テーマなどのアプリケーションコンポーネントが必要です。
-- **vendor/fastly2/magento2**：このモジュールは、プロステージング環境および実稼動環境とスターター実稼動環境のFastly CDNとサービスを管理します。 [Fastly サービス &#x200B;](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)を参照してください。
-- **vendor/magento/module-paypal-on-boarding**：このモジュールは、PayPal加盟店アカウントに接続することで、PayPal支払いゲートウェイのチェックアウトを提供します。 [PayPal オンボーディングツール &#x200B;](../store/paypal.md)を参照してください。
-- **vendor/aem/rum**：このモジュールは、[運用上のテレメトリ &#x200B;](../monitor/operational-telemetry.md) データ収集ツールを管理します。
+- **vendor/fastly2/magento2**：このモジュールは、プロステージング環境および実稼動環境とスターター実稼動環境のFastly CDNとサービスを管理します。 [Fastly サービス ](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2)を参照してください。
+- **vendor/aem/rum**：このモジュールは、[運用上のテレメトリ ](../monitor/operational-telemetry.md) データ収集ツールを管理します。
 
 >[!TIP]
 >
->依存関係とサードパーティライセンスの一覧については、_Adobe Commerce リリースノート_&#x200B;の[Commerce用クラウドパッケージ &#x200B;](/help/cloud-guide/release-notes/cloud-packages.md)を参照してください。
+>依存関係とサードパーティライセンスの一覧については、_Adobe Commerce リリースノート_&#x200B;の[Commerce用クラウドパッケージ ](/help/cloud-guide/release-notes/cloud-packages.md)を参照してください。
 
 ## Docker環境
 
