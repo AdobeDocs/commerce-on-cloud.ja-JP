@@ -7,25 +7,33 @@ exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 1195121d2c83da858744839e82e14bd423ea5528
+    internal-label: Security
+source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
 workflow-type: tm+mt
-source-wordcount: 3067
+source-wordcount: '3097'
 ht-degree: 0%
-
 ---
-
 # Commerce用のクラウドパッチ
 
 `magento/magento-cloud-patches` Composer パッケージには、すべてのAdobe Commerce バージョンとCloud環境の統合を改善し、重要な修正の迅速な提供をサポートする、必要なパッチのセットが用意されています。 Adobeは、このパッケージを`repo.magento.com`のCommerce Composer リポジトリを通じて配布します。
@@ -48,7 +56,13 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 <!--Add release notes below-->
 
-## v1.1.21 {#latest}
+## v1.1.22 {#latest}
+
+リリース日：2026年10月13日（PT）
+
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15727 -->
+
+## v1.1.21
 
 リリース日：2026年9月8日（PT）
 
@@ -394,7 +408,7 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **サイトパフォーマンスの向上** - サイトパフォーマンスに影響を与える長い読み込み時間が定期的に発生していた`Magento\Framework\App\DeploymentConfig\Reader::load`関数のパフォーマンスの問題を修正します。<!--MCLOUD-5650-->
 
-- 支払い方法のパッチ割り当てを更新しました。Magentoの基本パッケージ（magento/magento2-base）ではなく支払い方法をターゲットにして、支払い方法が存在する場合にのみ支払いパッチが適用されるようにしました。<!--MCLOUD-5666-->
+- 支払い方法のパッチ割り当てを更新しました。Magento ベースパッケージ （magento/magento2-base）ではなく支払いモジュールをターゲットにして、支払いモジュールが存在する場合にのみ支払いパッチが適用されるようにしました。<!--MCLOUD-5666-->
 
 - Magento Open Sourceと互換性のあるパッチを更新しました。<!--MCLOUD-5701-->
 

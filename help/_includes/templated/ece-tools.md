@@ -1,13 +1,12 @@
 ---
-source-git-commit: 205287e813ec7358273f95df87189b9b663679f5
+source-git-commit: 74cb44aaa4a1c178561bfd1ac7b40c0f3ceb7551
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 7%
-
 ---
 # ece-tools
 
-**バージョン**: 2002.2.14
+**バージョン**: 2002.2.15
 
 このリファレンスには、`ece-tools` コマンドラインツールを通じて利用できる34のコマンドが含まれています。
 最初のリストは、クラウドインフラストラクチャ上のAdobe Commerceで`ece-tools list` コマンドを使用して自動生成されます。
@@ -527,7 +526,7 @@ ece-tools config:dumpdump
 ece-tools cron:disable
 ```
 
-すべてのMagento cron プロセスを無効にし、実行中のすべてのプロセスを終了します。
+すべてのMagento Cron プロセスを無効にし、実行中のすべてのプロセスを終了します。
 
 ### オプション
 
@@ -540,7 +539,7 @@ ece-tools cron:disable
 ece-tools cron:enable
 ```
 
-Magento cron プロセスを有効にします。
+Magento Cron プロセスを有効にします。
 
 ### オプション
 
@@ -553,7 +552,7 @@ Magento cron プロセスを有効にします。
 ece-tools cron:kill
 ```
 
-すべてのMagento cron プロセスを終了します。
+すべてのMagento Cron プロセスを終了します。
 
 ### オプション
 

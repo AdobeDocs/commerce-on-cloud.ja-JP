@@ -24,7 +24,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
 | リリースノート | バージョン | 説明 | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
 | [ece-tools パッケージ &#x200B;](ece-tools-package.md) | 2002.2.15 | クラウドプロジェクトを管理およびデプロイするために設計された一連のスクリプトとツール | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.15) |
-| Commerceの[Cloud パッチ &#x200B;](cloud-patches.md) | 1.1.21 | すべてのAdobe Commerce バージョンとCloud環境の連携を改善する一連のパッチ。 このパッケージには、`ece-tools`を使用してデプロイする際に適用されるAdobe Commerce パッチと利用可能なホットフィックスが含まれています | `magento/magento-cloud-patches`、`repo.magento.com`のCommerce Composer リポジトリを介して（Adobe Commerce on cloud infrastructureの使用権限が必要です。[Commerce向けCloud Patches リリースノート &#x200B;](cloud-patches.md)を参照） |
+| Commerceの[Cloud パッチ &#x200B;](cloud-patches.md) | 1.1.22 | すべてのAdobe Commerce バージョンとCloud環境の連携を改善する一連のパッチ。 このパッケージには、`ece-tools`を使用してデプロイする際に適用されるAdobe Commerce パッチと利用可能なホットフィックスが含まれています | `magento/magento-cloud-patches`、`repo.magento.com`のCommerce Composer リポジトリを介して（Adobe Commerce on cloud infrastructureの使用権限が必要です。[Commerce向けCloud Patches リリースノート &#x200B;](cloud-patches.md)を参照） |
 | [Commerce用Cloud Docker](cloud-docker.md) | 1.4.10 | Adobe Commerceをローカルクラウド環境にデプロイするためのDocker イメージの機能および設定ファイル | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.10) |
 | [Commerceのクラウドコンポーネント &#x200B;](cloud-components.md) | 1.1.4 | クラウドインフラストラクチャにデプロイされたサイト用の拡張Adobe Commerce コア機能 | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
