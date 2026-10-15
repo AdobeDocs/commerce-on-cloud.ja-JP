@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3098'
 ht-degree: 0%
 ---
 # Commerce用のクラウドパッチ
@@ -60,7 +60,7 @@ Cloud Patches for Commerce パッケージは、ECE-Tools パッケージの依�
 
 リリース日：2026年10月13日（PT）
 
-- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15727 -->
+- ![fix icon](../../assets/fix.svg) **セキュリティの機能強化** - [Adobe Commerce セキュリティ更新プログラム APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html)で参照されているセキュリティ修正を適用しました。<!--MCLOUD-15727 -->
 
 ## v1.1.21
 
@@ -408,7 +408,7 @@ Adobe Commerce 2.4.3および2.3.7-p1のクリティカルパッチ：
 
 - **サイトパフォーマンスの向上** - サイトパフォーマンスに影響を与える長い読み込み時間が定期的に発生していた`Magento\Framework\App\DeploymentConfig\Reader::load`関数のパフォーマンスの問題を修正します。<!--MCLOUD-5650-->
 
-- 支払い方法のパッチ割り当てを更新しました。Magento ベースパッケージ （magento/magento2-base）ではなく支払いモジュールをターゲットにして、支払いモジュールが存在する場合にのみ支払いパッチが適用されるようにしました。<!--MCLOUD-5666-->
+- 支払い方法のパッチ割り当てを更新しました。Magentoの基本パッケージ（magento/magento2-base）ではなく支払い方法をターゲットにして、支払い方法が存在する場合にのみ支払いパッチが適用されるようにしました。<!--MCLOUD-5666-->
 
 - Magento Open Sourceと互換性のあるパッチを更新しました。<!--MCLOUD-5701-->
 
