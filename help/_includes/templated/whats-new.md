@@ -22,7 +22,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools v2002.2.15 リリースの後、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI参照</a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference"> エラーメッセージ </a>を更新しました。</p>
+      <td><p>ECE-Tools v2002.2.15 リリースの後、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI参照</a>および<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference"> エラーメッセージ </a>を更新しました。</p>
 </td>
       <td>
         テクニカル
@@ -44,7 +44,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>Commerce</a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Commerce Cloud Tools Suite</a>のCloud Patchesに関する<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patchesに関する記事で、お客様はバージョン 1.1.15以降、GitHubではなく<code>repo.magento.com</code>からComposerを通じてCommerceのCloud Patches パッケージをダウンロードする必要があり、Adobe Commerce on cloud infrastructureの使用権限が必要であることを明確にしました。</p>
+      <td><p>Commerce</a>および<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Commerce Cloud Tools Suite</a>のCloud Patchesに関する<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Cloud Patchesに関する記事で、お客様はバージョン 1.1.15以降、GitHubではなく<code>repo.magento.com</code>からComposerを通じてCommerceのCloud Patches パッケージをダウンロードする必要があり、Adobe Commerce on cloud infrastructureの使用権限が必要であることを明確にしました。</p>
 </td>
       <td>
         フィードバック、テクニカル
@@ -66,7 +66,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>ECE-Tools リリース v2002.2.14の後、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI参照</a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference"> エラーメッセージ </a>を更新しました。</p>
+      <td><p>ECE-Tools リリース v2002.2.14の後、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI参照</a>および<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference"> エラーメッセージ </a>を更新しました。</p>
 </td>
       <td>
         テクニカル
@@ -88,7 +88,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>新しい<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview"> トラフィックインサイト </a> アプリは、ユーザーがCDN トラフィックを視覚化するのに役立ちます。</p>
+      <td><p>新しい<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview"> トラフィックインサイト </a> アプリは、ユーザーがCDN トラフィックを視覚化するのに役立ちます。</p>
 </td>
       <td>
         メジャーアップデート、新しいトピック
@@ -110,7 +110,7 @@ ht-degree: 1%
   </thead>
   <tbody>
     <tr>
-      <td><p>現在のバージョンとパッチレベルのサポートを反映するように、RedisとValkey サービスのドキュメントを更新し、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/redis">Redis サービスの設定</a>、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">Valkey サービスの設定</a>、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">変数のデプロイ </a>など、Cloud Guideのアーキテクチャとサービスページ全体にValkey参照を追加しました。</p>
+      <td><p>現在のバージョンとパッチレベルのサポートを反映するように、RedisとValkey サービスのドキュメントを更新し、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/redis">Redis サービスの設定</a>、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/valkey">Valkey サービスの設定</a>、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/environment/variables-deploy">変数のデプロイ </a>など、Cloud Guideのアーキテクチャとサービスページ全体にValkey参照を追加しました。</p>
 </td>
       <td>
         フィードバック、メジャーアップデート
@@ -118,7 +118,7 @@ ht-degree: 1%
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/89a9594b50dfeacc4e0e7765f195d9bade00413d">コミット</a></td>
     </tr>
     <tr>
-      <td><p>Commerceのアップグレードウィンドウ中のお客様の可用性に関する要件に関するガイダンスを追加し、<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Commerce バージョンのアップグレード </a>および<a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml"> サービスの設定</a>で、Pro サービスのアップグレードリクエストとスケジューリングプロセスを明確にしました。</p>
+      <td><p>Commerceのアップグレードウィンドウ中のお客様の可用性に関する要件に関するガイダンスを追加し、<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">Commerce バージョンのアップグレード </a>および<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/configure/service/services-yaml"> サービスの設定</a>で、Pro サービスのアップグレードリクエストとスケジューリングプロセスを明確にしました。</p>
 </td>
       <td>
         フィードバック
