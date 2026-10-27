@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2e4b0e29f89050cddd138865dbd7f5b823c0427b
+source-git-commit: e3d730f2e6ca7fe67e6f07368bef4d3b4f461d38
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '438'
 ht-degree: 1%
 ---
 # 新しいテンプレート
@@ -124,36 +124,6 @@ ht-degree: 1%
         フィードバック
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ea46582388a9afaf94eb9ced6b61dbef0044370d">コミット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 2026年8月24日（PT）
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>説明</th>
-      <th>タイプ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>ECE-Tools リリース v2002.2.13の後に<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">CLI リファレンス </a>を更新しました。</p>
-</td>
-      <td>
-        テクニカル
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">コミット</a></td>
-    </tr>
-    <tr>
-      <td><p>Cloud Infrastructure上のAdobe Commerceに<a href="https://experienceleague.adobe.com/ja/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">垂直自動拡張</a>の可用性を追加しました。</p>
-</td>
-      <td>
-        メジャーアップデート
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/cd222546c1c57f5250408d9e423dc586284a34fc">コミット</a></td>
     </tr>
   </tbody>
 </table>
