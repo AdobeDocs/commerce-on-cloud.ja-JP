@@ -57,7 +57,7 @@ ht-degree: 0%
 
 [!DNL Xdebug]は、すべてのStarter環境およびPro統合環境に対して直接有効にできます。 この設定手順は、Pro実稼動環境およびステージング環境では必要ありません。 プロステージングおよび実稼動用の[&#x200B; デバッグ &#x200B;](#debug-for-pro-staging-and-production)を参照してください。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437407?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505677?captions=jpn&learn=on)
 
 プロジェクトで[!DNL Xdebug]を有効にするには、`.magento.app.yaml` ファイルの`runtime:extensions` セクションに`xdebug`を追加します。
 
@@ -97,7 +97,7 @@ ht-degree: 0%
 
 ### PhpStorm サーバーの設定
 
->[!VIDEO](https://video.tv.adobe.com/v/3437409?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505695?captions=jpn&learn=on)
 
 [PhpStorm](https://www.jetbrains.com/phpstorm/) IDEは、[!DNL Xdebug]で正しく動作するように設定する必要があります。
 
@@ -137,7 +137,7 @@ ht-degree: 0%
 
 これにより、Adobe Commerce アプリケーションからのリクエストを処理するための正しいデバッグ設定がアプリケーションで有効になります。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437426?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505740?captions=jpn&learn=on)
 
 1. PHPStorm アプリケーションを開き、画面の右上にある&#x200B;**[!UICONTROL Add Configuration]**&#x200B;をクリックします。
 
@@ -154,7 +154,7 @@ ht-degree: 0%
 
 ### ポート転送の設定
 
->[!VIDEO](https://video.tv.adobe.com/v/3437410?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505686?captions=jpn&learn=on)
 
 サーバーからの`XDEBUG`接続をローカルシステムにマッピングします。 あらゆる種類のデバッグを行うには、Adobe Commerce on cloud infrastructure サーバーからローカルマシンにポート 9000を転送する必要があります。 次のいずれかのセクションを参照してください。
 
@@ -323,7 +323,7 @@ ssh -R 9000:localhost:9000 pwga8A0bhuk7o-mybranch@ssh.us.magentosite.cloud
 
 これは、使用される設定のデモと、リモートデバッグセッションを開始するためのGET パラメーターのデモです。
 
->[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3505707?captions=jpn&learn=on)
 
 1. リモートデバッグを有効にします。ブラウザーでサイトにアクセスし、`KEY`が`xdebug_key`の値であるURLに次を追加します。
 
