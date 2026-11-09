@@ -12,4 +12,4 @@ ht-degree: 3%
 
 | 説明 | タイプ | 日付/ソース |
 | --- | --- | --- |
-| ECE-Tools v2002.2.15 リリースの後、[CLI参照](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)および[ エラーメッセージ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)を更新しました。 | テクニカル | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
+| ECE-Tools v2002.2.15 リリースの後、[CLI参照](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference)および[&#x200B; エラーメッセージ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference)を更新しました。 | テクニカル | [2026年10月13日](https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d27cc83271459bb3c8cb718fe72a1810d2f5a3c5) |
