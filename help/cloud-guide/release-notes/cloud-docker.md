@@ -32,9 +32,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 20c3ed7b632d940ccb63a4c1c506969867e72e36
 workflow-type: tm+mt
-source-wordcount: '4535'
+source-wordcount: '4586'
 ht-degree: 0%
 ---
 # Cloud Docker パッケージ
@@ -50,7 +50,15 @@ ht-degree: 0%
 
 <!--Add release notes below-->
 
-## v1.4.10 {#latest}
+## v1.4.11 {#latest}
+
+リリース日：2026年11月19日（PT）
+
+- ![new icon](../../assets/new.svg) **Nginx** – 画像nginx v1.30.7.<!-- MCLOUD-16080 -->を追加しました
+- ![新しいアイコン &#x200B;](../../assets/new.svg) **アップグレードされたPHP 8.1 FPM ベース画像** - Cloud Docker `php-fpm` 8.1 イメージを`php:8.1-fpm` ベース画像（PHP 8.1.34）に更新しました。<!-- MCLOUD-16082 -->
+- ![修正アイコン &#x200B;](../../assets/fix.svg) **Java セキュリティ強化** - クラウドツール全体のJava使用状況を評価し、必要な修正と緩和策を適用しました。<!-- MCLOUD-16055 -->
+
+## v1.4.10
 
 リリース日：2026年10月8日（PT）
 
